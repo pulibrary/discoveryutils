@@ -76,13 +76,34 @@ Class PrimoRecord {
   
   public function getAvailabilbleLibraries() {
     //$source_path = 
-    $source_ids = array();
-    $source_path = "def:PrimoNMBib/def:record/def:control/def:sourcerecordid";
-    $sourceList = $this->query($source_path);
-    foreach ($sourceList as $node) {
-      array_push($source_ids,$node->textContent);
+    $available_ids = array();
+    $available_path = "def:PrimoNMBib/def:record/def:display/def:availlibrary";
+    $availableList = $this->query($available_path);
+    $num_avail_items = $availableList->length;
+    $location_code_delimiter = '/\$\$Y/';
+    $id_delimeter = '/\$\$O/';
+    foreach ($availableList as $node) {
+      if($num_avail_items == 1) {
+        //echo $node->textContent;
+        // have to split this $$IPRN$$LFIRE$$1(F)$$2PS3618.A914 B36 2010$$Savailable$$31$$40$$5N$$60$$Xprincetondb$$Yf
+        $loc_code = preg_split($location_code_delimiter, $node->textContent);
+        //echo $this->getRecordID();
+        //echo $loc_code[1];
+        $available_ids[$this->getRecordID()] = array($loc_code[1]);
+         // only one to send back
+      }
+      else {
+        // have to split this <aviallibrary>$$IPRN$$LFIRE$$1(F)$$2D810.C696 P644 2000$$Savailable$$31$$40$$5N$$619$$Xprincetondb$$Yf$$OPRN_VOYAGER3216675</availlibrary>
+        $location_and_sourceid = preg_split($location_code_delimiter, $node->textContent);
+        $available_string = preg_split($id_delimeter, $location_and_sourceid[1]);
+        if (array_key_exists($available_string[1], $available_ids)) {
+          array_push($available_ids[$available_string[1]], $available_string[0]);
+        } else {
+          $available_ids[$available_string[1]] = array($available_string[0]);
+        }
+      }
     }
-    return $source_ids;
+    return $available_ids;
   }
   
 }
