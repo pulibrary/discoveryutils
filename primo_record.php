@@ -26,7 +26,7 @@ Class PrimoRecord {
   }
   
   private function query($path) {
-    echo $this->xpath_base.$path."\n";
+    //echo $this->xpath_base.$path."\n";
     return $this->xpath->query($this->xpath_base.$path);
   }
   

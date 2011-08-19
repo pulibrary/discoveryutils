@@ -6,10 +6,10 @@ $primo_base_url = "http://searchit.princeton.edu/PrimoWebServices/xservice/getit
 $primo_institution = "PRN";
 
 if(isset($_GET['doc_id'])) {
-  $pn_xid = $_GET['doc_id'];
+  $pnx_id = $_GET['doc_id'];
 }
 
-$xml = file_get_contents(urlencode($primo_base_url."?instiution=".$primo_institution."&doc_id=".$pnx_id));
+$xml = file_get_contents($primo_base_url."?instiution=".$primo_institution."&docId=".$pnx_id);
 
 $record = new PrimoRecord($xml);
 $source_ids = $record->getSourceIDs();
