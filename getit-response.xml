@@ -1,0 +1,275 @@
+<SEGMENTS xmlns="http://www.exlibrisgroup.com/xsd/jaguar/search">
+  <JAGROOT>
+    <RESULT>
+      <DOCSET TOTALHITS="1">
+        <sear:DOC LOCAL="true" xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib" xmlns:sear="http://www.exlibrisgroup.com/xsd/jaguar/search">
+          <PrimoNMBib>
+            <record>
+              <control>
+                <sourcerecordid>$$V6109368$$OPRN_VOYAGER6109368</sourcerecordid>
+                <sourcerecordid>$$V3216675$$OPRN_VOYAGER3216675</sourcerecordid>
+                <sourceid>$$VPRN_VOYAGER$$OPRN_VOYAGER6109368</sourceid>
+                <sourceid>$$VPRN_VOYAGER$$OPRN_VOYAGER3216675</sourceid>
+                <recordid>dedupmrg39996795</recordid>
+                <originalsourceid>$$Vprincetondb$$OPRN_VOYAGER6109368</originalsourceid>
+                <originalsourceid>$$Vprincetondb$$OPRN_VOYAGER3216675</originalsourceid>
+                <sourceformat>$$VMARC21$$OPRN_VOYAGER6109368</sourceformat>
+                <sourceformat>$$VMARC21$$OPRN_VOYAGER3216675</sourceformat>
+                <sourcesystem>$$VVoyager$$OPRN_VOYAGER6109368</sourcesystem>
+                <sourcesystem>$$VVoyager$$OPRN_VOYAGER3216675</sourcesystem>
+                <ilsapiid>$$V6109368$$OPRN_VOYAGER6109368</ilsapiid>
+                <ilsapiid>$$V3216675$$OPRN_VOYAGER3216675</ilsapiid>
+              </control>
+              <display>
+                <type>book</type>
+                <title>The politics of retribution in Europe World War II and its aftermath / edited by István Deák, Jan T. Gross, and Tony Judt.</title>
+                <contributor>Deák, István</contributor>
+                <contributor>Gross, Jan Tomasz</contributor>
+                <contributor>Judt, Tony</contributor>
+                <contributor>American Council of Learned Societies</contributor>
+                <publisher>Princeton, N.J. : Princeton University Press, c2000.</publisher>
+                <creationdate>c2000</creationdate>
+                <ispartof>ACLS Humanities E-Book. URL: http://www.humanitiesebook.org/</ispartof>
+                <identifier>$$CISBN$$V0691009538; $$CISBN$$V0691009546</identifier>
+                <subject>Reconstruction (1939-1951) -- Europe; World War, 1939-1945 -- Collaborationists -- Europe; World War, 1939-1945 -- Reparations</subject>
+                <language>eng</language>
+                <source>$$VPRN_VOYAGER$$OPRN_VOYAGER6109368</source>
+                <source>$$VPRN_VOYAGER$$OPRN_VOYAGER3216675</source>
+                <availlibrary>$$IPRN$$LONLINE$$1Online Resources$$2Electronic Resource$$Scheck_holdings$$30$$41$$5N$$60$$Xprincetondb$$Yelf1$$OPRN_VOYAGER6109368</availlibrary>
+                <availlibrary>$$IPRN$$LFIRE$$1(F)$$2D810.C696 P644 2000$$Savailable$$31$$40$$5N$$619$$Xprincetondb$$Yf$$OPRN_VOYAGER3216675</availlibrary>
+                <availlibrary>$$IPRN$$LRECAP$$1(RCPPA)$$2D810.C696 P644 2000$$Savailable$$31$$40$$5N$$610$$Xprincetondb$$Yrcppa$$OPRN_VOYAGER3216675</availlibrary>
+                <availinstitution>$$IPRN$$Scheck_holdings</availinstitution>
+                <availpnx>available</availpnx>
+                <lds03>xii, 337 p. ; 24 cm.</lds03>
+                <lds05>Introduction / István Deák -- Themes for a social history of war experience and collaboration / Jan. T. Gross -- A fatal compromise? The debate over collaboration and resistance in Hungary / István Deák -- A tangled web : confronting stereotypes concerning relations between Poles, Germans, Jews, and Communists / Jan T. Gross -- Justice in postwar Belgium : popular passions and political realities / Martin Conway -- The criminal justice system as a political actor in regime transitions : the case of Belgium, 1944-50 / Luc Huyse -- "Restoration of confidence" : the purge of local government in the Netherlands as a problem of postwar reconstruction / Peter Romijn -- Postwar justice in France : Bordeaux 1953 / Sarah Farmer -- The Cold War and the appropriation of memory : Greece after liberation / Mark Mazower -- The people's courts and revolutionary justice in Hungary, 1945-46 / László Karsai -- The politics of retribution : the trial of Jozef Tiso in the Czechoslovak environment / Bradley Abrams -- The past is another country : myth and memory in postwar Europe / Tony Judt.</lds05>
+                <lds15>ACLS Humanities E-Book.</lds15>
+                <lds20>Electronic text and image data. Ann Arbor, Mich. : University of Michigan, Scholarly Publishing Office, 2009. Includes both TIFF files and keyword searchable text. ([ACLS Humanities E-Book]) Mode of access: Intranet.</lds20>
+              </display>
+              <links>
+                <linktoholdings>$$V$$Tvoyager_holdings$$OPRN_VOYAGER6109368</linktoholdings>
+                <linktoholdings>$$V$$Tvoyager_holdings$$OPRN_VOYAGER3216675</linktoholdings>
+                <backlink>$$V$$Tvoyager_backlink$$Ebacklink$$OPRN_VOYAGER6109368</backlink>
+                <backlink>$$V$$Tvoyager_backlink$$Ebacklink$$OPRN_VOYAGER3216675</backlink>
+                <linktorsrc>$$Uhttp://hdl.handle.net/2027/heb.04986$$Elinktorsrc</linktorsrc>
+                <openurl>$$V$$Topenurl_journal$$OPRN_VOYAGER6109368</openurl>
+                <openurl>$$V$$Topenurl_journal$$OPRN_VOYAGER3216675</openurl>
+                <openurlfulltext>$$V$$Topenurlfull_journal$$OPRN_VOYAGER6109368</openurlfulltext>
+                <openurlfulltext>$$V$$Topenurlfull_journal$$OPRN_VOYAGER3216675</openurlfulltext>
+                <linktouc>$$Tamazon_uc$$Eamazon</linktouc>
+                <linktouc>$$Tworldcat_isbn$$Eworldcat</linktouc>
+                <linktouc>$$Tamazon_uc$$Eamazon</linktouc>
+                <linktouc>$$Tworldcat_isbn$$Eworldcat</linktouc>
+                <thumbnail>$$Tamazon_thumb</thumbnail>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <lln01>$$Tfind_online$$Elfind_online</lln01>
+                <lln01>$$Tfind_fire$$Elfind_fire</lln01>
+                <lln01>$$Tfind_recap$$Elfind_recap</lln01>
+              </links>
+              <search>
+                <creatorcontrib>István Deák -- Jan. T. Gross -- István Deák -- Jan T. Gross -- Martin Conway -- Luc Huyse -- Peter Romijn -- Sarah Farmer -- Mark Mazower -- László Karsai -- Bradley Abrams -- Tony Judt.</creatorcontrib>
+                <creatorcontrib>American Council of Learned Societies.</creatorcontrib>
+                <creatorcontrib>مجلس الجمعيات العلمية الاميركي</creatorcontrib>
+                <creatorcontrib>Majlis al-Jamʻīyāt al-ʻIlmīyah al-Amīrikī</creatorcontrib>
+                <creatorcontrib>A.C.L.S.</creatorcontrib>
+                <creatorcontrib>ACLS</creatorcontrib>
+                <creatorcontrib>American Council of Learned Societies Devoted to Humanistic Studies</creatorcontrib>
+                <creatorcontrib>Amerikanskiĭ sovet poznavatelʹnykh obshchestv</creatorcontrib>
+                <creatorcontrib>ASPO</creatorcontrib>
+                <title>The politics of retribution in Europe World War II and its aftermath /</title>
+                <title>Themes for a social history of war experience and collaboration / A fatal compromise? The debate over collaboration and resistance in Hungary / A tangled web : confronting stereotypes concerning relations between Poles, Germans, Jews, and Communists / Justice in postwar Belgium : popular passions and political realities / The criminal justice system as a political actor in regime transitions : the case of Belgium, 1944-50 / "Restoration of confidence" : the purge of local government in the Netherlands as a problem of postwar reconstruction / Postwar justice in France : Bordeaux 1953 / The Cold War and the appropriation of memory : Greece after liberation / The people's courts and revolutionary justice in Hungary, 1945-46 / The politics of retribution : the trial of Jozef Tiso in the Czechoslovak environment / The past is another country : myth and memory in postwar Europe /</title>
+                <subject>Reconstruction (1939-1951) Europe.</subject>
+                <subject>World War, 1939-1945 Reparations.</subject>
+                <general>[electronic resource] :</general>
+                <general>voy-6109368</general>
+                <recordid>PRN_VOYAGER6109368</recordid>
+                <addtitle>ACLS Humanities E-Book.</addtitle>
+                <searchscope>ONLINE</searchscope>
+                <searchscope>OTHERS</searchscope>
+                <scope>ONLINE</scope>
+                <scope>OTHERS</scope>
+                <lsr05>Electronic Resource</lsr05>
+                <lsr06>6109368</lsr06>
+                <creatorcontrib>edited by István Deák, Jan T. Gross, and Tony Judt.</creatorcontrib>
+                <creatorcontrib>István  Deák</creatorcontrib>
+                <creatorcontrib>Jan Tomasz  Gross</creatorcontrib>
+                <creatorcontrib>Tony  Judt</creatorcontrib>
+                <creatorcontrib>Deák</creatorcontrib>
+                <creatorcontrib>Gross, J</creatorcontrib>
+                <creatorcontrib>Judt, T</creatorcontrib>
+                <creatorcontrib>גרוס, יאן טומש</creatorcontrib>
+                <creatorcontrib>Gross, I︠A︡n Tomash</creatorcontrib>
+                <title>The politics of retribution in Europe : World War II and its aftermath /</title>
+                <subject>World War, 1939-1945 Collaborationists Europe.</subject>
+                <general>Princeton University Press,</general>
+                <general>voy-3216675</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER3216675</recordid>
+                <isbn>0691009538</isbn>
+                <isbn>0691009546</isbn>
+                <rsrctype>book</rsrctype>
+                <creationdate>2000</creationdate>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>FIRE</searchscope>
+                <searchscope>RECAP</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>FIRE</scope>
+                <scope>RECAP</scope>
+                <scope>PRN</scope>
+                <lsr04>0691009538</lsr04>
+                <lsr04>0691009546</lsr04>
+                <lsr05>D810.C696 P644 2000</lsr05>
+                <lsr06>3216675</lsr06>
+              </search>
+              <sort>
+                <title>politics of retribution in Europe World War II and its aftermath</title>
+                <title>Themes for a social history of war experience and collaboration /</title>
+                <title>A fatal compromise? The debate over collaboration and resistance in Hungary /</title>
+                <title>A tangled web : confronting stereotypes concerning relations between Poles, Germans, Jews, and Communists /</title>
+                <title>Justice in postwar Belgium : popular passions and political realities /</title>
+                <title>The criminal justice system as a political actor in regime transitions : the case of Belgium, 1944-50 /</title>
+                <title>"Restoration of confidence" : the purge of local government in the Netherlands as a problem of postwar reconstruction /</title>
+                <title>Postwar justice in France : Bordeaux 1953 /</title>
+                <title>The Cold War and the appropriation of memory : Greece after liberation /</title>
+                <title>The people's courts and revolutionary justice in Hungary, 1945-46 /</title>
+                <title>The politics of retribution : the trial of Jozef Tiso in the Czechoslovak environment /</title>
+                <title>The past is another country : myth and memory in postwar Europe</title>
+                <creationdate>2000</creationdate>
+                <author>Deák, István.</author>
+              </sort>
+              <facets>
+                <topic>Reconstruction (1939-1951)–Europe</topic>
+                <topic>World War, 1939-1945–Reparations</topic>
+                <toplevel>online_resources</toplevel>
+                <creatorcontrib>American Council of Learned Societies</creatorcontrib>
+                <classificationlcc>D - History (general) and history of europe.–History (General)–World War II (1939-1945)</classificationlcc>
+                <language>eng</language>
+                <creationdate>2000</creationdate>
+                <topic>World War, 1939-1945–Collaborationists–Europe</topic>
+                <toplevel>available</toplevel>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>Deák, István</creatorcontrib>
+                <creatorcontrib>Gross, Jan Tomasz</creatorcontrib>
+                <creatorcontrib>Judt, Tony</creatorcontrib>
+                <frbrgroupid>39823370</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c1>99069400</c1>
+                <c2>0691009538;0691009546</c2>
+                <c3>politicsofretributiosaftermath</c3>
+                <c4>2000</c4>
+                <f1>99069400</f1>
+                <f3>0691009538;0691009546</f3>
+                <f5>politicsofretributiosaftermath</f5>
+                <f6>2000</f6>
+                <f7>politics of retribution in europe world war ii and its aftermath</f7>
+                <f8>nju</f8>
+                <f9>xii337p</f9>
+                <f10>princeton university press</f10>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <k1>$$Kamerican council of learned societies$$AA</k1>
+                <t>1</t>
+                <k1>$$Kdeak istvan$$AA</k1>
+                <k1>$$Kgross jan tomasz$$AA</k1>
+                <k1>$$Kjudt tony$$AA</k1>
+                <k3>$$Kpolitics of retribution in europe world war ii and its aftermath$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>$$VPRN$$OPRN_VOYAGER6109368</institution>
+                <delcategory>$$VOnline Resource$$OPRN_VOYAGER6109368</delcategory>
+                <institution>$$VPRN$$OPRN_VOYAGER3216675</institution>
+                <delcategory>$$VPhysical Item$$OPRN_VOYAGER3216675</delcategory>
+              </delivery>
+              <enrichment>
+                <classificationlcc>D802.E9</classificationlcc>
+              </enrichment>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <addau>American Council of Learned Societies</addau>
+                <btitle>The politics of retribution in Europe World War II and its aftermath / edited by István Deák, Jan T. Gross, and Tony Judt.</btitle>
+                <seriestitle>ACLS Humanities E-Book</seriestitle>
+                <lccn>99069400</lccn>
+                <lad15>elf1</lad15>
+                <aulast>Deák</aulast>
+                <aufirst>István</aufirst>
+                <addau>Deák, István</addau>
+                <addau>Gross, Jan Tomasz</addau>
+                <addau>Judt, Tony</addau>
+                <btitle>The politics of retribution in Europe : World War II and its aftermath / edited by István Deák, Jan T. Gross, and Tony Judt.</btitle>
+                <date>2000</date>
+                <risdate>c2000.</risdate>
+                <isbn>0691009538</isbn>
+                <isbn>0691009546</isbn>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <notes>Includes bibliographical references and index.</notes>
+                <cop>Princeton, N.J.</cop>
+                <pub>Princeton University Press</pub>
+                <oclcid>43840165</oclcid>
+                <lad01>f</lad01>
+                <lad05>rcppa</lad05>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2011-08-18T16%3A53%3A14IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=The%20politics%20of%20retribution%20in%20Europe%20World%20War%20II%20and%20its%20aftermath%20/%20edited%20by%20István%20Deák%2C%20Jan%20T.%20Gross%2C%20and%20Tony%20Judt.&amp;rft.aulast=Deák&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0691009538&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>6109368&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="http://hdl.handle.net/2027/heb.04986" deliveryCategory="Online Resource"/>
+          <sear:GETIT GetIt2="" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>ONLINE</sear:library>
+              <sear:status>check_holdings</sear:status>
+              <sear:collection>Online Resources</sear:collection>
+              <sear:callNumber>Electronic Resource</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>FIRE</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>(F)</sear:collection>
+              <sear:callNumber>D810.C696 P644 2000</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>RECAP</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>(RCPPA)</sear:collection>
+              <sear:callNumber>D810.C696 P644 2000</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2011-08-18T16%3A53%3A14IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=The%20politics%20of%20retribution%20in%20Europe%20World%20War%20II%20and%20its%20aftermath%20/%20edited%20by%20István%20Deák%2C%20Jan%20T.%20Gross%2C%20and%20Tony%20Judt.&rft.aulast=Deák&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=0691009538&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>6109368</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2011-08-18T16%3A53%3A14IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=The%20politics%20of%20retribution%20in%20Europe%20World%20War%20II%20and%20its%20aftermath%20/%20edited%20by%20István%20Deák%2C%20Jan%20T.%20Gross%2C%20and%20Tony%20Judt.&rft.aulast=Deák&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=0691009538&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>3216675</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=6109368&amp;pds_handle=</sear:backlink>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=3216675&amp;pds_handle=</sear:backlink>
+            <sear:linktorsrc>http://hdl.handle.net/2027/heb.04986</sear:linktorsrc>
+            <sear:thumbnail>http://images.amazon.com/images/P/0691009538.01._SSTHUM_.jpg</sear:thumbnail>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:0691009538,OCLC:43840165,LCCN:99069400&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2011-08-18T16%3A53%3A14IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=The%20politics%20of%20retribution%20in%20Europe%20World%20War%20II%20and%20its%20aftermath%20/%20edited%20by%20István%20Deák%2C%20Jan%20T.%20Gross%2C%20and%20Tony%20Judt.&rft.aulast=Deák&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=0691009538&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>6109368</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2011-08-18T16%3A53%3A14IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=The%20politics%20of%20retribution%20in%20Europe%20World%20War%20II%20and%20its%20aftermath%20/%20edited%20by%20István%20Deák%2C%20Jan%20T.%20Gross%2C%20and%20Tony%20Judt.&rft.aulast=Deák&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=0691009538&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>3216675</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktouc>http://www.amazon.com/gp/product/0691009538</sear:linktouc>
+            <sear:linktouc>http://www.worldcat.org/search?q=isbn%3A0691009538</sear:linktouc>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=elf1&amp;id=6109368</sear:lln01>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=f&amp;id=6109368</sear:lln01>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=rcppa&amp;id=6109368</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+      </DOCSET>
+    </RESULT>
+  </JAGROOT>
+</SEGMENTS>
