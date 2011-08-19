@@ -5,6 +5,7 @@ Class PrimoRecord {
   private $xpath_base = "//sear:DOC[1]//";
   private $def_ns = "def";
   private $xpath;
+  private $institutionID = "PRN_VOYAGER";
   
   private $namespaces = array(
     "sear" => "http://www.exlibrisgroup.com/xsd/jaguar/search",
@@ -43,7 +44,37 @@ Class PrimoRecord {
     return $textContent;
   }
   
+  public function getRecordID(){
+    $source_path = "def:PrimoNMBib/def:record/def:control/def:recordid";
+    $nodeList = $this->query($source_path);
+    $textContent = "";
+    foreach ($nodeList as $node) {
+      $textContent .= ' ' . $node->textContent;
+    }
+    return $textContent;
+  }
+  
   public function getSourceIDs() {
+    //$source_path = 
+    $source_ids = array();
+    $source_path = "def:PrimoNMBib/def:record/def:control/def:sourcerecordid";
+    $sourceList = $this->query($source_path);
+    $id_count = $sourceList->length; // how many sources did this rec have?
+    foreach ($sourceList as $node) {
+      //looks like $$V6109368$$OPRN_VOYAGER6109368     
+      if ($id_count == 1) {
+        array_push($source_ids, $this->institutionID.$node->textContent);
+      } else {
+        $id_delimiter = '/\$\$O/';
+        $id = preg_split($id_delimiter,$node->textContent);
+        array_push($source_ids,$id[1]);
+      }
+      
+    }
+    return $source_ids;
+  }
+  
+  public function getAvailabilbleLibraries() {
     //$source_path = 
     $source_ids = array();
     $source_path = "def:PrimoNMBib/def:record/def:control/def:sourcerecordid";
