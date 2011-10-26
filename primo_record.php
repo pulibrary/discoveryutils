@@ -3,6 +3,7 @@
 Class PrimoRecord {
   
   private $xpath_base = "//sear:DOC[1]//";
+  private $xpath_doc_root = "//sear:DOC[1]";
   private $def_ns = "def";
   private $xpath;
   private $institutionID = "PRN_VOYAGER";
@@ -11,7 +12,7 @@ Class PrimoRecord {
     "sear" => "http://www.exlibrisgroup.com/xsd/jaguar/search",
     "def" => "http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib",
   );
-   
+
   function __construct($xml) {
     $this->xpath = $this->loadXPath($xml);
     // Set Namespaces in Constructor
@@ -20,9 +21,32 @@ Class PrimoRecord {
     }  
   }
   
+  public function __toString() {
+    $full_primo_record = $this->get_record_root();
+    //echo $full_primo_record;
+    $primo_record_string = ""; //new DOMDocument;
+    if (!is_null($full_primo_record)) {
+      //echo $full_primo_record->saveXML();
+      foreach ($full_primo_record as $element) {
+       $primo_record_string .= "<br/>[". $element->nodeName. "]";
+        $nodes = $element->childNodes;
+        foreach ($nodes as $node) {
+          $primo_record_string .= "<br/>[" . $node->nodeName . "] = " . $node->nodeValue. "\n";
+        }
+      }
+    } else {
+      $primo_record_string .= "[No Record Found]";
+    }
+    return $primo_record_string;
+  }
+  
   private function loadXPath($xml) {
     $dom = DOMDocument::loadXML($xml);
     return new DOMXPath($dom);
+  }
+  
+  private function get_record_root() {
+    return $this->xpath->query($this->xpath_doc_root);
   }
   
   private function query($path) {
