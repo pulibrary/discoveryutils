@@ -1,5 +1,5 @@
 <?php
-require_once('primo_record.php');
+require_once('../primo_record.php');
 
 $record = new PrimoRecord(file_get_contents('getit-response.xml'));
 
