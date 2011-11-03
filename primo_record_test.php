@@ -18,8 +18,11 @@ $single_source = new PrimoRecord(file_get_contents('single_voyager_source.xml'))
 //print_r($single_source->getSourceIDs());
 //echo $single_source->getRecordID();
 print_r($single_source->getAvailabilbleLibraries());
+print_r($single_source->getBasicInfo());
+
 
 $dedup = new PrimoRecord(file_get_contents('dedup_response.xml'));
 print_r($dedup->getAvailabilbleLibraries());
+print_r($dedup->getBasicInfo());
 
 ?>

@@ -78,7 +78,7 @@ Class PrimoRecord
     $nodeList = $this->query($source_path);
     $textContent = "";
     foreach ($nodeList as $node) {
-      $textContent .= ' ' . $node->textContent;
+      $textContent .= $node->textContent;
     }
     
     return $textContent;
@@ -93,14 +93,59 @@ Class PrimoRecord
     $source_path = "sear:LINKS//*";
     $nodeList = $this->query($source_path);
     foreach ($nodeList as $node) {
-      array_push($links, $node->textContent);
+      //$node->tagName; 
+      array_push($links, array($node->tagName, $node->textContent));
     }
     
     return $links;
   }
   
-  public function getOpenURL() {
+  public function getGetItLinks() {
+    $getit_links = array();
+    $source_path = "sear:GETIT";
+    $nodeList = $this->query($source_path); // throw exception when empty
+    $source_ids = $this->getSourceIDs();
+    $record_counter = 0;
+    foreach ($nodeList as $node) {
+      $node_link_properties = array();
+      if(($node->getAttribute('deliveryCategory'))) {
+        $node_link_properties['deliveryCategory'] = $node->getAttribute('deliveryCategory');
+      }
+      if(($node->getAttribute('GetIt1'))) {
+        $node_link_properties['GetIt1'] = $node->getAttribute('GetIt1');
+      }
+      if(($node->getAttribute('GetIt2'))) {
+        $node_link_properties['fulltext'] = $node->getAttribute('GetIt2');
+      }
+      $getit_links[$source_ids[$record_counter]] = $node_link_properties;
+      $record_counter = $record_counter + 1;
+    }
     
+    return $getit_links;
+  }
+  
+  /* returns a brief representation of resource
+   * 
+   * fulltext openurl
+   * non-fulltext openurl
+   * location code info
+   * voyager id
+   */
+  public function getBriefInfo() {
+    $getit_links = $this->getGetItLinks();
+    $available_libraries = $this->getAvailabilbleLibraries();
+    $brief_info_data = array();
+    foreach($getit_links as $voyager_key => $getit_data) {
+      $voyager_key_available_libraries = array();
+      $voyager_key_available_libraries['locations'] = $available_libraries[$voyager_key];
+      $brief_info_data[$voyager_key] = array_merge($getit_links[$voyager_key], $voyager_key_available_libraries);
+    }
+    
+    return $brief_info_data;
+  }
+  
+  public function getOpenURL() {
+    return;
   }
   
   /*
