@@ -134,11 +134,7 @@ Class PrimoRecord
    */
   public function getBriefInfo() {
     $getit_links = $this->getGetItLinks();
-<<<<<<< HEAD
-    $available_libraries = $this->getAvailabilbleLibraries();
-=======
     $available_libraries = $this->getAvailableLibraries();
->>>>>>> add_electronic_holdings
     $brief_info_data = array();
     foreach($getit_links as $voyager_key => $getit_data) {
       $voyager_key_available_libraries = array();
