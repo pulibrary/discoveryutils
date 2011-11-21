@@ -1,4 +1,5 @@
 <?php
+namespace PrimoServices;
 
 Class PrimoRecord 
 {
@@ -43,9 +44,9 @@ Class PrimoRecord
   }
   
   private function loadXPath($xml) {
-    $dom = DOMDocument::loadXML($xml);
+    $dom = \DOMDocument::loadXML($xml);
     
-    return new DOMXPath($dom);
+    return new \DOMXPath($dom);
   }
   
   private function get_record_root() {
@@ -133,7 +134,11 @@ Class PrimoRecord
    */
   public function getBriefInfo() {
     $getit_links = $this->getGetItLinks();
+<<<<<<< HEAD
     $available_libraries = $this->getAvailabilbleLibraries();
+=======
+    $available_libraries = $this->getAvailableLibraries();
+>>>>>>> add_electronic_holdings
     $brief_info_data = array();
     foreach($getit_links as $voyager_key => $getit_data) {
       $voyager_key_available_libraries = array();
@@ -190,7 +195,7 @@ Class PrimoRecord
    *  
    */
   
-  public function getAvailabilbleLibraries() {
+  public function getAvailableLibraries() {
     $available_ids = array();
     $available_path = "def:PrimoNMBib/def:record/def:display/def:availlibrary";
     $availableList = $this->query($available_path);
