@@ -1,4 +1,0 @@
-[2011-11-21 08:10:50] myapp.INFO: GET /lookup/ [] []
-[2011-11-21 08:10:59] myapp.INFO: GET /lookup/hello/kevin [] []
-[2011-11-21 08:10:59] myapp.INFO: User 'kevin' dropped by to say hi. [] []
-[2011-11-21 08:11:40] myapp.INFO: GET /lookup/isbn/123323 [] []
