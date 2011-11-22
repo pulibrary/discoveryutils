@@ -112,7 +112,7 @@ Class PrimoRecord
       if(($node->getAttribute('deliveryCategory'))) {
         $node_link_properties['deliveryCategory'] = $node->getAttribute('deliveryCategory');
       }
-      if(($node->getAttribute('GetIt1'))) {
+      if(($node->getAttribute('GetIt1'))) { //FIXME - is GetIt1 comprised of only full-text links?
         $node_link_properties['GetIt1'] = $node->getAttribute('GetIt1');
       }
       if(($node->getAttribute('GetIt2'))) {
