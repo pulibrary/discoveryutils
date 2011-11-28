@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Record {{ rec_id }}</title>
+  </head>
+  <body>
+    <h1>Record: {{ rec_id }}</h1>
+    
+    <div id="record-data">
+    	{% for record in pnx_response %}
+    	  <ul>
+    	    <li>{{ record }}</li>
+    	  	<li>{{ record.deliveryCategory }}</li>
+    	  	<li>{{ record.GetIt1 }}</li>
+    	  </ul>  
+      {% endfor %}
+    </div>
+  </body>
+</html>
