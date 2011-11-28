@@ -1,0 +1,175 @@
+<SEGMENTS xmlns="http://www.exlibrisgroup.com/xsd/jaguar/search">
+  <JAGROOT>
+    <RESULT>
+      <DOCSET TOTALHITS="1">
+        <sear:DOC LOCAL="true" xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib" xmlns:sear="http://www.exlibrisgroup.com/xsd/jaguar/search">
+          <PrimoNMBib>
+            <record>
+              <control>
+                <sourcerecordid>5399326</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER5399326</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>5399326</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>book</type>
+                <title>Spring into PHP 5 Steven Holzner.</title>
+                <creator>Holzner, Steven.</creator>
+                <contributor>Safari Tech Books Online</contributor>
+                <publisher>Upper Saddle River, NJ : Addison Wesley, 2005.</publisher>
+                <creationdate>2005</creationdate>
+                <subject>PHP (Computer program language)</subject>
+                <language>eng</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LONLINE$$1Online Resources$$2Electronic Resource$$Scheck_holdings$$30$$41$$5N$$60$$Xprincetondb$$Yelf1</availlibrary>
+                <lds03>xviii, 340 p. : ill. ; 23 cm.</lds03>
+                <lds06>Includes index.</lds06>
+                <lds20>Electronic reproduction. Boston, MA : Safari, 2005. Available via World Wide Web.</lds20>
+                <lds21>Electronic books</lds21>
+                <lds22>PHP 5</lds22>
+                <lds26>Addison Wesley</lds26>
+                <lds27>Electronic Resource</lds27>
+                <availinstitution>$$IPRN$$Scheck_holdings</availinstitution>
+                <availpnx>available</availpnx>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <linktorsrc>$$Uhttp://proquest.safaribooksonline.com/?uiCode=princeun&amp;xmlId=0131498622$$Elinktorsrc</linktorsrc>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <lln01>$$Tfind_online$$Elfind_online</lln01>
+              </links>
+              <search>
+                <creatorcontrib>Steven  Holzner</creatorcontrib>
+                <creatorcontrib>Holzner, S</creatorcontrib>
+                <creatorcontrib>Steven Holzner.</creatorcontrib>
+                <creatorcontrib>Safari Tech Books Online.</creatorcontrib>
+                <creatorcontrib>Holzner, Steve</creatorcontrib>
+                <creatorcontrib>הולצנר, סטיבן</creatorcontrib>
+                <title>Spring into PHP 5</title>
+                <subject>PHP (Computer program language)</subject>
+                <subject>Electronic books.</subject>
+                <subject>Personal Home Page (Computer program language)</subject>
+                <general>Addison Wesley,</general>
+                <general>[electronic resource] /</general>
+                <general>voy-5399326</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER5399326</recordid>
+                <isbn>0131498622</isbn>
+                <rsrctype>book</rsrctype>
+                <creationdate>2005</creationdate>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>ONLINE</searchscope>
+                <searchscope>OTHERS</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>ONLINE</scope>
+                <scope>OTHERS</scope>
+                <scope>PRN</scope>
+                <alttitle>PHP 5</alttitle>
+                <lsr04>0131498622</lsr04>
+                <lsr05>Electronic Resource</lsr05>
+                <lsr06>5399326</lsr06>
+              </search>
+              <sort>
+                <title>Spring into PHP 5</title>
+                <title>PHP 5</title>
+                <creationdate>2005</creationdate>
+                <author>Holzner, Steven.</author>
+              </sort>
+              <facets>
+                <language>eng</language>
+                <creationdate>2005</creationdate>
+                <topic>PHP (Computer program language)</topic>
+                <toplevel>available</toplevel>
+                <toplevel>online_resources</toplevel>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>Holzner, Steven</creatorcontrib>
+                <creatorcontrib>Safari Tech Books Online</creatorcontrib>
+                <genre>Electronic books</genre>
+                <classificationlcc>Q - Science.–Mathematics–Instruments and machines–Calculating machines–Electronic computers. Computer science–Computer software</classificationlcc>
+                <frbrgroupid>39150714</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c1>2004118156</c1>
+                <c2>0131498622</c2>
+                <c3>springintophp5</c3>
+                <c4>2005</c4>
+                <f2>2004118156</f2>
+                <f4>0131498622</f4>
+                <f5>springintophp5</f5>
+                <f6>2005</f6>
+                <f7>spring into php 5</f7>
+                <f8>nju</f8>
+                <f9>xviii340p</f9>
+                <f10>addison wesley</f10>
+                <f11>holzner steven</f11>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kholzner steven$$AA</k1>
+                <k3>$$Kspring into php 5$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Online Resource</delcategory>
+              </delivery>
+              <enrichment>
+                <classificationlcc>QA76.73.P224</classificationlcc>
+              </enrichment>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Holzner</aulast>
+                <aufirst>Steven</aufirst>
+                <au>Holzner, Steven</au>
+                <addau>Safari Tech Books Online</addau>
+                <btitle>Spring into PHP 5 Steven Holzner.</btitle>
+                <addtitle>PHP 5</addtitle>
+                <date>2005</date>
+                <risdate>2005.</risdate>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <cop>Upper Saddle River, NJ</cop>
+                <pub>Addison Wesley</pub>
+                <lad15>elf1</lad15>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2011-11-28T15%3A14%3A44IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Spring%20into%20PHP%205%20Steven%20Holzner.&amp;rft.aulast=Holzner&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Holzner%2C%20Steven&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>5399326&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="http://proquest.safaribooksonline.com/?uiCode=princeun&amp;xmlId=0131498622" deliveryCategory="Online Resource"/>
+          <sear:GETIT GetIt2="" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>ONLINE</sear:library>
+              <sear:status>check_holdings</sear:status>
+              <sear:collection>Online Resources</sear:collection>
+              <sear:callNumber>Electronic Resource</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2011-11-28T15%3A14%3A44IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Spring%20into%20PHP%205%20Steven%20Holzner.&rft.aulast=Holzner&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Holzner%2C%20Steven&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>5399326</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=5399326&amp;pds_handle=</sear:backlink>
+            <sear:linktorsrc>http://proquest.safaribooksonline.com/?uiCode=princeun&amp;xmlId=0131498622</sear:linktorsrc>
+            <sear:thumbnail/>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2011-11-28T15%3A14%3A44IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Spring%20into%20PHP%205%20Steven%20Holzner.&rft.aulast=Holzner&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Holzner%2C%20Steven&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>5399326</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=elf1&amp;id=5399326</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+      </DOCSET>
+    </RESULT>
+  </JAGROOT>
+</SEGMENTS>

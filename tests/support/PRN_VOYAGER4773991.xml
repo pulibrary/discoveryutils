@@ -1,0 +1,199 @@
+<SEGMENTS xmlns="http://www.exlibrisgroup.com/xsd/jaguar/search">
+  <JAGROOT>
+    <RESULT>
+      <DOCSET TOTALHITS="1">
+        <sear:DOC LOCAL="true" xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib" xmlns:sear="http://www.exlibrisgroup.com/xsd/jaguar/search">
+          <PrimoNMBib>
+            <record>
+              <control>
+                <sourcerecordid>4773991</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER4773991</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>4773991</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>book</type>
+                <title>Himalayan animal tales / by Dorothy Mierow.</title>
+                <creator>Mierow, Dorothy.</creator>
+                <publisher>Kathmandu, Nepal : Pilgrims, [ca. 1990s].</publisher>
+                <creationdate>ca. 1990s]</creationdate>
+                <subject>Mountain animals -- Himalaya Mountains; Zoology -- Nepal; Animals -- Himalaya Mountains -- Pictorial works; Himalaya Mountains -- Pictorial works</subject>
+                <language>eng</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LRARE$$1Cotsen Children's Library (CTSN)$$288378$$Scheck_holdings$$30$$41$$5N$$60$$Xprincetondb$$Yctsn</availlibrary>
+                <lds03>[12] p., 40 leaves, [14] p. : col. illus. ; 21 cm.</lds03>
+                <lds05>Hill village farm -- The chicken's nightmare -- Clean-up crew -- Night visitors at the rabbit cage -- Garden visitors -- Evening visitors to the fruit trees -- Visitors in a maize field above Rupa Tal -- In the apple orchard -- Fire used in hunting -- Playmates in teh village community forest -- The tourists delight -- Co-operation -- Night prowlers -- Dolphins with gavial and marsh crocodile -- Playful otters -- Wild relatives -- Sweet-tooth -- The yellow-throated marten -- A dangerous encounter -- Jungle queen -- Impeyan pheasants and musk deer -- Pikas and Himalayan tahrs -- Snow leopard and blue sheep -- Bhutan: takin with baby meets serow -- Chase the enemy -- Do they see a yeti? -- Perhaps it was a bear -- Wild relatives of our sheep and goats -- Animals once abundant on the Tibetan plateau -- Domesticated animals of the high mountains -- Good fishing -- Golden langurs teasing a marbled cat -- Assam hill forest -- At the termite next -- Some rare types to look for -- Jungle fire -- Rivals -- Which is in danger? -- Danger at dawn -- Mogul period hunt scene.</lds05>
+                <lds06>Includes index.</lds06>
+                <lds07>Pub. white color printed pictorial wrappers.</lds07>
+                <lds18>Gift of Daniel Hirsch.</lds18>
+                <lds24>A collection of forty short stories describing Nepalese and Himalayan animal life. The book is divided into four parts: house and farm animals; animals of the lowland Terai; animals of the high mountains; and animals of India's lowlands. At the end of the text is an index of the animals described and their habitats.</lds24>
+                <lds26>Pilgrims</lds26>
+                <lds27>88378</lds27>
+                <availinstitution>$$IPRN$$Scheck_holdings</availinstitution>
+                <availpnx>available</availpnx>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <lln01>$$Tfind_rare$$Elfind_rare</lln01>
+              </links>
+              <search>
+                <creatorcontrib>Dorothy  Mierow</creatorcontrib>
+                <creatorcontrib>Mierow, D</creatorcontrib>
+                <creatorcontrib>by Dorothy Mierow.</creatorcontrib>
+                <title>Himalayan animal tales /</title>
+                <title>Hill village farm -- The chicken's nightmare -- Clean-up crew -- Night visitors at the rabbit cage -- Garden visitors -- Evening visitors to the fruit trees -- Visitors in a maize field above Rupa Tal -- In the apple orchard -- Fire used in hunting -- Playmates in teh village community forest -- The tourists delight -- Co-operation -- Night prowlers -- Dolphins with gavial and marsh crocodile -- Playful otters -- Wild relatives -- Sweet-tooth -- The yellow-throated marten -- A dangerous encounter -- Jungle queen -- Impeyan pheasants and musk deer -- Pikas and Himalayan tahrs -- Snow leopard and blue sheep -- Bhutan: takin with baby meets serow -- Chase the enemy -- Do they see a yeti? -- Perhaps it was a bear -- Wild relatives of our sheep and goats -- Animals once abundant on the Tibetan plateau -- Domesticated animals of the high mountains -- Good fishing -- Golden langurs teasing a marbled cat -- Assam hill forest -- At the termite next -- Some rare types to look for -- Jungle fire -- Rivals -- Which is in danger? -- Danger at dawn -- Mogul period hunt scene.</title>
+                <description>A collection of forty short stories describing Nepalese and Himalayan animal life. The book is divided into four parts: house and farm animals; animals of the lowland Terai; animals of the high mountains; and animals of India's lowlands. At the end of the text is an index of the animals described and their habitats.</description>
+                <subject>Mountain animals Himalaya Mountains.</subject>
+                <subject>Zoology Nepal.</subject>
+                <subject>Animals Himalaya Mountains Pictorial works.</subject>
+                <subject>Himalaya Mountains Pictorial works.</subject>
+                <general>Pilgrims,</general>
+                <general>voy-4773991</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER4773991</recordid>
+                <rsrctype>book</rsrctype>
+                <creationdate>1990</creationdate>
+                <creationdate>1999</creationdate>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>RARE</searchscope>
+                <searchscope>OTHERS</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>RARE</scope>
+                <scope>OTHERS</scope>
+                <scope>PRN</scope>
+                <lsr05>88378</lsr05>
+                <lsr06>4773991</lsr06>
+              </search>
+              <sort>
+                <title>Himalayan animal tales</title>
+                <title>Hill village farm --</title>
+                <title>The chicken's nightmare --</title>
+                <title>Clean-up crew --</title>
+                <title>Night visitors at the rabbit cage --</title>
+                <title>Garden visitors --</title>
+                <title>Evening visitors to the fruit trees --</title>
+                <title>Visitors in a maize field above Rupa Tal --</title>
+                <title>In the apple orchard --</title>
+                <title>Fire used in hunting --</title>
+                <title>Playmates in teh village community forest --</title>
+                <title>The tourists delight --</title>
+                <title>Co-operation --</title>
+                <title>Night prowlers --</title>
+                <title>Dolphins with gavial and marsh crocodile --</title>
+                <title>Playful otters --</title>
+                <title>Wild relatives --</title>
+                <title>Sweet-tooth --</title>
+                <title>The yellow-throated marten --</title>
+                <title>A dangerous encounter --</title>
+                <title>Jungle queen --</title>
+                <title>Impeyan pheasants and musk deer --</title>
+                <title>Pikas and Himalayan tahrs --</title>
+                <title>Snow leopard and blue sheep --</title>
+                <title>Bhutan: takin with baby meets serow --</title>
+                <title>Chase the enemy --</title>
+                <title>Do they see a yeti? --</title>
+                <title>Perhaps it was a bear --</title>
+                <title>Wild relatives of our sheep and goats --</title>
+                <title>Animals once abundant on the Tibetan plateau --</title>
+                <title>Domesticated animals of the high mountains --</title>
+                <title>Good fishing --</title>
+                <title>Golden langurs teasing a marbled cat --</title>
+                <title>Assam hill forest --</title>
+                <title>At the termite next --</title>
+                <title>Some rare types to look for --</title>
+                <title>Jungle fire --</title>
+                <title>Rivals --</title>
+                <title>Which is in danger? --</title>
+                <title>Danger at dawn --</title>
+                <title>Mogul period hunt scene</title>
+                <creationdate>1990</creationdate>
+                <author>Mierow, Dorothy.</author>
+              </sort>
+              <facets>
+                <language>eng</language>
+                <creationdate>1990</creationdate>
+                <topic>Mountain animals–Himalaya Mountains</topic>
+                <topic>Zoology–Nepal</topic>
+                <topic>Animals–Himalaya Mountains–Pictorial works</topic>
+                <topic>Himalaya Mountains–Pictorial works</topic>
+                <toplevel>available</toplevel>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>Mierow, Dorothy</creatorcontrib>
+                <frbrgroupid>38961958</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c3>himalayananimaltales</c3>
+                <c4>1990</c4>
+                <f5>himalayananimaltales</f5>
+                <f6>1990</f6>
+                <f7>himalayan animal tales</f7>
+                <f8>np</f8>
+                <f9>[12]p40leaves[14]p</f9>
+                <f10>pilgrims</f10>
+                <f11>mierow dorothy</f11>
+                <f16>q</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kmierow dorothy$$AA</k1>
+                <k3>$$Khimalayan animal tales$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Mierow</aulast>
+                <aufirst>Dorothy</aufirst>
+                <au>Mierow, Dorothy</au>
+                <btitle>Himalayan animal tales / by Dorothy Mierow.</btitle>
+                <date>1990</date>
+                <risdate>[ca. 1990s].</risdate>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <abstract>A collection of forty short stories describing Nepalese and Himalayan animal life. The book is divided into four parts: house and farm animals; animals of the lowland Terai; animals of the high mountains; and animals of India's lowlands. At the end of the text is an index of the animals described and their habitats.</abstract>
+                <cop>Kathmandu, Nepal</cop>
+                <pub>Pilgrims</pub>
+                <lad03>ctsn</lad03>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2011-11-28T15%3A36%3A51IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Himalayan%20animal%20tales%20/%20by%20Dorothy%20Mierow.&amp;rft.aulast=Mierow&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Mierow%2C%20Dorothy&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>4773991&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>RARE</sear:library>
+              <sear:status>check_holdings</sear:status>
+              <sear:collection>Cotsen Children's Library (CTSN)</sear:collection>
+              <sear:callNumber>88378</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2011-11-28T15%3A36%3A51IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Himalayan%20animal%20tales%20/%20by%20Dorothy%20Mierow.&rft.aulast=Mierow&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Mierow%2C%20Dorothy&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>4773991</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=4773991&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail/>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2011-11-28T15%3A36%3A51IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Himalayan%20animal%20tales%20/%20by%20Dorothy%20Mierow.&rft.aulast=Mierow&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Mierow%2C%20Dorothy&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>4773991</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=ctsn&amp;id=4773991</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+      </DOCSET>
+    </RESULT>
+  </JAGROOT>
+</SEGMENTS>
