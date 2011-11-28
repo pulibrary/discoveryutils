@@ -71,6 +71,20 @@ $app->get('/links/{rec_id}.json', function($rec_id) use($app) {
 })->assert('rec_id', '\w+');
 
 /*
+ * Return all PUL locations associated with a given record
+ */
+$app->get('/locations/{rec_id}.json', function($rec_id) use($app) {
+  $primo_client = new \PrimoServices\PrimoClient();
+  $record_data = $primo_client->getID($app->escape($rec_id));
+  $primo_record = new \PrimoServices\PrimoRecord($record_data);
+  $all_links_data = $primo_record->getAvailableLibraries();
+  if ($view_type = $app['request']->get('view')) { // this method may be slow per symfony request class docs
+    $all_links_data['view'] =  $view_type; 
+  }
+  return new Response(json_encode($all_links_data), 200, array('Content-Type' => 'application/json'));
+})->assert('rec_id', '\w+');
+
+/*
  * search by various index types issn, isbn, lccn, oclc
  */
 $app->get('/{index_type}/{standard_number}', function($index_type, $standard_number) use($app) {
