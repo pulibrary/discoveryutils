@@ -33,7 +33,7 @@ $app->get('/hello/{name}', function ($name) use ($app) {
   ));
 }); 
 
-$app->get('/record/{rec_id}', function($rec_id) use($app) {
+$app->get('/record/{rec_id}.json', function($rec_id) use($app) {
   $primo_client = new \PrimoServices\PrimoClient();
   $record_data = $primo_client->getID($app->escape($rec_id));
   $primo_record = new \PrimoServices\PrimoRecord($record_data);
@@ -41,9 +41,41 @@ $app->get('/record/{rec_id}', function($rec_id) use($app) {
   return new Response(json_encode($stub_data), 200, array('Content-Type' => 'application/json'));
 })->assert('rec_id', '\w+'); //test regular expression validation of route 
 
+$app->get('/record/{rec_id}.xml', function($rec_id) use($app) {
+  $primo_client = new \PrimoServices\PrimoClient();
+  $record_data = $primo_client->getID($app->escape($rec_id));
+  return new Response($record_data, 200, array('Content-Type' => 'application/xml'));
+})->assert('rec_id', '\w+'); 
+
+$app->get('/record/{rec_id}', function($rec_id) use($app) {
+  $primo_client = new \PrimoServices\PrimoClient();
+  $record_data = $primo_client->getID($app->escape($rec_id));
+  $primo_record = new \PrimoServices\PrimoRecord($record_data);
+  $stub_data = $primo_record->getBriefInfo();
+  $response_data = array();
+  $response_data['rec_id'] = $rec_id;
+  $response_data['pnx_response'] = $stub_data;
+  //$stub_data['source_prn_id'] = $rec_id;
+  return $app['twig']->render('record.twig', $response_data);
+})->assert('rec_id', '\w+');
+
+/*
+ * return all links associated with a given primo id
+ */
+$app->get('/links/{rec_id}.json', function($rec_id) use($app) {
+  $primo_client = new \PrimoServices\PrimoClient();
+  $record_data = $primo_client->getID($app->escape($rec_id));
+  $primo_record = new \PrimoServices\PrimoRecord($record_data);
+  $all_links_data = $primo_record->getAllLinks();
+  return new Response(json_encode($all_links_data), 200, array('Content-Type' => 'application/json'));
+})->assert('rec_id', '\w+');
+
+/*
+ * search by various index types issn, isbn, lccn, oclc
+ */
 $app->get('/{index_type}/{standard_number}', function($index_type, $standard_number) use($app) {
   return "{$index_type} : {$standard_number}";
-});
+})->assert('index_type', '(issn|isbn|lccn|oclc)');
 
 $app->get('/search/{limiter}/{query}', function($limiter, $query) use($app) {
   return "{$app->escape($limiter)} : {$app->escape($query)}";

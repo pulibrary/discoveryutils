@@ -9,9 +9,9 @@
     <div id="record-data">
     	{% for record in pnx_response %}
     	  <ul>
-    	    <li>{{ record }}</li>
+    	    <li>{{ record.voyager_id }}</li>
     	  	<li>{{ record.deliveryCategory }}</li>
-    	  	<li>{{ record.GetIt1 }}</li>
+    	  	<li>{{ record.fulltext }}</li>
     	  </ul>  
       {% endfor %}
     </div>

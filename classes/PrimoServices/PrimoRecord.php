@@ -103,20 +103,26 @@ Class PrimoRecord
   
   public function getGetItLinks() {
     $getit_links = array();
-    $source_path = "sear:GETIT";
-    $nodeList = $this->query($source_path); // throw exception when empty
     $source_ids = $this->getSourceIDs();
+    $id_count = count($source_ids); 
+    if ($id_count == 1) {
+      $source_path = "sear:GETIT[1]"; // take only the first item
+    } else {
+      $source_path = "sear:GETIT";
+    }
+    $nodeList = $this->query($source_path); // throw exception when empty
     $record_counter = 0;
     foreach ($nodeList as $node) {
+      //link_group = array();
       $node_link_properties = array();
       if(($node->getAttribute('deliveryCategory'))) {
         $node_link_properties['deliveryCategory'] = $node->getAttribute('deliveryCategory');
       }
       if(($node->getAttribute('GetIt1'))) { //FIXME - is GetIt1 comprised of only full-text links?
-        $node_link_properties['GetIt1'] = $node->getAttribute('GetIt1');
+        $node_link_properties['fulltext'] = $node->getAttribute('GetIt1');
       }
       if(($node->getAttribute('GetIt2'))) {
-        $node_link_properties['fulltext'] = $node->getAttribute('GetIt2');
+        $node_link_properties['openurl'] = $node->getAttribute('GetIt2');
       }
       $getit_links[$source_ids[$record_counter]] = $node_link_properties;
       $record_counter = $record_counter + 1;
@@ -139,7 +145,7 @@ Class PrimoRecord
     foreach($getit_links as $voyager_key => $getit_data) {
       $voyager_key_available_libraries = array();
       $voyager_key_available_libraries['locations'] = $available_libraries[$voyager_key];
-      $brief_info_data[$voyager_key] = array_merge($getit_links[$voyager_key], $voyager_key_available_libraries);
+      $brief_info_data[$voyager_key] = array_merge($voyager_key_available_libraries, $getit_links[$voyager_key], array('voyager_id' => $voyager_key));
     }
     
     return $brief_info_data;
@@ -186,8 +192,8 @@ Class PrimoRecord
    *  Single Source Example Availibrary Text
    *  have to split this $$IPRN$$LFIRE$$1(F)$$2PS3618.A914 B36 2010$$Savailable$$31$$40$$5N$$60$$Xprincetondb$$Yf
    *  
-   *  Merged Record Example Aviallibrary Text
-   *  have to split this <aviallibrary>$$IPRN$$LFIRE$$1(F)$$2D810.C696 P644 2000$$Savailable$$31$$40$$5N$$619$$Xprincetondb$$Yf$$OPRN_VOYAGER3216675</availlibrary>
+   *  Merged Record Example Avalllibrary Text
+   *  have to split this <availlibrary>$$IPRN$$LFIRE$$1(F)$$2D810.C696 P644 2000$$Savailable$$31$$40$$5N$$619$$Xprincetondb$$Yf$$OPRN_VOYAGER3216675</availlibrary>
    *  
    */
   
