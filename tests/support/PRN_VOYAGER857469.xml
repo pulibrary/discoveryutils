@@ -1,0 +1,277 @@
+<SEGMENTS xmlns="http://www.exlibrisgroup.com/xsd/jaguar/search">
+  <JAGROOT>
+    <RESULT>
+      <DOCSET TOTALHITS="1">
+        <sear:DOC LOCAL="true" xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib" xmlns:sear="http://www.exlibrisgroup.com/xsd/jaguar/search">
+          <PrimoNMBib>
+            <record>
+              <control>
+                <sourcerecordid>857469</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER857469</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>857469</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>journal</type>
+                <title>Science (Cambridge, Mass.).</title>
+                <title>Science.</title>
+                <contributor>American Association for the Advancement of Science</contributor>
+                <publisher>Cambridge, Mass. : M. King, [1883-</publisher>
+                <creationdate>1883-</creationdate>
+                <identifier>$$CISSN$$V0036-8075</identifier>
+                <subject>Science -- Periodicals</subject>
+                <language>eng</language>
+                <relation>$$Cissued_with $$VHelminthological Society of Washington. Proceedings of the Helminthological Society of Washington</relation>
+                <relation>$$Ccontinues $$VScience (New York, N.Y.) $$VScientific monthly</relation>
+                <relation>$$Chas_supplement $$VGuide to scientific instruments; $$VAAAS observer</relation>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LFIRE$$1(F)$$2Q1 .S3543$$Savailable$$3236$$40$$5Y$$6497$$Xprincetondb$$Yf</availlibrary>
+                <availlibrary>$$IPRN$$LFIRE$$1Microforms Services (FLM)$$2MICROFILM S01159$$Scheck_holdings$$30$$41$$5N$$60$$Xprincetondb$$Yflm</availlibrary>
+                <availlibrary>$$IPRN$$LPPL$$1(PPL)$$2Q1 .S35$$Savailable$$3192$$40$$5Y$$675$$Xprincetondb$$Yppl</availlibrary>
+                <availlibrary>$$IPRN$$LRECAP$$1(RCPPA)$$2Q1 .S35$$Savailable$$3160$$40$$5Y$$621$$Xprincetondb$$Yrcppa</availlibrary>
+                <availlibrary>$$IPRN$$LRECAP$$1Lewis Library use only (RCPPN)$$28001.846$$Savailable$$3405$$40$$5Y$$6485$$Xprincetondb$$Yrcppn</availlibrary>
+                <availlibrary>$$IPRN$$LLEWIS$$1Serials (shelved by serial title) (SCISS)$$28001.846$$Scheck_holdings$$3522$$42$$5Y$$6484$$Xprincetondb$$Ysciss</availlibrary>
+                <availlibrary>$$IPRN$$LSTOKES$$1Periodicals (SPIAPS)$$28001.846$$Scheck_holdings$$30$$41$$5N$$60$$Xprincetondb$$Yspiaps</availlibrary>
+                <availlibrary>$$IPRN$$LENG$$1Serials (STSS)$$2Q1 .S35$$Savailable$$3148$$40$$5Y$$6314$$Xprincetondb$$Ystss</availlibrary>
+                <unititle>Science (Cambridge, Mass.)</unititle>
+                <lds03>v. : ill. ; 26-32 cm.</lds03>
+                <lds03>[Vol. 1], no. 1 (Feb. 9, 1883)-v. 23, no. 581 (Mar. 23, 1894) ; new ser., v. 1, no. 1 (Jan. 4, 1895)-</lds03>
+                <lds06>Title from caption.</lds06>
+                <lds06>Since Jan. 1901, includes the official proceedings and most of the papers of the American Association for the Advancement of Science.</lds06>
+                <lds06>Place of publication varies.</lds06>
+                <lds12>Weekly (except last week in Dec.)</lds12>
+                <lds14>Vols. for 1911-1913 contain: the Proceedings of the Helminthological Society of Washington, 1st-15th meeting.</lds14>
+                <lds22>Science magazine</lds22>
+                <lds26>M. King</lds26>
+                <lds27>Q1 .S3543</lds27>
+                <lds27>MICROFILM S01159</lds27>
+                <lds27>Q1 .S35</lds27>
+                <lds27>8001.846</lds27>
+                <availinstitution>$$IPRN$$Scheck_holdings</availinstitution>
+                <availpnx>available</availpnx>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <lln01>$$Tfind_fire$$Elfind_fire</lln01>
+                <lln01>$$Tfind_lewis$$Elfind_lewis</lln01>
+                <lln01>$$Tfind_recap$$Elfind_recap</lln01>
+                <lln01>$$Tfind_stokes$$Elfind_stokes</lln01>
+                <lln01>$$Tfind_eng$$Elfind_eng</lln01>
+                <lln01>$$Tfind_ppl$$Elfind_ppl</lln01>
+              </links>
+              <search>
+                <creatorcontrib>American Association for the Advancement of Science.</creatorcontrib>
+                <creatorcontrib>A.A.A.S.</creatorcontrib>
+                <creatorcontrib>AAAS</creatorcontrib>
+                <creatorcontrib>Asociación Americana para el Avance de las Ciencias</creatorcontrib>
+                <title>Science (Cambridge, Mass.)</title>
+                <title>Science.</title>
+                <subject>Science Periodicals.</subject>
+                <general>M. King,</general>
+                <general>voy-857469</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER857469</recordid>
+                <issn>0036-8075</issn>
+                <rsrctype>journal</rsrctype>
+                <creationdate>1883</creationdate>
+                <creationdate>9999</creationdate>
+                <addtitle>Guide to scientific instruments</addtitle>
+                <addtitle>AAAS observer</addtitle>
+                <addtitle>Proceedings of the Helminthological Society of Washington</addtitle>
+                <addtitle>Science (New York, N.Y.)</addtitle>
+                <addtitle>Scientific monthly</addtitle>
+                <addtitle>Science express</addtitle>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>FIRE</searchscope>
+                <searchscope>PPL</searchscope>
+                <searchscope>RECAP</searchscope>
+                <searchscope>LEWIS</searchscope>
+                <searchscope>STOKES</searchscope>
+                <searchscope>ENG</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>FIRE</scope>
+                <scope>PPL</scope>
+                <scope>RECAP</scope>
+                <scope>LEWIS</scope>
+                <scope>STOKES</scope>
+                <scope>ENG</scope>
+                <scope>PRN</scope>
+                <alttitle>Science (Cambridge, Mass.)</alttitle>
+                <alttitle>Science magazine</alttitle>
+                <lsr04>0036-8075</lsr04>
+                <lsr05>Q1 .S3543</lsr05>
+                <lsr05>MICROFILM S01159</lsr05>
+                <lsr05>Q1 .S35</lsr05>
+                <lsr05>8001.846</lsr05>
+                <lsr06>857469</lsr06>
+              </search>
+              <sort>
+                <title>Science (Cambridge, Mass.)</title>
+                <title>Science</title>
+                <title>Science magazine</title>
+                <creationdate>1883</creationdate>
+                <author>American Association for the Advancement of Science.</author>
+              </sort>
+              <facets>
+                <language>eng</language>
+                <creationdate>1883</creationdate>
+                <topic>Science–Periodicals</topic>
+                <toplevel>available</toplevel>
+                <prefilter>journals</prefilter>
+                <rsrctype>journals</rsrctype>
+                <creatorcontrib>American Association for the Advancement of Science</creatorcontrib>
+                <frbrgroupid>31042465</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>2</t>
+                <c1>17024346</c1>
+                <c2>0036-8075</c2>
+                <c3>science</c3>
+                <c4>cambridge</c4>
+                <f1>17024346</f1>
+                <f3>00368075</f3>
+                <f6>1883</f6>
+                <f7>science</f7>
+                <f8>science</f8>
+                <f9>dcu</f9>
+                <f10>cambridge</f10>
+                <f11>science cambridge mass</f11>
+                <f12>0</f12>
+                <f13>9999</f13>
+                <f14>c</f14>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kamerican association for the advancement of science$$AA</k1>
+                <k2>$$Kscience cambridge mass$$ATO</k2>
+                <k3>$$Kscience$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <addau>American Association for the Advancement of Science</addau>
+                <jtitle>Science (Cambridge, Mass.).</jtitle>
+                <jtitle>Science.</jtitle>
+                <addtitle>Science magazine</addtitle>
+                <date>1883</date>
+                <risdate>[1883-</risdate>
+                <issn>0036-8075</issn>
+                <format>journal</format>
+                <genre>journal</genre>
+                <ristype>JOUR</ristype>
+                <cop>Cambridge, Mass.</cop>
+                <pub>M. King</pub>
+                <lccn>17024346</lccn>
+                <lad01>f</lad01>
+                <lad01>flm</lad01>
+                <lad02>sciss</lad02>
+                <lad05>rcppa</lad05>
+                <lad05>rcppn</lad05>
+                <lad09>spiaps</lad09>
+                <lad10>stss</lad10>
+                <lad11>ppl</lad11>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2011-11-28T16%3A37%3A49IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:journal&amp;rft.genre=journal&amp;rft.atitle=&amp;rft.jtitle=Science%20(Cambridge%2C%20Mass.).&amp;rft.btitle=&amp;rft.aulast=&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=0036-8075&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>857469&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>FIRE</sear:library>
+              <sear:status>check_holdings</sear:status>
+              <sear:collection>Microforms Services (FLM)</sear:collection>
+              <sear:callNumber>MICROFILM S01159</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>LEWIS</sear:library>
+              <sear:status>check_holdings</sear:status>
+              <sear:collection>Serials (shelved by serial title) (SCISS)</sear:collection>
+              <sear:callNumber>8001.846</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>STOKES</sear:library>
+              <sear:status>check_holdings</sear:status>
+              <sear:collection>Periodicals (SPIAPS)</sear:collection>
+              <sear:callNumber>8001.846</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>FIRE</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>(F)</sear:collection>
+              <sear:callNumber>Q1 .S3543</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>PPL</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>(PPL)</sear:collection>
+              <sear:callNumber>Q1 .S35</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>RECAP</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>(RCPPA)</sear:collection>
+              <sear:callNumber>Q1 .S35</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>RECAP</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>Lewis Library use only (RCPPN)</sear:collection>
+              <sear:callNumber>8001.846</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>ENG</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>Serials (STSS)</sear:collection>
+              <sear:callNumber>Q1 .S35</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2011-11-28T16%3A37%3A49IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=journal&rft.atitle=&rft.jtitle=Science%20(Cambridge%2C%20Mass.).&rft.btitle=&rft.aulast=&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=0036-8075&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>857469</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=857469&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:,OCLC:,LCCN:17024346&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2011-11-28T16%3A37%3A49IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=journal&rft.atitle=&rft.jtitle=Science%20(Cambridge%2C%20Mass.).&rft.btitle=&rft.aulast=&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=0036-8075&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>857469</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=f&amp;id=857469</sear:lln01>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=sciss&amp;id=857469</sear:lln01>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=rcppa&amp;id=857469</sear:lln01>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=spiaps&amp;id=857469</sear:lln01>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=stss&amp;id=857469</sear:lln01>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=ppl&amp;id=857469</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+      </DOCSET>
+    </RESULT>
+  </JAGROOT>
+</SEGMENTS>
