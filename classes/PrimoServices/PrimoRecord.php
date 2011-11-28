@@ -200,14 +200,19 @@ Class PrimoRecord
   public function getAvailableLibraries() {
     $available_ids = array();
     $available_path = "def:PrimoNMBib/def:record/def:display/def:availlibrary";
+    // need to check for another test 
     $availableList = $this->query($available_path);
-    $num_avail_items = $availableList->length;
+    $num_avail_items = count($this->getSourceIDs());
     $location_code_delimiter = '/\$\$Y/';
     $id_delimeter = '/\$\$O/';
-    foreach ($availableList as $node) {
+    foreach ($availableList as $node) { //FIXME - This code block should probably be rethought
       if($num_avail_items == 1) {
         $loc_code = preg_split($location_code_delimiter, $node->textContent);
-        $available_ids[$this->getRecordID()] = array($loc_code[1]);
+        if (array_key_exists($this->getRecordID(), $available_ids)) {
+          array_push($available_ids[$this->getRecordID()], $loc_code[1]);
+        } else {
+          $available_ids[$this->getRecordID()] = array($loc_code[1]);
+        }
       } else {
         $location_and_sourceid = preg_split($location_code_delimiter, $node->textContent);
         $available_string = preg_split($id_delimeter, $location_and_sourceid[1]);
