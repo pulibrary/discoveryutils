@@ -7,6 +7,7 @@ use Symfony\Component\ClassLoader\UniversalClassLoader;
 use PrimoServices\PrimoRecord;
 use PrimoServices\PrimoClient;
 use PrimoServices\PrimoLoader;
+use PrimoServices\PermaLink;
 
 /* bootstrap */
 
@@ -26,6 +27,17 @@ $app->get('/', function() use($app) {
   return 'Primo Lookup App';
 });
 
+/*
+ * Redirect Route to Primo Deep Link for IDs
+ */
+$app->match('/{rec_id}', function($rec_id) use($app) {
+  $primo_record_link = new \PrimoServices\PermaLink($rec_id);
+  return $app->redirect($primo_record_link->getLink());
+})->assert('rec_id', '^(PRN_VOYAGER|dedupmrg)\d+');
+
+/* 
+ *  Test Route
+ */
 $app->get('/hello/{name}', function ($name) use ($app) {
   $app['monolog']->addInfo(sprintf("User '%s' dropped by to say hi.", $name));
   return $app['twig']->render('hello.twig', array(
