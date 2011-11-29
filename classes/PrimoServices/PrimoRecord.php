@@ -118,12 +118,14 @@ Class PrimoRecord
       if(($node->getAttribute('deliveryCategory'))) {
         $node_link_properties['deliveryCategory'] = $node->getAttribute('deliveryCategory');
       }
-      if(($node->getAttribute('GetIt1'))) { //FIXME - is GetIt1 comprised of only full-text links?
-        $node_link_properties['fulltext'] = $node->getAttribute('GetIt1');
+      if(($full_text_link_value = $node->getAttribute('GetIt1'))) { //FIXME - is GetIt1 comprised of only full-text links?
+        if(strstr($full_text_link_value, 'http' )) {
+          $node_link_properties['fulltext'] = $node->getAttribute('GetIt1');
+        }
       }
-      if(($node->getAttribute('GetIt2'))) {
-        $node_link_properties['openurl'] = $node->getAttribute('GetIt2');
-      }
+      //if(($node->getAttribute('GetIt2'))) {
+      //  $node_link_properties['openurl'] = $node->getAttribute('GetIt2');
+      //}
       $getit_links[$source_ids[$record_counter]] = $node_link_properties;
       $record_counter = $record_counter + 1;
     }
