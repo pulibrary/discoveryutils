@@ -3,3 +3,4 @@
 vendor/Twig/*
 vendor/Monolog/*
 log/*
+docs/*
