@@ -21,6 +21,10 @@
     	  			{% endfor %}
     	  		</ul>
     	  	</li>
+    	  	<li>
+    	  	  {% set perma_link = '/searchit/'~rec_id %}
+    	  		<a href="{{ perma_link }}">View in Primo</a> 
+    	  	</li>
     	  </ul>  
       {% endfor %}
     </div>
