@@ -20,6 +20,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.logfile'       => __DIR__.'/../log/development.log',
     'monolog.class_path'    => __DIR__.'/../vendor/Monolog/src',
+    'monolog.level'         => 'Logger::DEBUG'
 ));
 $app['autoloader']->registerNamespace('PrimoServices',__DIR__.'/../classes');
 
@@ -32,8 +33,20 @@ $app->get('/', function() use($app) {
  */
 $app->match('/{rec_id}', function($rec_id) use($app) {
   $primo_record_link = new \PrimoServices\PermaLink($rec_id);
+  $app['monolog']->addInfo("REDIRECT: " . $primo_record_link->getLink());
   return $app->redirect($primo_record_link->getLink());
 })->assert('rec_id', '^(PRN_VOYAGER|dedupmrg)\d+');
+
+/* 
+ * redirect route for primo basic searches 
+ */
+$app->match('/search/{query}', function($query) use($app) {
+  $primo_query = new \PrimoServices\PrimoQuery($app->escape($query));
+  $primo_client = new \PrimoServices\PrimoClient();
+  $results = $primo_client->doSearch($primo_query);
+  
+});
+
 
 /* 
  *  Test Route
@@ -50,6 +63,7 @@ $app->get('/record/{rec_id}.json', function($rec_id) use($app) {
   $record_data = $primo_client->getID($app->escape($rec_id));
   $primo_record = new \PrimoServices\PrimoRecord($record_data);
   $stub_data = $primo_record->getBriefInfo();
+  $app['monolog']->addInfo("PNXID_REQUEST: " . json_encode($stub_data));
   return new Response(json_encode($stub_data), 200, array('Content-Type' => 'application/json'));
 })->assert('rec_id', '\w+'); //test regular expression validation of route 
 
@@ -100,6 +114,7 @@ $app->get('/locations/{rec_id}.json', function($rec_id) use($app) {
  * search by various index types issn, isbn, lccn, oclc
  */
 $app->get('/{index_type}/{standard_number}', function($index_type, $standard_number) use($app) {
+  
   return "{$index_type} : {$standard_number}";
 })->assert('index_type', '(issn|isbn|lccn|oclc)');
 

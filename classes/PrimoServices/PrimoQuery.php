@@ -4,8 +4,20 @@ namespace PrimoServices;
 
 Class PrimoQuery
 {
-  function __construct() {
+  
+  private $query_string;
+  
+  function __construct($query) {
+    $this->query_string = $this->buildQuery($query);
     
+  }
+  
+  public function getQueryString() {
+    return;
+  }
+  
+  private function buildQuery($query) {
+    return;
   }
 }
   
