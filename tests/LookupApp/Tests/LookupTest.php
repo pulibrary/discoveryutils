@@ -25,11 +25,19 @@ class LookupTest extends WebTestCase
     $this->assertEquals(1, count($crawler->filter('title:contains("kevin")')));
     $this->assertEquals(1, count($crawler->filter('h1:contains("kevin")')));
   }
-
+/*
   public function testResultsJson() {
     $client = $this->createClient();
-    $client->request('GET', '/results/PRN_VOYAGER6109368');
+    $client->request('GET', '/record/PRN_VOYAGER6109368');
     $json_data = $client->getResponse()->getContent();
     $this->assertContains("PRN_VOYAGER6109368", $json_data); // not a good test html_data is sent back not json data does contain the string though 
+  }
+*/
+  public function testSinglePrimoRecordResponse() {
+    
+  }
+  
+  public function testCompositePrimoRecordResponse() {
+    
   }
 }

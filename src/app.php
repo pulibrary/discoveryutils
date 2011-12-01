@@ -22,6 +22,10 @@ $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.class_path'    => __DIR__.'/../vendor/Monolog/src',
     'monolog.level'         => 'Logger::DEBUG'
 ));
+$app->register(new Silex\Provider\SwiftmailerServiceProvider(), array(
+    'swiftmailer.class_path'  => __DIR__.'/../vendor/swiftmailer/lib/classes',
+));
+
 $app['autoloader']->registerNamespace('PrimoServices',__DIR__.'/../classes');
 
 $app->get('/', function() use($app) {

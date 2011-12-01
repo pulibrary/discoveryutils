@@ -121,7 +121,7 @@ Class PrimoRecord
       if(($full_text_link_value = $node->getAttribute('GetIt1'))) { //FIXME - is GetIt1 comprised of only full-text links?
         if(strstr($full_text_link_value, 'http' )) {
           $node_link_properties['fulltext'] = $node->getAttribute('GetIt1');
-        }
+          }
       }
       //if(($node->getAttribute('GetIt2'))) {
       //  $node_link_properties['openurl'] = $node->getAttribute('GetIt2');

@@ -1,5 +1,5 @@
 <?php
-  require_once __DIR__.'/../vendor/silex.phar'; // include silex
+  //require_once __DIR__.'/../vendor/silex.phar'; // include silex
   $basepath = realpath(dirname(__FILE__).'/classes/');
   set_include_path(get_include_path() . PATH_SEPARATOR . $basepath);
 
