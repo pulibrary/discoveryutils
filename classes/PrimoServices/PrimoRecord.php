@@ -228,6 +228,10 @@ Class PrimoRecord
 
     return $available_ids;
   }
+
+  private function getPrimoDocumentData() {
+    //ADDME Will Return Primo Metadata for Record
+  }
   
 }
 ?>
