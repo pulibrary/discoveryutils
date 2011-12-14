@@ -115,6 +115,19 @@ $app->get('/locations/{rec_id}.json', function($rec_id) use($app) {
 })->assert('rec_id', '\w+');
 
 /*
+ * Generic "services" route to all for querying of specific primo services
+ * Returns values for {locations, openurl, fulltext, delivery, borrowdirect }
+ */
+$app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, $format="html") use ($app) {
+  $primo_client = new \PrimoServices\PrimoClient();
+  $record_data = $primo_client->getID($app->escape($rec_id)); //FIXME perhaps try and use the symfony validator utility to filter all rec_ids and service_types
+  $primo_record = new \PrimoServices\PrimoRecord($record_data);
+  // decide which service type to use
+  $location_links_data = $primo_record->getLocationServicess();
+  // decide which format to return
+})->assert('rec_id', '\w+');
+
+/*
  * search by various index types issn, isbn, lccn, oclc
  */
 $app->get('/{index_type}/{standard_number}', function($index_type, $standard_number) use($app) {
