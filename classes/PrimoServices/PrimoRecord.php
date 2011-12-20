@@ -147,10 +147,21 @@ Class PrimoRecord
     foreach($getit_links as $voyager_key => $getit_data) {
       $voyager_key_available_libraries = array();
       $voyager_key_available_libraries['locations'] = $available_libraries[$voyager_key];
-      $brief_info_data[$voyager_key] = array_merge($voyager_key_available_libraries, $getit_links[$voyager_key], array('voyager_id' => $voyager_key));
+      $locator_links = array();
+      foreach($available_libraries[$voyager_key] as $location_code) {
+        $locator_link = new \PrimoServices\LocatorLink($this->split_voyager_id($voyager_key), $location_code);
+        array_push($locator_links, $locator_link->getLink());
+      }
+      $brief_info_data[$voyager_key] = array_merge($voyager_key_available_libraries, $getit_links[$voyager_key], array('voyager_id' => $this->split_voyager_id($voyager_key)), array('locator_links' => $locator_links));
     }
     
     return $brief_info_data;
+  }
+  
+  private function split_voyager_id($id) {
+    $pnx_id_components = preg_split('/PRN_VOYAGER/', $id);
+    
+    return $pnx_id_components[1];
   }
   
   public function getOpenURL() {
@@ -232,6 +243,12 @@ Class PrimoRecord
   private function getPrimoDocumentData() {
     //ADDME Will Return Primo Metadata for Record
   }
+  
+  public function getStdNums() {
+    //ADDME returns standard numbers (ISSN/ISBN associated with the record)
+  }
+  
+  
   
 }
 ?>
