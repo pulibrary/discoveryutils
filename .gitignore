@@ -2,4 +2,6 @@
 .settings/*
 vendor/Twig/*
 vendor/Monolog/*
+vendor/*
 log/*
+docs/*

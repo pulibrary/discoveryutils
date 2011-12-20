@@ -1,6 +1,5 @@
 <?php
 namespace LookupApp\Tests;
-require_once __DIR__.'/../../../vendor/silex.phar';
 use Silex\WebTestCase;
 
 class LookupTest extends WebTestCase
@@ -29,8 +28,17 @@ class LookupTest extends WebTestCase
 
   public function testResultsJson() {
     $client = $this->createClient();
-    $client->request('GET', '/results/PRN_VOYAGER6109368');
+    $client->request('GET', '/record/PRN_VOYAGER6109368');
     $json_data = $client->getResponse()->getContent();
-    $this->assertContains("PRN_VOYAGER6109368", $json_data);
+    $this->assertContains("PRN_VOYAGER6109368", $json_data); // not a good test html_data is sent back not json data does contain the string though 
   }
+
+  public function testSinglePrimoRecordResponse() {
+    
+  }
+  
+  public function testCompositePrimoRecordResponse() {
+    
+  }
+  
 }

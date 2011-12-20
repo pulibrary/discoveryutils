@@ -7,6 +7,7 @@ use Symfony\Component\ClassLoader\UniversalClassLoader;
 use PrimoServices\PrimoRecord;
 use PrimoServices\PrimoClient;
 use PrimoServices\PrimoLoader;
+use PrimoServices\PermaLink;
 
 /* bootstrap */
 
@@ -19,13 +20,41 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.logfile'       => __DIR__.'/../log/development.log',
     'monolog.class_path'    => __DIR__.'/../vendor/Monolog/src',
+    'monolog.level'         => 'Logger::DEBUG'
 ));
+$app->register(new Silex\Provider\SwiftmailerServiceProvider(), array(
+    'swiftmailer.class_path'  => __DIR__.'/../vendor/swiftmailer/lib/classes',
+));
+
 $app['autoloader']->registerNamespace('PrimoServices',__DIR__.'/../classes');
 
 $app->get('/', function() use($app) {
   return 'Primo Lookup App';
 });
 
+/*
+ * Redirect Route to Primo Deep Link for IDs
+ */
+$app->match('/{rec_id}', function($rec_id) use($app) {
+  $primo_record_link = new \PrimoServices\PermaLink($rec_id);
+  $app['monolog']->addInfo("REDIRECT: " . $primo_record_link->getLink());
+  return $app->redirect($primo_record_link->getLink());
+})->assert('rec_id', '^(PRN_VOYAGER|dedupmrg)\d+');
+
+/* 
+ * redirect route for primo basic searches 
+ */
+$app->match('/search/{query}', function($query) use($app) {
+  $primo_query = new \PrimoServices\PrimoQuery($app->escape($query));
+  $primo_client = new \PrimoServices\PrimoClient();
+  $results = $primo_client->doSearch($primo_query);
+  
+});
+
+
+/* 
+ *  Test Route
+ */
 $app->get('/hello/{name}', function ($name) use ($app) {
   $app['monolog']->addInfo(sprintf("User '%s' dropped by to say hi.", $name));
   return $app['twig']->render('hello.twig', array(
@@ -38,6 +67,7 @@ $app->get('/record/{rec_id}.json', function($rec_id) use($app) {
   $record_data = $primo_client->getID($app->escape($rec_id));
   $primo_record = new \PrimoServices\PrimoRecord($record_data);
   $stub_data = $primo_record->getBriefInfo();
+  $app['monolog']->addInfo("PNXID_REQUEST: " . json_encode($stub_data));
   return new Response(json_encode($stub_data), 200, array('Content-Type' => 'application/json'));
 })->assert('rec_id', '\w+'); //test regular expression validation of route 
 
@@ -85,9 +115,30 @@ $app->get('/locations/{rec_id}.json', function($rec_id) use($app) {
 })->assert('rec_id', '\w+');
 
 /*
+ * Generic "services" route to all for querying of specific primo services
+ * Returns values for {locations, openurl, fulltext, delivery, borrowdirect }
+ */
+$app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, $format="html") use ($app) {
+  $primo_client = new \PrimoServices\PrimoClient();
+  $record_data = $primo_client->getID($app->escape($rec_id)); //FIXME perhaps try and use the symfony validator utility to filter all rec_ids and service_types
+  $primo_record = new \PrimoServices\PrimoRecord($record_data);
+  // decide which service type to use
+  $location_links_data = $primo_record->getLocationServices();
+  if ($format == "json") {
+    return new Response(json_encode($location_links_data), 200, array('Content-Type' => 'application/json'));
+  }
+  // decide which format to return
+})->assert('rec_id', '\w+');
+
+/*
+ * These should be rethought based on a close reading of http://www.exlibrisgroup.org/display/PrimoOI/Brief+Search
+ * to make the most generic use of "routes" as possible 
+ * anything in the PNX "search" section can be a search index
+ * indexes available for the "facets" in a PNX record as well.
  * search by various index types issn, isbn, lccn, oclc
  */
 $app->get('/{index_type}/{standard_number}', function($index_type, $standard_number) use($app) {
+  
   return "{$index_type} : {$standard_number}";
 })->assert('index_type', '(issn|isbn|lccn|oclc)');
 

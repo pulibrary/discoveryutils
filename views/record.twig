@@ -11,13 +11,19 @@
     	<h2>{{ record.voyager_id }}</h2>
     	  <ul>
     	  	<li>{{ record.deliveryCategory }}</li>
-    	  	<li>{{ record.fulltext }}</li>
+    	  	{% if record.fulltext is defined %}
+    	  	  <li>{{ record.fulltext }}</li>
+    	  	{% endif %}
     	  	<li>PUL Locations:
     	  	  <ul>
     	  			{% for location in record.locations %}
     	  			  <li>{{ location }}</li>
     	  			{% endfor %}
     	  		</ul>
+    	  	</li>
+    	  	<li>
+    	  	  {% set perma_link = '/searchit/'~rec_id %}
+    	  		<a href="{{ perma_link }}">View in Primo</a> 
     	  	</li>
     	  </ul>  
       {% endfor %}

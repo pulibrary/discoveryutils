@@ -118,12 +118,14 @@ Class PrimoRecord
       if(($node->getAttribute('deliveryCategory'))) {
         $node_link_properties['deliveryCategory'] = $node->getAttribute('deliveryCategory');
       }
-      if(($node->getAttribute('GetIt1'))) { //FIXME - is GetIt1 comprised of only full-text links?
-        $node_link_properties['fulltext'] = $node->getAttribute('GetIt1');
+      if(($full_text_link_value = $node->getAttribute('GetIt1'))) { //FIXME - is GetIt1 comprised of only full-text links?
+        if(strstr($full_text_link_value, 'http' )) {
+          $node_link_properties['fulltext'] = $node->getAttribute('GetIt1');
+          }
       }
-      if(($node->getAttribute('GetIt2'))) {
-        $node_link_properties['openurl'] = $node->getAttribute('GetIt2');
-      }
+      //if(($node->getAttribute('GetIt2'))) {
+      //  $node_link_properties['openurl'] = $node->getAttribute('GetIt2');
+      //}
       $getit_links[$source_ids[$record_counter]] = $node_link_properties;
       $record_counter = $record_counter + 1;
     }
@@ -145,10 +147,21 @@ Class PrimoRecord
     foreach($getit_links as $voyager_key => $getit_data) {
       $voyager_key_available_libraries = array();
       $voyager_key_available_libraries['locations'] = $available_libraries[$voyager_key];
-      $brief_info_data[$voyager_key] = array_merge($voyager_key_available_libraries, $getit_links[$voyager_key], array('voyager_id' => $voyager_key));
+      $locator_links = array();
+      foreach($available_libraries[$voyager_key] as $location_code) {
+        $locator_link = new \PrimoServices\LocatorLink($this->split_voyager_id($voyager_key), $location_code);
+        array_push($locator_links, $locator_link->getLink());
+      }
+      $brief_info_data[$voyager_key] = array_merge($voyager_key_available_libraries, $getit_links[$voyager_key], array('voyager_id' => $this->split_voyager_id($voyager_key)), array('locator_links' => $locator_links));
     }
     
     return $brief_info_data;
+  }
+  
+  private function split_voyager_id($id) {
+    $pnx_id_components = preg_split('/PRN_VOYAGER/', $id);
+    
+    return $pnx_id_components[1];
   }
   
   public function getOpenURL() {
@@ -226,6 +239,16 @@ Class PrimoRecord
 
     return $available_ids;
   }
+
+  private function getPrimoDocumentData() {
+    //ADDME Will Return Primo Metadata for Record
+  }
+  
+  public function getStdNums() {
+    //ADDME returns standard numbers (ISSN/ISBN associated with the record)
+  }
+  
+  
   
 }
 ?>
