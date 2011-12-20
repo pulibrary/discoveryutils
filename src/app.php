@@ -123,11 +123,18 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
   $record_data = $primo_client->getID($app->escape($rec_id)); //FIXME perhaps try and use the symfony validator utility to filter all rec_ids and service_types
   $primo_record = new \PrimoServices\PrimoRecord($record_data);
   // decide which service type to use
-  $location_links_data = $primo_record->getLocationServicess();
+  $location_links_data = $primo_record->getLocationServices();
+  if ($format == "json") {
+    return new Response(json_encode($location_links_data), 200, array('Content-Type' => 'application/json'));
+  }
   // decide which format to return
 })->assert('rec_id', '\w+');
 
 /*
+ * These should be rethought based on a close reading of http://www.exlibrisgroup.org/display/PrimoOI/Brief+Search
+ * to make the most generic use of "routes" as possible 
+ * anything in the PNX "search" section can be a search index
+ * indexes available for the "facets" in a PNX record as well.
  * search by various index types issn, isbn, lccn, oclc
  */
 $app->get('/{index_type}/{standard_number}', function($index_type, $standard_number) use($app) {
