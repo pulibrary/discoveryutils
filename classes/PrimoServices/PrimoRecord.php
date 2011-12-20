@@ -149,7 +149,7 @@ Class PrimoRecord
       $voyager_key_available_libraries['locations'] = $available_libraries[$voyager_key];
       $locator_links = array();
       foreach($available_libraries[$voyager_key] as $location_code) {
-        $locator_link = new \PrimoServices\LocatorLink($this->split_voyager_id($voyager_key), $location_code);
+        $locator_link = new \PrimoServices\LocatorLink($this->split_voyager_id($voyager_key), $location_code); //FIXME perhaps splitting should be moved to locater class
         array_push($locator_links, $locator_link->getLink());
       }
       $brief_info_data[$voyager_key] = array_merge($voyager_key_available_libraries, $getit_links[$voyager_key], array('voyager_id' => $this->split_voyager_id($voyager_key)), array('locator_links' => $locator_links));
