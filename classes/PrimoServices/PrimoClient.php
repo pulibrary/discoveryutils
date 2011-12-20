@@ -31,4 +31,5 @@ class PrimoClient
     $xml = file_get_contents($this->xservice_base . $this->xservice_brief_search . $query->getQueryString());
   }
   
+  
 }

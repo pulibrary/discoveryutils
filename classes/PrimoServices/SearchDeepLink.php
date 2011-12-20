@@ -40,7 +40,7 @@ class SearchDeepLink
   }
   
   private function build_deep_link() {
-    return $this->base_url . $this->primo_single_record_path . implode("&", $this->build_param_string()) . $this->build_query_string();
+    return $this->base_url . $this->primo_single_record_path . urlencode(implode("&", $this->build_param_string()) . $this->build_query_string());
   }
   
   private function build_query_string() {
