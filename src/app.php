@@ -103,7 +103,7 @@ $app->get('/links/{rec_id}.json', function($rec_id) use($app) {
 })->assert('rec_id', '\w+');
 
 /*
- * Return all PUL locations associated with a given record
+ * Return all PUL locations associated with a given primo id
  */
 $app->get('/locations/{rec_id}.json', function($rec_id) use($app) {
   $primo_client = new \PrimoServices\PrimoClient();
@@ -140,13 +140,26 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
  * search by various index types issn, isbn, lccn, oclc
  */
 $app->get('/{index_type}/{standard_number}', function($index_type, $standard_number) use($app) {
-  
-  return "{$index_type} : {$standard_number}";
-})->assert('index_type', '(issn|isbn|lccn|oclc)');
+  $primo_client = new \PrimoServices\PrimoClient();
+  $query = new \PrimoServices\PrimoQuery($app->escape($standard_number), $app->escape($index_type));
+  $response_data = $primo_client->doSearch($query);
+  //$record_data = new \PrimoServices\PrimoRecord($response_data);
+  //echo $primo_client;
+  $app['monolog']->addInfo("Index Query: " . $primo_client);
+  //return $app->redirect($primo_client);
+  return new Response($response_data, 200, array('Content-Type' => 'application/xml'));
+  //echo $query->getQueryString();
+})->assert('index_type', '(issn|isbn|lccn|oclc)'); // should this be a list of possible options from the 
 
-$app->get('/search/{limiter}/{query}', function($limiter, $query) use($app) {
-  return "{$app->escape($limiter)} : {$app->escape($query)}";
-});
+/*
+ * For general keyword/title searches 
+ */
+$app->get('/search/{limiter}/{query}', function($index_type, $query) use($app) {
+  $app['monolog']->addInfo("{$app->escape($limiter)} : {$app->escape($query)}");
+  $primo_client = new \PrimoServices\PrimoClient();
+  $query = new \PrimoServices\PrimoQuery($app->escape($query), $app->escape($index_type));
+  
+})->assert('index_type', '\w+'); // should be a list of values that are valid for the indexField parameter in a Primo query statement
 
 $app['debug'] = true;
 return $app;
