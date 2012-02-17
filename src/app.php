@@ -37,7 +37,7 @@ $app->get('/', function() use($app) {
 /*
  * Redirect Route to Primo Deep Link for IDs
  */
-$app->match('/{rec_id}', function($rec_id) use($app) {
+$app->match('/show/{rec_id}', function($rec_id) use($app) {
   $primo_record_link = new \PrimoServices\PermaLink($rec_id);
   $app['monolog']->addInfo("REDIRECT: " . $primo_record_link->getLink());
   return $app->redirect($primo_record_link->getLink());
@@ -45,12 +45,23 @@ $app->match('/{rec_id}', function($rec_id) use($app) {
 
 /* 
  * redirect route for primo basic searches 
+ * tab should match an available primo search tab
  */
-$app->match('/search/{query}', function($query) use($app) {
-  $primo_query = new \PrimoServices\PrimoQuery($app->escape($query));
-  $primo_client = new \PrimoServices\PrimoClient();
-  $results = $primo_client->doSearch($primo_query);
-  
+$app->match('/search/{tab}', function($tab) use($app) {
+  //test to see if query is valid
+  $query = $app->escape($app['request']->get('query')); //protect query against XSS
+  if($app['request']->get('scope')) {
+    $scope = $app->escape($app['request']->get('scope'));
+  } else {
+    $scope = "PRN"; //FIXME should use constant
+  }
+  if ($tab == "summon") {
+    $deep_search_link = new \PrimoServices\SummonQuery($query);
+  } else {
+    $deep_search_link = new \PrimoServices\SearchDeepLink($query, "any", "contains", $tab);
+  }
+  $app['monolog']->addInfo("TAB:" . $tab . "\tREDIRECT: " . $deep_search_link->getLink());
+  return $app->redirect($deep_search_link->getLink());
 });
 
 
@@ -103,7 +114,7 @@ $app->get('/links/{rec_id}.json', function($rec_id) use($app) {
 })->assert('rec_id', '\w+');
 
 /*
- * Return all PUL locations associated with a given record
+ * Return all PUL locations associated with a given primo id
  */
 $app->get('/locations/{rec_id}.json', function($rec_id) use($app) {
   $primo_client = new \PrimoServices\PrimoClient();
@@ -140,13 +151,26 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
  * search by various index types issn, isbn, lccn, oclc
  */
 $app->get('/{index_type}/{standard_number}', function($index_type, $standard_number) use($app) {
-  
-  return "{$index_type} : {$standard_number}";
-})->assert('index_type', '(issn|isbn|lccn|oclc)');
+  $primo_client = new \PrimoServices\PrimoClient();
+  $query = new \PrimoServices\PrimoQuery($app->escape($standard_number), $app->escape($index_type));
+  $response_data = $primo_client->doSearch($query);
+  //$record_data = new \PrimoServices\PrimoRecord($response_data);
+  //echo $primo_client;
+  $app['monolog']->addInfo("Index Query: " . $primo_client);
+  //return $app->redirect($primo_client);
+  return new Response($response_data, 200, array('Content-Type' => 'application/xml'));
+  //echo $query->getQueryString();
+})->assert('index_type', '(issn|isbn|lccn|oclc)'); // should this be a list of possible options from the 
 
-$app->get('/search/{limiter}/{query}', function($limiter, $query) use($app) {
-  return "{$app->escape($limiter)} : {$app->escape($query)}";
-});
+/*
+ * For general keyword/title searches 
+ */
+$app->get('/search/{limiter}/{query}', function($index_type, $query) use($app) {
+  $app['monolog']->addInfo("{$app->escape($limiter)} : {$app->escape($query)}");
+  $primo_client = new \PrimoServices\PrimoClient();
+  $query = new \PrimoServices\PrimoQuery($app->escape($query), $app->escape($index_type));
+  
+})->assert('index_type', '\w+'); // should be a list of values that are valid for the indexField parameter in a Primo query statement
 
 $app['debug'] = true;
 return $app;
