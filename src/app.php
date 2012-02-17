@@ -57,8 +57,12 @@ $app->match('/search/{tab}', function($tab) use($app) {
   }
   if ($tab == "summon") {
     $deep_search_link = new \PrimoServices\SummonQuery($query);
+  } elseif($tab == "course") {
+    $deep_search_link = new \PrimoServices\SearchDeepLink($query, "any", "contains", $tab, array());
+  } elseif($tab == "blended") {
+    $deep_search_link = new \PrimoServices\SearchDeepLink($query, "any", "contains", $tab, array("PRN", "SummonThirdNode"));
   } else {
-    $deep_search_link = new \PrimoServices\SearchDeepLink($query, "any", "contains", $tab);
+    $deep_search_link = new \PrimoServices\SearchDeepLink($query, "any", "contains", $tab, array("PRN"));
   }
   $app['monolog']->addInfo("TAB:" . $tab . "\tREDIRECT: " . $deep_search_link->getLink());
   return $app->redirect($deep_search_link->getLink());

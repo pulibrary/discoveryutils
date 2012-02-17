@@ -45,20 +45,21 @@ Class PrimoQuery
   private $available_local_scopes = array( //See http://searchit.princeton.edu/PrimoWebServices/xservice/getscopesofview?viewId=PRINCETON for list of scopes
     "PRN",
     "LEWIS",
-    "ARCH"
+    "ARCH",
+    "COURSE"
   );
 
   private $available_remote_scopes = array(
     "SummonThirdNode"
   );
   
-  function __construct($query_value, $index_field = "any", $precision_operator = "exact", $scope = "PRN") {
+  function __construct($query_value, $index_field = "any", $precision_operator = "exact", $scopes = array()) {
     $this->query_value = $query_value;
     $this->index_field = $index_field;
     $this->precision_operator = $precision_operator;
-    $this->scope = $scope;
+    $this->scopes = $scopes;
     $this->query_params['query'] = $this->buildQuery(); 
-    $this->query_params['loc'] = $this->buildScope(); //Query can also be an array
+    $this->query_params['loc'] = $this->buildScopes(); //Query can also be an array
     $this->query_string = $this->buildQueryString($this->query_params);
     
   }
@@ -75,24 +76,40 @@ Class PrimoQuery
     return $this->index_field . "," . $this->precision_operator . "," . $this->query_value; //FIXME check for valid operators 
   }
   
-  private function buildScope() {
-   return "local,scope:(" . $this->scope . ")"; //FIXME Check for valid scope
+  /* local and remote scopes must be treated differently */
+  private function buildScopes() {
+   $scopes = array();
+   foreach($this->scopes as $scope) {
+     if($this->isRemoteScope($scope)) {
+      array_push($scopes, $scope); 
+     } else {
+      array_push($scopes, "local,scope:(" . $scope . ")"); //FIXME Check for valid scope
+     }
+   }
+   
+   return implode(",", $scopes);
   }
 
+  /*
   private function buildRemoteScope($remote_scope) {
     return "remote,adaptor," . $remote_scope;
   }
-
-  private function buildScopes() {
-    //construct the loc parameter if needed//Bug in primo a web service query can accept only a single scope
-  }
-  
+  */
+ 
   private function buildQueryString($query_params) {
      return http_build_query($query_params);
   }
 
-  private function isValidScope() {
-    if (in_array($this->scope, $this->available_local_scopes)) {
+  private function isRemoteScope($scope) {
+    if (in_array($scope, $this->available_remote_scopes)) {
+      return TRUE;
+    } else {
+      return FALSE;
+    }
+  }
+
+  private function isValidScope($scope) {
+    if (in_array($scope, $this->available_local_scopes)) {
       return TRUE;
     } else {
       return FALSE;
@@ -108,7 +125,7 @@ Class PrimoQuery
   }
   
   private function isValidQuery() {
-    if($this->isValidScope() && $this->isValidQueryValue() && $this->isValidIndexType() && $this->isValidPrecisionOperator()) {
+    if($this->isValidQueryValue() && $this->isValidIndexType() && $this->isValidPrecisionOperator()) {
       return TRUE;
     } else {
       return FALSE;

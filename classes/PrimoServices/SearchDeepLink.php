@@ -31,8 +31,8 @@ class SearchDeepLink
   private $tabs = array("location","summon", "course", "blended");
   private $active_tab;
   
-  public function __construct($query, $index_type, $precision_operator, $tab = "location") {
-    $this->query = new \PrimoServices\PrimoQuery($query, $index_type, $precision_operator);
+  public function __construct($query, $index_type, $precision_operator, $tab = "location", $scopes = array("PRN")) {
+    $this->query = new \PrimoServices\PrimoQuery($query, $index_type, $precision_operator, $scopes);
     if ($this->isValidTab($tab)) {
       $this->active_tab = $tab;
     }
