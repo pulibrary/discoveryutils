@@ -50,11 +50,7 @@ $app->match('/show/{rec_id}', function($rec_id) use($app) {
 $app->match('/search/{tab}', function($tab) use($app) {
   //test to see if query is valid
   $query = $app->escape($app['request']->get('query')); //protect query against XSS
-  if($app['request']->get('scope')) {
-    $scope = $app->escape($app['request']->get('scope'));
-  } else {
-    $scope = "PRN"; //FIXME should use constant
-  }
+  
   if ($tab == "summon") {
     $deep_search_link = new \PrimoServices\SummonQuery($query);
   } elseif($tab == "course") {
