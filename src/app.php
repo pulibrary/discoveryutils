@@ -37,7 +37,7 @@ $app->get('/', function() use($app) {
 /*
  * Redirect Route to Primo Deep Link for IDs
  */
-$app->match('/{rec_id}', function($rec_id) use($app) {
+$app->match('/show/{rec_id}', function($rec_id) use($app) {
   $primo_record_link = new \PrimoServices\PermaLink($rec_id);
   $app['monolog']->addInfo("REDIRECT: " . $primo_record_link->getLink());
   return $app->redirect($primo_record_link->getLink());
@@ -45,12 +45,23 @@ $app->match('/{rec_id}', function($rec_id) use($app) {
 
 /* 
  * redirect route for primo basic searches 
+ * tab should match an available primo search tab
  */
-$app->match('/search/{query}', function($query) use($app) {
-  $primo_query = new \PrimoServices\PrimoQuery($app->escape($query));
-  $primo_client = new \PrimoServices\PrimoClient();
-  $results = $primo_client->doSearch($primo_query);
-  
+$app->match('/search/{tab}', function($tab) use($app) {
+  //test to see if query is valid
+  $query = $app->escape($app['request']->get('query')); //protect query against XSS
+  if($app['request']->get('scope')) {
+    $scope = $app->escape($app['request']->get('scope'));
+  } else {
+    $scope = "PRN"; //FIXME should use constant
+  }
+  if ($tab == "summon") {
+    $deep_search_link = new \PrimoServices\SummonQuery($query);
+  } else {
+    $deep_search_link = new \PrimoServices\SearchDeepLink($query, "any", "contains", $tab);
+  }
+  $app['monolog']->addInfo("TAB:" . $tab . "\tREDIRECT: " . $deep_search_link->getLink());
+  return $app->redirect($deep_search_link->getLink());
 });
 
 
