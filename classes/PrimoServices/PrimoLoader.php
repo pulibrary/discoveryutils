@@ -1,5 +1,6 @@
 <?php
 namespace PrimoServices;
+use PrimoServices\PrimoRecord;
 
 class PrimoLoader 
 {
