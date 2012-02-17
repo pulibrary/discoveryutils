@@ -54,7 +54,7 @@ $app->match('/search/{tab}', function($tab) use($app) {
   if ($tab == "summon") {
     $deep_search_link = new \PrimoServices\SummonQuery($query);
   } elseif($tab == "course") {
-    $deep_search_link = new \PrimoServices\SearchDeepLink($query, "any", "contains", $tab, array());
+    $deep_search_link = new \PrimoServices\SearchDeepLink($query, "any", "contains", $tab, array("COURSE"));
   } elseif($tab == "blended") {
     $deep_search_link = new \PrimoServices\SearchDeepLink($query, "any", "contains", $tab, array("PRN", "SummonThirdNode"));
   } else {
