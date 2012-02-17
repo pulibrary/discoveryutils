@@ -3,7 +3,7 @@ namespace PrimoServices;
 
 class SummonQuery {
   
-  private $summon_base = "http://princeton.summon.serialssolutions.com/?";
+  private $summon_base = "http://princeton.summon.serialssolutions.com/search?";
   private $query_key = "s.q";
   private $query;
   private $limiters;
