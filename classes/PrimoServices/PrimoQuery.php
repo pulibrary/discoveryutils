@@ -65,11 +65,7 @@ Class PrimoQuery
   }
   
   public function getQueryString() {
-    if($this->isValidQuery()) {
-      return $this->query_string;
-    } else {
-      return "Invalid Query" . $this->query_string;
-    }
+    return $this->query_string;
   }
   
   private function buildQuery() {
@@ -117,7 +113,7 @@ Class PrimoQuery
   }
 
   private function isValidQueryValue() {
-    if(preg_match('/\w+/', $this->query_value)) {
+    if(preg_match('/.+/', $this->query_value)) {
       return TRUE;
     } else {
       return FALSE;

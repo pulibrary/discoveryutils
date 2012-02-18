@@ -31,8 +31,11 @@ class PrimoClient
   public function doSearch(\PrimoServices\PrimoQuery $query) {
     $this->current_url = $this->xservice_base . $this->xservice_brief_search . $query->getQueryString();
     $xml = file_get_contents($this->current_url);
-    
-    return $xml;
+    if($xml != 0) { 
+      return $xml; 
+    } else {
+      return "<error><code>503</code><message>No Response from Primo Server</message></error>";
+    }
   }
   
   public function __toString() {

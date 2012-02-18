@@ -8,7 +8,9 @@ use PrimoServices\PrimoRecord;
 use PrimoServices\PrimoClient;
 use PrimoServices\PrimoLoader;
 use PrimoServices\PermaLink;
-
+use PrimoServices\PrimoException;
+use PrimoServices\SummonQuery;
+use PrimoServices\SearchDeepLink;
 /* bootstrap */
 
 $app = new Silex\Application(); 
@@ -28,8 +30,11 @@ $app->register(new Silex\Provider\SwiftmailerServiceProvider(), array(
     'swiftmailer.class_path'  => __DIR__.'/../vendor/swiftmailer/lib/classes',
 ));
 */
-$app['autoloader']->registerNamespace('PrimoServices',__DIR__.'/../classes');
-
+/*** autoloader will not work!!!!!!!! **/
+$app['autoloader']->registerNamespaces(array(
+  'PrimoServices' => __DIR__.'/../classes'
+));
+//print_r($app['autoloader']->getNamespaces());
 $app->get('/', function() use($app) {
   return 'Primo Lookup App';
 });
@@ -151,20 +156,18 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
  * search by various index types issn, isbn, lccn, oclc
  */
 $app->get('/find/{index_type}/{operator}/{query}', function($index_type, $operator, $query) use($app) {
-  if(!$app['request']->get('scopes')) {
-    $scopes = array("PRN");
+  
+  if($app['request']->get('scopes')) {
+    $scopes = explode(",", $app['request']->get('scopes'));  
   } else {
-    $scopes = explode(",", $app->get('scopes'));
+    $scopes = array("PRN");
   }
   $primo_client = new \PrimoServices\PrimoClient();
   $query = new \PrimoServices\PrimoQuery($app->escape($query), $app->escape($index_type), $app->escape($operator), $scopes);
   $response_data = $primo_client->doSearch($query);
-  //$record_data = new \PrimoServices\PrimoRecord($response_data);
-  //echo $primo_client;
   $app['monolog']->addInfo("Index Query: " . $primo_client);
-  //return $app->redirect($primo_client);
+  
   return new Response($response_data, 200, array('Content-Type' => 'application/xml'));
-  //echo $query->getQueryString();
 })->assert('index_type', '(issn|isbn|lccn|oclc|title|any)'); // should this be a list of possible options from the 
 
 $app['debug'] = true;
