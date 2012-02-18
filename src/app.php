@@ -155,15 +155,20 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
  * indexes available for the "facets" in a PNX record as well.
  * search by various index types issn, isbn, lccn, oclc
  */
-$app->get('/find/{index_type}/{operator}/{query}', function($index_type, $operator, $query) use($app) {
+$app->get('/find/{index_type}/{query}', function($index_type, $query) use($app) {
   
   if($app['request']->get('scopes')) {
     $scopes = explode(",", $app['request']->get('scopes'));  
   } else {
     $scopes = array("PRN");
   }
+  if($app['request']->get('limit')) {
+    $operator = $app->escape($app['request']->get('limit'));
+  } else {
+    $operator = "exact";
+  }
   $primo_client = new \PrimoServices\PrimoClient();
-  $query = new \PrimoServices\PrimoQuery($app->escape($query), $app->escape($index_type), $app->escape($operator), $scopes);
+  $query = new \PrimoServices\PrimoQuery($app->escape($query), $app->escape($index_type), $operator, $scopes);
   $response_data = $primo_client->doSearch($query);
   $app['monolog']->addInfo("Index Query: " . $primo_client);
   
