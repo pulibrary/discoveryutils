@@ -157,7 +157,7 @@ $app->get('/find/{index_type}/{operator}/{query}', function($index_type, $operat
     $scopes = explode(",", $app->get('scopes'));
   }
   $primo_client = new \PrimoServices\PrimoClient();
-  $query = new \PrimoServices\PrimoQuery($app->escape($query), $app->escape($index_type), $app-escape($operator), $scopes);
+  $query = new \PrimoServices\PrimoQuery($app->escape($query), $app->escape($index_type), $app->escape($operator), $scopes);
   $response_data = $primo_client->doSearch($query);
   //$record_data = new \PrimoServices\PrimoRecord($response_data);
   //echo $primo_client;
