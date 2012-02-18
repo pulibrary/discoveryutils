@@ -2,7 +2,7 @@
 namespace PrimoServices;
 
 /*
- * @Permalink
+ * @Locatorlink
  * Uses Primo "deep" linking services to return a bookmarkable URL
  * sample http://searchit.princeton.edu/primo_library/libweb/action/dlDisplay.do?institution=PRN&vid=PRINCETON&docId={primo_id}
  * 
