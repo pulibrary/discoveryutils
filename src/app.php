@@ -150,9 +150,14 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
  * indexes available for the "facets" in a PNX record as well.
  * search by various index types issn, isbn, lccn, oclc
  */
-$app->get('/{index_type}/{standard_number}', function($index_type, $standard_number) use($app) {
+$app->get('/find/{index_type}/{operator}/{query}', function($index_type, $operator, $query) use($app) {
+  if(!$app['request']->get('scopes')) {
+    $scopes = array("PRN");
+  } else {
+    $scopes = explode(",", $app->get('scopes'));
+  }
   $primo_client = new \PrimoServices\PrimoClient();
-  $query = new \PrimoServices\PrimoQuery($app->escape($standard_number), $app->escape($index_type));
+  $query = new \PrimoServices\PrimoQuery($app->escape($query), $app->escape($index_type), $app-escape($operator), $scopes);
   $response_data = $primo_client->doSearch($query);
   //$record_data = new \PrimoServices\PrimoRecord($response_data);
   //echo $primo_client;
@@ -160,17 +165,7 @@ $app->get('/{index_type}/{standard_number}', function($index_type, $standard_num
   //return $app->redirect($primo_client);
   return new Response($response_data, 200, array('Content-Type' => 'application/xml'));
   //echo $query->getQueryString();
-})->assert('index_type', '(issn|isbn|lccn|oclc)'); // should this be a list of possible options from the 
-
-/*
- * For general keyword/title searches 
- */
-$app->get('/search/{limiter}/{query}', function($index_type, $query) use($app) {
-  $app['monolog']->addInfo("{$app->escape($limiter)} : {$app->escape($query)}");
-  $primo_client = new \PrimoServices\PrimoClient();
-  $query = new \PrimoServices\PrimoQuery($app->escape($query), $app->escape($index_type));
-  
-})->assert('index_type', '\w+'); // should be a list of values that are valid for the indexField parameter in a Primo query statement
+})->assert('index_type', '(issn|isbn|lccn|oclc|title|any)'); // should this be a list of possible options from the 
 
 $app['debug'] = true;
 return $app;
