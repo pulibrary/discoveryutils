@@ -77,7 +77,12 @@ Class PrimoQuery
    $scopes = array();
    foreach($this->scopes as $scope) {
      if($this->isRemoteScope($scope)) {
-      array_push($scopes, $scope); 
+       if (count($scopes) == 0) {
+         array_push($scopes, "adaptor," . $scope); 
+       }
+       else {
+         array_push($scopes, $scope); 
+       }
      } else {
       array_push($scopes, "local,scope:(" . $scope . ")"); //FIXME Check for valid scope
      }
