@@ -68,6 +68,7 @@ $app->match('/search/{tab}', function($tab) use($app) {
   }
   $app['monolog']->addInfo("TAB:" . $tab . "\tREDIRECT: " . $deep_search_link->getLink());
   return $app->redirect($deep_search_link->getLink());
+  //return $deep_search_link->getLink();
 });
 
 
