@@ -101,7 +101,7 @@ Class PrimoQuery
     //return http_build_query($query_params);
     $query_array = array();
     foreach( $query_params as $key => $key_value ){
-      $query_array[] = $key . '=' . urlencode( $key_value );
+      $query_array[] = $key . '=' . $key_value;
     }
 
     return implode( '&', $query_array );
