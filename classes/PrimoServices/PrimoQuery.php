@@ -69,7 +69,7 @@ Class PrimoQuery
   }
   
   private function buildQuery() {
-    return $this->index_field . "," . $this->precision_operator . "," . urlencode($this->query_value); //FIXME check for valid operators 
+    return $this->index_field . "," . $this->precision_operator . "," . $this->query_value; //FIXME check for valid operators 
   }
   
   /* local and remote scopes must be treated differently */
@@ -98,7 +98,13 @@ Class PrimoQuery
   */
  
   private function buildQueryString($query_params) {
-     return http_build_query($query_params);
+    //return http_build_query($query_params);
+    $query_array = array();
+    foreach( $query_params as $key => $key_value ){
+      $query_array[] = $key . '=' . urlencode( $key_value );
+    }
+
+    return implode( '&', $query_array );
   }
 
   private function isRemoteScope($scope) {
