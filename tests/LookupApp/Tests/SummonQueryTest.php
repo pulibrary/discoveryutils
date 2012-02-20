@@ -9,7 +9,7 @@ namespace LookupApp\Tests;
  
 class SummonQueryTest extends \PHPUnit_Framework_TestCase {
   protected function setUp() {
-    $this->summon_base_url = "http://princeton.summon.serialssolutions.com/?";
+    $this->summon_base_url = "http://princeton.summon.serialssolutions.com/search?";
     $this->summon_query_param = "s.q=";
   }
   
