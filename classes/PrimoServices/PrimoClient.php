@@ -1,5 +1,6 @@
 <?php
 namespace PrimoServices;
+use PrimoServices\PrimoQuery;
 
 class PrimoClient
 {
@@ -28,7 +29,7 @@ class PrimoClient
    * send item a primo query object 
    * should I have a primo results objects 
    */
-  public function doSearch(\PrimoServices\PrimoQuery $query) {
+  public function doSearch(PrimoQuery $query) {
     $this->current_url = $this->xservice_base . $this->xservice_brief_search . $query->getQueryString();
     $xml = file_get_contents($this->current_url);
     if(strlen($xml) != 0) { 

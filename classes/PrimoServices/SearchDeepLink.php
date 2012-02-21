@@ -1,6 +1,6 @@
 <?php
 namespace PrimoServices;
-
+use PrimoServices\PrimoQuery;
 /*
  * @Searchlink
  * Uses Primo "deep" linking services to return a bookmarkable URL for a primo basic search
@@ -32,7 +32,7 @@ class SearchDeepLink
   private $active_tab;
   
   public function __construct($query, $index_type, $precision_operator, $tab = "location", $scopes = array("PRN")) {
-    $this->query = new \PrimoServices\PrimoQuery($query, $index_type, $precision_operator, $scopes);
+    $this->query = new PrimoQuery($query, $index_type, $precision_operator, $scopes);
     if ($this->isValidTab($tab)) {
       $this->active_tab = $tab;
     }

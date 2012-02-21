@@ -1,9 +1,8 @@
 <?php
 
 require_once __DIR__.'/../vendor/silex.phar';
-use Symfony\Component\HttpFoundation\Response;
-//use Symfony\Component\HttpFoundation\Request;
-//use Symfony\Component\ClassLoader\UniversalClassLoader;
+use Symfony\Component\HttpFoundation\Response,
+  Symfony\Component\HttpFoundation\Request;
 use PrimoServices\PrimoRecord,
   PrimoServices\PrimoClient,
   PrimoServices\PrimoLoader,
@@ -12,25 +11,24 @@ use PrimoServices\PrimoRecord,
   PrimoServices\SummonQuery,
   PrimoServices\PrimoQuery,
   PrimoServices\SearchDeepLink;
-/* bootstrap */
+
 $app = new Silex\Application(); 
 
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
   'twig.path'       => __DIR__.'/../views',
   'twig.class_path' => __DIR__.'/../vendor/Twig/lib',
 ));
+
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.logfile'       => __DIR__.'/../log/development.log',
     'monolog.class_path'    => __DIR__.'/../vendor/Monolog/src',
     'monolog.level'         => 'Logger::DEBUG'
 ));
 
-/*
 $app->register(new Silex\Provider\SwiftmailerServiceProvider(), array(
     'swiftmailer.class_path'  => __DIR__.'/../vendor/swiftmailer/lib/classes',
 ));
-*/
-/*** autoloader will not work!!!!!!!! **/
+
 $app['autoloader']->registerNamespaces(array(
   'PrimoServices' => __DIR__.'/../classes',
 ));
@@ -55,7 +53,7 @@ $app->match('/show/{rec_id}', function($rec_id) use($app) {
  */
 $app->match('/search/{tab}', function($tab) use($app) {
   //test to see if query is valid
-  $query = $app->escape($app['request']->get('query')); //protect query against XSS
+  $query = $app['request']->get('query');
   
   if ($tab == "summon") {
     $deep_search_link = new SummonQuery($query);
