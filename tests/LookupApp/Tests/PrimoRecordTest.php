@@ -43,6 +43,10 @@ class LookupPrimoRecordTest extends \PHPUnit_Framework_TestCase {
     
   }
   
+  function testGetAddData() {
+    $this->assertInternalType('array', $this->single_source_record->getPrimoDocumentData());
+  }
+  
   function testGetRecordID() {
     $this->assertEquals('PRN_VOYAGER4773991', $this->single_source_record->getRecordID());
   }
