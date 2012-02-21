@@ -1,5 +1,6 @@
 <?php
 namespace PrimoServices;
+use PrimoServices\PrimoDocument;
 
 Class PrimoRecord 
 {
@@ -240,8 +241,49 @@ Class PrimoRecord
     return $available_ids;
   }
 
-  private function getPrimoDocumentData() {
+  private function getElements($tag, $namespace_prefix = "def") {
+    $queryString = $namespace_prefix . ":" . $tag;
+    $nodeList = $this->query($queryString);
+    
+    return $nodeList;
+  }
+
+  public function getPrimoDocumentData() {
     //ADDME Will Return Primo Metadata for Record
+    $display_data = $this->getElements("display");
+    $display_values = $this->getSectionFields($display_data);
+    $add_data = $this->getElements("addata");
+    $primo_document = new PrimoDocument();
+    print_r($display_values);
+    return $display_values;
+  }
+  
+  /* 
+   * returns an array of key values
+   * 
+   */
+  private function getSectionFields(\DOMNodeList $nodeList) {
+    $section_values = array();
+    if($nodeList->length == 1) {
+      $data_elements = $nodeList->item(0);
+      if($data_elements->hasChildNodes()){
+          
+        print_r($data_elements);
+        foreach($data_elements as $element) {
+          print_r($element);
+          $value = $element->textContent;
+          echo "the value is " . $value;
+          $key = $element->tagName;
+          if(array_key_exists($key, $section_values)) {
+            array_push($section_values[$key], $value);
+          } else {
+            $section_values[$key] = array($value);
+          }
+        }
+      }
+    }
+    
+    return $section_values;
   }
   
   public function getStdNums() {
