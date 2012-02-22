@@ -252,32 +252,62 @@ Class PrimoRecord
     //ADDME Will Return Primo Metadata for Record
     $display_data = $this->getElements("display");
     $display_values = $this->getSectionFields($display_data);
-    $add_data = $this->getElements("addata");
+    $add_data_section = $this->getElements("addata");
+    $add_data_section_values = $this->getSectionFields($add_data_section);
+    $search_data = $this->getElements("search");
+    $search_data_values = $this->getSectionFields($search_data);
+    $record_metadata = array_merge($display_values, $add_data_section_values, $search_data_values);
+    
+    return $record_metadata;
+  }
+  
+  public function getCitation($type = "RIS") {
     $primo_document = new PrimoDocument();
-    print_r($display_values);
-    return $display_values;
+    $metadata = $this->getPrimoDocumentData();
+    $format_mappings = array();
+    if ($type == "RIS") {
+      $ris_mapping = $primo_document::getPNXtoRISmappings();
+      $ris_type = "TY - ";
+      foreach($metadata as $key => $field_values) {
+        $ris_label = $ris_mapping[$key];
+        $ris_key = $ris_label[0];
+        foreach($field_values as $value) {
+          if(!($key == "ristype")) {
+            $ris_value = $ris_key . " - " . $value;
+            array_push($format_mappings, $ris_value);
+          } else {
+            $ris_type .= $value;
+          }
+        }
+      }
+      array_unshift($format_mappings, $ris_type);
+    }
+    array_push($format_mappings, "ER - "); //push the last reference on stack
+    
+    return implode("\n", $format_mappings);
   }
   
   /* 
-   * returns an array of key values
    * 
+   * returns an @array
+   * [pnx_data_field] => array_of_values()
+   * in practice mosts fields will have one value, but some will have repeats
    */
   private function getSectionFields(\DOMNodeList $nodeList) {
     $section_values = array();
+    $primo_document = new PrimoDocument();
     if($nodeList->length == 1) {
       $data_elements = $nodeList->item(0);
-      if($data_elements->hasChildNodes()){
-          
-        print_r($data_elements);
-        foreach($data_elements as $element) {
-          print_r($element);
-          $value = $element->textContent;
-          echo "the value is " . $value;
-          $key = $element->tagName;
-          if(array_key_exists($key, $section_values)) {
-            array_push($section_values[$key], $value);
-          } else {
-            $section_values[$key] = array($value);
+      if($data_elements->hasChildNodes()){ //FIXME should this block be it's own function
+        foreach($primo_document::getPNXFields() as $field) { 
+          $pnx_data_elements = $data_elements->getElementsByTagName($field);
+          foreach($pnx_data_elements as $element) {
+            $value = $element->textContent;
+            if(array_key_exists($field, $section_values)) {
+              array_push($section_values[$field], $value);
+            } else {
+              $section_values[$field] = array($value);
+            }
           }
         }
       }
@@ -285,6 +315,7 @@ Class PrimoRecord
     
     return $section_values;
   }
+  
   
   public function getStdNums() {
     //ADDME returns standard numbers (ISSN/ISBN associated with the record)

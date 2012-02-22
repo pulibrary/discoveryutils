@@ -25,9 +25,11 @@ $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.level'         => 'Logger::DEBUG'
 ));
 
+/*
 $app->register(new Silex\Provider\SwiftmailerServiceProvider(), array(
     'swiftmailer.class_path'  => __DIR__.'/../vendor/swiftmailer/lib/classes',
 ));
+ */
 
 $app['autoloader']->registerNamespaces(array(
   'PrimoServices' => __DIR__.'/../classes',
@@ -53,7 +55,7 @@ $app->match('/show/{rec_id}', function($rec_id) use($app) {
  */
 $app->match('/search/{tab}', function($tab) use($app) {
   //test to see if query is valid
-  $query = $app['request']->get('query');
+  $query = $app['request']->get('query'); //FIXME escaping this causes primo search to fail 
   
   if ($tab == "summon") {
     $deep_search_link = new SummonQuery($query);
@@ -94,6 +96,16 @@ $app->get('/record/{rec_id}.xml', function($rec_id) use($app) {
   $record_data = $primo_client->getID($app->escape($rec_id));
   return new Response($record_data, 200, array('Content-Type' => 'application/xml'));
 })->assert('rec_id', '\w+'); 
+
+$app->get('/record/{rec_id}.ris', function($rec_id) use($app) {
+  $primo_client = new PrimoClient();
+  $record_data = $primo_client->getID($app->escape($rec_id));
+  $primo_record = new PrimoRecord($record_data);
+  $ris_data = $primo_record->getCitation("RIS");
+  $app['monolog']->addInfo("RIS_REQUEST: " . $rec_id . "\n" . $ris_data);
+  return new Response($ris_data, 200, array('Content-Type' => 'application/x-research-info-systems'));
+})->assert('rec_id', '\w+');
+
 
 $app->get('/record/{rec_id}', function($rec_id) use($app) {
   $primo_client = new PrimoClient();
