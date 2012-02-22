@@ -282,11 +282,22 @@ Class PrimoRecord
       }
       array_unshift($format_mappings, $ris_type);
     }
-    array_push($format_mappings, "ER - "); //push the last reference on stack
+    $deep_link = new PermaLink($this->getRecordID());
     
+    array_push($format_mappings, "UR - ". $deep_link->getLink());
+    array_push($format_mappings, "ER - "); //push the last reference on stack
+    //print_r($format_mappings);
     return implode("\n", $format_mappings);
   }
   
+  /* is this more efficeint that getRecordID
+  public function getId() {
+    $nodeList = $this->getElements("recordid");
+    //echo $nodeList->length;
+    $record_id = $nodeList->item(0); //FIXME to I need to check for more than one?
+    return $record_id->textContent;
+  }
+  */
   /* 
    * 
    * returns an @array

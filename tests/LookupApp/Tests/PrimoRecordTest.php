@@ -10,6 +10,8 @@ class LookupPrimoRecordTest extends \PHPUnit_Framework_TestCase {
   protected function setUp() {
     $single_record_reponse = file_get_contents(dirname(__FILE__).'../../../support/PRN_VOYAGER4773991.xml');
     $this->single_source_record = new \PrimoServices\PrimoRecord($single_record_reponse);
+    $dedup_record_reponse = file_get_contents(dirname(__FILE__).'../../../support/dedup_response.xml');
+    $this->dedup_source_record = new \PrimoServices\PrimoRecord($dedup_record_reponse);
   }
   
   function testGetSinglePrintRecordLocations() {
