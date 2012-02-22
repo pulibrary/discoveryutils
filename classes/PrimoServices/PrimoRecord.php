@@ -254,9 +254,9 @@ Class PrimoRecord
     $display_values = $this->getSectionFields($display_data);
     $add_data_section = $this->getElements("addata");
     $add_data_section_values = $this->getSectionFields($add_data_section);
-    $search_data = $this->getElements("search");
-    $search_data_values = $this->getSectionFields($search_data);
-    $record_metadata = array_merge($display_values, $add_data_section_values, $search_data_values);
+    //$search_data = $this->getElements("search");
+    //$search_data_values = $this->getSectionFields($search_data);
+    $record_metadata = array_merge($display_values, $add_data_section_values);//, $search_data_values);
     
     return $record_metadata;
   }
@@ -323,7 +323,7 @@ Class PrimoRecord
         }
       }
     }
-    
+    //print_r($section_values);
     return $section_values;
   }
   

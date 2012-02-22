@@ -19,6 +19,7 @@ class PrimoDocument {
     "title" =>            array("TI","title"),  
     "seconderytitle" =>   array("T2","secondary title"),
     "seriestitle" =>      array("T3","series title"),
+    "unititle" =>         array("T3", "teritiary title"),
     "creator" =>          array("AU","creator"),
     "contributor" =>      array("A2","contributor"),
     "notes" =>            array("N1","notes"),
@@ -35,11 +36,14 @@ class PrimoDocument {
     "publisher" =>        array("PB", "Publisher"),
     "addau" =>            array("A2","additional authors"),
     "lds04" =>            array("PB","?"),
+    'lsr05' =>            array('CN', "Call Number"),
+    'alttitle' =>         array('J2', "Alternative Title"),
     "date" =>             array("DA", "Date"), //FIXME get ris date value
     "au" =>               array("AU", "Author"),
     //"aufirst" =>          array("", "Author First"),
     //"aulast" =>           array("", "Author Last"),
-    "format" =>           array("FM", "Format"),
+    "language" =>         array("LA", "Language"),
+    "format" =>           array("M3", "Type of Work"),
     "genre" =>            array("KW", "Genre"),
     "btitle" =>           array("T1", "btitle"),
     );
