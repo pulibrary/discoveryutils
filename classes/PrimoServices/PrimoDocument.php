@@ -32,6 +32,7 @@ class PrimoDocument {
     "otherpages" =>       array("EP","other pages"),
     "cop" =>              array("CY","City of Publication"),
     "issn" =>             array("SN","issn"),
+    "publisher" =>        array("PB", "Publisher"),
     "addau" =>            array("A2","additional authors"),
     "lds04" =>            array("PB","?"),
     "date" =>             array("DA", "Date"), //FIXME get ris date value
