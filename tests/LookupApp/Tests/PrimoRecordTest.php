@@ -35,8 +35,8 @@ class LookupPrimoRecordTest extends \PHPUnit_Framework_TestCase {
     
   }
   
-  function testGetRefworksFields() { // see RIS mapping table in docs 
-    
+  function testGetRisFields() { // see RIS mapping table in docs 
+    $this->assertInternalType('string', $this->single_source_record->getCitation('RIS'));
   }
   
   function testGetPermaLink() {

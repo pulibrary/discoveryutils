@@ -9,14 +9,14 @@ namespace PrimoServices;
 
 class PrimoDocument {
   
-  private $primo_fields_to_map = array(
+  private static $primo_fields_to_map = array(
     "lsr05" =>            array("U2","Call Number"),
     "isbn" =>             array("SN","isbn"),
     "creationdate" =>     array("Y1","creationdate"),
     "lds03" =>            array("U1","300 Field"),
     "ristype" =>          array("TY","Type"),
     "recordid" =>         array("ID","Source Record ID"),
-    "title" =>            array("T1","title"),  
+    "title" =>            array("TI","title"),  
     "seconderytitle" =>   array("T2","secondary title"),
     "seriestitle" =>      array("T3","series title"),
     "creator" =>          array("AU","creator"),
@@ -32,17 +32,27 @@ class PrimoDocument {
     "otherpages" =>       array("EP","other pages"),
     "cop" =>              array("CY","City of Publication"),
     "issn" =>             array("SN","issn"),
+    "publisher" =>        array("PB", "Publisher"),
     "addau" =>            array("A2","additional authors"),
     "lds04" =>            array("PB","?"),
-    "date" =>             array("", "Date"), //FIXME get ris date value
-    "au" =>               array("", "Author"),
-    "aufirst" =>          array("", "Author First"),
-    "aulast" =>           array("", "Author Last"),
-    "format" =>           array("", "Format"),
-    "genre" =>            array("", "Genre"),
+    "date" =>             array("DA", "Date"), //FIXME get ris date value
+    "au" =>               array("AU", "Author"),
+    //"aufirst" =>          array("", "Author First"),
+    //"aulast" =>           array("", "Author Last"),
+    "format" =>           array("FM", "Format"),
+    "genre" =>            array("KW", "Genre"),
+    "btitle" =>           array("T1", "btitle"),
     );
   
   protected function map() {
     
+  }
+  
+  public static function getPNXFields() {
+    return array_keys(self::$primo_fields_to_map);
+  }
+  
+  public static function getPNXtoRISmappings() {
+    return self::$primo_fields_to_map;
   }
 }
