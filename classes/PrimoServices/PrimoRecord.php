@@ -102,6 +102,43 @@ Class PrimoRecord
     return $links;
   }
   
+  /* @return full-text link  
+   */ 
+  public function getFullTextLinktoSrc() {
+      
+    $full_text_present = false;
+    $available_links = $this->getAllLinks();
+    foreach($available_links as $linktype) {
+      if($linktype[0] == "sear:linktorsrc") {
+        $full_text_link = $linktype[1];
+        $full_text_present = true;  
+      }
+    }
+    if($full_text_present) {
+      return $full_text_link;
+    } else {
+      return false;
+    }
+  }
+  
+  public function getFullTextOpenURL() {
+    
+    $full_text_present = false;
+    $available_links = $this->getAllLinks();
+    foreach($available_links as $linktype) {
+      if($linktype[0] == "sear:openurlfulltext") {
+        $full_text_link = $linktype[1];
+        $full_text_present = true;  
+      }
+    }
+    if($full_text_present) {
+      return $full_text_link;
+    } else {
+      return false;
+    }
+  }
+  
+  
   public function getGetItLinks() {
     $getit_links = array();
     $source_ids = $this->getSourceIDs();
