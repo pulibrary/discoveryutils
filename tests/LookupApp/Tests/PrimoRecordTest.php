@@ -12,6 +12,10 @@ class LookupPrimoRecordTest extends \PHPUnit_Framework_TestCase {
     $this->single_source_record = new \PrimoServices\PrimoRecord($single_record_reponse);
     $dedup_record_reponse = file_get_contents(dirname(__FILE__).'../../../support/dedup_response.xml');
     $this->dedup_source_record = new \PrimoServices\PrimoRecord($dedup_record_reponse);
+    $electronic_record_response = file_get_contents(dirname(__FILE__).'../../../support/PRN_VOYAGER5399326.xml');
+    $this->electronic_record_response = new \PrimoServices\PrimoRecord($electronic_record_response);
+    $electronic_record_via_sfx_response = file_get_contents(dirname(__FILE__).'../../../support/PRN_VOYAGER857469.xml');
+    $this->electronic_record_via_sfx_response = new \PrimoServices\PrimoRecord($electronic_record_via_sfx_response);
   }
   
   function testGetSinglePrintRecordLocations() {
@@ -32,28 +36,43 @@ class LookupPrimoRecordTest extends \PHPUnit_Framework_TestCase {
   }
   
   function testIsFullTextOnlineResourceLink() {
-    
+    $source_ids = $this->electronic_record_response->getSourceIDs();
+    $this->assertInternalType('array', $this->electronic_record_response->getGetItLinks());
+    foreach($source_ids as $id) {
+      $this->assertArrayHasKey($id, $this->electronic_record_response->getGetItLinks());
+      $source_getit = $this->electronic_record_response->getGetItLinks();
+      $source_getit_data = $source_getit[$id];
+      $this->assertArrayHasKey('fulltext', $source_getit_data);
+    }
   }
   
-  function testIsFullTextSFXResourceLink() {
-    
+  function testGetSFXOnlineResourceLink() {
+    $this->assertInternalType('string',$this->electronic_record_via_sfx_response->getFullTextOpenURL());
+    $this->assertStringStartsWith("http://sfx.princeton.edu", $this->electronic_record_via_sfx_response->getFullTextOpenURL());
+    $this->assertInternalType('string',$this->electronic_record_response->getFullTextOpenURL());
+    $this->assertStringStartsWith("http://sfx.princeton.edu", $this->electronic_record_response->getFullTextOpenURL());
+    $this->assertInternalType('string',$this->single_source_record->getFullTextOpenURL());
+    $this->assertStringStartsWith("http://sfx.princeton.edu", $this->single_source_record->getFullTextOpenURL());
   }
   
   function testGetFullTextURL() {
-    
+    $this->assertInternalType('string',$this->electronic_record_response->getFullTextLinktoSrc());
+    $this->assertRegExp('/^(?!http:\/\/sfx.princeton.edu)/', $this->electronic_record_response->getFullTextLinktoSrc());
+  }
+  
+  function testGetFullTextSfxURL() {
+    $this->assertInternalType('string',$this->dedup_source_record->getFullTextLinktoSrc());
+    $this->assertRegExp('/^http:\/\/sfx.princeton.edu/', $this->dedup_source_record->getFullTextLinktoSrc());
   }
   
   function testGetFullTextUrlNotPresent() {
-    
+    $this->assertFalse($this->electronic_record_via_sfx_response->getFullTextLinktoSrc());
+    $this->assertFalse($this->single_source_record->getFullTextLinktoSrc());
   }
   
   function testGetRisFields() { // see RIS mapping table in docs 
     $this->assertInternalType('string', $this->single_source_record->getCitation('RIS'));
     $this->assertInternalType('string', $this->dedup_source_record->getCitation('RIS'));
-  }
-  
-  function testGetPermaLink() {
-    
   }
   
   function testGetAddData() {
