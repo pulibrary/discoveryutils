@@ -317,12 +317,12 @@ Class PrimoRecord
           }
         }
       }
-      array_unshift($format_mappings, $ris_type);
+      array_unshift($format_mappings, $ris_type); //Make sure RIS type is first element. 
     }
     $deep_link = new PermaLink($this->getRecordID());
     
     array_push($format_mappings, "UR - ". $deep_link->getLink());
-    array_push($format_mappings, "ER - "); //push the last reference on stack
+    array_push($format_mappings, "ER - "); //push the RIS last reference marker on stack
     //print_r($format_mappings);
     return implode("\n", $format_mappings);
   }
@@ -331,7 +331,7 @@ Class PrimoRecord
   public function getId() {
     $nodeList = $this->getElements("recordid");
     //echo $nodeList->length;
-    $record_id = $nodeList->item(0); //FIXME to I need to check for more than one?
+    $record_id = $nodeList->item(0); //FIXME do we need to check for more than one?
     return $record_id->textContent;
   }
   */
