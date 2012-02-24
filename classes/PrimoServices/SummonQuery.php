@@ -12,7 +12,7 @@ class SummonQuery {
   
   function __construct($query, $limiters = array()) {
     $this->limiters = $limiters;
-    $this->query = $query;
+    $this->query = urlencode($query);
     $this->buildLink();
   }
   
@@ -27,6 +27,7 @@ class SummonQuery {
   }
   
   public function getLink() {
+    echo $this->url;
     return $this->url;
   }
 }

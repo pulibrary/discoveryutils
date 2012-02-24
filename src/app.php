@@ -58,7 +58,7 @@ $app->match('/search/{tab}', function($tab) use($app) {
   } elseif($tab == "blended") {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $tab, array("PRN", "SummonThirdNode"));
   } else {
-    $deep_search_link = new SearchDeepLink($query, "any", "contains", $tab, array("PRN"));
+    $deep_search_link = new SearchDeepLink($query, "any", "contains", $tab, array("OTHERS", "FIRE")); //FIXME try other scopes 
   }
   $app['monolog']->addInfo("TAB:" . $tab . "\tREDIRECT: " . $deep_search_link->getLink());
   return $app->redirect($deep_search_link->getLink());

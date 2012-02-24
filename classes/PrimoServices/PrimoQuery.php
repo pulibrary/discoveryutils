@@ -46,7 +46,11 @@ Class PrimoQuery
     "PRN",
     "LEWIS",
     "ARCH",
-    "COURSE"
+    "COURSE",
+    "OTHERS",
+    "FIRE",
+    "MUSIC",
+    "ENG",
   );
 
   private $available_remote_scopes = array(

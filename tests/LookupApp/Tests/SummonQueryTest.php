@@ -15,10 +15,10 @@ class SummonQueryTest extends \PHPUnit_Framework_TestCase {
   
   
   function testIsValidSummonQuery() {
-    $query_strings = array("dogs", "dogs and cats", "Diwight Eisenhower");
+    $query_strings = array("dogs", "dogs and cats", "Diwight Eisenhower", "(cats or dogs) and cartoons", "\"a good man is hard to find\"");
     foreach($query_strings as $query) {
       $summon_query = new \PrimoServices\SummonQuery($query);
-      $this->assertEquals($summon_query->getLink(), $this->summon_base_url . $this->summon_query_param . $query);
+      $this->assertEquals($summon_query->getLink(), $this->summon_base_url . $this->summon_query_param . urlencode($query));
     }
   }
   
