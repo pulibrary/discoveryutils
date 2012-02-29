@@ -52,9 +52,6 @@ class PrimoDocument {
     "stitle" =>           array("ST", "Short Title"),
     );
   
-  protected function map() {
-    
-  }
   
   public static function getPNXFields() {
     return array_keys(self::$primo_fields_to_map);
