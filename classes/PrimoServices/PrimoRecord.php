@@ -335,7 +335,7 @@ Class PrimoRecord
           } elseif($key == "subject") {
             $subjects = preg_split("/;/", $value);
             foreach($subjects as $subject) {
-              $ris_subject = "KW = " . trim($subject);
+              $ris_subject = "KW - " . trim($subject);
               array_push($format_mappings, $ris_subject);
             }
           } else {
