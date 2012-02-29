@@ -73,6 +73,7 @@ class LookupPrimoRecordTest extends \PHPUnit_Framework_TestCase {
   function testGetRisFields() { // see RIS mapping table in docs 
     $this->assertInternalType('string', $this->single_source_record->getCitation('RIS'));
     $this->assertInternalType('string', $this->dedup_source_record->getCitation('RIS'));
+    $this->assertInternalType('string', $this->electronic_record_response->getCitation('RIS'));
   }
   
   function testGetAddData() {

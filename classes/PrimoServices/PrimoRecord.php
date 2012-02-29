@@ -291,31 +291,58 @@ Class PrimoRecord
     $display_values = $this->getSectionFields($display_data);
     $add_data_section = $this->getElements("addata");
     $add_data_section_values = $this->getSectionFields($add_data_section);
-    //$search_data = $this->getElements("search");
-    //$search_data_values = $this->getSectionFields($search_data);
-    $record_metadata = array_merge($display_values, $add_data_section_values);//, $search_data_values);
+    $enrichment_section = $this->getElements('enrichment');
+    $enrichment_section_values = $this->getSectionFields($enrichment_section);
+    $search_data = $this->getElements("search");
+    $search_data_values = $this->getSectionFields($search_data);
+    $record_metadata = array_merge($display_values, $add_data_section_values, $enrichment_section_values, $search_data_values);//$display_values, );
     
     return $record_metadata;
+  }
+  
+  public function getSubjects() {
+    //FIXME return subject headings associated with the documents
+  }
+  
+  public function getNotes() {
+    //FIXME get notes attached to document 
+  }
+  
+  public function getRisType() {
+    return $this->getElements("ristype");
   }
   
   public function getCitation($type = "RIS") {
     $primo_document = new PrimoDocument();
     $metadata = $this->getPrimoDocumentData();
+    //print_r($metadata);
     $format_mappings = array();
     if ($type == "RIS") {
       $ris_mapping = $primo_document::getPNXtoRISmappings();
       $ris_type = "TY - ";
+      $ris_title = "TI - "; //FIXME is this just for needed for monographs
       foreach($metadata as $key => $field_values) {
         $ris_label = $ris_mapping[$key];
         $ris_key = $ris_label[0];
-        foreach($field_values as $value) {
-          if(!($key == "ristype")) {
+        $value = $field_values[0];
+        //foreach($field_values as $value) { //FIXME take only the first value for publishers, jtitles, and btitles 
+          if($key == "ristype") {
+            $ris_type .= $value;
+          } elseif($key == "btitle" || $key == "jtitle") {
+            $short_title = preg_split("/\s(\/|:)\s/", $value); //FIXME kludge to split on delimiters
+            $ris_title .= $short_title[0];
+            array_push($format_mappings, $ris_title);
+          } elseif($key == "subject") {
+            $subjects = preg_split("/;/", $value);
+            foreach($subjects as $subject) {
+              $ris_subject = "KW = " . trim($subject);
+              array_push($format_mappings, $ris_subject);
+            }
+          } else {
             $ris_value = $ris_key . " - " . $value;
             array_push($format_mappings, $ris_value);
-          } else {
-            $ris_type .= $value;
           }
-        }
+        //}
       }
       array_unshift($format_mappings, $ris_type); //Make sure RIS type is first element. 
     }
