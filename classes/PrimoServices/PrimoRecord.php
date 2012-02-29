@@ -356,7 +356,7 @@ Class PrimoRecord
     
     array_push($format_mappings, "UR - ". $resource_link);
     array_push($format_mappings, "ER - "); //push the RIS last reference marker on stack
-    print_r($format_mappings);
+    //print_r($format_mappings);
     return implode("\n", $format_mappings);
   }
   
