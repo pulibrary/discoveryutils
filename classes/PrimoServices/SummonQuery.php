@@ -27,7 +27,6 @@ class SummonQuery {
   }
   
   public function getLink() {
-    echo $this->url;
     return $this->url;
   }
 }
