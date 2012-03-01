@@ -23,10 +23,7 @@ Class PrimoQuery
     "bulkSize" => "10",
     "dym" => "true",
     "highlight" => "true",
-    "lang" => "eng",
-    "firsthit" => "1",
-    "lasthit" => "10"
-    // should tabs be included?
+    "displayField" => "title",
     );
   
   private $allowed_index_params = array( //FIXME Should come from Config structure many more parameters
@@ -63,9 +60,10 @@ Class PrimoQuery
     $this->precision_operator = $precision_operator;
     $this->scopes = $scopes;
     $this->query_params['query'] = $this->buildQuery(); 
-    $this->query_params['loc'] = $this->buildScopes(); //Query can also be an array
+    //$this->query_params['loc'] = $this->buildScopes(); //Query can also be an array
     $this->query_string = $this->buildQueryString($this->query_params);
-    
+    $this->query_string .= $this->buildScopes();
+  
   }
   
   public function getQueryString() {
@@ -88,11 +86,16 @@ Class PrimoQuery
          array_push($scopes, $scope); 
        }
      } else {
-      array_push($scopes, "local,scope:(" . $scope . ")"); //FIXME Check for valid scope
+       if (count($scopes) == 0) {
+        array_push($scopes, "local,scope:(" . $scope . ")"); //FIXME Check for valid scope
+       } else {
+         array_push($scopes, "scope:(" . $scope . ")");
+       }
      }
    }
-   
-   return implode(",", $scopes);
+   //print_r($scopes);
+   $scope_string = "&loc=" .implode(",", $scopes); //HACK b/c ex libris can't deal params consistently
+   return $scope_string;
   }
 
   /*
