@@ -23,7 +23,6 @@ Class PrimoQuery
     "bulkSize" => "10",
     "dym" => "true",
     "highlight" => "true",
-    "lang" => "eng",
     "displayField" => "title",
     );
   

@@ -31,7 +31,7 @@ class SearchDeepLink
   private $tabs = array("location","summon", "course", "blended");
   private $active_tab;
   
-  public function __construct($query, $index_type, $precision_operator, $tab = "location", $scopes = array("PRN")) {
+  public function __construct($query, $index_type, $precision_operator, $tab = "location", $scopes = array("OTHERS","FIRE")) {
     $this->query = new PrimoQuery($query, $index_type, $precision_operator, $scopes);
     if ($this->isValidTab($tab)) {
       $this->active_tab = $tab;
@@ -40,6 +40,7 @@ class SearchDeepLink
   }
   
   private function buildDeepSearchLink() {
+    //print $this->query;
     $this->deep_search_link = $this->base_url . $this->primo_deep_search_path . $this->query->getQueryString() . "&vid=" . $this->vid . "&tab=" . $this->active_tab;
   }
   
