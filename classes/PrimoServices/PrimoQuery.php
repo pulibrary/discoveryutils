@@ -71,7 +71,12 @@ Class PrimoQuery
   }
   
   private function buildQuery() {
-    return $this->index_field . "," . $this->precision_operator . "," . $this->query_value; //FIXME check for valid operators 
+    $this->normalizeQuery($this->query_value);
+    return $this->index_field . "," . $this->precision_operator . "," . $this->normalizeQuery($this->query_value); //FIXME check for valid operators 
+  }
+  
+  private function normalizeQuery($query_string) {
+    return str_replace(",", "", $query_string);
   }
   
   /* local and remote scopes must be treated differently */
