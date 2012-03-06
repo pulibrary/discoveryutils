@@ -173,7 +173,7 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
   $record_data = $primo_client->getID($app->escape($rec_id)); //FIXME perhaps try and use the symfony validator utility to filter all rec_ids and service_types
   $primo_record = new PrimoRecord($record_data);
   // decide which service type to use
-  $location_links_data = $primo_record->getLocationServices();
+  $location_links_data = $primo_record->getAllLinks();
   if ($format == "json") {
     return new Response(json_encode($location_links_data), 200, array('Content-Type' => 'application/json'));
   }
