@@ -10,6 +10,7 @@ use PrimoServices\PrimoRecord,
   PrimoServices\PrimoException,
   PrimoServices\SummonQuery,
   PrimoServices\PrimoQuery,
+  PrimoServices\RequestClient,
   PrimoServices\SearchDeepLink;
 
 $app = new Silex\Application(); 
@@ -142,6 +143,25 @@ $app->get('/locations/{rec_id}.json', function($rec_id) use($app) {
     $all_links_data['view'] =  $view_type; 
   }
   return new Response(json_encode($all_links_data), 200, array('Content-Type' => 'application/json'));
+})->assert('rec_id', '\w+');
+
+$app->get('/availability/{rec_id}.json', function($rec_id) use($app) {
+  $availability_client = new RequestClient($app->escape($rec_id));
+  $availability_response = $availability_client->doLookup();
+  //$decoded_reponse = json_decode($availability_response);
+  $app['monolog']->addInfo("Request Lookup: " . $availability_client);
+  return new Response($availability_response, 200, array('Content-Type' => 'application/json'));
+})->assert('rec_id', '\w+');
+
+$app->get('/availability/{rec_id}', function($rec_id) use($app) {
+  $availability_client = new RequestClient($app->escape($rec_id));
+  $availability_response = $availability_client->doLookup();
+  //$decoded_reponse = json_decode($availability_response);
+  $app['monolog']->addInfo("Request Lookup: " . $availability_client);
+  return $app['twig']->render('availability.twig', array(
+    'record_id' => $rec_id, 
+    'ava_response' => $availability_response
+  ));
 })->assert('rec_id', '\w+');
 
 /*

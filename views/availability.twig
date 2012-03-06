@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{ record_id }}</title>
+	</head>
+	<body>
+		<h1>Available Holdings and Items for {{ record_id }}</h1>
+		<!-- does twig have script tags? -->
+		<div id="holdings" data-source="/lookup/availability/{{record_id}}.json"></div>
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script type="text/javascript" src="../js/underscore.js"></script>
+		<script type="text/javascript" src="../js/loc_objects.js"></script>
+		<script type="text/javascript" src="../js/availability.js"></script>
+	</body>
+</html>
