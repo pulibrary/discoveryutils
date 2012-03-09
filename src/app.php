@@ -26,6 +26,11 @@ $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.level'         => 'Logger::DEBUG'
 ));
 
+$app->register(new Silex\Provider\HttpCacheServiceProvider(), array(
+    'http_cache.cache_dir' => __DIR__.'/../cache/',
+));
+
+
 /*
 $app->register(new Silex\Provider\SwiftmailerServiceProvider(), array(
     'swiftmailer.class_path'  => __DIR__.'/../vendor/swiftmailer/lib/classes',
@@ -78,8 +83,12 @@ $app->match('/search/{tab}', function($tab) use($app) {
  */
 $app->get('/hello/{name}', function ($name) use ($app) {
   $app['monolog']->addInfo(sprintf("User '%s' dropped by to say hi.", $name));
-  return $app['twig']->render('hello.twig', array(
+  $content = $app['twig']->render('hello.twig', array(
     'name' => $name,
+  ));
+  return new Response($content, 200, array(
+    'Cache-Control' => 'public, s-maxage=3600',
+    //'Surrogate-Control' => 'content="ESI/1.0"',
   ));
 }); 
 
@@ -207,5 +216,7 @@ $app->get('/find/{index_type}/{query}', function($index_type, $query) use($app) 
   return new Response($response_data, 200, array('Content-Type' => 'application/xml'));
 })->assert('index_type', '(issn|isbn|lccn|oclc|title|any)'); // should this be a list of possible options from the 
 
-$app['debug'] = true;
+// should kick only on prod
+//$app['http_cache']->run(); 
+
 return $app;
