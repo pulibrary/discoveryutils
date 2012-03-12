@@ -30,13 +30,6 @@ $app->register(new Silex\Provider\HttpCacheServiceProvider(), array(
     'http_cache.cache_dir' => __DIR__.'/../cache/',
 ));
 
-
-/*
-$app->register(new Silex\Provider\SwiftmailerServiceProvider(), array(
-    'swiftmailer.class_path'  => __DIR__.'/../vendor/swiftmailer/lib/classes',
-));
- */
-
 $app['autoloader']->registerNamespaces(array(
   'PrimoServices' => __DIR__.'/../classes',
 ));
