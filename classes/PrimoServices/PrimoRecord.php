@@ -376,7 +376,7 @@ Class PrimoRecord
       $resource_link = $deep_link->getLink();
     }
     if($this->getCallNumber()) {
-      array_push($format_mappings, "CN - ". $this->getCallNumber());
+      array_push($format_mappings, "CN - ". trim($this->getCallNumber()));
     }
     array_push($format_mappings, "UR - ". $resource_link);
     array_push($format_mappings, "ER - "); //push the RIS last reference marker on stack
