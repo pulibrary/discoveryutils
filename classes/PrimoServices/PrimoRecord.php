@@ -345,8 +345,10 @@ Class PrimoRecord
             $series_split = preg_split("/;/", $value);
             $series_title = "T3 - " . trim($series_split[0]);
             array_push($format_mappings, $series_title);
-            $number_series = "M1 = " . $series_split[1];
-            array_push($format_mappings, $number_series);
+            $number_series = "M1 - " . $series_split[1];
+            if($series_split[1]) {
+              array_push($format_mappings, $number_series);
+            }
           } elseif($key == "addau") {
             if(is_array($field_values)) {
               foreach($field_values as $add_author) {
