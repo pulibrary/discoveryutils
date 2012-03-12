@@ -355,6 +355,10 @@ Class PrimoRecord
             } else {
               array_push($format_mappings, "A2 - " . $value);
             }
+          } elseif($key == "language") {
+            if($value != "und;und") {
+              array_push($format_mappings, "LA - ". $value);
+            }
           } else {
             $ris_value = $ris_key . " - " . $value;
             array_push($format_mappings, $ris_value);
