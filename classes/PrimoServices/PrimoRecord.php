@@ -289,14 +289,12 @@ Class PrimoRecord
     //ADDME Will Return Primo Metadata for Record
     $display_data = $this->getElements("display");
     $display_values = $this->getSectionFields($display_data);
+    //print_r($display_values);
     $add_data_section = $this->getElements("addata");
     $add_data_section_values = $this->getSectionFields($add_data_section);
-    $enrichment_section = $this->getElements('enrichment');
-    $enrichment_section_values = $this->getSectionFields($enrichment_section);
-    $search_data = $this->getElements("search");
-    $search_data_values = $this->getSectionFields($search_data);
-    $record_metadata = array_merge($display_values, $add_data_section_values, $enrichment_section_values, $search_data_values);//$display_values, );
-    
+    //print_r($add_data_section_values);
+    $record_metadata = array_merge($display_values, $add_data_section_values); //, $enrichment_section_values); //, $search_data_values);//$display_values, );
+    //print_r($record_metadata);
     return $record_metadata;
   }
   
@@ -310,6 +308,10 @@ Class PrimoRecord
   
   public function getRisType() {
     return $this->getElements("ristype");
+  }
+  
+  public function getCallNumber() {
+    return $this->getText("lsr05");
   }
   
   public function getCitation($type = "RIS") {
@@ -328,21 +330,35 @@ Class PrimoRecord
         //foreach($field_values as $value) { //FIXME take only the first value for publishers, jtitles, and btitles 
           if($key == "ristype") {
             $ris_type .= $value;
-          } elseif($key == "btitle" || $key == "jtitle") {
+          } elseif($key == "title" || $key == "btitle" || $key == "jtitle") {
             $short_title = preg_split("/\s(\/|:)\s/", $value); //FIXME kludge to split on delimiters
             $ris_title .= $short_title[0];
             array_push($format_mappings, $ris_title);
           } elseif($key == "subject") {
-            $subjects = preg_split("/;/", $value);
+            $subjects = preg_split("/;/", $value); // split field along values
             foreach($subjects as $subject) {
               $ris_subject = "KW - " . trim($subject);
+              //echo $ris_subject;
               array_push($format_mappings, $ris_subject);
+            }
+          } elseif($key == "seriestitle") {
+            $series_split = preg_split("/;/", $value);
+            $series_title = "T3 - " . trim($series_split[0]);
+            array_push($format_mappings, $series_title);
+            $number_series = "M1 = " . $series_split[1];
+            array_push($format_mappings, $number_series);
+          } elseif($key == "addau") {
+            if(is_array($field_values)) {
+              foreach($field_values as $add_author) {
+                array_push($format_mappings, "A2 - " . $add_author);
+              }
+            } else {
+              array_push($format_mappings, "A2 - " . $value);
             }
           } else {
             $ris_value = $ris_key . " - " . $value;
             array_push($format_mappings, $ris_value);
           }
-        //}
       }
       array_unshift($format_mappings, $ris_type); //Make sure RIS type is first element. 
     }
@@ -353,7 +369,9 @@ Class PrimoRecord
       $deep_link = new PermaLink($this->getRecordID());
       $resource_link = $deep_link->getLink();
     }
-    
+    if($this->getCallNumber()) {
+      array_push($format_mappings, "CN - ". $this->getCallNumber());
+    }
     array_push($format_mappings, "UR - ". $resource_link);
     array_push($format_mappings, "ER - "); //push the RIS last reference marker on stack
     //print_r($format_mappings);

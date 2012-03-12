@@ -1,3 +1,10 @@
 <?php
 $app = require dirname(__FILE__).'/src/app.php';
-$app->run();
+
+/* set the app up */
+$app['debug'] = true;
+if($app['debug']) {
+  $app->run();
+} else {
+  $app['http_cache']->run(); 
+}

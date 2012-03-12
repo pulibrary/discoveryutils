@@ -5,3 +5,4 @@ vendor/Monolog/*
 vendor/*
 log/*
 docs/*
+cache/*

@@ -10,6 +10,7 @@ use PrimoServices\PrimoRecord,
   PrimoServices\PrimoException,
   PrimoServices\SummonQuery,
   PrimoServices\PrimoQuery,
+  PrimoServices\RequestClient,
   PrimoServices\SearchDeepLink;
 
 $app = new Silex\Application(); 
@@ -20,9 +21,13 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 ));
 
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
-    'monolog.logfile'       => __DIR__.'/../log/development.log',
+    'monolog.logfile'       => __DIR__.'/../log/usage.log',
     'monolog.class_path'    => __DIR__.'/../vendor/Monolog/src',
     'monolog.level'         => 'Logger::DEBUG'
+));
+
+$app->register(new Silex\Provider\HttpCacheServiceProvider(), array(
+    'http_cache.cache_dir' => __DIR__.'/../cache/',
 ));
 
 $app['autoloader']->registerNamespaces(array(
@@ -47,7 +52,7 @@ $app->match('/show/{rec_id}', function($rec_id) use($app) {
  * redirect route for primo basic searches 
  * tab should match an available primo search tab
  */
-$app->match('/search/{tab}', function($tab) use($app) {
+$app->match('/search/{tab}', function(Request $request, $tab) use($app) {
   //test to see if query is valid
   $query = $app['request']->get('query'); //FIXME escaping this causes primo search to fail 
   
@@ -58,11 +63,11 @@ $app->match('/search/{tab}', function($tab) use($app) {
   } elseif($tab == "blended") {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $tab, array("PRN", "SummonThirdNode"));
   } else {
-    $deep_search_link = new SearchDeepLink($query, "any", "contains", $tab, array("OTHERS", "FIRE")); //FIXME try other scopes 
+    $deep_search_link = new SearchDeepLink($query, "any", "contains", $tab, array("OTHERS", "FIRE")); //WATCHOUT - Order Matters 
   }
-  $app['monolog']->addInfo("TAB:" . $tab . "\tREDIRECT: " . $deep_search_link->getLink());
+  $app['monolog']->addInfo("\tTAB:" . $tab . "\tQUERY:" . $query . "\tREDIRECT: " . $deep_search_link->getLink());
   return $app->redirect($deep_search_link->getLink());
-  //return $deep_search_link->getLink();
+  //return print_r($request->server->all());
 });
 
 
@@ -70,9 +75,12 @@ $app->match('/search/{tab}', function($tab) use($app) {
  *  Test Route
  */
 $app->get('/hello/{name}', function ($name) use ($app) {
-  $app['monolog']->addInfo(sprintf("User '%s' dropped by to say hi.", $name));
-  return $app['twig']->render('hello.twig', array(
-    'name' => $name,
+  $content = $app['twig']->render('hello.twig', array(
+    'name' => $app->escape($name),
+  ));
+  return new Response($content, 200, array(
+    'Cache-Control' => 'public, s-maxage=3600',
+    //'Surrogate-Control' => 'content="ESI/1.0"',
   ));
 }); 
 
@@ -98,6 +106,7 @@ $app->get('/record/{rec_id}.ris', function($rec_id) use($app) {
   $ris_data = $primo_record->getCitation("RIS");
   $app['monolog']->addInfo("RIS_REQUEST: " . $rec_id . "\n" . $ris_data);
   return new Response($ris_data, 200, array('Content-Type' => 'application/x-research-info-systems'));
+  //return $risdata;
 })->assert('rec_id', '\w+');
 
 
@@ -138,6 +147,25 @@ $app->get('/locations/{rec_id}.json', function($rec_id) use($app) {
   return new Response(json_encode($all_links_data), 200, array('Content-Type' => 'application/json'));
 })->assert('rec_id', '\w+');
 
+$app->get('/availability/{rec_id}.json', function($rec_id) use($app) {
+  $availability_client = new RequestClient($app->escape($rec_id));
+  $availability_response = $availability_client->doLookup();
+  //$decoded_reponse = json_decode($availability_response);
+  $app['monolog']->addInfo("Request Lookup: " . $availability_client);
+  return new Response($availability_response, 200, array('Content-Type' => 'application/json'));
+})->assert('rec_id', '\w+');
+
+$app->get('/availability/{rec_id}', function($rec_id) use($app) {
+  $availability_client = new RequestClient($app->escape($rec_id));
+  $availability_response = $availability_client->doLookup();
+  //$decoded_reponse = json_decode($availability_response);
+  $app['monolog']->addInfo("Request Lookup: " . $availability_client);
+  return $app['twig']->render('availability.twig', array(
+    'record_id' => $rec_id, 
+    'ava_response' => $availability_response
+  ));
+})->assert('rec_id', '\w+');
+
 /*
  * Generic "services" route to all for querying of specific primo services
  * Returns values for {locations, openurl, fulltext, delivery, borrowdirect }
@@ -147,7 +175,7 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
   $record_data = $primo_client->getID($app->escape($rec_id)); //FIXME perhaps try and use the symfony validator utility to filter all rec_ids and service_types
   $primo_record = new PrimoRecord($record_data);
   // decide which service type to use
-  $location_links_data = $primo_record->getLocationServices();
+  $location_links_data = $primo_record->getAllLinks();
   if ($format == "json") {
     return new Response(json_encode($location_links_data), 200, array('Content-Type' => 'application/json'));
   }
@@ -181,5 +209,7 @@ $app->get('/find/{index_type}/{query}', function($index_type, $query) use($app) 
   return new Response($response_data, 200, array('Content-Type' => 'application/xml'));
 })->assert('index_type', '(issn|isbn|lccn|oclc|title|any)'); // should this be a list of possible options from the 
 
-$app['debug'] = true;
+// should kick only on prod
+//$app['http_cache']->run(); 
+
 return $app;

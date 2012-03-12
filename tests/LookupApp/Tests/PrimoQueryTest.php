@@ -47,4 +47,7 @@ class LookupPrimoQueryTest extends \PHPUnit_Framework_TestCase {
     
   }
   
+  public function testQueryStringHasNoCommas() { //Primo API and Deep Links queries can't have commas 
+    
+  }
 }
