@@ -59,7 +59,7 @@ $app->match('/show/{rec_id}', function($rec_id) use($app) {
  * redirect route for primo basic searches 
  * tab should match an available primo search tab
  */
-$app->match('/search/{tab}', function($tab) use($app) {
+$app->match('/search/{tab}', function(Request $request, $tab) use($app) {
   //test to see if query is valid
   $query = $app['request']->get('query'); //FIXME escaping this causes primo search to fail 
   
@@ -72,9 +72,9 @@ $app->match('/search/{tab}', function($tab) use($app) {
   } else {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $tab, array("OTHERS", "FIRE")); //WATCHOUT - Order Matters 
   }
-  $app['monolog']->addInfo("TAB:" . $tab . "\tQUERY:" . $query . "\tREDIRECT: " . $deep_search_link->getLink());
+  $app['monolog']->addInfo("\tTAB:" . $tab . "\tQUERY:" . $query . "\tREDIRECT: " . $deep_search_link->getLink());
   return $app->redirect($deep_search_link->getLink());
-  //return $deep_search_link->getLink();
+  //return print_r($request->server->all());
 });
 
 
@@ -82,9 +82,8 @@ $app->match('/search/{tab}', function($tab) use($app) {
  *  Test Route
  */
 $app->get('/hello/{name}', function ($name) use ($app) {
-  $app['monolog']->addInfo(sprintf("User '%s' dropped by to say hi.", $name));
   $content = $app['twig']->render('hello.twig', array(
-    'name' => $name,
+    'name' => $app->escape($name),
   ));
   return new Response($content, 200, array(
     'Cache-Control' => 'public, s-maxage=3600',
@@ -114,6 +113,7 @@ $app->get('/record/{rec_id}.ris', function($rec_id) use($app) {
   $ris_data = $primo_record->getCitation("RIS");
   $app['monolog']->addInfo("RIS_REQUEST: " . $rec_id . "\n" . $ris_data);
   return new Response($ris_data, 200, array('Content-Type' => 'application/x-research-info-systems'));
+  //return $risdata;
 })->assert('rec_id', '\w+');
 
 
