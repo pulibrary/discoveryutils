@@ -21,7 +21,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 ));
 
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
-    'monolog.logfile'       => __DIR__.'/../log/development.log',
+    'monolog.logfile'       => __DIR__.'/../log/usage.log',
     'monolog.class_path'    => __DIR__.'/../vendor/Monolog/src',
     'monolog.level'         => 'Logger::DEBUG'
 ));
@@ -72,7 +72,7 @@ $app->match('/search/{tab}', function($tab) use($app) {
   } else {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $tab, array("OTHERS", "FIRE")); //WATCHOUT - Order Matters 
   }
-  $app['monolog']->addInfo("TAB:" . $tab . "\tREDIRECT: " . $deep_search_link->getLink());
+  $app['monolog']->addInfo("TAB:" . $tab . "\tQUERY:" . $query . "\tREDIRECT: " . $deep_search_link->getLink());
   return $app->redirect($deep_search_link->getLink());
   //return $deep_search_link->getLink();
 });
