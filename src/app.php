@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__.'/../vendor/silex.phar';
+
 use Symfony\Component\HttpFoundation\Response,
   Symfony\Component\HttpFoundation\Request;
 use PrimoServices\PrimoRecord,
@@ -65,7 +66,7 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
   } else {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $tab, array("OTHERS", "FIRE")); //WATCHOUT - Order Matters 
   }
-  $app['monolog']->addInfo("\tTAB:" . $tab . "\tQUERY:" . $query . "\tREDIRECT: " . $deep_search_link->getLink());
+  $app['monolog']->addInfo("TAB:" . $tab . "\tQUERY:" . $query . "\tREDIRECT:" . $deep_search_link->getLink());
   return $app->redirect($deep_search_link->getLink());
   //return print_r($request->server->all());
 });
