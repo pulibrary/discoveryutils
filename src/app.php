@@ -208,7 +208,7 @@ $app->get('/find/{index_type}/{query}', function($index_type, $query) use($app) 
   $app['monolog']->addInfo("Index Query: " . $primo_client);
   
   return new Response($response_data, 200, array('Content-Type' => 'application/xml'));
-})->assert('index_type', '(issn|isbn|lccn|oclc|title|any)'); // should this be a list of possible options from the 
+})->assert('index_type', '(issn|isbn|lccn|oclc|title|any|lsr05)'); // should this be a list of possible options from the 
 
 // should kick only on prod
 //$app['http_cache']->run(); 
