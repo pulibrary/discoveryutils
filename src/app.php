@@ -79,7 +79,7 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
   } else {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $tab, array("OTHERS", "FIRE")); //WATCHOUT - Order Matters 
   }
-  $app['monolog']->addInfo("TAB:" . $tab . "\tQUERY:" . $query . "\tREDIRECT:" . $deep_search_link->getLink() . "\tREFERRER:" . $referer);
+  $app['monolog']->addInfo("TAB:" . $tab . "\tQUERY:" . $query . "\tREDIRECT:" . $deep_search_link->getLink() . "\tREFERER:" . $referer);
   return $app->redirect($deep_search_link->getLink());
   //return print_r($app['request']);
   //return print_r($request->server->all());
@@ -213,10 +213,10 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
  */
 $app->get('/find/{index_type}/{query}', function($index_type, $query) use($app) {
   
-  if($app['request']->get('HTTP_REFERRER')) {
-    $referrer = $app['request']->get('HTTP_REFERRER');
+  if($app['request']->server->get('HTTP_REFERER')) {
+    $referer = $app['request']->server->get('HTTP_REFERER');
   } else {
-    $referrer = "Direct Query";
+    $referer = "Direct Query";
   }
   if($app['request']->get('scopes')) {
     $scopes = explode(",", $app['request']->get('scopes'));  
@@ -231,7 +231,7 @@ $app->get('/find/{index_type}/{query}', function($index_type, $query) use($app) 
   $primo_client = new PrimoClient();
   $query = new PrimoQuery($app->escape($query), $app->escape($index_type), $operator, $scopes);
   $response_data = $primo_client->doSearch($query);
-  $app['monolog']->addInfo("Index Query:" . $primo_client . "\tREFERRER:" . $referrer);
+  $app['monolog']->addInfo("Index Query:" . $primo_client . "\tREFERER:" . $referrer);
   
   return new Response($response_data, 200, array('Content-Type' => 'application/xml'));
 })->assert('index_type', '(issn|isbn|lccn|oclc|title|any|lsr05)'); // should this be a list of possible options from the 
