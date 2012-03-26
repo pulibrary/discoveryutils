@@ -24,10 +24,10 @@ while(<>) {
   $log_entry = $_;
   if($log_entry =~ /QUERY:(.+)REDIRECT/) {
     switch($log_entry) {
-      case /TAB:location/ { push(@catalog, trim($1)); }
-      case /TAB:summon/ { push(@summon, trim($1)); }
-      case /TAB:course/ { push(@reserves, trim($1)); }
-      case /TAB:blended/ { push(@blend, trim($1)); }
+      case /TAB:location/ { push(@catalog, trim('"' . $1 . '"')); }
+      case /TAB:summon/ { push(@summon, trim('"' . $1 . '"')); }
+      case /TAB:course/ { push(@reserves, trim('"' . $1 . '"')); }
+      case /TAB:blended/ { push(@blend, trim('"' . $1 . '"')); }
       else {}
     }
   }
