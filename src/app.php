@@ -64,10 +64,10 @@ $app->match('/show/{rec_id}', function($rec_id) use($app) {
 $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
   //test to see if query is valid
   $query = $app['request']->get('query'); //FIXME escaping this causes primo search to fail 
-  if($app['request']->get('HTTP_REFERRER')) {
-    $referrer = $app['request']->get('HTTP_REFERRER');
+  if($app['request']->server->get('HTTP_REFERER')) {
+    $referer = $app['request']->server->get('HTTP_REFERER');
   } else {
-    $referrer = "Direct Query";
+    $referer = "Direct Query";
   }
 
   if ($tab == "summon") {
@@ -79,8 +79,9 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
   } else {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $tab, array("OTHERS", "FIRE")); //WATCHOUT - Order Matters 
   }
-  $app['monolog']->addInfo("TAB:" . $tab . "\tQUERY:" . $query . "\tREDIRECT:" . $deep_search_link->getLink() . "\tREFERRER:" . $referrer);
+  $app['monolog']->addInfo("TAB:" . $tab . "\tQUERY:" . $query . "\tREDIRECT:" . $deep_search_link->getLink() . "\tREFERRER:" . $referer);
   return $app->redirect($deep_search_link->getLink());
+  //return print_r($app['request']);
   //return print_r($request->server->all());
 });
 
