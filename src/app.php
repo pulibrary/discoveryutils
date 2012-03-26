@@ -35,6 +35,14 @@ $app['autoloader']->registerNamespaces(array(
   'PrimoServices' => __DIR__.'/../classes',
 ));
 
+/* Define possible search tabs */
+$app['search_tabs'] = array(
+  array("index" => "location", "label" => "Catalog+ (Primo/Searchit)"),
+  array("index" => "summon", "label" => "Articles + (Summon)"),
+  array("index" => "course", "label" => "Course Reserves"),
+  array("index" => "blended", "label" => "Catalog and Summon"),
+);
+
 //print_r($app['autoloader']->getNamespaces());
 $app->get('/', function() use($app) {
   return 'Primo Lookup App';
@@ -56,7 +64,12 @@ $app->match('/show/{rec_id}', function($rec_id) use($app) {
 $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
   //test to see if query is valid
   $query = $app['request']->get('query'); //FIXME escaping this causes primo search to fail 
-  
+  if($app['request']->get('HTTP_REFERRER')) {
+    $referrer = $app['request']->get('HTTP_REFERRER');
+  } else {
+    $referrer = "Direct Query";
+  }
+
   if ($tab == "summon") {
     $deep_search_link = new SummonQuery($query);
   } elseif($tab == "course") {
@@ -66,11 +79,18 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
   } else {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $tab, array("OTHERS", "FIRE")); //WATCHOUT - Order Matters 
   }
-  $app['monolog']->addInfo("TAB:" . $tab . "\tQUERY:" . $query . "\tREDIRECT:" . $deep_search_link->getLink());
+  $app['monolog']->addInfo("TAB:" . $tab . "\tQUERY:" . $query . "\tREDIRECT:" . $deep_search_link->getLink() . "\tREFERRER:" . $referrer);
   return $app->redirect($deep_search_link->getLink());
   //return print_r($request->server->all());
 });
 
+$app->get('/test/', function () use ($app) {
+  return $app['twig']->render('test.twig', array(
+    'title' => "Primo Data Services Test",
+    'base_url' => $app['request']->getBaseUrl(),
+    'search_tabs' => $app['search_tabs'],
+  ));
+});
 
 /* 
  *  Test Route
@@ -192,6 +212,11 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
  */
 $app->get('/find/{index_type}/{query}', function($index_type, $query) use($app) {
   
+  if($app['request']->get('HTTP_REFERRER')) {
+    $referrer = $app['request']->get('HTTP_REFERRER');
+  } else {
+    $referrer = "Direct Query";
+  }
   if($app['request']->get('scopes')) {
     $scopes = explode(",", $app['request']->get('scopes'));  
   } else {
@@ -205,7 +230,7 @@ $app->get('/find/{index_type}/{query}', function($index_type, $query) use($app) 
   $primo_client = new PrimoClient();
   $query = new PrimoQuery($app->escape($query), $app->escape($index_type), $operator, $scopes);
   $response_data = $primo_client->doSearch($query);
-  $app['monolog']->addInfo("Index Query: " . $primo_client);
+  $app['monolog']->addInfo("Index Query:" . $primo_client . "\tREFERRER:" . $referrer);
   
   return new Response($response_data, 200, array('Content-Type' => 'application/xml'));
 })->assert('index_type', '(issn|isbn|lccn|oclc|title|any|lsr05)'); // should this be a list of possible options from the 
