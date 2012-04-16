@@ -1,6 +1,8 @@
 <?php
 namespace PrimoServices;
 
+use PrimoServices\SearchDeepLink;
+
 /*
  * @Permalink
  * Uses Primo "deep" linking services to return a bookmarkable URL
@@ -30,4 +32,13 @@ class PermaLink
   private function buildIDLink() {
     return $this->base_url . $this->primo_single_record_path . "?" . "institution=" . $this->institution . "&vid=" . $this->vid . "&docId=" . $this->pnx_id;
   }
+  
+  private function buildSearchDeepLink() {
+    $deep_search = new SearchDeepLink($this->pnx_id, "any", "contains");
+    return $deep_search->getLink();
+  }
+  
+  public function getDeepLinkAsSearch() {
+    return $this->buildSearchDeepLink();
+  } 
 }

@@ -29,4 +29,5 @@ class LocatorLink {
   private function buildLink() {
     return $this->locator_link_base . "?" . "loc=" . $this->location_code . "&id=" . $this->source_id;
   }
+  
 } 

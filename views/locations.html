@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<title>Underscore Test</title>
+	</head>
+	<body>
+		<h1>Underscore Test</h1>
+		<div id="locations"></div>
+		<div id="holdings-test"></div>
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script type="text/javascript" src="../js/underscore.js"></script>
+		<script type="text/javascript" src="../js/loc_objects.js"></script>
+		<script type="text/javascript">
+			// no holdings item on order 
+			// example http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?BBID=6975568
+			//
+			//var numbers = [{name: "Kevin", title: "Mr"}, {name: "Kelly", title: "Ms"}];
+
+			$.getJSON('multiple_holdings.json', function(data) {
+				var location_collection = {};
+				$.each(data, function(key,val) {
+					//console.log(key);
+					//console.log(val);
+					//var location_object = {location: key, location_data: val};
+					var location_details = _.find(loc_objects, function(location){ return location.voyagerLocationCode === key});
+					//console.log(location_details);
+					val.location_detailed_info = location_details;
+					location_collection[key] = val;
+				});
+				//var location_codes = _.keys(location_collection);
+				//var location_info = _.filter(loc_objects, function(loc, key) {
+				//	return _.include(location_codes, loc.voyagerLocationCode);
+				//});
+				console.log(location_collection);
+				var holdings_template = _.template('\
+				<div><%= _.size(location_collection) %> Matching Locations</div>\
+			  <ul>\
+				<% _.chain(location_collection).keys(location_collection).sortBy(function(location){ return location; }).each(function(location) { %>\
+					<% var loc = location_collection[location]; %>\
+					<% var loc_details = loc.location_detailed_info; %>\
+					<li><%= loc_details.libraryDisplay %>(<%= loc_details.voyagerLocationCode %>)|<%= loc.totalItems %>|<%= loc.availableItems %>|<%= loc.requestableItems %></li>\
+				<% }); %>\
+				</ul>');
+				var html = [];
+				html += holdings_template({location_collection: location_collection});
+				//console.log(html);
+				$(html).appendTo('#holdings-test');
+			});
+			
+			//alert(numbers);
+			//alert(loc_objects);
+			//alert(_.size(loc_objects));
+			//console.log(location_collection);
+			//_.each(loc_objects, function(loc){ 
+			//	console.log(loc.vlID); 
+			//});
+			//_.each(numbers, function(key,num){ alert(num); });
+			var raw_requestable_locs = _.filter(loc_objects, function(loc, key) {
+				return loc.requestable == "Y"; 
+			});
+			var all_locs = _.sortBy(loc_objects, function(loc, key){
+				return loc.voyagerLocationCode;
+			});
+			_.each(loc_objects, function(val,key){
+				console.log(key);
+				console.log(val.requestable);
+				console.log(val.accessible);
+				var request_when_not_charged = false;
+				if(val.requestable == "Y" && val.accessible == "N") {
+					request_when_not_charged = true;
+				}
+				val.request_when_not_charged = request_when_not_charged;
+				loc_objects[key] = val; // update objects 
+			});
+			var loc_list_template = _.template('\
+			  <div><%= all_locs.length %> Matching Locations</div>\
+			  <ul>\
+				<% for (var index = 0; index < all_locs.length; index++){ %>\
+					<% var loc = all_locs[index]; %>\
+					<% var loc_is_requestable = false; %>\
+					<li><%= loc.libraryDisplay %>|<%= loc.primoLibraryCode%>|<%= loc.voyagerLocationCode%>\
+					|<%= loc.accessible %>|<%= loc.requestable %>|<%= loc.request_when_not_charged %>|<%= loc.aeon %>\
+					</li>\
+				<% } %>\
+			</ul>');
+			var html = [];
+			html += loc_list_template({all_locs: all_locs});
+			$('#locations').append(html);
+		
+		</script>
+	</body>
+</html>
