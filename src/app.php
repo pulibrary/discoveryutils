@@ -140,8 +140,6 @@ $app->get('/record/{rec_id}', function($rec_id) use($app) {
   $response_data = array();
   $response_data['rec_id'] = $rec_id;
   $response_data['pnx_response'] = $stub_data;
-  $deep_link = new PermaLink($app->escape($rec_id));
-  $response_data['deep_search_id_link'] = $deep_link->getDeepLinkAsSearch();
   //$stub_data['source_prn_id'] = $rec_id;
   return $app['twig']->render('record.twig', $response_data);
 })->assert('rec_id', '\w+');

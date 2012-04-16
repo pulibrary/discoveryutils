@@ -25,13 +25,13 @@
     	  	  {% set perma_link = '/searchit/show/'~rec_id %}
     	  		<a href="{{ perma_link }}">View in Primo</a> 
     	  	</li>
-    	  </ul>  
+    	  </ul>
+    	  <div id="search-permalink">
+    			<p>
+    				<a target="_blank" href="{{ record.deep_search_id_link }}" title="View Record in Primo">View as Deep Search Link</a>
+    			</p>
+    		</div>  
       {% endfor %}
-    </div>
-    <div id="search-permalink">
-    	<p>
-    		<a href="{{ deep_search_id_link }}" title="View Record in Primo">View as Deep Search Link</a>
-    	</p>
     </div>
   </body>
 </html>

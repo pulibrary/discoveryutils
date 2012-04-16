@@ -191,6 +191,9 @@ Class PrimoRecord
         array_push($locator_links, $locator_link->getLink());
       }
       $brief_info_data[$voyager_key] = array_merge($voyager_key_available_libraries, $getit_links[$voyager_key], array('voyager_id' => $this->split_voyager_id($voyager_key)), array('locator_links' => $locator_links));
+      // build a permalink for each
+      $deep_link = new PermaLink($voyager_key);
+      $brief_info_data[$voyager_key]['deep_search_id_link'] = $deep_link->getDeepLinkAsSearch();
     }
     
     return $brief_info_data;
