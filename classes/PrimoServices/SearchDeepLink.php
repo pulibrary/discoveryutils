@@ -23,16 +23,18 @@ use PrimoServices\PrimoQuery;
 class SearchDeepLink
 {
   
-  private $primo_query;
+  private $query;
   private $deep_search_link;
-  private $base_url = "http://searchit.princeton.edu"; //FIXME this needs to go to a config value somewhere
+  private $base_url; 
   private $primo_deep_search_path = "/primo_library/libweb/action/dlSearch.do?"; //FIXME This should too
-  private $vid = "PRINCETON"; // should this be a parameter 
+  private $vid; // should this be a parameter 
   private $tabs = array("location","summon", "course", "blended");
   private $active_tab;
   
-  public function __construct($query, $index_type, $precision_operator, $tab = "location", $scopes = array("OTHERS","FIRE")) {
+  public function __construct($query, $index_type, $precision_operator, $primo_connection, $tab = "location", $scopes = array("OTHERS","FIRE")) {
     $this->query = new PrimoQuery($query, $index_type, $precision_operator, $scopes);
+    $this->base_url = $primo_connection['base_url'];
+    $this->vid = $primo_connection['default_view_id'];
     if ($this->isValidTab($tab)) {
       $this->active_tab = $tab;
     }
@@ -40,11 +42,11 @@ class SearchDeepLink
   }
   
   private function buildDeepSearchLink() {
-    //print $this->query;
     $this->deep_search_link = $this->base_url . $this->primo_deep_search_path . $this->query->getQueryString() . "&vid=" . $this->vid . "&tab=" . $this->active_tab;
   }
   
   public function getLink() {
+    //echo "base url: " . $this->base_url . "\n";
     return $this->deep_search_link; 
   }
   

@@ -1,0 +1,2475 @@
+<sear:SEGMENTS xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib" xmlns:sear="http://www.exlibrisgroup.com/xsd/jaguar/search">
+  <sear:JAGROOT>
+    <sear:RESULT>
+      <sear:QUERYTRANSFORMS/>
+      <sear:FACETLIST ACCURATE_COUNTERS="true">
+        <sear:FACET COUNT="30" NAME="creator">
+          <sear:FACET_VALUES VALUE="2" KEY="Whited, Lana A."/>
+          <sear:FACET_VALUES VALUE="2" KEY="Cleese, John"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Lerer, Seth"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Gupta, Suman"/>
+          <sear:FACET_VALUES VALUE="7" KEY="Wyler, Lia"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Radcliffe, Daniel"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Harris, Richard"/>
+          <sear:FACET_VALUES VALUE="3" KEY="Rovira Ortega, Gemma"/>
+          <sear:FACET_VALUES VALUE="9" KEY="GrandPré, Mary"/>
+          <sear:FACET_VALUES VALUE="3" KEY="Martín Azofra, Nieves"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Watson, Emma"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Astrologo, Marina"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Warner Bros. Pictures (1969- )"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Warner Home Video (Firm)"/>
+          <sear:FACET_VALUES VALUE="62" KEY="Rowling, J. K"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Coltrane, Robbie"/>
+          <sear:FACET_VALUES VALUE="3" KEY="Muñoz García, Adolfo"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Hopkins, Lisa"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Shishova, Tatʹi︠a︡na"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Lenti, Marina"/>
+          <sear:FACET_VALUES VALUE="7" KEY="Fritz, Klaus"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Grint, Rupert"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Branagh, Kenneth"/>
+          <sear:FACET_VALUES VALUE="3" KEY="Litvinova, M. D"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Columbus, Chris"/>
+          <sear:FACET_VALUES VALUE="3" KEY="Davis, Warwick"/>
+          <sear:FACET_VALUES VALUE="5" KEY="Masini, Beatrice"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Desplat, Alexandre"/>
+          <sear:FACET_VALUES VALUE="6" KEY="ebrary, Inc"/>
+          <sear:FACET_VALUES VALUE="7" KEY="Ménard, Jean-François"/>
+        </sear:FACET>
+        <sear:FACET COUNT="8" NAME="lcc">
+          <sear:FACET_VALUES VALUE="131" KEY="P - Language and literature."/>
+          <sear:FACET_VALUES VALUE="3" KEY="K - Law."/>
+          <sear:FACET_VALUES VALUE="6" KEY="B - Philosophy. Psychology. Religion"/>
+          <sear:FACET_VALUES VALUE="3" KEY="H - Social sciences."/>
+          <sear:FACET_VALUES VALUE="1" KEY="D - History (general) and history of europe."/>
+          <sear:FACET_VALUES VALUE="1" KEY="L - Education."/>
+          <sear:FACET_VALUES VALUE="2" KEY="T - Technology ."/>
+          <sear:FACET_VALUES VALUE="1" KEY="Q - Science."/>
+        </sear:FACET>
+        <sear:FACET COUNT="9" NAME="lang">
+          <sear:FACET_VALUES VALUE="14" KEY="rus"/>
+          <sear:FACET_VALUES VALUE="16" KEY="ita"/>
+          <sear:FACET_VALUES VALUE="3" KEY="chi"/>
+          <sear:FACET_VALUES VALUE="18" KEY="ger"/>
+          <sear:FACET_VALUES VALUE="7" KEY="por"/>
+          <sear:FACET_VALUES VALUE="100" KEY="eng"/>
+          <sear:FACET_VALUES VALUE="11" KEY="fre"/>
+          <sear:FACET_VALUES VALUE="1" KEY="lat"/>
+          <sear:FACET_VALUES VALUE="10" KEY="spa"/>
+        </sear:FACET>
+        <sear:FACET COUNT="4" NAME="rtype">
+          <sear:FACET_VALUES VALUE="171" KEY="books"/>
+          <sear:FACET_VALUES VALUE="1" KEY="scores"/>
+          <sear:FACET_VALUES VALUE="2" KEY="audio"/>
+          <sear:FACET_VALUES VALUE="3" KEY="video"/>
+        </sear:FACET>
+        <sear:FACET COUNT="30" NAME="topic">
+          <sear:FACET_VALUES VALUE="3" KEY="Harry Potter films"/>
+          <sear:FACET_VALUES VALUE="4" KEY="Religion in literature"/>
+          <sear:FACET_VALUES VALUE="27" KEY="Fantasy fiction, English"/>
+          <sear:FACET_VALUES VALUE="5" KEY="English literature"/>
+          <sear:FACET_VALUES VALUE="11" KEY="England"/>
+          <sear:FACET_VALUES VALUE="3" KEY="Motion picture music"/>
+          <sear:FACET_VALUES VALUE="4" KEY="Popular culture"/>
+          <sear:FACET_VALUES VALUE="9" KEY="Wizards in literature"/>
+          <sear:FACET_VALUES VALUE="33" KEY="Children's stories, English"/>
+          <sear:FACET_VALUES VALUE="3" KEY="Children's literature, English"/>
+          <sear:FACET_VALUES VALUE="12" KEY="Children's Literature"/>
+          <sear:FACET_VALUES VALUE="3" KEY="Spirituality in literature"/>
+          <sear:FACET_VALUES VALUE="4" KEY="Ethics in literature"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Myth in literature"/>
+          <sear:FACET_VALUES VALUE="51" KEY="Rowling, J. K"/>
+          <sear:FACET_VALUES VALUE="11" KEY="Magic in literature"/>
+          <sear:FACET_VALUES VALUE="5" KEY="HHogwarts School of Witchcraft and Wizardry (Imaginary organization)"/>
+          <sear:FACET_VALUES VALUE="59" KEY="Magic"/>
+          <sear:FACET_VALUES VALUE="3" KEY="Horror tales, English"/>
+          <sear:FACET_VALUES VALUE="3" KEY="Young adult literature"/>
+          <sear:FACET_VALUES VALUE="3" KEY="Philosophy in literature"/>
+          <sear:FACET_VALUES VALUE="12" KEY="Children"/>
+          <sear:FACET_VALUES VALUE="3" KEY="Children's stories, American"/>
+          <sear:FACET_VALUES VALUE="59" KEY="Wizards"/>
+          <sear:FACET_VALUES VALUE="9" KEY="Schools"/>
+          <sear:FACET_VALUES VALUE="54" KEY="Hogwarts School of Witchcraft and Wizardry (Imaginary organization)"/>
+          <sear:FACET_VALUES VALUE="106" KEY="Potter, Harry (Fictitious character)"/>
+          <sear:FACET_VALUES VALUE="3" KEY="Fantasy fiction"/>
+          <sear:FACET_VALUES VALUE="3" KEY="Gothic revival (Literature)"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Translating and interpreting"/>
+        </sear:FACET>
+        <sear:FACET COUNT="2" NAME="tlevel">
+          <sear:FACET_VALUES VALUE="8" KEY="online_resources"/>
+          <sear:FACET_VALUES VALUE="144" KEY="available"/>
+        </sear:FACET>
+        <sear:FACET COUNT="4" NAME="pfilter">
+          <sear:FACET_VALUES VALUE="171" KEY="books"/>
+          <sear:FACET_VALUES VALUE="1" KEY="scores"/>
+          <sear:FACET_VALUES VALUE="2" KEY="audio"/>
+          <sear:FACET_VALUES VALUE="3" KEY="video"/>
+        </sear:FACET>
+        <sear:FACET COUNT="18" NAME="creationdate">
+          <sear:FACET_VALUES VALUE="14" KEY="2008"/>
+          <sear:FACET_VALUES VALUE="9" KEY="2009"/>
+          <sear:FACET_VALUES VALUE="18" KEY="2006"/>
+          <sear:FACET_VALUES VALUE="17" KEY="2007"/>
+          <sear:FACET_VALUES VALUE="7" KEY="2004"/>
+          <sear:FACET_VALUES VALUE="1" KEY="1967"/>
+          <sear:FACET_VALUES VALUE="13" KEY="2005"/>
+          <sear:FACET_VALUES VALUE="12" KEY="2002"/>
+          <sear:FACET_VALUES VALUE="14" KEY="2003"/>
+          <sear:FACET_VALUES VALUE="2" KEY="1997"/>
+          <sear:FACET_VALUES VALUE="4" KEY="1998"/>
+          <sear:FACET_VALUES VALUE="1" KEY="1993"/>
+          <sear:FACET_VALUES VALUE="2" KEY="2012"/>
+          <sear:FACET_VALUES VALUE="18" KEY="2011"/>
+          <sear:FACET_VALUES VALUE="21" KEY="2010"/>
+          <sear:FACET_VALUES VALUE="7" KEY="1999"/>
+          <sear:FACET_VALUES VALUE="9" KEY="2001"/>
+          <sear:FACET_VALUES VALUE="9" KEY="2000"/>
+        </sear:FACET>
+        <sear:FACET COUNT="16" NAME="genre">
+          <sear:FACET_VALUES VALUE="1" KEY="Children's films"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Harry Potter films"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Action and adventure films"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Fantasy fiction -- Juvenile"/>
+          <sear:FACET_VALUES VALUE="6" KEY="Electronic books"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Video recordings for the hearing impaired"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Authors' autographs (Provenance)"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Film adaptations"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Comedy films"/>
+          <sear:FACET_VALUES VALUE="3" KEY="Piracies -- China -- 21st century"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Fantasy fiction"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Feature films"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Children's stories"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Films for the hearing impaired"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Fantasy films"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Fiction films"/>
+        </sear:FACET>
+        <sear:FACET COUNT="2" NAME="local1">
+          <sear:FACET_VALUES VALUE="2" KEY="WRI 164"/>
+          <sear:FACET_VALUES VALUE="1" KEY="ENG 385"/>
+        </sear:FACET>
+        <sear:FACET COUNT="2" NAME="local2">
+          <sear:FACET_VALUES VALUE="1" KEY="Children's Literature"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Society and the Witch"/>
+        </sear:FACET>
+        <sear:FACET COUNT="2" NAME="local4">
+          <sear:FACET_VALUES VALUE="1" KEY="Gleason W A"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Martin Richard"/>
+        </sear:FACET>
+      </sear:FACETLIST>
+      <sear:DOCSET IS_LOCAL="true" TOTAL_TIME="78" LASTHIT="10" FIRSTHIT="1" TOTALHITS="177" HIT_TIME="10">
+        <sear:DOC SEARCH_ENGINE_TYPE="Local Search Engine" SEARCH_ENGINE="Local Search Engine" NO="1" RANK="0.0013436533" ID="5557590">
+          <PrimoNMBib>
+            <record>
+              <control>
+                <sourcerecordid>7017708</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER7017708</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>7017708</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>video</type>
+                <title>&lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> complete 8-film collection.</title>
+                <contributor>Columbus, Chris</contributor>
+                <contributor>Radcliffe, Daniel, 1989-</contributor>
+                <contributor>Grint, Rupert, 1988-</contributor>
+                <contributor>Watson, Emma, 1990-</contributor>
+                <contributor>Coltrane, Robbie</contributor>
+                <contributor>Branagh, Kenneth</contributor>
+                <contributor>Davis, Warwick</contributor>
+                <contributor>Griffiths, Richard, 1947-</contributor>
+                <contributor>Cleese, John</contributor>
+                <contributor>Harris, Richard, 1930-2002</contributor>
+                <contributor>Isaacs, Jason, 1963-</contributor>
+                <contributor>Smith, Maggie, 1934-</contributor>
+                <contributor>Rickman, Alan</contributor>
+                <contributor>Shaw, Fiona, 1958-</contributor>
+                <contributor>Walters, Julie, 1950-</contributor>
+                <contributor>Fiennes, Ralph</contributor>
+                <contributor>Rowling, J. K</contributor>
+                <contributor>Warner Bros. Pictures (1969- )</contributor>
+                <contributor>Heyday Films</contributor>
+                <contributor>1492 Pictures</contributor>
+                <contributor>Warner Home Video (Firm)</contributor>
+                <edition>Widescreen ed.</edition>
+                <publisher>Burbank, CA : Warner Home Video, [2011]</publisher>
+                <creationdate>2011</creationdate>
+                <identifier>$$CISBN$$V0780674316 (8-disc set); $$CISBN$$V9780780674318 (8-disc set)</identifier>
+                <subject>Potter, Harry (Fictitious character) -- Drama; Granger, Hermione (Fictitious character) -- Drama; Weasley, Ron (Fictitious character) -- Drama; Hogwarts School of Witchcraft and Wizardry (Imaginary organization) -- Drama; Magic -- Drama; Good and evil -- Drama; Boarding schools -- Drama; England -- Drama</subject>
+                <language>eng</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LHRC$$1Video Collection (VIDL)$$2DVD 6904$$Savailable$$31$$40$$5N$$60$$Xprincetondb$$Yvidl</availlibrary>
+                <lds03>8 videodiscs (1180 min.) : sd., col. ; 4 3/4 in.</lds03>
+                <lds05>Harry Potter and the sorcerer's stone -- Harry Potter and the chamber of secrets -- Harry Potter and the prisoner of Azkaban -- Harry Potter and the goblet of fire -- Harry Potter and the order of the phoenix -- Harry Potter and the half-blood prince -- Harry Potter and the deathly hallows : part 1 -- Harry Potter and the deathly hallows : part 2.</lds05>
+                <lds06>Title from artwork.</lds06>
+                <lds06>Originally produced as motion pictures in 2001 (Harry Potter and the Sorcerer's Stone), 2002 (Harry Potter and the Chamber of Secrets), 2004 (Harry Potter and the Prisoner of Azkaban), 2005 (Harry Potter and the Goblet of Fire), 2007 (Harry Potter and the Order of the Phoenix), 2009 (Harry Potter and the Half-Blood Prince), 2010 (Harry Potter and the Deathly Hallows: Part 1), and 2011 (Harry Potter and the Deathly Hallows: Part 2).</lds06>
+                <lds06>Includes special features.</lds06>
+                <lds06>Box set issued in 2011.</lds06>
+                <lds09>Daniel Radcliffe, Rupert Grint, Emma Watson, Kenneth Branagh, John Cleese, Robbie Coltrane, Warwick Davis, Richard Griffiths, Richard Harris, Jason Isaacs, Alan Rickman, Fiona Shaw, Maggie Smith, Julie Walters, Ralph Fiennes.</lds09>
+                <lds10>2000048802</lds10>
+                <lds10>2000048803</lds10>
+                <lds10>2000048804</lds10>
+                <lds10>2000048805</lds10>
+                <lds10>2000048806</lds10>
+                <lds10>2000020451</lds10>
+                <lds10>2000048807</lds10>
+                <lds10>2000066307</lds10>
+                <lds22>Harry Potter and the sorcerer's stone.</lds22>
+                <lds22>Harry Potter and the chamber of secrets.</lds22>
+                <lds22>Harry Potter and the prisoner of Azkaban.</lds22>
+                <lds22>Harry Potter and the goblet of fire.</lds22>
+                <lds22>Harry Potter and the order of the phoenix.</lds22>
+                <lds22>Harry Potter and the half-blood prince.</lds22>
+                <lds22>Harry Potter and the deathly hallows : Part 1.</lds22>
+                <lds22>Harry Potter and the deathly hallows : Part 2.</lds22>
+                <lds24>Harry Potter and the sorcerer's stone: The magical adventure begins when Harry Potter is invited to attend Hogwarts School of Witchcraft and Wizardry.</lds24>
+                <lds24>Harry Potter and the chamber of secrets: Cars fly, trees attack and a mysterious house-elf warns Harry of great danger as he returns for his second year.</lds24>
+                <lds24>Harry Potter and the prisoner of Azkaban: Harry must confront soul-sucking Dementors, outsmart a werewolf and learn the truth about the escaped prisoner of Azkaban - Sirius Black.</lds24>
+                <lds24>Harry Potter and the goblet of fire: Harry must overcome a deadly dragon, fierce water demons and an enchanted maze only to find himself in the cruel grasp of He Who Must Not Be Named.</lds24>
+                <lds24>Harry Potter and the order of the phoenix: When few believe that Lord Voldemort has returned, Harry must secretly train his friends for the wizarding war ahead.</lds24>
+                <lds24>Harry Potter and the half-blood prince: As Lord Voldemort tightens his grip on both Muggle and wizarding worlds, Harry and Dumbledore work to find the key to unlock Voldemort's defenses.</lds24>
+                <lds24>Harry Potter and the deathly hallows : part 1: Harry, Ron and Hermione set out to track down and destroy the secret to Voldemort's power--the Horcruxes. On their own and on the run, the three must rely on one another more than ever...but Dark Forces threaten to tear them apart.</lds24>
+                <lds24>Harry Potter and the deathly hallows : part 2: In the epic finale, the battle between the good and evil forces of the wizarding world escalates into an all-out war. The stakes have never been higher and no one is safe. But it is Harry who may be called upon to make the ultimate sacrifice as he draws closer to the climactic showdown with Lord Voldemort. It all ends here.</lds24>
+                <lds26>Warner Home Video</lds26>
+                <lds27>DVD 6904</lds27>
+                <availinstitution>$$IPRN$$Savailable</availinstitution>
+                <availpnx>available</availpnx>
+                <snippetfield>title</snippetfield>
+                <snippetfield>title</snippetfield>
+                <snippet><![CDATA[the phoenix -- <span class="searchword">Harry</span> <span class="searchword">Potter</span> and the half-blood prince -- <span class="searchword">Harry</span> <span class="searchword">Potter</span> and the deathly hallows : part 1 -- <span class="searchword">Harry</span> <span class="searchword">Potter</span> and the deathly hallows : part 2.... <span class="searchword">Harry</span> <span class="searchword">Potter</span> and the sorcerer's stone -- <span class="searchword">Harry</span> <span class="searchword">Potter</span> and the chamber of secrets -- <span class="searchword">Harry</span> <span class="searchword">Potter</span> and the prisoner of Azkaban -- <span class="searchword">Harry</span> <span class="searchword">Potter</span> and the goblet of fire -- <span class="searchword">Harry</span> <span class="searchword">Potter</span> and the order of]]></snippet>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <thumbnail>$$Tamazon_thumb</thumbnail>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <linktouc>$$Tamazon_uc$$Eamazon</linktouc>
+                <linktouc>$$Tworldcat_isbn$$Eworldcat</linktouc>
+                <lln01>$$Tfind_hrc$$Elfind_hrc</lln01>
+              </links>
+              <search>
+                <creatorcontrib>Director of photography, Roger Pratt ; edited by Peter Honess ; music by John Williams.</creatorcontrib>
+                <creatorcontrib>Daniel Radcliffe, Rupert Grint, Emma Watson, Kenneth Branagh, John Cleese, Robbie Coltrane, Warwick Davis, Richard Griffiths, Richard Harris, Jason Isaacs, Alan Rickman, Fiona Shaw, Maggie Smith, Julie Walters, Ralph Fiennes.</creatorcontrib>
+                <creatorcontrib>Chris  Columbus</creatorcontrib>
+                <creatorcontrib>Daniel,  Radcliffe  1989-</creatorcontrib>
+                <creatorcontrib>Rupert,  Grint  1988-</creatorcontrib>
+                <creatorcontrib>Emma,  Watson  1990-</creatorcontrib>
+                <creatorcontrib>Robbie  Coltrane</creatorcontrib>
+                <creatorcontrib>Kenneth  Branagh</creatorcontrib>
+                <creatorcontrib>Warwick  Davis</creatorcontrib>
+                <creatorcontrib>Richard,  Griffiths  1947-</creatorcontrib>
+                <creatorcontrib>John  Cleese</creatorcontrib>
+                <creatorcontrib>Richard,  Harris  1930-2002.</creatorcontrib>
+                <creatorcontrib>Jason,  Isaacs  1963-</creatorcontrib>
+                <creatorcontrib>Maggie,  Smith  1934-</creatorcontrib>
+                <creatorcontrib>Alan  Rickman</creatorcontrib>
+                <creatorcontrib>Fiona,  Shaw  1958-</creatorcontrib>
+                <creatorcontrib>Julie,  Walters  1950-</creatorcontrib>
+                <creatorcontrib>Ralph  Fiennes</creatorcontrib>
+                <creatorcontrib>J. K.  Rowling</creatorcontrib>
+                <creatorcontrib>Columbus, Chris.</creatorcontrib>
+                <creatorcontrib>Radcliffe, Daniel, 1989-</creatorcontrib>
+                <creatorcontrib>Grint, Rupert, 1988-</creatorcontrib>
+                <creatorcontrib>Watson, Emma, 1990-</creatorcontrib>
+                <creatorcontrib>Coltrane, Robbie.</creatorcontrib>
+                <creatorcontrib>Branagh, Kenneth.</creatorcontrib>
+                <creatorcontrib>Davis, Warwick.</creatorcontrib>
+                <creatorcontrib>Griffiths, Richard, 1947-</creatorcontrib>
+                <creatorcontrib>Cleese, John.</creatorcontrib>
+                <creatorcontrib>Harris, Richard, 1930-2002.</creatorcontrib>
+                <creatorcontrib>Isaacs, Jason, 1963-</creatorcontrib>
+                <creatorcontrib>Smith, Maggie, 1934-</creatorcontrib>
+                <creatorcontrib>Rickman, Alan.</creatorcontrib>
+                <creatorcontrib>Shaw, Fiona, 1958-</creatorcontrib>
+                <creatorcontrib>Walters, Julie, 1950-</creatorcontrib>
+                <creatorcontrib>Fiennes, Ralph.</creatorcontrib>
+                <creatorcontrib>Rowling, J. K.</creatorcontrib>
+                <creatorcontrib>Columbus, C</creatorcontrib>
+                <creatorcontrib>Radcliffe, D</creatorcontrib>
+                <creatorcontrib>Grint, R</creatorcontrib>
+                <creatorcontrib>Watson, E</creatorcontrib>
+                <creatorcontrib>Coltrane, R</creatorcontrib>
+                <creatorcontrib>Branagh, K</creatorcontrib>
+                <creatorcontrib>Davis, W</creatorcontrib>
+                <creatorcontrib>Griffiths, R</creatorcontrib>
+                <creatorcontrib>Cleese, J</creatorcontrib>
+                <creatorcontrib>Harris, R</creatorcontrib>
+                <creatorcontrib>Isaacs, J</creatorcontrib>
+                <creatorcontrib>Smith, M</creatorcontrib>
+                <creatorcontrib>Rickman, A</creatorcontrib>
+                <creatorcontrib>Shaw, F</creatorcontrib>
+                <creatorcontrib>Walters, J</creatorcontrib>
+                <creatorcontrib>Fiennes, R</creatorcontrib>
+                <creatorcontrib>Rowling, J</creatorcontrib>
+                <creatorcontrib>Warner Bros. Pictures (1969- )</creatorcontrib>
+                <creatorcontrib>Heyday Films.</creatorcontrib>
+                <creatorcontrib>1492 Pictures.</creatorcontrib>
+                <creatorcontrib>Warner Home Video (Firm)</creatorcontrib>
+                <creatorcontrib>AOL Time Warner. Warner Bros. Pictures (1969- )</creatorcontrib>
+                <creatorcontrib>Warner Brothers Pictures (1969- )</creatorcontrib>
+                <creatorcontrib>Warner Communications Inc. Warner Bros. Pictures (1969- )</creatorcontrib>
+                <creatorcontrib>Warner Bros. Warner Home Video (Firm)</creatorcontrib>
+                <creatorcontrib>Columbus, Christopher, 1958-</creatorcontrib>
+                <creatorcontrib>Luolin, J. K.</creatorcontrib>
+                <creatorcontrib>Whisp, Kennilworthy</creatorcontrib>
+                <creatorcontrib>Ролінґ, Дж. К.</creatorcontrib>
+                <creatorcontrib>Ролинг, Дж. К.</creatorcontrib>
+                <creatorcontrib>Роулинг, Дж. К.</creatorcontrib>
+                <creatorcontrib>רולינג, ג׳י. קי</creatorcontrib>
+                <creatorcontrib>רולינג, ג׳יי. קיי</creatorcontrib>
+                <creatorcontrib>رولينج ، ج.ك</creatorcontrib>
+                <creatorcontrib>رولينج، چ. ك.</creatorcontrib>
+                <creatorcontrib>罗琳, J. K.</creatorcontrib>
+                <creatorcontrib>Rāoliṃ, Je. Ke.</creatorcontrib>
+                <creatorcontrib>Raʼu-liṅ, J. K.</creatorcontrib>
+                <creatorcontrib>Roling, Dz︠h︡. K.</creatorcontrib>
+                <creatorcontrib>Roling, G'e. Ḳe</creatorcontrib>
+                <creatorcontrib>Roliṅga, Je. Ke.</creatorcontrib>
+                <creatorcontrib>Rouling, Dzh. K.</creatorcontrib>
+                <creatorcontrib>Rowling, Jo</creatorcontrib>
+                <creatorcontrib>Rowling, Joanne K.</creatorcontrib>
+                <creatorcontrib>Rowlingová, Joanne K.</creatorcontrib>
+                <creatorcontrib>Scamander, Newt</creatorcontrib>
+                <creatorcontrib>Smith, Margaret Natalie, 1934-</creatorcontrib>
+                <creatorcontrib>Walters, Julia Mary, 1950-</creatorcontrib>
+                <title>&lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> complete 8-film collection</title>
+                <title><![CDATA[<span class="searchword">Harry</span> <span class="searchword">Potter</span> and the sorcerer's stone -- <span class="searchword">Harry</span> <span class="searchword">Potter</span> and the chamber of secrets -- <span class="searchword">Harry</span> <span class="searchword">Potter</span> and the prisoner of Azkaban -- <span class="searchword">Harry</span> <span class="searchword">Potter</span> and the goblet of fire -- <span class="searchword">Harry</span> <span class="searchword">Potter</span> and the order of the phoenix -- <span class="searchword">Harry</span> <span class="searchword">Potter</span> and the half-blood prince -- <span class="searchword">Harry</span> <span class="searchword">Potter</span> and the deathly hallows : part 1 -- <span class="searchword">Harry</span> <span class="searchword">Potter</span> and the deathly hallows : part 2.]]></title>
+                <description>Harry Potter and the sorcerer's stone: The magical adventure begins when Harry Potter is invited to attend Hogwarts School of Witchcraft and Wizardry.</description>
+                <description>Harry Potter and the chamber of secrets: Cars fly, trees attack and a mysterious house-elf warns Harry of great danger as he returns for his second year.</description>
+                <description>Harry Potter and the prisoner of Azkaban: Harry must confront soul-sucking Dementors, outsmart a werewolf and learn the truth about the escaped prisoner of Azkaban - Sirius Black.</description>
+                <description>Harry Potter and the goblet of fire: Harry must overcome a deadly dragon, fierce water demons and an enchanted maze only to find himself in the cruel grasp of He Who Must Not Be Named.</description>
+                <description>Harry Potter and the order of the phoenix: When few believe that Lord Voldemort has returned, Harry must secretly train his friends for the wizarding war ahead.</description>
+                <description>Harry Potter and the half-blood prince: As Lord Voldemort tightens his grip on both Muggle and wizarding worlds, Harry and Dumbledore work to find the key to unlock Voldemort's defenses.</description>
+                <description>Harry Potter and the deathly hallows : part 1: Harry, Ron and Hermione set out to track down and destroy the secret to Voldemort's power--the Horcruxes. On their own and on the run, the three must rely on one another more than ever...but Dark Forces threaten to tear them apart.</description>
+                <description>Harry Potter and the deathly hallows : part 2: In the epic finale, the battle between the good and evil forces of the wizarding world escalates into an all-out war. The stakes have never been higher and no one is safe. But it is Harry who may be called upon to make the ultimate sacrifice as he draws closer to the climactic showdown with Lord Voldemort. It all ends here.</description>
+                <subject>Potter, Harry (Fictitious character) Drama.</subject>
+                <subject>Granger, Hermione (Fictitious character) Drama.</subject>
+                <subject>Weasley, Ron (Fictitious character) Drama.</subject>
+                <subject>Hogwarts School of Witchcraft and Wizardry (Imaginary organization) Drama.</subject>
+                <subject>Magic Drama.</subject>
+                <subject>Good and evil Drama.</subject>
+                <subject>Boarding schools Drama.</subject>
+                <subject>England Drama.</subject>
+                <general>Warner Home Video,</general>
+                <general>MPAA rating: PG (Harry Potter and the Sorcerer's Stone, Harry Potter and the Chamber of Secrets, Harry Potter and the Prisoner of Azkaban, and Harry Potter and the Half-Blood Prince) and PG-13 (Harry Potter and the Goblet of Fire, Harry Potter and the Order of the Phoenix, Harry Potter and the Deathly Hallows: Part 1, and Harry Potter and the Deathly Hallows: Part 2).</general>
+                <general>2000048802</general>
+                <general>2000048803</general>
+                <general>2000048804</general>
+                <general>2000048805</general>
+                <general>2000048806</general>
+                <general>2000020451</general>
+                <general>2000048807</general>
+                <general>2000066307</general>
+                <general>[videorecording]</general>
+                <general>voy-7017708</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER7017708</recordid>
+                <isbn>0780674316</isbn>
+                <isbn>9780780674318</isbn>
+                <rsrctype>video</rsrctype>
+                <creationdate>2011</creationdate>
+                <addtitle>Harry Potter and the sorcerer's stone.</addtitle>
+                <addtitle>Harry Potter and the chamber of secrets.</addtitle>
+                <addtitle>Harry Potter and the prisoner of Azkaban.</addtitle>
+                <addtitle>Harry Potter and the goblet of fire.</addtitle>
+                <addtitle>Harry Potter and the order of the phoenix.</addtitle>
+                <addtitle>Harry Potter and the half-blood prince.</addtitle>
+                <addtitle>Harry Potter and the deathly hallows : Part 1.</addtitle>
+                <addtitle>Harry Potter and the deathly hallows : Part 2.</addtitle>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>HRC</searchscope>
+                <searchscope>OTHERS</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>HRC</scope>
+                <scope>OTHERS</scope>
+                <scope>PRN</scope>
+                <lsr04>0780674316</lsr04>
+                <lsr04>9780780674318</lsr04>
+                <lsr05>DVD 6904</lsr05>
+                <lsr06>7017708</lsr06>
+              </search>
+              <sort>
+                <title>Harry Potter complete 8-film collection</title>
+                <title>Harry Potter and the sorcerer's stone --</title>
+                <title>Harry Potter and the chamber of secrets --</title>
+                <title>Harry Potter and the prisoner of Azkaban --</title>
+                <title>Harry Potter and the goblet of fire --</title>
+                <title>Harry Potter and the order of the phoenix --</title>
+                <title>Harry Potter and the half-blood prince --</title>
+                <title>Harry Potter and the deathly hallows : part 1 --</title>
+                <title>Harry Potter and the deathly hallows : part 2</title>
+                <title>Harry Potter and the sorcerer's stone</title>
+                <title>Harry Potter and the chamber of secrets</title>
+                <title>Harry Potter and the prisoner of Azkaban</title>
+                <title>Harry Potter and the goblet of fire</title>
+                <title>Harry Potter and the order of the phoenix</title>
+                <title>Harry Potter and the half-blood prince</title>
+                <title>Harry Potter and the deathly hallows : Part 1</title>
+                <title>Harry Potter and the deathly hallows : Part 2</title>
+                <creationdate>2011</creationdate>
+                <author>Columbus, Chris.</author>
+              </sort>
+              <facets>
+                <language>eng</language>
+                <creationdate>2011</creationdate>
+                <topic>Potter, Harry (Fictitious character)–Drama</topic>
+                <topic>Granger, Hermione (Fictitious character)–Drama</topic>
+                <topic>Weasley, Ron (Fictitious character)–Drama</topic>
+                <topic>Hogwarts School of Witchcraft and Wizardry (Imaginary organization)–Drama</topic>
+                <topic>Magic–Drama</topic>
+                <topic>Good and evil–Drama</topic>
+                <topic>Boarding schools–Drama</topic>
+                <topic>England–Drama</topic>
+                <toplevel>available</toplevel>
+                <prefilter>video</prefilter>
+                <rsrctype>video</rsrctype>
+                <creatorcontrib>Columbus, Chris</creatorcontrib>
+                <creatorcontrib>Radcliffe, Daniel</creatorcontrib>
+                <creatorcontrib>Grint, Rupert</creatorcontrib>
+                <creatorcontrib>Watson, Emma</creatorcontrib>
+                <creatorcontrib>Coltrane, Robbie</creatorcontrib>
+                <creatorcontrib>Branagh, Kenneth</creatorcontrib>
+                <creatorcontrib>Davis, Warwick</creatorcontrib>
+                <creatorcontrib>Griffiths, Richard</creatorcontrib>
+                <creatorcontrib>Cleese, John</creatorcontrib>
+                <creatorcontrib>Harris, Richard</creatorcontrib>
+                <creatorcontrib>Isaacs, Jason</creatorcontrib>
+                <creatorcontrib>Smith, Maggie</creatorcontrib>
+                <creatorcontrib>Rickman, Alan</creatorcontrib>
+                <creatorcontrib>Shaw, Fiona</creatorcontrib>
+                <creatorcontrib>Walters, Julie</creatorcontrib>
+                <creatorcontrib>Fiennes, Ralph</creatorcontrib>
+                <creatorcontrib>Rowling, J. K</creatorcontrib>
+                <creatorcontrib>Warner Bros. Pictures (1969- )</creatorcontrib>
+                <creatorcontrib>Heyday Films</creatorcontrib>
+                <creatorcontrib>1492 Pictures</creatorcontrib>
+                <creatorcontrib>Warner Home Video (Firm)</creatorcontrib>
+                <frbrgroupid>102096456</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c2>0780674316;9780780674318</c2>
+                <c3>harrypottercomplete8collection</c3>
+                <c4>2011</c4>
+                <f3>0780674316;9780780674318</f3>
+                <f5>harrypottercomplete8collection</f5>
+                <f6>2011</f6>
+                <f7>harry potter complete 8 film collection</f7>
+                <f8>cau</f8>
+                <f9>8videodiscs1180min</f9>
+                <f10>warner home video</f10>
+                <f15>widescreened</f15>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kcolumbus chris$$AA</k1>
+                <k1>$$Kradcliffe daniel 1989$$AA</k1>
+                <k1>$$Kgrint rupert 1988$$AA</k1>
+                <k1>$$Kwatson emma 1990$$AA</k1>
+                <k1>$$Kcoltrane robbie$$AA</k1>
+                <k1>$$Kbranagh kenneth$$AA</k1>
+                <k1>$$Kdavis warwick$$AA</k1>
+                <k1>$$Kgriffiths richard 1947$$AA</k1>
+                <k1>$$Kcleese john$$AA</k1>
+                <k1>$$Kharris richard 1930 2002$$AA</k1>
+                <k1>$$Kisaacs jason 1963$$AA</k1>
+                <k1>$$Ksmith maggie 1934$$AA</k1>
+                <k1>$$Krickman alan$$AA</k1>
+                <k1>$$Kshaw fiona 1958$$AA</k1>
+                <k1>$$Kwalters julie 1950$$AA</k1>
+                <k1>$$Kfiennes ralph$$AA</k1>
+                <k1>$$Krowling j k$$AA</k1>
+                <k1>$$Kwarner bros pictures 1969$$AA</k1>
+                <k1>$$Kheyday films$$AA</k1>
+                <k1>$$K1492 pictures$$AA</k1>
+                <k1>$$Kwarner home video firm$$AA</k1>
+                <k3>$$Kharry potter complete 8 film collection$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Columbus</aulast>
+                <aufirst>Chris</aufirst>
+                <addau>Columbus, Chris</addau>
+                <addau>Radcliffe, Daniel, 1989-</addau>
+                <addau>Grint, Rupert, 1988-</addau>
+                <addau>Watson, Emma, 1990-</addau>
+                <addau>Coltrane, Robbie</addau>
+                <addau>Branagh, Kenneth</addau>
+                <addau>Davis, Warwick</addau>
+                <addau>Griffiths, Richard, 1947-</addau>
+                <addau>Cleese, John</addau>
+                <addau>Harris, Richard, 1930-2002</addau>
+                <addau>Isaacs, Jason, 1963-</addau>
+                <addau>Smith, Maggie, 1934-</addau>
+                <addau>Rickman, Alan</addau>
+                <addau>Shaw, Fiona, 1958-</addau>
+                <addau>Walters, Julie, 1950-</addau>
+                <addau>Fiennes, Ralph</addau>
+                <addau>Rowling, J. K</addau>
+                <addau>Warner Bros. Pictures (1969- )</addau>
+                <addau>Heyday Films</addau>
+                <addau>1492 Pictures</addau>
+                <addau>Warner Home Video (Firm)</addau>
+                <btitle>Harry Potter complete 8-film collection.</btitle>
+                <date>2011</date>
+                <risdate>[2011]</risdate>
+                <isbn>0780674316</isbn>
+                <isbn>9780780674318</isbn>
+                <format>book</format>
+                <genre>unknown</genre>
+                <ristype>VIDEO</ristype>
+                <abstract>Harry Potter and the sorcerer's stone: The magical adventure begins when Harry Potter is invited to attend Hogwarts School of Witchcraft and Wizardry.</abstract>
+                <abstract>Harry Potter and the chamber of secrets: Cars fly, trees attack and a mysterious house-elf warns Harry of great danger as he returns for his second year.</abstract>
+                <abstract>Harry Potter and the prisoner of Azkaban: Harry must confront soul-sucking Dementors, outsmart a werewolf and learn the truth about the escaped prisoner of Azkaban - Sirius Black.</abstract>
+                <abstract>Harry Potter and the goblet of fire: Harry must overcome a deadly dragon, fierce water demons and an enchanted maze only to find himself in the cruel grasp of He Who Must Not Be Named.</abstract>
+                <abstract>Harry Potter and the order of the phoenix: When few believe that Lord Voldemort has returned, Harry must secretly train his friends for the wizarding war ahead.</abstract>
+                <abstract>Harry Potter and the half-blood prince: As Lord Voldemort tightens his grip on both Muggle and wizarding worlds, Harry and Dumbledore work to find the key to unlock Voldemort's defenses.</abstract>
+                <abstract>Harry Potter and the deathly hallows : part 1: Harry, Ron and Hermione set out to track down and destroy the secret to Voldemort's power--the Horcruxes. On their own and on the run, the three must rely on one another more than ever...but Dark Forces threaten to tear them apart.</abstract>
+                <abstract>Harry Potter and the deathly hallows : part 2: In the epic finale, the battle between the good and evil forces of the wizarding world escalates into an all-out war. The stakes have never been higher and no one is safe. But it is Harry who may be called upon to make the ultimate sacrifice as he draws closer to the climactic showdown with Lord Voldemort. It all ends here.</abstract>
+                <cop>Burbank, CA</cop>
+                <pub>Warner Home Video</pub>
+                <oclcid>761928209</oclcid>
+                <lad14>vidl</lad14>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-04-16T23%3A42%3A58IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=unknown&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Harry%20Potter%20complete%208-film%20collection.&amp;rft.aulast=Columbus&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0780674316&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>7017708&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>HRC</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>Video Collection (VIDL)</sear:collection>
+              <sear:callNumber>DVD 6904</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-04-16T23%3A42%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=unknown&rft.atitle=&rft.jtitle=&rft.btitle=Harry%20Potter%20complete%208-film%20collection.&rft.aulast=Columbus&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=0780674316&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>7017708</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=7017708&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://images.amazon.com/images/P/0780674316.01._SSTHUM_.jpg</sear:thumbnail>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:0780674316,OCLC:761928209,LCCN:&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-04-16T23%3A42%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=unknown&rft.atitle=&rft.jtitle=&rft.btitle=Harry%20Potter%20complete%208-film%20collection.&rft.aulast=Columbus&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=0780674316&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>7017708</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktouc>http://www.amazon.com/gp/product/0780674316</sear:linktouc>
+            <sear:linktouc>http://www.worldcat.org/search?q=isbn%3A0780674316</sear:linktouc>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=vidl&amp;id=7017708</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+        <sear:DOC SEARCH_ENGINE_TYPE="Local Search Engine" SEARCH_ENGINE="Local Search Engine" NO="2" RANK="8.2439306E-4" ID="5556053">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>6738942</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER6738942</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>6738942</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>video</type>
+                <title>&lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> and the chamber of secrets a Warner Bros. Pictures presentation ; a Heyday Films/1492 Pictures production ; directed by Chris Columbus ; screenplay by Steve Kloves ; produced by David Heyman.</title>
+                <contributor>Columbus, Chris</contributor>
+                <contributor>Kloves, Steven</contributor>
+                <contributor>Heyman, David, 1961-</contributor>
+                <contributor>Radcliffe, Daniel, 1989-</contributor>
+                <contributor>Grint, Rupert, 1988-</contributor>
+                <contributor>Watson, Emma, 1990-</contributor>
+                <contributor>Harris, Richard, 1930-2002</contributor>
+                <contributor>Branagh, Kenneth</contributor>
+                <contributor>Rickman, Alan</contributor>
+                <contributor>Cleese, John</contributor>
+                <contributor>Coltrane, Robbie</contributor>
+                <contributor>Davis, Warwick</contributor>
+                <contributor>Griffiths, Richard, 1947-</contributor>
+                <contributor>Isaacs, Jason, 1963-</contributor>
+                <contributor>Shaw, Fiona, 1958-</contributor>
+                <contributor>Smith, Maggie, 1934-</contributor>
+                <contributor>Walters, Julie, 1950-</contributor>
+                <contributor>Williams, John, 1932-</contributor>
+                <contributor>Rowling, J. K. Harry Potter and the chamber of secrets</contributor>
+                <contributor>Warner Bros. Pictures (1969- )</contributor>
+                <contributor>Heyday Films</contributor>
+                <contributor>1492 Pictures</contributor>
+                <contributor>Warner Home Video (Firm)</contributor>
+                <edition>Widescreen ed.</edition>
+                <publisher>Burbank, CA : Distributed by Warner Home Video, [2007]</publisher>
+                <creationdate>2007</creationdate>
+                <identifier>$$CISBN$$V1419857010; $$CISBN$$V9781419857010</identifier>
+                <subject>Potter, Harry (Fictitious character) -- Drama; Hogwarts School of Witchcraft and Wizardry (Imaginary organization) -- Drama; Wizards -- Drama; Magic -- Drama; Friendship -- Drama</subject>
+                <language>und;und</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$L$$1$$2DVD 6046$$Savailable$$31$$40$$5N$$60$$Xprincetondb$$Yvidlcirc</availlibrary>
+                <unititle>Harry Potter and the chamber of secrets (Motion picture)</unititle>
+                <lds01>Course number: WRI 164; Course name: Society and the Witch</lds01>
+                <lds03>1 videodisc (161 min.) : sd., col. ; 4 3/4 in.</lds03>
+                <lds06>Based on the novel by J.K. Rowling.</lds06>
+                <lds06>Originally produced as a motion picture in 2002.</lds06>
+                <lds06>On container spine: Year two.</lds06>
+                <lds06>Special features: cast &amp; crew; Year one at Hogwarts; trailer.</lds06>
+                <lds09>Daniel Radcliffe, Rupert Grint, Emma Watson, Kenneth Branagh, John Cleese, Robbie Coltrane, Warwick Davis, Richard Griffiths, Richard Harris, Jason Isaacs, Alan Rickman, Fiona Shaw, Maggie Smith, Julie Walters.</lds09>
+                <lds21>Harry Potter films</lds21>
+                <lds21>Fantasy films</lds21>
+                <lds21>Action and adventure films</lds21>
+                <lds21>Children's films</lds21>
+                <lds21>Film adaptations</lds21>
+                <lds21>Fiction films</lds21>
+                <lds21>Feature films</lds21>
+                <lds21>Video recordings for the hearing impaired</lds21>
+                <lds24>Cars fly, trees fight back and a mysterious elf comes to warn Harry Potter at the start of the second year of his amazing journey into the world of wizardry. This year at Hogwarts, spiders talk, letters scold and Harry's own unsettling ability to speak to snakes turns his friends against him. From dueling clubs to rogue Bludgers, it's a year of adventure and danger when bloody writing on a wall announces: The Chamber of Secrets has been opened. To save Hogwarts will require all of Harry, Ron and Hermione's magical abilities and courage.</lds24>
+                <lds26>Distributed by Warner Home Video</lds26>
+                <lds27>DVD 6046</lds27>
+                <availinstitution>$$IPRN$$Savailable</availinstitution>
+                <availpnx>available</availpnx>
+                <snippet/>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <thumbnail>$$Tamazon_thumb</thumbnail>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <linktouc>$$Tamazon_uc$$Eamazon</linktouc>
+                <linktouc>$$Tworldcat_isbn$$Eworldcat</linktouc>
+              </links>
+              <search>
+                <creatorcontrib>a Warner Bros. Pictures presentation ; a Heyday Films/1492 Pictures production ; directed by Chris Columbus ; screenplay by Steve Kloves ; produced by David Heyman.</creatorcontrib>
+                <creatorcontrib>Director of photography, Roger Pratt ; editor, Peter Honess ; music, John Williams ; music adapted by William Ross ; production designer, Stuart Craig.</creatorcontrib>
+                <creatorcontrib>Daniel Radcliffe, Rupert Grint, Emma Watson, Kenneth Branagh, John Cleese, Robbie Coltrane, Warwick Davis, Richard Griffiths, Richard Harris, Jason Isaacs, Alan Rickman, Fiona Shaw, Maggie Smith, Julie Walters.</creatorcontrib>
+                <creatorcontrib>Chris  Columbus</creatorcontrib>
+                <creatorcontrib>Steven  Kloves</creatorcontrib>
+                <creatorcontrib>David,  Heyman  1961-</creatorcontrib>
+                <creatorcontrib>Daniel,  Radcliffe  1989-</creatorcontrib>
+                <creatorcontrib>Rupert,  Grint  1988-</creatorcontrib>
+                <creatorcontrib>Emma,  Watson  1990-</creatorcontrib>
+                <creatorcontrib>Richard,  Harris  1930-2002.</creatorcontrib>
+                <creatorcontrib>Kenneth  Branagh</creatorcontrib>
+                <creatorcontrib>Alan  Rickman</creatorcontrib>
+                <creatorcontrib>John  Cleese</creatorcontrib>
+                <creatorcontrib>Robbie  Coltrane</creatorcontrib>
+                <creatorcontrib>Warwick  Davis</creatorcontrib>
+                <creatorcontrib>Richard,  Griffiths  1947-</creatorcontrib>
+                <creatorcontrib>Jason,  Isaacs  1963-</creatorcontrib>
+                <creatorcontrib>Fiona,  Shaw  1958-</creatorcontrib>
+                <creatorcontrib>Maggie,  Smith  1934-</creatorcontrib>
+                <creatorcontrib>Julie,  Walters  1950-</creatorcontrib>
+                <creatorcontrib>John,  Williams  1932-</creatorcontrib>
+                <creatorcontrib>J. K.  Rowling</creatorcontrib>
+                <creatorcontrib>Columbus, Chris.</creatorcontrib>
+                <creatorcontrib>Kloves, Steven.</creatorcontrib>
+                <creatorcontrib>Heyman, David, 1961-</creatorcontrib>
+                <creatorcontrib>Radcliffe, Daniel, 1989-</creatorcontrib>
+                <creatorcontrib>Grint, Rupert, 1988-</creatorcontrib>
+                <creatorcontrib>Watson, Emma, 1990-</creatorcontrib>
+                <creatorcontrib>Harris, Richard, 1930-2002.</creatorcontrib>
+                <creatorcontrib>Branagh, Kenneth.</creatorcontrib>
+                <creatorcontrib>Rickman, Alan.</creatorcontrib>
+                <creatorcontrib>Cleese, John.</creatorcontrib>
+                <creatorcontrib>Coltrane, Robbie.</creatorcontrib>
+                <creatorcontrib>Davis, Warwick.</creatorcontrib>
+                <creatorcontrib>Griffiths, Richard, 1947-</creatorcontrib>
+                <creatorcontrib>Isaacs, Jason, 1963-</creatorcontrib>
+                <creatorcontrib>Shaw, Fiona, 1958-</creatorcontrib>
+                <creatorcontrib>Smith, Maggie, 1934-</creatorcontrib>
+                <creatorcontrib>Walters, Julie, 1950-</creatorcontrib>
+                <creatorcontrib>Williams, John, 1932-</creatorcontrib>
+                <creatorcontrib>Rowling, J. K.</creatorcontrib>
+                <creatorcontrib>Columbus, C</creatorcontrib>
+                <creatorcontrib>Kloves, S</creatorcontrib>
+                <creatorcontrib>Heyman, D</creatorcontrib>
+                <creatorcontrib>Radcliffe, D</creatorcontrib>
+                <creatorcontrib>Grint, R</creatorcontrib>
+                <creatorcontrib>Watson, E</creatorcontrib>
+                <creatorcontrib>Harris, R</creatorcontrib>
+                <creatorcontrib>Branagh, K</creatorcontrib>
+                <creatorcontrib>Rickman, A</creatorcontrib>
+                <creatorcontrib>Cleese, J</creatorcontrib>
+                <creatorcontrib>Coltrane, R</creatorcontrib>
+                <creatorcontrib>Davis, W</creatorcontrib>
+                <creatorcontrib>Griffiths, R</creatorcontrib>
+                <creatorcontrib>Isaacs, J</creatorcontrib>
+                <creatorcontrib>Shaw, F</creatorcontrib>
+                <creatorcontrib>Smith, M</creatorcontrib>
+                <creatorcontrib>Walters, J</creatorcontrib>
+                <creatorcontrib>Williams, J</creatorcontrib>
+                <creatorcontrib>Rowling, J</creatorcontrib>
+                <creatorcontrib>Warner Bros. Pictures (1969- )</creatorcontrib>
+                <creatorcontrib>Heyday Films.</creatorcontrib>
+                <creatorcontrib>1492 Pictures.</creatorcontrib>
+                <creatorcontrib>Warner Home Video (Firm)</creatorcontrib>
+                <creatorcontrib>Columbus, Christopher, 1958-</creatorcontrib>
+                <creatorcontrib>Luolin, J. K.</creatorcontrib>
+                <creatorcontrib>Whisp, Kennilworthy</creatorcontrib>
+                <creatorcontrib>Ролінґ, Дж. К.</creatorcontrib>
+                <creatorcontrib>Ролинг, Дж. К.</creatorcontrib>
+                <creatorcontrib>Роулинг, Дж. К.</creatorcontrib>
+                <creatorcontrib>רולינג, ג׳י. קי</creatorcontrib>
+                <creatorcontrib>רולינג, ג׳יי. קיי</creatorcontrib>
+                <creatorcontrib>رولينج ، ج.ك</creatorcontrib>
+                <creatorcontrib>رولينج، چ. ك.</creatorcontrib>
+                <creatorcontrib>罗琳, J. K.</creatorcontrib>
+                <creatorcontrib>Rāoliṃ, Je. Ke.</creatorcontrib>
+                <creatorcontrib>Raʼu-liṅ, J. K.</creatorcontrib>
+                <creatorcontrib>Roling, Dz︠h︡. K.</creatorcontrib>
+                <creatorcontrib>Roling, G'e. Ḳe</creatorcontrib>
+                <creatorcontrib>Roliṅga, Je. Ke.</creatorcontrib>
+                <creatorcontrib>Rouling, Dzh. K.</creatorcontrib>
+                <creatorcontrib>Rowling, Jo</creatorcontrib>
+                <creatorcontrib>Rowling, Joanne K.</creatorcontrib>
+                <creatorcontrib>Rowlingová, Joanne K.</creatorcontrib>
+                <creatorcontrib>Scamander, Newt</creatorcontrib>
+                <creatorcontrib>Smith, Margaret Natalie, 1934-</creatorcontrib>
+                <creatorcontrib>Walters, Julia Mary, 1950-</creatorcontrib>
+                <creatorcontrib>Williams, John T. (John Towner), 1932-</creatorcontrib>
+                <creatorcontrib>Williams, Johnny, 1932-</creatorcontrib>
+                <creatorcontrib>AOL Time Warner. Warner Bros. Pictures (1969- )</creatorcontrib>
+                <creatorcontrib>Warner Brothers Pictures (1969- )</creatorcontrib>
+                <creatorcontrib>Warner Communications Inc. Warner Bros. Pictures (1969- )</creatorcontrib>
+                <creatorcontrib>Warner Bros. Warner Home Video (Firm)</creatorcontrib>
+                <creatorcontrib>Kloves, Steve</creatorcontrib>
+                <title>&lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> and the chamber of secrets</title>
+                <title>&lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> and the chamber of secrets.</title>
+                <description>Cars fly, trees fight back and a mysterious elf comes to warn Harry Potter at the start of the second year of his amazing journey into the world of wizardry. This year at Hogwarts, spiders talk, letters scold and Harry's own unsettling ability to speak to snakes turns his friends against him. From dueling clubs to rogue Bludgers, it's a year of adventure and danger when bloody writing on a wall announces: The Chamber of Secrets has been opened. To save Hogwarts will require all of Harry, Ron and Hermione's magical abilities and courage.</description>
+                <subject>Potter, Harry (Fictitious character) Drama.</subject>
+                <subject>Hogwarts School of Witchcraft and Wizardry (Imaginary organization) Drama.</subject>
+                <subject>Wizards Drama.</subject>
+                <subject>Magic Drama.</subject>
+                <subject>Friendship Drama.</subject>
+                <subject>Harry Potter films.</subject>
+                <subject>Fantasy films.</subject>
+                <subject>Action and adventure films.</subject>
+                <subject>Children's films.</subject>
+                <subject>Film adaptations.</subject>
+                <subject>Fiction films.</subject>
+                <subject>Feature films.</subject>
+                <subject>Video recordings for the hearing impaired.</subject>
+                <subject>Video captioning (Closed captioning)</subject>
+                <subject>Video recordings for the deaf</subject>
+                <subject>Closed caption video recordings</subject>
+                <subject>Deaf, Video recordings for the</subject>
+                <subject>Action-adventure films</subject>
+                <subject>Action cinema</subject>
+                <subject>Action films</subject>
+                <subject>Action movies</subject>
+                <subject>Adventure and action films</subject>
+                <subject>Adventure films</subject>
+                <subject>Adventure movies</subject>
+                <subject>Juvenile films</subject>
+                <subject>Motion pictures for children</subject>
+                <subject>Moving-pictures for children</subject>
+                <subject>Video recordings for children</subject>
+                <subject>Fantastic films</subject>
+                <subject>Feature-length films</subject>
+                <subject>Features (Motion pictures)</subject>
+                <subject>Entertainment films</subject>
+                <subject>Fictional films</subject>
+                <subject>Fictive films</subject>
+                <subject>Dramatic-narrative films</subject>
+                <subject>Filmed books</subject>
+                <subject>Films from books</subject>
+                <subject>Literature Film adaptations</subject>
+                <subject>Motion picture adaptations</subject>
+                <subject>Adaptations, Film</subject>
+                <subject>Books, Filmed</subject>
+                <general>Distributed by Warner Home Video,</general>
+                <general>MPAA rating: PG; scary moments, some creature violence and mild language.</general>
+                <general>[videorecording] /</general>
+                <general>Video-WRI 164 2011-09-13T00:00:00Z 2012-01-13T00:00:00Z Humanities Resource Center: Video Circulation Desk Princeton Writing Program WRI Society and the Witch WRI 164</general>
+                <general>voy-6738942</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER6738942</recordid>
+                <isbn>1419857010</isbn>
+                <isbn>9781419857010</isbn>
+                <rsrctype>video</rsrctype>
+                <creationdate>2007</creationdate>
+                <addtitle>Harry Potter and the chamber of secrets.</addtitle>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>OTHERS</searchscope>
+                <searchscope>COURSE</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>OTHERS</scope>
+                <scope>COURSE</scope>
+                <scope>PRN</scope>
+                <alttitle>Harry Potter and the chamber of secrets (Motion picture)</alttitle>
+                <lsr01>WRI 164</lsr01>
+                <lsr02>Society and the Witch</lsr02>
+                <lsr04>1419857010</lsr04>
+                <lsr04>9781419857010</lsr04>
+                <lsr05>DVD 6046</lsr05>
+                <lsr06>6738942</lsr06>
+              </search>
+              <sort>
+                <title>Harry Potter and the chamber of secrets</title>
+                <creationdate>2007</creationdate>
+                <author>Columbus, Chris.</author>
+              </sort>
+              <facets>
+                <language>eng</language>
+                <language>spa</language>
+                <creationdate>2007</creationdate>
+                <topic>Potter, Harry (Fictitious character)–Drama</topic>
+                <topic>Hogwarts School of Witchcraft and Wizardry (Imaginary organization)–Drama</topic>
+                <topic>Wizards–Drama</topic>
+                <topic>Magic–Drama</topic>
+                <topic>Friendship–Drama</topic>
+                <toplevel>available</toplevel>
+                <prefilter>video</prefilter>
+                <rsrctype>video</rsrctype>
+                <creatorcontrib>Columbus, Chris</creatorcontrib>
+                <creatorcontrib>Kloves, Steven</creatorcontrib>
+                <creatorcontrib>Heyman, David</creatorcontrib>
+                <creatorcontrib>Radcliffe, Daniel</creatorcontrib>
+                <creatorcontrib>Grint, Rupert</creatorcontrib>
+                <creatorcontrib>Watson, Emma</creatorcontrib>
+                <creatorcontrib>Harris, Richard</creatorcontrib>
+                <creatorcontrib>Branagh, Kenneth</creatorcontrib>
+                <creatorcontrib>Rickman, Alan</creatorcontrib>
+                <creatorcontrib>Cleese, John</creatorcontrib>
+                <creatorcontrib>Coltrane, Robbie</creatorcontrib>
+                <creatorcontrib>Davis, Warwick</creatorcontrib>
+                <creatorcontrib>Griffiths, Richard</creatorcontrib>
+                <creatorcontrib>Isaacs, Jason</creatorcontrib>
+                <creatorcontrib>Shaw, Fiona</creatorcontrib>
+                <creatorcontrib>Smith, Maggie</creatorcontrib>
+                <creatorcontrib>Walters, Julie</creatorcontrib>
+                <creatorcontrib>Williams, John</creatorcontrib>
+                <creatorcontrib>Rowling, J. K</creatorcontrib>
+                <creatorcontrib>Warner Bros. Pictures (1969- )</creatorcontrib>
+                <creatorcontrib>Heyday Films</creatorcontrib>
+                <creatorcontrib>1492 Pictures</creatorcontrib>
+                <creatorcontrib>Warner Home Video (Firm)</creatorcontrib>
+                <genre>Harry Potter films</genre>
+                <genre>Fantasy films</genre>
+                <genre>Action and adventure films</genre>
+                <genre>Children's films</genre>
+                <genre>Film adaptations</genre>
+                <genre>Fiction films</genre>
+                <genre>Feature films</genre>
+                <genre>Video recordings for the hearing impaired</genre>
+                <lfc01>WRI 164</lfc01>
+                <lfc02>Society and the Witch</lfc02>
+                <classificationlcc>P - Language and literature.–Literature (General)</classificationlcc>
+                <frbrgroupid>67815441</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c2>1419857010;9781419857010</c2>
+                <c3>harrypotterandthecharofsecrets</c3>
+                <c4>2007</c4>
+                <f3>1419857010;9781419857010</f3>
+                <f5>harrypotterandthecharofsecrets</f5>
+                <f6>2007</f6>
+                <f7>harry potter and the chamber of secrets</f7>
+                <f8>cau</f8>
+                <f9>1videodisc161min</f9>
+                <f10>distributed by warner home video</f10>
+                <f15>widescreened</f15>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kcolumbus chris$$AA</k1>
+                <k1>$$Kkloves steven$$AA</k1>
+                <k1>$$Kheyman david 1961$$AA</k1>
+                <k1>$$Kradcliffe daniel 1989$$AA</k1>
+                <k1>$$Kgrint rupert 1988$$AA</k1>
+                <k1>$$Kwatson emma 1990$$AA</k1>
+                <k1>$$Kharris richard 1930 2002$$AA</k1>
+                <k1>$$Kbranagh kenneth$$AA</k1>
+                <k1>$$Krickman alan$$AA</k1>
+                <k1>$$Kcleese john$$AA</k1>
+                <k1>$$Kcoltrane robbie$$AA</k1>
+                <k1>$$Kdavis warwick$$AA</k1>
+                <k1>$$Kgriffiths richard 1947$$AA</k1>
+                <k1>$$Kisaacs jason 1963$$AA</k1>
+                <k1>$$Kshaw fiona 1958$$AA</k1>
+                <k1>$$Ksmith maggie 1934$$AA</k1>
+                <k1>$$Kwalters julie 1950$$AA</k1>
+                <k1>$$Kwilliams john 1932$$AA</k1>
+                <k1>$$Krowling j k$$AA</k1>
+                <k1>$$Kwarner bros pictures 1969$$AA</k1>
+                <k1>$$Kheyday films$$AA</k1>
+                <k1>$$K1492 pictures$$AA</k1>
+                <k1>$$Kwarner home video firm$$AA</k1>
+                <k2>$$Kharry potter and the chamber of secrets motion picture$$ATO</k2>
+                <k3>$$Kharry potter and the chamber of secrets$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <enrichment>
+                <classificationlcc>PN1995.9.F36</classificationlcc>
+              </enrichment>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Columbus</aulast>
+                <aufirst>Chris</aufirst>
+                <addau>Columbus, Chris</addau>
+                <addau>Kloves, Steven</addau>
+                <addau>Heyman, David, 1961-</addau>
+                <addau>Radcliffe, Daniel, 1989-</addau>
+                <addau>Grint, Rupert, 1988-</addau>
+                <addau>Watson, Emma, 1990-</addau>
+                <addau>Harris, Richard, 1930-2002</addau>
+                <addau>Branagh, Kenneth</addau>
+                <addau>Rickman, Alan</addau>
+                <addau>Cleese, John</addau>
+                <addau>Coltrane, Robbie</addau>
+                <addau>Davis, Warwick</addau>
+                <addau>Griffiths, Richard, 1947-</addau>
+                <addau>Isaacs, Jason, 1963-</addau>
+                <addau>Shaw, Fiona, 1958-</addau>
+                <addau>Smith, Maggie, 1934-</addau>
+                <addau>Walters, Julie, 1950-</addau>
+                <addau>Williams, John, 1932-</addau>
+                <addau>Rowling, J. K</addau>
+                <addau>Warner Bros. Pictures (1969- )</addau>
+                <addau>Heyday Films</addau>
+                <addau>1492 Pictures</addau>
+                <addau>Warner Home Video (Firm)</addau>
+                <btitle>Harry Potter and the chamber of secrets a Warner Bros. Pictures presentation ; a Heyday Films/1492 Pictures production ; directed by Chris Columbus ; screenplay by Steve Kloves ; produced by David Heyman.</btitle>
+                <date>2007</date>
+                <risdate>[2007]</risdate>
+                <isbn>1419857010</isbn>
+                <isbn>9781419857010</isbn>
+                <format>book</format>
+                <genre>unknown</genre>
+                <ristype>VIDEO</ristype>
+                <abstract>Cars fly, trees fight back and a mysterious elf comes to warn Harry Potter at the start of the second year of his amazing journey into the world of wizardry. This year at Hogwarts, spiders talk, letters scold and Harry's own unsettling ability to speak to snakes turns his friends against him. From dueling clubs to rogue Bludgers, it's a year of adventure and danger when bloody writing on a wall announces: The Chamber of Secrets has been opened. To save Hogwarts will require all of Harry, Ron and Hermione's magical abilities and courage.</abstract>
+                <cop>Burbank, CA</cop>
+                <pub>Distributed by Warner Home Video</pub>
+                <oclcid>182847345</oclcid>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-04-16T23%3A42%3A58IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=unknown&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Harry%20Potter%20complete%208-film%20collection.&amp;rft.aulast=Columbus&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0780674316&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>7017708&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library/>
+              <sear:status>available</sear:status>
+              <sear:collection/>
+              <sear:callNumber>DVD 6046</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-04-16T23%3A42%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=unknown&rft.atitle=&rft.jtitle=&rft.btitle=Harry%20Potter%20and%20the%20chamber%20of%20secrets%20a%20Warner%20Bros.%20Pictures%20presentation%20%3B%20a%20Heyday%20Films/1492%20Pictures%20production%20%3B%20directed%20by%20Chris%20Columbus%20%3B%20screenplay%20by%20Steve%20Kloves%20%3B%20produced%20by%20David%20Heyman.&rft.aulast=Columbus&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=1419857010&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>6738942</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=6738942&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://images.amazon.com/images/P/1419857010.01._SSTHUM_.jpg</sear:thumbnail>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:1419857010,OCLC:182847345,LCCN:&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-04-16T23%3A42%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=unknown&rft.atitle=&rft.jtitle=&rft.btitle=Harry%20Potter%20and%20the%20chamber%20of%20secrets%20a%20Warner%20Bros.%20Pictures%20presentation%20%3B%20a%20Heyday%20Films/1492%20Pictures%20production%20%3B%20directed%20by%20Chris%20Columbus%20%3B%20screenplay%20by%20Steve%20Kloves%20%3B%20produced%20by%20David%20Heyman.&rft.aulast=Columbus&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=1419857010&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>6738942</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktouc>http://www.amazon.com/gp/product/1419857010</sear:linktouc>
+            <sear:linktouc>http://www.worldcat.org/search?q=isbn%3A1419857010</sear:linktouc>
+          </sear:LINKS>
+        </sear:DOC>
+        <sear:DOC SEARCH_ENGINE_TYPE="Local Search Engine" SEARCH_ENGINE="Local Search Engine" NO="3" RANK="7.93206E-4" ID="5553371">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>6950997</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER6950997</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>6950997</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>book</type>
+                <title>&lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> : page to screen, the complete filmmaking journey / [Bob McCabe].</title>
+                <creator>McCabe, Bob.</creator>
+                <publisher>New York : Harper Design, 2011.</publisher>
+                <creationdate>2011</creationdate>
+                <identifier>$$CISBN$$V9780062101891; $$CISBN$$V0062101897</identifier>
+                <subject>Rowling, J. K -- Film adaptations; Harry Potter films; Harry Potter films -- Handbooks, manuals, etc; Harry Potter films -- Miscellanea; Harry Potter films -- Pictorial works; Potter, Harry (Fictitious character) -- Handbooks, manuals, etc; Potter, Harry (Fictitious character) -- Miscellanea; Potter, Harry (Fictitious character) -- Pictorial works</subject>
+                <language>eng</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LFIRE$$1Dixon Books (DIXN)$$2PN1995.9.H364 M33 2011q$$Sunavailable$$31$$41$$5N$$61$$Xprincetondb$$Ydixn</availlibrary>
+                <lds03>531 p. : col. ill. ; 33 cm.</lds03>
+                <lds05>Part 1 : The making of Harry Potter. Introduction -- Setting the scene -- Harry Potter and the Sorcerer's Stone -- Harry Potter and the Chamber of Secrets -- Harry Potter and the Prisoner of Azkaban -- Harry Potter and the Goblet of Fire -- Harry Potter and the Order of the Phoenix -- Harry Potter and the Half-Blood Prince -- Harry Potter and the Deathly Hallows -- Part 2 : The art of Harry Potter. Introduction -- Characters : costuming -- Locations : set design -- Creatures : special makeup and digital effects -- Artifacts : prop making -- Part 3 : Epilogue. The golden boards -- Acknowledgements and colophon.</lds05>
+                <lds06>"An Insight Editions book."</lds06>
+                <lds24>Here is a lavish and personal look at the entire film-making process that turned the world's bestselling fiction series into a blockbuster movie franchise. From the acquisition of the film rights to the casting and the assembly of the creative team, the book is a unique, behind-the-scenes look at the making of one of the most popular film series in cinema history.</lds24>
+                <lds26>Harper Design</lds26>
+                <lds27>PN1995.9.H364 M33 2011q</lds27>
+                <availinstitution>$$IPRN$$Sunavailable</availinstitution>
+                <availpnx>unavailable</availpnx>
+                <snippet/>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <thumbnail>$$Tamazon_thumb</thumbnail>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <linktouc>$$Tamazon_uc$$Eamazon</linktouc>
+                <linktouc>$$Tworldcat_isbn$$Eworldcat</linktouc>
+                <lln01>$$Tfind_fire$$Elfind_fire</lln01>
+              </links>
+              <search>
+                <creatorcontrib>Bob  McCabe</creatorcontrib>
+                <creatorcontrib>McCabe, Bob.</creatorcontrib>
+                <creatorcontrib>McCabe, B</creatorcontrib>
+                <creatorcontrib>[Bob McCabe].</creatorcontrib>
+                <title>&lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> : page to screen, the complete filmmaking journey /</title>
+                <description>Here is a lavish and personal look at the entire film-making process that turned the world's bestselling fiction series into a blockbuster movie franchise. From the acquisition of the film rights to the casting and the assembly of the creative team, the book is a unique, behind-the-scenes look at the making of one of the most popular film series in cinema history.</description>
+                <subject>Rowling, J. K. Film adaptations.</subject>
+                <subject>Harry Potter films.</subject>
+                <subject>Harry Potter films Handbooks, manuals, etc.</subject>
+                <subject>Harry Potter films Miscellanea.</subject>
+                <subject>Harry Potter films Pictorial works.</subject>
+                <subject>Potter, Harry (Fictitious character) Handbooks, manuals, etc.</subject>
+                <subject>Potter, Harry (Fictitious character) Miscellanea.</subject>
+                <subject>Potter, Harry (Fictitious character) Pictorial works.</subject>
+                <general>Harper Design,</general>
+                <general>voy-6950997</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER6950997</recordid>
+                <isbn>9780062101891</isbn>
+                <isbn>0062101897</isbn>
+                <toc>Part 1 : The making of Harry Potter. Introduction -- Setting the scene -- Harry Potter and the Sorcerer's Stone -- Harry Potter and the Chamber of Secrets -- Harry Potter and the Prisoner of Azkaban -- Harry Potter and the Goblet of Fire -- Harry Potter and the Order of the Phoenix -- Harry Potter and the Half-Blood Prince -- Harry Potter and the Deathly Hallows -- Part 2 : The art of Harry Potter. Introduction -- Characters : costuming -- Locations : set design -- Creatures : special makeup and digital effects -- Artifacts : prop making -- Part 3 : Epilogue. The golden boards -- Acknowledgements and colophon.</toc>
+                <rsrctype>book</rsrctype>
+                <creationdate>2011</creationdate>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>FIRE</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>FIRE</scope>
+                <scope>PRN</scope>
+                <lsr04>9780062101891</lsr04>
+                <lsr04>0062101897</lsr04>
+                <lsr05>PN1995.9.H364 M33 2011q</lsr05>
+                <lsr06>6950997</lsr06>
+              </search>
+              <sort>
+                <title>Harry Potter : page to screen, the complete filmmaking journey</title>
+                <creationdate>2011</creationdate>
+                <author>McCabe, Bob.</author>
+              </sort>
+              <facets>
+                <language>eng</language>
+                <creationdate>2011</creationdate>
+                <topic>Rowling, J. K–Film adaptations</topic>
+                <topic>Harry Potter films</topic>
+                <topic>Harry Potter films–Handbooks, manuals, etc</topic>
+                <topic>Harry Potter films–Miscellanea</topic>
+                <topic>Harry Potter films–Pictorial works</topic>
+                <topic>Potter, Harry (Fictitious character)–Handbooks, manuals, etc</topic>
+                <topic>Potter, Harry (Fictitious character)–Miscellanea</topic>
+                <topic>Potter, Harry (Fictitious character)–Pictorial works</topic>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>McCabe, Bob</creatorcontrib>
+                <classificationlcc>P - Language and literature.–Literature (General)</classificationlcc>
+                <frbrgroupid>95448575</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c2>9780062101891;0062101897</c2>
+                <c3>harrypotterpagetoscringjourney</c3>
+                <c4>2011</c4>
+                <f3>9780062101891;0062101897</f3>
+                <f5>harrypotterpagetoscringjourney</f5>
+                <f6>2011</f6>
+                <f7>harry potter page to screen the complete filmmaking journey</f7>
+                <f8>nyu</f8>
+                <f9>531p</f9>
+                <f10>harper design</f10>
+                <f11>mccabe bob</f11>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kmccabe bob$$AA</k1>
+                <k3>$$Kharry potter page to screen the complete filmmaking journey$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <enrichment>
+                <classificationlcc>PN1995.9.H364</classificationlcc>
+              </enrichment>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>McCabe</aulast>
+                <aufirst>Bob</aufirst>
+                <au>McCabe, Bob</au>
+                <btitle>Harry Potter : page to screen, the complete filmmaking journey / [Bob McCabe].</btitle>
+                <date>2011</date>
+                <risdate>2011.</risdate>
+                <isbn>9780062101891</isbn>
+                <isbn>0062101897</isbn>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <abstract>Here is a lavish and personal look at the entire film-making process that turned the world's bestselling fiction series into a blockbuster movie franchise. From the acquisition of the film rights to the casting and the assembly of the creative team, the book is a unique, behind-the-scenes look at the making of one of the most popular film series in cinema history.</abstract>
+                <cop>New York</cop>
+                <pub>Harper Design</pub>
+                <oclcid>707965683</oclcid>
+                <lad01>dixn</lad01>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-04-16T23%3A42%3A58IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=unknown&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Harry%20Potter%20complete%208-film%20collection.&amp;rft.aulast=Columbus&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0780674316&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>7017708&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>FIRE</sear:library>
+              <sear:status>unavailable</sear:status>
+              <sear:collection>Dixon Books (DIXN)</sear:collection>
+              <sear:callNumber>PN1995.9.H364 M33 2011q</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-04-16T23%3A42%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Harry%20Potter%20:%20page%20to%20screen%2C%20the%20complete%20filmmaking%20journey%20/%20[Bob%20McCabe].&rft.aulast=McCabe&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=McCabe%2C%20Bob&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=9780062101891&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>6950997</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=6950997&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://images.amazon.com/images/P/9780062101891.01._SSTHUM_.jpg</sear:thumbnail>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:9780062101891,OCLC:707965683,LCCN:&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-04-16T23%3A42%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Harry%20Potter%20:%20page%20to%20screen%2C%20the%20complete%20filmmaking%20journey%20/%20[Bob%20McCabe].&rft.aulast=McCabe&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=McCabe%2C%20Bob&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=9780062101891&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>6950997</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktouc>http://www.amazon.com/gp/product/9780062101891</sear:linktouc>
+            <sear:linktouc>http://www.worldcat.org/search?q=isbn%3A9780062101891</sear:linktouc>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=dixn&amp;id=6950997</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+        <sear:DOC SEARCH_ENGINE_TYPE="Local Search Engine" SEARCH_ENGINE="Local Search Engine" NO="4" RANK="7.137041E-4" ID="5555375">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>5062756</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER5062756</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>5062756</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>book</type>
+                <title>&lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> y la cámara secreta / J.K. Rowling ; [traducción, Adolfo Muñoz García y Nieves Martín Azofra].</title>
+                <creator>Rowling, J. K.</creator>
+                <contributor>Muñoz García, Adolfo</contributor>
+                <contributor>Martín Azofra, Nieves</contributor>
+                <edition>40. ed.</edition>
+                <publisher>Barcelona : Salamandra, 2006.</publisher>
+                <creationdate>2006</creationdate>
+                <identifier>$$CISBN$$V8478884955; $$CISBN$$V9788478884957</identifier>
+                <subject>Potter, Harry (Fictitious character) -- Juvenile fiction; Wizards -- Juvenile fiction; Magic -- Juvenile fiction; Hogwarts School of Witchcraft and Wizardry (Imaginary organization) -- Juvenile fiction</subject>
+                <language>spa</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LRECAP$$1(RCPPA)$$2PR6068.O93 H36818 2006$$Savailable$$31$$40$$5N$$65$$Xprincetondb$$Yrcppa</availlibrary>
+                <unititle>[Harry Potter and the Chamber of Secrets. Spanish]</unititle>
+                <lds03>286 p. ; 23 cm.</lds03>
+                <lds15>Rowling, J. K. Serie Harry Potter ; 2.</lds15>
+                <lds15>Serie Harry Potter ; 2</lds15>
+                <lds24>When the Chamber of Secrets is opened again at the Hogswart School for Witchcraft and Wizardry, second-year student Harry Potter finds himself in danger from a dark power that has once more been released on the school.</lds24>
+                <lds26>Salamandra</lds26>
+                <lds27>PR6068.O93 H36818 2006</lds27>
+                <availinstitution>$$IPRN$$Savailable</availinstitution>
+                <availpnx>available</availpnx>
+                <snippet/>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <thumbnail>$$Tamazon_thumb</thumbnail>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <linktouc>$$Tamazon_uc$$Eamazon</linktouc>
+                <linktouc>$$Tworldcat_isbn$$Eworldcat</linktouc>
+                <lln01>$$Tfind_recap$$Elfind_recap</lln01>
+              </links>
+              <search>
+                <creatorcontrib>J. K.  Rowling</creatorcontrib>
+                <creatorcontrib>Rowling, J. K.</creatorcontrib>
+                <creatorcontrib>Rowling, J</creatorcontrib>
+                <creatorcontrib>J.K. Rowling ; [traducción, Adolfo Muñoz García y Nieves Martín Azofra].</creatorcontrib>
+                <creatorcontrib>Adolfo  Muñoz García</creatorcontrib>
+                <creatorcontrib>Nieves  Martín Azofra</creatorcontrib>
+                <creatorcontrib>Muñoz García</creatorcontrib>
+                <creatorcontrib>Martín Azofra</creatorcontrib>
+                <creatorcontrib>Whisp, Kennilworthy</creatorcontrib>
+                <creatorcontrib>Roliṅga, Je. Ke.</creatorcontrib>
+                <creatorcontrib>רולינג, ג׳י. קי</creatorcontrib>
+                <creatorcontrib>רולינג, ג׳יי. קיי</creatorcontrib>
+                <creatorcontrib>رولينج ، ج.ك</creatorcontrib>
+                <creatorcontrib>رولينج، چ. ك.</creatorcontrib>
+                <creatorcontrib>Raʼu-liṅ, J. K.</creatorcontrib>
+                <creatorcontrib>Roling, Dz︠h︡. K.</creatorcontrib>
+                <creatorcontrib>Roling, G'e. Ḳe</creatorcontrib>
+                <creatorcontrib>Rowling, Jo</creatorcontrib>
+                <creatorcontrib>Rowlingová, Joanne K.</creatorcontrib>
+                <creatorcontrib>Scamander, Newt</creatorcontrib>
+                <creatorcontrib>Ролінґ, Дж. К.</creatorcontrib>
+                <creatorcontrib>Luolin, J. K.</creatorcontrib>
+                <creatorcontrib>罗琳, J. K.</creatorcontrib>
+                <creatorcontrib>Rāoliṃ, Je. Ke.</creatorcontrib>
+                <creatorcontrib>Rowling, Joanne K.</creatorcontrib>
+                <creatorcontrib>Роулинг, Дж. К.</creatorcontrib>
+                <creatorcontrib>Rouling, Dzh. K.</creatorcontrib>
+                <creatorcontrib>Ролинг, Дж. К.</creatorcontrib>
+                <creatorcontrib>Azofra, Nieves Martín</creatorcontrib>
+                <creatorcontrib>García, Adolfo Muñoz</creatorcontrib>
+                <title>&lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> y la cámara secreta /</title>
+                <description>When the Chamber of Secrets is opened again at the Hogswart School for Witchcraft and Wizardry, second-year student Harry Potter finds himself in danger from a dark power that has once more been released on the school.</description>
+                <subject>Potter, Harry (Fictitious character) Juvenile fiction.</subject>
+                <subject>Wizards Juvenile fiction.</subject>
+                <subject>Magic Juvenile fiction.</subject>
+                <subject>Hogwarts School of Witchcraft and Wizardry (Imaginary organization) Juvenile fiction.</subject>
+                <general>Salamandra,</general>
+                <general>voy-5062756</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER5062756</recordid>
+                <isbn>8478884955</isbn>
+                <isbn>9788478884957</isbn>
+                <rsrctype>book</rsrctype>
+                <creationdate>2006</creationdate>
+                <addtitle>Serie Harry Potter ; 2.</addtitle>
+                <addtitle>Serie Harry Potter ; 2</addtitle>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>RECAP</searchscope>
+                <searchscope>OTHERS</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>RECAP</scope>
+                <scope>OTHERS</scope>
+                <scope>PRN</scope>
+                <alttitle>Harry Potter and the Chamber of Secrets. Spanish</alttitle>
+                <lsr04>8478884955</lsr04>
+                <lsr04>9788478884957</lsr04>
+                <lsr05>PR6068.O93 H36818 2006</lsr05>
+                <lsr06>5062756</lsr06>
+              </search>
+              <sort>
+                <title>Harry Potter y la cámara secreta</title>
+                <title>Serie Harry Potter</title>
+                <creationdate>2006</creationdate>
+                <author>Rowling, J. K.</author>
+              </sort>
+              <facets>
+                <language>spa</language>
+                <creationdate>2006</creationdate>
+                <topic>Potter, Harry (Fictitious character)–Juvenile fiction</topic>
+                <topic>Wizards–Juvenile fiction</topic>
+                <topic>Magic–Juvenile fiction</topic>
+                <topic>Hogwarts School of Witchcraft and Wizardry (Imaginary organization)–Juvenile fiction</topic>
+                <toplevel>available</toplevel>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>Rowling, J. K</creatorcontrib>
+                <creatorcontrib>Muñoz García, Adolfo</creatorcontrib>
+                <creatorcontrib>Martín Azofra, Nieves</creatorcontrib>
+                <classificationlcc>P - Language and literature.–English literature</classificationlcc>
+                <frbrgroupid>38891404</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c2>8478884955;9788478884957</c2>
+                <c3>harrypotterylacamarasecreta</c3>
+                <c4>2006</c4>
+                <f3>8478884955;9788478884957</f3>
+                <f5>harrypotterylacamarasecreta</f5>
+                <f6>2006</f6>
+                <f7>harry potter y la camara secreta</f7>
+                <f8>sp</f8>
+                <f9>286p</f9>
+                <f10>salamandra</f10>
+                <f11>rowling j k</f11>
+                <f15>40ed</f15>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Krowling j k$$AA</k1>
+                <k3>$$Kharry potter and the chamber of secrets$$AT</k3>
+                <k3>$$Kharry potter y la camara secreta$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <enrichment>
+                <classificationlcc>PR6068.O93</classificationlcc>
+              </enrichment>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Rowling</aulast>
+                <aufirst>J. K.</aufirst>
+                <au>Rowling, J. K</au>
+                <addau>Muñoz García, Adolfo</addau>
+                <addau>Martín Azofra, Nieves</addau>
+                <seriesau>Rowling, J. K</seriesau>
+                <btitle>Harry Potter y la cámara secreta / J.K. Rowling ; [traducción, Adolfo Muñoz García y Nieves Martín Azofra].</btitle>
+                <seriestitle>Rowling, J. K. Serie Harry Potter ; 2</seriestitle>
+                <date>2006</date>
+                <risdate>2006.</risdate>
+                <isbn>8478884955</isbn>
+                <isbn>9788478884957</isbn>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <abstract>When the Chamber of Secrets is opened again at the Hogswart School for Witchcraft and Wizardry, second-year student Harry Potter finds himself in danger from a dark power that has once more been released on the school.</abstract>
+                <cop>Barcelona</cop>
+                <pub>Salamandra</pub>
+                <lad05>rcppa</lad05>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-04-16T23%3A42%3A58IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=unknown&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Harry%20Potter%20complete%208-film%20collection.&amp;rft.aulast=Columbus&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0780674316&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>7017708&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>RECAP</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>(RCPPA)</sear:collection>
+              <sear:callNumber>PR6068.O93 H36818 2006</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-04-16T23%3A42%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Harry%20Potter%20y%20la%20cámara%20secreta%20/%20J.K.%20Rowling%20%3B%20[traducción%2C%20Adolfo%20Muñoz%20García%20y%20Nieves%20Martín%20Azofra].&rft.aulast=Rowling&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Rowling%2C%20J.%20K&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=8478884955&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>5062756</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=5062756&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://images.amazon.com/images/P/8478884955.01._SSTHUM_.jpg</sear:thumbnail>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:8478884955,OCLC:,LCCN:&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-04-16T23%3A42%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Harry%20Potter%20y%20la%20cámara%20secreta%20/%20J.K.%20Rowling%20%3B%20[traducción%2C%20Adolfo%20Muñoz%20García%20y%20Nieves%20Martín%20Azofra].&rft.aulast=Rowling&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Rowling%2C%20J.%20K&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=8478884955&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>5062756</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktouc>http://www.amazon.com/gp/product/8478884955</sear:linktouc>
+            <sear:linktouc>http://www.worldcat.org/search?q=isbn%3A8478884955</sear:linktouc>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=rcppa&amp;id=5062756</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+        <sear:DOC SEARCH_ENGINE_TYPE="Local Search Engine" SEARCH_ENGINE="Local Search Engine" NO="5" RANK="7.061361E-4" ID="5229054">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>6591089</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER6591089</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>6591089</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>book</type>
+                <title>Heroism in the &lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> series / edited by Katrin Berndt and Lena Steveker.</title>
+                <contributor>Berndt, Katrin</contributor>
+                <contributor>Steveker, Lena, 1976-</contributor>
+                <publisher>Farnham ; Burlington, VT : Ashgate, c2011.</publisher>
+                <creationdate>c2011</creationdate>
+                <identifier>$$CISBN$$V9781409412441 (alk. paper); $$CISBN$$V140941244X (alk. paper); $$CISBN$$V9781409412458 (ebook); $$CISBN$$V1409412458 (ebook)</identifier>
+                <subject>Rowling, J. K -- Criticism and interpretation; Heroes in literature; Courage in literature; Masculinity in literature; Potter, Harry (Fictitious character)</subject>
+                <language>eng</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LFIRE$$1(F)$$2PR6068.O93 Z538 2011$$Sunavailable$$31$$41$$5N$$60$$Xprincetondb$$Yf</availlibrary>
+                <lds03>xi, 233 p. ; 25 cm.</lds03>
+                <lds05>Introduction / Katrin Berndt and Lena Steveker -- pt. 1. Heroism in generic perspective. A paradox: the Harry Potter series as both epic and postmodern / Mary Pharr -- Harry Potter and the battle for the soul: the revival of the psychomachia in secular fiction / Rita Singer -- The diffusion of gothic conventions in Harry Potter and the Order of the Phoenix (2003/2007) / Susanne Gruss -- Harry and his peers: Rowling's web of allusions / Lisa Hopkins -- pt. 2. The formation of the hero. 'Your soul is whole, and completely your own, Harry': the heroic self in J.K. Rowling's Harry Potter series / Lena Steveker -- Harry Potter's archetypal journey / Julia Boll -- Harry Potter: the development of a screen hero / Jennifer Schütz -- Harry Potter and the Prisoner of Azkaban (2004), or, how Harry Potter becomes a hero / Nadine Böhm -- pt. 3. Heroic originals, friends and foes. Harry Potter and the idea of the gentlemen as hero / Christine Berberich -- Hermione Granger, or a vindication of the rights of girl / Katrin Berndt -- The influence of gender on Harry Potter's heroic (trans)formation / Karley Adney -- Adult heroism and role models in the Harry Potter novels / Maria Nikolajeva -- Heroism at the margins / Kathleen McEvoy.</lds05>
+                <lds15>Ashgate studies in childhood, 1700 to the present.</lds15>
+                <lds15>Ashgate studies in childhood, 1700 to the present</lds15>
+                <lds26>Ashgate</lds26>
+                <lds27>PR6068.O93 Z538 2011</lds27>
+                <availinstitution>$$IPRN$$Sunavailable</availinstitution>
+                <availpnx>unavailable</availpnx>
+                <snippet/>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <thumbnail>$$Tamazon_thumb</thumbnail>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <linktouc>$$Tamazon_uc$$Eamazon</linktouc>
+                <linktouc>$$Tworldcat_isbn$$Eworldcat</linktouc>
+                <lln01>$$Tfind_fire$$Elfind_fire</lln01>
+              </links>
+              <search>
+                <creatorcontrib>edited by Katrin Berndt and Lena Steveker.</creatorcontrib>
+                <creatorcontrib>Katrin  Berndt</creatorcontrib>
+                <creatorcontrib>Lena,  Steveker  1976-</creatorcontrib>
+                <creatorcontrib>Berndt, Katrin.</creatorcontrib>
+                <creatorcontrib>Steveker, Lena, 1976-</creatorcontrib>
+                <creatorcontrib>Berndt, K</creatorcontrib>
+                <creatorcontrib>Steveker, L</creatorcontrib>
+                <title>Heroism in the &lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> series /</title>
+                <subject>Rowling, J. K. Criticism and interpretation.</subject>
+                <subject>Heroes in literature.</subject>
+                <subject>Courage in literature.</subject>
+                <subject>Masculinity in literature.</subject>
+                <subject>Potter, Harry (Fictitious character)</subject>
+                <subject>Masculinity (Psychology) in literature</subject>
+                <subject>Harry Potter (Fictitious character)</subject>
+                <general>Ashgate,</general>
+                <general>voy-6591089</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER6591089</recordid>
+                <isbn>9781409412441</isbn>
+                <isbn>140941244X</isbn>
+                <isbn>9781409412458</isbn>
+                <isbn>1409412458</isbn>
+                <toc>Introduction / Katrin Berndt and Lena Steveker -- pt. 1. Heroism in generic perspective. A paradox: the Harry Potter series as both epic and postmodern / Mary Pharr -- Harry Potter and the battle for the soul: the revival of the psychomachia in secular fiction / Rita Singer -- The diffusion of gothic conventions in Harry Potter and the Order of the Phoenix (2003/2007) / Susanne Gruss -- Harry and his peers: Rowling's web of allusions / Lisa Hopkins -- pt. 2. The formation of the hero. 'Your soul is whole, and completely your own, Harry': the heroic self in J.K. Rowling's Harry Potter series / Lena Steveker -- Harry Potter's archetypal journey / Julia Boll -- Harry Potter: the development of a screen hero / Jennifer Schütz -- Harry Potter and the Prisoner of Azkaban (2004), or, how Harry Potter becomes a hero / Nadine Böhm -- pt. 3. Heroic originals, friends and foes. Harry Potter and the idea of the gentlemen as hero / Christine Berberich -- Hermione Granger, or a vindication of the rights of girl / Katrin Berndt -- The influence of gender on Harry Potter's heroic (trans)formation / Karley Adney -- Adult heroism and role models in the Harry Potter novels / Maria Nikolajeva -- Heroism at the margins / Kathleen McEvoy.</toc>
+                <rsrctype>book</rsrctype>
+                <creationdate>2011</creationdate>
+                <addtitle>Ashgate studies in childhood, 1700 to the present</addtitle>
+                <addtitle>Ashgate studies in childhood, 1700 to the present.</addtitle>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>FIRE</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>FIRE</scope>
+                <scope>PRN</scope>
+                <lsr04>9781409412441</lsr04>
+                <lsr04>140941244X</lsr04>
+                <lsr04>9781409412458</lsr04>
+                <lsr04>1409412458</lsr04>
+                <lsr05>PR6068.O93 Z538 2011</lsr05>
+                <lsr06>6591089</lsr06>
+              </search>
+              <sort>
+                <title>Heroism in the Harry Potter series</title>
+                <creationdate>2011</creationdate>
+                <author>Berndt, Katrin.</author>
+              </sort>
+              <facets>
+                <language>eng</language>
+                <creationdate>2011</creationdate>
+                <topic>Rowling, J. K–Criticism and interpretation</topic>
+                <topic>Heroes in literature</topic>
+                <topic>Courage in literature</topic>
+                <topic>Masculinity in literature</topic>
+                <topic>Potter, Harry (Fictitious character)</topic>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>Berndt, Katrin</creatorcontrib>
+                <creatorcontrib>Steveker, Lena</creatorcontrib>
+                <classificationlcc>P - Language and literature.–English literature</classificationlcc>
+                <frbrgroupid>59000853</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c1>2010044259</c1>
+                <c2>9781409412441;140941244X;9781409412458;1409412458</c2>
+                <c3>heroismintheharrypotterseries</c3>
+                <c4>2011</c4>
+                <f1>2010044259</f1>
+                <f3>9781409412441;140941244X;9781409412458;1409412458</f3>
+                <f5>heroismintheharrypotterseries</f5>
+                <f6>2011</f6>
+                <f7>heroism in the harry potter series</f7>
+                <f8>enk</f8>
+                <f9>xi233p</f9>
+                <f10>ashgate</f10>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kberndt katrin$$AA</k1>
+                <k1>$$Ksteveker lena 1976$$AA</k1>
+                <k3>$$Kheroism in the harry potter series$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <enrichment>
+                <classificationlcc>PR6068.O93</classificationlcc>
+              </enrichment>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Berndt</aulast>
+                <aufirst>Katrin</aufirst>
+                <addau>Berndt, Katrin</addau>
+                <addau>Steveker, Lena, 1976-</addau>
+                <btitle>Heroism in the Harry Potter series / edited by Katrin Berndt and Lena Steveker.</btitle>
+                <seriestitle>Ashgate studies in childhood, 1700 to the present</seriestitle>
+                <date>2011</date>
+                <risdate>c2011.</risdate>
+                <isbn>9781409412441</isbn>
+                <isbn>140941244X</isbn>
+                <isbn>9781409412458</isbn>
+                <isbn>1409412458</isbn>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <notes>Includes bibliographical references and index.</notes>
+                <cop>Farnham ; Burlington, VT</cop>
+                <pub>Ashgate</pub>
+                <oclcid>671916745</oclcid>
+                <lccn>2010044259</lccn>
+                <lad01>f</lad01>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-04-16T23%3A42%3A58IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=unknown&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Harry%20Potter%20complete%208-film%20collection.&amp;rft.aulast=Columbus&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0780674316&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>7017708&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>FIRE</sear:library>
+              <sear:status>unavailable</sear:status>
+              <sear:collection>(F)</sear:collection>
+              <sear:callNumber>PR6068.O93 Z538 2011</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-04-16T23%3A42%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Heroism%20in%20the%20Harry%20Potter%20series%20/%20edited%20by%20Katrin%20Berndt%20and%20Lena%20Steveker.&rft.aulast=Berndt&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=9781409412441&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>6591089</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=6591089&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://images.amazon.com/images/P/9781409412441.01._SSTHUM_.jpg</sear:thumbnail>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:9781409412441,OCLC:671916745,LCCN:2010044259&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-04-16T23%3A42%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Heroism%20in%20the%20Harry%20Potter%20series%20/%20edited%20by%20Katrin%20Berndt%20and%20Lena%20Steveker.&rft.aulast=Berndt&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=9781409412441&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>6591089</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktouc>http://www.amazon.com/gp/product/9781409412441</sear:linktouc>
+            <sear:linktouc>http://www.worldcat.org/search?q=isbn%3A9781409412441</sear:linktouc>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=f&amp;id=6591089</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+        <sear:DOC SEARCH_ENGINE_TYPE="Local Search Engine" SEARCH_ENGINE="Local Search Engine" NO="6" RANK="6.5433036E-4" ID="5555974">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>6795694</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER6795694</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>6795694</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>book</type>
+                <title>&lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> and history / edited by Nancy Reagin.</title>
+                <contributor>Reagin, Nancy Ruth, 1960-</contributor>
+                <publisher>Hoboken, N.J. : Wiley, c2011.</publisher>
+                <creationdate>c2011</creationdate>
+                <identifier>$$CISBN$$V9780470574720 (pbk. : alk. paper); $$CISBN$$V0470574720 (pbk. : alk. paper); $$CISBN$$V9781118003244 (ebk.); $$CISBN$$V1118003241 (ebk.); $$CISBN$$V9781118003251 (ebk.); $$CISBN$$V111800325X (ebk.); $$CISBN$$V9781118003268 (ebk.); $$CISBN$$V1118003268 (ebk.)</identifier>
+                <subject>Rowling, J. K -- Characters; Literature and history; Potter, Harry (Fictitious character); Children's stories, English -- History and criticism; Fantasy fiction, English -- History and criticism</subject>
+                <language>eng</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LFIRE$$1(F)$$2PR6068.O93 Z687 2011$$Savailable$$31$$40$$5N$$61$$Xprincetondb$$Yf</availlibrary>
+                <lds03>xvi, 336p. : ill. ; 23 cm.</lds03>
+                <lds24>"A guide to the history behind the world of Harry Potter?just in time for the last Harry Potter movie, Harry Potter and the Deathly Hallows (Part II). Harry Potter lives in a world that is both magical and historical. Hogwarts pupils ride an old-fashioned steam train to school, notes are taken on parchment with quill pens, and Muggle legends come to life in the form of werewolves, witches, and magical spells. This book is the first to explore the real history in which Harry's world is rooted.. Did you know that bezoars and mandrakes were fashionable luxury items for centuries? Find out how Europeans first developed the potions, spells, and charms taught at Hogwarts, from Avada Kedavra to love charms. Learn how the European prosecution of witches led to the Statute of Secrecy, meet the real Nicholas Flamel, see how the Malfoys stack up against Muggle English aristocrats, and compare the history of the wizarding world to real-life history.. Gives you the historical backdrop to Harry Potter's world. Covers topics ranging from how real British boarding schools compare to Hogwarts to how parchment, quills, and scrolls used in the wizarding world were made. Includes a timeline comparing the history of the wizarding world to Muggle "real" history. Filled with fascinating facts and background, Harry Potter and History is an essential companion for every Harry Potter fan."--</lds24>
+                <lds24>"Fans will learn about topics like the European prosecution of witches, who the real Nicholas Flamel was, and the historical origins of the spells and charms Hogwarts students learn, from Avada Kedavra to the bezoar. The book features a timeline comparing the history of the wizarding world to real-life history"--</lds24>
+                <lds26>Wiley</lds26>
+                <lds27>PR6068.O93 Z687 2011</lds27>
+                <availinstitution>$$IPRN$$Savailable</availinstitution>
+                <availpnx>available</availpnx>
+                <snippet/>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <thumbnail>$$Tamazon_thumb</thumbnail>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <addlink>$$Uhttp://catalogimages.wiley.com/images/db/jimages/9780470574720.jpg$$DCover image</addlink>
+                <linktouc>$$Tamazon_uc$$Eamazon</linktouc>
+                <linktouc>$$Tworldcat_isbn$$Eworldcat</linktouc>
+                <lln01>$$Tfind_fire$$Elfind_fire</lln01>
+              </links>
+              <search>
+                <creatorcontrib>edited by Nancy Reagin.</creatorcontrib>
+                <creatorcontrib>Nancy Ruth,  Reagin  1960-</creatorcontrib>
+                <creatorcontrib>Reagin, Nancy Ruth, 1960-</creatorcontrib>
+                <creatorcontrib>Reagin, N</creatorcontrib>
+                <title>&lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> and history /</title>
+                <description>"A guide to the history behind the world of Harry Potter?just in time for the last Harry Potter movie, Harry Potter and the Deathly Hallows (Part II). Harry Potter lives in a world that is both magical and historical. Hogwarts pupils ride an old-fashioned steam train to school, notes are taken on parchment with quill pens, and Muggle legends come to life in the form of werewolves, witches, and magical spells. This book is the first to explore the real history in which Harry's world is rooted.. Did you know that bezoars and mandrakes were fashionable luxury items for centuries? Find out how Europeans first developed the potions, spells, and charms taught at Hogwarts, from Avada Kedavra to love charms. Learn how the European prosecution of witches led to the Statute of Secrecy, meet the real Nicholas Flamel, see how the Malfoys stack up against Muggle English aristocrats, and compare the history of the wizarding world to real-life history.. Gives you the historical backdrop to Harry Potter's world. Covers topics ranging from how real British boarding schools compare to Hogwarts to how parchment, quills, and scrolls used in the wizarding world were made. Includes a timeline comparing the history of the wizarding world to Muggle "real" history. Filled with fascinating facts and background, Harry Potter and History is an essential companion for every Harry Potter fan."-- Provided by publisher.</description>
+                <description>"Fans will learn about topics like the European prosecution of witches, who the real Nicholas Flamel was, and the historical origins of the spells and charms Hogwarts students learn, from Avada Kedavra to the bezoar. The book features a timeline comparing the history of the wizarding world to real-life history"-- Provided by publisher.</description>
+                <subject>Rowling, J. K. Characters.</subject>
+                <subject>Literature and history.</subject>
+                <subject>Potter, Harry (Fictitious character)</subject>
+                <subject>Children's stories, English History and criticism.</subject>
+                <subject>Fantasy fiction, English History and criticism.</subject>
+                <subject>History and literature</subject>
+                <subject>History and poetry</subject>
+                <subject>Poetry and history</subject>
+                <subject>Harry Potter (Fictitious character)</subject>
+                <general>Wiley,</general>
+                <general>voy-6795694</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER6795694</recordid>
+                <isbn>9780470574720</isbn>
+                <isbn>0470574720</isbn>
+                <isbn>9781118003244</isbn>
+                <isbn>1118003241</isbn>
+                <isbn>9781118003251</isbn>
+                <isbn>111800325X</isbn>
+                <isbn>9781118003268</isbn>
+                <isbn>1118003268</isbn>
+                <rsrctype>book</rsrctype>
+                <creationdate>2011</creationdate>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>FIRE</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>FIRE</scope>
+                <scope>PRN</scope>
+                <lsr04>9780470574720</lsr04>
+                <lsr04>0470574720</lsr04>
+                <lsr04>9781118003244</lsr04>
+                <lsr04>1118003241</lsr04>
+                <lsr04>9781118003251</lsr04>
+                <lsr04>111800325X</lsr04>
+                <lsr04>9781118003268</lsr04>
+                <lsr04>1118003268</lsr04>
+                <lsr05>PR6068.O93 Z687 2011</lsr05>
+                <lsr06>6795694</lsr06>
+              </search>
+              <sort>
+                <title>Harry Potter and history</title>
+                <creationdate>2011</creationdate>
+                <author>Reagin, Nancy Ruth, 1960-</author>
+              </sort>
+              <facets>
+                <language>eng</language>
+                <creationdate>2011</creationdate>
+                <topic>Rowling, J. K–Characters</topic>
+                <topic>Literature and history</topic>
+                <topic>Potter, Harry (Fictitious character)</topic>
+                <topic>Children's stories, English–History and criticism</topic>
+                <topic>Fantasy fiction, English–History and criticism</topic>
+                <toplevel>available</toplevel>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>Reagin, Nancy Ruth</creatorcontrib>
+                <classificationlcc>P - Language and literature.–English literature</classificationlcc>
+                <frbrgroupid>78265688</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c1>2011010968</c1>
+                <c2>9780470574720;0470574720;9781118003244;1118003241;9781118003251;111800325X;9781118003268;1118003268</c2>
+                <c3>harrypotterandhistory</c3>
+                <c4>2011</c4>
+                <f1>2011010968</f1>
+                <f3>9780470574720;0470574720;9781118003244;1118003241;9781118003251;111800325X;9781118003268;1118003268</f3>
+                <f5>harrypotterandhistory</f5>
+                <f6>2011</f6>
+                <f7>harry potter and history</f7>
+                <f8>nju</f8>
+                <f9>xvi336p</f9>
+                <f10>wiley</f10>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kreagin nancy ruth 1960$$AA</k1>
+                <k3>$$Kharry potter and history$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <enrichment>
+                <classificationlcc>PR6068.O93</classificationlcc>
+              </enrichment>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Reagin</aulast>
+                <aufirst>Nancy Ruth,</aufirst>
+                <addau>Reagin, Nancy Ruth, 1960-</addau>
+                <btitle>Harry Potter and history / edited by Nancy Reagin.</btitle>
+                <date>2011</date>
+                <risdate>c2011.</risdate>
+                <isbn>9780470574720</isbn>
+                <isbn>0470574720</isbn>
+                <isbn>9781118003244</isbn>
+                <isbn>1118003241</isbn>
+                <isbn>9781118003251</isbn>
+                <isbn>111800325X</isbn>
+                <isbn>9781118003268</isbn>
+                <isbn>1118003268</isbn>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <notes>Includes bibliographical references and index.</notes>
+                <abstract>"A guide to the history behind the world of Harry Potter?just in time for the last Harry Potter movie, Harry Potter and the Deathly Hallows (Part II). Harry Potter lives in a world that is both magical and historical. Hogwarts pupils ride an old-fashioned steam train to school, notes are taken on parchment with quill pens, and Muggle legends come to life in the form of werewolves, witches, and magical spells. This book is the first to explore the real history in which Harry's world is rooted.. Did you know that bezoars and mandrakes were fashionable luxury items for centuries? Find out how Europeans first developed the potions, spells, and charms taught at Hogwarts, from Avada Kedavra to love charms. Learn how the European prosecution of witches led to the Statute of Secrecy, meet the real Nicholas Flamel, see how the Malfoys stack up against Muggle English aristocrats, and compare the history of the wizarding world to real-life history.. Gives you the historical backdrop to Harry Potter's world. Covers topics ranging from how real British boarding schools compare to Hogwarts to how parchment, quills, and scrolls used in the wizarding world were made. Includes a timeline comparing the history of the wizarding world to Muggle "real" history. Filled with fascinating facts and background, Harry Potter and History is an essential companion for every Harry Potter fan."--</abstract>
+                <abstract>"Fans will learn about topics like the European prosecution of witches, who the real Nicholas Flamel was, and the historical origins of the spells and charms Hogwarts students learn, from Avada Kedavra to the bezoar. The book features a timeline comparing the history of the wizarding world to real-life history"--</abstract>
+                <cop>Hoboken, N.J.</cop>
+                <pub>Wiley</pub>
+                <oclcid>682895180</oclcid>
+                <lccn>2011010968</lccn>
+                <lad01>f</lad01>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-04-16T23%3A42%3A58IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=unknown&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Harry%20Potter%20complete%208-film%20collection.&amp;rft.aulast=Columbus&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0780674316&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>7017708&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>FIRE</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>(F)</sear:collection>
+              <sear:callNumber>PR6068.O93 Z687 2011</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-04-16T23%3A42%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Harry%20Potter%20and%20history%20/%20edited%20by%20Nancy%20Reagin.&rft.aulast=Reagin&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=9780470574720&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>6795694</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=6795694&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://images.amazon.com/images/P/9780470574720.01._SSTHUM_.jpg</sear:thumbnail>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:9780470574720,OCLC:682895180,LCCN:2011010968&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-04-16T23%3A42%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Harry%20Potter%20and%20history%20/%20edited%20by%20Nancy%20Reagin.&rft.aulast=Reagin&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=9780470574720&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>6795694</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:addlink>http://catalogimages.wiley.com/images/db/jimages/9780470574720.jpg</sear:addlink>
+            <sear:linktouc>http://www.amazon.com/gp/product/9780470574720</sear:linktouc>
+            <sear:linktouc>http://www.worldcat.org/search?q=isbn%3A9780470574720</sear:linktouc>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=f&amp;id=6795694</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+        <sear:DOC SEARCH_ENGINE_TYPE="Local Search Engine" SEARCH_ENGINE="Local Search Engine" NO="7" RANK="6.389088E-4" ID="5555943">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>6951225</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER6951225</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>6951225</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>audio</type>
+                <title>&lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> and the deathly hallows. Part 1 original motion picture soundtrack / music composed and conducted by Alexandre Desplat.</title>
+                <contributor>Desplat, Alexandre</contributor>
+                <publisher>[Burbank, Calif.] : WaterTower Music : Sony Music (distributor), p&amp;c2010.</publisher>
+                <creationdate>p&amp;c2010</creationdate>
+                <subject>Motion picture music</subject>
+                <language>eng</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LMUSIC$$1(MUS)$$Savailable$$31$$40$$5N$$60$$Xprincetondb$$Ymus</availlibrary>
+                <lds03>1 sound disc (CD) : digital, stereo. ; 4 3/4 in.</lds03>
+                <lds05>Obliviate -- Snape To Malfoy Manor -- Polyjuice Potion -- Sky Battle -- At The Burrow -- Harry And Ginny -- The Will -- Death Eaters-- Dobby -- Ministry Of Magic -- Detonators -- The Locket -- Fireplaces Escape -- Ron Leaves -- The Exodus -- Godric's Hollow Graveyard -- Bathilda Bagshot -- Hermiones's Parents -- Destroying The Locket -- Ron's Speech -- Lovegood -- The Deathly Hallows -- Captured And Tortured -- Rescuing Hermoine -- Farewell To Dobby -- The Elder Wand.</lds05>
+                <lds10>88697794712</lds10>
+                <lds22>Harry Potter and the deathly hallows. Part 1 (Motion picture)</lds22>
+                <lds24>Harry Potter and the Deathly Hallows, the seventh and final adventure in the Harry Potter film series, is a much-anticipated motion picture event to be told in two full-length parts. Part 1 begins as harry, Ron and Hermione set out on their perilous mission to track down and destroy the secret to Voldemort's immortality and destruction - the Horcruxes. On their own, without the guidance of their professors or the protection of Professor Dumbledore, the three friends must now rely on one another more than ever. But there are Dark Forces in their midst that threaten to tear them apart.</lds24>
+                <lds26>WaterTower Music : Sony Music (distributor)</lds26>
+                <availinstitution>$$IPRN$$Savailable</availinstitution>
+                <availpnx>available</availpnx>
+                <snippetfield>title</snippetfield>
+                <snippet>&lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> and the deathly hallows. Part 1 original motion picture soundtrack /</snippet>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <linktouc>$$Tworldcat_oclc$$Eworldcat</linktouc>
+                <lln01>$$Tfind_music$$Elfind_music</lln01>
+              </links>
+              <search>
+                <creatorcontrib>music composed and conducted by Alexandre Desplat.</creatorcontrib>
+                <creatorcontrib>Alexandre  Desplat</creatorcontrib>
+                <creatorcontrib>Desplat, Alexandre.</creatorcontrib>
+                <creatorcontrib>Desplat, A</creatorcontrib>
+                <title>&lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> and the deathly hallows. Part 1 original motion picture soundtrack /</title>
+                <description>Harry Potter and the Deathly Hallows, the seventh and final adventure in the Harry Potter film series, is a much-anticipated motion picture event to be told in two full-length parts. Part 1 begins as harry, Ron and Hermione set out on their perilous mission to track down and destroy the secret to Voldemort's immortality and destruction - the Horcruxes. On their own, without the guidance of their professors or the protection of Professor Dumbledore, the three friends must now rely on one another more than ever. But there are Dark Forces in their midst that threaten to tear them apart.</description>
+                <subject>Motion picture music.</subject>
+                <subject>Film music</subject>
+                <subject>Motion pictures Musical accompaniments</subject>
+                <subject>Movie music</subject>
+                <subject>Moving-picture music</subject>
+                <subject>Background music for motion pictures</subject>
+                <general>WaterTower Music : Sony Music (distributor),</general>
+                <general>88697794712</general>
+                <general>[sound recording] :</general>
+                <general>voy-6951225</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER6951225</recordid>
+                <toc>Obliviate -- Snape To Malfoy Manor -- Polyjuice Potion -- Sky Battle -- At The Burrow -- Harry And Ginny -- The Will -- Death Eaters-- Dobby -- Ministry Of Magic -- Detonators -- The Locket -- Fireplaces Escape -- Ron Leaves -- The Exodus -- Godric's Hollow Graveyard -- Bathilda Bagshot -- Hermiones's Parents -- Destroying The Locket -- Ron's Speech -- Lovegood -- The Deathly Hallows -- Captured And Tortured -- Rescuing Hermoine -- Farewell To Dobby -- The Elder Wand.</toc>
+                <rsrctype>audio</rsrctype>
+                <creationdate>2010</creationdate>
+                <addtitle>Harry Potter and the deathly hallows. Part 1 (Motion picture)</addtitle>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>MUSIC</searchscope>
+                <searchscope>OTHERS</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>MUSIC</scope>
+                <scope>OTHERS</scope>
+                <scope>PRN</scope>
+                <lsr06>6951225</lsr06>
+              </search>
+              <sort>
+                <title>Harry Potter and the deathly hallows. Part 1 original motion picture soundtrack</title>
+                <title>Harry Potter and the deathly hallows. Part 1 (Motion picture)</title>
+                <creationdate>2010</creationdate>
+                <author>Desplat, Alexandre.</author>
+              </sort>
+              <facets>
+                <language>eng</language>
+                <creationdate>2010</creationdate>
+                <topic>Motion picture music</topic>
+                <toplevel>available</toplevel>
+                <prefilter>audio</prefilter>
+                <rsrctype>audio</rsrctype>
+                <creatorcontrib>Desplat, Alexandre</creatorcontrib>
+                <frbrgroupid>95464559</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c3>harrypotterandthedeasoundtrack</c3>
+                <c4>2010</c4>
+                <f5>harrypotterandthedeasoundtrack</f5>
+                <f6>2010</f6>
+                <f7>harry potter and the deathly hallows part 1 original motion picture soundtrack</f7>
+                <f8>cau</f8>
+                <f9>1sounddisccd</f9>
+                <f10>watertower music</f10>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kdesplat alexandre$$AA</k1>
+                <k3>$$Kharry potter and the deathly hallows part 1 original motion picture soundtrack$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Desplat</aulast>
+                <aufirst>Alexandre</aufirst>
+                <addau>Desplat, Alexandre</addau>
+                <btitle>Harry Potter and the deathly hallows. Part 1 original motion picture soundtrack / music composed and conducted by Alexandre Desplat.</btitle>
+                <date>2010</date>
+                <risdate>p&amp;c2010.</risdate>
+                <format>book</format>
+                <genre>unknown</genre>
+                <ristype>SOUND</ristype>
+                <abstract>Harry Potter and the Deathly Hallows, the seventh and final adventure in the Harry Potter film series, is a much-anticipated motion picture event to be told in two full-length parts. Part 1 begins as harry, Ron and Hermione set out on their perilous mission to track down and destroy the secret to Voldemort's immortality and destruction - the Horcruxes. On their own, without the guidance of their professors or the protection of Professor Dumbledore, the three friends must now rely on one another more than ever. But there are Dark Forces in their midst that threaten to tear them apart.</abstract>
+                <cop>Burbank, Calif.]</cop>
+                <pub>WaterTower Music : Sony Music (distributor)</pub>
+                <oclcid>688404647</oclcid>
+                <lad12>mus</lad12>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-04-16T23%3A42%3A58IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=unknown&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Harry%20Potter%20complete%208-film%20collection.&amp;rft.aulast=Columbus&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0780674316&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>7017708&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>MUSIC</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>(MUS)</sear:collection>
+              <sear:callNumber/>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-04-16T23%3A42%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=unknown&rft.atitle=&rft.jtitle=&rft.btitle=Harry%20Potter%20and%20the%20deathly%20hallows.%20Part%201%20original%20motion%20picture%20soundtrack%20/%20music%20composed%20and%20conducted%20by%20Alexandre%20Desplat.&rft.aulast=Desplat&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>6951225</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=6951225&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:,OCLC:688404647,LCCN:&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-04-16T23%3A42%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=unknown&rft.atitle=&rft.jtitle=&rft.btitle=Harry%20Potter%20and%20the%20deathly%20hallows.%20Part%201%20original%20motion%20picture%20soundtrack%20/%20music%20composed%20and%20conducted%20by%20Alexandre%20Desplat.&rft.aulast=Desplat&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>6951225</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktouc>http://www.worldcat.org/search?q=no%3A688404647</sear:linktouc>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=mus&amp;id=6951225</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+        <sear:DOC SEARCH_ENGINE_TYPE="Local Search Engine" SEARCH_ENGINE="Local Search Engine" NO="8" RANK="6.3673616E-4" ID="4767900">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>6387543</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER6387543</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>6387543</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>book</type>
+                <title>&lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> film wizardry / [written by Brian Sibley ; designed by Minalima design].</title>
+                <creator>Sibley, Brian.</creator>
+                <publisher>New York, NY : Collins Design, c2010.</publisher>
+                <creationdate>c2010</creationdate>
+                <identifier>$$CISBN$$V9780061997815; $$CISBN$$V0061997811</identifier>
+                <subject>Rowling, J. K -- Characters; Rowling, J. K; Harry Potter films; Harry Potter films -- Miscellanea</subject>
+                <language>eng</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LFIRE$$1(F)$$2PN1995.9.F36 S55 2010$$Savailable$$31$$40$$5N$$62$$Xprincetondb$$Yf</availlibrary>
+                <lds03>159 p. : col. ill. ; 29 cm.</lds03>
+                <lds06>"An Insight Editions book".</lds06>
+                <lds06>"From the creative team behind the celebrated movie series"--Cover.</lds06>
+                <lds24>A guide to the Harry Potter films offers an inside look at everything it took to bring J.K. Rowling's novels to life and includes interviews with the films' stars, behind-the-scenes stories, photos of props and sets, and extra removable items.</lds24>
+                <lds26>Collins Design</lds26>
+                <lds27>PN1995.9.F36 S55 2010</lds27>
+                <availinstitution>$$IPRN$$Savailable</availinstitution>
+                <availpnx>available</availpnx>
+                <snippet/>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <thumbnail>$$Tamazon_thumb</thumbnail>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <linktouc>$$Tamazon_uc$$Eamazon</linktouc>
+                <linktouc>$$Tworldcat_isbn$$Eworldcat</linktouc>
+                <lln01>$$Tfind_fire$$Elfind_fire</lln01>
+              </links>
+              <search>
+                <creatorcontrib>Brian  Sibley</creatorcontrib>
+                <creatorcontrib>Sibley, Brian.</creatorcontrib>
+                <creatorcontrib>Sibley, B</creatorcontrib>
+                <creatorcontrib>[written by Brian Sibley ; designed by Minalima design].</creatorcontrib>
+                <creatorcontrib>סיבלי, בראיין</creatorcontrib>
+                <title>&lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> film wizardry /</title>
+                <description>A guide to the Harry Potter films offers an inside look at everything it took to bring J.K. Rowling's novels to life and includes interviews with the films' stars, behind-the-scenes stories, photos of props and sets, and extra removable items.</description>
+                <subject>Rowling, J. K. Characters.</subject>
+                <subject>Rowling, J. K.</subject>
+                <subject>Harry Potter films.</subject>
+                <subject>Harry Potter films Miscellanea.</subject>
+                <subject>Luolin, J. K.</subject>
+                <subject>Rāoliṃ, Je. Ke.</subject>
+                <subject>Raʼu-liṅ, J. K.</subject>
+                <subject>Roling, Dz︠h︡. K.</subject>
+                <subject>Roling, G'e. Ḳe</subject>
+                <subject>Roliṅga, Je. Ke.</subject>
+                <subject>Rouling, Dzh. K.</subject>
+                <subject>Rowling, Jo</subject>
+                <subject>Rowling, Joanne K.</subject>
+                <subject>Rowlingová, Joanne K.</subject>
+                <subject>Scamander, Newt</subject>
+                <subject>Whisp, Kennilworthy</subject>
+                <subject>Ролінґ, Дж. К.</subject>
+                <subject>Ролинг, Дж. К.</subject>
+                <subject>Роулинг, Дж. К.</subject>
+                <subject>רולינג, ג׳י. קי</subject>
+                <subject>רולינג, ג׳יי. קיי</subject>
+                <subject>رولينج ، ج.ك</subject>
+                <subject>رولينج، چ. ك.</subject>
+                <subject>罗琳, J. K.</subject>
+                <general>Collins Design,</general>
+                <general>voy-6387543</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER6387543</recordid>
+                <isbn>9780061997815</isbn>
+                <isbn>0061997811</isbn>
+                <rsrctype>book</rsrctype>
+                <creationdate>2010</creationdate>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>FIRE</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>FIRE</scope>
+                <scope>PRN</scope>
+                <lsr04>9780061997815</lsr04>
+                <lsr04>0061997811</lsr04>
+                <lsr05>PN1995.9.F36 S55 2010</lsr05>
+                <lsr06>6387543</lsr06>
+              </search>
+              <sort>
+                <title>Harry Potter film wizardry</title>
+                <creationdate>2010</creationdate>
+                <author>Sibley, Brian.</author>
+              </sort>
+              <facets>
+                <language>eng</language>
+                <creationdate>2010</creationdate>
+                <topic>Rowling, J. K–Characters</topic>
+                <topic>Rowling, J. K</topic>
+                <topic>Harry Potter films</topic>
+                <topic>Harry Potter films–Miscellanea</topic>
+                <toplevel>available</toplevel>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>Sibley, Brian</creatorcontrib>
+                <classificationlcc>P - Language and literature.–Literature (General)</classificationlcc>
+                <frbrgroupid>32189740</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c1>2010925740</c1>
+                <c2>9780061997815;0061997811</c2>
+                <c3>harrypotterfilmwizardry</c3>
+                <c4>2010</c4>
+                <f1>2010925740</f1>
+                <f3>9780061997815;0061997811</f3>
+                <f5>harrypotterfilmwizardry</f5>
+                <f6>2010</f6>
+                <f7>harry potter film wizardry</f7>
+                <f8>nyu</f8>
+                <f9>159p</f9>
+                <f10>collins design</f10>
+                <f11>sibley brian</f11>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Ksibley brian$$AA</k1>
+                <k3>$$Kharry potter film wizardry$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <enrichment>
+                <classificationlcc>PN1995.9.F36</classificationlcc>
+              </enrichment>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Sibley</aulast>
+                <aufirst>Brian</aufirst>
+                <au>Sibley, Brian</au>
+                <btitle>Harry Potter film wizardry / [written by Brian Sibley ; designed by Minalima design].</btitle>
+                <date>2010</date>
+                <risdate>c2010.</risdate>
+                <isbn>9780061997815</isbn>
+                <isbn>0061997811</isbn>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <abstract>A guide to the Harry Potter films offers an inside look at everything it took to bring J.K. Rowling's novels to life and includes interviews with the films' stars, behind-the-scenes stories, photos of props and sets, and extra removable items.</abstract>
+                <cop>New York, NY</cop>
+                <pub>Collins Design</pub>
+                <oclcid>526068978</oclcid>
+                <lccn>2010925740</lccn>
+                <lad01>f</lad01>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-04-16T23%3A42%3A58IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=unknown&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Harry%20Potter%20complete%208-film%20collection.&amp;rft.aulast=Columbus&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0780674316&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>7017708&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>FIRE</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>(F)</sear:collection>
+              <sear:callNumber>PN1995.9.F36 S55 2010</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-04-16T23%3A42%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Harry%20Potter%20film%20wizardry%20/%20[written%20by%20Brian%20Sibley%20%3B%20designed%20by%20Minalima%20design].&rft.aulast=Sibley&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Sibley%2C%20Brian&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=9780061997815&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>6387543</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=6387543&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://images.amazon.com/images/P/9780061997815.01._SSTHUM_.jpg</sear:thumbnail>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:9780061997815,OCLC:526068978,LCCN:2010925740&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-04-16T23%3A42%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Harry%20Potter%20film%20wizardry%20/%20[written%20by%20Brian%20Sibley%20%3B%20designed%20by%20Minalima%20design].&rft.aulast=Sibley&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Sibley%2C%20Brian&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=9780061997815&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>6387543</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktouc>http://www.amazon.com/gp/product/9780061997815</sear:linktouc>
+            <sear:linktouc>http://www.worldcat.org/search?q=isbn%3A9780061997815</sear:linktouc>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=f&amp;id=6387543</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+        <sear:DOC SEARCH_ENGINE_TYPE="Local Search Engine" SEARCH_ENGINE="Local Search Engine" NO="9" RANK="6.1183743E-4" ID="5558947">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>6405677</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER6405677</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>6405677</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>book</type>
+                <title>The riddles of &lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> : secret passages and interpretive quests / Shira Wolosky.</title>
+                <creator>Weiss, Shira Wolosky, 1954-</creator>
+                <edition>1st ed.</edition>
+                <publisher>New York : Palgrave Macmillan, 2010.</publisher>
+                <creationdate>2010</creationdate>
+                <identifier>$$CISBN$$V9780230109292 (alk. paper); $$CISBN$$V0230109292 (alk. paper)</identifier>
+                <subject>Rowling, J. K -- Criticism and interpretation; Rowling, J. K -- Characters -- Harry Potter; Children's stories, English -- History and criticism; Fantasy fiction, English -- History and criticism; Potter, Harry (Fictitious character); Riddles in literature; Magic in literature</subject>
+                <language>eng</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LFIRE$$1(F)$$2PR6068.O93 Z945 2010$$Sunavailable$$31$$41$$5N$$60$$Xprincetondb$$Yf</availlibrary>
+                <lds03>x, 225 p. ; 22 cm.</lds03>
+                <lds05>The magic of Harry Potter: ordinary worlds and magic ones; dursleys and weasleys; word riddles; magic figures -- Double meanings: inside and outside; the world at war; the other ministry; horcruxes -- Well-spotted: plots and reversals; backwards; forwards; interpretive quests -- The turns of time: memory, prediction, prophecy; memory; prediction; the prophecy -- Seen and unforeseen -- Mirror images: reflecting characters; fathers and families; the secret riddle; double agent -- Moral fables: the elder wand; love or power; the prophecy again; possession; moral choices; the invisibility cloak -- Rebirth: the resurrection stone; horcruxes or hallows; mothers; rebirth; ordinary magic -- Appendix: discussion topics. Topic 1. Harry Potter and fairy tales; Topic 2: Harry Potter and psychological interpretation; Topic 3: Allegory and literary tradition; Topic 4: history, ideology, culture studies; Topic 5: ethical engagements; Topic 6: hermeneutics.</lds05>
+                <lds26>Palgrave Macmillan</lds26>
+                <lds27>PR6068.O93 Z945 2010</lds27>
+                <availinstitution>$$IPRN$$Sunavailable</availinstitution>
+                <availpnx>unavailable</availpnx>
+                <snippet/>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <thumbnail>$$Tamazon_thumb</thumbnail>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <linktouc>$$Tamazon_uc$$Eamazon</linktouc>
+                <linktouc>$$Tworldcat_isbn$$Eworldcat</linktouc>
+                <lln01>$$Tfind_fire$$Elfind_fire</lln01>
+              </links>
+              <search>
+                <creatorcontrib>Shira Wolosky,  Weiss  1954-</creatorcontrib>
+                <creatorcontrib>Weiss, Shira Wolosky, 1954-</creatorcontrib>
+                <creatorcontrib>Weiss, S</creatorcontrib>
+                <creatorcontrib>Shira Wolosky.</creatorcontrib>
+                <creatorcontrib>Voloski-Vaĭs, Shira, 1954-</creatorcontrib>
+                <creatorcontrib>Ṿolosḳi-Ṿais, Shirah, 1954-</creatorcontrib>
+                <creatorcontrib>Wolosky, Shira, 1954-</creatorcontrib>
+                <creatorcontrib>Волоски-Вайс, Шира, 1954-</creatorcontrib>
+                <creatorcontrib>וולוסקי־וייס, שירה</creatorcontrib>
+                <title>The riddles of &lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> : secret passages and interpretive quests /</title>
+                <subject>Rowling, J. K. Criticism and interpretation.</subject>
+                <subject>Rowling, J. K. Characters Harry Potter.</subject>
+                <subject>Children's stories, English History and criticism.</subject>
+                <subject>Fantasy fiction, English History and criticism.</subject>
+                <subject>Potter, Harry (Fictitious character)</subject>
+                <subject>Riddles in literature.</subject>
+                <subject>Magic in literature.</subject>
+                <subject>Harry Potter (Fictitious character)</subject>
+                <general>Palgrave Macmillan,</general>
+                <general>voy-6405677</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER6405677</recordid>
+                <isbn>9780230109292</isbn>
+                <isbn>0230109292</isbn>
+                <toc>The magic of Harry Potter: ordinary worlds and magic ones; dursleys and weasleys; word riddles; magic figures -- Double meanings: inside and outside; the world at war; the other ministry; horcruxes -- Well-spotted: plots and reversals; backwards; forwards; interpretive quests -- The turns of time: memory, prediction, prophecy; memory; prediction; the prophecy -- Seen and unforeseen -- Mirror images: reflecting characters; fathers and families; the secret riddle; double agent -- Moral fables: the elder wand; love or power; the prophecy again; possession; moral choices; the invisibility cloak -- Rebirth: the resurrection stone; horcruxes or hallows; mothers; rebirth; ordinary magic -- Appendix: discussion topics. Topic 1. Harry Potter and fairy tales; Topic 2: Harry Potter and psychological interpretation; Topic 3: Allegory and literary tradition; Topic 4: history, ideology, culture studies; Topic 5: ethical engagements; Topic 6: hermeneutics.</toc>
+                <rsrctype>book</rsrctype>
+                <creationdate>2010</creationdate>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>FIRE</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>FIRE</scope>
+                <scope>PRN</scope>
+                <lsr04>9780230109292</lsr04>
+                <lsr04>0230109292</lsr04>
+                <lsr05>PR6068.O93 Z945 2010</lsr05>
+                <lsr06>6405677</lsr06>
+              </search>
+              <sort>
+                <title>riddles of Harry Potter : secret passages and interpretive quests</title>
+                <creationdate>2010</creationdate>
+                <author>Weiss, Shira Wolosky, 1954-</author>
+              </sort>
+              <facets>
+                <language>eng</language>
+                <creationdate>2010</creationdate>
+                <topic>Rowling, J. K–Criticism and interpretation</topic>
+                <topic>Rowling, J. K–Characters–Harry Potter</topic>
+                <topic>Children's stories, English–History and criticism</topic>
+                <topic>Fantasy fiction, English–History and criticism</topic>
+                <topic>Potter, Harry (Fictitious character)</topic>
+                <topic>Riddles in literature</topic>
+                <topic>Magic in literature</topic>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>Weiss, Shira Wolosky</creatorcontrib>
+                <classificationlcc>P - Language and literature.–English literature</classificationlcc>
+                <frbrgroupid>50596338</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c1>2010015954</c1>
+                <c2>9780230109292;0230109292</c2>
+                <c3>riddlesofharrypottertivequests</c3>
+                <c4>2010</c4>
+                <f1>2010015954</f1>
+                <f3>9780230109292;0230109292</f3>
+                <f5>riddlesofharrypottertivequests</f5>
+                <f6>2010</f6>
+                <f7>riddles of harry potter secret passages and interpretive quests</f7>
+                <f8>nyu</f8>
+                <f9>x225p</f9>
+                <f10>palgrave macmillan</f10>
+                <f11>weiss shira wolosky 1954</f11>
+                <f15>1sted</f15>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kweiss shira wolosky 1954$$AA</k1>
+                <k3>$$Kriddles of harry potter secret passages and interpretive quests$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <enrichment>
+                <classificationlcc>PR6068.O93</classificationlcc>
+              </enrichment>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Weiss</aulast>
+                <aufirst>Shira Wolosky,</aufirst>
+                <au>Weiss, Shira Wolosky, 1954-</au>
+                <btitle>The riddles of Harry Potter : secret passages and interpretive quests / Shira Wolosky.</btitle>
+                <date>2010</date>
+                <risdate>2010.</risdate>
+                <isbn>9780230109292</isbn>
+                <isbn>0230109292</isbn>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <notes>Includes bibliographical references and index.</notes>
+                <cop>New York</cop>
+                <pub>Palgrave Macmillan</pub>
+                <oclcid>608491726</oclcid>
+                <lccn>2010015954</lccn>
+                <lad01>f</lad01>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-04-16T23%3A42%3A58IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=unknown&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Harry%20Potter%20complete%208-film%20collection.&amp;rft.aulast=Columbus&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0780674316&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>7017708&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>FIRE</sear:library>
+              <sear:status>unavailable</sear:status>
+              <sear:collection>(F)</sear:collection>
+              <sear:callNumber>PR6068.O93 Z945 2010</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-04-16T23%3A42%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=The%20riddles%20of%20Harry%20Potter%20:%20secret%20passages%20and%20interpretive%20quests%20/%20Shira%20Wolosky.&rft.aulast=Weiss&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Weiss%2C%20Shira%20Wolosky%2C%201954-&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=9780230109292&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>6405677</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=6405677&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://images.amazon.com/images/P/9780230109292.01._SSTHUM_.jpg</sear:thumbnail>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:9780230109292,OCLC:608491726,LCCN:2010015954&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-04-16T23%3A42%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=The%20riddles%20of%20Harry%20Potter%20:%20secret%20passages%20and%20interpretive%20quests%20/%20Shira%20Wolosky.&rft.aulast=Weiss&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Weiss%2C%20Shira%20Wolosky%2C%201954-&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=9780230109292&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>6405677</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktouc>http://www.amazon.com/gp/product/9780230109292</sear:linktouc>
+            <sear:linktouc>http://www.worldcat.org/search?q=isbn%3A9780230109292</sear:linktouc>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=f&amp;id=6405677</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+        <sear:DOC SEARCH_ENGINE_TYPE="Local Search Engine" SEARCH_ENGINE="Local Search Engine" NO="10" RANK="6.032998E-4" ID="4661983">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>6337592</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER6337592</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>6337592</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>book</type>
+                <title>One fine potion : the literary magic of &lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> / Greg Garrett.</title>
+                <creator>Garrett, Greg.</creator>
+                <publisher>Waco, Tex. : Baylor University Press, 2010.</publisher>
+                <creationdate>2010</creationdate>
+                <identifier>$$CISBN$$V9781602581982 (pbk. : alk. paper); $$CISBN$$V1602581983 (pbk. : alk. paper)</identifier>
+                <subject>Rowling, J. K -- Characters -- Harry Potter; Potter, Harry (Fictitious character); Magic in literature; Good and evil in literature; Spirituality in literature; Christianity in literature; Children's stories, English -- History and criticism; Fantasy fiction, English -- History and criticism</subject>
+                <language>eng</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LFIRE$$1(F)$$2PR6068.O93 Z6735 2010$$Sunavailable$$31$$41$$5N$$62$$Xprincetondb$$Yf</availlibrary>
+                <lds03>xi, 146 p. ; 22 cm.</lds03>
+                <lds05>Introduction : the Harry Potter phenomenon -- Platform 9 3/4 : magic, power, and the fantastic -- The order of the phoenix : community, diversity, and formation -- Doing what is right : heroism, good, and evil -- All was well : faith, hope, and the world to come.</lds05>
+                <lds26>Baylor University Press</lds26>
+                <lds27>PR6068.O93 Z6735 2010</lds27>
+                <availinstitution>$$IPRN$$Sunavailable</availinstitution>
+                <availpnx>unavailable</availpnx>
+                <snippet/>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <thumbnail>$$Tamazon_thumb</thumbnail>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <linktouc>$$Tamazon_uc$$Eamazon</linktouc>
+                <linktouc>$$Tworldcat_isbn$$Eworldcat</linktouc>
+                <lln01>$$Tfind_fire$$Elfind_fire</lln01>
+              </links>
+              <search>
+                <creatorcontrib>Greg  Garrett</creatorcontrib>
+                <creatorcontrib>Garrett, Greg.</creatorcontrib>
+                <creatorcontrib>Garrett, G</creatorcontrib>
+                <creatorcontrib>Greg Garrett.</creatorcontrib>
+                <creatorcontrib>Garrett, Gregory Todd</creatorcontrib>
+                <title>One fine potion : the literary magic of &lt;span class="searchword">Harry&lt;/span> &lt;span class="searchword">Potter&lt;/span> /</title>
+                <subject>Rowling, J. K. Characters Harry Potter.</subject>
+                <subject>Potter, Harry (Fictitious character)</subject>
+                <subject>Magic in literature.</subject>
+                <subject>Good and evil in literature.</subject>
+                <subject>Spirituality in literature.</subject>
+                <subject>Christianity in literature.</subject>
+                <subject>Children's stories, English History and criticism.</subject>
+                <subject>Fantasy fiction, English History and criticism.</subject>
+                <subject>Harry Potter (Fictitious character)</subject>
+                <general>Baylor University Press,</general>
+                <general>voy-6337592</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER6337592</recordid>
+                <isbn>9781602581982</isbn>
+                <isbn>1602581983</isbn>
+                <toc>Introduction : the Harry Potter phenomenon -- Platform 9 3/4 : magic, power, and the fantastic -- The order of the phoenix : community, diversity, and formation -- Doing what is right : heroism, good, and evil -- All was well : faith, hope, and the world to come.</toc>
+                <rsrctype>book</rsrctype>
+                <creationdate>2010</creationdate>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>FIRE</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>FIRE</scope>
+                <scope>PRN</scope>
+                <lsr04>9781602581982</lsr04>
+                <lsr04>1602581983</lsr04>
+                <lsr05>PR6068.O93 Z6735 2010</lsr05>
+                <lsr06>6337592</lsr06>
+              </search>
+              <sort>
+                <title>One fine potion : the literary magic of Harry Potter</title>
+                <creationdate>2010</creationdate>
+                <author>Garrett, Greg.</author>
+              </sort>
+              <facets>
+                <language>eng</language>
+                <creationdate>2010</creationdate>
+                <topic>Rowling, J. K–Characters–Harry Potter</topic>
+                <topic>Potter, Harry (Fictitious character)</topic>
+                <topic>Magic in literature</topic>
+                <topic>Good and evil in literature</topic>
+                <topic>Spirituality in literature</topic>
+                <topic>Christianity in literature</topic>
+                <topic>Children's stories, English–History and criticism</topic>
+                <topic>Fantasy fiction, English–History and criticism</topic>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>Garrett, Greg</creatorcontrib>
+                <classificationlcc>P - Language and literature.–English literature</classificationlcc>
+                <frbrgroupid>32293800</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c1>2010007762</c1>
+                <c2>9781602581982;1602581983</c2>
+                <c3>onefinepotionthelitearrypotter</c3>
+                <c4>2010</c4>
+                <f1>2010007762</f1>
+                <f3>9781602581982;1602581983</f3>
+                <f5>onefinepotionthelitearrypotter</f5>
+                <f6>2010</f6>
+                <f7>one fine potion the literary magic of harry potter</f7>
+                <f8>txu</f8>
+                <f9>xi146p</f9>
+                <f10>baylor university press</f10>
+                <f11>garrett greg</f11>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kgarrett greg$$AA</k1>
+                <k3>$$Kone fine potion the literary magic of harry potter$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <enrichment>
+                <classificationlcc>PR6068.O93</classificationlcc>
+              </enrichment>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Garrett</aulast>
+                <aufirst>Greg</aufirst>
+                <au>Garrett, Greg</au>
+                <btitle>One fine potion : the literary magic of Harry Potter / Greg Garrett.</btitle>
+                <date>2010</date>
+                <risdate>2010.</risdate>
+                <isbn>9781602581982</isbn>
+                <isbn>1602581983</isbn>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <notes>Includes bibliographical references.</notes>
+                <cop>Waco, Tex.</cop>
+                <pub>Baylor University Press</pub>
+                <oclcid>544474620</oclcid>
+                <lccn>2010007762</lccn>
+                <lad01>f</lad01>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-04-16T23%3A42%3A58IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=unknown&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Harry%20Potter%20complete%208-film%20collection.&amp;rft.aulast=Columbus&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0780674316&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>7017708&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>FIRE</sear:library>
+              <sear:status>unavailable</sear:status>
+              <sear:collection>(F)</sear:collection>
+              <sear:callNumber>PR6068.O93 Z6735 2010</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-04-16T23%3A42%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=One%20fine%20potion%20:%20the%20literary%20magic%20of%20Harry%20Potter%20/%20Greg%20Garrett.&rft.aulast=Garrett&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Garrett%2C%20Greg&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=9781602581982&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>6337592</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=6337592&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://images.amazon.com/images/P/9781602581982.01._SSTHUM_.jpg</sear:thumbnail>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:9781602581982,OCLC:544474620,LCCN:2010007762&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-04-16T23%3A42%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=One%20fine%20potion%20:%20the%20literary%20magic%20of%20Harry%20Potter%20/%20Greg%20Garrett.&rft.aulast=Garrett&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Garrett%2C%20Greg&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=9781602581982&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>6337592</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktouc>http://www.amazon.com/gp/product/9781602581982</sear:linktouc>
+            <sear:linktouc>http://www.worldcat.org/search?q=isbn%3A9781602581982</sear:linktouc>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=f&amp;id=6337592</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+      </sear:DOCSET>
+    </sear:RESULT>
+    <sear:searchToken>0</sear:searchToken>
+  </sear:JAGROOT>
+</sear:SEGMENTS>

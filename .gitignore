@@ -6,3 +6,5 @@ vendor/*
 log/*
 docs/*
 cache/*
+*.csv
+*.json
