@@ -109,6 +109,12 @@ Class PrimoQuery
   }
   */
  
+  private function setReturnRange($start = 1, $range = 10) {
+    $this->query_params['firsthit'] = $start;
+    $this->query_params['lasthit'] = $start + $range;
+    
+  }
+ 
   private function buildQueryString($query_params) {
     return http_build_query($query_params);
     /*

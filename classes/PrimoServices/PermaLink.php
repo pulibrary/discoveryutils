@@ -14,13 +14,17 @@ class PermaLink
 {
   private $pnx_id;
   private $pnx_link;
-  private $base_url = "http://searchit.princeton.edu";
+  private $base_url;
   private $primo_single_record_path = "/primo_library/libweb/action/dlDisplay.do";
-  private $institution = "PRN";
-  private $vid = "PRINCETON";
+  private $institution ;
+  private $vid;
   
   
-  public function __construct($pnx_id) {
+  public function __construct($pnx_id, $primo_server_connection) {
+    $this->primo_server_connection = $primo_server_connection;
+    $this->base_url = $primo_server_connection['base_url'];
+    $this->institution = $primo_server_connection['institution'];
+    $this->vid = $primo_server_connection['default_view_id'];
     $this->pnx_id = $pnx_id;
     $this->pnx_link = $this->buildIDLink();
   }
@@ -34,7 +38,9 @@ class PermaLink
   }
   
   private function buildSearchDeepLink() {
-    $deep_search = new SearchDeepLink($this->pnx_id, "any", "contains");
+    $deep_search = new SearchDeepLink($this->pnx_id, "any", "contains", $this->primo_server_connection);
+    //print_r($this->primo_server_connection);
+    //echo $deep_search->getLink();
     return $deep_search->getLink();
   }
   

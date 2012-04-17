@@ -43,7 +43,19 @@ $app['search_tabs'] = array(
   array("index" => "blended", "label" => "Catalog and Summon"),
 );
 
-//print_r($app['autoloader']->getNamespaces());
+$app['primo_server_connection'] = array(
+  'base_url' => 'http://searchit.princeton.edu',
+  'institution' => 'PRN',
+  'default_view_id' => 'PRINCETON',
+  'default_pnx_source_id' => 'PRN_VOYAGER',
+);
+
+// set up a client to reuse
+$app['primo_client'] = function ($app) {
+    return new PrimoClient($app['primo_server_connection']);
+};
+
+
 $app->get('/', function() use($app) {
   return 'Primo Lookup App';
 });
@@ -52,7 +64,7 @@ $app->get('/', function() use($app) {
  * Redirect Route to Primo Deep Link for IDs
  */
 $app->match('/show/{rec_id}', function($rec_id) use($app) {
-  $primo_record_link = new PermaLink($rec_id);
+  $primo_record_link = new PermaLink($rec_id, $app['primo_server_connection']);
   $app['monolog']->addInfo("REDIRECT: " . $primo_record_link->getLink());
   return $app->redirect($primo_record_link->getLink());
 })->assert('rec_id', '^(PRN_VOYAGER|dedupmrg)\d+');
@@ -62,7 +74,7 @@ $app->match('/show/{rec_id}', function($rec_id) use($app) {
  * tab should match an available primo search tab
  */
 $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
-  //test to see if query is valid
+
   $query = $app['request']->get('query'); //FIXME escaping this causes primo search to fail 
   if($app['request']->server->get('HTTP_REFERER')) {
     $referer = $app['request']->server->get('HTTP_REFERER');
@@ -73,16 +85,15 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
   if ($tab == "summon") {
     $deep_search_link = new SummonQuery($query);
   } elseif($tab == "course") {
-    $deep_search_link = new SearchDeepLink($query, "any", "contains", $tab, array("COURSE"));
+    $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, array("COURSE"));
   } elseif($tab == "blended") {
-    $deep_search_link = new SearchDeepLink($query, "any", "contains", $tab, array("PRN", "SummonThirdNode"));
+    $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, array("PRN", "SummonThirdNode"));
   } else {
-    $deep_search_link = new SearchDeepLink($query, "any", "contains", $tab, array("OTHERS", "FIRE")); //WATCHOUT - Order Matters 
+    $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, array("OTHERS", "FIRE")); //WATCHOUT - Order Matters 
   }
   $app['monolog']->addInfo("TAB:" . $tab . "\tQUERY:" . $query . "\tREDIRECT:" . $deep_search_link->getLink() . "\tREFERER:" . $referer);
   return $app->redirect($deep_search_link->getLink());
-  //return print_r($app['request']);
-  //return print_r($request->server->all());
+
 });
 
 $app->get('/test/', function () use ($app) {
@@ -107,40 +118,35 @@ $app->get('/hello/{name}', function ($name) use ($app) {
 }); 
 
 $app->get('/record/{rec_id}.json', function($rec_id) use($app) {
-  $primo_client = new PrimoClient();
-  $record_data = $primo_client->getID($app->escape($rec_id));
-  $primo_record = new PrimoRecord($record_data);
+  $record_data = $app['primo_client']->getID($app->escape($rec_id));
+  $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
   $stub_data = $primo_record->getBriefInfo();
   $app['monolog']->addInfo("PNXID_REQUEST: " . json_encode($stub_data));
   return new Response(json_encode($stub_data), 200, array('Content-Type' => 'application/json'));
 })->assert('rec_id', '\w+'); //test regular expression validation of route 
 
 $app->get('/record/{rec_id}.xml', function($rec_id) use($app) {
-  $primo_client = new PrimoClient();
-  $record_data = $primo_client->getID($app->escape($rec_id));
+  $record_data = $app['primo_client']->getID($app->escape($rec_id));
   return new Response($record_data, 200, array('Content-Type' => 'application/xml'));
 })->assert('rec_id', '\w+'); 
 
 $app->get('/record/{rec_id}.ris', function($rec_id) use($app) {
-  $primo_client = new PrimoClient();
-  $record_data = $primo_client->getID($app->escape($rec_id));
-  $primo_record = new PrimoRecord($record_data);
+  $record_data = $app['primo_client']->getID($app->escape($rec_id));
+  $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
   $ris_data = $primo_record->getCitation("RIS");
   $app['monolog']->addInfo("RIS_REQUEST: " . $rec_id . "\n" . $ris_data);
   return new Response($ris_data, 200, array('Content-Type' => 'application/x-research-info-systems'));
-  //return $risdata;
 })->assert('rec_id', '\w+');
 
 
 $app->get('/record/{rec_id}', function($rec_id) use($app) {
-  $primo_client = new PrimoClient();
-  $record_data = $primo_client->getID($app->escape($rec_id));
-  $primo_record = new PrimoRecord($record_data);
+  $record_data = $app['primo_client']->getID($app->escape($rec_id));
+  $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
   $stub_data = $primo_record->getBriefInfo();
   $response_data = array();
   $response_data['rec_id'] = $rec_id;
   $response_data['pnx_response'] = $stub_data;
-  //$stub_data['source_prn_id'] = $rec_id;
+
   return $app['twig']->render('record.twig', $response_data);
 })->assert('rec_id', '\w+');
 
@@ -148,9 +154,8 @@ $app->get('/record/{rec_id}', function($rec_id) use($app) {
  * return all links associated with a given primo id
  */
 $app->get('/links/{rec_id}.json', function($rec_id) use($app) {
-  $primo_client = new PrimoClient();
-  $record_data = $primo_client->getID($app->escape($rec_id));
-  $primo_record = new PrimoRecord($record_data);
+  $record_data = $app['primo_client']->getID($app->escape($rec_id));
+  $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
   $all_links_data = $primo_record->getAllLinks();
   return new Response(json_encode($all_links_data), 200, array('Content-Type' => 'application/json'));
 })->assert('rec_id', '\w+');
@@ -159,9 +164,8 @@ $app->get('/links/{rec_id}.json', function($rec_id) use($app) {
  * Return all PUL locations associated with a given primo id
  */
 $app->get('/locations/{rec_id}.json', function($rec_id) use($app) {
-  $primo_client = new PrimoClient();
-  $record_data = $primo_client->getID($app->escape($rec_id));
-  $primo_record = new PrimoRecord($record_data);
+  $record_data = $app['primo_client']->getID($app->escape($rec_id));
+  $primo_record = new PrimoRecord($record_data, $app['primo_server_connection']);
   $all_links_data = $primo_record->getAvailableLibraries();
   if ($view_type = $app['request']->get('view')) { // this method may be slow per symfony request class docs
     $all_links_data['view'] =  $view_type; 
@@ -172,7 +176,6 @@ $app->get('/locations/{rec_id}.json', function($rec_id) use($app) {
 $app->get('/availability/{rec_id}.json', function($rec_id) use($app) {
   $availability_client = new RequestClient($app->escape($rec_id));
   $availability_response = $availability_client->doLookup();
-  //$decoded_reponse = json_decode($availability_response);
   $app['monolog']->addInfo("Request Lookup: " . $availability_client);
   return new Response($availability_response, 200, array('Content-Type' => 'application/json'));
 })->assert('rec_id', '\w+');
@@ -180,8 +183,8 @@ $app->get('/availability/{rec_id}.json', function($rec_id) use($app) {
 $app->get('/availability/{rec_id}', function($rec_id) use($app) {
   $availability_client = new RequestClient($app->escape($rec_id));
   $availability_response = $availability_client->doLookup();
-  //$decoded_reponse = json_decode($availability_response);
   $app['monolog']->addInfo("Request Lookup: " . $availability_client);
+  
   return $app['twig']->render('availability.twig', array(
     'record_id' => $rec_id, 
     'ava_response' => $availability_response
@@ -193,15 +196,13 @@ $app->get('/availability/{rec_id}', function($rec_id) use($app) {
  * Returns values for {locations, openurl, fulltext, delivery, borrowdirect }
  */
 $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, $format="html") use ($app) {
-  $primo_client = new PrimoClient();
-  $record_data = $primo_client->getID($app->escape($rec_id)); //FIXME perhaps try and use the symfony validator utility to filter all rec_ids and service_types
-  $primo_record = new PrimoRecord($record_data);
+  $record_data = $app['primo_client']->getID($app->escape($rec_id)); //FIXME perhaps try and use the symfony validator utility to filter all rec_ids and service_types
+  $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
   // decide which service type to use
   $location_links_data = $primo_record->getAllLinks();
   if ($format == "json") {
     return new Response(json_encode($location_links_data), 200, array('Content-Type' => 'application/json'));
   }
-  // decide which format to return
 })->assert('rec_id', '\w+');
 
 /*
@@ -228,9 +229,9 @@ $app->get('/find/{index_type}/{query}', function($index_type, $query) use($app) 
   } else {
     $operator = "exact";
   }
-  $primo_client = new PrimoClient();
+
   $query = new PrimoQuery($app->escape($query), $app->escape($index_type), $operator, $scopes);
-  $response_data = $primo_client->doSearch($query);
+  $response_data = $app['primo_client']->doSearch($query);
   $app['monolog']->addInfo("Index Query:" . $primo_client . "\tREFERER:" . $referrer);
   
   return new Response($response_data, 200, array('Content-Type' => 'application/xml'));

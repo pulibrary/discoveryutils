@@ -14,6 +14,16 @@ namespace LookupApp\Tests;
  */
 class LookupPrimoClientTest extends \PHPUnit_Framework_TestCase {
   
+  protected function setUp() {
+    $primo_server_connection = array(
+      'base_url' => 'http://searchit.princeton.edu',
+      'institution' => 'PRN',
+      'default_view_id' => 'PRINCETON',
+      'default_pnx_source_id' => 'PRN_VOYAGER',  
+    );
+    $this->client = new \PrimoServices\PrimoClient($primo_server_connection);
+  }
+  
   function testBaseURLSetting() {
     
   }

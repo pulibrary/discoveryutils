@@ -1,6 +1,7 @@
 <?php
 namespace PrimoServices;
 use PrimoServices\PrimoDocument;
+use PrimoServices\PrimoParser;
 
 Class PrimoRecord 
 {
@@ -9,6 +10,7 @@ Class PrimoRecord
   private $xpath_doc_root = "//sear:DOC[1]";
   private $def_ns = "def";
   private $xpath;
+  private $primo_server_connection;
   private $institutionID = "PRN_VOYAGER";
   
   private $namespaces = array(
@@ -16,8 +18,10 @@ Class PrimoRecord
     "def" => "http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib",
   );
 
-  function __construct($xml) {
-    $this->xpath = $this->loadXPath($xml);
+  function __construct($xml,$primo_server_connection) {
+    $this->primo_server_connection = $primo_server_connection;
+    $dom = PrimoParser::convertToDOMDocument($xml);
+    $this->xpath = $this->loadXPath($dom);
     // Set Namespaces in Constructor
     foreach($this->namespaces as $prefix => $namespace) {
       $this->xpath->registerNamespace($prefix, $namespace);
@@ -44,8 +48,7 @@ Class PrimoRecord
     return $primo_record_string;
   }
   
-  private function loadXPath($xml) {
-    $dom = \DOMDocument::loadXML($xml);
+  private function loadXPath($dom) {
     
     return new \DOMXPath($dom);
   }
@@ -192,8 +195,9 @@ Class PrimoRecord
       }
       $brief_info_data[$voyager_key] = array_merge($voyager_key_available_libraries, $getit_links[$voyager_key], array('voyager_id' => $this->split_voyager_id($voyager_key)), array('locator_links' => $locator_links));
       // build a permalink for each
-      $deep_link = new PermaLink($voyager_key);
+      $deep_link = new PermaLink($voyager_key, $this->primo_server_connection);
       $brief_info_data[$voyager_key]['deep_search_id_link'] = $deep_link->getDeepLinkAsSearch();
+      $brief_info_data[$voyager_key]['permalink'] = $deep_link->getLink();
     }
     
     return $brief_info_data;
@@ -375,7 +379,7 @@ Class PrimoRecord
     if($this->getFullTextLinktoSrc()) {
       $resource_link = $this->getFullTextLinktoSrc();
     } else {
-      $deep_link = new PermaLink($this->getRecordID());
+      $deep_link = new PermaLink($this->getRecordID(), $this->primo_server_connection);
       $resource_link = $deep_link->getLink();
     }
     if($this->getCallNumber()) {
@@ -423,7 +427,6 @@ Class PrimoRecord
     //print_r($section_values);
     return $section_values;
   }
-  
   
   public function getStdNums() {
     //ADDME returns standard numbers (ISSN/ISBN associated with the record)
