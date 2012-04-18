@@ -8,3 +8,4 @@ docs/*
 cache/*
 *.csv
 *.json
+composer.lock
