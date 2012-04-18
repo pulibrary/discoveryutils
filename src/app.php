@@ -50,10 +50,10 @@ $app['primo_server_connection'] = array(
   'default_pnx_source_id' => 'PRN_VOYAGER',
 );
 
-// set up a client to reuse
-$app['primo_client'] = function ($app) {
+// set up a configured primo client to reuse throughout the project
+$app['primo_client'] = $app->share(function ($app) {
     return new PrimoClient($app['primo_server_connection']);
-};
+});
 
 
 $app->get('/', function() use($app) {
@@ -96,6 +96,7 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
 
 });
 
+// show a test web page 
 $app->get('/test/', function () use ($app) {
   return $app['twig']->render('test.twig', array(
     'title' => "Primo Data Services Test",
