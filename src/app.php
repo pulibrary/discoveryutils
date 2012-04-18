@@ -18,12 +18,12 @@ $app = new Silex\Application();
 
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
   'twig.path'       => __DIR__.'/../views',
-  'twig.class_path' => __DIR__.'/../vendor/Twig/lib',
+  'twig.class_path' => __DIR__.'/../vendor/twig/twig/lib',
 ));
 
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.logfile'       => __DIR__.'/../log/usage.log',
-    'monolog.class_path'    => __DIR__.'/../vendor/Monolog/src',
+    'monolog.class_path'    => __DIR__.'/../vendor/monolog/monolog/src',
     'monolog.level'         => 'Logger::DEBUG'
 ));
 
