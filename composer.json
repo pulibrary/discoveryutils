@@ -1,0 +1,9 @@
+{
+  "require" : {
+    "symfony/console" : "2.1.*",
+    "symfony/finder" : "2.1.*",
+    "twig/twig" : "1.7.*",
+    "monolog/monolog" : "1.0.*",
+    "swiftmailer/swiftmailer" : "4.1.*"
+  }
+}
