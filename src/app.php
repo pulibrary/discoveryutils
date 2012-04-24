@@ -6,9 +6,7 @@ use Symfony\Component\HttpFoundation\Response,
   Symfony\Component\HttpFoundation\Request;
 use PrimoServices\PrimoRecord,
   PrimoServices\PrimoClient,
-  PrimoServices\PrimoLoader,
   PrimoServices\PermaLink,
-  PrimoServices\PrimoException,
   PrimoServices\SummonQuery,
   PrimoServices\PrimoQuery,
   PrimoServices\RequestClient,
@@ -237,8 +235,5 @@ $app->get('/find/{index_type}/{query}', function($index_type, $query) use($app) 
   
   return new Response($response_data, 200, array('Content-Type' => 'application/xml'));
 })->assert('index_type', '(issn|isbn|lccn|oclc|title|any|lsr05)'); // should this be a list of possible options from the 
-
-// should kick only on prod
-//$app['http_cache']->run(); 
 
 return $app;
