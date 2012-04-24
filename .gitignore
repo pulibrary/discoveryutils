@@ -1,7 +1,5 @@
 .project
 .settings/*
-vendor/Twig/*
-vendor/Monolog/*
 vendor/*
 log/*
 docs/*

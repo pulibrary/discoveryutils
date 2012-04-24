@@ -180,6 +180,9 @@ Class PrimoRecord
    * non-fulltext openurl
    * location code info
    * voyager id
+   * 
+   * returns multiple source records if the PNX record in question is a 
+   * dedupped title 
    */
   public function getBriefInfo() {
     $getit_links = $this->getGetItLinks();
@@ -321,6 +324,8 @@ Class PrimoRecord
     return $this->getText("lsr05");
   }
   
+  
+  // this should be refactored method is way toooo long
   public function getCitation($type = "RIS") {
     $primo_document = new PrimoDocument();
     $metadata = $this->getPrimoDocumentData();
