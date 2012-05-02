@@ -1,24 +1,31 @@
 {
-    "hash": "7cbb3a6e81148c5fd495a4f82cd2751b",
+    "hash": "63cdd129fb45e7ccfa06730abc6b56ad",
     "packages": [
+        {
+            "package": "fate/silex-extensions",
+            "version": "dev-master",
+            "source-reference": "28cb98b52656f58f43264bd3d168f4875c76af81"
+        },
         {
             "package": "monolog/monolog",
             "version": "1.0.2"
         },
         {
             "package": "swiftmailer/swiftmailer",
-            "version": "4.1.6"
+            "version": "dev-master",
+            "source-reference": "57789082d1d53529dcf8cd3ca132d9787a59afee",
+            "alias": "4.1.9999999.9999999-dev"
         },
         {
             "package": "symfony/console",
             "version": "dev-master",
-            "source-reference": "f354e1e5d59261ae03c0fc768bfa4043c0e6ab9c",
+            "source-reference": "f62b4157eb3382e48f0a8ea0259d78c85d1933ce",
             "alias": "2.1.9999999.9999999-dev"
         },
         {
             "package": "symfony/finder",
             "version": "dev-master",
-            "source-reference": "5b8658e52eaf424fe943a5857e2404ce95c3b90e",
+            "source-reference": "579244c1b21808bc6f9fe2284bf76cb0dc3f7334",
             "alias": "2.1.9999999.9999999-dev"
         },
         {
