@@ -2,6 +2,8 @@
 namespace PrimoServices;
 use PrimoServices\PrimoDocument;
 use PrimoServices\PrimoParser;
+use PrimoServices\PermaLink;
+use PrimoServices\SearchDeepLink;
 
 Class PrimoRecord 
 {
@@ -198,9 +200,20 @@ Class PrimoRecord
       }
       $brief_info_data[$voyager_key] = array_merge($voyager_key_available_libraries, $getit_links[$voyager_key], array('voyager_id' => $this->split_voyager_id($voyager_key)), array('locator_links' => $locator_links));
       // build a permalink for each
-      $deep_link = new PermaLink($voyager_key, $this->primo_server_connection);
-      $brief_info_data[$voyager_key]['deep_search_id_link'] = $deep_link->getDeepLinkAsSearch();
+      /*
+       * Support both Primo deep linking styles. deep links got to the full record view
+       * deep search links go to a search for the source PRNVOYAGER ID of the title. 
+       * 
+       * A dedup title deep link uses Primos "dedup" prefix ID when present, but deep search links always use the source voyuager ID.
+       * A deep search link for the voyager id of a merged record will take you the merged Primo record.
+       */
+      $deep_link = new PermaLink($this->getRecordID(), $this->primo_server_connection);
       $brief_info_data[$voyager_key]['permalink'] = $deep_link->getLink();
+      
+      $deep_search = new SearchDeepLink($voyager_key, "any", "contains", $this->primo_server_connection);
+      $brief_info_data[$voyager_key]['deep_search_id_link'] = $deep_search->getLink();
+
+
     }
     
     return $brief_info_data;
