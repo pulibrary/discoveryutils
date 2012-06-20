@@ -48,6 +48,20 @@ $app['primo_server_connection'] = array(
   'default_pnx_source_id' => 'PRN_VOYAGER',
 );
 
+$app['locator.base'] = "http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php";
+// get primo scopes via webservices http://searchit.princeton.edu/PrimoWebServices/xservice/getscopesofview?viewId=PRINCETON
+$app['stackmap.base'] = "http://princeton.stackmap.com/view/";
+$app['stackmap.eligible.libraries'] = array(
+  "ARCH",
+  "EAL",
+  "ENG",
+  "LEWIS",
+  "MUSIC",
+  "MARQ",
+  "STOKES"
+);
+$app['locations.base'] = "http://libserv5.princeton.edu/requests/locationservice.php";
+
 // set up a configured primo client to reuse throughout the project
 $app['primo_client'] = $app->share(function ($app) {
     return new PrimoClient($app['primo_server_connection']);
@@ -148,6 +162,66 @@ $app->get('/record/{rec_id}', function($rec_id) use($app) {
 
   return $app['twig']->render('record.twig', $response_data);
 })->assert('rec_id', '\w+');
+
+/*
+ * build a map for a given location code and id
+ */
+
+/* do not send dedup ids to this controller 
+ * 
+ * @params
+ * id = Voyager Style Numeric ID (Maybe should accept either one)
+ * loc = Voyager Location Code 
+ * */
+$app->get('/map', function() use ($app) {
+  $rec_id = $app->escape($app['request']->get("id"));
+  $location_code = $app->escape($app['request']->get("loc"));
+  if(preg_match('/^(PRN|dedup)/', $rec_id)) {
+    $requested_id = $rec_id;
+  } else {
+    $requested_id = $app['primo_server_connection']['default_pnx_source_id'].$app->escape($rec_id);
+  }
+  $record_data = $app['primo_client']->getID($requested_id);
+  $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
+   
+  foreach($primo_record->getHoldings() as $holding) { //iterate through holdings objects 
+    if($holding->location_code == $location_code) {
+      $holding_to_map = $holding;
+      break;  
+    }
+  }
+  
+  if(!(isset($holding_to_map))) {
+    return "No Holdings at the requested location for Record" . print_r($primo_record);
+  } else {
+      
+    if(in_array($holding_to_map->primo_library, $app['stackmap.eligible.libraries'])) {
+      /*
+       * get the location display Name from locations service because stack map wants it that way
+       * should be obtained via a database call in furture when apps mere 
+       */ 
+      $location_info = json_decode(file_get_contents($app['locations.base'] . "?" . http_build_query(array('loc' => $holding_to_map->location_code))), TRUE); //FIXME
+      $map_params = array(
+        'callno' => $holding_to_map->call_number,
+        'location' => $holding_to_map->location_code,
+        'library' => strval($location_info[$holding_to_map->location_code]['libraryDisplay']),
+      );
+      $map_url = $app['stackmap.base'] . "?" . http_build_query($map_params);
+    } else {
+      
+      $map_params = array(
+        'loc' => $holding_to_map->location_code,
+        'id' => $rec_id,
+      );
+      $map_url = $app['locator.base'] . "?" . http_build_query($map_params);
+    }
+    
+    return $app->redirect($map_url);
+ 
+  } 
+});
+
+
 
 /*
  * return all links associated with a given primo id
