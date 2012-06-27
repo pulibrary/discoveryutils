@@ -4,6 +4,7 @@ use PrimoServices\PrimoDocument;
 use PrimoServices\PrimoParser;
 use PrimoServices\PermaLink;
 use PrimoServices\SearchDeepLink;
+use PrimoServices\PrimoHolding;
 
 Class PrimoRecord 
 {
@@ -14,6 +15,7 @@ Class PrimoRecord
   private $xpath;
   private $primo_server_connection;
   private $institutionID = "PRN_VOYAGER";
+  private $holdings = array();
   
   private $namespaces = array(
     "sear" => "http://www.exlibrisgroup.com/xsd/jaguar/search",
@@ -299,6 +301,25 @@ Class PrimoRecord
     }
 
     return $available_ids;
+  }
+
+  private function buildHoldings() {
+    $available_path = "def:PrimoNMBib/def:record/def:display/def:availlibrary";
+    // need to check for another test 
+    $availableList = $this->query($available_path);
+    //$num_avail_items = count($this->getSourceIDs());
+    return $availableList;
+  }
+
+  /* return an array of "PrimoHolding" objects for all composite records */
+
+  public function getHoldings() {
+    $holdings_list = $this->buildHoldings();
+    foreach($holdings_list as $holding) {
+      array_push($this->holdings, new PrimoHolding($holding->textContent)); 
+    }
+    
+    return $this->holdings;
   }
 
   private function getElements($tag, $namespace_prefix = "def") {

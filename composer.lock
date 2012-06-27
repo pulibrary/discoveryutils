@@ -34,5 +34,7 @@
         }
     ],
     "packages-dev": null,
-    "aliases": []
+    "aliases": [
+
+    ]
 }

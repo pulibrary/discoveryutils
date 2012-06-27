@@ -6,3 +6,4 @@ docs/*
 cache/*
 *.csv
 views/*.json
+*.swp
