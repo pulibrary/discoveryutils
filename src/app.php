@@ -46,6 +46,7 @@ $app['primo_server_connection'] = array(
   'institution' => 'PRN',
   'default_view_id' => 'PRINCETON',
   'default_pnx_source_id' => 'PRN_VOYAGER',
+  'default_scope' => array('PRN'),
 );
 
 $app['locator.base'] = "http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php";
@@ -176,23 +177,34 @@ $app->get('/record/{rec_id}', function($rec_id) use($app) {
 $app->get('/map', function() use ($app) {
   $rec_id = $app->escape($app['request']->get("id"));
   $location_code = $app->escape($app['request']->get("loc"));
-  if(preg_match('/^(PRN|dedup)/', $rec_id)) {
-    $requested_id = $rec_id;
+  if(preg_match('/^dedup/', $rec_id)) {
+    $record_data = $app['primo_client']->getID($rec_id);
   } else {
-    $requested_id = $app['primo_server_connection']['default_pnx_source_id'].$app->escape($rec_id);
+    if(preg_match('/^\d+/', $rec_id)) {
+      $requested_id = $app['primo_server_connection']['default_pnx_source_id'].$rec_id;
+    } else {
+      $requested_id = $rec_id;
+    }
+    $query = new PrimoQuery($requested_id, "any", "exact", $app['primo_server_connection']['default_scope']);
+    $record_data = $app['primo_client']->doSearch($query);    
+
   }
-  $record_data = $app['primo_client']->getID($requested_id);
   $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
    
   foreach($primo_record->getHoldings() as $holding) { //iterate through holdings objects 
     if($holding->location_code == $location_code) {
-      $holding_to_map = $holding;
-      break;  
+      if($holding->source_id == $requested_id) {
+      	$holding_to_map = $holding;
+	break; 
+      } else {
+	$holding_to_map = $holding;
+      } 
     }
   }
   
   if(!(isset($holding_to_map))) {
-    return "No Holdings at the requested location for Record" . print_r($primo_record);
+    $app['monolog']->err("TYPE:No Holdings Available for Requested Record ID\tREC_ID:$rec_id\tLOCATION:$location_code"); 
+    return "No Holdings at the requested location for Record";
   } else {
       
     if(in_array($holding_to_map->primo_library, $app['stackmap.eligible.libraries'])) {
@@ -215,7 +227,7 @@ $app->get('/map', function() use ($app) {
       );
       $map_url = $app['locator.base'] . "?" . http_build_query($map_params);
     }
-    
+    $app['monolog']->addInfo("MAP:$map_url\tLOCATION:$location_code\tRECORD:$rec_id"); 
     return $app->redirect($map_url);
  
   } 
