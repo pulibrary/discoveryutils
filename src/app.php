@@ -58,7 +58,7 @@ $app['stackmap.eligible.libraries'] = array(
   "LEWIS",
   "MUSIC",
   "MARQ",
-  "STOKES"
+  "STOKES",
 );
 $app['locations.base'] = "http://libserv5.princeton.edu/requests/locationservice.php";
 

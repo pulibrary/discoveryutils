@@ -19,13 +19,13 @@
         {
             "package": "symfony/console",
             "version": "dev-master",
-            "source-reference": "f62b4157eb3382e48f0a8ea0259d78c85d1933ce",
+            "source-reference": "8d58af16c425977018293eb0a1570c9629b37994",
             "alias": "2.1.9999999.9999999-dev"
         },
         {
             "package": "symfony/finder",
             "version": "dev-master",
-            "source-reference": "579244c1b21808bc6f9fe2284bf76cb0dc3f7334",
+            "source-reference": "19ef3c1ca88f6e69d9cca0eda2e3a20f85e0173a",
             "alias": "2.1.9999999.9999999-dev"
         },
         {
@@ -34,5 +34,7 @@
         }
     ],
     "packages-dev": null,
-    "aliases": []
+    "aliases": [
+
+    ]
 }
