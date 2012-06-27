@@ -40,10 +40,10 @@ while(<>) {
 @res = sort {lc $a cmp lc $b} @reserves;
 @ble = sort {lc $a cmp lc $b} @blend;
 
-$cat_log = "catalog.csv";
-$sum_log = "summon.csv";
-$res_log = "reserves.csv";
-$ble_log = "blended.csv";
+$cat_log = "./raw/catalog.csv";
+$sum_log = "./raw/summon.csv";
+$res_log = "./raw/reserves.csv";
+$ble_log = "./raw/blended.csv";
 
 
 open FH, ">>$cat_log" or die "can't open '$cat_log': $!";
