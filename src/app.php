@@ -1,7 +1,8 @@
 <?php
 
-require_once __DIR__.'/../vendor/silex.phar';
+//require_once __DIR__.'/../vendor/silex.phar';
 
+use Silex\Application;
 use Symfony\Component\HttpFoundation\Response,
   Symfony\Component\HttpFoundation\Request;
 use PrimoServices\PrimoRecord,
@@ -16,21 +17,15 @@ $app = new Silex\Application();
 
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
   'twig.path'       => __DIR__.'/../views',
-  'twig.class_path' => __DIR__.'/../vendor/twig/twig/lib',
 ));
 
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.logfile'       => __DIR__.'/../log/usage.log',
-    'monolog.class_path'    => __DIR__.'/../vendor/monolog/monolog/src',
     'monolog.level'         => 'Logger::DEBUG'
 ));
 
 $app->register(new Silex\Provider\HttpCacheServiceProvider(), array(
     'http_cache.cache_dir' => __DIR__.'/../cache/',
-));
-
-$app['autoloader']->registerNamespaces(array(
-  'PrimoServices' => __DIR__.'/../classes',
 ));
 
 /* Define possible search tabs */
