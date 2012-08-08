@@ -92,7 +92,10 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
   }
 
   if ($tab == "summon") {
-    $deep_search_link = new SummonQuery($query);
+    $deep_search_link = new SummonQuery($query, array(
+      "s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t)",      
+      "keep_r" => "true" )
+    );
   } elseif($tab == "course") {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, array("COURSE"));
   } elseif($tab == "blended") {
@@ -313,7 +316,7 @@ $app->get('/find/{index_type}/{query}', function($index_type, $query) use($app) 
 
   $query = new PrimoQuery($app->escape($query), $app->escape($index_type), $operator, $scopes);
   $response_data = $app['primo_client']->doSearch($query);
-  $app['monolog']->addInfo("Index Query:" . $primo_client . "\tREFERER:" . $referrer);
+  $app['monolog']->addInfo("Index Query:" . $query . "\tREFERER:" . $referer);
   
   return new Response($response_data, 200, array('Content-Type' => 'application/xml'));
 })->assert('index_type', '(issn|isbn|lccn|oclc|title|any|lsr05|creator)'); // should this be a list of possible options from the 
