@@ -1,6 +1,7 @@
 <?php
 namespace PrimoServices;
 use PrimoServices\PrimoQuery;
+use Guzzle\Service\Client as Client;
 
 class PrimoClient
 {
@@ -16,15 +17,13 @@ class PrimoClient
   function __construct($primo_server_connection) {
     $this->base_url = $primo_server_connection['base_url'];
     $this->institution = $primo_server_connection['institution'];
+    $this->client = new Client($this->baseurl);
   }
   
   public function getID($pnx_id) {
-    $this->current_url = $this->base_url . $this->xservice_base . $this->xservice_getit . "institution=" . $this->institution ."&docId=".$pnx_id;
-    //echo $this->current_url;
-    //echo $this->xservice_base;
-    $xml = file_get_contents($this->current_url);
-    
-    return $xml;
+    $request = $this->client->get($this->xservice_base . $this->xservice_getit . "institution=" . $this->institution ."&docId=".$pnx_id);
+    $response = $request->send();
+    return $response;
   }
   
   /*
@@ -34,17 +33,18 @@ class PrimoClient
    * should I have a primo results objects 
    */
   public function doSearch(PrimoQuery $query) {
-    $this->current_url = $this->base_url . $this->xservice_base . $this->xservice_brief_search . $query->getQueryString();
-    $xml = file_get_contents($this->current_url);
+    $request = $this->client->get($this->xservice_base . $this->xservice_brief_search . $query->getQueryString());
+    $response = $request->send();
     if(strlen($xml) != 0) { 
-      return $xml; 
+      return $response; 
     } else {
       return "<error><code>503</code><message>No Response from Primo Server</message></error>";
     }
   }
-  
+
+  /* not sure if this really even useful? */ 
   public function __toString() {
-    return $this->current_url;
+    return $this->client;;
   }
   
   

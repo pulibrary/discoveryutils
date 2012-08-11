@@ -1,6 +1,12 @@
 {
-    "hash": "d06124dbffd83e8f98698362149574fd",
+    "hash": "0dce3b0aba8480953ce074453ea84441",
     "packages": [
+        {
+            "package": "guzzle/guzzle",
+            "version": "dev-master",
+            "source-reference": "ce8cdd8f673edcfab79256c01dc6d79fce1fa82b",
+            "commit-date": "1344471415"
+        },
         {
             "package": "monolog/monolog",
             "version": "1.0.2"

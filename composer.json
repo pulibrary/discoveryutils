@@ -8,6 +8,7 @@
     "symfony/css-selector" : "2.1.*",
     "twig/twig" : "1.9.*",
     "monolog/monolog" : "1.0.*",
+    "guzzle/guzzle": "*",
     "swiftmailer/swiftmailer" : "4.1.*"
   },
   "autoload": {
