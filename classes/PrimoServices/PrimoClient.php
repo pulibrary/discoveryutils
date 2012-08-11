@@ -33,9 +33,10 @@ class PrimoClient
    */
   public function doSearch(PrimoQuery $query) {
     $request = $this->client->get($this->xservice_base . $this->xservice_brief_search . $query->getQueryString());
+    print_r($request);
     $response = $request->send();
     if(strlen($xml) != 0) { 
-      return $response; 
+      return $request; 
     } else {
       return "<error><code>503</code><message>No Response from Primo Server</message></error>";
     }
