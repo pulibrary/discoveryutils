@@ -69,7 +69,7 @@ Class PrimoParser {
     }
     else
     {
-      throw new InvalidArgumentException("param 1 must be of type string, SimpleXMLElement, DOMNode, or DOMDocument");
+      throw new \InvalidArgumentException("param 1 must be of type string, SimpleXMLElement, DOMNode, or DOMDocument");
     }
   }
   
