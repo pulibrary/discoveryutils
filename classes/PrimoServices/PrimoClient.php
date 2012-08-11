@@ -15,9 +15,8 @@ class PrimoClient
   private $primo_institution;
   
   function __construct($primo_server_connection) {
-    $this->base_url = $primo_server_connection['base_url'];
     $this->institution = $primo_server_connection['institution'];
-    $this->client = new Client($this->baseurl);
+    $this->client = new Client($primo_server_connection['base_url']);
   }
   
   public function getID($pnx_id) {
