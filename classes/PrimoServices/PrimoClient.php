@@ -7,8 +7,8 @@ class PrimoClient
 {
   private $base_url;
   private $xservice_base = "/PrimoWebServices";
-  private $xservice_brief_search = "/xservice/search/brief?"; //run a primo search
-  private $xservice_getit = "/xservice/getit?"; // for straight ID lookups 
+  private $xservice_brief_search = "xservice/search/brief?"; //run a primo search
+  private $xservice_getit = "xservice/getit?"; // for straight ID lookups 
   private $institution;
   private $current_url;
   private $primo_base_url;
@@ -16,13 +16,12 @@ class PrimoClient
   
   function __construct($primo_server_connection) {
     $this->institution = $primo_server_connection['institution'];
-    $this->client = new Client($primo_server_connection['base_url']);
+    $this->client = new Client($primo_server_connection['base_url'].$this->xservice_base);
   }
   
   public function getID($pnx_id) {
-    $request = $this->client->get($this->xservice_base . $this->xservice_getit . "institution=" . $this->institution ."&docId=".$pnx_id);
-    $response = $request->send();
-    return $response;
+    $response = $this->client->get($this->xservice_getit . "institution=" . $this->institution ."&docId=".$pnx_id)->send();
+    return $response->getBody();
   }
   
   /*
@@ -32,11 +31,10 @@ class PrimoClient
    * should I have a primo results objects 
    */
   public function doSearch(PrimoQuery $query) {
-    $request = $this->client->get($this->xservice_base . $this->xservice_brief_search . $query->getQueryString());
-    print_r($request);
-    $response = $request->send();
+    $response = $this->client->get($this->xservice_brief_search . $query->getQueryString())->send();
+    
     if(strlen($xml) != 0) { 
-      return $request; 
+      return $response->getBody(); 
     } else {
       return "<error><code>503</code><message>No Response from Primo Server</message></error>";
     }

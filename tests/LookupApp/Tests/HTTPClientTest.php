@@ -1,6 +1,7 @@
 <?php
 namespace LookupApp\Tests;
-use Silex\WebTestCase;
+
+use Guzzle\Service\Client;
 
 /*
  * Test should pass if you are running code from machine
@@ -11,8 +12,11 @@ use Silex\WebTestCase;
 class HTTPClientTest extends  \PHPUnit_Framework_TestCase
 {
     protected function setUp() {
-      
- 
-  
-  
+       $this->client = new \Guzzle\Service\Client('http://libwebprod.princeton.edu/searchit');
+    }
+    
+    function testBaseURLSetting() {
+      $response = $this->client->get('find/any/cats?limit=exact')->send();
+      echo $response->getBody();
+    }
 }
