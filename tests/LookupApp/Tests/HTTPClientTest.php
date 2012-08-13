@@ -17,6 +17,6 @@ class HTTPClientTest extends  \PHPUnit_Framework_TestCase
     
     function testBaseURLSetting() {
       $response = $this->client->get('find/any/cats?limit=exact')->send();
-      echo $response->getBody();
+      //echo $response->getBody();
     }
 }

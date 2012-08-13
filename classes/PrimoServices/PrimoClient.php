@@ -22,7 +22,7 @@ class PrimoClient
   public function getID($pnx_id) {
     $response = $this->client->get($this->xservice_getit . "institution=" . $this->institution ."&docId=".$pnx_id)->send();
     if(strlen($response) != 0) { 
-      return $response->getBody(); 
+      return (string)$response->getBody(); 
     } else {
       return "<error><code>503</code><message>No Response from Primo Server</message></error>";
     }
@@ -36,9 +36,9 @@ class PrimoClient
    */
   public function doSearch(PrimoQuery $query) {
     $response = $this->client->get($this->xservice_brief_search . $query->getQueryString())->send();
-    
+    //print_r($response->getBody()); 
     if(strlen($response) != 0) { 
-      return $response->getBody(); 
+      return (string)$response->getBody(); 
     } else {
       return "<error><code>503</code><message>No Response from Primo Server</message></error>";
     }

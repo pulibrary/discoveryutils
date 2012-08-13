@@ -132,6 +132,7 @@ $app->get('/hello/{name}', function ($name) use ($app) {
 
 $app->get('/record/{rec_id}.json', function($rec_id) use($app) {
   $record_data = $app['primo_client']->getID($app->escape($rec_id));
+  //$record_data;
   $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
   $stub_data = $primo_record->getBriefInfo();
   $app['monolog']->addInfo("PNXID_REQUEST: " . json_encode($stub_data));
