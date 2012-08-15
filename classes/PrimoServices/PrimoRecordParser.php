@@ -27,7 +27,7 @@ class PrimoRecordParser {
     try {
       return new \DOMXPath($dom);
     } catch (Exception $e) {
-      return "Error Parsing Holdings Data: " . $e->getMessage();
+      return "Error Parsing Primo Search Data: " . $e->getMessage();
     }
   }
   

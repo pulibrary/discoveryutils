@@ -358,6 +358,9 @@ Class PrimoRecord
     return $this->getText("lsr05");
   }
   
+  public function getTitle() {
+    return $this->getText("title");
+  }
   
   // this should be refactored method is way toooo long
   public function getCitation($type = "RIS") {
@@ -415,12 +418,8 @@ Class PrimoRecord
       array_unshift($format_mappings, $ris_type); //Make sure RIS type is first element. 
     }
     
-    if($this->getFullTextLinktoSrc()) {
-      $resource_link = $this->getFullTextLinktoSrc();
-    } else {
-      $deep_link = new PermaLink($this->getRecordID(), $this->primo_server_connection);
-      $resource_link = $deep_link->getLink();
-    }
+    $resource_link = $this->getResourceLink();
+    
     if($this->getCallNumber()) {
       array_push($format_mappings, "CN - ". trim($this->getCallNumber()));
     }
@@ -467,11 +466,24 @@ Class PrimoRecord
     return $section_values;
   }
   
+  public function getResourceLink() {
+    if($this->getFullTextLinktoSrc()) {
+      $resource_link = $this->getFullTextLinktoSrc();
+    } else {
+      $deep_link = new PermaLink($this->getRecordID(), $this->primo_server_connection);
+      $resource_link = $deep_link->getLink();
+    }
+    
+    return $resource_link;
+    
+  }
+  
   public function getStdNums() {
     //ADDME returns standard numbers (ISSN/ISBN associated with the record)
   }
   
-  
-  
+  /*
+   * Check out Magic Methods Implementation for access to important properties
+   */  
 }
 ?>

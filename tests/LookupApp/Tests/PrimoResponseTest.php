@@ -28,4 +28,15 @@ class LookupPrimoResponseTest extends \PHPUnit_Framework_TestCase {
         $this->assertTrue($record instanceof \PrimoServices\PrimoRecord);
       }
     }
+    
+    public function iterateOverCurrentResponseResults() {
+      $this->assertCount(10, count($this->multiple_response->getResults()));
+      
+    }
+    
+    public function testGetBriefResults() {
+      $brief_result_set = $this->multiple_response->getBriefResults();
+      $this->assertInternalType('array', $brief_result_set);
+      $this->assertStringStartsWith('One fine potion', $brief_result_set[9]['title']); //check title in last mock object item
+    }
 }

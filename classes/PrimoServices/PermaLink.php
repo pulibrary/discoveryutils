@@ -22,9 +22,9 @@ class PermaLink
   
   public function __construct($pnx_id, $primo_server_connection) {
     $this->primo_server_connection = $primo_server_connection;
-    $this->base_url = $primo_server_connection['base_url'];
-    $this->institution = $primo_server_connection['institution'];
-    $this->vid = $primo_server_connection['default_view_id'];
+    $this->base_url = $this->primo_server_connection['base_url'];
+    $this->institution = $this->primo_server_connection['institution'];
+    $this->vid = $this->primo_server_connection['default_view_id'];
     $this->pnx_id = $pnx_id;
     $this->pnx_link = $this->buildIDLink();
   }

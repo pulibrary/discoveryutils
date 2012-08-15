@@ -34,10 +34,34 @@ class PrimoResponse
     $this->result_set = $primo_record_parser->getRecords();
   }
   
+  private function buildFacetSet() {
+    
+  }
+  
   private function setHits() {
     $docset = $this->dom->getElementsByTagName("DOCSET")->item(0);
     $this->hits = $docset->getAttribute("TOTALHITS");
   }
   
+  public function getResults() {
+    return $this->result_set;
+  }
+  
+  public function getBriefResults() {
+    $brief_result_set = array();
+    foreach($this->result_set as $primo_record) {
+      $brief_result = array(
+        'url' => $primo_record->getResourceLink(),
+        'title' => trim($primo_record->getTitle()),
+      );
+      array_push($brief_result_set, $brief_result);
+    }
+    
+    return $brief_result_set;
+  }
+  
+  public function getFacets() {
+    
+  }
   
 }

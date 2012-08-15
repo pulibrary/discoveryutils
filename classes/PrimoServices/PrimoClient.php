@@ -22,7 +22,7 @@ class PrimoClient
   public function getID($pnx_id) {
     $response = $this->client->get($this->xservice_getit . "institution=" . $this->institution ."&docId=".$pnx_id)->send();
     if(strlen($response) != 0) { 
-      return (string)$response->getBody(); 
+      return (string)$response->getBody(); //also can do $response->getBody(TRUE)
     } else {
       return "<error><code>503</code><message>No Response from Primo Server</message></error>";
     }

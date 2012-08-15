@@ -11,7 +11,8 @@ use PrimoServices\PrimoRecord,
   PrimoServices\SummonQuery,
   PrimoServices\PrimoQuery,
   PrimoServices\RequestClient,
-  PrimoServices\SearchDeepLink;
+  PrimoServices\SearchDeepLink,
+  PrimoServices\PrimoResponse;
 
 $app = new Silex\Application(); 
 
@@ -42,6 +43,7 @@ $app['primo_server_connection'] = array(
   'default_view_id' => 'PRINCETON',
   'default_pnx_source_id' => 'PRN_VOYAGER',
   'default_scope' => array('PRN'),
+  'default.search' => "exact",
 );
 
 $app['locator.base'] = "http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php";
@@ -312,14 +314,23 @@ $app->get('/find/{index_type}/{query}', function($index_type, $query) use($app) 
   if($app['request']->get('limit')) {
     $operator = $app->escape($app['request']->get('limit'));
   } else {
-    $operator = "exact";
+    $operator = $app['primo_server_connection']['default.search'];
   }
 
-  $query = new PrimoQuery($app->escape($query), $app->escape($index_type), $operator, $scopes);
-  $response_data = $app['primo_client']->doSearch($query);
+  $primo_query = new PrimoQuery($app->escape($query), $app->escape($index_type), $operator, $scopes);
+  $search_results = $app['primo_client']->doSearch($primo_query);
+  $response = new PrimoResponse($search_results, $app['primo_server_connection']);
+  $deep_link = new SearchDeepLink($app->escape($query), "any", "contains", $app['primo_server_connection'], 'location', array("OTHERS", "FIRE"));
+  $response_data = array(
+    'query' => $app->escape($query),
+    'number' => $response->getHits(),
+    'more' => $deep_link->getLink(),
+    'records' => $response->getBriefResults(),
+    );
+    //print_r($response_data);
   $app['monolog']->addInfo("Index Query:" . $query . "\tREFERER:" . $referer);
   
-  return new Response($response_data, 200, array('Content-Type' => 'application/xml'));
+  return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json'));
 })->assert('index_type', '(issn|isbn|lccn|oclc|title|any|lsr05|creator)'); // should this be a list of possible options from the 
 
 return $app;

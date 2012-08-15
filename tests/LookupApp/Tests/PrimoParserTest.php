@@ -11,6 +11,7 @@ class LookupPrimoParserTest extends \PHPUnit_Framework_TestCase {
     $this->dom_document->loadXML(file_get_contents(dirname(__FILE__).'../../../support/PRN_VOYAGER857469.xml'));
     $this->primo_getit_response = new \DOMDocument();
     $this->primo_getit_response->loadXML(file_get_contents(dirname(__FILE__).'../../../support/getit-response.xml'));
+    $this->primo_search_response = file_get_contents(dirname(__FILE__).'../../../support/simple_string_results_response.xml');
   }
   
   function testConvertXMLStringToDOMDocument() {
@@ -30,6 +31,11 @@ class LookupPrimoParserTest extends \PHPUnit_Framework_TestCase {
     $dom_node_record = $record_node_list->item(0); //Take first record 
     $this->assertInstanceOf('DOMNode', $dom_node_record);
     $this->assertInstanceOf('DOMDocument', \PrimoServices\PrimoParser::convertToDOMDocument($dom_node_record));
+  }
+  
+  function testPrimoParseSearchResponse() {
+    //$this->assertInstanceOf('String', $this->primo_search_response);
+    $this->assertInstanceOf('DOMDocument', \PrimoServices\PrimoParser::convertToDOMDocument($this->primo_search_response));
   }
   
 }

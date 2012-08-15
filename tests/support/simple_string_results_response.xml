@@ -1,0 +1,1986 @@
+<sear:SEGMENTS xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib" xmlns:sear="http://www.exlibrisgroup.com/xsd/jaguar/search">
+  <sear:JAGROOT>
+    <sear:RESULT>
+      <sear:QUERYTRANSFORMS/>
+      <sear:FACETLIST ACCURATE_COUNTERS="true">
+        <sear:FACET COUNT="20" NAME="creator">
+          <sear:FACET_VALUES VALUE="1" KEY="Magentus, Leo"/>
+          <sear:FACET_VALUES VALUE="43" KEY="Psellus, Michael"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Renauld, Émile"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Hermes"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Gregoras, Nicephorus"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Joannou, Périclès-Pierre"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Proclus"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Tzetzes, John"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Rhodius, Bruno"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Manuzio family"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Porphyry"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Iamblichus"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Xiphilinus, Joannes"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Barber, Charles"/>
+          <sear:FACET_VALUES VALUE="6" KEY="Criscuolo, Ugo"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Dennis, George T"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Sewter, Edgar Robert Ashton"/>
+          <sear:FACET_VALUES VALUE="3" KEY="Jenkins, David"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Westerink, Leendert Gerrit"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Ficino, Marsilio"/>
+        </sear:FACET>
+        <sear:FACET COUNT="6" NAME="lcc">
+          <sear:FACET_VALUES VALUE="5" KEY="P - Language and literature."/>
+          <sear:FACET_VALUES VALUE="1" KEY="J - Political science."/>
+          <sear:FACET_VALUES VALUE="8" KEY="B - Philosophy. Psychology. Religion"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Z - Bibliography. Library science. Information resources (general)."/>
+          <sear:FACET_VALUES VALUE="1" KEY="R - Medicine."/>
+          <sear:FACET_VALUES VALUE="8" KEY="D - History (general) and history of europe."/>
+        </sear:FACET>
+        <sear:FACET COUNT="11" NAME="lang">
+          <sear:FACET_VALUES VALUE="1" KEY="und"/>
+          <sear:FACET_VALUES VALUE="1" KEY="dut"/>
+          <sear:FACET_VALUES VALUE="1" KEY="rus"/>
+          <sear:FACET_VALUES VALUE="10" KEY="ita"/>
+          <sear:FACET_VALUES VALUE="11" KEY="ger"/>
+          <sear:FACET_VALUES VALUE="17" KEY="eng"/>
+          <sear:FACET_VALUES VALUE="8" KEY="fre"/>
+          <sear:FACET_VALUES VALUE="19" KEY="grc"/>
+          <sear:FACET_VALUES VALUE="10" KEY="gre"/>
+          <sear:FACET_VALUES VALUE="15" KEY="lat"/>
+          <sear:FACET_VALUES VALUE="1" KEY="spa"/>
+        </sear:FACET>
+        <sear:FACET COUNT="2" NAME="rtype">
+          <sear:FACET_VALUES VALUE="62" KEY="books"/>
+          <sear:FACET_VALUES VALUE="1" KEY="archives"/>
+        </sear:FACET>
+        <sear:FACET COUNT="20" NAME="topic">
+          <sear:FACET_VALUES VALUE="2" KEY="Theology"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Codex Baroccianus Graecus 131. Fol. 397v-446v"/>
+          <sear:FACET_VALUES VALUE="3" KEY="Aristotle. Physics"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Attaleiatēs, Michaēl, 11th cent. Historia"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Greece"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Bible. O.T. Song of Solomon"/>
+          <sear:FACET_VALUES VALUE="4" KEY="Philosophy, Medieval"/>
+          <sear:FACET_VALUES VALUE="22" KEY="Psellus, Michael"/>
+          <sear:FACET_VALUES VALUE="4" KEY="Occultism"/>
+          <sear:FACET_VALUES VALUE="4" KEY="Orthodox Eastern Church"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Michaēl, Cerularius, Patriarch of Constantinople, ca. 1000-1059"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Astrology"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Xiphilinus, Joannes, ca. 1010-1075"/>
+          <sear:FACET_VALUES VALUE="15" KEY="Byzantine Empire"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Mysteries, Religious"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Greek language, Medieval and late"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Euripides"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Historiography"/>
+          <sear:FACET_VALUES VALUE="2" KEY="Neoplatonism"/>
+          <sear:FACET_VALUES VALUE="3" KEY="Demonology"/>
+        </sear:FACET>
+        <sear:FACET COUNT="2" NAME="tlevel">
+          <sear:FACET_VALUES VALUE="2" KEY="online_resources"/>
+          <sear:FACET_VALUES VALUE="53" KEY="available"/>
+        </sear:FACET>
+        <sear:FACET COUNT="2" NAME="pfilter">
+          <sear:FACET_VALUES VALUE="62" KEY="books"/>
+          <sear:FACET_VALUES VALUE="1" KEY="archives"/>
+        </sear:FACET>
+        <sear:FACET COUNT="31" NAME="creationdate">
+          <sear:FACET_VALUES VALUE="2" KEY="2008"/>
+          <sear:FACET_VALUES VALUE="4" KEY="2006"/>
+          <sear:FACET_VALUES VALUE="1" KEY="1600"/>
+          <sear:FACET_VALUES VALUE="3" KEY="2005"/>
+          <sear:FACET_VALUES VALUE="2" KEY="1956"/>
+          <sear:FACET_VALUES VALUE="1" KEY="1953"/>
+          <sear:FACET_VALUES VALUE="1" KEY="1950"/>
+          <sear:FACET_VALUES VALUE="2" KEY="1930"/>
+          <sear:FACET_VALUES VALUE="1" KEY="1971"/>
+          <sear:FACET_VALUES VALUE="1" KEY="1972"/>
+          <sear:FACET_VALUES VALUE="3" KEY="1973"/>
+          <sear:FACET_VALUES VALUE="1" KEY="1974"/>
+          <sear:FACET_VALUES VALUE="2" KEY="1992"/>
+          <sear:FACET_VALUES VALUE="1" KEY="1500"/>
+          <sear:FACET_VALUES VALUE="1" KEY="1993"/>
+          <sear:FACET_VALUES VALUE="3" KEY="1994"/>
+          <sear:FACET_VALUES VALUE="1" KEY="1977"/>
+          <sear:FACET_VALUES VALUE="1" KEY="2012"/>
+          <sear:FACET_VALUES VALUE="1" KEY="1978"/>
+          <sear:FACET_VALUES VALUE="3" KEY="1700"/>
+          <sear:FACET_VALUES VALUE="4" KEY="1920"/>
+          <sear:FACET_VALUES VALUE="2" KEY="1966"/>
+          <sear:FACET_VALUES VALUE="4" KEY="1900"/>
+          <sear:FACET_VALUES VALUE="3" KEY="1964"/>
+          <sear:FACET_VALUES VALUE="6" KEY="1990"/>
+          <sear:FACET_VALUES VALUE="2" KEY="1940"/>
+          <sear:FACET_VALUES VALUE="1" KEY="1983"/>
+          <sear:FACET_VALUES VALUE="1" KEY="1986"/>
+          <sear:FACET_VALUES VALUE="1" KEY="1985"/>
+          <sear:FACET_VALUES VALUE="3" KEY="1989"/>
+          <sear:FACET_VALUES VALUE="1" KEY="2001"/>
+        </sear:FACET>
+        <sear:FACET COUNT="4" NAME="genre">
+          <sear:FACET_VALUES VALUE="1" KEY="Annotations (Provenance)"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Glosses"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Manuscripts, Greek -- 13th century"/>
+          <sear:FACET_VALUES VALUE="1" KEY="Electronic books"/>
+        </sear:FACET>
+      </sear:FACETLIST>
+      <sear:DOCSET IS_LOCAL="true" TOTAL_TIME="38" LASTHIT="10" FIRSTHIT="1" TOTALHITS="63" HIT_TIME="8">
+        <sear:DOC SEARCH_ENGINE_TYPE="Local Search Engine" SEARCH_ENGINE="Local Search Engine" NO="1" RANK="7.1125914E-4" ID="2746131">
+          <PrimoNMBib>
+            <record>
+              <control>
+                <sourcerecordid>4942498</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER4942498</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>4942498</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>book</type>
+                <title>Mothers and sons, fathers and daughters : the Byzantine family of &lt;span class="searchword">Michael&lt;/span> &lt;span class="searchword">Psellos&lt;/span> / edited and translated by Anthony Kaldellis ; with contributions by David Jenkins and Stratis Papaioannou.</title>
+                <creator>Psellus, Michael.</creator>
+                <contributor>Kaldellis, Anthony</contributor>
+                <contributor>Jenkins, David (David Todd)</contributor>
+                <contributor>Papaioannou, Stratis</contributor>
+                <publisher>Notre Dame, Ind. : University of Notre Dame Press, c2006.</publisher>
+                <creationdate>c2006</creationdate>
+                <identifier>$$CISBN$$V0268033153 (pbk. : alk. paper)</identifier>
+                <subject>Psellus, Michael -- Family; Psellus family</subject>
+                <language>eng</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LFIRE$$1(F)$$2PA5355.Z5 P74 2006$$Savailable$$31$$40$$5N$$63$$Xprincetondb$$Yf</availlibrary>
+                <unititle>[Selections. English. 2006]</unititle>
+                <lds03>x, 209 p. ; 23 cm.</lds03>
+                <lds03>Includes bibliographical references (p. 187-203) and index.</lds03>
+                <lds15>Michael Psellos in translation</lds15>
+                <lds22>Byzantine family of Michael Psellos</lds22>
+                <lds26>University of Notre Dame Press</lds26>
+                <lds27>PA5355.Z5 P74 2006</lds27>
+                <lds28>4942498</lds28>
+                <availinstitution>$$IPRN$$Savailable</availinstitution>
+                <availpnx>available</availpnx>
+                <snippetfield>title</snippetfield>
+                <snippet>Mothers and sons, fathers and daughters : the Byzantine family of &lt;span class="searchword">Michael&lt;/span> &lt;span class="searchword">Psellos&lt;/span> /</snippet>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <thumbnail>$$Tamazon_thumb</thumbnail>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <linktotoc>$$Uhttp://www.loc.gov/catdir/toc/ecip0618/2006024194.html$$DTable of contents only</linktotoc>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <linktouc>$$Tamazon_uc$$Eamazon</linktouc>
+                <linktouc>$$Tworldcat_isbn$$Eworldcat</linktouc>
+                <lln01>$$Tfind_fire$$Elfind_fire</lln01>
+              </links>
+              <search>
+                <creatorcontrib>Michael  Psellus</creatorcontrib>
+                <creatorcontrib>Psellus, Michael.</creatorcontrib>
+                <creatorcontrib>Psellus, M</creatorcontrib>
+                <creatorcontrib>edited and translated by Anthony Kaldellis ; with contributions by David Jenkins and Stratis Papaioannou.</creatorcontrib>
+                <creatorcontrib>Anthony  Kaldellis</creatorcontrib>
+                <creatorcontrib>David  Jenkins  (David Todd)</creatorcontrib>
+                <creatorcontrib>Stratis  Papaioannou</creatorcontrib>
+                <creatorcontrib>Kaldellis, Anthony.</creatorcontrib>
+                <creatorcontrib>Jenkins, David (David Todd)</creatorcontrib>
+                <creatorcontrib>Papaioannou, Stratis.</creatorcontrib>
+                <creatorcontrib>Kaldellis, A</creatorcontrib>
+                <creatorcontrib>Jenkins, D</creatorcontrib>
+                <creatorcontrib>Papaioannou, S</creatorcontrib>
+                <creatorcontrib>Ψελλ́ος, Μιχὰηλ</creatorcontrib>
+                <creatorcontrib>Psellos, Mihail</creatorcontrib>
+                <creatorcontrib>Psel, Mihailo</creatorcontrib>
+                <creatorcontrib>Psel, Mikhail</creatorcontrib>
+                <creatorcontrib>Psell, Mikhail</creatorcontrib>
+                <creatorcontrib>Psello, Michele</creatorcontrib>
+                <creatorcontrib>Psellos, Michaēl</creatorcontrib>
+                <creatorcontrib>Psellos, Michał</creatorcontrib>
+                <creatorcontrib>Psellus, Constantine</creatorcontrib>
+                <creatorcontrib>Psellus, Constantinus</creatorcontrib>
+                <creatorcontrib>Papaioannou, Eustratios</creatorcontrib>
+                <title>Mothers and sons, fathers and daughters : the Byzantine family of &lt;span class="searchword">Michael&lt;/span> &lt;span class="searchword">Psellos&lt;/span> /</title>
+                <subject>Psellus, Michael Family.</subject>
+                <subject>Psellus family.</subject>
+                <general>University of Notre Dame Press,</general>
+                <general>9780268033156</general>
+                <general>voy-4942498</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER4942498</recordid>
+                <isbn>0268033153</isbn>
+                <rsrctype>book</rsrctype>
+                <creationdate>2006</creationdate>
+                <addtitle>Michael Psellos in translation</addtitle>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>FIRE</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>FIRE</scope>
+                <scope>PRN</scope>
+                <alttitle>Selections. English. 2006</alttitle>
+                <alttitle>Byzantine family of Michael Psellos</alttitle>
+                <lsr04>0268033153</lsr04>
+                <lsr05>PA5355.Z5 P74 2006</lsr05>
+                <lsr06>4942498</lsr06>
+              </search>
+              <sort>
+                <title>Mothers and sons, fathers and daughters : the Byzantine family of Michael Psellos</title>
+                <title>Byzantine family of Michael Psellos</title>
+                <title>Michael Psellos in translation</title>
+                <creationdate>2006</creationdate>
+                <author>Psellus, Michael.</author>
+              </sort>
+              <facets>
+                <language>eng</language>
+                <creationdate>2006</creationdate>
+                <topic>Psellus, Michael–Family</topic>
+                <topic>Psellus family</topic>
+                <toplevel>available</toplevel>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>Psellus, Michael</creatorcontrib>
+                <creatorcontrib>Kaldellis, Anthony</creatorcontrib>
+                <creatorcontrib>Jenkins, David</creatorcontrib>
+                <creatorcontrib>Papaioannou, Stratis</creatorcontrib>
+                <frbrgroupid>38779526</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c1>2006024194</c1>
+                <c2>0268033153</c2>
+                <c3>mothersandsonsfatheraelpsellos</c3>
+                <c4>2006</c4>
+                <f1>2006024194</f1>
+                <f3>0268033153</f3>
+                <f5>mothersandsonsfathersanddaughtersthebyzantinefamilyofmichaelpsellos</f5>
+                <f6>2006</f6>
+                <f7>mothers and sons fathers and daughters the byzantine family of michael psellos</f7>
+                <f8>inu</f8>
+                <f9>x209p</f9>
+                <f10>university of notre dame press</f10>
+                <f11>psellus michael</f11>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kpsellus michael$$AA</k1>
+                <k3>$$Kmothers and sons fathers and daughters the byzantine family of michael psellos$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <enrichment>
+                <classificationlcc>PA5355.Z5</classificationlcc>
+              </enrichment>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Psellus</aulast>
+                <aufirst>Michael</aufirst>
+                <au>Psellus, Michael</au>
+                <addau>Kaldellis, Anthony</addau>
+                <addau>Jenkins, David (David Todd)</addau>
+                <addau>Papaioannou, Stratis</addau>
+                <btitle>Mothers and sons, fathers and daughters : the Byzantine family of Michael Psellos / edited and translated by Anthony Kaldellis ; with contributions by David Jenkins and Stratis Papaioannou.</btitle>
+                <addtitle>Byzantine family of Michael Psellos</addtitle>
+                <seriestitle>Michael Psellos in translation</seriestitle>
+                <date>2006</date>
+                <risdate>c2006.</risdate>
+                <isbn>0268033153</isbn>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <notes>Includes bibliographical references (p. 187-203) and index.</notes>
+                <cop>Notre Dame, Ind.</cop>
+                <pub>University of Notre Dame Press</pub>
+                <oclcid>70775629</oclcid>
+                <lccn>2006024194</lccn>
+                <lad01>f</lad01>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-15T07%3A22%3A07IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Mothers%20and%20sons%2C%20fathers%20and%20daughters%20:%20the%20Byzantine%20family%20of%20Michael%20Psellos%20/%20edited%20and%20translated%20by%20Anthony%20Kaldellis%20%3B%20with%20contributions%20by%20David%20Jenkins%20and%20Stratis%20Papaioannou.&amp;rft.aulast=Psellus&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Psellus%2C%20Michael&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0268033153&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>4942498&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>FIRE</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>(F)</sear:collection>
+              <sear:callNumber>PA5355.Z5 P74 2006</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-15T07%3A22%3A07IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Mothers%20and%20sons%2C%20fathers%20and%20daughters%20:%20the%20Byzantine%20family%20of%20Michael%20Psellos%20/%20edited%20and%20translated%20by%20Anthony%20Kaldellis%20%3B%20with%20contributions%20by%20David%20Jenkins%20and%20Stratis%20Papaioannou.&rft.aulast=Psellus&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Psellus%2C%20Michael&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=0268033153&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>4942498</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=4942498&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://images.amazon.com/images/P/0268033153.01._SSTHUM_.jpg</sear:thumbnail>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:0268033153,OCLC:70775629,LCCN:2006024194&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:linktotoc>http://www.loc.gov/catdir/toc/ecip0618/2006024194.html</sear:linktotoc>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-15T07%3A22%3A07IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Mothers%20and%20sons%2C%20fathers%20and%20daughters%20:%20the%20Byzantine%20family%20of%20Michael%20Psellos%20/%20edited%20and%20translated%20by%20Anthony%20Kaldellis%20%3B%20with%20contributions%20by%20David%20Jenkins%20and%20Stratis%20Papaioannou.&rft.aulast=Psellus&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Psellus%2C%20Michael&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=0268033153&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>4942498</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktouc>http://www.amazon.com/gp/product/0268033153</sear:linktouc>
+            <sear:linktouc>http://www.worldcat.org/search?q=isbn%3A0268033153</sear:linktouc>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=f&amp;id=4942498</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+        <sear:DOC SEARCH_ENGINE_TYPE="Local Search Engine" SEARCH_ENGINE="Local Search Engine" NO="2" RANK="3.060926E-4" ID="3739815">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>1529393</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER1529393</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>1529393</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>book</type>
+                <title>Oströmische Beamte im Spiegel der Schriften des &lt;span class="searchword">Michael&lt;/span> &lt;span class="searchword">Psellos&lt;/span>.</title>
+                <creator>Weiss, Günter, fl. 1969-</creator>
+                <contributor>Psellus, Michael</contributor>
+                <publisher>München, Institut für Byzantinistik und Neugriechische Philologie der Universität, 1973.</publisher>
+                <creationdate>1973</creationdate>
+                <subject>Psellus, Michael; Byzantine Empire -- Officials and employees; Byzantine Empire -- Social conditions</subject>
+                <language>und;und</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LFIRE$$1(F)$$2JC93 .W457 1973$$Savailable$$31$$40$$5N$$62$$Xprincetondb$$Yf</availlibrary>
+                <lds03>vi, 367 p. 21 cm.</lds03>
+                <lds03>Bibliography: p. 331-347.</lds03>
+                <lds06>Includes texts in Greek by M. Psellus.</lds06>
+                <lds15>Miscellanea Byzantina Monacensia, Heft 16</lds15>
+                <lds26>Institut für Byzantinistik und Neugriechische Philologie der Universität</lds26>
+                <lds27>JC93 .W457 1973</lds27>
+                <lds28>1529393</lds28>
+                <availinstitution>$$IPRN$$Savailable</availinstitution>
+                <availpnx>available</availpnx>
+                <snippet/>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <linktouc>$$Tworldcat_oclc$$Eworldcat</linktouc>
+                <lln01>$$Tfind_fire$$Elfind_fire</lln01>
+              </links>
+              <search>
+                <creatorcontrib>Günter,  Weiss  fl. 1969-</creatorcontrib>
+                <creatorcontrib>Weiss, Günter, fl. 1969-</creatorcontrib>
+                <creatorcontrib>Weiss, G</creatorcontrib>
+                <creatorcontrib>Michael  Psellus</creatorcontrib>
+                <creatorcontrib>Psellus, Michael.</creatorcontrib>
+                <creatorcontrib>Psellus, M</creatorcontrib>
+                <creatorcontrib>Ψελλ́ος, Μιχὰηλ</creatorcontrib>
+                <creatorcontrib>Psellos, Mihail</creatorcontrib>
+                <creatorcontrib>Psel, Mihailo</creatorcontrib>
+                <creatorcontrib>Psel, Mikhail</creatorcontrib>
+                <creatorcontrib>Psell, Mikhail</creatorcontrib>
+                <creatorcontrib>Psello, Michele</creatorcontrib>
+                <creatorcontrib>Psellos, Michaēl</creatorcontrib>
+                <creatorcontrib>Psellos, Michał</creatorcontrib>
+                <creatorcontrib>Psellus, Constantine</creatorcontrib>
+                <creatorcontrib>Psellus, Constantinus</creatorcontrib>
+                <title>Oströmische Beamte im Spiegel der Schriften des &lt;span class="searchword">Michael&lt;/span> &lt;span class="searchword">Psellos&lt;/span>.</title>
+                <subject>Psellus, Michael.</subject>
+                <subject>Byzantine Empire Officials and employees.</subject>
+                <subject>Byzantine Empire Social conditions.</subject>
+                <subject>Psel, Mihailo</subject>
+                <subject>Psel, Mikhail</subject>
+                <subject>Psell, Mikhail</subject>
+                <subject>Psello, Michele</subject>
+                <subject>Psellos, Michaēl</subject>
+                <subject>Psellos, Michał</subject>
+                <subject>Psellus, Constantine</subject>
+                <subject>Psellus, Constantinus</subject>
+                <subject>Ψελλ́ος, Μιχὰηλ</subject>
+                <subject>Psellos, Mihail</subject>
+                <general>Institut für Byzantinistik und Neugriechische Philologie der Universität,</general>
+                <general>voy-1529393</general>
+                <general>Includes texts in Greek by M. Psellus.</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER1529393</recordid>
+                <rsrctype>book</rsrctype>
+                <creationdate>1973</creationdate>
+                <addtitle>Miscellanea Byzantina Monacensia, Heft 16</addtitle>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>FIRE</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>FIRE</scope>
+                <scope>PRN</scope>
+                <lsr05>JC93 .W457 1973</lsr05>
+                <lsr06>1529393</lsr06>
+              </search>
+              <sort>
+                <title>Oströmische Beamte im Spiegel der Schriften des Michael Psellos</title>
+                <title>Miscellanea Byzantina Monacensia</title>
+                <creationdate>1973</creationdate>
+                <author>Weiss, Günter, fl. 1969-</author>
+              </sort>
+              <facets>
+                <language>ger</language>
+                <language>gre</language>
+                <creationdate>1973</creationdate>
+                <topic>Psellus, Michael</topic>
+                <topic>Byzantine Empire–Officials and employees</topic>
+                <topic>Byzantine Empire–Social conditions</topic>
+                <toplevel>available</toplevel>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>Weiss, Günter</creatorcontrib>
+                <creatorcontrib>Psellus, Michael</creatorcontrib>
+                <classificationlcc>J - Political science.–Political theory. The state. Theories of the state–Ancient state</classificationlcc>
+                <frbrgroupid>31798520</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c1>74318548</c1>
+                <c3>ostromischebeamteimsaelpsellos</c3>
+                <c4>1973</c4>
+                <f1>74318548</f1>
+                <f5>ostromischebeamteimsaelpsellos</f5>
+                <f6>1973</f6>
+                <f7>ostromische beamte im spiegel der schriften des michael psellos</f7>
+                <f8>gw</f8>
+                <f9>vi367p</f9>
+                <f10>institut fur byzantinistik und neugriechische philologie der universitat</f10>
+                <f11>weiss gunter fl 1969</f11>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kweiss gunter fl 1969$$AA</k1>
+                <k3>$$Kostromische beamte im spiegel der schriften des michael psellos$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <enrichment>
+                <classificationlcc>JC93</classificationlcc>
+              </enrichment>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Weiss</aulast>
+                <aufirst>Günter,</aufirst>
+                <au>Weiss, Günter, fl. 1969-</au>
+                <addau>Psellus, Michael</addau>
+                <btitle>Oströmische Beamte im Spiegel der Schriften des Michael Psellos.</btitle>
+                <seriestitle>Miscellanea Byzantina Monacensia, Heft 16</seriestitle>
+                <date>1973</date>
+                <risdate>1973.</risdate>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <notes>Bibliography: p. 331-347.</notes>
+                <cop>München</cop>
+                <pub>Institut für Byzantinistik und Neugriechische Philologie der Universität</pub>
+                <oclcid>01012361</oclcid>
+                <lccn>74318548</lccn>
+                <lad01>f</lad01>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-15T07%3A22%3A07IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Mothers%20and%20sons%2C%20fathers%20and%20daughters%20:%20the%20Byzantine%20family%20of%20Michael%20Psellos%20/%20edited%20and%20translated%20by%20Anthony%20Kaldellis%20%3B%20with%20contributions%20by%20David%20Jenkins%20and%20Stratis%20Papaioannou.&amp;rft.aulast=Psellus&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Psellus%2C%20Michael&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0268033153&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>4942498&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>FIRE</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>(F)</sear:collection>
+              <sear:callNumber>JC93 .W457 1973</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-15T07%3A22%3A07IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Oströmische%20Beamte%20im%20Spiegel%20der%20Schriften%20des%20Michael%20Psellos.&rft.aulast=Weiss&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Weiss%2C%20Günter%2C%20fl.%201969-&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>1529393</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=1529393&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:,OCLC:01012361,LCCN:74318548&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-15T07%3A22%3A07IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Oströmische%20Beamte%20im%20Spiegel%20der%20Schriften%20des%20Michael%20Psellos.&rft.aulast=Weiss&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Weiss%2C%20Günter%2C%20fl.%201969-&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>1529393</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktouc>http://www.worldcat.org/search?q=no%3A01012361</sear:linktouc>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=f&amp;id=1529393</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+        <sear:DOC SEARCH_ENGINE_TYPE="Local Search Engine" SEARCH_ENGINE="Local Search Engine" NO="3" RANK="2.5436922E-4" ID="3705884">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>2883768</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER2883768</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>2883768</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>book</type>
+                <title>Christliche Metaphysik in Byzanz.</title>
+                <creator>Joannou, Périclès-Pierre, 1904-1972.</creator>
+                <publisher>[Ettal] Buch-Kunstverlag Ettal 1956-</publisher>
+                <creationdate>1956-</creationdate>
+                <subject>Psellus, Michael; Joannes Ialus, 11th century; Metaphysics -- History; Scholasticism -- History; Byzantine Empire -- Intellectual life</subject>
+                <language>ger</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LRECAP$$1(RCPPA)$$26038.7459$$Sunavailable$$31$$41$$5N$$63$$Xprincetondb$$Yrcppa</availlibrary>
+                <lds03>v. 26 cm.</lds03>
+                <lds05>1. Die Illuminationslehre des Michael Psellos und Joannes Italos.</lds05>
+                <lds15>Studia patristica et Byzantina, Heft 3</lds15>
+                <lds26>Buch-Kunstverlag Ettal</lds26>
+                <lds27>6038.7459</lds27>
+                <lds28>2883768</lds28>
+                <availinstitution>$$IPRN$$Sunavailable</availinstitution>
+                <availpnx>unavailable</availpnx>
+                <snippet/>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <linktouc>$$Tworldcat_oclc$$Eworldcat</linktouc>
+                <lln01>$$Tfind_recap$$Elfind_recap</lln01>
+              </links>
+              <search>
+                <creatorcontrib>Périclès-Pierre,  Joannou  1904-1972.</creatorcontrib>
+                <creatorcontrib>Joannou, Périclès-Pierre, 1904-1972.</creatorcontrib>
+                <creatorcontrib>Joannou, P</creatorcontrib>
+                <creatorcontrib>Joannou, Perikles, 1904-1972</creatorcontrib>
+                <title>Christliche Metaphysik in Byzanz.</title>
+                <subject>Psellus, Michael.</subject>
+                <subject>Joannes Ialus, 11th century.</subject>
+                <subject>Metaphysics History.</subject>
+                <subject>Scholasticism History.</subject>
+                <subject>Byzantine Empire Intellectual life.</subject>
+                <subject>Psel, Mihailo</subject>
+                <subject>Psel, Mikhail</subject>
+                <subject>Psell, Mikhail</subject>
+                <subject>Psello, Michele</subject>
+                <subject>Psellos, Michaēl</subject>
+                <subject>Psellos, Michał</subject>
+                <subject>Psellos, Mihail</subject>
+                <subject>Psellus, Constantine</subject>
+                <subject>Psellus, Constantinus</subject>
+                <subject>Ψελλ́ος, Μιχὰηλ</subject>
+                <general>Buch-Kunstverlag Ettal</general>
+                <general>voy-2883768</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER2883768</recordid>
+                <toc>1. Die Illuminationslehre des Michael Psellos und Joannes Italos.</toc>
+                <rsrctype>book</rsrctype>
+                <creationdate>1956</creationdate>
+                <creationdate>9999</creationdate>
+                <addtitle>Studia patristica et Byzantina, Heft 3</addtitle>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>RECAP</searchscope>
+                <searchscope>OTHERS</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>RECAP</scope>
+                <scope>OTHERS</scope>
+                <scope>PRN</scope>
+                <lsr05>6038.7459</lsr05>
+                <lsr06>2883768</lsr06>
+              </search>
+              <sort>
+                <title>Christliche Metaphysik in Byzanz</title>
+                <title>Studia patristica et Byzantina</title>
+                <creationdate>1956</creationdate>
+                <author>Joannou, Périclès-Pierre, 1904-1972.</author>
+              </sort>
+              <facets>
+                <language>ger</language>
+                <creationdate>1956</creationdate>
+                <topic>Psellus, Michael</topic>
+                <topic>Joannes Ialus, 11th century</topic>
+                <topic>Metaphysics–History</topic>
+                <topic>Scholasticism–History</topic>
+                <topic>Byzantine Empire–Intellectual life</topic>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>Joannou, Périclès-Pierre</creatorcontrib>
+                <classificationlcc>B - Philosophy. Psychology. Religion–Philosophy (General)–By period Including individual philosophers and schools of philosophy–Medieval</classificationlcc>
+                <frbrgroupid>33090030</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c1>71028597</c1>
+                <c3>christlichemetaphysikinbyzanz</c3>
+                <c4>1956</c4>
+                <f1>71028597</f1>
+                <f5>christlichemetaphysikinbyzanz</f5>
+                <f6>1956</f6>
+                <f7>christliche metaphysik in byzanz</f7>
+                <f8>xx</f8>
+                <f9>v</f9>
+                <f10>buch kunstverlag ettal</f10>
+                <f11>joannou pericles pierre 1904 1972</f11>
+                <f16>m</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kjoannou pericles pierre 1904 1972$$AA</k1>
+                <k3>$$Kchristliche metaphysik in byzanz$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <enrichment>
+                <classificationlcc>B734</classificationlcc>
+              </enrichment>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Joannou</aulast>
+                <aufirst>Périclès-Pierre,</aufirst>
+                <au>Joannou, Périclès-Pierre, 1904-1972</au>
+                <btitle>Christliche Metaphysik in Byzanz.</btitle>
+                <seriestitle>Studia patristica et Byzantina, Heft 3</seriestitle>
+                <date>1956</date>
+                <risdate>1956-</risdate>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <cop>Ettal</cop>
+                <pub>Buch-Kunstverlag Ettal</pub>
+                <oclcid>05622272</oclcid>
+                <lccn>71028597</lccn>
+                <lad05>rcppa</lad05>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-15T07%3A22%3A07IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Mothers%20and%20sons%2C%20fathers%20and%20daughters%20:%20the%20Byzantine%20family%20of%20Michael%20Psellos%20/%20edited%20and%20translated%20by%20Anthony%20Kaldellis%20%3B%20with%20contributions%20by%20David%20Jenkins%20and%20Stratis%20Papaioannou.&amp;rft.aulast=Psellus&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Psellus%2C%20Michael&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0268033153&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>4942498&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>RECAP</sear:library>
+              <sear:status>unavailable</sear:status>
+              <sear:collection>(RCPPA)</sear:collection>
+              <sear:callNumber>6038.7459</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-15T07%3A22%3A07IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Christliche%20Metaphysik%20in%20Byzanz.&rft.aulast=Joannou&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Joannou%2C%20Périclès-Pierre%2C%201904-1972&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>2883768</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=2883768&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:,OCLC:05622272,LCCN:71028597&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-15T07%3A22%3A07IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Christliche%20Metaphysik%20in%20Byzanz.&rft.aulast=Joannou&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Joannou%2C%20Périclès-Pierre%2C%201904-1972&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>2883768</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktouc>http://www.worldcat.org/search?q=no%3A05622272</sear:linktouc>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=rcppa&amp;id=2883768</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+        <sear:DOC SEARCH_ENGINE_TYPE="Local Search Engine" SEARCH_ENGINE="Local Search Engine" NO="4" RANK="2.3712809E-4" ID="2886498">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>4810187</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER4810187</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>4810187</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>book</type>
+                <title>Reading &lt;span class="searchword">Michael&lt;/span> &lt;span class="searchword">Psellos&lt;/span> / edited by Charles Barber and David Jenkins.</title>
+                <contributor>Barber, Charles, 1964-</contributor>
+                <contributor>Jenkins, David (David Todd)</contributor>
+                <publisher>Leiden ; Boston : Brill, 2006.</publisher>
+                <creationdate>2006</creationdate>
+                <identifier>$$CISBN$$V900415180X (hardback : alk. paper); $$CISBN$$V9789004151802 (hardback : alk. paper)</identifier>
+                <subject>Psellus, Michael</subject>
+                <language>eng</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LFIRE$$1(F)$$2PA5355.Z5 R43 2006$$Sunavailable$$31$$41$$5N$$62$$Xprincetondb$$Yf</availlibrary>
+                <lds03>viii, 255 p. : ill. ; 25 cm.</lds03>
+                <lds03>Includes bibliographical references (p. [235]-250) and index.</lds03>
+                <lds15>The medieval Mediterranean, 0928-5520 ; v. 61</lds15>
+                <lds26>Brill</lds26>
+                <lds27>PA5355.Z5 R43 2006</lds27>
+                <lds28>4810187</lds28>
+                <availinstitution>$$IPRN$$Sunavailable</availinstitution>
+                <availpnx>unavailable</availpnx>
+                <snippet/>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <thumbnail>$$Tamazon_thumb</thumbnail>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <linktouc>$$Tamazon_uc$$Eamazon</linktouc>
+                <linktouc>$$Tworldcat_isbn$$Eworldcat</linktouc>
+                <lln01>$$Tfind_fire$$Elfind_fire</lln01>
+              </links>
+              <search>
+                <creatorcontrib>edited by Charles Barber and David Jenkins.</creatorcontrib>
+                <creatorcontrib>Charles,  Barber  1964-</creatorcontrib>
+                <creatorcontrib>David  Jenkins  (David Todd)</creatorcontrib>
+                <creatorcontrib>Barber, Charles, 1964-</creatorcontrib>
+                <creatorcontrib>Jenkins, David (David Todd)</creatorcontrib>
+                <creatorcontrib>Barber, C</creatorcontrib>
+                <creatorcontrib>Jenkins, D</creatorcontrib>
+                <creatorcontrib>Barber, Charles Edward, 1964-</creatorcontrib>
+                <title>Reading &lt;span class="searchword">Michael&lt;/span> &lt;span class="searchword">Psellos&lt;/span> /</title>
+                <subject>Psellus, Michael.</subject>
+                <subject>Psel, Mihailo</subject>
+                <subject>Psel, Mikhail</subject>
+                <subject>Psell, Mikhail</subject>
+                <subject>Psello, Michele</subject>
+                <subject>Psellos, Michaēl</subject>
+                <subject>Psellos, Michał</subject>
+                <subject>Psellus, Constantine</subject>
+                <subject>Psellus, Constantinus</subject>
+                <subject>Ψελλ́ος, Μιχὰηλ</subject>
+                <subject>Psellos, Mihail</subject>
+                <general>Brill,</general>
+                <general>voy-4810187</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER4810187</recordid>
+                <isbn>900415180X</isbn>
+                <isbn>9789004151802</isbn>
+                <rsrctype>book</rsrctype>
+                <creationdate>2006</creationdate>
+                <addtitle>The medieval Mediterranean, v. 61</addtitle>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>FIRE</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>FIRE</scope>
+                <scope>PRN</scope>
+                <lsr04>900415180X</lsr04>
+                <lsr04>9789004151802</lsr04>
+                <lsr05>PA5355.Z5 R43 2006</lsr05>
+                <lsr06>4810187</lsr06>
+              </search>
+              <sort>
+                <title>Reading Michael Psellos</title>
+                <title>The medieval Mediterranean</title>
+                <creationdate>2006</creationdate>
+                <author>Barber, Charles, 1964-</author>
+              </sort>
+              <facets>
+                <language>eng</language>
+                <creationdate>2006</creationdate>
+                <topic>Psellus, Michael</topic>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>Barber, Charles</creatorcontrib>
+                <creatorcontrib>Jenkins, David</creatorcontrib>
+                <classificationlcc>P - Language and literature.–Classical philology</classificationlcc>
+                <frbrgroupid>38982506</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c1>2006043988</c1>
+                <c2>900415180X;9789004151802</c2>
+                <c3>readingmichaelpsellos</c3>
+                <c4>2006</c4>
+                <f1>2006043988</f1>
+                <f3>900415180X;9789004151802</f3>
+                <f5>readingmichaelpsellos</f5>
+                <f6>2006</f6>
+                <f7>reading michael psellos</f7>
+                <f8>ne</f8>
+                <f9>viii255p</f9>
+                <f10>brill</f10>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kbarber charles 1964$$AA</k1>
+                <k1>$$Kjenkins david david todd$$AA</k1>
+                <k3>$$Kreading michael psellos$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <enrichment>
+                <classificationlcc>PA5355.Z5</classificationlcc>
+              </enrichment>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Barber</aulast>
+                <aufirst>Charles,</aufirst>
+                <addau>Barber, Charles, 1964-</addau>
+                <addau>Jenkins, David (David Todd)</addau>
+                <btitle>Reading Michael Psellos / edited by Charles Barber and David Jenkins.</btitle>
+                <seriestitle>The medieval Mediterranean, v. 61</seriestitle>
+                <date>2006</date>
+                <risdate>2006.</risdate>
+                <isbn>900415180X</isbn>
+                <isbn>9789004151802</isbn>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <notes>Includes bibliographical references (p. [235]-250) and index.</notes>
+                <cop>Leiden ; Boston</cop>
+                <pub>Brill</pub>
+                <oclcid>65407668</oclcid>
+                <lccn>2006043988</lccn>
+                <lad01>f</lad01>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-15T07%3A22%3A07IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Mothers%20and%20sons%2C%20fathers%20and%20daughters%20:%20the%20Byzantine%20family%20of%20Michael%20Psellos%20/%20edited%20and%20translated%20by%20Anthony%20Kaldellis%20%3B%20with%20contributions%20by%20David%20Jenkins%20and%20Stratis%20Papaioannou.&amp;rft.aulast=Psellus&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Psellus%2C%20Michael&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0268033153&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>4942498&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>FIRE</sear:library>
+              <sear:status>unavailable</sear:status>
+              <sear:collection>(F)</sear:collection>
+              <sear:callNumber>PA5355.Z5 R43 2006</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-15T07%3A22%3A07IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Reading%20Michael%20Psellos%20/%20edited%20by%20Charles%20Barber%20and%20David%20Jenkins.&rft.aulast=Barber&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=900415180X&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>4810187</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=4810187&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://images.amazon.com/images/P/900415180X.01._SSTHUM_.jpg</sear:thumbnail>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:900415180X,OCLC:65407668,LCCN:2006043988&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-15T07%3A22%3A07IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Reading%20Michael%20Psellos%20/%20edited%20by%20Charles%20Barber%20and%20David%20Jenkins.&rft.aulast=Barber&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=900415180X&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>4810187</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktouc>http://www.amazon.com/gp/product/900415180X</sear:linktouc>
+            <sear:linktouc>http://www.worldcat.org/search?q=isbn%3A900415180X</sear:linktouc>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=f&amp;id=4810187</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+        <sear:DOC SEARCH_ENGINE_TYPE="Local Search Engine" SEARCH_ENGINE="Local Search Engine" NO="5" RANK="2.2850752E-4" ID="3128048">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>5634859</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER5634859</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>5634859</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>book</type>
+                <title>Reading &lt;span class="searchword">Michael&lt;/span> &lt;span class="searchword">Psellos&lt;/span> edited by Charles E. Barber and David Jenkins.</title>
+                <contributor>Barber, Charles, 1964-</contributor>
+                <contributor>Jenkins, David (David Todd)</contributor>
+                <contributor>ebrary, Inc</contributor>
+                <publisher>Leiden ; Boston : Brill, 2006.</publisher>
+                <creationdate>2006</creationdate>
+                <subject>Psellus, Michael</subject>
+                <language>eng</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LONLINE$$1Online Resources$$2Electronic Resources$$Scheck_holdings$$30$$41$$5N$$60$$Xprincetondb$$Yelf1</availlibrary>
+                <lds03>viii, 255 p. ; 25 cm.</lds03>
+                <lds03>Includes bibliographical references (p. [235]-250) and index.</lds03>
+                <lds15>Medieval Mediterranean, 0928-5520 ; v. 61</lds15>
+                <lds20>Electronic reproduction. Palo Alto, Calif. : ebrary, 2008. Available via World Wide Web. Access may be limited to ebrary affiliated libraries.</lds20>
+                <lds21>Electronic books</lds21>
+                <lds26>Brill</lds26>
+                <lds27>Electronic Resources</lds27>
+                <lds28>5634859</lds28>
+                <availinstitution>$$IPRN$$Scheck_holdings</availinstitution>
+                <availpnx>available</availpnx>
+                <snippet/>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <linktorsrc>$$Uhttp://site.ebrary.com/lib/princeton/Doc?id=10235028$$Elinktorsrc</linktorsrc>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <lln01>$$Tfind_online$$Elfind_online</lln01>
+              </links>
+              <search>
+                <creatorcontrib>edited by Charles E. Barber and David Jenkins.</creatorcontrib>
+                <creatorcontrib>Charles,  Barber  1964-</creatorcontrib>
+                <creatorcontrib>David  Jenkins  (David Todd)</creatorcontrib>
+                <creatorcontrib>Barber, Charles, 1964-</creatorcontrib>
+                <creatorcontrib>Jenkins, David (David Todd)</creatorcontrib>
+                <creatorcontrib>Barber, C</creatorcontrib>
+                <creatorcontrib>Jenkins, D</creatorcontrib>
+                <creatorcontrib>ebrary, Inc.</creatorcontrib>
+                <creatorcontrib>Barber, Charles Edward, 1964-</creatorcontrib>
+                <title>Reading &lt;span class="searchword">Michael&lt;/span> &lt;span class="searchword">Psellos&lt;/span></title>
+                <subject>Psellus, Michael.</subject>
+                <subject>Electronic books.</subject>
+                <subject>Online books</subject>
+                <subject>Books in machine-readable form</subject>
+                <subject>Digital books</subject>
+                <subject>E-books</subject>
+                <subject>Ebooks</subject>
+                <subject>Psel, Mihailo</subject>
+                <subject>Psel, Mikhail</subject>
+                <subject>Psell, Mikhail</subject>
+                <subject>Psello, Michele</subject>
+                <subject>Psellos, Michaēl</subject>
+                <subject>Psellos, Michał</subject>
+                <subject>Psellos, Mihail</subject>
+                <subject>Psellus, Constantine</subject>
+                <subject>Psellus, Constantinus</subject>
+                <subject>Ψελλ́ος, Μιχὰηλ</subject>
+                <general>Brill,</general>
+                <general>[electronic resource] /</general>
+                <general>voy-5634859</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER5634859</recordid>
+                <isbn>9789004151802</isbn>
+                <isbn>900415180X</isbn>
+                <rsrctype>book</rsrctype>
+                <creationdate>2006</creationdate>
+                <addtitle>Medieval Mediterranean, v. 61</addtitle>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>ONLINE</searchscope>
+                <searchscope>OTHERS</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>ONLINE</scope>
+                <scope>OTHERS</scope>
+                <scope>PRN</scope>
+                <lsr04>9789004151802</lsr04>
+                <lsr04>900415180X</lsr04>
+                <lsr05>Electronic Resources</lsr05>
+                <lsr06>5634859</lsr06>
+              </search>
+              <sort>
+                <title>Reading Michael Psellos</title>
+                <title>Medieval Mediterranean</title>
+                <creationdate>2006</creationdate>
+                <author>Barber, Charles, 1964-</author>
+              </sort>
+              <facets>
+                <language>eng</language>
+                <creationdate>2006</creationdate>
+                <topic>Psellus, Michael</topic>
+                <toplevel>available</toplevel>
+                <toplevel>online_resources</toplevel>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>Barber, Charles</creatorcontrib>
+                <creatorcontrib>Jenkins, David</creatorcontrib>
+                <creatorcontrib>ebrary, Inc</creatorcontrib>
+                <genre>Electronic books</genre>
+                <classificationlcc>P - Language and literature.–Classical philology</classificationlcc>
+                <frbrgroupid>39330222</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c1>2006043988</c1>
+                <c2>9789004151802;900415180X</c2>
+                <c3>readingmichaelpsellos</c3>
+                <c4>2006</c4>
+                <f2>2006043988</f2>
+                <f4>9789004151802;900415180X</f4>
+                <f5>readingmichaelpsellos</f5>
+                <f6>2006</f6>
+                <f7>reading michael psellos</f7>
+                <f8>ne</f8>
+                <f9>viii255p</f9>
+                <f10>brill</f10>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kbarber charles 1964$$AA</k1>
+                <k1>$$Kjenkins david david todd$$AA</k1>
+                <k1>$$Kebrary inc$$AA</k1>
+                <k3>$$Kreading michael psellos$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Online Resource</delcategory>
+              </delivery>
+              <enrichment>
+                <classificationlcc>PA5355.Z5</classificationlcc>
+              </enrichment>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Barber</aulast>
+                <aufirst>Charles,</aufirst>
+                <addau>Barber, Charles, 1964-</addau>
+                <addau>Jenkins, David (David Todd)</addau>
+                <addau>ebrary, Inc</addau>
+                <btitle>Reading Michael Psellos edited by Charles E. Barber and David Jenkins.</btitle>
+                <seriestitle>Medieval Mediterranean, v. 61</seriestitle>
+                <date>2006</date>
+                <risdate>2006.</risdate>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <notes>Includes bibliographical references (p. [235]-250) and index.</notes>
+                <cop>Leiden ; Boston</cop>
+                <pub>Brill</pub>
+                <lad15>elf1</lad15>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-15T07%3A22%3A07IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Reading%20Michael%20Psellos%20edited%20by%20Charles%20E.%20Barber%20and%20David%20Jenkins.&amp;rft.aulast=Barber&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>5634859&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="http://site.ebrary.com/lib/princeton/Doc?id=10235028" deliveryCategory="Online Resource"/>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-15T07%3A22%3A07IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Mothers%20and%20sons%2C%20fathers%20and%20daughters%20:%20the%20Byzantine%20family%20of%20Michael%20Psellos%20/%20edited%20and%20translated%20by%20Anthony%20Kaldellis%20%3B%20with%20contributions%20by%20David%20Jenkins%20and%20Stratis%20Papaioannou.&amp;rft.aulast=Psellus&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Psellus%2C%20Michael&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0268033153&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>4942498&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>ONLINE</sear:library>
+              <sear:status>check_holdings</sear:status>
+              <sear:collection>Online Resources</sear:collection>
+              <sear:callNumber>Electronic Resources</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-15T07%3A22%3A07IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Reading%20Michael%20Psellos%20edited%20by%20Charles%20E.%20Barber%20and%20David%20Jenkins.&rft.aulast=Barber&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>5634859</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=5634859&amp;pds_handle=</sear:backlink>
+            <sear:linktorsrc>http://site.ebrary.com/lib/princeton/Doc?id=10235028</sear:linktorsrc>
+            <sear:thumbnail/>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-15T07%3A22%3A07IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Reading%20Michael%20Psellos%20edited%20by%20Charles%20E.%20Barber%20and%20David%20Jenkins.&rft.aulast=Barber&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>5634859</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=elf1&amp;id=5634859</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+        <sear:DOC SEARCH_ENGINE_TYPE="Local Search Engine" SEARCH_ENGINE="Local Search Engine" NO="6" RANK="2.112664E-4" ID="5476978">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>4159839</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER4159839</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>4159839</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>book</type>
+                <title>Der medizinische Inhalt der Schriften des &lt;span class="searchword">Michael&lt;/span> &lt;span class="searchword">Psellos&lt;/span> / von Robert Volk.</title>
+                <creator>Volk, Robert.</creator>
+                <publisher>München : Institut für Byzantinistik und Neugriechische Philologie der Universität, 1990.</publisher>
+                <creationdate>1990</creationdate>
+                <subject>Psellus, Michael; Medicine, Medieval</subject>
+                <language>ger</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LRECAP$$1(RCPPA)$$2R144.P74 V65 1990$$Savailable$$31$$40$$5N$$64$$Xprincetondb$$Yrcppa</availlibrary>
+                <lds03>li, 502 p. : ill. ; 21 cm.</lds03>
+                <lds03>Includes bibliographical references (p. xi-li) and indexes.</lds03>
+                <lds06>Originally presented as the author's thesis (doctoral)--Ludwig-Maximilians-Universität München, 1987.</lds06>
+                <lds15>Miscellanea Byzantina Monacensia ; Heft 32</lds15>
+                <lds26>Institut für Byzantinistik und Neugriechische Philologie der Universität</lds26>
+                <lds27>R144.P74 V65 1990</lds27>
+                <lds28>4159839</lds28>
+                <availinstitution>$$IPRN$$Savailable</availinstitution>
+                <availpnx>available</availpnx>
+                <snippet/>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <linktouc>$$Tworldcat_oclc$$Eworldcat</linktouc>
+                <lln01>$$Tfind_recap$$Elfind_recap</lln01>
+              </links>
+              <search>
+                <creatorcontrib>Robert  Volk</creatorcontrib>
+                <creatorcontrib>Volk, Robert.</creatorcontrib>
+                <creatorcontrib>Volk, R</creatorcontrib>
+                <creatorcontrib>von Robert Volk.</creatorcontrib>
+                <title>Der medizinische Inhalt der Schriften des &lt;span class="searchword">Michael&lt;/span> &lt;span class="searchword">Psellos&lt;/span> /</title>
+                <subject>Psellus, Michael.</subject>
+                <subject>Medicine, Medieval.</subject>
+                <subject>Medicine, Medieval Early works to 1800</subject>
+                <subject>Medieval medicine</subject>
+                <subject>Psel, Mihailo</subject>
+                <subject>Psel, Mikhail</subject>
+                <subject>Psell, Mikhail</subject>
+                <subject>Psello, Michele</subject>
+                <subject>Psellos, Michaēl</subject>
+                <subject>Psellos, Michał</subject>
+                <subject>Psellos, Mihail</subject>
+                <subject>Psellus, Constantine</subject>
+                <subject>Psellus, Constantinus</subject>
+                <subject>Ψελλ́ος, Μιχὰηλ</subject>
+                <general>Institut für Byzantinistik und Neugriechische Philologie der Universität,</general>
+                <general>voy-4159839</general>
+                <general>Originally presented as the author's thesis (doctoral)--Ludwig-Maximilians-Universität München, 1987.</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER4159839</recordid>
+                <rsrctype>book</rsrctype>
+                <creationdate>1990</creationdate>
+                <addtitle>Miscellanea Byzantina Monacensia ; Heft 32</addtitle>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>RECAP</searchscope>
+                <searchscope>OTHERS</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>RECAP</scope>
+                <scope>OTHERS</scope>
+                <scope>PRN</scope>
+                <lsr05>R144.P74 V65 1990</lsr05>
+                <lsr06>4159839</lsr06>
+              </search>
+              <sort>
+                <title>medizinische Inhalt der Schriften des Michael Psellos</title>
+                <title>Miscellanea Byzantina Monacensia</title>
+                <creationdate>1990</creationdate>
+                <author>Volk, Robert.</author>
+              </sort>
+              <facets>
+                <language>ger</language>
+                <creationdate>1990</creationdate>
+                <topic>Psellus, Michael</topic>
+                <topic>Medicine, Medieval</topic>
+                <toplevel>available</toplevel>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>Volk, Robert</creatorcontrib>
+                <classificationlcc>R - Medicine.–Medicine (General)–History of medicine. Medical expeditions</classificationlcc>
+                <frbrgroupid>34123364</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c1>92136973</c1>
+                <c3>medizinischeinhaltdeaelpsellos</c3>
+                <c4>1990</c4>
+                <f1>92136973</f1>
+                <f5>medizinischeinhaltdeaelpsellos</f5>
+                <f6>1990</f6>
+                <f7>medizinische inhalt der schriften des michael psellos</f7>
+                <f8>gw</f8>
+                <f9>li502p</f9>
+                <f10>institut fur byzantinistik und neugriechische philologie der universitat</f10>
+                <f11>volk robert</f11>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kvolk robert$$AA</k1>
+                <k3>$$Kmedizinische inhalt der schriften des michael psellos$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <enrichment>
+                <classificationlcc>R144.P74</classificationlcc>
+              </enrichment>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Volk</aulast>
+                <aufirst>Robert</aufirst>
+                <au>Volk, Robert</au>
+                <btitle>Der medizinische Inhalt der Schriften des Michael Psellos / von Robert Volk.</btitle>
+                <seriestitle>Miscellanea Byzantina Monacensia ; Heft 32</seriestitle>
+                <date>1990</date>
+                <risdate>1990.</risdate>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <notes>Includes bibliographical references (p. xi-li) and indexes.</notes>
+                <cop>München</cop>
+                <pub>Institut für Byzantinistik und Neugriechische Philologie der Universität</pub>
+                <oclcid>24225208</oclcid>
+                <lccn>92136973</lccn>
+                <lad05>rcppa</lad05>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-15T07%3A22%3A07IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Mothers%20and%20sons%2C%20fathers%20and%20daughters%20:%20the%20Byzantine%20family%20of%20Michael%20Psellos%20/%20edited%20and%20translated%20by%20Anthony%20Kaldellis%20%3B%20with%20contributions%20by%20David%20Jenkins%20and%20Stratis%20Papaioannou.&amp;rft.aulast=Psellus&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Psellus%2C%20Michael&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0268033153&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>4942498&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>RECAP</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>(RCPPA)</sear:collection>
+              <sear:callNumber>R144.P74 V65 1990</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-15T07%3A22%3A08IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Der%20medizinische%20Inhalt%20der%20Schriften%20des%20Michael%20Psellos%20/%20von%20Robert%20Volk.&rft.aulast=Volk&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Volk%2C%20Robert&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>4159839</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=4159839&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:,OCLC:24225208,LCCN:92136973&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-15T07%3A22%3A08IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Der%20medizinische%20Inhalt%20der%20Schriften%20des%20Michael%20Psellos%20/%20von%20Robert%20Volk.&rft.aulast=Volk&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Volk%2C%20Robert&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>4159839</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktouc>http://www.worldcat.org/search?q=no%3A24225208</sear:linktouc>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=rcppa&amp;id=4159839</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+        <sear:DOC SEARCH_ENGINE_TYPE="Local Search Engine" SEARCH_ENGINE="Local Search Engine" NO="7" RANK="2.0264582E-4" ID="680281">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>1676390</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER1676390</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>1676390</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>book</type>
+                <title>Untersuchungen zum rhetorischen Sprachgebrauch der Byzantiner mit besonderer Berücksichtigung der Schriften des &lt;span class="searchword">Michael&lt;/span> &lt;span class="searchword">Psellos&lt;/span>. Mit einem Geleitwort von Franz Dölger.</title>
+                <creator>Böhlig, Gertrud Ries, 1919-</creator>
+                <publisher>Berlin, Akademie-Verlag, 1956.</publisher>
+                <creationdate>1956</creationdate>
+                <subject>Psellus, Michael; Greek language, Medieval and late -- Rhetoric; Rhetoric, Medieval</subject>
+                <language>ger</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LFIRE$$1Classics Collection (CLAS)$$2PA1056 .B645 1956$$Savailable$$31$$40$$5N$$62$$Xprincetondb$$Yclas</availlibrary>
+                <lds03>xxv, 278 p. 25 cm.</lds03>
+                <lds15>Berliner byzantinistische Arbeiten, Bd. 2</lds15>
+                <lds26>Akademie-Verlag</lds26>
+                <lds27>PA1056 .B645 1956</lds27>
+                <lds28>1676390</lds28>
+                <availinstitution>$$IPRN$$Savailable</availinstitution>
+                <availpnx>available</availpnx>
+                <snippetfield>title</snippetfield>
+                <snippet>Untersuchungen zum rhetorischen Sprachgebrauch der Byzantiner mit besonderer Berücksichtigung der Schriften des &lt;span class="searchword">Michael&lt;/span> &lt;span class="searchword">Psellos&lt;/span>.</snippet>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <linktouc>$$Tworldcat_oclc$$Eworldcat</linktouc>
+                <lln01>$$Tfind_fire$$Elfind_fire</lln01>
+              </links>
+              <search>
+                <creatorcontrib>Gertrud Ries,  Böhlig  1919-</creatorcontrib>
+                <creatorcontrib>Böhlig, Gertrud Ries, 1919-</creatorcontrib>
+                <creatorcontrib>Böhlig</creatorcontrib>
+                <creatorcontrib>Mit einem Geleitwort von Franz Dölger.</creatorcontrib>
+                <title>Untersuchungen zum rhetorischen Sprachgebrauch der Byzantiner mit besonderer Berücksichtigung der Schriften des &lt;span class="searchword">Michael&lt;/span> &lt;span class="searchword">Psellos&lt;/span>.</title>
+                <subject>Psellus, Michael.</subject>
+                <subject>Greek language, Medieval and late Rhetoric.</subject>
+                <subject>Rhetoric, Medieval.</subject>
+                <subject>Psel, Mihailo</subject>
+                <subject>Psel, Mikhail</subject>
+                <subject>Psell, Mikhail</subject>
+                <subject>Psello, Michele</subject>
+                <subject>Psellos, Michaēl</subject>
+                <subject>Psellos, Michał</subject>
+                <subject>Psellus, Constantine</subject>
+                <subject>Psellus, Constantinus</subject>
+                <subject>Ψελλ́ος, Μιχὰηλ</subject>
+                <subject>Psellos, Mihail</subject>
+                <general>Akademie-Verlag,</general>
+                <general>voy-1676390</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER1676390</recordid>
+                <rsrctype>book</rsrctype>
+                <creationdate>1956</creationdate>
+                <addtitle>Berliner byzantinistische Arbeiten, Bd. 2</addtitle>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>FIRE</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>FIRE</scope>
+                <scope>PRN</scope>
+                <lsr05>PA1056 .B645 1956</lsr05>
+                <lsr06>1676390</lsr06>
+              </search>
+              <sort>
+                <title>Untersuchungen zum rhetorischen Sprachgebrauch der Byzantiner mit besonderer Berücksichtigung der Schriften des Michael Psellos</title>
+                <title>Berliner byzantinistische Arbeiten</title>
+                <creationdate>1956</creationdate>
+                <author>Böhlig, Gertrud Ries, 1919-</author>
+              </sort>
+              <facets>
+                <language>ger</language>
+                <creationdate>1956</creationdate>
+                <topic>Psellus, Michael</topic>
+                <topic>Greek language, Medieval and late–Rhetoric</topic>
+                <topic>Rhetoric, Medieval</topic>
+                <toplevel>available</toplevel>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>Böhlig, Gertrud Ries</creatorcontrib>
+                <frbrgroupid>31766646</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c3>untersuchungenzumrheaelpsellos</c3>
+                <c4>1956</c4>
+                <f5>untersuchungenzumrheaelpsellos</f5>
+                <f6>1956</f6>
+                <f7>untersuchungen zum rhetorischen sprachgebrauch der byzantiner mit besonderer berucksichtigung der schriften des michael psellos</f7>
+                <f8>gw</f8>
+                <f9>xxv278p</f9>
+                <f10>akademie verlag</f10>
+                <f11>bohlig gertrud ries 1919</f11>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kbohlig gertrud ries 1919$$AA</k1>
+                <k3>$$Kuntersuchungen zum rhetorischen sprachgebrauch der byzantiner mit besonderer berucksichtigung der schriften des michael psellos$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Böhlig</aulast>
+                <aufirst>Gertrud Ries,</aufirst>
+                <au>Böhlig, Gertrud Ries, 1919-</au>
+                <btitle>Untersuchungen zum rhetorischen Sprachgebrauch der Byzantiner mit besonderer Berücksichtigung der Schriften des Michael Psellos. Mit einem Geleitwort von Franz Dölger.</btitle>
+                <seriestitle>Berliner byzantinistische Arbeiten, Bd. 2</seriestitle>
+                <date>1956</date>
+                <risdate>1956.</risdate>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <cop>Berlin</cop>
+                <pub>Akademie-Verlag</pub>
+                <oclcid>05002641</oclcid>
+                <lad01>clas</lad01>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-15T07%3A22%3A07IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Mothers%20and%20sons%2C%20fathers%20and%20daughters%20:%20the%20Byzantine%20family%20of%20Michael%20Psellos%20/%20edited%20and%20translated%20by%20Anthony%20Kaldellis%20%3B%20with%20contributions%20by%20David%20Jenkins%20and%20Stratis%20Papaioannou.&amp;rft.aulast=Psellus&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Psellus%2C%20Michael&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0268033153&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>4942498&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>FIRE</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>Classics Collection (CLAS)</sear:collection>
+              <sear:callNumber>PA1056 .B645 1956</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-15T07%3A22%3A08IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Untersuchungen%20zum%20rhetorischen%20Sprachgebrauch%20der%20Byzantiner%20mit%20besonderer%20Berücksichtigung%20der%20Schriften%20des%20Michael%20Psellos.%20Mit%20einem%20Geleitwort%20von%20Franz%20Dölger.&rft.aulast=Böhlig&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Böhlig%2C%20Gertrud%20Ries%2C%201919-&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>1676390</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=1676390&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:,OCLC:05002641,LCCN:&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-15T07%3A22%3A08IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Untersuchungen%20zum%20rhetorischen%20Sprachgebrauch%20der%20Byzantiner%20mit%20besonderer%20Berücksichtigung%20der%20Schriften%20des%20Michael%20Psellos.%20Mit%20einem%20Geleitwort%20von%20Franz%20Dölger.&rft.aulast=Böhlig&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Böhlig%2C%20Gertrud%20Ries%2C%201919-&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>1676390</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktouc>http://www.worldcat.org/search?q=no%3A05002641</sear:linktouc>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=clas&amp;id=1676390</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+        <sear:DOC SEARCH_ENGINE_TYPE="Local Search Engine" SEARCH_ENGINE="Local Search Engine" NO="8" RANK="1.9402526E-4" ID="4420143">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>2806524</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER2806524</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>2806524</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>book</type>
+                <title>Epistola a Giovanni Xifilino : testo critico, introduzione, traduzione e commentario / Michele Psello ; a cura di Ugo Criscuolo.</title>
+                <creator>Psellus, Michael.</creator>
+                <contributor>Xiphilinus, Joannes, ca. 1010-1075</contributor>
+                <contributor>Criscuolo, Ugo</contributor>
+                <publisher>[Napoli] : Università di Napoli, Cattedra di filologia bizantina, 1973.</publisher>
+                <creationdate>1973</creationdate>
+                <subject>Psellus, Michael; Xiphilinus, Joannes, ca. 1010-1075</subject>
+                <language>und;und</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LRECAP$$1(RCPPA)$$22751 1973$$Savailable$$31$$40$$5N$$60$$Xprincetondb$$Yrcppa</availlibrary>
+                <unititle>[Tō monachō kyr Iōannē kai gegonoti Patriarchē tō Xiphilinō. Italian &amp; Greek]</unititle>
+                <lds03>85 p. ; 23 cm.</lds03>
+                <lds03>Bibliography: p. [9]-11.</lds03>
+                <lds06>Greek or Italian.</lds06>
+                <lds06>Translation of Tō monachō kyr Iōannē kai gegonoti Patriarchē tō Xiphilinō.</lds06>
+                <lds06>Includes index.</lds06>
+                <lds15>Byzantina et Neo-Hellenica Neapolitana ; 1</lds15>
+                <lds26>Università di Napoli, Cattedra di filologia bizantina</lds26>
+                <lds27>2751 1973</lds27>
+                <lds28>2806524</lds28>
+                <availinstitution>$$IPRN$$Savailable</availinstitution>
+                <availpnx>available</availpnx>
+                <snippet/>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <linktouc>$$Tworldcat_oclc$$Eworldcat</linktouc>
+                <lln01>$$Tfind_recap$$Elfind_recap</lln01>
+              </links>
+              <search>
+                <creatorcontrib>Michael  Psellus</creatorcontrib>
+                <creatorcontrib>Psellus, Michael.</creatorcontrib>
+                <creatorcontrib>Psellus, M</creatorcontrib>
+                <creatorcontrib>Michele Psello ; a cura di Ugo Criscuolo.</creatorcontrib>
+                <creatorcontrib>Ugo  Criscuolo</creatorcontrib>
+                <creatorcontrib>Xiphilinus, Joannes, ca. 1010-1075.</creatorcontrib>
+                <creatorcontrib>Criscuolo, Ugo.</creatorcontrib>
+                <creatorcontrib>Criscuolo, U</creatorcontrib>
+                <creatorcontrib>Ψελλ́ος, Μιχὰηλ</creatorcontrib>
+                <creatorcontrib>Psel, Mihailo</creatorcontrib>
+                <creatorcontrib>Psel, Mikhail</creatorcontrib>
+                <creatorcontrib>Psell, Mikhail</creatorcontrib>
+                <creatorcontrib>Psello, Michele</creatorcontrib>
+                <creatorcontrib>Psellos, Michaēl</creatorcontrib>
+                <creatorcontrib>Psellos, Michał</creatorcontrib>
+                <creatorcontrib>Psellos, Mihail</creatorcontrib>
+                <creatorcontrib>Psellus, Constantine</creatorcontrib>
+                <creatorcontrib>Psellus, Constantinus</creatorcontrib>
+                <creatorcontrib>Criscuolo, Hugo</creatorcontrib>
+                <creatorcontrib>Joannes Xiphilinus, Patriarch of Constantinople, ca. 1010-1075</creatorcontrib>
+                <creatorcontrib>Xifilino, Giovanni, ca. 1010-1075</creatorcontrib>
+                <creatorcontrib>Xiphilinus, John, ca. 1010-1075</creatorcontrib>
+                <title>Epistola a Giovanni Xifilino : testo critico, introduzione, traduzione e commentario /</title>
+                <subject>Psellus, Michael.</subject>
+                <subject>Xiphilinus, Joannes, ca. 1010-1075.</subject>
+                <subject>Psel, Mihailo</subject>
+                <subject>Psel, Mikhail</subject>
+                <subject>Psell, Mikhail</subject>
+                <subject>Psello, Michele</subject>
+                <subject>Psellos, Michaēl</subject>
+                <subject>Psellos, Michał</subject>
+                <subject>Psellos, Mihail</subject>
+                <subject>Psellus, Constantine</subject>
+                <subject>Psellus, Constantinus</subject>
+                <subject>Ψελλ́ος, Μιχὰηλ</subject>
+                <subject>Joannes Xiphilinus, Patriarch of Constantinople, ca. 1010-1075</subject>
+                <subject>Xifilino, Giovanni, ca. 1010-1075</subject>
+                <subject>Xiphilinus, John, ca. 1010-1075</subject>
+                <general>Università di Napoli, Cattedra di filologia bizantina,</general>
+                <general>voy-2806524</general>
+                <general>Greek or Italian.</general>
+                <general>Translation of Tō monachō kyr Iōannē kai gegonoti Patriarchē tō Xiphilinō.</general>
+                <general>Includes index.</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER2806524</recordid>
+                <rsrctype>book</rsrctype>
+                <creationdate>1973</creationdate>
+                <addtitle>Byzantina et Neo-Hellenica Neapolitana ; 1</addtitle>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>RECAP</searchscope>
+                <searchscope>OTHERS</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>RECAP</scope>
+                <scope>OTHERS</scope>
+                <scope>PRN</scope>
+                <alttitle>Tō monachō kyr Iōannē kai gegonoti Patriarchē tō Xiphilinō. Italian &amp; Greek</alttitle>
+                <lsr05>2751 1973</lsr05>
+                <lsr06>2806524</lsr06>
+              </search>
+              <sort>
+                <title>Epistola a Giovanni Xifilino : testo critico, introduzione, traduzione e commentario</title>
+                <title>Byzantina et Neo-Hellenica Neapolitana</title>
+                <creationdate>1973</creationdate>
+                <author>Psellus, Michael.</author>
+              </sort>
+              <facets>
+                <language>ita</language>
+                <language>gre</language>
+                <creationdate>1973</creationdate>
+                <topic>Psellus, Michael</topic>
+                <topic>Xiphilinus, Joannes, ca. 1010-1075</topic>
+                <toplevel>available</toplevel>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>Psellus, Michael</creatorcontrib>
+                <creatorcontrib>Criscuolo, Ugo</creatorcontrib>
+                <creatorcontrib>Xiphilinus, Joannes</creatorcontrib>
+                <frbrgroupid>33009597</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c1>76511574</c1>
+                <c3>epistolaagiovannixifommentario</c3>
+                <c4>1973</c4>
+                <f1>76511574</f1>
+                <f5>epistolaagiovannixifommentario</f5>
+                <f6>1973</f6>
+                <f7>epistola a giovanni xifilino testo critico introduzione traduzione e commentario</f7>
+                <f8>it</f8>
+                <f9>85p</f9>
+                <f10>universita di napoli cattedra di filologia bizantina</f10>
+                <f11>psellus michael</f11>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kpsellus michael$$AA</k1>
+                <k3>$$Kto monacho kyr ioanne kai gegonoti patriarche to xiphilino$$AT</k3>
+                <k3>$$Kepistola a giovanni xifilino testo critico introduzione traduzione e commentario$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <enrichment>
+                <classificationlcc>PA5355</classificationlcc>
+              </enrichment>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Psellus</aulast>
+                <aufirst>Michael</aufirst>
+                <au>Psellus, Michael</au>
+                <addau>Xiphilinus, Joannes, ca. 1010-1075</addau>
+                <addau>Criscuolo, Ugo</addau>
+                <btitle>Epistola a Giovanni Xifilino : testo critico, introduzione, traduzione e commentario / Michele Psello ; a cura di Ugo Criscuolo.</btitle>
+                <seriestitle>Byzantina et Neo-Hellenica Neapolitana ; 1</seriestitle>
+                <date>1973</date>
+                <risdate>1973.</risdate>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <notes>Bibliography: p. [9]-11.</notes>
+                <cop>Napoli]</cop>
+                <pub>Università di Napoli, Cattedra di filologia bizantina</pub>
+                <oclcid>03141032</oclcid>
+                <lccn>76511574</lccn>
+                <lad05>rcppa</lad05>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-15T07%3A22%3A07IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Mothers%20and%20sons%2C%20fathers%20and%20daughters%20:%20the%20Byzantine%20family%20of%20Michael%20Psellos%20/%20edited%20and%20translated%20by%20Anthony%20Kaldellis%20%3B%20with%20contributions%20by%20David%20Jenkins%20and%20Stratis%20Papaioannou.&amp;rft.aulast=Psellus&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Psellus%2C%20Michael&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0268033153&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>4942498&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>RECAP</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>(RCPPA)</sear:collection>
+              <sear:callNumber>2751 1973</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-15T07%3A22%3A08IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Epistola%20a%20Giovanni%20Xifilino%20:%20testo%20critico%2C%20introduzione%2C%20traduzione%20e%20commentario%20/%20Michele%20Psello%20%3B%20a%20cura%20di%20Ugo%20Criscuolo.&rft.aulast=Psellus&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Psellus%2C%20Michael&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>2806524</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=2806524&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:,OCLC:03141032,LCCN:76511574&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-15T07%3A22%3A08IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Epistola%20a%20Giovanni%20Xifilino%20:%20testo%20critico%2C%20introduzione%2C%20traduzione%20e%20commentario%20/%20Michele%20Psello%20%3B%20a%20cura%20di%20Ugo%20Criscuolo.&rft.aulast=Psellus&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Psellus%2C%20Michael&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>2806524</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktouc>http://www.worldcat.org/search?q=no%3A03141032</sear:linktouc>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=rcppa&amp;id=2806524</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+        <sear:DOC SEARCH_ENGINE_TYPE="Local Search Engine" SEARCH_ENGINE="Local Search Engine" NO="9" RANK="1.8109442E-4" ID="4418012">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>2804688</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER2804688</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>2804688</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>book</type>
+                <title>Epistola a Michele Cerulario : testo critico, introduzione, traduzione e note / Michele Psello ; a cura di Ugo Criscuolo.</title>
+                <creator>Psellus, Michael.</creator>
+                <contributor>Michael, Cerularius, Patriarch of Constantinople, ca. 1000-1059</contributor>
+                <contributor>Criscuolo, Ugo</contributor>
+                <publisher>[Napoli] : Università di Napoli, Cattedra di filologia bizantina, 1973.</publisher>
+                <creationdate>1973</creationdate>
+                <subject>Psellus, Michael; Michael, Cerularius, Patriarch of Constantinople, ca. 1000-1059</subject>
+                <language>und;und</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LRECAP$$1(RCPPA)$$22751 1973.2$$Savailable$$31$$40$$5N$$60$$Xprincetondb$$Yrcppa</availlibrary>
+                <lds03>52 p. ; 23 cm.</lds03>
+                <lds03>Bibliography: p.[7]-8.</lds03>
+                <lds06>Greek or Italian.</lds06>
+                <lds06>Translation of Pros ton Patriarchēn kyr Michaēl ton Kēroularion.</lds06>
+                <lds06>Includes index.</lds06>
+                <lds15>Byzantina et Neo-Hellenica Neapolitana ; 3</lds15>
+                <lds26>Università di Napoli, Cattedra di filologia bizantina</lds26>
+                <lds27>2751 1973.2</lds27>
+                <lds28>2804688</lds28>
+                <availinstitution>$$IPRN$$Savailable</availinstitution>
+                <availpnx>available</availpnx>
+                <snippet/>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <linktouc>$$Tworldcat_oclc$$Eworldcat</linktouc>
+                <lln01>$$Tfind_recap$$Elfind_recap</lln01>
+              </links>
+              <search>
+                <creatorcontrib>Michael  Psellus</creatorcontrib>
+                <creatorcontrib>Psellus, Michael.</creatorcontrib>
+                <creatorcontrib>Psellus, M</creatorcontrib>
+                <creatorcontrib>Michele Psello ; a cura di Ugo Criscuolo.</creatorcontrib>
+                <creatorcontrib>Ugo  Criscuolo</creatorcontrib>
+                <creatorcontrib>Michael, Cerularius, Patriarch of Constantinople, ca. 1000-1059.</creatorcontrib>
+                <creatorcontrib>Criscuolo, Ugo.</creatorcontrib>
+                <creatorcontrib>Criscuolo, U</creatorcontrib>
+                <creatorcontrib>Kēroularios, Michaēl, ca. 1000-1059</creatorcontrib>
+                <creatorcontrib>Kēroularios, Michaēl, Patriarch of Constantinople, d. 1059?</creatorcontrib>
+                <creatorcontrib>Michaēl I, ho Kēroularios, Patriarch of Constantinople, ca. 1000-1059</creatorcontrib>
+                <creatorcontrib>Michele, Cerulario, Patriarch of Constantinople, ca. 1000-1059</creatorcontrib>
+                <creatorcontrib>Cerulario, Michele, ca. 1000-1059</creatorcontrib>
+                <creatorcontrib>Cerularius, Michael, ca. 1000-1059</creatorcontrib>
+                <creatorcontrib>Ψελλ́ος, Μιχὰηλ</creatorcontrib>
+                <creatorcontrib>Psel, Mihailo</creatorcontrib>
+                <creatorcontrib>Psel, Mikhail</creatorcontrib>
+                <creatorcontrib>Psell, Mikhail</creatorcontrib>
+                <creatorcontrib>Psello, Michele</creatorcontrib>
+                <creatorcontrib>Psellos, Michaēl</creatorcontrib>
+                <creatorcontrib>Psellos, Michał</creatorcontrib>
+                <creatorcontrib>Psellos, Mihail</creatorcontrib>
+                <creatorcontrib>Psellus, Constantine</creatorcontrib>
+                <creatorcontrib>Psellus, Constantinus</creatorcontrib>
+                <creatorcontrib>Criscuolo, Hugo</creatorcontrib>
+                <title>Epistola a Michele Cerulario : testo critico, introduzione, traduzione e note /</title>
+                <subject>Psellus, Michael.</subject>
+                <subject>Michael, Cerularius, Patriarch of Constantinople, ca. 1000-1059.</subject>
+                <subject>Kēroularios, Michaēl, ca. 1000-1059</subject>
+                <subject>Kēroularios, Michaēl, Patriarch of Constantinople, d. 1059?</subject>
+                <subject>Michaēl I, ho Kēroularios, Patriarch of Constantinople, ca. 1000-1059</subject>
+                <subject>Michele, Cerulario, Patriarch of Constantinople, ca. 1000-1059</subject>
+                <subject>Cerulario, Michele, ca. 1000-1059</subject>
+                <subject>Cerularius, Michael, ca. 1000-1059</subject>
+                <subject>Psel, Mihailo</subject>
+                <subject>Psel, Mikhail</subject>
+                <subject>Psell, Mikhail</subject>
+                <subject>Psello, Michele</subject>
+                <subject>Psellos, Michaēl</subject>
+                <subject>Psellos, Michał</subject>
+                <subject>Psellos, Mihail</subject>
+                <subject>Psellus, Constantine</subject>
+                <subject>Psellus, Constantinus</subject>
+                <subject>Ψελλ́ος, Μιχὰηλ</subject>
+                <general>Università di Napoli, Cattedra di filologia bizantina,</general>
+                <general>voy-2804688</general>
+                <general>Greek or Italian.</general>
+                <general>Translation of Pros ton Patriarchēn kyr Michaēl ton Kēroularion.</general>
+                <general>Includes index.</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER2804688</recordid>
+                <rsrctype>book</rsrctype>
+                <creationdate>1973</creationdate>
+                <addtitle>Byzantina et Neo-Hellenica Neapolitana ; 3</addtitle>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>RECAP</searchscope>
+                <searchscope>OTHERS</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>RECAP</scope>
+                <scope>OTHERS</scope>
+                <scope>PRN</scope>
+                <lsr05>2751 1973.2</lsr05>
+                <lsr06>2804688</lsr06>
+              </search>
+              <sort>
+                <title>Epistola a Michele Cerulario : testo critico, introduzione, traduzione e note</title>
+                <title>Byzantina et Neo-Hellenica Neapolitana</title>
+                <creationdate>1973</creationdate>
+                <author>Psellus, Michael.</author>
+              </sort>
+              <facets>
+                <language>ita</language>
+                <language>grc</language>
+                <creationdate>1973</creationdate>
+                <topic>Psellus, Michael</topic>
+                <topic>Michael, Cerularius, Patriarch of Constantinople, ca. 1000-1059</topic>
+                <toplevel>available</toplevel>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>Psellus, Michael</creatorcontrib>
+                <creatorcontrib>Criscuolo, Ugo</creatorcontrib>
+                <creatorcontrib>Michael</creatorcontrib>
+                <frbrgroupid>33001195</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c3>epistolaamicheleceruzioneenote</c3>
+                <c4>1973</c4>
+                <f5>epistolaamicheleceruzioneenote</f5>
+                <f6>1973</f6>
+                <f7>epistola a michele cerulario testo critico introduzione traduzione e note</f7>
+                <f8>it</f8>
+                <f9>52p</f9>
+                <f10>universita di napoli cattedra di filologia bizantina</f10>
+                <f11>psellus michael</f11>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kpsellus michael$$AA</k1>
+                <k3>$$Kepistola a michele cerulario testo critico introduzione traduzione e note$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Psellus</aulast>
+                <aufirst>Michael</aufirst>
+                <au>Psellus, Michael</au>
+                <addau>Michael, Cerularius, Patriarch of Constantinople, ca. 1000-1059</addau>
+                <addau>Criscuolo, Ugo</addau>
+                <btitle>Epistola a Michele Cerulario : testo critico, introduzione, traduzione e note / Michele Psello ; a cura di Ugo Criscuolo.</btitle>
+                <seriestitle>Byzantina et Neo-Hellenica Neapolitana ; 3</seriestitle>
+                <date>1973</date>
+                <risdate>1973.</risdate>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <notes>Bibliography: p.[7]-8.</notes>
+                <cop>Napoli]</cop>
+                <pub>Università di Napoli, Cattedra di filologia bizantina</pub>
+                <oclcid>02491132</oclcid>
+                <lad05>rcppa</lad05>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-15T07%3A22%3A07IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Mothers%20and%20sons%2C%20fathers%20and%20daughters%20:%20the%20Byzantine%20family%20of%20Michael%20Psellos%20/%20edited%20and%20translated%20by%20Anthony%20Kaldellis%20%3B%20with%20contributions%20by%20David%20Jenkins%20and%20Stratis%20Papaioannou.&amp;rft.aulast=Psellus&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Psellus%2C%20Michael&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0268033153&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>4942498&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>RECAP</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>(RCPPA)</sear:collection>
+              <sear:callNumber>2751 1973.2</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-15T07%3A22%3A08IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Epistola%20a%20Michele%20Cerulario%20:%20testo%20critico%2C%20introduzione%2C%20traduzione%20e%20note%20/%20Michele%20Psello%20%3B%20a%20cura%20di%20Ugo%20Criscuolo.&rft.aulast=Psellus&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Psellus%2C%20Michael&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>2804688</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=2804688&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:,OCLC:02491132,LCCN:&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-15T07%3A22%3A08IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Epistola%20a%20Michele%20Cerulario%20:%20testo%20critico%2C%20introduzione%2C%20traduzione%20e%20note%20/%20Michele%20Psello%20%3B%20a%20cura%20di%20Ugo%20Criscuolo.&rft.aulast=Psellus&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Psellus%2C%20Michael&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>2804688</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktouc>http://www.worldcat.org/search?q=no%3A02491132</sear:linktouc>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=rcppa&amp;id=2804688</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+        <sear:DOC SEARCH_ENGINE_TYPE="Local Search Engine" SEARCH_ENGINE="Local Search Engine" NO="10" RANK="1.5092244E-4" ID="837505">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>1720026</sourcerecordid>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER1720026</recordid>
+                <originalsourceid>princetondb</originalsourceid>
+                <ilsapiid>1720026</ilsapiid>
+                <sourceformat>MARC21</sourceformat>
+                <sourcesystem>Voyager</sourcesystem>
+              </control>
+              <display>
+                <type>book</type>
+                <title>Un philosophe néoplatonicien du XIe siècle: Michel &lt;span class="searchword">Psellos&lt;/span>, sa vie, son œuvre, ses luttes philosophiques, son influence. Préf. de François Picavet.</title>
+                <creator>Zervos, Christian.</creator>
+                <publisher>New York, B. Franklin [1974]</publisher>
+                <creationdate>1974</creationdate>
+                <identifier>$$CISBN$$V0833739212</identifier>
+                <subject>Psellus, Michael</subject>
+                <language>fre</language>
+                <source>PRN_VOYAGER</source>
+                <availlibrary>$$IPRN$$LRECAP$$1(RCPPA)$$22751.993.1973$$Savailable$$31$$40$$5N$$60$$Xprincetondb$$Yrcppa</availlibrary>
+                <lds03>xix, 269 p. 23 cm.</lds03>
+                <lds03>Bibliography: p. 1-42.</lds03>
+                <lds06>Reprint of the 1920 ed. published by E. Laroux, Paris.</lds06>
+                <lds15>Burt Franklin research and source works series. Byzantine series, 41</lds15>
+                <lds26>B. Franklin</lds26>
+                <lds27>2751.993.1973</lds27>
+                <lds28>1720026</lds28>
+                <availinstitution>$$IPRN$$Savailable</availinstitution>
+                <availpnx>available</availpnx>
+                <snippetfield>title</snippetfield>
+                <snippet>Un philosophe néoplatonicien du XIe siècle: Michel &lt;span class="searchword">Psellos&lt;/span>, sa vie, son œuvre, ses luttes philosophiques, son influence.</snippet>
+              </display>
+              <links>
+                <openurl>$$Topenurl_journal</openurl>
+                <backlink>$$Tvoyager_backlink$$Ebacklink</backlink>
+                <thumbnail>$$Tamazon_thumb</thumbnail>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <openurlfulltext>$$Topenurlfull_journal</openurlfulltext>
+                <linktoholdings>$$Tvoyager_holdings</linktoholdings>
+                <linktouc>$$Tamazon_uc$$Eamazon</linktouc>
+                <linktouc>$$Tworldcat_isbn$$Eworldcat</linktouc>
+                <lln01>$$Tfind_recap$$Elfind_recap</lln01>
+              </links>
+              <search>
+                <creatorcontrib>Christian  Zervos</creatorcontrib>
+                <creatorcontrib>Zervos, Christian.</creatorcontrib>
+                <creatorcontrib>Zervos, C</creatorcontrib>
+                <creatorcontrib>Préf. de François Picavet.</creatorcontrib>
+                <creatorcontrib>Zervos, C. (Christian)</creatorcontrib>
+                <creatorcontrib>Zervos, Chr. (Christian)</creatorcontrib>
+                <title>Un philosophe néoplatonicien du XIe siècle: Michel &lt;span class="searchword">Psellos&lt;/span>, sa vie, son œuvre, ses luttes philosophiques, son influence.</title>
+                <subject>Psellus, Michael.</subject>
+                <subject>Psel, Mihailo</subject>
+                <subject>Psel, Mikhail</subject>
+                <subject>Psell, Mikhail</subject>
+                <subject>Psello, Michele</subject>
+                <subject>Psellos, Michaēl</subject>
+                <subject>Psellos, Michał</subject>
+                <subject>Psellus, Constantine</subject>
+                <subject>Psellus, Constantinus</subject>
+                <subject>Ψελλ́ος, Μιχὰηλ</subject>
+                <subject>Psellos, Mihail</subject>
+                <general>B. Franklin</general>
+                <general>voy-1720026</general>
+                <general>Reprint of the 1920 ed. published by E. Laroux, Paris.</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER1720026</recordid>
+                <isbn>0833739212</isbn>
+                <rsrctype>book</rsrctype>
+                <creationdate>1974</creationdate>
+                <creationdate>1920</creationdate>
+                <addtitle>Burt Franklin research and source works series. Byzantine series, 41</addtitle>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>RECAP</searchscope>
+                <searchscope>OTHERS</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>RECAP</scope>
+                <scope>OTHERS</scope>
+                <scope>PRN</scope>
+                <lsr04>0833739212</lsr04>
+                <lsr05>2751.993.1973</lsr05>
+                <lsr06>1720026</lsr06>
+              </search>
+              <sort>
+                <title>philosophe néoplatonicien du XIe siècle: Michel Psellos, sa vie, son œuvre, ses luttes philosophiques, son influence</title>
+                <creationdate>1974</creationdate>
+                <author>Zervos, Christian.</author>
+              </sort>
+              <facets>
+                <language>fre</language>
+                <creationdate>1974</creationdate>
+                <topic>Psellus, Michael</topic>
+                <toplevel>available</toplevel>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>Zervos, Christian</creatorcontrib>
+                <classificationlcc>B - Philosophy. Psychology. Religion–Philosophy (General)–By period Including individual philosophers and schools of philosophy–Medieval</classificationlcc>
+                <frbrgroupid>31933403</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c1>74002050</c1>
+                <c2>0833739212</c2>
+                <c3>philosopheneoplatonininfluence</c3>
+                <c4>1974</c4>
+                <f1>74002050</f1>
+                <f3>0833739212</f3>
+                <f5>philosopheneoplatonicienduxiesieclemichelpsellossaviesonoeuvresesluttesphilosophiquessoninfluence</f5>
+                <f6>1974</f6>
+                <f7>philosophe neoplatonicien du xie siecle michel psellos sa vie son oeuvre ses luttes philosophiques son influence</f7>
+                <f8>nyu</f8>
+                <f9>xix269p</f9>
+                <f10>b franklin</f10>
+                <f11>zervos christian</f11>
+                <f16>r</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kzervos christian$$AA</k1>
+                <k3>$$Kphilosophe neoplatonicien du xie siecle michel psellos sa vie son oeuvre ses luttes philosophiques son influence$$AT</k3>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <enrichment>
+                <classificationlcc>B765.P84</classificationlcc>
+              </enrichment>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Zervos</aulast>
+                <aufirst>Christian</aufirst>
+                <au>Zervos, Christian</au>
+                <btitle>Un philosophe néoplatonicien du XIe siècle: Michel Psellos, sa vie, son œuvre, ses luttes philosophiques, son influence. Préf. de François Picavet.</btitle>
+                <seriestitle>Burt Franklin research and source works series. Byzantine series, 41</seriestitle>
+                <date>1974</date>
+                <risdate>[1974]</risdate>
+                <isbn>0833739212</isbn>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <notes>Bibliography: p. 1-42.</notes>
+                <cop>New York</cop>
+                <pub>B. Franklin</pub>
+                <oclcid>00841599</oclcid>
+                <lccn>74002050</lccn>
+                <lad05>rcppa</lad05>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-08-15T07%3A22%3A07IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Mothers%20and%20sons%2C%20fathers%20and%20daughters%20:%20the%20Byzantine%20family%20of%20Michael%20Psellos%20/%20edited%20and%20translated%20by%20Anthony%20Kaldellis%20%3B%20with%20contributions%20by%20David%20Jenkins%20and%20Stratis%20Papaioannou.&amp;rft.aulast=Psellus&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Psellus%2C%20Michael&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0268033153&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>4942498&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>RECAP</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>(RCPPA)</sear:collection>
+              <sear:callNumber>2751.993.1973</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-15T07%3A22%3A08IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Un%20philosophe%20néoplatonicien%20du%20XIe%20siècle:%20Michel%20Psellos%2C%20sa%20vie%2C%20son%20œuvre%2C%20ses%20luttes%20philosophiques%2C%20son%20influence.%20Préf.%20de%20François%20Picavet.&rft.aulast=Zervos&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Zervos%2C%20Christian&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=0833739212&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>1720026</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=1720026&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://images.amazon.com/images/P/0833739212.01._SSTHUM_.jpg</sear:thumbnail>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:0833739212,OCLC:00841599,LCCN:74002050&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-08-15T07%3A22%3A08IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Un%20philosophe%20néoplatonicien%20du%20XIe%20siècle:%20Michel%20Psellos%2C%20sa%20vie%2C%20son%20œuvre%2C%20ses%20luttes%20philosophiques%2C%20son%20influence.%20Préf.%20de%20François%20Picavet.&rft.aulast=Zervos&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Zervos%2C%20Christian&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=0833739212&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>1720026</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktouc>http://www.amazon.com/gp/product/0833739212</sear:linktouc>
+            <sear:linktouc>http://www.worldcat.org/search?q=isbn%3A0833739212</sear:linktouc>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=rcppa&amp;id=1720026</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+      </sear:DOCSET>
+    </sear:RESULT>
+    <sear:searchToken>0</sear:searchToken>
+  </sear:JAGROOT>
+</sear:SEGMENTS>
