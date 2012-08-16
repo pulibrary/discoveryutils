@@ -294,6 +294,11 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
   }
 })->assert('rec_id', '\w+');
 
+
+$app->get('/find/summon/{query}', function($query) use($app) {
+  return "Articles Query " . $app->escape($query);
+});
+
 /*
  * These should be rethought based on a close reading of http://www.exlibrisgroup.org/display/PrimoOI/Brief+Search
  * to make the most generic use of "routes" as possible 
@@ -301,7 +306,9 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
  * indexes available for the "facets" in a PNX record as well.
  * search by various index types issn, isbn, lccn, oclc
  */
-$app->get('/find/{index_type}/{query}', function($index_type, $query) use($app) {
+
+ 
+ $app->get('/find/{index_type}/{query}', function($index_type, $query) use($app) {
   
   if($app['request']->server->get('HTTP_REFERER')) {
     $referer = $app['request']->server->get('HTTP_REFERER');
@@ -333,5 +340,8 @@ $app->get('/find/{index_type}/{query}', function($index_type, $query) use($app) 
   
   return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json'));
 })->assert('index_type', '(issn|isbn|lccn|oclc|title|any|lsr05|creator)'); // should this be a list of possible options from the 
+
+
+
 
 return $app;

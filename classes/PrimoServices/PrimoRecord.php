@@ -370,7 +370,10 @@ Class PrimoRecord
   }
   
   public function getTitle() {
-    return $this->getText("title");
+    $display_data = $this->getElements("display");
+    $fields = $this->getSectionFields($display_data);
+    
+    return $fields['title'][0];
   }
   
   // this should be refactored method is way toooo long
