@@ -23,7 +23,7 @@ class PrimoHolding
     "5" => "five",
     "6" => "six",
   ); 
-  
+  /*
   private $avail_library_pieces;
   private $callnum;
   private $source_id;
@@ -31,6 +31,8 @@ class PrimoHolding
   private $primo_library_code;
   private $location_label;
   private $raw_source;
+   * 
+   */
   private $subfields = array();
   
   public function __construct($holdings_statement) {
@@ -66,6 +68,7 @@ class PrimoHolding
   public function __toString() {
     return $this->holdings_source;
   }
+  
   
   public function __get($name) {
     if (array_key_exists($name, $this->subfields)) {

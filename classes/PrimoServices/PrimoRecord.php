@@ -321,6 +321,17 @@ Class PrimoRecord
     
     return $this->holdings;
   }
+  
+  public function getBriefHoldings() {
+    $holdings_list = $this->buildHoldings();
+    $holdings_locations = array();
+    foreach($holdings_list as $holding) {
+      $current_holding = new PrimoHolding($holding->textContent); 
+      array_push( $holdings_locations, $current_holding->primo_library);
+    }
+    
+    return $holdings_locations;
+  }
 
   private function getElements($tag, $namespace_prefix = "def") {
     $queryString = $namespace_prefix . ":" . $tag;

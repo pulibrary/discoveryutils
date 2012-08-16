@@ -44,6 +44,7 @@ $app['primo_server_connection'] = array(
   'default_pnx_source_id' => 'PRN_VOYAGER',
   'default_scope' => array('PRN'),
   'default.search' => "exact",
+  'num.records.brief.display' => 3
 );
 
 $app['locator.base'] = "http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php";
@@ -60,6 +61,7 @@ $app['stackmap.eligible.libraries'] = array(
   "PPL",
 );
 $app['locations.base'] = "http://libserv5.princeton.edu/requests/locationservice.php";
+
 
 // set up a configured primo client to reuse throughout the project
 $app['primo_client'] = $app->share(function ($app) {
@@ -317,7 +319,7 @@ $app->get('/find/{index_type}/{query}', function($index_type, $query) use($app) 
     $operator = $app['primo_server_connection']['default.search'];
   }
 
-  $primo_query = new PrimoQuery($app->escape($query), $app->escape($index_type), $operator, $scopes);
+  $primo_query = new PrimoQuery($app->escape($query), $app->escape($index_type), $operator, $scopes, $app['primo_server_connection']['num.records.brief.display']);
   $search_results = $app['primo_client']->doSearch($primo_query);
   $response = new PrimoResponse($search_results, $app['primo_server_connection']);
   $deep_link = new SearchDeepLink($app->escape($query), "any", "contains", $app['primo_server_connection'], 'location', array("OTHERS", "FIRE"));
@@ -327,7 +329,6 @@ $app->get('/find/{index_type}/{query}', function($index_type, $query) use($app) 
     'more' => $deep_link->getLink(),
     'records' => $response->getBriefResults(),
     );
-    //print_r($response_data);
   $app['monolog']->addInfo("Index Query:" . $query . "\tREFERER:" . $referer);
   
   return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json'));

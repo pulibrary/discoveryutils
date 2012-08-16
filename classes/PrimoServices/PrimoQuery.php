@@ -20,7 +20,6 @@ Class PrimoQuery
     "institution" => "PRN",
     "onCampus" => "false",
     "indx" => "1",
-    "bulkSize" => "10",
     "dym" => "true",
     "highlight" => "true",
     "displayField" => "title",
@@ -54,12 +53,13 @@ Class PrimoQuery
     "SummonThirdNode"
   );
   
-  function __construct($query_value, $index_field = "any", $precision_operator = "exact", $scopes = array()) {
+  function __construct($query_value, $index_field = "any", $precision_operator = "exact", $scopes = array(), $bulksize = 10) {
     $this->query_value = $query_value;
     $this->index_field = $index_field;
     $this->precision_operator = $precision_operator;
     $this->scopes = $scopes;
     $this->query_params['query'] = $this->buildQuery(); 
+    $this->query_params['bulkSize'] = $bulksize;
     //$this->query_params['loc'] = $this->buildScopes(); //Query can also be an array
     $this->query_string = $this->buildQueryString($this->query_params);
     $this->query_string .= $this->buildScopes();

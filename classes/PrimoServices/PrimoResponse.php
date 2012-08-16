@@ -49,10 +49,12 @@ class PrimoResponse
   
   public function getBriefResults() {
     $brief_result_set = array();
+    
     foreach($this->result_set as $primo_record) {
       $brief_result = array(
         'url' => $primo_record->getResourceLink(),
         'title' => trim($primo_record->getTitle()),
+        'holdings' => $primo_record->getBriefHoldings(),
       );
       array_push($brief_result_set, $brief_result);
     }
