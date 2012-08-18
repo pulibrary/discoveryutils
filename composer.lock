@@ -1,11 +1,11 @@
 {
-    "hash": "0dce3b0aba8480953ce074453ea84441",
+    "hash": "e7a774c09d726e2d7f394bd0eb4a73aa",
     "packages": [
         {
             "package": "guzzle/guzzle",
             "version": "dev-master",
-            "source-reference": "ce8cdd8f673edcfab79256c01dc6d79fce1fa82b",
-            "commit-date": "1344471415"
+            "source-reference": "v2.8.4",
+            "commit-date": "1345052936"
         },
         {
             "package": "monolog/monolog",
@@ -108,8 +108,8 @@
         {
             "package": "symfony/finder",
             "version": "dev-master",
-            "source-reference": "v2.1.0-RC1",
-            "commit-date": "1343512949"
+            "source-reference": "1af11ab3a686f9c45f2a8d9d721d5717cdd5f1d6",
+            "commit-date": "1345026762"
         },
         {
             "package": "symfony/http-foundation",
@@ -120,8 +120,8 @@
         {
             "package": "symfony/http-foundation",
             "version": "dev-master",
-            "source-reference": "9a509ac3bb52076f5a765a85e9552042b40ce287",
-            "commit-date": "1344594770"
+            "source-reference": "6ca7ee5afe2eee134dd6325b9ac30f89f4502db3",
+            "commit-date": "1345012692"
         },
         {
             "package": "symfony/http-kernel",

@@ -47,6 +47,11 @@ $app['primo_server_connection'] = array(
   'num.records.brief.display' => 3
 );
 
+$app['summon.connection'] = array(
+  'client.id' => "princeton",
+  'authcode' => 'LOIYKyKZbRiV0OVu9+worZW4ah'
+);
+
 $app['locator.base'] = "http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php";
 // get primo scopes via webservices http://searchit.princeton.edu/PrimoWebServices/xservice/getscopesofview?viewId=PRINCETON
 $app['stackmap.base'] = "http://princeton.stackmap.com/view/";

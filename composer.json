@@ -13,7 +13,8 @@
   },
   "autoload": {
     "psr-0": {
-      "PrimoServices": "classes/"
+      "PrimoServices": "classes/",
+      "Summon" : "classes/"
     }
   },
   "minimum-stability": "dev"
