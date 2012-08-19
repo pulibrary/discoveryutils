@@ -40,9 +40,9 @@ class SummonClientTest extends \PHPUnit_Framework_TestCase {
   }
 
   function testLimitToOnlyLibraryHoldings() {
-    
+    $this->summon_client->limitToHoldings(false);
     $result_set = $this->summon_client->query("Einstein");
-    $this->summon_client->limitToHoldings();
+    $this->summon_client->limitToHoldings(true);
     $local_result_set = $this->summon_client->query("Einstein");
     
     $this->assertGreaterThan($local_result_set['recordCount'], $result_set['recordCount']);
