@@ -7,7 +7,7 @@ namespace LookupApp\Tests;
  */
 
  
-class SummonQueryApiTest extends \PHPUnit_Framework_TestCase  
+class SummonResponseTest extends \PHPUnit_Framework_TestCase  
 {
   protected function setUp() {
     $this->summon_connection = array( //find a way to pass this in automatically?
@@ -18,6 +18,17 @@ class SummonQueryApiTest extends \PHPUnit_Framework_TestCase
     
   }
   
+  function testGetResearchGuidesOnlyPrinceton() {
+    
+  }
+  
+  function getOnlyPrincetonHoldings() {
+    
+  }
+  
+  function getRecommendations() {
+    
+  }
   //Test Summon Common Query Strings. 
   
 }

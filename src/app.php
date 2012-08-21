@@ -4,15 +4,17 @@
 
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Response,
-  Symfony\Component\HttpFoundation\Request;
+    Symfony\Component\HttpFoundation\Request;
 use PrimoServices\PrimoRecord,
-  PrimoServices\PrimoClient,
-  PrimoServices\PermaLink,
-  PrimoServices\SummonQuery,
-  PrimoServices\PrimoQuery,
-  PrimoServices\RequestClient,
-  PrimoServices\SearchDeepLink,
-  PrimoServices\PrimoResponse;
+    PrimoServices\PrimoClient,
+    PrimoServices\PermaLink,
+    PrimoServices\SummonQuery,
+    PrimoServices\PrimoQuery,
+    PrimoServices\RequestClient,
+    PrimoServices\SearchDeepLink,
+    PrimoServices\PrimoResponse;
+use Summon\Summon,
+    Summon\Response as SummonResponse;
 
 $app = new Silex\Application(); 
 
@@ -300,9 +302,40 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
 })->assert('rec_id', '\w+');
 
 
-$app->get('/find/summon/{query}', function($query) use($app) {
-  return "Articles Query " . $app->escape($query);
-});
+$app->get('/articles/{index_type}/{query}', function($index_type, $query) use($app) {
+  //return "Articles Query " . $app->escape($query);
+  if($app['request']->server->get('HTTP_REFERER')) { //should not be repeated moved out to utilities class
+    $referer = $app['request']->server->get('HTTP_REFERER');
+  } else {
+    $referer = "Direct Query";
+  }
+  
+  $summon_client = new Summon($app['summon.connection']['client.id'], $app['summon.connection']['authcode']);
+  $summon_client->limitToHoldings(); // set to true
+  $summon_data = array();
+  if($index_type == 'guide') {
+    $summon_client->addFilter('ContentType, Research Guide');
+    $summon_data = $summon_client->query($app->escape($query), 1, 3);
+  } elseif ($index_type == "spelling") {
+
+    if($summon_client->checkSpelling($app->escape($query), 1, 1)) {
+      $suggestion = $summon_client->checkSpelling($app->escape($query), 1, 1);
+    }
+    $summon_data = array($suggestion);
+  } elseif($index_type == "recommendations") {
+    $summon_data = $summon_client->query($app->escape($query), 1, 3);
+    
+  } else {
+    $summon_data = $summon_client->query($app->escape($query), 1, 3);
+  }
+  
+  
+  
+  $app['monolog']->addInfo("Summon Query:" . $query . "\tREFERER:" . $referer);
+  return new Response(json_encode($summon_data), 200, array('Content-Type' => 'application/json'));
+})->assert('index_type', '(any|title|guide|creator|issn|isbn|spelling)');
+
+
 
 /*
  * These should be rethought based on a close reading of http://www.exlibrisgroup.org/display/PrimoOI/Brief+Search

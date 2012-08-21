@@ -9,7 +9,7 @@ use Silex\WebTestCase;
  */
 
  
-class SummonQueryDisplayResultsTest extends \WebTestCasee 
+class SummonDisplayTest extends \WebTestCasee 
 {
  
   public function createApplication() {
@@ -19,22 +19,6 @@ class SummonQueryDisplayResultsTest extends \WebTestCasee
 
     return $app;
   } 
-  
-  public function testGetResults() {
-    
-  }
-  
-  public function testGetFormatType() {
-    
-  }
-  
-  public function testGetOpenURL() {
-    
-  }
-  
-  public function getGetFullTextLink() {
-    
-  }
   
 }
 
