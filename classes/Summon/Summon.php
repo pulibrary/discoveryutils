@@ -30,7 +30,7 @@ class Summon
 	protected $start_date = '*'; // start date in range filter
 	protected $end_date = '*'; // end date in range filter
 	protected $complex_filters = array(); // complex facet filters
-	
+	protected $command_filters = array(); // s.cmd filters like addFacetValueFilters(ContentType,Newspaper+Article:t)
 	protected $role; // user's role: authenticated or not
 	protected $holdings_only = false;
 	
@@ -373,6 +373,11 @@ class Summon
 	 *
 	 * @param string $filter
 	 */	
+	
+	
+	public function addCommandFilter($filter) {
+	  $this->command_filters[] = $filter;
+	}
 	
 	public function setStartDate($date)
 	{

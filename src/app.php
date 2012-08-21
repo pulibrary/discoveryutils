@@ -51,7 +51,8 @@ $app['primo_server_connection'] = array(
 
 $app['summon.connection'] = array(
   'client.id' => "princeton",
-  'authcode' => 'LOIYKyKZbRiV0OVu9+worZW4ah'
+  'authcode' => 'LOIYKyKZbRiV0OVu9+worZW4ah',
+  'base.url' => 'http://princeton.summon.serialssolutions.com/search?'
 );
 
 $app['locator.base'] = "http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php";
@@ -312,28 +313,41 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
   
   $summon_client = new Summon($app['summon.connection']['client.id'], $app['summon.connection']['authcode']);
   $summon_client->limitToHoldings(); // set to true
-  $summon_data = array();
+
   if($index_type == 'guide') {
     $summon_client->addFilter('ContentType, Research Guide');
-    $summon_data = $summon_client->query($app->escape($query), 1, 3);
+    $summon_data = new SummonResponse($summon_client->query($app->escape($query), 1, 3));
+    $response_data = array(
+      'query' => $app->escape($query),
+      'number' => $summon_data->hits,
+      'more' => $summon_data->deep_search_link,
+      'records' => $summon_data->getBriefResults(),
+    );
   } elseif ($index_type == "spelling") {
 
     if($summon_client->checkSpelling($app->escape($query), 1, 1)) {
       $suggestion = $summon_client->checkSpelling($app->escape($query), 1, 1);
     }
-    $summon_data = array($suggestion);
+    $response_data = array($suggestion);
   } elseif($index_type == "recommendations") {
-    $summon_data = $summon_client->query($app->escape($query), 1, 3);
-    
+    $summon_data = new SummonResponse($summon_client->query($app->escape($query), 1, 1));
+    $response_data = $summon_data->getRecommendations();
   } else {
-    $summon_data = $summon_client->query($app->escape($query), 1, 3);
+    //$summon_client->addFilter('ContentType,Newspaper+Article,t'); //FIXME this shoudl default to exclude and retain filter to remove newspapers
+    $summon_data = new SummonResponse($summon_client->query($app->escape($query), 1, 3)); 
+    $response_data = array(
+      'query' => $app->escape($query),
+      'number' => $summon_data->hits,
+      'more' => $app['summon.connection']['base.url'] . $summon_data->deep_search_link,
+      'records' => $summon_data->getBriefResults(),
+    );
   }
   
   
   
   $app['monolog']->addInfo("Summon Query:" . $query . "\tREFERER:" . $referer);
-  return new Response(json_encode($summon_data), 200, array('Content-Type' => 'application/json'));
-})->assert('index_type', '(any|title|guide|creator|issn|isbn|spelling)');
+  return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json'));
+})->assert('index_type', '(any|title|guide|creator|issn|isbn|spelling|recommendations)');
 
 
 
