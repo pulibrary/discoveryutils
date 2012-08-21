@@ -312,7 +312,7 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
   }
   
   $summon_client = new Summon($app['summon.connection']['client.id'], $app['summon.connection']['authcode']);
-  $summon_client->limitToHoldings(); // set to true
+  $summon_client->limitToHoldings(); // only bring back Prince results
 
   if($index_type == 'guide') {
     $summon_client->addFilter('ContentType, Research Guide');
@@ -320,7 +320,7 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
     $response_data = array(
       'query' => $app->escape($query),
       'number' => $summon_data->hits,
-      'more' => $summon_data->deep_search_link,
+      'more' => $app['summon.connection']['base.url'] . $summon_data->deep_search_link,
       'records' => $summon_data->getBriefResults(),
     );
   } elseif ($index_type == "spelling") {
@@ -345,7 +345,7 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
   
   
   
-  $app['monolog']->addInfo("Summon Query:" . $query . "\tREFERER:" . $referer);
+  $app['monolog']->addInfo("Summon All Query:" . $query . "\tREFERER:" . $referer);
   return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json'));
 })->assert('index_type', '(any|title|guide|creator|issn|isbn|spelling|recommendations)');
 
