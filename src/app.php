@@ -383,7 +383,7 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
   $search_results = $app['primo_client']->doSearch($primo_query);
   if($search_results) {
     $response = new PrimoResponse($search_results, $app['primo_server_connection']);
-    $deep_link = new SearchDeepLink($app->escape($query), "any", "contains", $app['primo_server_connection'], 'location', array("OTHERS", "FIRE"));
+    $deep_link = new SearchDeepLink($app->escape($query), "any", "exact", $app['primo_server_connection'], 'location', array("OTHERS", "FIRE"));
     $response_data = array(
       'query' => $app->escape($query),
       'number' => $response->getHits(),
