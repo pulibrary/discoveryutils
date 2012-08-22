@@ -332,7 +332,7 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
   } elseif($index_type == "recommendations") {
     $summon_data = new SummonResponse($summon_client->query($app->escape($query), 1, 1));
     $response_data['recommendations'] = $summon_data->getRecommendations();
-    $response_data['number'] = count($response_data['recommendations']['database']);
+    $response_data['number'] = count($response_data['recommendations']);
   } else {
     //$summon_client->addFilter('ContentType,Newspaper+Article,t'); //FIXME this shoudl default to exclude and retain filter to remove newspapers
     $summon_data = new SummonResponse($summon_client->query($app->escape($query), 1, 3)); 
