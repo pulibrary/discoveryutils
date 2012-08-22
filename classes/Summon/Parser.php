@@ -20,14 +20,13 @@ class Parser
   }
   
   public static function getDatabaseRecommendations($api_response) {
-    $recommendations = array();
+    //print_r($api_response);
     if(count($api_response['recommendationLists']) > 0) {
-      foreach($api_response['recommendationLists'] as $recommendation) {
-        array_push($recommendations, $recommendation);
-      }
+      return $api_response['recommendationLists']['database'];
+    } else {
+      return false;
     }
     
-    return $recommendations;
   }
   
 }
