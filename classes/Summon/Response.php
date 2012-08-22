@@ -36,6 +36,7 @@ class Response
         'title' => trim($record->Title[0]),
         'holdings' => $record->hasFullText,
         'format' => $record->ContentType[0],
+        'abstract' => $record->Abstract,
       );
       array_push($brief_result_set, $brief_result);
     }

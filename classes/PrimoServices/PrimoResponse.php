@@ -55,6 +55,7 @@ class PrimoResponse
         'url' => $primo_record->getResourceLink(),
         'title' => trim($primo_record->getTitle()),
         'holdings' => $primo_record->getBriefHoldings(),
+        'format' => $primo_record->getFormatType(),
       );
       array_push($brief_result_set, $brief_result);
     }
