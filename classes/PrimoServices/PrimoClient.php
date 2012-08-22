@@ -24,7 +24,7 @@ class PrimoClient
     if(strlen($response) != 0) { 
       return (string)$response->getBody(); //also can do $response->getBody(TRUE)
     } else {
-      return "<error><code>503</code><message>No Response from Primo Server</message></error>";
+      return false;
     }
   }
   
@@ -40,7 +40,7 @@ class PrimoClient
     if(strlen($response) != 0) { 
       return (string)$response->getBody(); 
     } else {
-      return "<error><code>503</code><message>No Response from Primo Server</message></error>";
+      return false;
     }
   }
 

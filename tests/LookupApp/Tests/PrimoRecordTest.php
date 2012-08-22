@@ -91,4 +91,8 @@ class LookupPrimoRecordTest extends \PHPUnit_Framework_TestCase {
     $this->assertEquals('PRN_VOYAGER4773991', $this->single_source_record->getRecordID());
     $this->assertEquals('dedupmrg48669359', $this->dedup_source_record->getRecordID());
   }
+  
+  function testGetFormatType() {
+    $this->assertEquals('journal', $this->dedup_source_record->getFormatType());
+  }
 }

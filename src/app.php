@@ -380,16 +380,19 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
 
   $primo_query = new PrimoQuery($app->escape($query), $app->escape($index_type), $operator, $scopes, $app['primo_server_connection']['num.records.brief.display']);
   $search_results = $app['primo_client']->doSearch($primo_query);
-  $response = new PrimoResponse($search_results, $app['primo_server_connection']);
-  $deep_link = new SearchDeepLink($app->escape($query), "any", "contains", $app['primo_server_connection'], 'location', array("OTHERS", "FIRE"));
-  $response_data = array(
-    'query' => $app->escape($query),
-    'number' => $response->getHits(),
-    'more' => $deep_link->getLink(),
-    'records' => $response->getBriefResults(),
-    );
-  $app['monolog']->addInfo("Index Query:" . $query . "\tREFERER:" . $referer);
-  
+  if($search_results) {
+    $response = new PrimoResponse($search_results, $app['primo_server_connection']);
+    $deep_link = new SearchDeepLink($app->escape($query), "any", "contains", $app['primo_server_connection'], 'location', array("OTHERS", "FIRE"));
+    $response_data = array(
+      'query' => $app->escape($query),
+      'number' => $response->getHits(),
+      'more' => $deep_link->getLink(),
+      'records' => $response->getBriefResults(),
+      );
+    $app['monolog']->addInfo("Index Query:" . $query . "\tREFERER:" . $referer);
+  } else {
+    $response_data = array("no results available at this time");
+  }
   return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json'));
 })->assert('index_type', '(issn|isbn|lccn|oclc|title|any|lsr05|creator)'); // should this be a list of possible options from the 
 

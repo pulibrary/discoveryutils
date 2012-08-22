@@ -369,6 +369,13 @@ Class PrimoRecord
     return $this->getText("lsr05");
   }
   
+  public function getFormatType() {
+    $search_data = $this->getElements("search");
+    $fields = $this->getSectionFields($search_data);
+    
+    return $fields['rsrctype'][0];
+  }
+  
   public function getTitle() {
     $display_data = $this->getElements("display");
     $fields = $this->getSectionFields($display_data);

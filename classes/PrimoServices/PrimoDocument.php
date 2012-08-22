@@ -52,6 +52,7 @@ class PrimoDocument {
     "genre" =>            array("KW", "Genre"),
     //"btitle" =>           array("TI", "btitle"),
     "stitle" =>           array("ST", "Short Title"),
+    "rsrctype" =>         array("EX", "Extra Field"),
     );
   
   
