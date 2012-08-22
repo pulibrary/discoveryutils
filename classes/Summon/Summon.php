@@ -54,7 +54,7 @@ class Summon
 		}
 		else 
 		{
-			$this->http_client = new Client($this->host);
+			$this->http_client = new \Guzzle\Http\Client($this->host);
 		}
 	}
 	

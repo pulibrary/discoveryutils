@@ -9,7 +9,7 @@ use Silex\WebTestCase;
  */
 
  
-class SummonDisplayTest extends \WebTestCasee 
+class SummonDisplayTest extends WebTestCase 
 {
  
   public function createApplication() {

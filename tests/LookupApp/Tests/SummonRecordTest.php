@@ -7,7 +7,7 @@ namespace LookupApp\Tests;
  */
 
  
-class SummonResponseTest extends \PHPUnit_Framework_TestCase  
+class SummonRecordTest extends \PHPUnit_Framework_TestCase  
 {
   protected function setUp() {
     $this->summon_connection = array( //find a way to pass this in automatically?
