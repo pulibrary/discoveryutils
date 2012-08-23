@@ -120,28 +120,6 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
 
 });
 
-// show a test web page 
-$app->get('/test/', function () use ($app) {
-  return $app['twig']->render('test.twig', array(
-    'title' => "Primo Data Services Test",
-    'base_url' => $app['request']->getBaseUrl(),
-    'search_tabs' => $app['search_tabs'],
-  ));
-});
-
-/* 
- *  Test Route
- */
-$app->get('/hello/{name}', function ($name) use ($app) {
-  $content = $app['twig']->render('hello.twig', array(
-    'name' => $app->escape($name),
-  ));
-  return new Response($content, 200, array(
-    'Cache-Control' => 'max-age=600, s-maxage=600',
-    //'Surrogate-Control' => 'content="ESI/1.0"',
-  ));
-}); 
-
 $app->get('/record/{rec_id}.json', function($rec_id) use($app) {
   $record_data = $app['primo_client']->getID($app->escape($rec_id));
   //$record_data;
@@ -302,6 +280,11 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
   }
 })->assert('rec_id', '\w+');
 
+
+/*
+ * Route to direct queries to Summon API
+ * 
+ */ 
 
 $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($app) {
   //return "Articles Query " . $app->escape($query);
