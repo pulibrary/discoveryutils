@@ -306,11 +306,14 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
       'records' => $summon_data->getBriefResults(),
     );
   } elseif ($index_type == "spelling") {
-
     if($summon_client->checkSpelling($app->escape($query), 1, 1)) {
       $suggestion = $summon_client->checkSpelling($app->escape($query), 1, 1);
     }
-    $response_data = array($suggestion);
+    if(isset($suggestion)) {
+      $response_data = array($suggestion);
+    } else {
+      $response_data = array();
+    }
   } elseif($index_type == "recommendations") {
     $summon_data = new SummonResponse($summon_client->query($app->escape($query), 1, 1));
     $response_data['recommendations'] = $summon_data->getRecommendations();
