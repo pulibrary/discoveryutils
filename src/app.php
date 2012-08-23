@@ -137,7 +137,7 @@ $app->get('/hello/{name}', function ($name) use ($app) {
     'name' => $app->escape($name),
   ));
   return new Response($content, 200, array(
-    'Cache-Control' => 'public, s-maxage=3600',
+    'Cache-Control' => 'max-age=600, s-maxage=600',
     //'Surrogate-Control' => 'content="ESI/1.0"',
   ));
 }); 
