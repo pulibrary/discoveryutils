@@ -1,11 +1,11 @@
 {
-    "hash": "e7a774c09d726e2d7f394bd0eb4a73aa",
+    "hash": "7202a852f3549991b7aeb1ea9f0f97be",
     "packages": [
         {
             "package": "guzzle/guzzle",
             "version": "dev-master",
-            "source-reference": "v2.8.4",
-            "commit-date": "1345052936"
+            "source-reference": "a7ac55e4d1a76d1300b2a3676c62681942fcb170",
+            "commit-date": "1345332798"
         },
         {
             "package": "monolog/monolog",
@@ -96,8 +96,8 @@
         {
             "package": "symfony/event-dispatcher",
             "version": "dev-master",
-            "source-reference": "v2.1.0-BETA4",
-            "commit-date": "1342739894"
+            "source-reference": "76c76f62702b09e0f182ae618be0f1d79e2a711f",
+            "commit-date": "1345066712"
         },
         {
             "package": "symfony/finder",
@@ -120,8 +120,8 @@
         {
             "package": "symfony/http-foundation",
             "version": "dev-master",
-            "source-reference": "6ca7ee5afe2eee134dd6325b9ac30f89f4502db3",
-            "commit-date": "1345012692"
+            "source-reference": "8d5e7f909fa519853e71bcfc57a1da8c637ebcbb",
+            "commit-date": "1345191498"
         },
         {
             "package": "symfony/http-kernel",
@@ -148,6 +148,18 @@
             "commit-date": "1343744077"
         },
         {
+            "package": "symfony/yaml",
+            "version": "dev-master",
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
+        },
+        {
+            "package": "symfony/yaml",
+            "version": "dev-master",
+            "source-reference": "6b3eb66a7c4495dcaa35a64dd93c8ba8c29f35d8",
+            "commit-date": "1344325256"
+        },
+        {
             "package": "twig/twig",
             "version": "dev-master",
             "alias-pretty-version": "1.9.x-dev",
@@ -156,8 +168,8 @@
         {
             "package": "twig/twig",
             "version": "dev-master",
-            "source-reference": "f2f698c820d4396f519ef4175ad6fe79fcfb9ecf",
-            "commit-date": "1344328685"
+            "source-reference": "552143062982fd15a1d6fe5a0cdda1f007212154",
+            "commit-date": "1345489844"
         }
     ],
     "packages-dev": null,
