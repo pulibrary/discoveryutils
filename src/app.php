@@ -330,7 +330,7 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
   
   
   $app['monolog']->addInfo("Summon All Query:" . $query . "\tREFERER:" . $referer);
-  return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=5',));
+  return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=600',));
 })->assert('index_type', '(any|title|guide|creator|issn|isbn|spelling|recommendations)');
 
 
@@ -377,7 +377,7 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
   } else {
     $response_data = array("no results available at this time");
   }
-  return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=5',));
+  return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=600',));
 })->assert('index_type', '(issn|isbn|lccn|oclc|title|any|lsr05|creator)'); // should this be a list of possible options from the 
 
 
