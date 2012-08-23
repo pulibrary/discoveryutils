@@ -1,6 +1,7 @@
 .project
 .settings/*
 vendor/*
+conf/*
 log/*
 docs/*
 cache/*
