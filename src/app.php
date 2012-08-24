@@ -46,7 +46,7 @@ $app['primo_server_connection'] = array(
   'default_view_id' => 'PRINCETON',
   'default_pnx_source_id' => 'PRN_VOYAGER',
   'default_scope' => array('PRN'),
-  'default.search' => "exact",
+  'default.search' => "contains",
   'num.records.brief.display' => 3
 );
 
@@ -373,7 +373,7 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
   $search_results = $app['primo_client']->doSearch($primo_query);
   if($search_results) {
     $response = new PrimoResponse($search_results, $app['primo_server_connection']);
-    $deep_link = new SearchDeepLink($app->escape($query), "any", "exact", $app['primo_server_connection'], 'location', array("OTHERS", "FIRE"));
+    $deep_link = new SearchDeepLink($app->escape($query), "any", $app['primo_server_connection']['default.search'], $app['primo_server_connection'], 'location', array("OTHERS", "FIRE"));
     $response_data = array(
       'query' => $app->escape($query),
       'number' => $response->getHits(),
