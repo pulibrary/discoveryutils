@@ -296,7 +296,7 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
   $summon_client = new Summon($app['summon.connection']['client.id'], $app['summon.connection']['authcode']);
   $summon_client->limitToHoldings(); // only bring back Prince results
 
-  if($index_type == 'guide') {
+  if($index_type == 'guide') { //FIXME Only Libguides 
     $summon_client->addFilter('ContentType, Research Guide');
     $summon_data = new SummonResponse($summon_client->query($app->escape($query), 1, 3));
     $response_data = array(
@@ -315,16 +315,20 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
       $response_data = array();
     }
   } elseif($index_type == "recommendations") {
-    $summon_data = new SummonResponse($summon_client->query($app->escape($query), 1, 1));
+    $summon_data = new SummonResponse($summon_client->query($app->escape($query), 1, 3));
     $response_data['recommendations'] = $summon_data->getRecommendations();
     $response_data['number'] = count($response_data['recommendations']);
   } else {
-    //$summon_client->addFilter('ContentType,Newspaper+Article,t'); //FIXME this shoudl default to exclude and retain filter to remove newspapers
+    $summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:t"); //FIXME this shoudl default to exclude and retain filter to remove newspapers
     $summon_data = new SummonResponse($summon_client->query($app->escape($query), 1, 3)); 
+    $summon_full_search_link = new SummonQuery($app->escape($query), array(
+      "s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t)",      
+      "keep_r" => "true" )
+    );
     $response_data = array(
       'query' => $app->escape($query),
       'number' => $summon_data->hits,
-      'more' => $app['summon.connection']['base.url'] . $summon_data->deep_search_link,
+      'more' => $summon_full_search_link->getLink(),
       'records' => $summon_data->getBriefResults(),
     );
   }
