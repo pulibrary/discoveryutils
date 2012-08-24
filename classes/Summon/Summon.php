@@ -125,6 +125,12 @@ class Summon
 			$options['s.fvgf'] = $this->complex_filters;
 		}
 
+    if ( count($this->command_filters) > 0 )
+    {
+          
+      $options['s.cmd'] = $this->command_filters[0];
+    }
+    
 		// date range filters to be applied
 		
 		if ( $this->start_date != '*' || $this->end_date != '*' )
@@ -229,9 +235,10 @@ class Summon
 		// build querystring
 		
 		$query = array();
-		
+
 		foreach ( $params as $function => $value )
 		{
+		  
 			if ( is_array($value) )
 			{
 				foreach ( $value as $additional )
@@ -246,10 +253,11 @@ class Summon
 				$query[] = "$function=$value";
 			}
 		}
-		
+
 		asort($query);
+
 		$queryString = implode('&', $query);
-		
+
 		// set the url
 
 				
@@ -283,12 +291,11 @@ class Summon
 		}
 		
 		// send the request
-		//$this->http_client->get("$service?" . $queryString, $headers);
 		 $response = $this->http_client->get("$service?" . $queryString, $headers)->send();
 		
 		// decode the response into array
-		
 		return json_decode((string)$response->getBody(), true);
+    
 	}
 	
 	/**

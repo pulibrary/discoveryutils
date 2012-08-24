@@ -319,7 +319,7 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
     $response_data['recommendations'] = $summon_data->getRecommendations();
     $response_data['number'] = count($response_data['recommendations']);
   } else {
-    $summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:t"); //FIXME this shoudl default to exclude and retain filter to remove newspapers
+    $summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:t)"); //FIXME this shoudl default to exclude and retain filter to remove newspapers
     $summon_data = new SummonResponse($summon_client->query($app->escape($query), 1, 3)); 
     $summon_full_search_link = new SummonQuery($app->escape($query), array(
       "s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t)",      
@@ -331,6 +331,7 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
       'more' => $summon_full_search_link->getLink(),
       'records' => $summon_data->getBriefResults(),
     );
+    //print_r($summon_data->deep_search_link);
   }
   
   
