@@ -49,6 +49,16 @@ class SummonClientTest extends \PHPUnit_Framework_TestCase {
     $this->assertLessThan($result_set['recordCount'], $local_result_set['recordCount']);
     
   }
+  
+  function testExcludeNewspaperFromResultSet() {
+    $this->summon_client->limitToHoldings(true);
+    $result_w_newspaper = $this->summon_client->query("Mark Twain");
+    $this->assertGreaterThan(250000, $result_w_newspaper['recordCount']);
+    $this->summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:t)");
+    $result_without_newspaper = $this->summon_client->query("Mark Twain");
+    var_dump($result_without_newspaper['query']);
+    $this->assertLessThan(150000, $result_without_newspaper['recordCount']);
+  }
 
   
 
