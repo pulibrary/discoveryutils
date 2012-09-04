@@ -294,7 +294,7 @@ class Summon
 		// send the request
 		 $response = $this->http_client->get("$service?" . $queryString, $headers)->send();
 		
-		// decode the response into array
+		// decode the response into array - have to cast to string
 		return json_decode((string)$response->getBody(), true);
     
 	}
