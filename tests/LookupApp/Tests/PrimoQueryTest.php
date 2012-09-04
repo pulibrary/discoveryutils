@@ -2,17 +2,28 @@
 
 namespace LookupApp\Tests;
 
+
 /**
  * 
  */
-class LookupPrimoQueryTest extends \PHPUnit_Framework_TestCase {
+class PrimoQueryTest extends \PHPUnit_Framework_TestCase {
   
   protected function setUp() {
+    $this->app['primo'] = array(
+      'base_url' => 'http://searchit.princeton.edu',
+      'institution' => 'PRN',
+      'default_view_id' => 'PRINCETON',
+      'default_pnx_source_id' => 'PRN_VOYAGER',
+      'default_scope' => array('PRN'),
+      'default.search' => "contains",
+      'num.records.brief.display' => 3
+    );
     
   }
   
   public function testIsValidQuery() {
-    
+    $query = new \PrimoServices\PrimoQuery("cats", "any", $this->app['primo']['default.search'], $this->app['primo']['default_scope'], $this->app['primo']['num.records.brief.display']);
+    $this->assertContains("&query=any%2Ccontains%2Ccats" , $query->getQueryString());
   }
   
   public function testHasValidScopes() { //Check Scopes examples loc=local, Engineering Only - scope:(ENG) All Princeton loc=local,scope:(PRN) 
@@ -49,5 +60,18 @@ class LookupPrimoQueryTest extends \PHPUnit_Framework_TestCase {
   
   public function testQueryStringHasNoCommas() { //Primo API and Deep Links queries can't have commas 
     
+  }
+  
+  public function testHasFacet() {
+    $query = new \PrimoServices\PrimoQuery("journal of politics", "title", "exact", $this->app['primo']['default_scope'], $this->app['primo']['num.records.brief.display']);
+    $query->addFacet("facet_rtype,exact,journals");
+    $this->assertContains("&query=facet_rtype%2Cexact%2Cjournals", $query->getQueryString());
+  }
+  
+  public function testHasMultipleFacets() {
+    $query = new \PrimoServices\PrimoQuery("journal of politics", "title", "exact", $this->app['primo']['default_scope'], $this->app['primo']['num.records.brief.display']);
+    $query->addFacet("facet_rtype,exact,journals");
+    $query->addFacet("facet_topic,exact,united states");
+    $this->assertContains("&query=facet_rtype%2Cexact%2Cjournals&query=facet_topic%2Cexact%2Cunited+states", $query->getQueryString());
   }
 }
