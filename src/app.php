@@ -45,7 +45,7 @@ $app['primo_server_connection'] = array(
   'institution' => 'PRN',
   'default_view_id' => 'PRINCETON',
   'default_pnx_source_id' => 'PRN_VOYAGER',
-  'default_scope' => array('PRN'),
+  'default_scope' => array("OTHERS","FIRE"),
   'default.search' => "contains",
   'num.records.brief.display' => 3
 );
@@ -74,6 +74,8 @@ $app['locations.base'] = "http://libserv5.princeton.edu/requests/locationservice
 $app['primo_client'] = $app->share(function ($app) {
     return new PrimoClient($app['primo_server_connection']);
 });
+
+$app['debug'] = true;
 
 
 $app->get('/', function() use($app) {
@@ -321,6 +323,7 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
   } else {
     $summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:t)"); //FIXME this shoudl default to exclude and retain filter to remove newspapers
     $summon_data = new SummonResponse($summon_client->query($app->escape($query), 1, 3)); 
+    //print_r($summon_data);
     $summon_full_search_link = new SummonQuery($app->escape($query), array(
       "s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t)",      
       "keep_r" => "true" )
@@ -348,6 +351,14 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
  * anything in the PNX "search" section can be a search index
  * indexes available for the "facets" in a PNX record as well.
  * search by various index types issn, isbn, lccn, oclc
+ * 
+ * Params accepted
+ * 
+ * scopes
+ *  Example: .....?scopes=ENG,MUSIC - search only english and music libraries
+ * 
+ * format 
+ *  Example: /find/title/journal+of+politics?format=journals - get only items with the journals facet back
  */
 
  
@@ -368,12 +379,25 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
   } else {
     $operator = $app['primo_server_connection']['default.search'];
   }
+  if($app['request']->get('format')) {
+    $format_facet = "facet_rtype,exact," . $app['request']->get('format');
+  }
+
+  if($app['request']->get('subject')) {
+    $subject_facet = "facet_topic,exact," . $app['request']->get('subject');
+  }
 
   $primo_query = new PrimoQuery($app->escape($query), $app->escape($index_type), $operator, $scopes, $app['primo_server_connection']['num.records.brief.display']);
+  if(isset($format_facet)) {
+    $primo_query->addFacet($format_facet);
+  }
+  if(isset($subject_facet)) {
+    $primo_query->addFacet($subject_facet); 
+  }
   $search_results = $app['primo_client']->doSearch($primo_query);
   if($search_results) {
     $response = new PrimoResponse($search_results, $app['primo_server_connection']);
-    $deep_link = new SearchDeepLink($app->escape($query), "any", $app['primo_server_connection']['default.search'], $app['primo_server_connection'], 'location', array("OTHERS", "FIRE"));
+    $deep_link = new SearchDeepLink($app->escape($query), $app->escape($index_type), $operator, $app['primo_server_connection'], 'location', array("OTHERS", "FIRE"), $primo_query->getFacets());
     $response_data = array(
       'query' => $app->escape($query),
       'number' => $response->getHits(),
