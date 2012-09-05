@@ -16,7 +16,7 @@
     "psr-0": {
       "PrimoServices": "classes/",
       "Summon" : "classes/",
-      "Pulfa" : "classes"
+      "Pulfa" : "classes/"
     }
   },
   "minimum-stability": "dev"
