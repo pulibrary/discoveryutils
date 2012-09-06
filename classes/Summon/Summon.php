@@ -94,7 +94,7 @@ class Summon
 		
 		if ( $query != '' )
 		{
-			$options['s.q'] = $query;
+			$options['s.q'] = urlencode($query); //TESTME try url encoding just the Query
 		}
 		
 		// user role
@@ -115,6 +115,7 @@ class Summon
 		
 		if ( count($this->facet_filters) > 0 )
 		{
+		  //print_r($this->facet_filters);
 			$options['s.fvf'] = $this->facet_filters;
 		}
 		
@@ -128,7 +129,7 @@ class Summon
     if ( count($this->command_filters) > 0 )
     {
           
-      $options['s.cmd'] = $this->command_filters[0];
+      $options['s.cmd'] = $this->command_filters;
     }
     
 		// date range filters to be applied
@@ -238,18 +239,18 @@ class Summon
 
 		foreach ( $params as $function => $value )
 		{
-		  
+		  //FIXME encoding URLs causes bad things when using s.cmd parameters 
 			if ( is_array($value) )
 			{
 				foreach ( $value as $additional )
 				{
-					$additional = urlencode($additional);
+					//$additional = urlencode($additional);
 					$query[] = "$function=$additional";
 				}
 			}
 			else
 			{
-				$value = urlencode($value);
+				//$value = urlencode($value);
 				$query[] = "$function=$value";
 			}
 		}
@@ -257,7 +258,7 @@ class Summon
 		asort($query);
 
 		$queryString = implode('&', $query);
-
+    //echo $queryString . "\n";
 		// set the url
 
 				
@@ -293,7 +294,7 @@ class Summon
 		// send the request
 		 $response = $this->http_client->get("$service?" . $queryString, $headers)->send();
 		
-		// decode the response into array
+		// decode the response into array - have to cast to string
 		return json_decode((string)$response->getBody(), true);
     
 	}

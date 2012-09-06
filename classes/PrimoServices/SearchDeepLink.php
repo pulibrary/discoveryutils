@@ -30,19 +30,26 @@ class SearchDeepLink
   private $vid; // should this be a parameter 
   private $tabs = array("location","summon", "course", "blended");
   private $active_tab;
+  private $facet_filters = array();
   
-  public function __construct($query, $index_type, $precision_operator, $primo_connection, $tab = "location", $scopes = array("OTHERS","FIRE")) {
+  public function __construct($query, $index_type, $precision_operator, $primo_connection, $tab = "location", $scopes = array("OTHERS","FIRE"), $facet_list = array()) {
     $this->query = new PrimoQuery($query, $index_type, $precision_operator, $scopes);
     $this->base_url = $primo_connection['base_url'];
     $this->vid = $primo_connection['default_view_id'];
     if ($this->isValidTab($tab)) {
       $this->active_tab = $tab;
     }
+    $this->facet_filters = $facet_list;
+    if(count($this->facet_filters > 0)) {
+      foreach($this->facet_filters as $filter) {
+        $this->query->addFacet($filter);
+      }
+    }
     $this->buildDeepSearchLink();
   }
   
   private function buildDeepSearchLink() {
-    $this->deep_search_link = $this->base_url . $this->primo_deep_search_path . $this->query->getQueryString() . "&vid=" . $this->vid . "&tab=" . $this->active_tab;
+    $this->deep_search_link = $this->base_url . $this->primo_deep_search_path . $this->query->getQueryString() . $this->query->buildFacets() . "&vid=" . $this->vid . "&tab=" . $this->active_tab;
   }
   
   public function getLink() {
