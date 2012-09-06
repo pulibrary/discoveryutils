@@ -16,6 +16,8 @@ use PrimoServices\PrimoRecord,
     PrimoServices\PrimoResponse;
 use Summon\Summon,
     Summon\Response as SummonResponse;
+use Pulfa\Pulfa,
+    Pulfa\Response as PulfaResponse;
 
 $app = new Silex\Application(); 
 
@@ -53,6 +55,10 @@ $app['primo_server_connection'] = array(
 
 
 $app['summon.connection'] = Yaml::parse(__DIR__.'/../conf/summon.yml');
+$app['pulfa'] = array(
+  'host' => "http://findingaids.princeton.edu",
+  'base' => "/collections.xml?"
+);
 
 $app['locator.base'] = "http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php";
 // get primo scopes via webservices http://searchit.princeton.edu/PrimoWebServices/xservice/getscopesofview?viewId=PRINCETON
@@ -74,6 +80,9 @@ $app['locations.base'] = "http://libserv5.princeton.edu/requests/locationservice
 $app['primo_client'] = $app->share(function ($app) {
     return new PrimoClient($app['primo_server_connection']);
 });
+
+
+
 
 $app['debug'] = true;
 
@@ -282,6 +291,28 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
 })->assert('rec_id', '\w+');
 
 
+/*
+ * Route to direct queries to Pulfa
+ * 
+ */
+
+$app->get('/pulfa/{index_type}/{query}', function($index_type, $query) use($app) {
+  if($app['request']->server->get('HTTP_REFERER')) { //should not be repeated moved out to utilities class
+    $referer = $app['request']->server->get('HTTP_REFERER');
+  } else {
+    $referer = "Direct Query";
+  }
+  
+  $pulfa = new \Pulfa\Pulfa($app['pulfa']['host'], $app['pulfa']['base']);
+  $pulfa_response_data = $pulfa->query($app->escape($query), 0, 3);
+  $pulfa_response = new PulfaResponse($pulfa_response_data);
+  $brief_response = $pulfa_response->getBriefResponse();
+  $brief_response['query'] = $app->escape($query);
+  
+  $app['monolog']->addInfo("Pulfa Query:" . $query . "\tREFERER:" . $referer);
+  return new Response(json_encode($brief_response), 200, array('Content-Type' => 'application/json'));
+})->assert('index_type', '(title|any|creator)'); 
+ 
 /*
  * Route to direct queries to Summon API
  * 
