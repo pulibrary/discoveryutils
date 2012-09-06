@@ -20,5 +20,11 @@ class SummonDisplayTest extends WebTestCase
     return $app;
   } 
   
+  public function testBasicSearch() {
+    $client = $this->createClient();
+    $crawler = $client->request('GET', '/articles/any/music');
+    $this->assertTrue($client->getResponse()->isOk());
+  }
+  
 }
 

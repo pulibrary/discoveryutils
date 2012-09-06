@@ -15,7 +15,8 @@
   "autoload": {
     "psr-0": {
       "PrimoServices": "classes/",
-      "Summon" : "classes/"
+      "Summon" : "classes/",
+      "Pulfa" : "classes/"
     }
   },
   "minimum-stability": "dev"

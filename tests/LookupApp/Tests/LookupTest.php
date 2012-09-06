@@ -18,14 +18,6 @@ class LookupTest extends WebTestCase
     $this->assertTrue($crawler->filter('html:contains("Lookup")')->count() > 0);
   }
 
-  public function testHelloMessage() {
-    $client = $this->createClient();
-    $crawler = $client->request('GET', "/hello/kevin");
-    $this->assertTrue($client->getResponse()->isOk());
-    $this->assertEquals(1, count($crawler->filter('title:contains("kevin")')));
-    $this->assertEquals(1, count($crawler->filter('h1:contains("kevin")')));
-  }
-
   public function testResultsJson() {
     $client = $this->createClient();
     $client->request('GET', '/record/PRN_VOYAGER6109368');

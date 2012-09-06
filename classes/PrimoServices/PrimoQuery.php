@@ -53,6 +53,8 @@ Class PrimoQuery
     "SummonThirdNode"
   );
   
+  protected $facet_filters = array();
+  
   function __construct($query_value, $index_field = "any", $precision_operator = "exact", $scopes = array(), $bulksize = 10) {
     $this->query_value = $query_value;
     $this->index_field = $index_field;
@@ -67,6 +69,11 @@ Class PrimoQuery
   }
   
   public function getQueryString() {
+    /*
+    if(count($this->facet_filters > 0)) {
+      $this->query_string = $this->query_string . $this->buildFacets();
+    }
+     */
     return $this->query_string;
   }
   
@@ -74,6 +81,36 @@ Class PrimoQuery
     $this->normalizeQuery($this->query_value);
     return $this->index_field . "," . $this->precision_operator . "," . $this->normalizeQuery($this->query_value); //FIXME check for valid operators 
   }
+  
+  public function addFacet($facet_string) {
+    $this->facet_filters[] = $facet_string;
+  }
+  
+  public function getFacets() {
+    return $this->facet_filters;
+  }
+  
+  public function hasFacets() {
+    if(count($this->facet_filters) > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  
+  public function buildFacets() {
+    $facet_string = "";  
+    if(count($this->facet_filters) > 0) {
+      $facet_string = implode("&query=", $this->facet_filters);
+      
+      //echo $facet_string . "\n";
+      $facet_string = "&query=" . urlencode($facet_string);
+      //echo $facet_string . "\n";
+    }
+    
+    return $facet_string; 
+  }
+  
   
   private function normalizeQuery($query_string) {
     return str_replace(",", "", $query_string);
@@ -177,7 +214,7 @@ Class PrimoQuery
   }
 
   public function __toString() {
-    return $this->query_string;
+    return $this->getQueryString();
   }
 }
   

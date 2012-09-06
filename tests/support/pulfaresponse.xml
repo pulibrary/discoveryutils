@@ -1,0 +1,160 @@
+<pulfa:results xmlns:pulfa="http://library.princeton.edu/pulfa" total="13026" next="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;start=10&amp;rpp=10" self="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;start=0&amp;rpp=10">
+    <pulfa:params>
+        <pulfa:param name="v1" value="woodrow wilson"/>
+        <pulfa:param name="rpp" value="10"/>
+        <pulfa:param name="start" value="0"/>
+        <pulfa:param name="set" value="collections"/>
+        <pulfa:param name="base-uri" value="http://findingaids.princeton.edu"/>
+        <pulfa:param name="final-media" value="application/xml"/>
+    </pulfa:params>
+    <pulfa:result>
+        <pulfa:uri>http://findingaidsbeta.princeton.edu/collections/MC178</pulfa:uri>
+        <pulfa:has-digital-content>false</pulfa:has-digital-content>
+        <pulfa:title>Papers of Woodrow Wilson Project Records</pulfa:title>
+        <pulfa:creator>Papers of Woodrow Wilson Project.</pulfa:creator>
+        <pulfa:lang>English</pulfa:lang>
+        <pulfa:date>1761-1992 (inclusive)</pulfa:date>
+        <pulfa:type>collection</pulfa:type>
+        <pulfa:id>MC178</pulfa:id>
+        <pulfa:extent>366.39 linear feet, 530 boxes, 200 file cabinet drawers, 3 volumes</pulfa:extent>
+        <pulfa:hits>…Papers of <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Project. … The Papers of <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Project, co-sponsored by the <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation and Princeton … The records of the Papers of <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Project, compiled by chief editor Arthur S. Link … The Papers of <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Project, co-sponsored by the <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation and Princeton … Gift of the Directors of the <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation, Dr. Pendleton Herring, President, in May 8 … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation … Single photocopies may be made for research purposes. Portions of the Papers of <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> … Papers of <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Project Records…</pulfa:hits>
+    </pulfa:result>
+    <pulfa:result>
+        <pulfa:uri>http://findingaidsbeta.princeton.edu/collections/AC203</pulfa:uri>
+        <pulfa:has-digital-content>false</pulfa:has-digital-content>
+        <pulfa:title>Woodrow Wilson Foundation Records</pulfa:title>
+        <pulfa:creator>Woodrow Wilson Foundation.</pulfa:creator>
+        <pulfa:lang>English</pulfa:lang>
+        <pulfa:date>1888-1987 (inclusive)</pulfa:date>
+        <pulfa:type>collection</pulfa:type>
+        <pulfa:id>AC203</pulfa:id>
+        <pulfa:extent>64.09 linear feet, 64 boxes</pulfa:extent>
+        <pulfa:hits>…<pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation. … The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation was an organization formed in 1922 in New York City … The collection consists of the administrative records of the <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation. By far … The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation was an organization formed in 1922 in New York City … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation … Identification of specific item; Date (if known); <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation Records, Box and Folder … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation Records…</pulfa:hits>
+    </pulfa:result>
+    <pulfa:result>
+        <pulfa:uri>http://findingaidsbeta.princeton.edu/collections/MC168</pulfa:uri>
+        <pulfa:has-digital-content>false</pulfa:has-digital-content>
+        <pulfa:title>Woodrow Wilson Collection</pulfa:title>
+        <pulfa:creator>Princeton University. Library. Dept. of Rare Books and Special Collections.</pulfa:creator>
+        <pulfa:lang>English</pulfa:lang>
+        <pulfa:date>1837-1986 (inclusive)</pulfa:date>
+        <pulfa:type>collection</pulfa:type>
+        <pulfa:id>MC168</pulfa:id>
+        <pulfa:hits>…Princeton University. Library. Dept. of Rare Books and Special <pulfa:kwic>Collections</pulfa:kwic>. … The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Collection consists of <pulfa:kwic>Wilson</pulfa:kwic> holdings which have been acquired by the Princeton … The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Collection consists of <pulfa:kwic>Wilson</pulfa:kwic> holdings which have been acquired by the Princeton … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> is best known as the 28th president of the United States of America, founder … <pulfa:kwic>Wilson</pulfa:kwic>, <pulfa:kwic>Woodrow</pulfa:kwic>, 1856-1924 … Card indexes to "Early Axson Correspondence" and "<pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> and Ellen Axson <pulfa:kwic>Wilson</pulfa:kwic> … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Collection…</pulfa:hits>
+    </pulfa:result>
+    <pulfa:result>
+        <pulfa:uri>http://findingaidsbeta.princeton.edu/collections/MC215</pulfa:uri>
+        <pulfa:has-digital-content>false</pulfa:has-digital-content>
+        <pulfa:title>Woodrow Wilson Additional Papers</pulfa:title>
+        <pulfa:creator>Seeley G. Mudd Manuscript Library.</pulfa:creator>
+        <pulfa:lang>English</pulfa:lang>
+        <pulfa:date>1879-1969 (inclusive)</pulfa:date>
+        <pulfa:type>collection</pulfa:type>
+        <pulfa:id>MC215</pulfa:id>
+        <pulfa:extent>1.92 linear feet, 2 boxes</pulfa:extent>
+        <pulfa:hits>…The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Additional Papers consist of materials that the Seeley G. Mudd Manuscript … The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Additional Papers consist of materials that the Seeley G. Mudd Manuscript … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> is best known as the 28th president of the United States of America, founder … Materials in the <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Additional Papers have been donated or transfered from a variety … <pulfa:kwic>Wilson</pulfa:kwic>, <pulfa:kwic>Woodrow</pulfa:kwic>, 1856-1924 … The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Additional Papers have been maintained in the order that they were acquired … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Additional Papers…</pulfa:hits>
+    </pulfa:result>
+    <pulfa:result>
+        <pulfa:uri>http://findingaidsbeta.princeton.edu/collections/AC237</pulfa:uri>
+        <pulfa:has-digital-content>false</pulfa:has-digital-content>
+        <pulfa:title>Woodrow Wilson National Fellowship Foundation records</pulfa:title>
+        <pulfa:creator>Woodrow Wilson National Fellowship Foundation.</pulfa:creator>
+        <pulfa:lang>English</pulfa:lang>
+        <pulfa:date>1950-1970 (inclusive)</pulfa:date>
+        <pulfa:type>collection</pulfa:type>
+        <pulfa:id>AC237</pulfa:id>
+        <pulfa:extent>0.25 linear feet, 1 box</pulfa:extent>
+        <pulfa:hits>…<pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> National Fellowship Foundation. … The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> National Fellowship Foundation was founded in 1945 at Princeton University … Consists of clippings and programs about the <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Fellowship Program as well as reports … The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> National Fellowship Foundation was founded in 1945 at Princeton University … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> National Fellowship Foundation … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> National Fellowship Foundation records…</pulfa:hits>
+    </pulfa:result>
+    <pulfa:result>
+        <pulfa:uri>http://findingaidsbeta.princeton.edu/collections/MC216</pulfa:uri>
+        <pulfa:has-digital-content>false</pulfa:has-digital-content>
+        <pulfa:title>Jessie Wilson Sayre Papers</pulfa:title>
+        <pulfa:creator>Sayre, Jessie Woodrow Wilson, 1887-1933.</pulfa:creator>
+        <pulfa:lang>English</pulfa:lang>
+        <pulfa:date>1886-1931 (inclusive)</pulfa:date>
+        <pulfa:type>collection</pulfa:type>
+        <pulfa:id>MC216</pulfa:id>
+        <pulfa:extent>0.63 linear feet, 2 boxes</pulfa:extent>
+        <pulfa:hits>…Sayre, Jessie <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic>, 1887-1933. … Jessie <pulfa:kwic>Wilson</pulfa:kwic> Sayre was the daughter of U.S. President <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> and was a political activist … The Jessie <pulfa:kwic>Wilson</pulfa:kwic> Sayre Papers document the close relationships amongst the <pulfa:kwic>Wilson</pulfa:kwic> and Axson … Jessie <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Sayre was the daughter of U.S. President <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> and was a political … Gift of Francis Bowes Sayre, Jr., Eleanor Sayre, and <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Sayre. No further aquisition … <pulfa:kwic>Wilson</pulfa:kwic>, Margaret <pulfa:kwic>Woodrow</pulfa:kwic>, 1886-1944 …  Library related to <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic>, which can be located by searching for the subject "<pulfa:kwic>Wilson</pulfa:kwic>, <pulfa:kwic>Woodrow</pulfa:kwic> … Jessie <pulfa:kwic>Wilson</pulfa:kwic> Sayre Papers…</pulfa:hits>
+    </pulfa:result>
+    <pulfa:result>
+        <pulfa:uri>http://findingaidsbeta.princeton.edu/collections/MC202/c005</pulfa:uri>
+        <pulfa:has-digital-content>false</pulfa:has-digital-content>
+        <pulfa:title>Series 2: Woodrow Wilson</pulfa:title>
+        <pulfa:lang>English</pulfa:lang>
+        <pulfa:coll-creator>Close, Gilbert F.</pulfa:coll-creator>
+        <pulfa:date>1918-1919 (inclusive)</pulfa:date>
+        <pulfa:type>series</pulfa:type>
+        <pulfa:id>MC202_c005</pulfa:id>
+        <pulfa:extent>.2 linear feet, 1 Box</pulfa:extent>
+        <pulfa:hits>…The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> series contains a mix of correspondence, memorabilia, and photographs from Close … Series 2: <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> … Gilbert F. Close Papers. Series 2: <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic>…</pulfa:hits>
+        <pulfa:breadcrumbs>
+            <pulfa:crumb uri="http://findingaids.princeton.edu/collections/MC202" level="collection">Gilbert F. Close Papers</pulfa:crumb>
+        </pulfa:breadcrumbs>
+    </pulfa:result>
+    <pulfa:result>
+        <pulfa:uri>http://findingaidsbeta.princeton.edu/collections/MC169</pulfa:uri>
+        <pulfa:has-digital-content>false</pulfa:has-digital-content>
+        <pulfa:title>James Kerney Collection on Woodrow Wilson</pulfa:title>
+        <pulfa:creator>Kerney, James, 1873-1934.</pulfa:creator>
+        <pulfa:lang>English</pulfa:lang>
+        <pulfa:date>1910-1927 (inclusive)</pulfa:date>
+        <pulfa:type>collection</pulfa:type>
+        <pulfa:id>MC169</pulfa:id>
+        <pulfa:extent>0.21 linear feet, 1 box</pulfa:extent>
+        <pulfa:hits>… on <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> consists of speeches, correspondence, photographs, and printed material of and about … The James Kerney Collection on <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> consists of speeches, correspondence, photographs …  of The Political Education of <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic>, published in 1926. Kerney died of pneumonia in Baltimore in 1934. … <pulfa:kwic>Wilson</pulfa:kwic>, <pulfa:kwic>Woodrow</pulfa:kwic>, 1856-1924 … The James Kerney Collection on <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> is arranged alphabetically. … James Kerney Collection on <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic>…</pulfa:hits>
+    </pulfa:result>
+    <pulfa:result>
+        <pulfa:uri>http://findingaidsbeta.princeton.edu/collections/AC203/c02154</pulfa:uri>
+        <pulfa:has-digital-content>false</pulfa:has-digital-content>
+        <pulfa:title>Series 6: Woodrow Wilson</pulfa:title>
+        <pulfa:lang>English</pulfa:lang>
+        <pulfa:coll-creator>Woodrow Wilson Foundation.</pulfa:coll-creator>
+        <pulfa:date>1888-1975 (inclusive)</pulfa:date>
+        <pulfa:type>series</pulfa:type>
+        <pulfa:id>AC203_c02154</pulfa:id>
+        <pulfa:extent>15.21 Linear feet</pulfa:extent>
+        <pulfa:hits>…Series 6: <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> contains primarily documentation of numerous commemorative events held … Series 6: <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation Records. Series 6: <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic>…</pulfa:hits>
+        <pulfa:breadcrumbs>
+            <pulfa:crumb uri="http://findingaids.princeton.edu/collections/AC203" level="collection">Woodrow Wilson Foundation Records</pulfa:crumb>
+        </pulfa:breadcrumbs>
+    </pulfa:result>
+    <pulfa:result>
+        <pulfa:uri>http://findingaidsbeta.princeton.edu/collections/AC129</pulfa:uri>
+        <pulfa:has-digital-content>false</pulfa:has-digital-content>
+        <pulfa:title>Woodrow Wilson School of Public and International Affairs Records</pulfa:title>
+        <pulfa:creator>Woodrow Wilson School of Public and International Affairs.</pulfa:creator>
+        <pulfa:lang>English</pulfa:lang>
+        <pulfa:date>1847-2007 (inclusive)</pulfa:date>
+        <pulfa:type>collection</pulfa:type>
+        <pulfa:id>AC129</pulfa:id>
+        <pulfa:extent>132.22 linear feet, 114 boxes</pulfa:extent>
+        <pulfa:hits>…<pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> School of Public and International Affairs. …  of Princeton University at the undergraduate level, the <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> School of Public and International … The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> School of Public and International Affairs records document the founding … The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> School of Public and International Affairs at Princeton University … The records have been acquired through periodic transfers from the <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> School of Public … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> National Fellowship Foundation … Continued transfers of records from the <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> School of Public and International Affairs … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> School of Public and International Affairs Records…</pulfa:hits>
+    </pulfa:result>
+    <pulfa:facets>
+        <pulfa:facet label="Repository">
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;repo-f=Princeton University Archives" count="8295">Princeton University Archives</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;repo-f=Public Policy Papers" count="4387">Public Policy Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;repo-f=Manuscripts Division" count="340">Manuscripts Division</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;repo-f=Latin American Ephemera Collections" count="3">Latin American Ephemera Collections</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;repo-f=Technical and Scientific Reports" count="1">Technical and Scientific Reports</pulfa:term>
+        </pulfa:facet>
+        <pulfa:facet label="Language">
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;lang-f=English" count="13011">English</pulfa:term>
+        </pulfa:facet>
+        <pulfa:facet label="Collection">
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Woodrow Wilson School of Public and International Affairs Records" count="3471">Woodrow Wilson School of Public and International Affairs Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Woodrow Wilson Foundation Records" count="3065">Woodrow Wilson Foundation Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Woodrow Wilson Collection" count="2518">Woodrow Wilson Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Papers of Woodrow Wilson Project Records" count="1101">Papers of Woodrow Wilson Project Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Office of Communications Records" count="414">Office of Communications Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Woodrow Wilson School Policy Seminar Papers" count="401">Woodrow Wilson School Policy Seminar Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Ray Stannard Baker Papers" count="179">Ray Stannard Baker Papers</pulfa:term>
+        </pulfa:facet>
+        <pulfa:facet label="Access">
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;has-digital-content=false" count="13023">false</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;has-digital-content=true" count="3">true</pulfa:term>
+        </pulfa:facet>
+    </pulfa:facets>
+</pulfa:results>

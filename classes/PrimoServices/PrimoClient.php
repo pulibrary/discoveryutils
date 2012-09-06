@@ -35,8 +35,16 @@ class PrimoClient
    * should I have a primo results objects 
    */
   public function doSearch(PrimoQuery $query) {
-    $response = $this->client->get($this->xservice_brief_search . $query->getQueryString())->send();
-    //print_r($response->getBody()); 
+    //echo $query->getQueryString();
+    $request = $this->client->get($this->xservice_brief_search . $query->getQueryString());
+    if($query->hasFacets()) {
+      foreach($query->getFacets() as $facet) {
+        $request->getQuery()->add('query', $facet);
+      }
+    }
+    $request->getQuery()->setAggregateFunction(array($request->getQuery(), 'aggregateUsingDuplicates'));
+    $response = $request->send();
+
     if(strlen($response) != 0) { 
       return (string)$response->getBody(); 
     } else {
