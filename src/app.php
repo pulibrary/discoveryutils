@@ -6,13 +6,13 @@ use Silex\Application;
 use Symfony\Component\HttpFoundation\Response,
     Symfony\Component\HttpFoundation\Request,
     Symfony\Component\Yaml\Yaml;
-use Primo\Record,
+use Primo\Record as PrimoRecord,
     Primo\Client,
     Primo\PermaLink,
     Primo\Query,
     Primo\Client as PrimoClient,
     Primo\SearchDeepLink,
-    Primo\Response;
+    Primo\Response as PrimoResponse;
 use Summon\Summon,
     Summon\Query as SummonQuery,
     Summon\Response as SummonResponse;

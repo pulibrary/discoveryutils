@@ -6,7 +6,7 @@ use Primo\PermaLink as Permalink;
 use Primo\SearchDeepLink as SearchDeepLink;
 use Primo\Holding as PrimoHolding;
 
-Class PrimoRecord 
+Class Record 
 {
   
   private $xpath_base = "//sear:DOC[1]//";
