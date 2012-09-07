@@ -1,5 +1,5 @@
 <?php
-namespace PrimoServices\Outputs;
+namespace Primo\Outputs;
 
 /*
  * @OpenURL

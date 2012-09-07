@@ -15,27 +15,27 @@ class LookupPrimoParserTest extends \PHPUnit_Framework_TestCase {
   }
   
   function testConvertXMLStringToDOMDocument() {
-    $this->assertInstanceOf('DOMDocument', \PrimoServices\PrimoParser::convertToDOMDocument($this->dedup_record_response));
+    $this->assertInstanceOf('DOMDocument', \Primo\Parser::convertToDOMDocument($this->dedup_record_response));
   }
   
   function testConvertSimpleXMLDocumentToDOMDocument() {
-    $this->assertInstanceOf('DOMDocument', \PrimoServices\PrimoParser::convertToDOMDocument($this->simple_xml_doc));
+    $this->assertInstanceOf('DOMDocument', \Primo\Parser::convertToDOMDocument($this->simple_xml_doc));
   }
   
   function testDOMDocumentReturnsDOMDocument() {
-    $this->assertInstanceOf('DOMDocument', \PrimoServices\PrimoParser::convertToDOMDocument($this->dom_document));
+    $this->assertInstanceOf('DOMDocument', \Primo\Parser::convertToDOMDocument($this->dom_document));
   }
   
   function testDOMNodeReturnsDOMDocument() {
     $record_node_list = $this->primo_getit_response->getElementsByTagName('record');
     $dom_node_record = $record_node_list->item(0); //Take first record 
     $this->assertInstanceOf('DOMNode', $dom_node_record);
-    $this->assertInstanceOf('DOMDocument', \PrimoServices\PrimoParser::convertToDOMDocument($dom_node_record));
+    $this->assertInstanceOf('DOMDocument', \Primo\Parser::convertToDOMDocument($dom_node_record));
   }
   
   function testPrimoParseSearchResponse() {
     //$this->assertInstanceOf('String', $this->primo_search_response);
-    $this->assertInstanceOf('DOMDocument', \PrimoServices\PrimoParser::convertToDOMDocument($this->primo_search_response));
+    $this->assertInstanceOf('DOMDocument', \Primo\Parser::convertToDOMDocument($this->primo_search_response));
   }
   
 }

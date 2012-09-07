@@ -14,7 +14,7 @@
   },
   "autoload": {
     "psr-0": {
-      "PrimoServices": "classes/",
+      "Primo": "classes/",
       "Summon" : "classes/",
       "Pulfa" : "classes/"
     }

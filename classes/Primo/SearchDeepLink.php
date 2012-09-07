@@ -1,6 +1,6 @@
 <?php
-namespace PrimoServices;
-use PrimoServices\PrimoQuery;
+namespace Primo;
+use Primo\Query;
 /*
  * @Searchlink
  * Uses Primo "deep" linking services to return a bookmarkable URL for a primo basic search
@@ -33,7 +33,7 @@ class SearchDeepLink
   private $facet_filters = array();
   
   public function __construct($query, $index_type, $precision_operator, $primo_connection, $tab = "location", $scopes = array("OTHERS","FIRE"), $facet_list = array()) {
-    $this->query = new PrimoQuery($query, $index_type, $precision_operator, $scopes);
+    $this->query = new \Primo\Query($query, $index_type, $precision_operator, $scopes);
     $this->base_url = $primo_connection['base_url'];
     $this->vid = $primo_connection['default_view_id'];
     if ($this->isValidTab($tab)) {

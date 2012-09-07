@@ -1,5 +1,5 @@
 <?php
-namespace PrimoServices;
+namespace Primo;
 
 class PrimoException Extends Exception 
 {

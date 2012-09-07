@@ -1,9 +1,9 @@
 <?php
-namespace PrimoServices;
-use PrimoServices\PrimoRecord,
-    PrimoServices\PrimoParser;
+namespace Primo;
+use Primo\Record as PrimoRecord,
+    Primo\Parser as XmlParser;
 
-class PrimoRecordParser {
+class RecordParser {
   
   private $xpath;
   private $primo_server_connection;
@@ -15,7 +15,7 @@ class PrimoRecordParser {
   
   public function __construct($xml,$primo_server_connection) {
     $this->primo_server_connection = $primo_server_connection;
-    $dom = PrimoParser::convertToDOMDocument($xml);
+    $dom = XmlParser::convertToDOMDocument($xml);
     $this->xpath = $this->loadXPath($dom);
     foreach($this->namespaces as $prefix => $namespace) {
       $this->xpath->registerNamespace($prefix, $namespace);

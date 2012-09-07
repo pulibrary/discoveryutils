@@ -22,7 +22,7 @@ class PrimoQueryTest extends \PHPUnit_Framework_TestCase {
   }
   
   public function testIsValidQuery() {
-    $query = new \PrimoServices\PrimoQuery("cats", "any", $this->app['primo']['default.search'], $this->app['primo']['default_scope'], $this->app['primo']['num.records.brief.display']);
+    $query = new \Primo\Query("cats", "any", $this->app['primo']['default.search'], $this->app['primo']['default_scope'], $this->app['primo']['num.records.brief.display']);
     $this->assertContains("&query=any%2Ccontains%2Ccats" , $query->getQueryString());
   }
   
@@ -63,13 +63,13 @@ class PrimoQueryTest extends \PHPUnit_Framework_TestCase {
   }
   
   public function testHasFacet() {
-    $query = new \PrimoServices\PrimoQuery("journal of politics", "title", "exact", $this->app['primo']['default_scope'], $this->app['primo']['num.records.brief.display']);
+    $query = new \Primo\Query("journal of politics", "title", "exact", $this->app['primo']['default_scope'], $this->app['primo']['num.records.brief.display']);
     $query->addFacet("facet_rtype,exact,journals");
     $this->assertContains("&query=facet_rtype%2Cexact%2Cjournals", $query->getQueryString());
   }
   
   public function testHasMultipleFacets() {
-    $query = new \PrimoServices\PrimoQuery("journal of politics", "title", "exact", $this->app['primo']['default_scope'], $this->app['primo']['num.records.brief.display']);
+    $query = new \Primo\Query("journal of politics", "title", "exact", $this->app['primo']['default_scope'], $this->app['primo']['num.records.brief.display']);
     $query->addFacet("facet_rtype,exact,journals");
     $query->addFacet("facet_topic,exact,united states");
     $this->assertContains("&query=facet_rtype%2Cexact%2Cjournals&query=facet_topic%2Cexact%2Cunited+states", $query->getQueryString());

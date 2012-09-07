@@ -1,7 +1,7 @@
 <?php
-namespace PrimoServices;
+namespace Primo;
 
-use PrimoServices\SearchDeepLink;
+use Primo\SearchDeepLink;
 
 /*
  * @Permalink
@@ -38,7 +38,7 @@ class PermaLink
   }
   
   private function buildSearchDeepLink() {
-    $deep_search = new SearchDeepLink($this->pnx_id, "any", "contains", $this->primo_server_connection);
+    $deep_search = new \Primo\SearchDeepLink($this->pnx_id, "any", "contains", $this->primo_server_connection);
     //print_r($this->primo_server_connection);
     //echo $deep_search->getLink();
     return $deep_search->getLink();
