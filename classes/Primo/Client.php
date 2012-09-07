@@ -1,9 +1,9 @@
 <?php
-namespace PrimoServices;
-use PrimoServices\PrimoQuery;
-use Guzzle\Service\Client as Client;
+namespace Primo;
+use Primo\Query;
+use Guzzle\Service\Client as HttpClient;
 
-class PrimoClient
+class Client
 {
   private $base_url;
   private $xservice_base = "/PrimoWebServices";
@@ -13,10 +13,11 @@ class PrimoClient
   private $current_url;
   private $primo_base_url;
   private $primo_institution;
+  private $client;
   
   function __construct($primo_server_connection) {
     $this->institution = $primo_server_connection['institution'];
-    $this->client = new Client($primo_server_connection['base_url'].$this->xservice_base);
+    $this->client = new HttpClient($primo_server_connection['base_url'].$this->xservice_base);
   }
   
   public function getID($pnx_id) {
@@ -34,7 +35,7 @@ class PrimoClient
    * send item a primo query object 
    * should I have a primo results objects 
    */
-  public function doSearch(PrimoQuery $query) {
+  public function doSearch(\Primo\Query $query) {
     //echo $query->getQueryString();
     $request = $this->client->get($this->xservice_brief_search . $query->getQueryString());
     if($query->hasFacets()) {

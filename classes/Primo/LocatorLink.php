@@ -1,5 +1,5 @@
 <?php
-namespace PrimoServices;
+namespace Primo;
 
 /*
  * @Locatorlink

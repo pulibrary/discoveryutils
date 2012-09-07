@@ -1,5 +1,5 @@
 <?php
-namespace PrimoServices;
+namespace Primo;
 
 /* 
  * 
@@ -7,7 +7,7 @@ namespace PrimoServices;
  * $$IPRN$$LRECAP$$1(RCPPA)$$27500.503$$Savailable$$384$$40$$5Y$$636$$Xprincetondb$$Yrcppa$$OPRN_VOYAGER490930
  */
 
-class PrimoHolding
+class Holding
 {
   private $subfield_mappings = array(
     "I" => "institution",

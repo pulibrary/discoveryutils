@@ -1,12 +1,12 @@
 <?php
-namespace PrimoServices;
-use PrimoServices\PrimoDocument;
-use PrimoServices\PrimoParser;
-use PrimoServices\PermaLink;
-use PrimoServices\SearchDeepLink;
-use PrimoServices\PrimoHolding;
+namespace Primo;
+use Primo\Document as PrimoDocument;
+use Primo\Parser as XmlParser;
+use Primo\PermaLink as Permalink;
+use Primo\SearchDeepLink as SearchDeepLink;
+use Primo\Holding as PrimoHolding;
 
-Class PrimoRecord 
+Class Record 
 {
   
   private $xpath_base = "//sear:DOC[1]//";
@@ -24,7 +24,7 @@ Class PrimoRecord
 
   function __construct($xml,$primo_server_connection) {
     $this->primo_server_connection = $primo_server_connection;
-    $dom = PrimoParser::convertToDOMDocument($xml);
+    $dom = XmlParser::convertToDOMDocument($xml);
     $this->xpath = $this->loadXPath($dom);
     // Set Namespaces in Constructor
     foreach($this->namespaces as $prefix => $namespace) {
@@ -197,7 +197,7 @@ Class PrimoRecord
       $voyager_key_available_libraries['locations'] = $available_libraries[$voyager_key];
       $locator_links = array();
       foreach($available_libraries[$voyager_key] as $location_code) {
-        $locator_link = new \PrimoServices\LocatorLink($this->split_voyager_id($voyager_key), $location_code); //FIXME perhaps splitting should be moved to locater class
+        $locator_link = new \Primo\LocatorLink($this->split_voyager_id($voyager_key), $location_code); //FIXME perhaps splitting should be moved to locater class
         array_push($locator_links, $locator_link->getLink());
       }
       $brief_info_data[$voyager_key] = array_merge($voyager_key_available_libraries, $getit_links[$voyager_key], array('voyager_id' => $this->split_voyager_id($voyager_key)), array('locator_links' => $locator_links));

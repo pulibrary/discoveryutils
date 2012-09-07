@@ -20,7 +20,7 @@ class QueryDeepLinkTest extends \PHPUnit_Framework_TestCase {
     foreach($query_strings as $query) {
       $tab = "location";
       $link = "http://searchit.princeton.edu/primo_library/libweb/action/dlSearch.do?institution=PRN&onCampus=false&indx=1&bulkSize=10&dym=true&highlight=true&displayField=title&query=any%2Ccontains%2C" . urlencode($query) . "&loc=local,scope:(OTHERS),scope:(FIRE)&vid=PRINCETON&tab={$tab}";
-      $searchlink = new \PrimoServices\SearchDeepLink($query, 'any', 'contains', $primo_server_connection, $tab, $scopes = array("OTHERS","FIRE"));
+      $searchlink = new \Primo\SearchDeepLink($query, 'any', 'contains', $primo_server_connection, $tab, $scopes = array("OTHERS","FIRE"));
       //$this->assertEquals(strlen($link), strlen($searchlink->getLink()));
       $this->assertEquals($searchlink->getLink(), $link);
     }
