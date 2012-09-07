@@ -47,7 +47,7 @@ $app['primo_server_connection'] = array(
   'institution' => 'PRN',
   'default_view_id' => 'PRINCETON',
   'default_pnx_source_id' => 'PRN_VOYAGER',
-  'default_scope' => array("OTHERS","FIRE"),
+  'default.scope' => array("OTHERS","FIRE"),
   'default.search' => "contains",
   'num.records.brief.display' => 3
 );
@@ -84,7 +84,7 @@ $app['primo_client'] = $app->share(function ($app) {
 
 
 
-//$app['debug'] = true;
+$app['debug'] = true;
 
 
 $app->get('/', function() use($app) {
@@ -403,7 +403,7 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
   if($app['request']->get('scopes')) {
     $scopes = explode(",", $app['request']->get('scopes'));  
   } else {
-    $scopes = array("PRN");
+    $scopes = $app['primo_server_connection']['default.scope']; //array("PRN");
   }
   if($app['request']->get('limit')) {
     $operator = $app->escape($app['request']->get('limit'));

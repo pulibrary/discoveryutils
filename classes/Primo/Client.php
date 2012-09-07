@@ -46,7 +46,7 @@ class Client
     $request->getQuery()->setAggregateFunction(array($request->getQuery(), 'aggregateUsingDuplicates'));
     $response = $request->send();
 
-    if(strlen($response) != 0) { 
+    if(strlen($response) != 0) {
       return (string)$response->getBody(); 
     } else {
       return false;

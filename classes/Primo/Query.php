@@ -135,8 +135,8 @@ Class Query
        }
      }
    }
-   //print_r($scopes);
    $scope_string = "&loc=" .implode(",", $scopes); //HACK b/c ex libris can't deal params consistently
+   
    return $scope_string;
   }
 
