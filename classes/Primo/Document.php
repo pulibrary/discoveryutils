@@ -1,5 +1,5 @@
 <?php
-namespace PrimoServices;
+namespace Primo;
 
 /*
  * Returns primo bibliographic elements
@@ -7,7 +7,7 @@ namespace PrimoServices;
  * see the "docs" directory for an example mapping 
  */
 
-class PrimoDocument {
+class Document {
   
   // mapped from RIS fields Defined at: http://en.wikipedia.org/wiki/RIS_(file_format)#Tags
   

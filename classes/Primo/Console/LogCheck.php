@@ -1,6 +1,6 @@
 <?php
 
-namespace PrimoServices\Console;
+namespace Primo\Console;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;

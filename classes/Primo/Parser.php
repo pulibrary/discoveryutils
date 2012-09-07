@@ -1,9 +1,9 @@
 <?php
 
-namespace PrimoServices;
+namespace Primo;
 
 /*
- * @PrimoParser
+ * @Parser
  * Utility Class to perform various conversion tasks
  * 
  * convertToDOMDocument method taken from David Walker's Xerxes Parser Class
@@ -12,7 +12,7 @@ namespace PrimoServices;
  *  
  */
 
-Class PrimoParser {
+Class Parser {
   
   /**
    * Convert an XML-based variable to DOMDocument

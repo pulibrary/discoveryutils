@@ -1,8 +1,8 @@
 <?php
 
-namespace PrimoServices;
+namespace Primo;
 
-Class PrimoQuery
+Class Query
 {
   
    /*
