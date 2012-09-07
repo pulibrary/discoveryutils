@@ -22,7 +22,7 @@ class LookupPrimoResponseTest extends \PHPUnit_Framework_TestCase {
     }
     
     public function testGetResults() {
-      $this->assertTrue($this->single_dedup_response->result_set[0] instanceof \PrimoServices\PrimoRecord);
+      $this->assertTrue($this->single_dedup_response->result_set[0] instanceof \Primo\Record);
       foreach($this->multiple_response->result_set as $record) {
         $this->assertTrue($record instanceof \Primo\Record);
       }

@@ -7,7 +7,6 @@ use Symfony\Component\HttpFoundation\Response,
     Symfony\Component\HttpFoundation\Request,
     Symfony\Component\Yaml\Yaml;
 use Primo\Record as PrimoRecord,
-    Primo\Client as PrimoClient,
     Primo\PermaLink as Permalink,
     Primo\Query as PrimoQuery,
     Primo\Client as PrimoClient,
