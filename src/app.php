@@ -7,11 +7,12 @@ use Symfony\Component\HttpFoundation\Response,
     Symfony\Component\HttpFoundation\Request,
     Symfony\Component\Yaml\Yaml;
 use Primo\Record as PrimoRecord,
-    Primo\Client,
-    Primo\PermaLink,
-    Primo\Query,
     Primo\Client as PrimoClient,
-    Primo\SearchDeepLink,
+    Primo\PermaLink as Permalink,
+    Primo\Query as PrimoQuery,
+    Primo\Client as PrimoClient,
+    Primo\SearchDeepLink as SearchDeepLink,
+    Primo\RequestClient as RequestClient,
     Primo\Response as PrimoResponse;
 use Summon\Summon,
     Summon\Query as SummonQuery,
@@ -441,8 +442,5 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
   }
   return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=600',));
 })->assert('index_type', '(issn|isbn|lccn|oclc|title|any|lsr05|creator)'); // should this be a list of possible options from the 
-
-
-
 
 return $app;
