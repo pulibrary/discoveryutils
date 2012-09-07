@@ -6,15 +6,15 @@ use Silex\Application;
 use Symfony\Component\HttpFoundation\Response,
     Symfony\Component\HttpFoundation\Request,
     Symfony\Component\Yaml\Yaml;
-use PrimoServices\PrimoRecord,
-    PrimoServices\PrimoClient,
-    PrimoServices\PermaLink,
-    PrimoServices\SummonQuery,
-    PrimoServices\PrimoQuery,
-    PrimoServices\RequestClient,
-    PrimoServices\SearchDeepLink,
-    PrimoServices\PrimoResponse;
+use Primo\Record,
+    Primo\Client,
+    Primo\PermaLink,
+    Primo\Query,
+    Primo\Client as PrimoClient,
+    Primo\SearchDeepLink,
+    Primo\Response;
 use Summon\Summon,
+    Summon\Query as SummonQuery,
     Summon\Response as SummonResponse;
 use Pulfa\Pulfa,
     Pulfa\Response as PulfaResponse;

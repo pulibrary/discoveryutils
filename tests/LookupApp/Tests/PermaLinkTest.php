@@ -1,7 +1,7 @@
 <?php
 
 namespace LookupApp\Tests;
-use PrimoServices\PermaLink;
+use Primo\PermaLink as PermaLink;
 
 /**
  * 

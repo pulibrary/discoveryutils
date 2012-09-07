@@ -1,7 +1,7 @@
 <?php
-namespace PrimoServices;
+namespace Summon;
 
-class SummonQuery {
+class Query {
   
   private $summon_base = "http://princeton.summon.serialssolutions.com/search?";
   private $query_key = "s.q";

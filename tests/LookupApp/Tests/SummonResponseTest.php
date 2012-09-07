@@ -28,7 +28,6 @@ class SummonResponseTest extends \PHPUnit_Framework_TestCase
   
   function getRecommendations() {
     
-  }
-  //Test Summon Common Query Strings. 
+  } 
   
 }
