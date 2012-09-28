@@ -82,13 +82,14 @@ $app['primo_client'] = $app->share(function ($app) {
 });
 
 
+$app['environment'] = Yaml::parse(__DIR__.'/../conf/environment.yml');
 
-
-//$app['debug'] = true;
-
+if ($app['environment']['env'] != "production") {
+  $app['debug'] = true;
+}
 
 $app->get('/', function() use($app) {
-  return 'Primo Lookup App';
+  return 'Discovery Services Utilities running in ' . $app['environment']['env'] . " mode";
 });
 
 /*
