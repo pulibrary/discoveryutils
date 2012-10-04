@@ -174,9 +174,12 @@ $app->get('/record/{rec_id}', function($rec_id) use($app) {
  * @params
  * id = Voyager Style Numeric ID (Maybe should accept either one)
  * loc = Voyager Location Code 
+ * 
+ * Example http://mydiscservice.edu/map?id=123456&loc=stax
+ * 
  * */
 $app->get('/map', function() use ($app) {
-  $rec_id = $app->escape($app['request']->get("id"));
+  $rec_id = $app->escape($app['request']->get("id")); //FIXME Should through an error if neither parameter is present
   $location_code = $app->escape($app['request']->get("loc"));
   if(preg_match('/^dedup/', $rec_id)) {
     $record_data = $app['primo_client']->getID($rec_id);
@@ -196,9 +199,9 @@ $app->get('/map', function() use ($app) {
     if($holding->location_code == $location_code) {
       if($holding->source_id == $requested_id) {
       	$holding_to_map = $holding;
-	break; 
+        break; //why break from loop here? 
       } else {
-	$holding_to_map = $holding;
+        $holding_to_map = $holding;
       } 
     }
   }
@@ -211,7 +214,7 @@ $app->get('/map', function() use ($app) {
     if(in_array($holding_to_map->primo_library, $app['stackmap.eligible.libraries'])) {
       /*
        * get the location display Name from locations service because stack map wants it that way
-       * should be obtained via a database call in furture when apps mere 
+       * should be obtained via a database call in future when apps mere 
        */ 
       $location_info = json_decode(file_get_contents($app['locations.base'] . "?" . http_build_query(array('loc' => $holding_to_map->location_code))), TRUE); //FIXME
       $map_params = array(
@@ -371,7 +374,7 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
   
   
   
-  $app['monolog']->addInfo("Summon All Query:" . $query . "\tREFERER:" . $referer);
+  $app['monolog']->addInfo("Summon $index_type Query:" . $query . "\tREFERER:" . $referer);
   return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
 })->assert('index_type', '(any|title|guide|creator|issn|isbn|spelling|recommendations)');
 
