@@ -305,7 +305,7 @@ $app->get('/pulfa/{index_type}/{query}', function($index_type, $query) use($app)
   }
   
   $pulfa = new \Pulfa\Pulfa($app['pulfa']['host'], $app['pulfa']['base']);
-  $pulfa_response_data = $pulfa->query($app->escape($query), 0, 3);
+  $pulfa_response_data = $pulfa->query($query, 0, 3);
   $pulfa_response = new PulfaResponse($pulfa_response_data);
   $brief_response = $pulfa_response->getBriefResponse();
   $brief_response['query'] = $app->escape($query);
@@ -332,7 +332,7 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
 
   if($index_type == 'guide') { //FIXME Only Libguides 
     $summon_client->addFilter('ContentType, Research Guide');
-    $summon_data = new SummonResponse($summon_client->query($app->escape($query), 1, 3));
+    $summon_data = new SummonResponse($summon_client->query($query, 1, 3));
     $response_data = array(
       'query' => $app->escape($query),
       'number' => $summon_data->hits,
@@ -340,8 +340,8 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
       'records' => $summon_data->getBriefResults(),
     );
   } elseif ($index_type == "spelling") {
-    if($summon_client->checkSpelling($app->escape($query), 1, 1)) {
-      $suggestion = $summon_client->checkSpelling($app->escape($query), 1, 1);
+    if($summon_client->checkSpelling($query, 1, 1)) {
+      $suggestion = $summon_client->checkSpelling($query, 1, 1);
     }
     if(isset($suggestion)) {
       $response_data = array($suggestion);
@@ -349,14 +349,14 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
       $response_data = array();
     }
   } elseif($index_type == "recommendations") {
-    $summon_data = new SummonResponse($summon_client->query($app->escape($query), 1, 3));
+    $summon_data = new SummonResponse($summon_client->query($query, 1, 3));
     $response_data['recommendations'] = $summon_data->getRecommendations();
     $response_data['number'] = count($response_data['recommendations']);
   } else {
     $summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:t)"); //FIXME this shoudl default to exclude and retain filter to remove newspapers
-    $summon_data = new SummonResponse($summon_client->query($app->escape($query), 1, 3)); 
+    $summon_data = new SummonResponse($summon_client->query($query, 1, 3)); 
     //print_r($summon_data);
-    $summon_full_search_link = new SummonQuery($app->escape($query), array(
+    $summon_full_search_link = new SummonQuery($query, array(
       "s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t)",      
       "keep_r" => "true" )
     );
@@ -419,7 +419,7 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
     $subject_facet = "facet_topic,exact," . $app['request']->get('subject');
   }
 
-  $primo_query = new PrimoQuery($app->escape($query), $app->escape($index_type), $operator, $scopes, $app['primo_server_connection']['num.records.brief.display']);
+  $primo_query = new PrimoQuery($query, $app->escape($index_type), $operator, $scopes, $app['primo_server_connection']['num.records.brief.display']);
   if(isset($format_facet)) {
     $primo_query->addFacet($format_facet);
   }
