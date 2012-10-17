@@ -45,6 +45,7 @@ class Record
   );
   private $default_namespace = "pulfa";
   private $dom; //dom representation of record 
+  public $breadcrumb;
   
   function __construct($xml) {
     $this->dom = XmlParser::convertToDOMDocument($xml);  
