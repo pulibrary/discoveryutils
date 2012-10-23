@@ -76,6 +76,7 @@ $app['stackmap.eligible.libraries'] = array(
 
 $app['stackmap.by.title.locations'] = array(
   'sciss',
+  'pplps',
 );
 
 $app['locations.base'] = "http://libserv5.princeton.edu/requests/locationservice.php";

@@ -340,16 +340,17 @@ Class Record
     return $nodeList;
   }
 
+  /*
+   * Return Primo Metadata from the "display" and "addata" 
+   * sections of the PNX record.
+   */
   public function getPrimoDocumentData() {
-    //ADDME Will Return Primo Metadata for Record
     $display_data = $this->getElements("display");
     $display_values = $this->getSectionFields($display_data);
-    //print_r($display_values);
     $add_data_section = $this->getElements("addata");
     $add_data_section_values = $this->getSectionFields($add_data_section);
-    //print_r($add_data_section_values);
     $record_metadata = array_merge($display_values, $add_data_section_values); //, $enrichment_section_values); //, $search_data_values);//$display_values, );
-    //print_r($record_metadata);
+
     return $record_metadata;
   }
   
@@ -446,7 +447,7 @@ Class Record
     }
     array_push($format_mappings, "UR - ". $resource_link);
     array_push($format_mappings, "ER - "); //push the RIS last reference marker on stack
-    //print_r($format_mappings);
+
     return implode("\n", $format_mappings);
   }
   
@@ -483,7 +484,7 @@ Class Record
         }
       }
     }
-    //print_r($section_values);
+
     return $section_values;
   }
   
