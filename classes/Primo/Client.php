@@ -14,6 +14,7 @@ class Client
   private $primo_base_url;
   private $primo_institution;
   private $client;
+  private $url_string;
   
   function __construct($primo_server_connection) {
     $this->institution = $primo_server_connection['institution'];

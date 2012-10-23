@@ -26,4 +26,13 @@ class QueryDeepLinkTest extends \PHPUnit_Framework_TestCase {
     }
   }
   
+  function testReturnValidQueryDeepLinkWithFacets() {
+    $query_strings = array("Journal of Politics", "Nature");
+    $format_to_test = "journals";
+    $facet_filter = array("facet_rtype,exact,".$format_to_test);
+    foreach ($query_strings as $query) {
+      
+    }
+  }
+  
 }

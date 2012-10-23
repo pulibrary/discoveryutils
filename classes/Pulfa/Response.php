@@ -27,7 +27,8 @@ class Response
         'url' => $record->uri,
         'digital' => $record->digital,
         'abstract' => $record->hits,
-        'type' => $record->type
+        'type' => $record->type,
+        'breadcrumb' => $record->breadcrumb,
       );
     }  
     
