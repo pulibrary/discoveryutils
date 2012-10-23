@@ -73,6 +73,12 @@ $app['stackmap.eligible.libraries'] = array(
   "STOKES",
   "PPL",
 );
+
+$app['stackmap.by.title.locations'] = array(
+  'sciss',
+  'pplps',
+);
+
 $app['locations.base'] = "http://libserv5.princeton.edu/requests/locationservice.php";
 
 
@@ -174,9 +180,16 @@ $app->get('/record/{rec_id}', function($rec_id) use($app) {
  * @params
  * id = Voyager Style Numeric ID (Maybe should accept either one)
  * loc = Voyager Location Code 
+ * 
+ * Example http://mydiscservice.edu/map?id=123456&loc=stax
+ * 
  * */
 $app->get('/map', function() use ($app) {
-  $rec_id = $app->escape($app['request']->get("id"));
+  $referer = "DIRECT";
+  if($app['request']->server->get('HTTP_REFERER')) { //should not be repeated moved out to utilities class
+    $referer = $app['request']->server->get('HTTP_REFERER');
+  }
+  $rec_id = $app->escape($app['request']->get("id")); //FIXME Should through an error if neither parameter is present
   $location_code = $app->escape($app['request']->get("loc"));
   if(preg_match('/^dedup/', $rec_id)) {
     $record_data = $app['primo_client']->getID($rec_id);
@@ -196,26 +209,53 @@ $app->get('/map', function() use ($app) {
     if($holding->location_code == $location_code) {
       if($holding->source_id == $requested_id) {
       	$holding_to_map = $holding;
-	break; 
+        break; //why break from loop here? 
       } else {
-	$holding_to_map = $holding;
+        $holding_to_map = $holding;
       } 
     }
   }
   
-  if(!(isset($holding_to_map))) {
-    $app['monolog']->err("TYPE:No Holdings Available for Requested Record ID\tREC_ID:$rec_id\tLOCATION:$location_code"); 
-    return "No Holdings at the requested location for Record";
+  /*
+   * ***Note on Empty Holdings*******
+   * 
+   * If there is no holding in Primo Web Services should treat the item differently depending on whether or not it came
+   * from Voyager or Searchit. There can be discrepancies for temp holdings. 
+   * 
+   * For Searchit - generate an error. 
+   * For Voyager - Just pass through to the PUL Locator for an item not a stackmap eligible library
+   * 
+   */
+  //$use_locator = FALSE;
+  
+  if(!(isset($holding_to_map))) { 
+    $app['monolog']->err("TYPE:No Holdings Available for Requested Record ID\tREC_ID:$rec_id\tLOCATION:$location_code\tREFERER:$referer"); //log the error
+    //handle behavior 
+    //return "No Holdings at the requested location for Record";
+    //if(in_array($holding_to_map->primo_library, $app['stackmap.eligible.libraries'])) { //how to find the primo library 
+      //return twig template 
+       return $app['twig']->render('noholdings.twig', array(
+       'record_id' => $rec_id));
+    //} else {
+      // return the location 
+    //  $use_locator = TRUE;
+    //}
   } else {
       
-    if(in_array($holding_to_map->primo_library, $app['stackmap.eligible.libraries'])) {
-      /*
+    if(in_array($holding_to_map->primo_library, $app['stackmap.eligible.libraries'])) { //FIXE
+       /*
        * get the location display Name from locations service because stack map wants it that way
-       * should be obtained via a database call in furture when apps mere 
+       * should be obtained via a database call in future when apps mere 
        */ 
       $location_info = json_decode(file_get_contents($app['locations.base'] . "?" . http_build_query(array('loc' => $holding_to_map->location_code))), TRUE); //FIXME
+      //print_r($location_info);
+      if(in_array($holding_to_map->location_code, $app['stackmap.by.title.locations'])) {
+        $call_number = $primo_record->getTitle();
+      } else {
+        $call_number = $holding_to_map->call_number;
+      }
       $map_params = array(
-        'callno' => $holding_to_map->call_number,
+        'callno' => $call_number,
         'location' => $holding_to_map->location_code,
         'library' => strval($location_info[$holding_to_map->location_code]['libraryDisplay']),
       );
@@ -229,8 +269,11 @@ $app->get('/map', function() use ($app) {
       $map_url = $app['locator.base'] . "?" . http_build_query($map_params);
     }
     $app['monolog']->addInfo("MAP:$map_url\tLOCATION:$location_code\tRECORD:$rec_id"); 
-    return $app->redirect($map_url);
- 
+    if (isset($app['debug'])) {
+      return $map_url;
+    } else {
+      return $app->redirect($map_url);
+    }
   } 
 });
 
@@ -328,7 +371,7 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
   }
   
   $summon_client = new Summon($app['summon.connection']['client.id'], $app['summon.connection']['authcode']);
-  $summon_client->limitToHoldings(); // only bring back Prince results
+  $summon_client->limitToHoldings(); // only bring back Princeton results
 
   if($index_type == 'guide') { //FIXME Only Libguides 
     $summon_client->addFilter('ContentType, Research Guide');
@@ -371,7 +414,7 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
   
   
   
-  $app['monolog']->addInfo("Summon All Query:" . $query . "\tREFERER:" . $referer);
+  $app['monolog']->addInfo("Summon $index_type Query:" . $query . "\tREFERER:" . $referer);
   return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
 })->assert('index_type', '(any|title|guide|creator|issn|isbn|spelling|recommendations)');
 
