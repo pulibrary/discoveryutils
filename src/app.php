@@ -269,11 +269,9 @@ $app->get('/map', function() use ($app) {
       $map_url = $app['locator.base'] . "?" . http_build_query($map_params);
     }
     $app['monolog']->addInfo("MAP:$map_url\tLOCATION:$location_code\tRECORD:$rec_id"); 
-    if (isset($app['debug'])) {
-      return $map_url;
-    } else {
-      return $app->redirect($map_url);
-    }
+
+    return $app->redirect($map_url);
+
   } 
 });
 
