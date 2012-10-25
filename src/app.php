@@ -248,18 +248,21 @@ $app->get('/map', function() use ($app) {
    * 
    */
   
-  if(!(isset($holding_to_map))) { 
+  if(!(isset($holding_to_map))) {
+    // most likely for temp/perm location mismatches
+    // send these over to the locator  
     $app['monolog']->err("TYPE:No Holdings Available for Requested Record ID\tREC_ID:$rec_id\tLOCATION:$location_code\tREFERER:$referer"); //log the error
-    //handle behavior 
-    //return "No Holdings at the requested location for Record";
-    //if(in_array($holding_to_map->primo_library, $app['stackmap.eligible.libraries'])) { //how to find the primo library 
-      //return twig template 
-       return $app['twig']->render('noholdings.twig', array(
-       'record_id' => $rec_id));
-    //} else {
-      // return the location 
-    //  $use_locator = TRUE;
-    //}  
+    
+    $map_params = array(
+        'loc' => $location_code,
+        'id' => $rec_id,
+      );
+    $map_url = $app['locator.base'] . "?" . http_build_query($map_params);
+    
+    $app['monolog']->addInfo("MAP:$map_url\tLOCATION:$location_code\tRECORD:$rec_id"); 
+   
+    return $app->redirect($map_url);
+    
   } elseif(in_array($holding_to_map->location_code, $app['stackmap.reserve.locations'])) {
     $location_info = json_decode(file_get_contents($app['locations.base'] . "?" . http_build_query(array('loc' => $holding_to_map->location_code))), TRUE); //FIXME
     return $app['twig']->render('reserve.twig', array(
