@@ -62,6 +62,8 @@ $app['pulfa'] = array(
 
 $app['locator.base'] = "http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php";
 // get primo scopes via webservices http://searchit.princeton.edu/PrimoWebServices/xservice/getscopesofview?viewId=PRINCETON
+
+$app['stackmap'] = Yaml::parse(__DIR__.'/../conf/stackmap.yml');
 $app['stackmap.base'] = "http://princeton.stackmap.com/view/";
 $app['stackmap.eligible.libraries'] = array(
   "ARCH",
@@ -77,6 +79,23 @@ $app['stackmap.eligible.libraries'] = array(
 $app['stackmap.by.title.locations'] = array(
   'sciss',
   'pplps',
+  'sprg',
+);
+
+$app['stackmap.reserve.locations'] = array(
+  'ueso',
+  'spir',
+  'piaprr',
+  'gstr',
+  'strp',
+  'strr',
+  'pplr',
+  'scires',
+  'scigr',
+  'scilal',
+  'sar',
+  'musg',
+  'musr',
 );
 
 $app['locations.base'] = "http://libserv5.princeton.edu/requests/locationservice.php";
@@ -95,7 +114,9 @@ if ($app['environment']['env'] != "production") {
 }
 
 $app->get('/', function() use($app) {
+  
   return 'Discovery Services Utilities running in ' . $app['environment']['env'] . " mode";
+  
 });
 
 /*
@@ -226,7 +247,6 @@ $app->get('/map', function() use ($app) {
    * For Voyager - Just pass through to the PUL Locator for an item not a stackmap eligible library
    * 
    */
-  //$use_locator = FALSE;
   
   if(!(isset($holding_to_map))) { 
     $app['monolog']->err("TYPE:No Holdings Available for Requested Record ID\tREC_ID:$rec_id\tLOCATION:$location_code\tREFERER:$referer"); //log the error
@@ -239,7 +259,16 @@ $app->get('/map', function() use ($app) {
     //} else {
       // return the location 
     //  $use_locator = TRUE;
-    //}
+    //}  
+  } elseif(in_array($holding_to_map->location_code, $app['stackmap.reserve.locations'])) {
+    $location_info = json_decode(file_get_contents($app['locations.base'] . "?" . http_build_query(array('loc' => $holding_to_map->location_code))), TRUE); //FIXME
+    return $app['twig']->render('reserve.twig', array(
+       'record_id' => $rec_id,
+       'title' => $primo_record->getTitle(),
+       'call_number' => $holding_to_map->call_number,
+       'library' => $location_info[$holding_to_map->location_code]['libraryDisplay'],
+       'location_label' => $location_info[$holding_to_map->location_code]['collectionDisplay']
+       ));
   } else {
       
     if(in_array($holding_to_map->primo_library, $app['stackmap.eligible.libraries'])) { //FIXE
@@ -269,11 +298,9 @@ $app->get('/map', function() use ($app) {
       $map_url = $app['locator.base'] . "?" . http_build_query($map_params);
     }
     $app['monolog']->addInfo("MAP:$map_url\tLOCATION:$location_code\tRECORD:$rec_id"); 
-    if (isset($app['debug'])) {
-      return $map_url;
-    } else {
-      return $app->redirect($map_url);
-    }
+   
+    return $app->redirect($map_url);
+    
   } 
 });
 
