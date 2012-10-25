@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Item {{ title }} @ {{ library }} - {{call_number}}</title>
+  </head>
+  <body>
+    <h1>Reserve Item for {{ library }}</h1>
+    
+    <h2>Item Details</h2>
+    <table>
+    	<tr><td>Call Number</td><td>{{ call_number }}</td></tr>
+    	<tr><td>Title</td><td>{{ title }}</td></tr>
+    	<tr><td>Location</td><td>{{ location_label }}</td></tr>
+    </table>
+    <p>This item is currently in a reserve location please see the circulation desk at the {{ library }} to get an available copy.</p>
+  </body>
+</html>
