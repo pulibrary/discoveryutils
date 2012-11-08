@@ -15,7 +15,7 @@ class LookupTest extends WebTestCase
   public function testIndex() {
     $client = $this->createClient();
     $crawler = $client->request('GET', '/');
-    $this->assertTrue($crawler->filter('html:contains("Lookup")')->count() > 0);
+    $this->assertTrue($crawler->filter('html:contains("Discovery")')->count() > 0);
   }
 
   public function testResultsJson() {
