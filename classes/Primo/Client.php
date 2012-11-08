@@ -37,13 +37,18 @@ class Client
    * should I have a primo results objects 
    */
   public function doSearch(\Primo\Query $query) {
+    //echo $this->xservice_brief_search . 
     //echo $query->getQueryString();
     $request = $this->client->get($this->xservice_brief_search . $query->getQueryString());
+    
     if($query->hasFacets()) {
+      
       foreach($query->getFacets() as $facet) {
         $request->getQuery()->add('query', $facet);
       }
+        
     }
+
     $request->getQuery()->setAggregateFunction(array($request->getQuery(), 'aggregateUsingDuplicates'));
     $response = $request->send();
 
