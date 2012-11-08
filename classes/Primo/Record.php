@@ -384,6 +384,26 @@ Class Record
     return $fields['title'][0];
   }
   
+  /* strip punctuation of the end of titles
+   * 
+   */
+  public function getNormalizedTitle() {
+    $title = $this->getTitle();
+    $this->processTitles();
+    return rtrim($title, ".;/,");
+  }
+  
+  private function processTitles() {
+    // test for format type....
+    $display_data = $this->getElements("display");
+    $fields = $this->getSectionFields($display_data);
+    //print_r($fields);
+    $search_data = $this->getElements("search");
+    $normalized_fields = $this->getSectionFields($search_data);
+    //return $fields['title'][0];
+    //print_r($normalized_fields);
+  }
+  
   // this should be refactored method is way toooo long
   public function getCitation($type = "RIS") {
     $primo_document = new PrimoDocument();
