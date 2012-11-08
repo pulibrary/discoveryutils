@@ -14,10 +14,10 @@ class LookupPrimoRecordTest extends \PHPUnit_Framework_TestCase {
       'default_view_id' => 'PRINCETON',
       'default_pnx_source_id' => 'PRN_VOYAGER',
     );
-    $single_record_reponse = file_get_contents(dirname(__FILE__).'../../../support/PRN_VOYAGER4773991.xml');
-    $this->single_source_record = new \Primo\Record($single_record_reponse, $primo_server_connection);
-    $dedup_record_reponse = file_get_contents(dirname(__FILE__).'../../../support/dedup_response.xml');
-    $this->dedup_source_record = new \Primo\Record($dedup_record_reponse, $primo_server_connection);
+    $single_record_response = file_get_contents(dirname(__FILE__).'../../../support/PRN_VOYAGER4773991.xml');
+    $this->single_source_record = new \Primo\Record($single_record_response, $primo_server_connection);
+    $dedup_record_response = file_get_contents(dirname(__FILE__).'../../../support/dedup_response.xml');
+    $this->dedup_source_record = new \Primo\Record($dedup_record_response, $primo_server_connection);
     $electronic_record_response = file_get_contents(dirname(__FILE__).'../../../support/PRN_VOYAGER5399326.xml');
     $this->electronic_record_response = new \Primo\Record($electronic_record_response,$primo_server_connection);
     $electronic_record_via_sfx_response = file_get_contents(dirname(__FILE__).'../../../support/PRN_VOYAGER857469.xml');
@@ -94,5 +94,15 @@ class LookupPrimoRecordTest extends \PHPUnit_Framework_TestCase {
   
   function testGetFormatType() {
     $this->assertEquals('journal', $this->dedup_source_record->getFormatType());
+  }
+  
+  function testGetDisplayTitle() {
+    $this->assertEquals('Himalayan animal tales / by Dorothy Mierow.', $this->single_source_record->getTitle());
+    $this->assertEquals('Journal of politics (Online).', $this->dedup_source_record->getTitle());
+  }
+  
+  function testGetNormalizedTitle() {
+    $this->assertEquals('Journal of politics (Online)', $this->dedup_source_record->getNormalizedTitle());
+    $this->assertEquals('Himalayan animal tales / by Dorothy Mierow', $this->single_source_record->getNormalizedTitle());
   }
 }

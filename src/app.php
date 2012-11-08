@@ -79,7 +79,7 @@ $app['stackmap.eligible.libraries'] = array(
 $app['stackmap.by.title.locations'] = array(
   'sciss',
   'pplps',
-  'sprg',
+  'sprf',
 );
 
 $app['stackmap.reserve.locations'] = array(
@@ -267,7 +267,7 @@ $app->get('/map', function() use ($app) {
     $location_info = json_decode(file_get_contents($app['locations.base'] . "?" . http_build_query(array('loc' => $holding_to_map->location_code))), TRUE); //FIXME
     return $app['twig']->render('reserve.twig', array(
        'record_id' => $rec_id,
-       'title' => $primo_record->getTitle(),
+       'title' => $primo_record->getNormalizedTitle(),
        'call_number' => $holding_to_map->call_number,
        'library' => $location_info[$holding_to_map->location_code]['libraryDisplay'],
        'location_label' => $location_info[$holding_to_map->location_code]['collectionDisplay']
@@ -282,7 +282,7 @@ $app->get('/map', function() use ($app) {
       $location_info = json_decode(file_get_contents($app['locations.base'] . "?" . http_build_query(array('loc' => $holding_to_map->location_code))), TRUE); //FIXME
       //print_r($location_info);
       if(in_array($holding_to_map->location_code, $app['stackmap.by.title.locations'])) {
-        $call_number = $primo_record->getTitle();
+        $call_number = $primo_record->getNormalizedTitle();
       } else {
         $call_number = $holding_to_map->call_number;
       }
