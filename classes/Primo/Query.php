@@ -69,11 +69,11 @@ Class Query
   }
   
   public function getQueryString() {
-    
+    /*
     if(count($this->facet_filters > 0)) {
       $this->query_string = $this->query_string . $this->buildFacets();
     }
-    
+    */
     return $this->query_string;
   }
   
