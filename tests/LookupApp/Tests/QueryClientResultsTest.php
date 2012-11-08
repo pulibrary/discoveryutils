@@ -9,7 +9,7 @@ use Silex\WebTestCase;
  */
 
  
-class SummonDisplayTest extends WebTestCase 
+class QueryClientResultsTest extends WebTestCase 
 {
  
   public function createApplication() {
@@ -20,11 +20,23 @@ class SummonDisplayTest extends WebTestCase
     return $app;
   } 
   
-  public function testBasicSearch() {
+  public function testBasicSummonSearch() {
     $client = $this->createClient();
-    $crawler = $client->request('GET', '/articles/any/music');
+    $crawler = $client->request('GET', '/articles/any?query=music');
     $this->assertTrue($client->getResponse()->isOk());
   }
+ 
+ public function testBasicPulfaSearch() {
+    $client = $this->createClient();
+    $crawler = $client->request('GET', '/pulfa/any?query=music');
+    $this->assertTrue($client->getResponse()->isOk());
+ }
+ 
+ public function testBasicPrimoSearch() {
+    $client = $this->createClient();
+    $crawler = $client->request('GET', '/find/any?query=music');
+    $this->assertTrue($client->getResponse()->isOk());
+ }
   
 }
 
