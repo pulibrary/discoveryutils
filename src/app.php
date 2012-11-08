@@ -354,7 +354,11 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
  */
 
 $app->get('/pulfa/{index_type}', function($index_type) use($app) {
-  $query = $app['request']->get('query');
+  if($app['request']->get('query')) {
+    $query = $app['request']->get('query');
+  } else {
+    return "No Query Supplied";
+  }
   if($app['request']->server->get('HTTP_REFERER')) { //should not be repeated moved out to utilities class
     $referer = $app['request']->server->get('HTTP_REFERER');
   } else {
@@ -377,7 +381,11 @@ $app->get('/pulfa/{index_type}', function($index_type) use($app) {
  */ 
 
 $app->get('/articles/{index_type}', function($index_type) use($app) {
-  $query = $app['request']->get('query');
+  if($app['request']->get('query')) {
+    $query = $app['request']->get('query');
+  } else {
+    return "No Query Supplied";
+  }
   //return "Articles Query " . $app->escape($query);
   if($app['request']->server->get('HTTP_REFERER')) { //should not be repeated moved out to utilities class
     $referer = $app['request']->server->get('HTTP_REFERER');
@@ -454,7 +462,11 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
  
  $app->get('/find/{index_type}', function($index_type) use($app) {
   
-  $query = $app['request']->get('query');
+  if($app['request']->get('query')) {
+    $query = $app['request']->get('query');
+  } else {
+    return "No Query Supplied";
+  }
   
   if($app['request']->server->get('HTTP_REFERER')) {
     $referer = $app['request']->server->get('HTTP_REFERER');

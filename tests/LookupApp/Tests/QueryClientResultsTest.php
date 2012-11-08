@@ -38,5 +38,16 @@ class QueryClientResultsTest extends WebTestCase
     $this->assertTrue($client->getResponse()->isOk());
  }
   
+ public function testEmptyQuery() {
+   $client = $this->createClient();
+   $crawler = $client->request('GET', '/find/any?query=');
+   $this->assertTrue($client->getResponse()->isOk());
+ } 
+ 
+ public function testNoQueryParam() {
+   $client = $this->createClient();
+   $crawler = $client->request('GET', '/find/any');
+   $this->assertTrue($client->getResponse()->isOk());
+ } 
 }
 
