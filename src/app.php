@@ -62,41 +62,7 @@ $app['pulfa'] = array(
 
 $app['locator.base'] = "http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php";
 // get primo scopes via webservices http://searchit.princeton.edu/PrimoWebServices/xservice/getscopesofview?viewId=PRINCETON
-
 $app['stackmap'] = Yaml::parse(__DIR__.'/../conf/stackmap.yml');
-$app['stackmap.base'] = "http://princeton.stackmap.com/view/";
-$app['stackmap.eligible.libraries'] = array(
-  "ARCH",
-  "EAL",
-  "ENG",
-  "LEWIS",
-  "MUSIC",
-  "MARQ",
-  "STOKES",
-  "PPL",
-);
-
-$app['stackmap.by.title.locations'] = array(
-  'sciss',
-  'pplps',
-  'sprg',
-);
-
-$app['stackmap.reserve.locations'] = array(
-  'ueso',
-  'spir',
-  'piaprr',
-  'gstr',
-  'strp',
-  'strr',
-  'pplr',
-  'scires',
-  'scigr',
-  'scilal',
-  'sar',
-  'musg',
-  'musr',
-);
 
 $app['locations.base'] = "http://libserv5.princeton.edu/requests/locationservice.php";
 
@@ -112,6 +78,23 @@ $app['environment'] = Yaml::parse(__DIR__.'/../conf/environment.yml');
 if ($app['environment']['env'] != "production") {
   $app['debug'] = true;
 }
+
+/* basic error catching */
+$app->error(function (\Exception $e, $code) use ($app) {
+    if ($app['debug']) {
+        return;
+    }
+    switch ($code) {
+        case 404:
+            $message = 'The requested page could not be found.';
+            break;
+        default:
+            $message = 'We are sorry, but something went terribly wrong.';
+    }
+
+    return new Response($message);
+});
+
 
 $app->get('/', function() use($app) {
   
@@ -263,26 +246,26 @@ $app->get('/map', function() use ($app) {
    
     return $app->redirect($map_url);
     
-  } elseif(in_array($holding_to_map->location_code, $app['stackmap.reserve.locations'])) {
+  } elseif(in_array($holding_to_map->location_code, $app['stackmap']['reserve.locations'])) {
     $location_info = json_decode(file_get_contents($app['locations.base'] . "?" . http_build_query(array('loc' => $holding_to_map->location_code))), TRUE); //FIXME
     return $app['twig']->render('reserve.twig', array(
        'record_id' => $rec_id,
-       'title' => $primo_record->getTitle(),
+       'title' => $primo_record->getNormalizedTitle(),
        'call_number' => $holding_to_map->call_number,
        'library' => $location_info[$holding_to_map->location_code]['libraryDisplay'],
        'location_label' => $location_info[$holding_to_map->location_code]['collectionDisplay']
        ));
   } else {
       
-    if(in_array($holding_to_map->primo_library, $app['stackmap.eligible.libraries'])) { //FIXE
+    if(in_array($holding_to_map->primo_library, $app['stackmap']['eligible.libraries'])) { //FIXE
        /*
        * get the location display Name from locations service because stack map wants it that way
        * should be obtained via a database call in future when apps mere 
        */ 
       $location_info = json_decode(file_get_contents($app['locations.base'] . "?" . http_build_query(array('loc' => $holding_to_map->location_code))), TRUE); //FIXME
       //print_r($location_info);
-      if(in_array($holding_to_map->location_code, $app['stackmap.by.title.locations'])) {
-        $call_number = $primo_record->getTitle();
+      if(in_array($holding_to_map->location_code, $app['stackmap']['by.title.locations'])) {
+        $call_number = $primo_record->getNormalizedTitle();
       } else {
         $call_number = $holding_to_map->call_number;
       }
@@ -291,7 +274,7 @@ $app->get('/map', function() use ($app) {
         'location' => $holding_to_map->location_code,
         'library' => strval($location_info[$holding_to_map->location_code]['libraryDisplay']),
       );
-      $map_url = $app['stackmap.base'] . "?" . http_build_query($map_params);
+      $map_url = $app['stackmap']['base.url'] . "?" . http_build_query($map_params);
     } else {
       
       $map_params = array(
@@ -370,7 +353,12 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
  * 
  */
 
-$app->get('/pulfa/{index_type}/{query}', function($index_type, $query) use($app) {
+$app->get('/pulfa/{index_type}', function($index_type) use($app) {
+  if($app['request']->get('query')) {
+    $query = $app['request']->get('query');
+  } else {
+    return "No Query Supplied";
+  }
   if($app['request']->server->get('HTTP_REFERER')) { //should not be repeated moved out to utilities class
     $referer = $app['request']->server->get('HTTP_REFERER');
   } else {
@@ -392,7 +380,12 @@ $app->get('/pulfa/{index_type}/{query}', function($index_type, $query) use($app)
  * 
  */ 
 
-$app->get('/articles/{index_type}/{query}', function($index_type, $query) use($app) {
+$app->get('/articles/{index_type}', function($index_type) use($app) {
+  if($app['request']->get('query')) {
+    $query = $app['request']->get('query');
+  } else {
+    return "No Query Supplied";
+  }
   //return "Articles Query " . $app->escape($query);
   if($app['request']->server->get('HTTP_REFERER')) { //should not be repeated moved out to utilities class
     $referer = $app['request']->server->get('HTTP_REFERER');
@@ -467,7 +460,13 @@ $app->get('/articles/{index_type}/{query}', function($index_type, $query) use($a
  */
 
  
- $app->get('/find/{index_type}/{query}', function($index_type, $query) use($app) {
+ $app->get('/find/{index_type}', function($index_type) use($app) {
+  
+  if($app['request']->get('query')) {
+    $query = $app['request']->get('query');
+  } else {
+    return "No Query Supplied";
+  }
   
   if($app['request']->server->get('HTTP_REFERER')) {
     $referer = $app['request']->server->get('HTTP_REFERER');
