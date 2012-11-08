@@ -274,7 +274,7 @@ $app->get('/map', function() use ($app) {
         'location' => $holding_to_map->location_code,
         'library' => strval($location_info[$holding_to_map->location_code]['libraryDisplay']),
       );
-      $map_url = $app['stackmap.base.url'] . "?" . http_build_query($map_params);
+      $map_url = $app['stackmap']['base.url'] . "?" . http_build_query($map_params);
     } else {
       
       $map_params = array(
