@@ -69,11 +69,11 @@ Class Query
   }
   
   public function getQueryString() {
-    /*
+    
     if(count($this->facet_filters > 0)) {
       $this->query_string = $this->query_string . $this->buildFacets();
     }
-     */
+    
     return $this->query_string;
   }
   
@@ -101,11 +101,10 @@ Class Query
   public function buildFacets() {
     $facet_string = "";  
     if(count($this->facet_filters) > 0) {
-      $facet_string = implode("&query=", $this->facet_filters);
+      $encoded_facets = array_map('urlencode', $this->facet_filters);
+      $facet_string = implode("&query=", $encoded_facets);
       
-      //echo $facet_string . "\n";
-      $facet_string = "&query=" . urlencode($facet_string);
-      //echo $facet_string . "\n";
+      $facet_string = "&query=" . $facet_string;
     }
     
     return $facet_string; 

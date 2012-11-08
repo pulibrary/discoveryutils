@@ -29,7 +29,7 @@ class PermaLinkTest extends \PHPUnit_Framework_TestCase {
   function testGetIDLinkAsSearch() {
     $ids = array("PRN_VOYAGER857469", "PRN_VOYAGER5399326");
     foreach($ids as $id) {
-      $link = "http://searchit.princeton.edu/primo_library/libweb/action/dlSearch.do?institution=PRN&onCampus=false&indx=1&bulkSize=10&dym=true&highlight=true&displayField=title&query=any%2Ccontains%2C{$id}&loc=local,scope:(OTHERS),scope:(FIRE)&vid=PRINCETON&tab=location";
+      $link = "http://searchit.princeton.edu/primo_library/libweb/action/dlSearch.do?institution=PRN&onCampus=false&indx=1&dym=true&highlight=true&displayField=title&query=any%2Ccontains%2C{$id}&bulkSize=10&loc=local,scope:(OTHERS),scope:(FIRE)&vid=PRINCETON&tab=location";
       $permalink = new PermaLink($id, $this->primo_server_connection);
       $this->assertEquals($link, $permalink->getDeepLinkAsSearch());
     }

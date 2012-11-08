@@ -1,4 +1,4 @@
-<pulfa:results xmlns:pulfa="http://library.princeton.edu/pulfa" total="13026" next="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;start=10&amp;rpp=10" self="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;start=0&amp;rpp=10">
+<pulfa:results xmlns:pulfa="http://library.princeton.edu/pulfa" total="13341" next="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;start=10&amp;rpp=10" self="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;start=0&amp;rpp=10">
     <pulfa:params>
         <pulfa:param name="v1" value="woodrow wilson"/>
         <pulfa:param name="rpp" value="10"/>
@@ -8,7 +8,7 @@
         <pulfa:param name="final-media" value="application/xml"/>
     </pulfa:params>
     <pulfa:result>
-        <pulfa:uri>http://findingaidsbeta.princeton.edu/collections/MC178</pulfa:uri>
+        <pulfa:uri>http://findingaids.princeton.edu/collections/MC178</pulfa:uri>
         <pulfa:has-digital-content>false</pulfa:has-digital-content>
         <pulfa:title>Papers of Woodrow Wilson Project Records</pulfa:title>
         <pulfa:creator>Papers of Woodrow Wilson Project.</pulfa:creator>
@@ -20,7 +20,19 @@
         <pulfa:hits>…Papers of <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Project. … The Papers of <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Project, co-sponsored by the <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation and Princeton … The records of the Papers of <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Project, compiled by chief editor Arthur S. Link … The Papers of <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Project, co-sponsored by the <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation and Princeton … Gift of the Directors of the <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation, Dr. Pendleton Herring, President, in May 8 … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation … Single photocopies may be made for research purposes. Portions of the Papers of <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> … Papers of <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Project Records…</pulfa:hits>
     </pulfa:result>
     <pulfa:result>
-        <pulfa:uri>http://findingaidsbeta.princeton.edu/collections/AC203</pulfa:uri>
+        <pulfa:uri>http://findingaids.princeton.edu/collections/MC168</pulfa:uri>
+        <pulfa:has-digital-content>false</pulfa:has-digital-content>
+        <pulfa:title>Woodrow Wilson Collection</pulfa:title>
+        <pulfa:creator>Princeton University. Library. Dept. of Rare Books and Special Collections.</pulfa:creator>
+        <pulfa:lang>English</pulfa:lang>
+        <pulfa:date>1837-1986 (inclusive)</pulfa:date>
+        <pulfa:type>collection</pulfa:type>
+        <pulfa:id>MC168</pulfa:id>
+        <pulfa:extent>73.34 linear feet (117 boxes)</pulfa:extent>
+        <pulfa:hits>…Princeton University. Library. Dept. of Rare Books and Special <pulfa:kwic>Collections</pulfa:kwic>. … The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Collection consists of <pulfa:kwic>Wilson</pulfa:kwic> holdings which have been acquired by the Princeton … The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Collection consists of <pulfa:kwic>Wilson</pulfa:kwic> holdings which have been acquired by the Princeton … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> is best known as the 28th president of the United States of America, founder … <pulfa:kwic>Wilson</pulfa:kwic>, <pulfa:kwic>Woodrow</pulfa:kwic>, 1856-1924 … Card indexes to "Early Axson Correspondence" and "<pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> and Ellen Axson <pulfa:kwic>Wilson</pulfa:kwic> … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Collection…</pulfa:hits>
+    </pulfa:result>
+    <pulfa:result>
+        <pulfa:uri>http://findingaids.princeton.edu/collections/AC203</pulfa:uri>
         <pulfa:has-digital-content>false</pulfa:has-digital-content>
         <pulfa:title>Woodrow Wilson Foundation Records</pulfa:title>
         <pulfa:creator>Woodrow Wilson Foundation.</pulfa:creator>
@@ -32,18 +44,7 @@
         <pulfa:hits>…<pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation. … The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation was an organization formed in 1922 in New York City … The collection consists of the administrative records of the <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation. By far … The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation was an organization formed in 1922 in New York City … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation … Identification of specific item; Date (if known); <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation Records, Box and Folder … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Foundation Records…</pulfa:hits>
     </pulfa:result>
     <pulfa:result>
-        <pulfa:uri>http://findingaidsbeta.princeton.edu/collections/MC168</pulfa:uri>
-        <pulfa:has-digital-content>false</pulfa:has-digital-content>
-        <pulfa:title>Woodrow Wilson Collection</pulfa:title>
-        <pulfa:creator>Princeton University. Library. Dept. of Rare Books and Special Collections.</pulfa:creator>
-        <pulfa:lang>English</pulfa:lang>
-        <pulfa:date>1837-1986 (inclusive)</pulfa:date>
-        <pulfa:type>collection</pulfa:type>
-        <pulfa:id>MC168</pulfa:id>
-        <pulfa:hits>…Princeton University. Library. Dept. of Rare Books and Special <pulfa:kwic>Collections</pulfa:kwic>. … The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Collection consists of <pulfa:kwic>Wilson</pulfa:kwic> holdings which have been acquired by the Princeton … The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Collection consists of <pulfa:kwic>Wilson</pulfa:kwic> holdings which have been acquired by the Princeton … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> is best known as the 28th president of the United States of America, founder … <pulfa:kwic>Wilson</pulfa:kwic>, <pulfa:kwic>Woodrow</pulfa:kwic>, 1856-1924 … Card indexes to "Early Axson Correspondence" and "<pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> and Ellen Axson <pulfa:kwic>Wilson</pulfa:kwic> … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Collection…</pulfa:hits>
-    </pulfa:result>
-    <pulfa:result>
-        <pulfa:uri>http://findingaidsbeta.princeton.edu/collections/MC215</pulfa:uri>
+        <pulfa:uri>http://findingaids.princeton.edu/collections/MC215</pulfa:uri>
         <pulfa:has-digital-content>false</pulfa:has-digital-content>
         <pulfa:title>Woodrow Wilson Additional Papers</pulfa:title>
         <pulfa:creator>Seeley G. Mudd Manuscript Library.</pulfa:creator>
@@ -55,7 +56,7 @@
         <pulfa:hits>…The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Additional Papers consist of materials that the Seeley G. Mudd Manuscript … The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Additional Papers consist of materials that the Seeley G. Mudd Manuscript … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> is best known as the 28th president of the United States of America, founder … Materials in the <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Additional Papers have been donated or transfered from a variety … <pulfa:kwic>Wilson</pulfa:kwic>, <pulfa:kwic>Woodrow</pulfa:kwic>, 1856-1924 … The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Additional Papers have been maintained in the order that they were acquired … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Additional Papers…</pulfa:hits>
     </pulfa:result>
     <pulfa:result>
-        <pulfa:uri>http://findingaidsbeta.princeton.edu/collections/AC237</pulfa:uri>
+        <pulfa:uri>http://findingaids.princeton.edu/collections/AC237</pulfa:uri>
         <pulfa:has-digital-content>false</pulfa:has-digital-content>
         <pulfa:title>Woodrow Wilson National Fellowship Foundation records</pulfa:title>
         <pulfa:creator>Woodrow Wilson National Fellowship Foundation.</pulfa:creator>
@@ -67,7 +68,7 @@
         <pulfa:hits>…<pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> National Fellowship Foundation. … The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> National Fellowship Foundation was founded in 1945 at Princeton University … Consists of clippings and programs about the <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Fellowship Program as well as reports … The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> National Fellowship Foundation was founded in 1945 at Princeton University … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> National Fellowship Foundation … <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> National Fellowship Foundation records…</pulfa:hits>
     </pulfa:result>
     <pulfa:result>
-        <pulfa:uri>http://findingaidsbeta.princeton.edu/collections/MC216</pulfa:uri>
+        <pulfa:uri>http://findingaids.princeton.edu/collections/MC216</pulfa:uri>
         <pulfa:has-digital-content>false</pulfa:has-digital-content>
         <pulfa:title>Jessie Wilson Sayre Papers</pulfa:title>
         <pulfa:creator>Sayre, Jessie Woodrow Wilson, 1887-1933.</pulfa:creator>
@@ -79,7 +80,7 @@
         <pulfa:hits>…Sayre, Jessie <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic>, 1887-1933. … Jessie <pulfa:kwic>Wilson</pulfa:kwic> Sayre was the daughter of U.S. President <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> and was a political activist … The Jessie <pulfa:kwic>Wilson</pulfa:kwic> Sayre Papers document the close relationships amongst the <pulfa:kwic>Wilson</pulfa:kwic> and Axson … Jessie <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Sayre was the daughter of U.S. President <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> and was a political … Gift of Francis Bowes Sayre, Jr., Eleanor Sayre, and <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> Sayre. No further aquisition … <pulfa:kwic>Wilson</pulfa:kwic>, Margaret <pulfa:kwic>Woodrow</pulfa:kwic>, 1886-1944 …  Library related to <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic>, which can be located by searching for the subject "<pulfa:kwic>Wilson</pulfa:kwic>, <pulfa:kwic>Woodrow</pulfa:kwic> … Jessie <pulfa:kwic>Wilson</pulfa:kwic> Sayre Papers…</pulfa:hits>
     </pulfa:result>
     <pulfa:result>
-        <pulfa:uri>http://findingaidsbeta.princeton.edu/collections/MC202/c005</pulfa:uri>
+        <pulfa:uri>http://findingaids.princeton.edu/collections/MC202/c005</pulfa:uri>
         <pulfa:has-digital-content>false</pulfa:has-digital-content>
         <pulfa:title>Series 2: Woodrow Wilson</pulfa:title>
         <pulfa:lang>English</pulfa:lang>
@@ -87,14 +88,14 @@
         <pulfa:date>1918-1919 (inclusive)</pulfa:date>
         <pulfa:type>series</pulfa:type>
         <pulfa:id>MC202_c005</pulfa:id>
-        <pulfa:extent>.2 linear feet, 1 Box</pulfa:extent>
+        <pulfa:extent>2 linear feet, 1 Box</pulfa:extent>
         <pulfa:hits>…The <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> series contains a mix of correspondence, memorabilia, and photographs from Close … Series 2: <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> … Gilbert F. Close Papers. Series 2: <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic>…</pulfa:hits>
         <pulfa:breadcrumbs>
             <pulfa:crumb uri="http://findingaids.princeton.edu/collections/MC202" level="collection">Gilbert F. Close Papers</pulfa:crumb>
         </pulfa:breadcrumbs>
     </pulfa:result>
     <pulfa:result>
-        <pulfa:uri>http://findingaidsbeta.princeton.edu/collections/MC169</pulfa:uri>
+        <pulfa:uri>http://findingaids.princeton.edu/collections/MC169</pulfa:uri>
         <pulfa:has-digital-content>false</pulfa:has-digital-content>
         <pulfa:title>James Kerney Collection on Woodrow Wilson</pulfa:title>
         <pulfa:creator>Kerney, James, 1873-1934.</pulfa:creator>
@@ -106,7 +107,7 @@
         <pulfa:hits>… on <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> consists of speeches, correspondence, photographs, and printed material of and about … The James Kerney Collection on <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> consists of speeches, correspondence, photographs …  of The Political Education of <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic>, published in 1926. Kerney died of pneumonia in Baltimore in 1934. … <pulfa:kwic>Wilson</pulfa:kwic>, <pulfa:kwic>Woodrow</pulfa:kwic>, 1856-1924 … The James Kerney Collection on <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic> is arranged alphabetically. … James Kerney Collection on <pulfa:kwic>Woodrow</pulfa:kwic> <pulfa:kwic>Wilson</pulfa:kwic>…</pulfa:hits>
     </pulfa:result>
     <pulfa:result>
-        <pulfa:uri>http://findingaidsbeta.princeton.edu/collections/AC203/c02154</pulfa:uri>
+        <pulfa:uri>http://findingaids.princeton.edu/collections/AC203/c02154</pulfa:uri>
         <pulfa:has-digital-content>false</pulfa:has-digital-content>
         <pulfa:title>Series 6: Woodrow Wilson</pulfa:title>
         <pulfa:lang>English</pulfa:lang>
@@ -121,7 +122,7 @@
         </pulfa:breadcrumbs>
     </pulfa:result>
     <pulfa:result>
-        <pulfa:uri>http://findingaidsbeta.princeton.edu/collections/AC129</pulfa:uri>
+        <pulfa:uri>http://findingaids.princeton.edu/collections/AC129</pulfa:uri>
         <pulfa:has-digital-content>false</pulfa:has-digital-content>
         <pulfa:title>Woodrow Wilson School of Public and International Affairs Records</pulfa:title>
         <pulfa:creator>Woodrow Wilson School of Public and International Affairs.</pulfa:creator>
@@ -134,27 +135,267 @@
     </pulfa:result>
     <pulfa:facets>
         <pulfa:facet label="Repository">
-            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;repo-f=Princeton University Archives" count="8295">Princeton University Archives</pulfa:term>
-            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;repo-f=Public Policy Papers" count="4387">Public Policy Papers</pulfa:term>
-            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;repo-f=Manuscripts Division" count="340">Manuscripts Division</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;repo-f=Princeton University Archives" count="8604">Princeton University Archives</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;repo-f=Public Policy Papers" count="4391">Public Policy Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;repo-f=Manuscripts Division" count="342">Manuscripts Division</pulfa:term>
             <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;repo-f=Latin American Ephemera Collections" count="3">Latin American Ephemera Collections</pulfa:term>
             <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;repo-f=Technical and Scientific Reports" count="1">Technical and Scientific Reports</pulfa:term>
         </pulfa:facet>
         <pulfa:facet label="Language">
-            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;lang-f=English" count="13011">English</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;lang-f=English" count="13326">English</pulfa:term>
         </pulfa:facet>
         <pulfa:facet label="Collection">
-            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Woodrow Wilson School of Public and International Affairs Records" count="3471">Woodrow Wilson School of Public and International Affairs Records</pulfa:term>
-            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Woodrow Wilson Foundation Records" count="3065">Woodrow Wilson Foundation Records</pulfa:term>
-            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Woodrow Wilson Collection" count="2518">Woodrow Wilson Collection</pulfa:term>
-            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Papers of Woodrow Wilson Project Records" count="1101">Papers of Woodrow Wilson Project Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Woodrow Wilson School of Public and International Affairs Records" count="3472">Woodrow Wilson School of Public and International Affairs Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Woodrow Wilson Foundation Records" count="3069">Woodrow Wilson Foundation Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Woodrow Wilson Collection" count="2519">Woodrow Wilson Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Papers of Woodrow Wilson Project Records" count="1102">Papers of Woodrow Wilson Project Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Woodrow Wilson School Policy Seminar Papers" count="703">Woodrow Wilson School Policy Seminar Papers</pulfa:term>
             <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Office of Communications Records" count="414">Office of Communications Records</pulfa:term>
-            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Woodrow Wilson School Policy Seminar Papers" count="401">Woodrow Wilson School Policy Seminar Papers</pulfa:term>
             <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Ray Stannard Baker Papers" count="179">Ray Stannard Baker Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Andre De Coppet Collection" count="129">Andre De Coppet Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Political Cartoon Collection" count="118">Political Cartoon Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Graduate School Records" count="115">Graduate School Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Historical Subject Files Collection" count="94">Historical Subject Files Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Office of the President Records: Robert F. Goheen Subgroup" count="93">Office of the President Records: Robert F. Goheen Subgroup</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Office of Physical Planning Records" count="92">Office of Physical Planning Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Office of the President Records : Jonathan Dickinson to Harold W. Dodds Subgroup" count="74">Office of the President Records : Jonathan Dickinson to Harold W. Dodds Subgroup</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Office of the President Records: William G. Bowen Subgroup" count="73">Office of the President Records: William G. Bowen Subgroup</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Woodrow Wilson Additional Papers" count="51">Woodrow Wilson Additional Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Brooks Emeny Papers" count="48">Brooks Emeny Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Office of the President Records: Harold T. Shapiro Subgroup" count="46">Office of the President Records: Harold T. Shapiro Subgroup</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Office of the Secretary Records" count="46">Office of the Secretary Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Bernard M. Baruch Papers" count="36">Bernard M. Baruch Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Office of the Provost Records" count="34">Office of the Provost Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=C. Pardee Foulke Papers on Woodrow Wilson" count="31">C. Pardee Foulke Papers on Woodrow Wilson</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Office of the Dean of the College Records" count="28">Office of the Dean of the College Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Office of Dean of the Faculty Records" count="27">Office of Dean of the Faculty Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Princeton University Library Records" count="23">Princeton University Library Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Hugh Moore Fund Collection" count="22">Hugh Moore Fund Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=George F. Kennan Papers" count="21">George F. Kennan Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Hamilton Fish Armstrong Papers" count="17">Hamilton Fish Armstrong Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=John W. H. Simpson Photograph Collection" count="15">John W. H. Simpson Photograph Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Henry Van Dyke Family Papers" count="14">Henry Van Dyke Family Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Luther P. Eisenhart Collection on Woodrow Wilson" count="14">Luther P. Eisenhart Collection on Woodrow Wilson</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Princeton University Fund Records" count="14">Princeton University Fund Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Allen W. Dulles Papers" count="13">Allen W. Dulles Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=John Foster Dulles Papers" count="13">John Foster Dulles Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Peter Kenen papers, 1930-2009" count="13">Peter Kenen papers, 1930-2009</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Robert Lansing Papers" count="13">Robert Lansing Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=William H. Walker Cartoon Collection" count="13">William H. Walker Cartoon Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=American Whig-Cliosophic Society Records" count="12">American Whig-Cliosophic Society Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Blair and Lee Family Papers" count="12">Blair and Lee Family Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Historical Photograph Collection, Campus Life Series" count="12">Historical Photograph Collection, Campus Life Series</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Varnum Lansing Collins Papers" count="11">Varnum Lansing Collins Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=H. Alexander Smith Papers" count="10">H. Alexander Smith Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=James Kerney Collection on Woodrow Wilson" count="10">James Kerney Collection on Woodrow Wilson</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=José Donoso Papers" count="10">José Donoso Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Walter Lowrie Papers" count="10">Walter Lowrie Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=David Lawrence Papers" count="9">David Lawrence Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=T. H. Vail Motter Papers" count="9">T. H. Vail Motter Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Thomas Jefferson Wertenbaker Papers" count="9">Thomas Jefferson Wertenbaker Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Barr Ferree collection" count="8">Barr Ferree collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Gilbert F. Close Papers" count="8">Gilbert F. Close Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Office of the Treasurer Records" count="8">Office of the Treasurer Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Princeton University Press Records" count="8">Princeton University Press Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Selected Papers of Edward L. Howe" count="8">Selected Papers of Edward L. Howe</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Broadcast Center Recordings" count="7">Broadcast Center Recordings</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Christian Gauss Papers" count="7">Christian Gauss Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Lecture Notes Collection" count="7">Lecture Notes Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Office of the Dean of Undergraduate Students Records" count="7">Office of the Dean of Undergraduate Students Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Office of the Vice President for Finance and Administration records" count="7">Office of the Vice President for Finance and Administration records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Princeton University 250th Anniversary Celebration Collection" count="7">Princeton University 250th Anniversary Celebration Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=School of Architecture Records" count="7">School of Architecture Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Archives of Charles Scribner’s Sons" count="6">Archives of Charles Scribner’s Sons</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Carlos Fuentes Papers" count="6">Carlos Fuentes Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=General Manuscripts Miscellaneous Collection" count="6">General Manuscripts Miscellaneous Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Barringer Family Papers" count="5">Barringer Family Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Frank Harris Papers" count="5">Frank Harris Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Historical Photograph Collection, Grounds and Buildings Series" count="5">Historical Photograph Collection, Grounds and Buildings Series</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=John Foster Dulles oral history collection" count="5">John Foster Dulles oral history collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Notes of George L. Denny on Woodrow Wilson Lectures" count="5">Notes of George L. Denny on Woodrow Wilson Lectures</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Peter H. B. Frelinghuysen Papers" count="5">Peter H. B. Frelinghuysen Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Program in Hellenic Studies Records" count="5">Program in Hellenic Studies Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Clifford Nickles Carver Papers" count="4">Clifford Nickles Carver Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Edward S. Corwin Papers" count="4">Edward S. Corwin Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Edwin Grant Conklin Papers" count="4">Edwin Grant Conklin Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=General Manuscripts Collection" count="4">General Manuscripts Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=George W. Ball Papers" count="4">George W. Ball Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Norman Armour Papers" count="4">Norman Armour Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Notes of James Lawson Norris on Woodrow Wilson Lectures" count="4">Notes of James Lawson Norris on Woodrow Wilson Lectures</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Otto H. Kahn Papers" count="4">Otto H. Kahn Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Adlai E. Stevenson Papers" count="3">Adlai E. Stevenson Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Albert O. Hirschman Papers" count="3">Albert O. Hirschman Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Allan Marquand Papers" count="3">Allan Marquand Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=American Whig Society Records" count="3">American Whig Society Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Armed Conflict and Human Rights in Colombia" count="3">Armed Conflict and Human Rights in Colombia</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Arthur Bullard Papers" count="3">Arthur Bullard Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Dan Fellows Platt Papers" count="3">Dan Fellows Platt Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=David Magie Papers" count="3">David Magie Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Ferdinand Eberstadt Papers" count="3">Ferdinand Eberstadt Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=George Black Stewart Papers" count="3">George Black Stewart Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=H. Hubert Wilson Collection on the Princeton University Department of Politics" count="3">H. Hubert Wilson Collection on the Princeton University Department of Politics</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Henry Burling Thompson Papers" count="3">Henry Burling Thompson Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Industrial Relations Section Records" count="3">Industrial Relations Section Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Jessie Wilson Sayre Papers" count="3">Jessie Wilson Sayre Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Lewis Thomas Papers" count="3">Lewis Thomas Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Maurice F. Lyons Collection on William F. McCombs" count="3">Maurice F. Lyons Collection on William F. McCombs</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Princeton Alumni Weekly Photograph Collection" count="3">Princeton Alumni Weekly Photograph Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Robert Bridges Collection" count="3">Robert Bridges Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=William Hard Papers" count="3">William Hard Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=William Libbey Correspondence" count="3">William Libbey Correspondence</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=William Starr Myers Papers" count="3">William Starr Myers Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Alexander and Kenneth McKenzie Correspondence" count="2">Alexander and Kenneth McKenzie Correspondence</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Alumni Studies Program Records" count="2">Alumni Studies Program Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=American Civil Liberties Union Records: Subgroup 1, The Roger Baldwin Years" count="2">American Civil Liberties Union Records: Subgroup 1, The Roger Baldwin Years</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Armenia Collection" count="2">Armenia Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Arthur S. Link Papers" count="2">Arthur S. Link Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Auxiliary to the Isabella McCosh Infirmary Records" count="2">Auxiliary to the Isabella McCosh Infirmary Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Blair Family Papers" count="2">Blair Family Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Charles Richard Williams Papers" count="2">Charles Richard Williams Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=David A. Morse Papers" count="2">David A. Morse Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Department of English Records" count="2">Department of English Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Department of Grounds and Buildings Subject Files" count="2">Department of Grounds and Buildings Subject Files</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Department of Grounds and Buildings Technical Correspondence Records" count="2">Department of Grounds and Buildings Technical Correspondence Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Department of History records" count="2">Department of History records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Derso and Kelen Collection" count="2">Derso and Kelen Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Dwight D. Eisenhower Library files relating to John Foster Dulles" count="2">Dwight D. Eisenhower Library files relating to John Foster Dulles</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Frank N. Doubleday and Nelson Doubleday Collection" count="2">Frank N. Doubleday and Nelson Doubleday Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=George A. Hulett Papers" count="2">George A. Hulett Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=George McLean Harper Papers" count="2">George McLean Harper Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Harold R. Medina papers" count="2">Harold R. Medina papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Harrison S. Morris Papers" count="2">Harrison S. Morris Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Henry R. Labouisse Papers" count="2">Henry R. Labouisse Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Historical Postcard Collection" count="2">Historical Postcard Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Hugh C. Wallace Papers" count="2">Hugh C. Wallace Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Hugh Lenox Scott Papers" count="2">Hugh Lenox Scott Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Jacob Viner Papers" count="2">Jacob Viner Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=John Van Antwerp MacMurray Papers" count="2">John Van Antwerp MacMurray Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Julius E. Coles Papers" count="2">Julius E. Coles Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Laurence Hutton Collection of Life and Death Masks" count="2">Laurence Hutton Collection of Life and Death Masks</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Lindley M. Garrison Papers" count="2">Lindley M. Garrison Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Louis Fischer Papers" count="2">Louis Fischer Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Lucius Hopkins Miller Correspondence" count="2">Lucius Hopkins Miller Correspondence</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Milton Halsey Thomas Papers" count="2">Milton Halsey Thomas Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Office of Research and Project Administration Records" count="2">Office of Research and Project Administration Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Office of the Vice President for Public Affairs Records" count="2">Office of the Vice President for Public Affairs Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Princeton Alumni Publications, Inc. Editor's Records" count="2">Princeton Alumni Publications, Inc. Editor's Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Princeton University Class Records" count="2">Princeton University Class Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Raymond Blaine Fosdick Papers" count="2">Raymond Blaine Fosdick Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Robert F. Goheen Papers" count="2">Robert F. Goheen Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Robert Judson Clark Papers" count="2">Robert Judson Clark Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Robertson Foundation Records" count="2">Robertson Foundation Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Roland S. Morris Papers" count="2">Roland S. Morris Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Russell W. Moore Autograph Collection of Princetonians" count="2">Russell W. Moore Autograph Collection of Princetonians</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Sylvia Beach Papers" count="2">Sylvia Beach Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Thomas Marc Parrott Papers" count="2">Thomas Marc Parrott Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=&#34;Migrant Pennsylvanian&#34; by Marcus S. Hottenstein" count="1">"Migrant Pennsylvanian" by Marcus S. Hottenstein</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Alexander Autograph Collection" count="1">Alexander Autograph Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Alexander Marshall Thompson Letters to His Family" count="1">Alexander Marshall Thompson Letters to His Family</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Allen W. Dulles Papers: Digital Files Series" count="1">Allen W. Dulles Papers: Digital Files Series</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Alpheus Thomas Mason Papers" count="1">Alpheus Thomas Mason Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Alumni and Faculty Offprint Collection" count="1">Alumni and Faculty Offprint Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Andrew Fleming West Collection" count="1">Andrew Fleming West Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Archives of Henry Holt and Company" count="1">Archives of Henry Holt and Company</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Arthur Krock Papers" count="1">Arthur Krock Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Association on American Indian Affairs Records" count="1">Association on American Indian Affairs Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Benjamin Tallmadge Collection" count="1">Benjamin Tallmadge Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Cameron Family Papers" count="1">Cameron Family Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Carlos Baker Collection of Ernest Hemingway" count="1">Carlos Baker Collection of Ernest Hemingway</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Charles F. W. McClure Papers" count="1">Charles F. W. McClure Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Charles Grosvenor Osgood Papers" count="1">Charles Grosvenor Osgood Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Chester Brooks Kerr Papers" count="1">Chester Brooks Kerr Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Clinton A. Decker Papers" count="1">Clinton A. Decker Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Committee on the Education of Women at Princeton Records" count="1">Committee on the Education of Women at Princeton Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Council on Urban Studies Records" count="1">Council on Urban Studies Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Dana Gardner Munro Papers" count="1">Dana Gardner Munro Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Department of Biology Records" count="1">Department of Biology Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Department of Civil Engineering Transportation ProgramTechnical Reports, 1973-1984" count="1">Department of Civil Engineering Transportation ProgramTechnical Reports, 1973-1984</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Department of Facilities Records" count="1">Department of Facilities Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Department of Music Records" count="1">Department of Music Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Department of Politics Records" count="1">Department of Politics Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Department of Sociology Records" count="1">Department of Sociology Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Eating Clubs Records" count="1">Eating Clubs Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Edmund Keeley Papers" count="1">Edmund Keeley Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Edward Mead Earle Papers" count="1">Edward Mead Earle Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Edward T. Cone Papers" count="1">Edward T. Cone Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Eleanor L. Dulles Papers" count="1">Eleanor L. Dulles Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Ellis Meredith Collection" count="1">Ellis Meredith Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Ernest Cushing Richardson Collection" count="1">Ernest Cushing Richardson Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Faculty and Professional Staff files" count="1">Faculty and Professional Staff files</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Federal Bureau of Investigation Conference papers" count="1">Federal Bureau of Investigation Conference papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Francis C. Brown Collection of French Royal Marriage Contracts" count="1">Francis C. Brown Collection of French Royal Marriage Contracts</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Francis C. Brown Collection on Slavery in America" count="1">Francis C. Brown Collection on Slavery in America</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Frank Augustus Scott Papers" count="1">Frank Augustus Scott Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Frank Jewett Mather Papers" count="1">Frank Jewett Mather Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Frank W. Notestein Papers" count="1">Frank W. Notestein Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Franklin Book Programs Records" count="1">Franklin Book Programs Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Gauss Seminars in Criticism Records" count="1">Gauss Seminars in Criticism Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=General John J. Pershing Expedition Photographic Postcard Collection" count="1">General John J. Pershing Expedition Photographic Postcard Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=George S. McGovern Papers" count="1">George S. McGovern Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Hedges family papers" count="1">Hedges family papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Henry B. Fine Collection on Woodrow Wilson" count="1">Henry B. Fine Collection on Woodrow Wilson</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Historical Audiovisual Collection" count="1">Historical Audiovisual Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Historical Photograph Collection, Lake Carnegie Construction Photographs" count="1">Historical Photograph Collection, Lake Carnegie Construction Photographs</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Historical Photograph Collection, Student Photograph Albums" count="1">Historical Photograph Collection, Student Photograph Albums</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Hugh S. Taylor Papers" count="1">Hugh S. Taylor Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Hyatt and Mayer Collection" count="1">Hyatt and Mayer Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Immanuel Velikovsky Papers" count="1">Immanuel Velikovsky Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Ivy Ledbetter Lee Papers" count="1">Ivy Ledbetter Lee Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=J. Douglas Brown Papers" count="1">J. Douglas Brown Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=James A. Baker III Papers" count="1">James A. Baker III Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=James Mark Baldwin Collection" count="1">James Mark Baldwin Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=James Ramsey Ullman Papers" count="1">James Ramsey Ullman Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=James V. Forrestal Papers" count="1">James V. Forrestal Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=John Marshall Harlan Papers" count="1">John Marshall Harlan Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=John Rupert Martin Papers" count="1">John Rupert Martin Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Joline Family Collection" count="1">Joline Family Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Joshua Butler Wright Papers" count="1">Joshua Butler Wright Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Julian L. Street Papers on Theodore Roosevelt" count="1">Julian L. Street Papers on Theodore Roosevelt</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Lawrence Crane Woods Collection" count="1">Lawrence Crane Woods Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Margaret Snyder Papers" count="1">Margaret Snyder Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Mario Vargas Llosa Papers" count="1">Mario Vargas Llosa Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Marten Van Heuven Papers" count="1">Marten Van Heuven Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Morgan Family Papers" count="1">Morgan Family Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Office of Development Communications Records" count="1">Office of Development Communications Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Office of Government Affairs Records" count="1">Office of Government Affairs Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Office of Information Technology Records" count="1">Office of Information Technology Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Office of the Recording Secretary Records" count="1">Office of the Recording Secretary Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Patrick J. Kelleher Papers" count="1">Patrick J. Kelleher Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Paul D. Tillett, Jr. Papers" count="1">Paul D. Tillett, Jr. Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Philip G. Strong Collection on Espionage" count="1">Philip G. Strong Collection on Espionage</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=President's Program Records" count="1">President's Program Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Princeton Music Collection" count="1">Princeton Music Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Princeton University Broadsheets Collection" count="1">Princeton University Broadsheets Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Princeton University Doctoral Dissertations" count="1">Princeton University Doctoral Dissertations</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Princeton University Printed Materials Collection" count="1">Princeton University Printed Materials Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Pyne-Henry Collection" count="1">Pyne-Henry Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=R. P. Blackmur Papers" count="1">R. P. Blackmur Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Robert H. Davis Collection" count="1">Robert H. Davis Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Robert K. Massie IV Papers" count="1">Robert K. Massie IV Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Robert Rudd Whiting Papers" count="1">Robert Rudd Whiting Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Robert Stockton Pyne Autograph Collection" count="1">Robert Stockton Pyne Autograph Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=School of Engineering and Applied Science Records" count="1">School of Engineering and Applied Science Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Seminar on Research in Progress Papers" count="1">Seminar on Research in Progress Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Sergio Ramírez Papers" count="1">Sergio Ramírez Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Sesquicentennial Celebration Records" count="1">Sesquicentennial Celebration Records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Stanley Kunitz Papers" count="1">Stanley Kunitz Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Steve M. Slaby Papers" count="1">Steve M. Slaby Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Student Academic Work Collection" count="1">Student Academic Work Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Syllabi and Course Materials Collection" count="1">Syllabi and Course Materials Collection</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Tom Reed Papers" count="1">Tom Reed Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=W. Arthur Lewis Papers" count="1">W. Arthur Lewis Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Warren Worth Bailey Papers" count="1">Warren Worth Bailey Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=William Fitts Ryan Papers" count="1">William Fitts Ryan Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=William G. Bowen Collection on the Federal Government and Princeton University" count="1">William G. Bowen Collection on the Federal Government and Princeton University</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=William Kelly Prentice Papers" count="1">William Kelly Prentice Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=William P. Bundy Papers" count="1">William P. Bundy Papers</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=William W. Lockwood" count="1">William W. Lockwood</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Woodrow Wilson National Fellowship Foundation records" count="1">Woodrow Wilson National Fellowship Foundation records</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;coll-f=Woodrow Wilson, The Fifteenth Point by David Goldsmith Loth" count="1">Woodrow Wilson, The Fifteenth Point by David Goldsmith Loth</pulfa:term>
         </pulfa:facet>
         <pulfa:facet label="Access">
-            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;has-digital-content=false" count="13023">false</pulfa:term>
-            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;has-digital-content=true" count="3">true</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;has-digital-content=false" count="13333">false</pulfa:term>
+            <pulfa:term apply="http://findingaids.princeton.edu/collections?v1=woodrow wilson&amp;rpp=10&amp;start=0&amp;has-digital-content=true" count="8">true</pulfa:term>
         </pulfa:facet>
     </pulfa:facets>
 </pulfa:results>
