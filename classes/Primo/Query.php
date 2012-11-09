@@ -69,7 +69,10 @@ Class Query
   }
   
   public function getQueryString() {
-    /*
+    /* removed this because http client seems to like these to be added in the "Client" class at request time due 
+     * the need to provide special handling for the repeated "query" parameter. See use of "AggregateDuplicates" in 
+     * \Primo\Client
+     * 
     if(count($this->facet_filters > 0)) {
       $this->query_string = $this->query_string . $this->buildFacets();
     }

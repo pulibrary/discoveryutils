@@ -5,16 +5,13 @@ use Guzzle\Service\Client as HttpClient;
 
 class Client
 {
-  private $base_url;
+  
   private $xservice_base = "/PrimoWebServices";
   private $xservice_brief_search = "xservice/search/brief?"; //run a primo search
   private $xservice_getit = "xservice/getit?"; // for straight ID lookups 
   private $institution;
-  private $current_url;
-  private $primo_base_url;
-  private $primo_institution;
-  private $client;
-  private $url_string;
+  public $client;
+  
   
   function __construct($primo_server_connection) {
     $this->institution = $primo_server_connection['institution'];
@@ -28,6 +25,14 @@ class Client
     } else {
       return false;
     }
+  }
+  
+  public function getHttpClient() {
+    return $this->client;
+  }
+  
+  public function getInstitution() {
+    return $this->institution;
   }
   
   /*
