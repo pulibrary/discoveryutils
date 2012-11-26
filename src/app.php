@@ -98,8 +98,11 @@ $app->error(function (\Exception $e, $code) use ($app) {
 
 $app->get('/', function() use($app) {
   
-  return 'Discovery Services Utilities running in ' . $app['environment']['env'] . " mode";
-  
+  //return 'Discovery Services Utilities running in ' . $app['environment']['env'] . " mode";
+   return $app['twig']->render('home.html.twig', array(
+    'environment' => $app['environment']['env'], 
+    'title' => $app['environment']['title']
+  ));
 });
 
 /*
