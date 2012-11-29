@@ -98,7 +98,6 @@ $app->error(function (\Exception $e, $code) use ($app) {
 
 $app->get('/', function() use($app) {
   
-  //return 'Discovery Services Utilities running in ' . $app['environment']['env'] . " mode";
    return $app['twig']->render('home.html.twig', array(
     'environment' => $app['environment']['env'], 
     'title' => $app['environment']['title']
@@ -109,6 +108,7 @@ $app->get('/', function() use($app) {
  * Redirect Route to Primo Deep Link for IDs
  */
 $app->match('/show/{rec_id}', function($rec_id) use($app) {
+    
   $primo_record_link = new PermaLink($rec_id, $app['primo_server_connection']);
   $app['monolog']->addInfo("REDIRECT: " . $primo_record_link->getLink());
   return $app->redirect($primo_record_link->getLink());
