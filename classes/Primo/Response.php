@@ -54,6 +54,7 @@ class Response
     foreach($this->result_set as $primo_record) {
       $brief_result = array(
         'url' => $primo_record->getResourceLink(),
+        'fulltextavail' => $primo_record->hasFullText(),
         'title' => trim($primo_record->getTitle()),
         'holdings' => $primo_record->getBriefHoldings(),
         'format' => $primo_record->getFormatType(),

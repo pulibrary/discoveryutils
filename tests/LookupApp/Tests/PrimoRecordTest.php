@@ -52,6 +52,16 @@ class LookupPrimoRecordTest extends \PHPUnit_Framework_TestCase {
     }
   }
   
+  function testIsFullTextAvailable() {
+    $full_text_flag = $this->electronic_record_response->hasFullText();
+    $this->assertEquals("Y", $full_text_flag);
+  }
+  
+  function testNoFullTextAvailable() {
+    $full_text_flag = $this->single_source_record->hasFullText();
+    $this->assertEquals("N", $full_text_flag);
+  }
+  
   function testGetSFXOnlineResourceLink() {
     $this->assertInternalType('string',$this->electronic_record_via_sfx_response->getFullTextOpenURL());
     $this->assertStringStartsWith("http://sfx.princeton.edu", $this->electronic_record_via_sfx_response->getFullTextOpenURL());

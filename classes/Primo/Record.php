@@ -520,6 +520,17 @@ Class Record
     
   }
   
+  public function hasFullText() {
+    
+    $fulltext = "N"; 
+ 
+    if($this->getFullTextLinktoSrc()) {
+      $fulltext = "Y";
+    }
+    
+    return $fulltext;
+  }  
+  
   public function getStdNums() {
     //ADDME returns standard numbers (ISSN/ISBN associated with the record)
   }
