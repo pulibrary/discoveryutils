@@ -5,6 +5,7 @@
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Response,
     Symfony\Component\HttpFoundation\Request,
+    Symfony\Component\HttpFoundation\JsonResponse,
     Symfony\Component\Yaml\Yaml;
 use Primo\Record as PrimoRecord,
     Primo\PermaLink as Permalink,
@@ -12,7 +13,8 @@ use Primo\Record as PrimoRecord,
     Primo\Client as PrimoClient,
     Primo\SearchDeepLink as SearchDeepLink,
     Primo\RequestClient as RequestClient,
-    Primo\Response as PrimoResponse;
+    Primo\Response as PrimoResponse,
+    Primo\ScopeList as PrimoScopeList;
 use Summon\Summon,
     Summon\Query as SummonQuery,
     Summon\Response as SummonResponse;
@@ -42,6 +44,8 @@ $app['search_tabs'] = array(
   array("index" => "blended", "label" => "Catalog and Summon"),
 );
 
+$library_scopes = Yaml::parse(__DIR__.'/../conf/scopes.yml');
+
 $app['primo_server_connection'] = array(
   'base_url' => 'http://searchit.princeton.edu',
   'institution' => 'PRN',
@@ -49,7 +53,8 @@ $app['primo_server_connection'] = array(
   'default_pnx_source_id' => 'PRN_VOYAGER',
   'default.scope' => array("OTHERS","FIRE"),
   'default.search' => "contains",
-  'num.records.brief.display' => 3
+  'num.records.brief.display' => 3,
+  'available.scopes' => $library_scopes,
 );
 
 
@@ -350,6 +355,16 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
   }
 })->assert('rec_id', '\w+');
 
+$app->get('scopelist', function() use ($app) {
+  $scope_list_response = $app['primo_client']->getScopes();
+  $scope_list = new PrimoScopeList($scope_list_response);
+  $yaml = $scope_list->asYaml();
+  //updat yaml file
+  file_put_contents(__DIR__.'/../conf/scopes.yml', $yaml);
+  
+  return new JsonResponse($scope_list->getScopes());
+});
+
 
 /*
  * Route to direct queries to Pulfa
@@ -474,7 +489,7 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
 
  
  $app->get('/find/{index_type}', function($index_type) use($app) {
-  
+
   if($app['request']->get('query')) {
     $query = $app['request']->get('query');
   } else {
