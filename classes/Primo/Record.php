@@ -327,7 +327,12 @@ Class Record
     $holdings_locations = array();
     foreach($holdings_list as $holding) {
       $current_holding = new PrimoHolding($holding->textContent); 
-      array_push( $holdings_locations, array($current_holding->primo_library => $current_holding->location_code));
+      array_push( $holdings_locations, array($current_holding->primo_library => array(
+        'location_code' => $current_holding->location_code,
+        'library_label' => $this->primo_server_connection['available.scopes'][$current_holding->primo_library]['name'],
+          ),
+        )
+      );
     }
     
     return $holdings_locations;
