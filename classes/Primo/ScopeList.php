@@ -26,15 +26,23 @@ class ScopeList
       
   }
   
+  /* return a yaml structure than can be written to a conf file
+   * 
+   */
   public function asYaml() {
       
     $scopes = $this->getScopes();
-    $sorted_scopes = array();
+    $scope_values = array();
     foreach ($scopes as $scope) {
-      
+      $scope_values[$scope['name']] = array(
+        'name' => $scope['label'],
+        'param' => $scope['param'],
+        );
     }
+    ksort($scope_values);
+
     $yaml_dumper = new YamlDumper();
-    return $yaml_dumper->dump($scopes,2);
+    return $yaml_dumper->dump($scope_values,2);
     
   }
   

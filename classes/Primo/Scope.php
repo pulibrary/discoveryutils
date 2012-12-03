@@ -25,10 +25,9 @@ class Scope
    public function getScopeValues() {
      
      return array(
-      $this->primo_scope_name => array(
+        'name' => $this->primo_scope_name,
         'label' => $this->primo_scope_description,
         'param' => $this->primo_scope_param,
-      ),
      );
    }
   
