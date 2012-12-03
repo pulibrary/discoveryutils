@@ -446,20 +446,30 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
 
 
 
-/*
- * These should be rethought based on a close reading of http://www.exlibrisgroup.org/display/PrimoOI/Brief+Search
- * to make the most generic use of "routes" as possible 
- * anything in the PNX "search" section can be a search index
- * indexes available for the "facets" in a PNX record as well.
- * search by various index types issn, isbn, lccn, oclc
+/* Wrapper for Primo Brief Search API Call
  * 
- * Params accepted
+ * EL Commons http://www.exlibrisgroup.org/display/PrimoOI/Brief+Search
  * 
- * scopes
- *  Example: .....?scopes=ENG,MUSIC - search only english and music libraries
+ * Route Variable 
  * 
- * format 
- *  Example: /find/title/journal+of+politics?format=journals - get only items with the journals facet back
+ * {index_type} scope the search to a particular field
+ * choices issn|isbn|lccn|oclc|title|any|lsr05|creator
+ * 
+ * lsr05 is call number
+ * 
+ * Possible Query Parameters
+ * 
+ * @query - string to search for
+ * 
+ * @limit - can be contains, exact, or begins_with see $app['primo_server_connection']['default.search'] for default
+ * NOTE "begins_with" can only be used with the title parameter otherwise an error can be thrown
+ *
+ * @scopes - see $app['primo_server_connection']['default.scope'] for default value
+ * Example: .....?scopes=ENG,MUSIC - search only english and music libraries
+ * 
+ * @format - see $app['primo_server_connection']['default.search'] for default value
+ * Example: /find/title/journal+of+politics?format=journals - get only items with the journals facet back
+ * 
  */
 
  
