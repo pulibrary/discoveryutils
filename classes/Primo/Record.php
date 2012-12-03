@@ -327,7 +327,7 @@ Class Record
     $holdings_locations = array();
     foreach($holdings_list as $holding) {
       $current_holding = new PrimoHolding($holding->textContent); 
-      array_push( $holdings_locations, $current_holding->primo_library);
+      array_push( $holdings_locations, array($current_holding->primo_library => $current_holding->location_code));
     }
     
     return $holdings_locations;

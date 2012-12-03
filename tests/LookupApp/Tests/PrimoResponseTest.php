@@ -41,6 +41,8 @@ class LookupPrimoResponseTest extends \PHPUnit_Framework_TestCase {
     }
     
     public function testGetHoldings() {
-      
+      $brief_result_set = $this->multiple_response->getBriefResults();
+      $this->assertInternalType('array', $brief_result_set[0]['holdings']);
+      $this->assertGreaterThanOrEqual(1, count($brief_result_set[0]['holdings']));
     }
 }
