@@ -355,7 +355,7 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
   }
 })->assert('rec_id', '\w+');
 
-$app->get('scopelist', function() use ($app) {
+$app->get('/scopelist', function() use ($app) {
   $scope_list_response = $app['primo_client']->getScopes();
   $scope_list = new PrimoScopeList($scope_list_response);
   $yaml = $scope_list->asYaml();
@@ -363,6 +363,16 @@ $app->get('scopelist', function() use ($app) {
   file_put_contents(__DIR__.'/../conf/scopes.yml', $yaml);
   
   return new JsonResponse($scope_list->getScopes());
+});
+
+$app->get('/locations', function() use ($app) {
+    
+  $locations = json_decode(file_get_contents("http://libserv5.princeton.edu/requests/locationservice.php"), TRUE);
+  ksort($locations);
+  file_put_contents(__DIR__.'/../conf/locations.json', json_encode($locations));
+  
+  return new JsonResponse($locations);
+  
 });
 
 
