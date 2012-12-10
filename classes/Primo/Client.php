@@ -66,6 +66,7 @@ class Client
     }
   }
 
+  /* obtain the list of currently available Primo scopes */
   public function getScopes() {
     $request = $this->client->get($this->scopelist . "viewId=" . $this->default_scope);
     $response = $request->send();
