@@ -1,0 +1,63 @@
+ANNEXA:
+    name: 'Forrestal Annex'
+    param: 'loc=local,scope:(ANNEXA)'
+ANNEXB:
+    name: 'Fine Annex'
+    param: 'loc=local,scope:(ANNEXB)'
+ARCH:
+    name: 'Architecture Library'
+    param: 'loc=local,scope:(ARCH)'
+'All Princeton Libraries':
+    name: 'All Princeton Libraries'
+    param: 'loc=local,scope:(OTHERS),scope:(FIRE)'
+Articles:
+    name: Articles
+    param: ''
+'Course Reserves':
+    name: 'Course Reserves'
+    param: 'loc=local,scope:(COURSE)'
+EAL:
+    name: 'East Asian Library'
+    param: 'loc=local,scope:(EAL)'
+ENG:
+    name: 'Engineering Library'
+    param: 'loc=local,scope:(ENG)'
+FIRE:
+    name: 'Firestone Library'
+    param: 'loc=local,scope:(FIRE)'
+HRC:
+    name: 'Humanities Resource Center'
+    param: 'loc=local,scope:(HRC)'
+LEWIS:
+    name: 'Lewis Library'
+    param: 'loc=local,scope:(LEWIS)'
+MARQ:
+    name: 'Marquand Library'
+    param: 'loc=local,scope:(MARQ)'
+MUDD:
+    name: 'Mudd Manuscript Library'
+    param: 'loc=local,scope:(MUDD)'
+MUSIC:
+    name: 'Mendel Music Library'
+    param: 'loc=local,scope:(MUSIC)'
+ONLINE:
+    name: 'Internet Resources'
+    param: 'loc=local,scope:(ONLINE)'
+PPL:
+    name: 'Furth Plasma Physics Library'
+    param: 'loc=local,scope:(PPL)'
+PSYCH:
+    name: 'Psychology Library'
+    param: 'loc=local,scope:(PSYCH)'
+RARE:
+    name: 'Rare Books and Special Collections'
+    param: 'loc=local,scope:(RARE)'
+RECAP:
+    name: ReCAP
+    param: 'loc=local,scope:(RECAP)'
+STOKES:
+    name: 'Stokes Library'
+    param: 'loc=local,scope:(STOKES)'
+'combined search':
+    name: 'combined search'
+    param: 'loc=local,scope:("PRN")'
