@@ -37,6 +37,7 @@ class Response
         'holdings' => $record->hasFullText,
         'format' => $record->ContentType[0],
         'abstract' => $record->Abstract,
+        'fulltextavail' => $record->hasFullText,
       );
       array_push($brief_result_set, $brief_result);
     }

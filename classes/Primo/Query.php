@@ -38,6 +38,7 @@ Class Query
     "begins_with"
   );
   
+  //FIXME - this data should come from Service Container
   private $available_local_scopes = array( //See http://searchit.princeton.edu/PrimoWebServices/xservice/getscopesofview?viewId=PRINCETON for list of scopes
     "PRN",
     "LEWIS",
@@ -49,6 +50,7 @@ Class Query
     "ENG",
   );
 
+   //FIXME - this data should come from Service Container
   private $available_remote_scopes = array(
     "SummonThirdNode"
   );

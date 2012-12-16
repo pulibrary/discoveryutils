@@ -50,6 +50,7 @@ class SearchDeepLink
   
   private function buildDeepSearchLink() {
     $this->deep_search_link = $this->base_url . $this->primo_deep_search_path . $this->query->getQueryString() . $this->query->buildFacets() . "&vid=" . $this->vid . "&tab=" . $this->active_tab;
+    //print_r($this->deep_search_link);
   }
   
   public function getLink() {
