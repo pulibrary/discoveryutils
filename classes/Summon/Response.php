@@ -38,6 +38,7 @@ class Response
         'format' => $record->ContentType[0],
         'abstract' => $record->Abstract,
         'fulltextavail' => $record->hasFullText,
+        'publication_date' => $record->PublicationDate[0],
       );
       array_push($brief_result_set, $brief_result);
     }
