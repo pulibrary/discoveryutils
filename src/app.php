@@ -395,7 +395,7 @@ $app->get('/pulfa/{index_type}', function($index_type) use($app) {
   
   $pulfa = new \Pulfa\Pulfa($app['pulfa']['host'], $app['pulfa']['base']);
   $pulfa_response_data = $pulfa->query($query, 0, 3);
-  $pulfa_response = new PulfaResponse($pulfa_response_data);
+  $pulfa_response = new PulfaResponse($pulfa_response_data, $query);
   $brief_response = $pulfa_response->getBriefResponse();
   $brief_response['query'] = $app->escape($query);
   
