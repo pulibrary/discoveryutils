@@ -30,7 +30,7 @@ class Response
         'digital' => $record->digital,
         'abstract' => $record->hits,
         'type' => $record->type,
-        'breadcrumb' => $record->breadcrumb,
+        'breadcrumb' => $record->breadcrumbs,
       );
     }  
     

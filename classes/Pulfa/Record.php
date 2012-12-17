@@ -45,7 +45,7 @@ class Record
   );
   private $default_namespace = "pulfa";
   private $dom; //dom representation of record 
-  public $breadcrumb;
+  public $breadcrumbs;
   
   function __construct($xml) {
     $this->dom = XmlParser::convertToDOMDocument($xml);  
@@ -54,6 +54,7 @@ class Record
       $this->xpath->registerNamespace($prefix, $namespace);
     } 
     $this->loadFields();
+    $this->breadcrumbs = $this->loadBreadCrumbs();
   }
   
   // use the isset and get php magic methods to provide access to hit properties
@@ -94,6 +95,28 @@ class Record
         $this->fields[$field] = trim($element_data);
       }
     }
+  }
+  
+  public function loadBreadCrumbs() {
+    $breadcrumb_data = $this->query('//pulfa:breadcrumbs');
+    $breadcrumb_list = array();
+    if($breadcrumb_data->length > 0) {
+      $breadcrumbs = $breadcrumb_data->item(0);
+      if($breadcrumbs->hasChildNodes()){
+        $crumbs = $breadcrumbs->getElementsByTagName('crumb');
+        foreach($crumbs as $node) {
+          $item_crumb_data = array(
+            'text' => $node->nodeValue,
+            'uri' => $node->getAttribute('uri'),
+            'level' => $node->getAttribute('level'),
+            );
+          array_push($breadcrumb_list, $item_crumb_data);
+        }
+      }
+    } 
+    
+    return $breadcrumb_list;
+    
   }
   
   public function __toString() {
