@@ -59,6 +59,7 @@ class Response
         'title' => trim($primo_record->getTitle()),
         'holdings' => $primo_record->getBriefHoldings(),
         'format' => $primo_record->getFormatType(),
+        'creationdate' => $primo_record->getCreationDate(),
       );
       array_push($brief_result_set, $brief_result);
     }

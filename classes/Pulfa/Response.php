@@ -31,6 +31,7 @@ class Response
         'abstract' => $record->hits,
         'type' => $record->type,
         'breadcrumb' => $record->breadcrumbs,
+        'kwic' => $record->kwic_excerpt,
       );
     }  
     

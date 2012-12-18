@@ -540,6 +540,18 @@ Class Record
     return $fulltext;
   }  
   
+  public function getCreationDate() {
+    $creation_date = $this->getElements('creationdate');
+
+    if($creation_date->length > 0) {
+      $date = $creation_date->item(0);
+      return $date->nodeValue;
+    } else {
+      return FALSE;
+    }
+    
+  }
+  
   public function getStdNums() {
     //ADDME returns standard numbers (ISSN/ISBN associated with the record)
   }

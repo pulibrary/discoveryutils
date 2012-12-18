@@ -46,6 +46,7 @@ class Record
   private $default_namespace = "pulfa";
   private $dom; //dom representation of record 
   public $breadcrumbs;
+  public $kwic_excerpt;
   
   function __construct($xml) {
     $this->dom = XmlParser::convertToDOMDocument($xml);  
@@ -55,6 +56,7 @@ class Record
     } 
     $this->loadFields();
     $this->breadcrumbs = $this->loadBreadCrumbs();
+    $this->kwic_excerpt = $this->getKwicExcerpt();
   }
   
   // use the isset and get php magic methods to provide access to hit properties
@@ -117,6 +119,17 @@ class Record
     
     return $breadcrumb_list;
     
+  }
+  
+  public function getKwicExcerpt() { //FIXME should do highlighting
+    $excrept_data = $this->query('//pulfa:hits');
+    $excrept_string = "";
+    if($excrept_data->length == 1) {
+      $excerpt = $excrept_data->item(0);
+      $excerpt_string = $excerpt->nodeValue;
+    }
+    
+    return $excerpt_string;
   }
   
   public function __toString() {
