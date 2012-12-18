@@ -18,6 +18,7 @@ class PrimoHoldingTest extends \PHPUnit_Framework_TestCase {
       'default_view_id' => 'PRINCETON',
       'default_pnx_source_id' => 'PRN_VOYAGER',
       'available.scopes' => $library_scopes,
+      'record.request.base' => "http://library.princeton.edu/requests",
     );
 
     $single_record_reponse = file_get_contents(dirname(__FILE__).'../../../support/PRN_VOYAGER4773991.xml');

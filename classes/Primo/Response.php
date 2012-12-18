@@ -53,6 +53,7 @@ class Response
     
     foreach($this->result_set as $primo_record) {
       $brief_result = array(
+        'pnx_id' => $primo_record->getRecordID(),
         'url' => $primo_record->getResourceLink(),
         'fulltextavail' => $primo_record->hasFullText(),
         'title' => trim($primo_record->getTitle()),
