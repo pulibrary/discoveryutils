@@ -55,7 +55,7 @@ $app['primo_server_connection'] = array(
   'default.search' => "contains",
   'num.records.brief.display' => 3,
   'available.scopes' => $library_scopes,
-  'record.request.base' => "http://libwebprod.princeton.edu/searchit/requests",
+  'record.request.base' => "http://libwebprod.princeton.edu/requests",
 );
 
 
