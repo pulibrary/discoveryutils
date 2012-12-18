@@ -518,16 +518,19 @@ Class Record
   }
   
   public function getResourceLink() {
-    if($this->getFullTextLinktoSrc()) {
-      $resource_link = $this->getFullTextLinktoSrc();
-    } else {
+    //if($this->getFullTextLinktoSrc()) {
+    //  $resource_link = $this->getFullTextLinktoSrc();
+    //} else {
       $deep_link = new PermaLink($this->getRecordID(), $this->primo_server_connection);
       $resource_link = $deep_link->getLink();
-    }
+    //}
     
     return $resource_link;
     
   }
+  
+  
+  
   
   public function hasFullText() {
     
