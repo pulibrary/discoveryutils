@@ -5,19 +5,18 @@ use Guzzle\Service\Client as HttpClient;
 
 class Client
 {
-  private $base_url;
+  
   private $xservice_base = "/PrimoWebServices";
   private $xservice_brief_search = "xservice/search/brief?"; //run a primo search
   private $xservice_getit = "xservice/getit?"; // for straight ID lookups 
+  private $scopelist = "xservice/getscopesofview?";
   private $institution;
-  private $current_url;
-  private $primo_base_url;
-  private $primo_institution;
-  private $client;
-  private $url_string;
+  public $client;
+  
   
   function __construct($primo_server_connection) {
     $this->institution = $primo_server_connection['institution'];
+    $this->default_scope = $primo_server_connection['default_view_id'];
     $this->client = new HttpClient($primo_server_connection['base_url'].$this->xservice_base);
   }
   
@@ -28,6 +27,14 @@ class Client
     } else {
       return false;
     }
+  }
+  
+  public function getHttpClient() {
+    return $this->client;
+  }
+  
+  public function getInstitution() {
+    return $this->institution;
   }
   
   /*
@@ -58,6 +65,18 @@ class Client
       return false;
     }
   }
+
+  /* obtain the list of currently available Primo scopes */
+  public function getScopes() {
+    $request = $this->client->get($this->scopelist . "viewId=" . $this->default_scope);
+    $response = $request->send();
+    if(strlen($response) != 0) { 
+      return (string)$response->getBody(); 
+    } else {
+      return false;
+    }
+  }
+  
 
   /* not sure if this really even useful? */ 
   public function __toString() {

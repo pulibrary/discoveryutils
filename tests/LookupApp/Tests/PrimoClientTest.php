@@ -24,8 +24,10 @@ class LookupPrimoClientTest extends \PHPUnit_Framework_TestCase {
     $this->client = new \Primo\Client($primo_server_connection);
   }
   
-  function testBaseURLSetting() {
-    
+  function testServiceBaseURLSetting() {
+    $this->assertInstanceOf("\Guzzle\Service\Client", $this->client->getHttpClient());
+    $client = $this->client->getHttpClient();
+    $this->assertEquals("PRN", $this->client->getInstitution());
   }
   
   /*
@@ -33,11 +35,11 @@ class LookupPrimoClientTest extends \PHPUnit_Framework_TestCase {
    */
   
   function testPrimoSingleRecordRequest() {
-    
+      
   }
   
   /*
-   * Test the primo "breif" service
+   * Test the primo "brief" service
    */
   
   function testRunPrimoBasicQuery() {

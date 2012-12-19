@@ -5,6 +5,7 @@
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Response,
     Symfony\Component\HttpFoundation\Request,
+    Symfony\Component\HttpFoundation\JsonResponse,
     Symfony\Component\Yaml\Yaml;
 use Primo\Record as PrimoRecord,
     Primo\PermaLink as Permalink,
@@ -12,7 +13,8 @@ use Primo\Record as PrimoRecord,
     Primo\Client as PrimoClient,
     Primo\SearchDeepLink as SearchDeepLink,
     Primo\RequestClient as RequestClient,
-    Primo\Response as PrimoResponse;
+    Primo\Response as PrimoResponse,
+    Primo\ScopeList as PrimoScopeList;
 use Summon\Summon,
     Summon\Query as SummonQuery,
     Summon\Response as SummonResponse;
@@ -42,6 +44,8 @@ $app['search_tabs'] = array(
   array("index" => "blended", "label" => "Catalog and Summon"),
 );
 
+$library_scopes = Yaml::parse(__DIR__.'/../conf/scopes.yml');
+
 $app['primo_server_connection'] = array(
   'base_url' => 'http://searchit.princeton.edu',
   'institution' => 'PRN',
@@ -49,7 +53,9 @@ $app['primo_server_connection'] = array(
   'default_pnx_source_id' => 'PRN_VOYAGER',
   'default.scope' => array("OTHERS","FIRE"),
   'default.search' => "contains",
-  'num.records.brief.display' => 3
+  'num.records.brief.display' => 3,
+  'available.scopes' => $library_scopes,
+  'record.request.base' => "http://libwebprod.princeton.edu/requests",
 );
 
 
@@ -98,14 +104,17 @@ $app->error(function (\Exception $e, $code) use ($app) {
 
 $app->get('/', function() use($app) {
   
-  return 'Discovery Services Utilities running in ' . $app['environment']['env'] . " mode";
-  
+   return $app['twig']->render('home.html.twig', array(
+    'environment' => $app['environment']['env'], 
+    'title' => $app['environment']['title']
+  ));
 });
 
 /*
  * Redirect Route to Primo Deep Link for IDs
  */
 $app->match('/show/{rec_id}', function($rec_id) use($app) {
+    
   $primo_record_link = new PermaLink($rec_id, $app['primo_server_connection']);
   $app['monolog']->addInfo("REDIRECT: " . $primo_record_link->getLink());
   return $app->redirect($primo_record_link->getLink());
@@ -347,6 +356,26 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
   }
 })->assert('rec_id', '\w+');
 
+$app->post('/scopelist', function() use ($app) {
+  $scope_list_response = $app['primo_client']->getScopes();
+  $scope_list = new PrimoScopeList($scope_list_response);
+  $yaml = $scope_list->asYaml();
+  //updat yaml file
+  file_put_contents(__DIR__.'/../conf/scopes.yml', $yaml);
+  
+  return new JsonResponse($scope_list->getScopes());
+});
+
+$app->post('/locations', function() use ($app) {
+    
+  $locations = json_decode(file_get_contents("http://libserv5.princeton.edu/requests/locationservice.php"), TRUE);
+  ksort($locations);
+  file_put_contents(__DIR__.'/../conf/locations.json', json_encode($locations));
+  
+  return new JsonResponse($locations);
+  
+});
+
 
 /*
  * Route to direct queries to Pulfa
@@ -367,7 +396,7 @@ $app->get('/pulfa/{index_type}', function($index_type) use($app) {
   
   $pulfa = new \Pulfa\Pulfa($app['pulfa']['host'], $app['pulfa']['base']);
   $pulfa_response_data = $pulfa->query($query, 0, 3);
-  $pulfa_response = new PulfaResponse($pulfa_response_data);
+  $pulfa_response = new PulfaResponse($pulfa_response_data, $query);
   $brief_response = $pulfa_response->getBriefResponse();
   $brief_response['query'] = $app->escape($query);
   
@@ -443,25 +472,35 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
 
 
 
-/*
- * These should be rethought based on a close reading of http://www.exlibrisgroup.org/display/PrimoOI/Brief+Search
- * to make the most generic use of "routes" as possible 
- * anything in the PNX "search" section can be a search index
- * indexes available for the "facets" in a PNX record as well.
- * search by various index types issn, isbn, lccn, oclc
+/* Wrapper for Primo Brief Search API Call
  * 
- * Params accepted
+ * EL Commons http://www.exlibrisgroup.org/display/PrimoOI/Brief+Search
  * 
- * scopes
- *  Example: .....?scopes=ENG,MUSIC - search only english and music libraries
+ * Route Variable 
  * 
- * format 
- *  Example: /find/title/journal+of+politics?format=journals - get only items with the journals facet back
+ * {index_type} scope the search to a particular field
+ * choices issn|isbn|lccn|oclc|title|any|lsr05|creator
+ * 
+ * lsr05 is call number
+ * 
+ * Possible Query Parameters
+ * 
+ * @query - string to search for
+ * 
+ * @limit - can be contains, exact, or begins_with see $app['primo_server_connection']['default.search'] for default
+ * NOTE "begins_with" can only be used with the title parameter otherwise an error can be thrown
+ *
+ * @scopes - see $app['primo_server_connection']['default.scope'] for default value
+ * Example: .....?scopes=ENG,MUSIC - search only english and music libraries
+ * 
+ * @format - see $app['primo_server_connection']['default.search'] for default value
+ * Example: /find/title/journal+of+politics?format=journals - get only items with the journals facet back
+ * 
  */
 
  
  $app->get('/find/{index_type}', function($index_type) use($app) {
-  
+
   if($app['request']->get('query')) {
     $query = $app['request']->get('query');
   } else {

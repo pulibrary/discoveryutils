@@ -1,0 +1,293 @@
+<SEGMENTS xmlns="http://www.exlibrisgroup.com/xsd/jaguar/search">
+  <JAGROOT>
+    <RESULT>
+      <DOCSET TOTALHITS="1">
+        <sear:DOC LOCAL="true" xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib" xmlns:sear="http://www.exlibrisgroup.com/xsd/jaguar/search">
+          <PrimoNMBib>
+            <record>
+              <control>
+                <sourcerecordid>$$V3917068$$OPRN_VOYAGER3917068</sourcerecordid>
+                <sourcerecordid>$$V824441$$OPRN_VOYAGER824441</sourcerecordid>
+                <sourceid>$$VPRN_VOYAGER$$OPRN_VOYAGER3917068</sourceid>
+                <sourceid>$$VPRN_VOYAGER$$OPRN_VOYAGER824441</sourceid>
+                <recordid>dedupmrg34322777</recordid>
+                <originalsourceid>$$Vprincetondb$$OPRN_VOYAGER3917068</originalsourceid>
+                <originalsourceid>$$Vprincetondb$$OPRN_VOYAGER824441</originalsourceid>
+                <sourceformat>$$VMARC21$$OPRN_VOYAGER3917068</sourceformat>
+                <sourceformat>$$VMARC21$$OPRN_VOYAGER824441</sourceformat>
+                <sourcesystem>$$VVoyager$$OPRN_VOYAGER3917068</sourcesystem>
+                <sourcesystem>$$VVoyager$$OPRN_VOYAGER824441</sourcesystem>
+                <ilsapiid>$$V3917068$$OPRN_VOYAGER3917068</ilsapiid>
+                <ilsapiid>$$V824441$$OPRN_VOYAGER824441</ilsapiid>
+              </control>
+              <display>
+                <type>book</type>
+                <title>Woodrow Wilson / H.W. Brands.</title>
+                <creator>Brands, H. W.</creator>
+                <edition>1st ed.</edition>
+                <publisher>New York : Times Books, 2003.</publisher>
+                <creationdate>2003</creationdate>
+                <identifier>$$CISBN$$V0805069550</identifier>
+                <subject>Wilson, Woodrow, 1856-1924; Presidents -- United States -- Biography; United States -- Politics and government -- 1913-1921</subject>
+                <language>eng</language>
+                <lds26>Times Books</lds26>
+                <lds27>E767 .B76 2003</lds27>
+                <lds28>3917068</lds28>
+                <source>$$VPRN_VOYAGER$$OPRN_VOYAGER3917068</source>
+                <source>$$VPRN_VOYAGER$$OPRN_VOYAGER824441</source>
+                <availlibrary>$$IPRN$$LFIRE$$1(F)$$2E767 .B76 2003$$Savailable$$31$$40$$5N$$64$$Xprincetondb$$Yf$$OPRN_VOYAGER3917068</availlibrary>
+                <availlibrary>$$IPRN$$LRARE$$1Rare Books (EX)$$2WW 9724$$Scheck_holdings$$30$$41$$5N$$60$$Xprincetondb$$Yex$$OPRN_VOYAGER824441</availlibrary>
+                <availlibrary>$$IPRN$$LFIRE$$1(F)$$2E767 .W34 1958$$Sunavailable$$32$$42$$5Y$$60$$Xprincetondb$$Yf$$OPRN_VOYAGER824441</availlibrary>
+                <availlibrary>$$IPRN$$LMUDD$$1Princetoniana Collection (PRNC)$$2E767 .W34 1958$$Savailable$$32$$40$$5Y$$60$$Xprincetondb$$Yprnc$$OPRN_VOYAGER824441</availlibrary>
+                <availlibrary>$$IPRN$$LSTOKES$$1(SPIA)$$2E767 .W34 1958$$Savailable$$34$$40$$5Y$$61$$Xprincetondb$$Yspia$$OPRN_VOYAGER824441</availlibrary>
+                <availinstitution>$$IPRN$$Scheck_holdings</availinstitution>
+                <availpnx>available</availpnx>
+                <lds03>xvi, 169 p. : ill. ; 22 cm.</lds03>
+                <lds03>Includes bibliographical references (p. 153-156) and index.</lds03>
+                <lds03>2 v. : ill. ; 24 cm.</lds03>
+                <lds03>Includes bibliographical references and index.</lds03>
+                <lds05>1. American prophet -- 2. World prophet.</lds05>
+                <lds15>American presidents series (Times Books (Firm))</lds15>
+                <lds15>The American presidents</lds15>
+              </display>
+              <links>
+                <linktoholdings>$$V$$Tvoyager_holdings$$OPRN_VOYAGER3917068</linktoholdings>
+                <linktoholdings>$$V$$Tvoyager_holdings$$OPRN_VOYAGER824441</linktoholdings>
+                <backlink>$$V$$Tvoyager_backlink$$Ebacklink$$OPRN_VOYAGER3917068</backlink>
+                <backlink>$$V$$Tvoyager_backlink$$Ebacklink$$OPRN_VOYAGER824441</backlink>
+                <openurl>$$V$$Topenurl_journal$$OPRN_VOYAGER3917068</openurl>
+                <openurl>$$V$$Topenurl_journal$$OPRN_VOYAGER824441</openurl>
+                <openurlfulltext>$$V$$Topenurlfull_journal$$OPRN_VOYAGER3917068</openurlfulltext>
+                <openurlfulltext>$$V$$Topenurlfull_journal$$OPRN_VOYAGER824441</openurlfulltext>
+                <addlink>$$Uhttp://www.loc.gov/catdir/description/hol031/2002041393.html$$DPublisher description</addlink>
+                <linktouc>$$Tamazon_uc$$Eamazon</linktouc>
+                <linktouc>$$Tworldcat_isbn$$Eworldcat</linktouc>
+                <linktouc>$$Tworldcat_oclc$$Eworldcat</linktouc>
+                <thumbnail>$$Tamazon_thumb</thumbnail>
+                <thumbnail>$$Tgoogle_thumb</thumbnail>
+                <lln01>$$Tfind_fire$$Elfind_fire</lln01>
+                <lln01>$$Tfind_fire$$Elfind_fire</lln01>
+                <lln01>$$Tfind_rare$$Elfind_rare</lln01>
+                <lln01>$$Tfind_stokes$$Elfind_stokes</lln01>
+                <lln01>$$Tfind_mudd$$Elfind_mudd</lln01>
+              </links>
+              <search>
+                <creatorcontrib>H. W.  Brands</creatorcontrib>
+                <creatorcontrib>Brands, H. W.</creatorcontrib>
+                <creatorcontrib>Brands, H</creatorcontrib>
+                <creatorcontrib>H.W. Brands.</creatorcontrib>
+                <creatorcontrib>Brands, Henry William</creatorcontrib>
+                <title>Woodrow Wilson /</title>
+                <subject>Wilson, Woodrow, 1856-1924.</subject>
+                <subject>Presidents United States Biography.</subject>
+                <subject>United States Politics and government 1913-1921.</subject>
+                <subject>Vilʹson, Vudro, 1856-1924</subject>
+                <subject>Wei-erh-hsün, 1856-1924</subject>
+                <subject>Wilson, T. W. (Thomas Woodrow), 1856-1924</subject>
+                <subject>Wilson, Thomas Woodrow, 1856-1924</subject>
+                <subject>Wilson, Tommy, 1856-1924</subject>
+                <subject>Wilson, Woodrow, Pres. U.S., 1856-1924</subject>
+                <subject>Wiruson, Wuddorō, 1856-1924</subject>
+                <subject>威爾遜, 1856-1924</subject>
+                <general>Times Books,</general>
+                <general>voy-3917068</general>
+                <sourceid>PRN_VOYAGER</sourceid>
+                <recordid>PRN_VOYAGER3917068</recordid>
+                <isbn>0805069550</isbn>
+                <rsrctype>book</rsrctype>
+                <creationdate>2003</creationdate>
+                <addtitle>The American presidents</addtitle>
+                <addtitle>American presidents series (Times Books (Firm))</addtitle>
+                <searchscope>PRN_VOYAGER</searchscope>
+                <searchscope>FIRE</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>PRN_VOYAGER</scope>
+                <scope>FIRE</scope>
+                <scope>PRN</scope>
+                <lsr04>0805069550</lsr04>
+                <lsr05>E767 .B76 2003</lsr05>
+                <lsr06>3917068</lsr06>
+                <creatorcontrib>Arthur,  Walworth  1903-</creatorcontrib>
+                <creatorcontrib>Walworth, Arthur, 1903-</creatorcontrib>
+                <creatorcontrib>Walworth, A</creatorcontrib>
+                <creatorcontrib>by Arthur Walworth.</creatorcontrib>
+                <creatorcontrib>Walworth, Arthur Clarence, 1903-</creatorcontrib>
+                <general>Longmans Green,</general>
+                <general>voy-824441</general>
+                <recordid>PRN_VOYAGER824441</recordid>
+                <toc>1. American prophet -- 2. World prophet.</toc>
+                <creationdate>1958</creationdate>
+                <searchscope>RARE</searchscope>
+                <searchscope>MUDD</searchscope>
+                <searchscope>STOKES</searchscope>
+                <scope>RARE</scope>
+                <scope>MUDD</scope>
+                <scope>STOKES</scope>
+                <lsr05>WW 9724</lsr05>
+                <lsr05>E767 .W34 1958</lsr05>
+                <lsr06>824441</lsr06>
+              </search>
+              <sort>
+                <title>Woodrow Wilson</title>
+                <creationdate>2003</creationdate>
+                <author>Brands, H. W.</author>
+              </sort>
+              <facets>
+                <language>eng</language>
+                <creationdate>2003</creationdate>
+                <topic>Wilson, Woodrow, 1856-1924</topic>
+                <topic>Presidents–United States–Biography</topic>
+                <topic>United States–Politics and government–1913-1921</topic>
+                <toplevel>available</toplevel>
+                <prefilter>books</prefilter>
+                <rsrctype>books</rsrctype>
+                <creatorcontrib>Brands, H. W</creatorcontrib>
+                <classificationlcc>E - History: America–United States–Twentieth century–Wilson's administrations, 1913-1921</classificationlcc>
+                <creationdate>1958</creationdate>
+                <creatorcontrib>Walworth, Arthur</creatorcontrib>
+                <frbrgroupid>34296440</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>1</t>
+                <c1>2002041393</c1>
+                <c2>0805069550</c2>
+                <c3>woodrowwilson</c3>
+                <c4>2003</c4>
+                <f1>2002041393</f1>
+                <f3>0805069550</f3>
+                <f5>woodrowwilson</f5>
+                <f6>2003</f6>
+                <f7>woodrow wilson</f7>
+                <f8>nyu</f8>
+                <f9>xvi169p</f9>
+                <f10>times books</f10>
+                <f11>brands h w</f11>
+                <f15>1sted</f15>
+                <f16>s</f16>
+              </dedup>
+              <frbr>
+                <t>1</t>
+                <k1>$$Kbrands h w$$AA</k1>
+                <k3>$$Kwoodrow wilson$$AT</k3>
+                <k1>$$Kwalworth arthur 1903$$AA</k1>
+              </frbr>
+              <delivery>
+                <institution>$$VPRN$$OPRN_VOYAGER3917068</institution>
+                <delcategory>$$VPhysical Item$$OPRN_VOYAGER3917068</delcategory>
+                <institution>$$VPRN$$OPRN_VOYAGER824441</institution>
+                <delcategory>$$VPhysical Item$$OPRN_VOYAGER824441</delcategory>
+              </delivery>
+              <enrichment>
+                <classificationlcc>E767</classificationlcc>
+              </enrichment>
+              <ranking>
+                <booster1>1</booster1>
+                <booster2>1</booster2>
+              </ranking>
+              <addata>
+                <aulast>Brands</aulast>
+                <aufirst>H. W.</aufirst>
+                <au>Brands, H. W</au>
+                <btitle>Woodrow Wilson / H.W. Brands.</btitle>
+                <seriestitle>American presidents series (Times Books (Firm))</seriestitle>
+                <date>2003</date>
+                <risdate>2003.</risdate>
+                <isbn>0805069550</isbn>
+                <format>book</format>
+                <genre>book</genre>
+                <ristype>BOOK</ristype>
+                <notes>Includes bibliographical references (p. 153-156) and index.</notes>
+                <cop>New York</cop>
+                <pub>Times Books</pub>
+                <oclcid>51172450</oclcid>
+                <lccn>2002041393</lccn>
+                <lad01>f</lad01>
+                <aulast>Walworth</aulast>
+                <aufirst>Arthur,</aufirst>
+                <au>Walworth, Arthur, 1903-</au>
+                <btitle>Woodrow Wilson / by Arthur Walworth.</btitle>
+                <date>1958</date>
+                <risdate>1958.</risdate>
+                <notes>Includes bibliographical references and index.</notes>
+                <pub>Longmans Green</pub>
+                <oclcid>823304</oclcid>
+                <lccn>56012569</lccn>
+                <lad03>ex</lad03>
+                <lad09>spia</lad09>
+                <lad16>prnc</lad16>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <sear:GETIT GetIt2="http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&amp;ctx_enc=info:ofi/enc:UTF-8&amp;ctx_tim=2012-12-06T13%3A19%3A58IST&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=infofi/fmt:kev:mtx:ctx&amp;rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:book&amp;rft.genre=book&amp;rft.atitle=&amp;rft.jtitle=&amp;rft.btitle=Woodrow%20Wilson%20/%20H.W.%20Brands.&amp;rft.aulast=Brands&amp;rft.auinit=&amp;rft.auinit1=&amp;rft.auinitm=&amp;rft.ausuffix=&amp;rft.au=Brands%2C%20H.%20W&amp;rft.aucorp=&amp;rft.volume=&amp;rft.issue=&amp;rft.part=&amp;rft.quarter=&amp;rft.ssn=&amp;rft.spage=&amp;rft.epage=&amp;rft.pages=&amp;rft.artnum=&amp;rft.issn=&amp;rft.eissn=&amp;rft.isbn=0805069550&amp;rft.sici=&amp;rft.coden=&amp;rft_id=info:doi/&amp;rft.object_id=&amp;rft_dat=&lt;PRN_VOYAGER>3917068&lt;/PRN_VOYAGER>&amp;rft.eisbn=&amp;svc.abstract=yes&amp;svc.any=yes&amp;svc.citation=yes&amp;svc.holdings=yes&amp;svc.ill=yes&amp;svc.selectedfulltext=yes&amp;rft_id=info:oai/" GetIt1="OVP" deliveryCategory="Physical Item"/>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>FIRE</sear:library>
+              <sear:status>unavailable</sear:status>
+              <sear:collection>(F)</sear:collection>
+              <sear:callNumber>E767 .W34 1958</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>RARE</sear:library>
+              <sear:status>check_holdings</sear:status>
+              <sear:collection>Rare Books (EX)</sear:collection>
+              <sear:callNumber>WW 9724</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LIBRARIES>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>FIRE</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>(F)</sear:collection>
+              <sear:callNumber>E767 .B76 2003</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>MUDD</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>Princetoniana Collection (PRNC)</sear:collection>
+              <sear:callNumber>E767 .W34 1958</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+            <sear:LIBRARY>
+              <sear:institution>PRN</sear:institution>
+              <sear:library>STOKES</sear:library>
+              <sear:status>available</sear:status>
+              <sear:collection>(SPIA)</sear:collection>
+              <sear:callNumber>E767 .W34 1958</sear:callNumber>
+              <sear:url>OVP</sear:url>
+            </sear:LIBRARY>
+          </sear:LIBRARIES>
+          <sear:LINKS>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-12-06T13%3A19%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Woodrow%20Wilson%20/%20H.W.%20Brands.&rft.aulast=Brands&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Brands%2C%20H.%20W&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=0805069550&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>3917068</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:openurl><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-12-06T13%3A19%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Woodrow%20Wilson%20/%20H.W.%20Brands.&rft.aulast=Brands&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Brands%2C%20H.%20W&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=0805069550&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=<PRN_VOYAGER>824441</PRN_VOYAGER>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/]]></sear:openurl>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=3917068&amp;pds_handle=</sear:backlink>
+            <sear:backlink>http://catalog.princeton.edu/cgi-bin/Pwebrecon.cgi?holdingsinfo?&amp;BBID=824441&amp;pds_handle=</sear:backlink>
+            <sear:thumbnail>http://images.amazon.com/images/P/0805069550.01._SSTHUM_.jpg</sear:thumbnail>
+            <sear:thumbnail>http://books.google.com/books?bibkeys=ISBN:0805069550,OCLC:51172450,LCCN:2002041393&amp;jscmd=viewapi&amp;callback=updateGBSCover</sear:thumbnail>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-12-06T13%3A19%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Woodrow%20Wilson%20/%20H.W.%20Brands.&rft.aulast=Brands&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Brands%2C%20H.%20W&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=0805069550&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>3917068</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:openurlfulltext><![CDATA[http://sfx.princeton.edu:9003/sfx_pul?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2012-12-06T13%3A19%3A58IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.atitle=&rft.jtitle=&rft.btitle=Woodrow%20Wilson%20/%20H.W.%20Brands.&rft.aulast=Brands&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=Brands%2C%20H.%20W&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=0805069550&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&svc_val_fmt=info:ofi/fmt:kev:mtx:sch_svc&svc.fulltext=yes&rft_dat=<PRN_VOYAGER>824441</PRN_VOYAGER>&rft.eisbn=&rft_id=info:oai/]]></sear:openurlfulltext>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:linktoholdings>OVP</sear:linktoholdings>
+            <sear:addlink>http://www.loc.gov/catdir/description/hol031/2002041393.html</sear:addlink>
+            <sear:linktouc>http://www.amazon.com/gp/product/0805069550</sear:linktouc>
+            <sear:linktouc>http://www.worldcat.org/search?q=isbn%3A0805069550</sear:linktouc>
+            <sear:linktouc>http://www.worldcat.org/search?q=no%3A51172450</sear:linktouc>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=f&amp;id=3917068</sear:lln01>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=ex&amp;id=3917068</sear:lln01>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=spia&amp;id=3917068</sear:lln01>
+            <sear:lln01>http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=prnc&amp;id=3917068</sear:lln01>
+          </sear:LINKS>
+        </sear:DOC>
+      </DOCSET>
+    </RESULT>
+  </JAGROOT>
+</SEGMENTS>
