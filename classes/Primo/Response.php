@@ -53,10 +53,14 @@ class Response
     
     foreach($this->result_set as $primo_record) {
       $brief_result = array(
+        'pnx_id' => $primo_record->getRecordID(),
         'url' => $primo_record->getResourceLink(),
+        'fulltextavail' => $primo_record->hasFullText(),
+        'full_text_link' => $primo_record->getFullTextLinktoSrc(),
         'title' => trim($primo_record->getTitle()),
         'holdings' => $primo_record->getBriefHoldings(),
         'format' => $primo_record->getFormatType(),
+        'creationdate' => $primo_record->getCreationDate(),
       );
       array_push($brief_result_set, $brief_result);
     }

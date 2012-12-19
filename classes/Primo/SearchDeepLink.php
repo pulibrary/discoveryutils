@@ -23,6 +23,8 @@ use Primo\Query;
 class SearchDeepLink
 {
   
+  
+  //FIXME - parameters should come in via primo connection container value 
   private $query;
   private $deep_search_link;
   private $base_url; 
@@ -31,6 +33,8 @@ class SearchDeepLink
   private $tabs = array("location","summon", "course", "blended");
   private $active_tab;
   private $facet_filters = array();
+  
+  //FIXME  
   
   public function __construct($query, $index_type, $precision_operator, $primo_connection, $tab = "location", $scopes = array("OTHERS","FIRE"), $facet_list = array()) {
     $this->query = new \Primo\Query($query, $index_type, $precision_operator, $scopes);
@@ -50,6 +54,7 @@ class SearchDeepLink
   
   private function buildDeepSearchLink() {
     $this->deep_search_link = $this->base_url . $this->primo_deep_search_path . $this->query->getQueryString() . $this->query->buildFacets() . "&vid=" . $this->vid . "&tab=" . $this->active_tab;
+    //print_r($this->deep_search_link);
   }
   
   public function getLink() {

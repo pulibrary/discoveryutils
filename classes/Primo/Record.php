@@ -190,7 +190,9 @@ Class Record
    */
   public function getBriefInfo() {
     $getit_links = $this->getGetItLinks();
+    //print_r($getit_links);
     $available_libraries = $this->getAvailableLibraries();
+    //print_r($available_libraries);
     $brief_info_data = array();
     foreach($getit_links as $voyager_key => $getit_data) {
       $voyager_key_available_libraries = array();
@@ -327,7 +329,14 @@ Class Record
     $holdings_locations = array();
     foreach($holdings_list as $holding) {
       $current_holding = new PrimoHolding($holding->textContent); 
-      array_push( $holdings_locations, $current_holding->primo_library);
+      $request_link = $this->primo_server_connection['record.request.base'] . "?" . "bib=" . $this->getRecordID() . "&loc=" . $current_holding->location_code;
+      array_push( $holdings_locations, array($current_holding->primo_library => array(
+        'location_code' => $current_holding->location_code,
+        'library_label' => $this->primo_server_connection['available.scopes'][$current_holding->primo_library]['name'],
+        'request_link' =>  $request_link,
+          ),
+        )
+      );
     }
     
     return $holdings_locations;
@@ -509,14 +518,40 @@ Class Record
   }
   
   public function getResourceLink() {
-    if($this->getFullTextLinktoSrc()) {
-      $resource_link = $this->getFullTextLinktoSrc();
-    } else {
+    //if($this->getFullTextLinktoSrc()) {
+    //  $resource_link = $this->getFullTextLinktoSrc();
+    //} else {
       $deep_link = new PermaLink($this->getRecordID(), $this->primo_server_connection);
       $resource_link = $deep_link->getLink();
-    }
+    //}
     
     return $resource_link;
+    
+  }
+  
+  
+  
+  
+  public function hasFullText() {
+    
+    $fulltext = "N"; 
+ 
+    if($this->getFullTextLinktoSrc()) {
+      $fulltext = "Y";
+    }
+    
+    return $fulltext;
+  }  
+  
+  public function getCreationDate() {
+    $creation_date = $this->getElements('creationdate');
+
+    if($creation_date->length > 0) {
+      $date = $creation_date->item(0);
+      return $date->nodeValue;
+    } else {
+      return FALSE;
+    }
     
   }
   

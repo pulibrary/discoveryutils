@@ -46,10 +46,6 @@ class PrimoQueryTest extends \PHPUnit_Framework_TestCase {
     
   }
   
-  public function testSingleQuery() {
-    
-  }
-  
   public function testIndexFieldTypesQuery() { //Go Through All Available Index Fields
     
   }
@@ -58,7 +54,7 @@ class PrimoQueryTest extends \PHPUnit_Framework_TestCase {
     
   }
   
-  public function testQueryStringHasNoCommas() { //Primo API and Deep Links queries can't have commas 
+  public function testQueryValueHasNoCommas() { //Primo API and Deep Links queries can't have commas 
     
   }
   
@@ -67,7 +63,9 @@ class PrimoQueryTest extends \PHPUnit_Framework_TestCase {
     $this->assertFalse($query->hasFacets());
     $query->addFacet("facet_rtype,exact,journals");
     $this->assertTrue($query->hasFacets());
-    $this->assertContains("&query=facet_rtype%2Cexact%2Cjournals", $query->getQueryString());
+    $this->assertEquals(1, count($query->getFacets()));
+    $facets = $query->getFacets();
+    $this->assertEquals($facets[0], "facet_rtype,exact,journals");
   }
   
   public function testHasMultipleFacets() {
@@ -76,6 +74,9 @@ class PrimoQueryTest extends \PHPUnit_Framework_TestCase {
     $query->addFacet("facet_rtype,exact,journals");
     $query->addFacet("facet_topic,exact,united states");
     $this->assertTrue($query->hasFacets());
-    $this->assertContains("&query=facet_rtype%2Cexact%2Cjournals&query=facet_topic%2Cexact%2Cunited+states", $query->getQueryString());
+    $this->assertEquals(2, count($query->getFacets()));
+    $facets = $query->getFacets();
+    $this->assertEquals($facets[0], "facet_rtype,exact,journals");
+    $this->assertEquals($facets[1], "facet_topic,exact,united states");
   }
 }

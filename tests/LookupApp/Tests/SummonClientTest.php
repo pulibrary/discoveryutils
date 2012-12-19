@@ -21,7 +21,7 @@ class SummonClientTest extends \PHPUnit_Framework_TestCase {
   
   function testRecordIDLookup() {
     $id_document = $this->summon_client->getRecord($this->sample_id);
-    //print_r($id_document);
+    print_r($id_document);
     $this->assertEquals($id_document['documents'][0]['ID'][0], $this->sample_id);
     $this->assertEquals(count($id_document['documents']), 1);
   }
@@ -35,6 +35,7 @@ class SummonClientTest extends \PHPUnit_Framework_TestCase {
     $results_page = 1;
     $num_results_to_return = 3;
     $result_set = $this->summon_client->query("True Blood", $results_page, $num_results_to_return);
+    //print_r($result_set);
     $this->assertEquals(count($result_set['documents']), 3);
     
   }
@@ -57,7 +58,6 @@ class SummonClientTest extends \PHPUnit_Framework_TestCase {
     //$this->summon_client->addFilter("ContentType,Newspaper+Article,t");
     $this->summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:true)");
     $result_without_newspaper = $this->summon_client->query("Mark Twain");
-    //var_dump($result_without_newspaper['query']);
     $this->assertLessThan(150000, $result_without_newspaper['recordCount']);
   }
 

@@ -35,7 +35,14 @@ class LookupPrimoResponseTest extends \PHPUnit_Framework_TestCase {
     
     public function testGetBriefResults() {
       $brief_result_set = $this->multiple_response->getBriefResults();
+      //print_r($this->multiple_response->getBriefResults());
       $this->assertInternalType('array', $brief_result_set);
       $this->assertStringStartsWith('One fine potion', $brief_result_set[9]['title']); //check title in last mock object item
+    }
+    
+    public function testGetHoldings() {
+      $brief_result_set = $this->multiple_response->getBriefResults();
+      $this->assertInternalType('array', $brief_result_set[0]['holdings']);
+      $this->assertGreaterThanOrEqual(1, count($brief_result_set[0]['holdings']));
     }
 }

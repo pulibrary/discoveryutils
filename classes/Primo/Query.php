@@ -38,6 +38,7 @@ Class Query
     "begins_with"
   );
   
+  //FIXME - this data should come from Service Container
   private $available_local_scopes = array( //See http://searchit.princeton.edu/PrimoWebServices/xservice/getscopesofview?viewId=PRINCETON for list of scopes
     "PRN",
     "LEWIS",
@@ -49,6 +50,7 @@ Class Query
     "ENG",
   );
 
+   //FIXME - this data should come from Service Container
   private $available_remote_scopes = array(
     "SummonThirdNode"
   );
@@ -69,7 +71,10 @@ Class Query
   }
   
   public function getQueryString() {
-    /*
+    /* removed this because http client seems to like these to be added in the "Client" class at request time due 
+     * the need to provide special handling for the repeated "query" parameter. See use of "AggregateDuplicates" in 
+     * \Primo\Client
+     * 
     if(count($this->facet_filters > 0)) {
       $this->query_string = $this->query_string . $this->buildFacets();
     }
