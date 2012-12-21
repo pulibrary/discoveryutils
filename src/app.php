@@ -53,7 +53,7 @@ $app['primo_server_connection'] = array(
   'default_pnx_source_id' => 'PRN_VOYAGER',
   'default.scope' => array("OTHERS","FIRE"),
   'default.search' => "contains",
-  'num.records.brief.display' => 3,
+  'num.records.brief.display' => 10,
   'available.scopes' => $library_scopes,
   'record.request.base' => "http://libwebprod.princeton.edu/requests",
 );
@@ -63,7 +63,8 @@ $app['primo_server_connection'] = array(
 $app['summon.connection'] = Yaml::parse(__DIR__.'/../conf/summon.yml');
 $app['pulfa'] = array(
   'host' => "http://findingaids.princeton.edu",
-  'base' => "/collections.xml?"
+  'base' => "/collections.xml?",
+  'num.records.brief.display' => 3,
 );
 
 $app['locator.base'] = "http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php";
@@ -388,6 +389,12 @@ $app->get('/pulfa/{index_type}', function($index_type) use($app) {
   } else {
     return "No Query Supplied";
   }
+  
+  if($app['request']->get('number')) {
+    $result_size = $app['request']->get('number');
+  } else {
+    $result_size = $app['pulfa']['num.records.brief.display'];
+  }
   if($app['request']->server->get('HTTP_REFERER')) { //should not be repeated moved out to utilities class
     $referer = $app['request']->server->get('HTTP_REFERER');
   } else {
@@ -395,7 +402,7 @@ $app->get('/pulfa/{index_type}', function($index_type) use($app) {
   }
   
   $pulfa = new \Pulfa\Pulfa($app['pulfa']['host'], $app['pulfa']['base']);
-  $pulfa_response_data = $pulfa->query($query, 0, 3);
+  $pulfa_response_data = $pulfa->query($query, 0, $result_size);
   $pulfa_response = new PulfaResponse($pulfa_response_data, $query);
   $brief_response = $pulfa_response->getBriefResponse();
   $brief_response['query'] = $app->escape($query);
@@ -421,6 +428,13 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
   } else {
     $referer = "Direct Query";
   }
+  
+  if($app['request']->get('number')) {
+    $result_size = $app['request']->get('number');
+  } else {
+    $result_size = $app['summon.connection']['num.records.brief.display'];
+  }
+  
   
   $summon_client = new Summon($app['summon.connection']['client.id'], $app['summon.connection']['authcode']);
   $summon_client->limitToHoldings(); // only bring back Princeton results
@@ -449,7 +463,7 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
     $response_data['number'] = count($response_data['recommendations']);
   } else {
     $summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:t)"); //FIXME this shoudl default to exclude and retain filter to remove newspapers
-    $summon_data = new SummonResponse($summon_client->query($query, 1, 3)); 
+    $summon_data = new SummonResponse($summon_client->query($query, 1, $result_size)); 
     //print_r($summon_data);
     $summon_full_search_link = new SummonQuery($query, array(
       "s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t)",      
@@ -512,6 +526,13 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
   } else {
     $referer = "Direct Query";
   }
+  
+  if($app['request']->get('number')) {
+    $result_size = $app['request']->get('number');
+  } else {
+    $result_size = $app['primo_server_connection']['num.records.brief.display'];
+  }
+  
   if($app['request']->get('scopes')) {
     $scopes = explode(",", $app['request']->get('scopes'));  
   } else {
@@ -530,7 +551,7 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
     $subject_facet = "facet_topic,exact," . $app['request']->get('subject');
   }
 
-  $primo_query = new PrimoQuery($query, $app->escape($index_type), $operator, $scopes, $app['primo_server_connection']['num.records.brief.display']);
+  $primo_query = new PrimoQuery($query, $app->escape($index_type), $operator, $scopes, $result_size);
   if(isset($format_facet)) {
     $primo_query->addFacet($format_facet);
   }
