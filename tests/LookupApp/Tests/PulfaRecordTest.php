@@ -53,4 +53,23 @@ class PulfaRecordTest extends \PHPUnit_Framework_TestCase {
     }
   }
   
+  function testPulfaHasBreadCrumbs() {
+    $record = $this->record_set[9];
+    $record->loadBreadCrumbs();
+    $this->assertTrue(isset($record->breadcrumbs));
+    foreach($record->breadcrumbs as $crumb_set) {
+      $this->assertArrayHasKey('uri', $crumb_set);
+      $this->assertArrayNotHasKey('urk', $crumb_set);
+      $this->assertArrayHaskey('level', $crumb_set);
+      $this->assertArrayHasKey('text', $crumb_set);
+    }
+  }
+  
+
+  function testPulfaHasNoBreadCrumbs() {
+    $record = $this->record_set[0];
+    $record->loadBreadCrumbs();
+    $this->assertEquals(0, count($record->breadcrumbs)); 
+  }
+  
 }

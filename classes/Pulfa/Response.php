@@ -1,7 +1,8 @@
 <?php
 
 namespace Pulfa;
-use \Pulfa\Parser as PulfaParser;
+use \Pulfa\Parser as PulfaParser,
+    \Pulfa\Link as Link;
 
 class Response 
 {
@@ -9,18 +10,19 @@ class Response
   private $response_uri;
   private $hits;
   
-  function __construct($xml) {
+  function __construct($xml, $query) {
     $parsed_response_data = New PulfaParser($xml);
     $this->records = $parsed_response_data->getRecords();
     $this->hits = $parsed_response_data->getHits();
     $this->response_uri = $parsed_response_data->getQueryUri();
+    $this->more_link = new Link($query);
   }
   
   
   public function getBriefResponse() {
     $response = array();
     $response['number'] = $this->hits;
-    $response['more'] = $this->response_uri;
+    $response['more'] = $this->more_link->getLink();
     foreach($this->records as $record) {
       $response['records'][] = array(
         'title' => $record->title,
@@ -28,7 +30,8 @@ class Response
         'digital' => $record->digital,
         'abstract' => $record->hits,
         'type' => $record->type,
-        'breadcrumb' => $record->breadcrumb,
+        'breadcrumb' => $record->breadcrumbs,
+        'kwic' => $record->kwic_excerpt,
       );
     }  
     

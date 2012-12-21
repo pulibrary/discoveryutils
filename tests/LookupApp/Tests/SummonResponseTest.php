@@ -10,13 +10,14 @@ namespace LookupApp\Tests;
 class SummonResponseTest extends \PHPUnit_Framework_TestCase  
 {
   protected function setUp() {
-    $this->summon_connection = array( //find a way to pass this in automatically?
-      'client.id' => "princeton",
-     'authcode' => 'LOIYKyKZbRiV0OVu9+worZW4ah'
-    );
-    $this->summon_client = new \Summon\Summon($this->summon_connection['client.id'], $this->summon_connection['authcode']);
+    $this->summon_response_data = json_decode(file_get_contents(dirname(__FILE__).'../../../support/summon_response.json'), TRUE);
     
   }
+  
+  function testIsValidResponse() {
+       
+  }
+  
   
   function testGetResearchGuidesOnlyPrinceton() {
     

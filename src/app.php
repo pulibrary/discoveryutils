@@ -5,6 +5,7 @@
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Response,
     Symfony\Component\HttpFoundation\Request,
+    Symfony\Component\HttpFoundation\JsonResponse,
     Symfony\Component\Yaml\Yaml;
 use Primo\Record as PrimoRecord,
     Primo\PermaLink as Permalink,
@@ -12,7 +13,8 @@ use Primo\Record as PrimoRecord,
     Primo\Client as PrimoClient,
     Primo\SearchDeepLink as SearchDeepLink,
     Primo\RequestClient as RequestClient,
-    Primo\Response as PrimoResponse;
+    Primo\Response as PrimoResponse,
+    Primo\ScopeList as PrimoScopeList;
 use Summon\Summon,
     Summon\Query as SummonQuery,
     Summon\Response as SummonResponse;
@@ -42,6 +44,8 @@ $app['search_tabs'] = array(
   array("index" => "blended", "label" => "Catalog and Summon"),
 );
 
+$library_scopes = Yaml::parse(__DIR__.'/../conf/scopes.yml');
+
 $app['primo_server_connection'] = array(
   'base_url' => 'http://searchit.princeton.edu',
   'institution' => 'PRN',
@@ -49,7 +53,9 @@ $app['primo_server_connection'] = array(
   'default_pnx_source_id' => 'PRN_VOYAGER',
   'default.scope' => array("OTHERS","FIRE"),
   'default.search' => "contains",
-  'num.records.brief.display' => 3
+  'num.records.brief.display' => 10,
+  'available.scopes' => $library_scopes,
+  'record.request.base' => "http://libwebprod.princeton.edu/requests",
 );
 
 
@@ -57,7 +63,8 @@ $app['primo_server_connection'] = array(
 $app['summon.connection'] = Yaml::parse(__DIR__.'/../conf/summon.yml');
 $app['pulfa'] = array(
   'host' => "http://findingaids.princeton.edu",
-  'base' => "/collections.xml?"
+  'base' => "/collections.xml?",
+  'num.records.brief.display' => 3,
 );
 
 $app['locator.base'] = "http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php";
@@ -98,14 +105,17 @@ $app->error(function (\Exception $e, $code) use ($app) {
 
 $app->get('/', function() use($app) {
   
-  return 'Discovery Services Utilities running in ' . $app['environment']['env'] . " mode";
-  
+   return $app['twig']->render('home.html.twig', array(
+    'environment' => $app['environment']['env'], 
+    'title' => $app['environment']['title']
+  ));
 });
 
 /*
  * Redirect Route to Primo Deep Link for IDs
  */
 $app->match('/show/{rec_id}', function($rec_id) use($app) {
+    
   $primo_record_link = new PermaLink($rec_id, $app['primo_server_connection']);
   $app['monolog']->addInfo("REDIRECT: " . $primo_record_link->getLink());
   return $app->redirect($primo_record_link->getLink());
@@ -347,6 +357,26 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
   }
 })->assert('rec_id', '\w+');
 
+$app->post('/scopelist', function() use ($app) {
+  $scope_list_response = $app['primo_client']->getScopes();
+  $scope_list = new PrimoScopeList($scope_list_response);
+  $yaml = $scope_list->asYaml();
+  //updat yaml file
+  file_put_contents(__DIR__.'/../conf/scopes.yml', $yaml);
+  
+  return new JsonResponse($scope_list->getScopes());
+});
+
+$app->post('/locations', function() use ($app) {
+    
+  $locations = json_decode(file_get_contents("http://libserv5.princeton.edu/requests/locationservice.php"), TRUE);
+  ksort($locations);
+  file_put_contents(__DIR__.'/../conf/locations.json', json_encode($locations));
+  
+  return new JsonResponse($locations);
+  
+});
+
 
 /*
  * Route to direct queries to Pulfa
@@ -359,6 +389,12 @@ $app->get('/pulfa/{index_type}', function($index_type) use($app) {
   } else {
     return "No Query Supplied";
   }
+  
+  if($app['request']->get('number')) {
+    $result_size = $app['request']->get('number');
+  } else {
+    $result_size = $app['pulfa']['num.records.brief.display'];
+  }
   if($app['request']->server->get('HTTP_REFERER')) { //should not be repeated moved out to utilities class
     $referer = $app['request']->server->get('HTTP_REFERER');
   } else {
@@ -366,8 +402,8 @@ $app->get('/pulfa/{index_type}', function($index_type) use($app) {
   }
   
   $pulfa = new \Pulfa\Pulfa($app['pulfa']['host'], $app['pulfa']['base']);
-  $pulfa_response_data = $pulfa->query($query, 0, 3);
-  $pulfa_response = new PulfaResponse($pulfa_response_data);
+  $pulfa_response_data = $pulfa->query($query, 0, $result_size);
+  $pulfa_response = new PulfaResponse($pulfa_response_data, $query);
   $brief_response = $pulfa_response->getBriefResponse();
   $brief_response['query'] = $app->escape($query);
   
@@ -392,6 +428,13 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
   } else {
     $referer = "Direct Query";
   }
+  
+  if($app['request']->get('number')) {
+    $result_size = $app['request']->get('number');
+  } else {
+    $result_size = $app['summon.connection']['num.records.brief.display'];
+  }
+  
   
   $summon_client = new Summon($app['summon.connection']['client.id'], $app['summon.connection']['authcode']);
   $summon_client->limitToHoldings(); // only bring back Princeton results
@@ -420,7 +463,7 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
     $response_data['number'] = count($response_data['recommendations']);
   } else {
     $summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:t)"); //FIXME this shoudl default to exclude and retain filter to remove newspapers
-    $summon_data = new SummonResponse($summon_client->query($query, 1, 3)); 
+    $summon_data = new SummonResponse($summon_client->query($query, 1, $result_size)); 
     //print_r($summon_data);
     $summon_full_search_link = new SummonQuery($query, array(
       "s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t)",      
@@ -443,25 +486,35 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
 
 
 
-/*
- * These should be rethought based on a close reading of http://www.exlibrisgroup.org/display/PrimoOI/Brief+Search
- * to make the most generic use of "routes" as possible 
- * anything in the PNX "search" section can be a search index
- * indexes available for the "facets" in a PNX record as well.
- * search by various index types issn, isbn, lccn, oclc
+/* Wrapper for Primo Brief Search API Call
  * 
- * Params accepted
+ * EL Commons http://www.exlibrisgroup.org/display/PrimoOI/Brief+Search
  * 
- * scopes
- *  Example: .....?scopes=ENG,MUSIC - search only english and music libraries
+ * Route Variable 
  * 
- * format 
- *  Example: /find/title/journal+of+politics?format=journals - get only items with the journals facet back
+ * {index_type} scope the search to a particular field
+ * choices issn|isbn|lccn|oclc|title|any|lsr05|creator
+ * 
+ * lsr05 is call number
+ * 
+ * Possible Query Parameters
+ * 
+ * @query - string to search for
+ * 
+ * @limit - can be contains, exact, or begins_with see $app['primo_server_connection']['default.search'] for default
+ * NOTE "begins_with" can only be used with the title parameter otherwise an error can be thrown
+ *
+ * @scopes - see $app['primo_server_connection']['default.scope'] for default value
+ * Example: .....?scopes=ENG,MUSIC - search only english and music libraries
+ * 
+ * @format - see $app['primo_server_connection']['default.search'] for default value
+ * Example: /find/title/journal+of+politics?format=journals - get only items with the journals facet back
+ * 
  */
 
  
  $app->get('/find/{index_type}', function($index_type) use($app) {
-  
+
   if($app['request']->get('query')) {
     $query = $app['request']->get('query');
   } else {
@@ -473,6 +526,13 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
   } else {
     $referer = "Direct Query";
   }
+  
+  if($app['request']->get('number')) {
+    $result_size = $app['request']->get('number');
+  } else {
+    $result_size = $app['primo_server_connection']['num.records.brief.display'];
+  }
+  
   if($app['request']->get('scopes')) {
     $scopes = explode(",", $app['request']->get('scopes'));  
   } else {
@@ -491,7 +551,7 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
     $subject_facet = "facet_topic,exact," . $app['request']->get('subject');
   }
 
-  $primo_query = new PrimoQuery($query, $app->escape($index_type), $operator, $scopes, $app['primo_server_connection']['num.records.brief.display']);
+  $primo_query = new PrimoQuery($query, $app->escape($index_type), $operator, $scopes, $result_size);
   if(isset($format_facet)) {
     $primo_query->addFacet($format_facet);
   }

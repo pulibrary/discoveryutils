@@ -13,7 +13,7 @@ namespace Primo;
 class LocatorLink {
   private $source_id;
   private $location_code;
-  private $locator_link_base = "http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php";
+  private $locator_link_base = "/searchit/map";
   private $link;
   
   public function __construct($id,$location_code) {
