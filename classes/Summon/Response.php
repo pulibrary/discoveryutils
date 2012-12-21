@@ -35,10 +35,16 @@ class Response
         'url' => $record->link,
         'title' => trim($record->Title[0]),
         'holdings' => $record->hasFullText,
+        'is_full_text' => $record->isFullTextHit,
+        'in_holdings' => $record->inHoldings,
         'format' => $record->ContentType[0],
         'abstract' => $record->Abstract,
         'fulltextavail' => $record->hasFullText,
         'publication_date' => $record->PublicationDate[0],
+        'snippet' => $record->Snippet[0],
+        'publication_title' => $record->PublicationTitle[0],
+        'publication_year' => $record->PublicationYear[0],
+        'author' => $record->Author[0],
       );
       array_push($brief_result_set, $brief_result);
     }

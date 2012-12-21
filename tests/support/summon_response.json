@@ -1,0 +1,1279 @@
+{
+  "version": "2.0.0",
+  "sessionId": "SUMMON-SESSION-ltopmacreiss.local-1281-1",
+  "elapsedQueryTime": 651,
+  "queryTime": 646,
+  "totalRequestTime": 773,
+  "pageCount": 3117599,
+  "recordCount": 31175982,
+  "query": {
+    "queryString": "s.rec.qs.max=&s.hs=*&s.mr=&s.ho=t&s.rec.db.max=&s.role=none&s.ps=10&s.q=history&s.he=*&s.dym=t&s.pn=1",
+    "pageNumber": 1,
+    "pageSize": 10,
+    "highlightStartDelimiter": "*",
+    "highlightEndDelimiter": "*",
+    "isDidYouMeanEnabled": true,
+    "isHoldingsOnlyEnabled": true,
+    "textQueries": [
+      {
+        "textQuery": "history",
+        "removeCommand": "removeTextQuery(history)"
+      }
+    ],
+    "searchTerms": [
+
+    ],
+    "textFilters": [
+
+    ],
+    "rangeFilters": [
+
+    ],
+    "facetValueFilters": [
+
+    ],
+    "inclusiveFacetValueFilters": [
+
+    ],
+    "facetValueGroupFilters": [
+
+    ],
+    "facetFields": [
+
+    ],
+    "rangeFacetFields": [
+
+    ],
+    "sort": [
+
+    ]
+  },
+  "facetFields": [
+
+  ],
+  "rangeFacetFields": [
+
+  ],
+  "didYouMeanSuggestions": [
+
+  ],
+  "recommendationLists": {
+    "database": [
+      {
+        "title": "America: History and Life",
+        "description": "Indexes books and journal articles on the history of the United States and Canada from prehistory to the present.",
+        "link": "http://princeton.summon.serialssolutions.com/link/dbrecommender/AAAoU1VNTU9OLVNFU1NJT04tbHRvcG1hY3JlaXNzLmxvY2FsLTEyODEtMQEACkJZNEtYNFdONEMCAG5odHRwOi8vZXpwcm94eS5wcmluY2V0b24uZWR1L2xvZ2luP3VybD1odHRwOi8vc2VyaWFscy5hYmMtY2xpby5jb20vYWN0aXZlL3N0YXJ0P19hcHBuYW1lPXNlcmlhbHMmaW5pdGlhbGRiPUFITAMAATAEABlBbWVyaWNhOiBIaXN0b3J5IGFuZCBMaWZlBQAIZGF0YWJhc2U"
+      },
+      {
+        "title": "American Memory",
+        "description": "Primary source and archival materials relating to American culture and history",
+        "link": "http://princeton.summon.serialssolutions.com/link/dbrecommender/AAAoU1VNTU9OLVNFU1NJT04tbHRvcG1hY3JlaXNzLmxvY2FsLTEyODEtMQEACkJZNEtYNFdONEMCAENodHRwOi8vZXpwcm94eS5wcmluY2V0b24uZWR1L2xvZ2luP3VybD1odHRwOi8vbWVtb3J5LmxvYy5nb3YvYW1tZW0vAwABMAQAD0FtZXJpY2FuIE1lbW9yeQUACGRhdGFiYXNl"
+      }
+    ]
+  },
+  "documents": [
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "inHoldings": true,
+      "openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=History&rft.jtitle=The+journal+of+the+Royal+College+of+Physicians+of+Edinburgh&rft.au=Gardner%2C+D&rft.date=2012-01-01&rft.volume=42&rft.issue=3&rft.spage=286&rft_id=info:pmid/22953327&rft.externalDocID=22953327",
+      "link": "http://princeton.summon.serialssolutions.com/link/0/eLvHCXMwY2DQQCsPckryC3ITgW2gTNCuOVAJrQuavtEFdRadIk1AK339TJyRSnU3UQY5N9cQZw9dSJ0QXwA5eCEedPW0sbGRuaEYAwuwc5wKACXTHHE",
+      "Volume": [
+        "42"
+      ],
+      "Language": [
+        "English"
+      ],
+      "Author": [
+        "Gardner, D"
+      ],
+      "PublicationPlace": [
+        "Scotland"
+      ],
+      "Score": [
+        "4.145838"
+      ],
+      "IsPeerReviewed": [
+        "true"
+      ],
+      "PublicationDate": [
+        "2012-00-00"
+      ],
+      "PublicationDate_xml": [
+        {
+          "text": "2012-00-00",
+          "year": "2012"
+        }
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "SourceType": [
+        "Publisher"
+      ],
+      "PublicationTitleAlternate": [
+        "J R Coll Physicians Edinb"
+      ],
+      "URI": [
+        "http://www.ncbi.nlm.nih.gov/pubmed/22953327"
+      ],
+      "IsScholarly": [
+        "true"
+      ],
+      "ID": [
+        "FETCH-pubmed_primary_229533271"
+      ],
+      "PMID": [
+        "22953327"
+      ],
+      "PublicationTitle": [
+        "The journal of the Royal College of Physicians of Edinburgh"
+      ],
+      "Issue": [
+        "3"
+      ],
+      "PublicationYear": [
+        "2012"
+      ],
+      "Genre": [
+        "Letter"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Scotland"
+        }
+      ],
+      "EISSN": [
+        "2042-8189"
+      ],
+      "MergedId": [
+        "FETCHMERGED-pubmed_primary_229533271"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "givenname": "D",
+          "surname": "Gardner",
+          "fullname": "Gardner, D"
+        }
+      ],
+      "PublicationDecade": [
+        "2010"
+      ],
+      "ContentType": [
+        "Journal Article"
+      ],
+      "Title": [
+        "*History*"
+      ],
+      "ExternalDocumentID": [
+        "22953327"
+      ],
+      "SSID": [
+        "ssj0050729"
+      ],
+      "StartPage": [
+        "286"
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "inHoldings": true,
+      "openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=History&rft.jtitle=The+journal+of+the+Royal+College+of+Physicians+of+Edinburgh&rft.au=Somers%2C+K&rft.date=2012-01-01&rft.volume=42&rft.issue=3&rft.spage=286&rft_id=info:pmid/22953328&rft.externalDocID=22953328",
+      "link": "http://princeton.summon.serialssolutions.com/link/0/eLvHCXMwY2DQQCsPckryC3ITgW2gTNCuOVAJrQuavtEFdRadIk1AK339TJx5EIWUmyiDnJtriLOHLqROiC-AHLwQD7p62tgYqFeMgQXYOU4FACYJHHM",
+      "Volume": [
+        "42"
+      ],
+      "Language": [
+        "English"
+      ],
+      "Author": [
+        "Somers, K"
+      ],
+      "PublicationPlace": [
+        "Scotland"
+      ],
+      "Score": [
+        "4.145838"
+      ],
+      "References_xml": [
+        {
+        }
+      ],
+      "IsPeerReviewed": [
+        "true"
+      ],
+      "PublicationDate": [
+        "2012-00-00"
+      ],
+      "PublicationDate_xml": [
+        {
+          "text": "2012-00-00",
+          "year": "2012"
+        }
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "References": [
+        "22693705 - J R Coll Physicians Edinb. 2012 Jun;42(2):172-8"
+      ],
+      "SourceType": [
+        "Publisher"
+      ],
+      "PublicationTitleAlternate": [
+        "J R Coll Physicians Edinb"
+      ],
+      "URI": [
+        "http://www.ncbi.nlm.nih.gov/pubmed/22953328"
+      ],
+      "IsScholarly": [
+        "true"
+      ],
+      "ID": [
+        "FETCH-pubmed_primary_229533281"
+      ],
+      "PMID": [
+        "22953328"
+      ],
+      "PublicationTitle": [
+        "The journal of the Royal College of Physicians of Edinburgh"
+      ],
+      "Issue": [
+        "3"
+      ],
+      "PublicationYear": [
+        "2012"
+      ],
+      "Genre": [
+        "Comment",
+        "Letter"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Scotland"
+        }
+      ],
+      "EISSN": [
+        "2042-8189"
+      ],
+      "MergedId": [
+        "FETCHMERGED-pubmed_primary_229533281"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "givenname": "K",
+          "surname": "Somers",
+          "fullname": "Somers, K"
+        }
+      ],
+      "PublicationDecade": [
+        "2010"
+      ],
+      "ContentType": [
+        "Journal Article"
+      ],
+      "Title": [
+        "*History*"
+      ],
+      "ExternalDocumentID": [
+        "22953328"
+      ],
+      "SSID": [
+        "ssj0050729"
+      ],
+      "StartPage": [
+        "286"
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "inHoldings": true,
+      "openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=History&rft.jtitle=Journal+of+General+Internal+Medicine&rft.au=Green%2C+Ariel+Frank&rft.date=2011-11-01&rft.pub=Springer-Verlag&rft.issn=0884-8734&rft.volume=26&rft.issue=11&rft.spage=1383&rft.epage=1383&rft_id=info:doi/10.1007%2Fs11606-011-1700-2&rft.externalDBID=n%2Fa&rft.externalDocID=2011_11606_26_11_1700",
+      "link": "http://princeton.summon.serialssolutions.com/link/0/eLvHCXMwY2DQQCsPckryC3ITgW2gTNCuOVAJrQuavtEFdRadIk1AK339TJx5EIWVmyiDrptriLOHLmxuMr4AcvRCPKi6AjZaga3ueCOzeBAbNG8qxsAC7CunAgABzyCe",
+      "Volume": [
+        "26"
+      ],
+      "Language": [
+        "English"
+      ],
+      "Author": [
+        "Green, Ariel Frank"
+      ],
+      "PublicationPlace": [
+        "New York"
+      ],
+      "AuthorAffiliation_xml": [
+        {
+          "name": "Johns Hopkins Bayview Medical Center"
+        }
+      ],
+      "Score": [
+        "4.137498"
+      ],
+      "DOI": [
+        "10.1007/s11606-011-1700-2"
+      ],
+      "Copyright": [
+        "Society of General Internal Medicine 2011"
+      ],
+      "IsPeerReviewed": [
+        "true"
+      ],
+      "PublicationDate_xml": [
+        {
+          "text": "20111100",
+          "month": "11",
+          "year": "2011"
+        }
+      ],
+      "PublicationDate": [
+        "20111100"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "Society of General Internal Medicine 2011"
+        }
+      ],
+      "Publisher": [
+        "Springer-Verlag"
+      ],
+      "SourceType": [
+        "Publisher",
+        "Enrichment Source"
+      ],
+      "Publisher_xml": [
+        {
+          "name": "Springer-Verlag"
+        }
+      ],
+      "Snippet": [
+        "...JGIM Materia Medica *History* Ariel Frank Green, MD, MPH Johns Hopkins Bayview Medical Center, Baltimore, MD, USA. I open the electronic medical record, select..."
+      ],
+      "IsScholarly": [
+        "true"
+      ],
+      "ID": [
+        "FETCH-springer_primary_2011_11606_26_11_17001"
+      ],
+      "PublicationTitle": [
+        "Journal of General Internal Medicine"
+      ],
+      "Issue": [
+        "11"
+      ],
+      "PublicationTitleAbbrev": [
+        "J GEN INTERN MED"
+      ],
+      "Discipline": [
+        "Medicine"
+      ],
+      "PublicationYear": [
+        "2011"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "New York"
+        }
+      ],
+      "AuthorAffiliation": [
+        "Johns Hopkins Bayview Medical Center"
+      ],
+      "EISSN": [
+        "1525-1497"
+      ],
+      "SubjectTerms": [
+        "Medicine & Public Health",
+        "advance directives",
+        "medical education",
+        "Internal Medicine",
+        "aging"
+      ],
+      "MergedId": [
+        "FETCHMERGED-springer_primary_2011_11606_26_11_17001"
+      ],
+      "Author_xml": [
+        {
+          "middlename": "Frank",
+          "sequence": "1",
+          "givenname": "Ariel",
+          "surname": "Green",
+          "fullname": "Green, Ariel Frank"
+        }
+      ],
+      "PublicationDecade": [
+        "2010"
+      ],
+      "ContentType": [
+        "Journal Article"
+      ],
+      "Title": [
+        "*History*"
+      ],
+      "ExternalDocumentID": [
+        "2011_11606_26_11_1700"
+      ],
+      "ISSN": [
+        "0884-8734"
+      ],
+      "SSID": [
+        "ssj0013228"
+      ],
+      "StartPage": [
+        "1383"
+      ],
+      "EndPage": [
+        "1383"
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "inHoldings": true,
+      "openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=History&rft.jtitle=Journal+of+General+Internal+Medicine&rft.au=Ariel+Frank+Green&rft.date=2011-11-01&rft.pub=Springer+Science+%26+Business+Media&rft.issn=0884-8734&rft.volume=26&rft.issue=11&rft.spage=1383&rft_id=info:doi/10.1007%2Fs11606-011-1700-2&rft.externalDocID=2478990981",
+      "link": "http://princeton.summon.serialssolutions.com/link/0/eLvHCXMwY2DQQCsPckryC3ITgW2gTNCuOVAJrQuavtEFdRadIk1AK339TJx5EIWWmyiDnJtriLOHLqx0jE_JyYk3MjEHdg4MLC0MDcUYWICd41QAImscKg",
+      "Volume": [
+        "26"
+      ],
+      "DatabaseTitle": [
+        "Health Module (Alumni Edition)",
+        "Hospital Collection",
+        "Hospital Collection (Alumni)",
+        "Nursing & Allied Health Source",
+        "Health and Medicine Complete (Alumni Edition)",
+        "Health Management",
+        "Health Management (Alumni Edition)",
+        "ProQuest Research Library",
+        "Health & Medical Complete",
+        "Central (Professional Edition)",
+        "Medical Library",
+        "ProQuest Central",
+        "Pharma Collection",
+        "Central (Alumni)",
+        "Research Library (Alumni Edition)"
+      ],
+      "Language": [
+        "English"
+      ],
+      "Author": [
+        "Ariel Frank Green"
+      ],
+      "PublicationPlace": [
+        "Oxford"
+      ],
+      "Score": [
+        "4.137498"
+      ],
+      "DOI": [
+        "10.1007/s11606-011-1700-2"
+      ],
+      "Copyright": [
+        "Society of General Internal Medicine 2011"
+      ],
+      "IsPeerReviewed": [
+        "true"
+      ],
+      "DBID": [
+        "M2O",
+        "8FX",
+        "8AH",
+        "M1P",
+        "88C",
+        "7XB",
+        "8FK",
+        "8FJ",
+        "7RV",
+        "8FI",
+        "8G5",
+        "8AO",
+        "7X7",
+        "M0S",
+        "M0T"
+      ],
+      "PublicationDate_xml": [
+        {
+          "text": "Nov 2011",
+          "month": "11",
+          "year": "2011"
+        }
+      ],
+      "PublicationDate": [
+        "Nov 2011"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "Society of General Internal Medicine 2011"
+        }
+      ],
+      "Publisher": [
+        "Springer Science & Business Media"
+      ],
+      "SourceType": [
+        "Aggregation Database"
+      ],
+      "Publisher_xml": [
+        {
+          "name": "Springer Science & Business Media"
+        }
+      ],
+      "Snippet": [
+        "...  JGIM Materia Medica *History* Ariel Frank Green, MD, MPH Johns Hopkins Bayview Medical Center, Baltimore, MD, USA. I open the electronic medical record, select..."
+      ],
+      "URI": [
+        "http://search.proquest.com/docview/896669597"
+      ],
+      "PQPubID": [
+        "30490"
+      ],
+      "IsScholarly": [
+        "true"
+      ],
+      "ID": [
+        "FETCH-proquest_dll_24789909811"
+      ],
+      "PublicationTitle": [
+        "Journal of General Internal Medicine"
+      ],
+      "Issue": [
+        "11"
+      ],
+      "Discipline": [
+        "Medicine"
+      ],
+      "PublicationYear": [
+        "2011"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Oxford"
+        }
+      ],
+      "PQID": [
+        "896669597"
+      ],
+      "EISSN": [
+        "1525-1497"
+      ],
+      "MergedId": [
+        "FETCHMERGED-proquest_dll_24789909811"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "fullname": "Ariel Frank Green"
+        }
+      ],
+      "PublicationDecade": [
+        "2010"
+      ],
+      "ContentType": [
+        "Journal Article"
+      ],
+      "Title": [
+        "*History*"
+      ],
+      "ExternalDocumentID": [
+        "2478990981"
+      ],
+      "ISSN": [
+        "0884-8734"
+      ],
+      "SSID": [
+        "ssj0013228"
+      ],
+      "StartPage": [
+        "1383"
+      ],
+      "Database_xml": [
+        {
+          "sequence": "1",
+          "name": "ProQuest Central",
+          "dbid": "7XB",
+          "url": "http://ezproxy.princeton.edu/login?url=http://search.proquest.com/pqcentral"
+        }
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "inHoldings": true,
+      "openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=History&rft.jtitle=Journal+of+General+Internal+Medicine&rft.au=Green%2C+Ariel+Frank&rft.date=2011-11-01&rft.pub=Springer&rft.issn=0884-8734&rft.volume=26&rft.issue=11&rft.spage=1383&rft.externalDBID=n%2Fa&rft.externalDocID=269032765",
+      "link": "http://princeton.summon.serialssolutions.com/link/0/eLvHCXMwY2DQQCsPckryC3ITgW2gTNCuOVAJrQuavtEFdRadIk1AK339TJx5EIWXmyiDrJtriLOHLqiQjC-AHLsQbwTsyBkbmZuZGooxsAD7xqkAAY4bxw",
+      "Volume": [
+        "26"
+      ],
+      "Language": [
+        "English"
+      ],
+      "Author": [
+        "Green, Ariel Frank"
+      ],
+      "Keywords": [
+        "advance directives",
+        "medical education",
+        "aging"
+      ],
+      "Score": [
+        "4.1349907"
+      ],
+      "PageCount": [
+        "1"
+      ],
+      "Copyright": [
+        "COPYRIGHT 2011 Springer"
+      ],
+      "IsPeerReviewed": [
+        "true"
+      ],
+      "PublicationDate": [
+        "Nov 2011"
+      ],
+      "PublicationDate_xml": [
+        {
+          "text": "Nov 2011",
+          "month": "11",
+          "year": "2011"
+        }
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "COPYRIGHT 2011 Springer"
+        }
+      ],
+      "Publisher": [
+        "Springer"
+      ],
+      "SourceType": [
+        "Aggregation Database"
+      ],
+      "Publisher_xml": [
+        {
+          "name": "Springer"
+        }
+      ],
+      "IsScholarly": [
+        "true"
+      ],
+      "ID": [
+        "FETCH-gale_primary_2690327651"
+      ],
+      "PublicationTitle": [
+        "Journal of General Internal Medicine"
+      ],
+      "Issue": [
+        "11"
+      ],
+      "Discipline": [
+        "Medicine"
+      ],
+      "PublicationYear": [
+        "2011"
+      ],
+      "Audience": [
+        "Academic"
+      ],
+      "EISSN": [
+        "1525-1497"
+      ],
+      "MergedId": [
+        "FETCHMERGED-gale_primary_2690327651"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "fullname": "Green, Ariel Frank"
+        }
+      ],
+      "PublicationDecade": [
+        "2010"
+      ],
+      "ContentType": [
+        "Journal Article"
+      ],
+      "Title": [
+        "*History*"
+      ],
+      "ISSN": [
+        "0884-8734"
+      ],
+      "ExternalDocumentID": [
+        "269032765"
+      ],
+      "SSID": [
+        "ssj0013228"
+      ],
+      "StartPage": [
+        "1383"
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "inHoldings": true,
+      "openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=History&rft.jtitle=Journal+of+general+internal+medicine&rft.au=Green%2C+Ariel+Frank&rft.date=2011-11-01&rft.volume=26&rft.issue=11&rft.spage=1383&rft_id=info:pmid/21499830&rft.externalDocID=21499830",
+      "link": "http://princeton.summon.serialssolutions.com/link/0/eLvHCXMwY2DQQCsPckryC3ITgW2gTNCuOVAJrQuavtEFdRadIk1AK339TJx5EIWYmyiDnJtriLOHLqROiC-AHLwQbwRszltaAJOkGAMLsHOcCgAm3Rx5",
+      "Volume": [
+        "26"
+      ],
+      "Language": [
+        "English"
+      ],
+      "Author": [
+        "Green, Ariel Frank"
+      ],
+      "PublicationPlace": [
+        "United States"
+      ],
+      "AuthorAffiliation_xml": [
+        {
+          "name": "Johns Hopkins Bayview Medical Center, Baltimore, MD 21224, USA. afrank2@jhmi.edu"
+        }
+      ],
+      "Score": [
+        "4.1349907"
+      ],
+      "IsPeerReviewed": [
+        "true"
+      ],
+      "PublicationDate": [
+        "2011-Nov"
+      ],
+      "PublicationDate_xml": [
+        {
+          "text": "2011-Nov",
+          "month": "11",
+          "year": "2011"
+        }
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "SourceType": [
+        "Publisher"
+      ],
+      "PublicationTitleAlternate": [
+        "J Gen Intern Med"
+      ],
+      "URI": [
+        "http://www.ncbi.nlm.nih.gov/pubmed/21499830"
+      ],
+      "IsScholarly": [
+        "true"
+      ],
+      "ID": [
+        "FETCH-pubmed_primary_214998301"
+      ],
+      "PMID": [
+        "21499830"
+      ],
+      "PublicationTitle": [
+        "Journal of general internal medicine"
+      ],
+      "Issue": [
+        "11"
+      ],
+      "Discipline": [
+        "Medicine"
+      ],
+      "PublicationYear": [
+        "2011"
+      ],
+      "Genre": [
+        "Journal Article"
+      ],
+      "AuthorAffiliation": [
+        "Johns Hopkins Bayview Medical Center, Baltimore, MD 21224, USA. afrank2@jhmi.edu"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "United States"
+        }
+      ],
+      "EISSN": [
+        "1525-1497"
+      ],
+      "MergedId": [
+        "FETCHMERGED-pubmed_primary_214998301"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "givenname": "Ariel Frank",
+          "surname": "Green",
+          "fullname": "Green, Ariel Frank"
+        }
+      ],
+      "PublicationDecade": [
+        "2010"
+      ],
+      "ContentType": [
+        "Journal Article"
+      ],
+      "Title": [
+        "*History*"
+      ],
+      "ExternalDocumentID": [
+        "21499830"
+      ],
+      "SSID": [
+        "ssj0013228"
+      ],
+      "StartPage": [
+        "1383"
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "inHoldings": true,
+      "openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=History&rft.jtitle=Journal+of+General+Internal+Medicine&rft.au=Green%2C+Ariel+Frank&rft.date=2011-11-01&rft.issn=0884-8734&rft.volume=26&rft.issue=11&rft.spage=1383&rft.epage=1383&rft_id=info:doi/10.1007%2Fs11606-011-1700-2&rft.externalDBID=n%2Fa&rft.externalDocID=10_1007_s11606_011_1700_2",
+      "link": "http://princeton.summon.serialssolutions.com/link/0/eLvHCXMwY2DQQCsPckryC3ITgW2gTNCuOVAJrQuavtEFdRadIk1AK339TJx5EIWZmyiDoZtriLOHLqymiC-AHL0Qjzhk19AMtCAL2HoFHTAXb2QoxsAC7C-nAgCN0CHU",
+      "DatabaseTitle": [
+        "CrossRef"
+      ],
+      "Volume": [
+        "26"
+      ],
+      "Language": [
+        "English"
+      ],
+      "Author": [
+        "Green, Ariel Frank"
+      ],
+      "Score": [
+        "4.1349907"
+      ],
+      "DOI": [
+        "10.1007/s11606-011-1700-2"
+      ],
+      "IsPeerReviewed": [
+        "true"
+      ],
+      "PublicationDate": [
+        "20111100"
+      ],
+      "PublicationDate_xml": [
+        {
+          "text": "20111100",
+          "month": "11",
+          "year": "2011"
+        }
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "SourceType": [
+        "Aggregation Database"
+      ],
+      "IsScholarly": [
+        "true"
+      ],
+      "ID": [
+        "FETCH-crossref_primary_10_1007_s11606_011_1700_21"
+      ],
+      "PublicationTitle": [
+        "Journal of General Internal Medicine"
+      ],
+      "Issue": [
+        "11"
+      ],
+      "Discipline": [
+        "Medicine"
+      ],
+      "PublicationYear": [
+        "2011"
+      ],
+      "EISSN": [
+        "1525-1497"
+      ],
+      "MergedId": [
+        "FETCHMERGED-crossref_primary_10_1007_s11606_011_1700_21"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "givenname": "Ariel Frank",
+          "surname": "Green",
+          "fullname": "Green, Ariel Frank"
+        }
+      ],
+      "PublicationDecade": [
+        "2010"
+      ],
+      "ContentType": [
+        "Journal Article"
+      ],
+      "Title": [
+        "*History*"
+      ],
+      "ExternalDocumentID": [
+        "10_1007_s11606_011_1700_2"
+      ],
+      "ISSN": [
+        "0884-8734"
+      ],
+      "SSID": [
+        "ssj0013228"
+      ],
+      "StartPage": [
+        "1383"
+      ],
+      "EndPage": [
+        "1383"
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "inHoldings": true,
+      "openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=History&rft.jtitle=Literary+Imagination&rft.au=Collier%2C+M&rft.date=2011-07-01&rft.issn=1523-9012&rft.volume=13&rft.issue=2&rft.spage=108&rft.epage=111&rft_id=info:doi/10.1093%2Flitimag%2Fimr072&rft.externalDBID=n%2Fa&rft.externalDocID=10_1093_litimag_imr072",
+      "link": "http://princeton.summon.serialssolutions.com/link/0/eLvHCXMwY2DQQCsPckryC3ITgW2gTNCuOVAJrQuavtEFdRadIk1AK339TJx5EIWamyiDnptriLOHLqymiC-AHL0QD5kyNY4HLQ3LTUyPz8wtAh3wJcbAAuwspwIAR4wi5A",
+      "DatabaseTitle": [
+        "CrossRef"
+      ],
+      "Volume": [
+        "13"
+      ],
+      "Language": [
+        "English"
+      ],
+      "Author": [
+        "Collier, M"
+      ],
+      "Score": [
+        "4.1121125"
+      ],
+      "DOI": [
+        "10.1093/litimag/imr072"
+      ],
+      "IsPeerReviewed": [
+        "false"
+      ],
+      "PublicationDate": [
+        "20110701"
+      ],
+      "PublicationDate_xml": [
+        {
+          "text": "20110701",
+          "month": "07",
+          "year": "2011",
+          "day": "01"
+        }
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "SourceType": [
+        "Aggregation Database"
+      ],
+      "IsScholarly": [
+        "true"
+      ],
+      "ID": [
+        "FETCH-crossref_primary_10_1093_litimag_imr0721"
+      ],
+      "PublicationTitle": [
+        "Literary Imagination"
+      ],
+      "Issue": [
+        "2"
+      ],
+      "Discipline": [
+        "Languages & Literatures"
+      ],
+      "PublicationYear": [
+        "2011"
+      ],
+      "EISSN": [
+        "1752-6566"
+      ],
+      "MergedId": [
+        "FETCHMERGED-crossref_primary_10_1093_litimag_imr0721"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "givenname": "M",
+          "surname": "Collier",
+          "fullname": "Collier, M"
+        }
+      ],
+      "PublicationDecade": [
+        "2010"
+      ],
+      "ContentType": [
+        "Journal Article"
+      ],
+      "Title": [
+        "*History*"
+      ],
+      "ExternalDocumentID": [
+        "10_1093_litimag_imr072"
+      ],
+      "ISSN": [
+        "1523-9012"
+      ],
+      "SSID": [
+        "ssj0054879"
+      ],
+      "StartPage": [
+        "108"
+      ],
+      "EndPage": [
+        "111"
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "inHoldings": true,
+      "openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=History&rft.jtitle=Michigan+Academician&rft.date=2012-01-01&rft.pub=Michigan+Academy+of+Science+Arts+%26+Letters&rft.issn=0026-2005&rft.volume=40&rft.issue=3&rft.spage=270&rft.externalDBID=n%2Fa&rft.externalDocID=307672171",
+      "link": "http://princeton.summon.serialssolutions.com/link/0/eLvHCXMwY2DQQCsPckryC3ITgW2gTNCuOVAJrQuavtEFdRadIk1AK339TJx5EIWbmyiDrJtriLOHLqiQjC-AHLsQD0yNZsD-irmhoRgDC7BvnAoAAf0bxQ",
+      "Volume": [
+        "40"
+      ],
+      "Language": [
+        "English"
+      ],
+      "Score": [
+        "4.0851808"
+      ],
+      "PageCount": [
+        "10"
+      ],
+      "Copyright": [
+        "COPYRIGHT 2012 Michigan Academy of Science Arts & Letters"
+      ],
+      "IsPeerReviewed": [
+        "true"
+      ],
+      "PublicationDate_xml": [
+        {
+          "text": "Fall 2012",
+          "year": "2012"
+        }
+      ],
+      "PublicationDate": [
+        "Fall 2012"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "COPYRIGHT 2012 Michigan Academy of Science Arts & Letters"
+        }
+      ],
+      "Publisher": [
+        "Michigan Academy of Science Arts & Letters"
+      ],
+      "SourceType": [
+        "Aggregation Database"
+      ],
+      "Publisher_xml": [
+        {
+          "name": "Michigan Academy of Science Arts & Letters"
+        }
+      ],
+      "Snippet": [
+        "... on *history*. Several pivotal events are particularly resistant to explanation, such as Alexander's decisions to destroy utterly the city of Thebes, to burn Persepolis..."
+      ],
+      "GeographicLocations": [
+        "United States"
+      ],
+      "IsScholarly": [
+        "true"
+      ],
+      "ID": [
+        "FETCH-gale_primary_3076721711"
+      ],
+      "GeographicLocations_xml": [
+        {
+          "name": "United States"
+        }
+      ],
+      "PublicationTitle": [
+        "Michigan Academician"
+      ],
+      "Issue": [
+        "3"
+      ],
+      "Discipline": [
+        "Visual Arts",
+        "Sciences (General)"
+      ],
+      "PublicationYear": [
+        "2012"
+      ],
+      "Audience": [
+        "Academic"
+      ],
+      "EISSN": [
+        "2167-8634"
+      ],
+      "SubjectTerms": [
+        "Public relations",
+        "Portrayals",
+        "Analysis",
+        "Conquerors",
+        "Women",
+        "Study and teaching",
+        "Feminism",
+        "Criticism and interpretation",
+        "Historians",
+        "Social aspects",
+        "Emperors"
+      ],
+      "MergedId": [
+        "FETCHMERGED-gale_primary_3076721711"
+      ],
+      "PublicationDecade": [
+        "2010"
+      ],
+      "ContentType": [
+        "Journal Article"
+      ],
+      "Title": [
+        "*History*"
+      ],
+      "ExternalDocumentID": [
+        "307672171"
+      ],
+      "ISSN": [
+        "0026-2005"
+      ],
+      "SSID": [
+        "ssj0005023"
+      ],
+      "StartPage": [
+        "270"
+      ]
+    },
+    {
+      "hasFullText": true,
+      "isFullTextHit": false,
+      "inHoldings": true,
+      "openUrl": "ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=History&rft.jtitle=Colorado+Review%3A+a+journal+of+contemporary+literature&rft.au=Semonovitch%2C+Kascha&rft.date=2011-01-01&rft.pub=Colorado+State+University&rft.issn=1046-3348&rft.volume=38&rft.issue=2&rft.spage=136&rft.externalDBID=n%2Fa&rft.externalDocID=286558483",
+      "link": "http://princeton.summon.serialssolutions.com/link/0/eLvHCXMwY2DQQCsPckryC3ITgW2gTNCuOVAJrQuavtEFdRadIk1AK339TJyRC0A3UQZZN9cQZw9dUCkZXwA5dyEevInSwsTC2FCMgQXYOU4FABo-G_0",
+      "Volume": [
+        "38"
+      ],
+      "Language": [
+        "English"
+      ],
+      "Author": [
+        "Semonovitch, Kascha"
+      ],
+      "Score": [
+        "4.082496"
+      ],
+      "PageCount": [
+        "1"
+      ],
+      "Copyright": [
+        "COPYRIGHT 2011 Colorado State University"
+      ],
+      "IsPeerReviewed": [
+        "false"
+      ],
+      "PublicationDate": [
+        "Summer 2011"
+      ],
+      "PublicationDate_xml": [
+        {
+          "text": "Summer 2011",
+          "year": "2011"
+        }
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "COPYRIGHT 2011 Colorado State University"
+        }
+      ],
+      "Publisher": [
+        "Colorado State University"
+      ],
+      "SourceType": [
+        "Aggregation Database"
+      ],
+      "Publisher_xml": [
+        {
+          "name": "Colorado State University"
+        }
+      ],
+      "Snippet": [
+        "...*HISTORY* (III) If you didn't want anyone You wouldn't know the first thing About *history* Which requires first and foremost Someone wanting someone Or something..."
+      ],
+      "IsScholarly": [
+        "true"
+      ],
+      "ID": [
+        "FETCH-gale_primary_2865584831"
+      ],
+      "PublicationTitle": [
+        "Colorado Review: a journal of contemporary literature"
+      ],
+      "Issue": [
+        "2"
+      ],
+      "Discipline": [
+        "Languages & Literatures"
+      ],
+      "PublicationYear": [
+        "2011"
+      ],
+      "Audience": [
+        "Professional"
+      ],
+      "MergedId": [
+        "FETCHMERGED-gale_primary_2865584831"
+      ],
+      "Author_xml": [
+        {
+          "sequence": "1",
+          "fullname": "Semonovitch, Kascha"
+        }
+      ],
+      "PublicationDecade": [
+        "2010"
+      ],
+      "ContentType": [
+        "Journal Article"
+      ],
+      "Title": [
+        "*History*"
+      ],
+      "ISSN": [
+        "1046-3348"
+      ],
+      "ExternalDocumentID": [
+        "286558483"
+      ],
+      "SSID": [
+        "ssj0040561"
+      ],
+      "StartPage": [
+        "136"
+      ]
+    }
+  ],
+  "spotlights": [
+
+  ],
+  "spotlightPosition": 0
+}

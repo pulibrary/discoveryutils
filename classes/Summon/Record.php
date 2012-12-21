@@ -39,4 +39,16 @@ Class Record
     return isset($this->record_fields[$name]);
   }
   
+  public function getFormattedDate() {
+      if(isset($this->record_fields['PublicationDate_xml'])) {
+        
+      }
+  }
+  
+  public function getFormattedAuthor() {
+    if(isset($this->record_fields['Author_xml'])) {
+      
+    }
+  }
+  
 }
