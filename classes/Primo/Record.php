@@ -330,9 +330,14 @@ Class Record
     foreach($holdings_list as $holding) {
       $current_holding = new PrimoHolding($holding->textContent); 
       $request_link = $this->primo_server_connection['record.request.base'] . "?" . "bib=" . $this->getRecordID() . "&loc=" . $current_holding->location_code;
+      if(isset($this->primo_server_connection['available.scopes'][$current_holding->primo_library]['name'])) {
+        $library_label = $this->primo_server_connection['available.scopes'][$current_holding->primo_library]['name'];
+      } else {
+        $library_label = "unknown";
+      }
       array_push( $holdings_locations, array($current_holding->primo_library => array(
         'location_code' => $current_holding->location_code,
-        'library_label' => $this->primo_server_connection['available.scopes'][$current_holding->primo_library]['name'],
+        'library_label' => $library_label,
         'request_link' =>  $request_link,
           ),
         )
