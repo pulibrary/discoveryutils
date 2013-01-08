@@ -1,7 +1,7 @@
 <?php
 namespace Primo;
 use Primo\Document as PrimoDocument;
-use Primo\Parser as XmlParser;
+use Utilities\Parser as XmlParser;
 use Primo\PermaLink as Permalink;
 use Primo\SearchDeepLink as SearchDeepLink;
 use Primo\Holding as PrimoHolding;

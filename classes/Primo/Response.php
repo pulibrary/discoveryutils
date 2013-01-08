@@ -2,7 +2,7 @@
 namespace Primo;
 use Primo\RecordParser as PrimoRecordParser,
     Primo\PrimoRecord as PrimoRecord,
-    Primo\Parser as XmlParser;
+    Utilities\Parser as XmlParser;
 
 class Response
 {
