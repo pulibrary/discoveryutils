@@ -64,7 +64,7 @@ $app['summon.connection'] = Yaml::parse(__DIR__.'/../conf/summon.yml');
 $app['pulfa'] = array(
   'host' => "http://findingaids.princeton.edu",
   'base' => "/collections.xml?",
-  'num.records.brief.display' => 3,
+  'num.records.brief.display' => 2,
 );
 
 $app['locator.base'] = "http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php";
@@ -463,10 +463,12 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
     $response_data['number'] = count($response_data['recommendations']);
   } else {
     $summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:t)"); //FIXME this shoudl default to exclude and retain filter to remove newspapers
+    $summon_client->addFilter("IsScholarly,true");
     $summon_data = new SummonResponse($summon_client->query($query, 1, $result_size)); 
     //print_r($summon_data);
     $summon_full_search_link = new SummonQuery($query, array(
-      "s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t)",      
+      //"s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t),s.fvf[]=IsScholarly,true,f",      
+      "s.cmd" => "addFacetValueFilters(IsScholarly,true)&s.fvf=ContentType,Newspaper+Article,t",
       "keep_r" => "true" )
     );
     $response_data = array(
