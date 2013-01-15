@@ -53,7 +53,7 @@ $app['primo_server_connection'] = array(
   'default_pnx_source_id' => 'PRN_VOYAGER',
   'default.scope' => array("OTHERS","FIRE"),
   'default.search' => "contains",
-  'num.records.brief.display' => 10,
+  'num.records.brief.display' => 5,
   'available.scopes' => $library_scopes,
   'record.request.base' => "http://libwebprod.princeton.edu/requests",
 );
@@ -64,6 +64,12 @@ $app['summon.connection'] = Yaml::parse(__DIR__.'/../conf/summon.yml');
 $app['pulfa'] = array(
   'host' => "http://findingaids.princeton.edu",
   'base' => "/collections.xml?",
+  'num.records.brief.display' => 3,
+);
+
+$app['pudl'] = array(
+  'host' => "http://pudl.princeton.edu",
+  'base' => "/pudl/Objects?",
   'num.records.brief.display' => 3,
 );
 
@@ -410,6 +416,36 @@ $app->get('/pulfa/{index_type}', function($index_type) use($app) {
   $app['monolog']->addInfo("Pulfa Query:" . $query . "\tREFERER:" . $referer);
   return new Response(json_encode($brief_response), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
 })->assert('index_type', '(title|any|creator)'); 
+
+
+$app->get('/pudl/{index_type}', function($index_type) use($app) {
+  if($app['request']->get('query')) {
+    $query = $app['request']->get('query');
+  } else {
+    return "No Query Supplied";
+  }
+  
+  if($app['request']->get('number')) {
+    $result_size = $app['request']->get('number');
+  } else {
+    $result_size = $app['pudl']['num.records.brief.display'];
+  }
+  if($app['request']->server->get('HTTP_REFERER')) { //should not be repeated moved out to utilities class
+    $referer = $app['request']->server->get('HTTP_REFERER');
+  } else {
+    $referer = "Direct Query";
+  }
+  
+  $pudl = new \Pulfa\Pulfa($app['pudl']['host'], $app['pudl']['base']);
+  $pudl_response_data = $pulfa->query($query, 0, $result_size);
+  $pudl_response = new PulfaResponse($pulfa_response_data, $query);
+  $brief_response = $pudl_response->getBriefResponse();
+  $brief_response['query'] = $app->escape($query);
+  
+  $app['monolog']->addInfo("Pudl Query:" . $query . "\tREFERER:" . $referer);
+  return new Response(json_encode($brief_response), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
+})->assert('index_type', '(title|any|creator)'); 
+
  
 /*
  * Route to direct queries to Summon API
@@ -462,12 +498,17 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
     $response_data['recommendations'] = $summon_data->getRecommendations();
     $response_data['number'] = count($response_data['recommendations']);
   } else {
-    $summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:t)"); //FIXME this shoudl default to exclude and retain filter to remove newspapers
+    //$summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:t)"); //FIXME this shoudl default to exclude and retain filter to remove newspapers
+    $summon_client->addFilter("IsScholarly,true");
     $summon_data = new SummonResponse($summon_client->query($query, 1, $result_size)); 
     //print_r($summon_data);
     $summon_full_search_link = new SummonQuery($query, array(
-      "s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t)",      
-      "keep_r" => "true" )
+      //"s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t)",      
+      "s.fvf" => "IsScholarly,true",
+      "keep_r" => "true",
+      "s.dym" => "t",
+      "s.ho" => "t"
+      )
     );
     $response_data = array(
       'query' => $app->escape($query),
