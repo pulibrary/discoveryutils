@@ -583,7 +583,7 @@ Class Record
   
   public function getToc() {
     $toc = $this->getElements('toc');
-
+    
     if($toc->length > 0) {
       $toc_string = $toc->item(0);
       return $toc_string->nodeValue;
@@ -598,6 +598,17 @@ Class Record
     if($description->length > 0) {
       $desc_string = $description->item(0);
       return $desc_string->nodeValue;
+    } else {
+      return NULL;
+    }
+  }
+  
+   public function getNotes() {
+    $notes = $this->getElements('notes');
+
+    if($notes->length > 0) {
+      $notes_string = $notes->item(0);
+      return $notes_string->nodeValue;
     } else {
       return NULL;
     }
