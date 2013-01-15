@@ -53,7 +53,7 @@ $app['primo_server_connection'] = array(
   'default_pnx_source_id' => 'PRN_VOYAGER',
   'default.scope' => array("OTHERS","FIRE"),
   'default.search' => "contains",
-  'num.records.brief.display' => 10,
+  'num.records.brief.display' => 5,
   'available.scopes' => $library_scopes,
   'record.request.base' => "http://libwebprod.princeton.edu/requests",
 );
@@ -462,14 +462,18 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
     $response_data['recommendations'] = $summon_data->getRecommendations();
     $response_data['number'] = count($response_data['recommendations']);
   } else {
-    $summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:t)"); //FIXME this shoudl default to exclude and retain filter to remove newspapers
+    //$summon_client->addCommandFilter("addFacetValueFilters(IsScholarly,true)"); //addFacetValueFilters(ContentType,Newspaper+Article:t)"); FIXME this shoudl default to exclude and retain filter to remove newspapers
     $summon_client->addFilter("IsScholarly,true");
     $summon_data = new SummonResponse($summon_client->query($query, 1, $result_size)); 
     //print_r($summon_data);
     $summon_full_search_link = new SummonQuery($query, array(
       //"s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t),s.fvf[]=IsScholarly,true,f",      
-      "s.cmd" => "addFacetValueFilters(IsScholarly,true)&s.fvf=ContentType,Newspaper+Article,t",
-      "keep_r" => "true" )
+      //"s.cmd" => "addFacetValueFilters(IsScholarly,true)", //&s.fvf=ContentType,Newspaper+Article,t",
+      "s.fvf" => "IsScholarly,true",
+      "keep_r" => "true",
+      "s.dym" => "t",
+      "s.ho" => "t"
+      )
     );
     $response_data = array(
       'query' => $app->escape($query),
