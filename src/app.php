@@ -71,7 +71,7 @@ $app['pulfa'] = array(
 
 $app['pudl'] = array(
   'host' => "http://pudl.princeton.edu",
-  'base' => "/pudl/Objects?",
+  'base' => "/pudl/Objects",
   'num.records.brief.display' => 3,
 );
 
@@ -439,7 +439,7 @@ $app->get('/pudl/{index_type}', function($index_type) use($app) {
   }
   
   $pudl = new \Pudl\Pudl($app['pudl']['host'], $app['pudl']['base']);
-  $pudl_response_data = $pulfa->query($query);
+  $pudl_response_data = $pudl->query($query);
   $pudl_response = new PulfaResponse($pulfa_response_data, $query);
   $brief_response = $pudl_response->getBriefResponse();
   $brief_response['query'] = $app->escape($query);
