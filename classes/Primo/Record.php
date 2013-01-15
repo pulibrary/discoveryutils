@@ -372,10 +372,6 @@ Class Record
     //FIXME return subject headings associated with the documents
   }
   
-  public function getNotes() {
-    //FIXME get notes attached to document 
-  }
-  
   public function getRisType() {
     return $this->getElements("ristype");
   }
