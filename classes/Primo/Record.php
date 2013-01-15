@@ -555,12 +555,45 @@ Class Record
       $date = $creation_date->item(0);
       return $date->nodeValue;
     } else {
-      return FALSE;
+      return NULL;
     }
     
   }
   
-  public function getStdNums() {
+  public function getCreator() {
+    $creator = $this->getElements('creator');
+
+    if($creator->length > 0) {
+      $creator_string = $creator->item(0);
+      return $creator_string->nodeValue;
+    } else {
+      return NULL;
+    }
+  }
+  
+  public function getToc() {
+    $toc = $this->getElements('toc');
+
+    if($toc->length > 0) {
+      $toc_string = $toc->item(0);
+      return $toc_string->nodeValue;
+    } else {
+      return NULL;
+    }
+  }
+  
+  public function getDescription() {
+    $description = $this->getElements('description');
+
+    if($description->length > 0) {
+      $desc_string = $description->item(0);
+      return $desc_string->nodeValue;
+    } else {
+      return NULL;
+    }
+  }
+  
+  public function getISXN() {
     //ADDME returns standard numbers (ISSN/ISBN associated with the record)
   }
   
