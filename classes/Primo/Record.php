@@ -526,16 +526,26 @@ Class Record
     //if($this->getFullTextLinktoSrc()) {
     //  $resource_link = $this->getFullTextLinktoSrc();
     //} else {
+    $resource_link = "";
+    if($this->isDedup()) { //FIXME Should get First Source ID 
       $deep_link = new PermaLink($this->getRecordID(), $this->primo_server_connection);
       $resource_link = $deep_link->getLink();
     //}
-    
+    } else {
+      $deep_search = new SearchDeepLink($this->getRecordID(), "any", "contains", $this->primo_server_connection);
+    }
     return $resource_link;
     
   }
   
   
-  
+  public function isDedup() {
+    if(strstr('dedup', $this->getRecordID())) {
+      return TRUE;
+    } else {
+      return FALSE;
+    }
+  }
   
   public function hasFullText() {
     
