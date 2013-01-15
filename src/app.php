@@ -20,6 +20,8 @@ use Summon\Summon,
     Summon\Response as SummonResponse;
 use Pulfa\Pulfa,
     Pulfa\Response as PulfaResponse;
+use Pudl\Pudl,
+    Puld\PudlResponse as PudlResponse;
 
 $app = new Silex\Application(); 
 
@@ -436,8 +438,8 @@ $app->get('/pudl/{index_type}', function($index_type) use($app) {
     $referer = "Direct Query";
   }
   
-  $pudl = new \Pulfa\Pulfa($app['pudl']['host'], $app['pudl']['base']);
-  $pudl_response_data = $pulfa->query($query, 0, $result_size);
+  $pudl = new \Pudl\Pudl($app['pudl']['host'], $app['pudl']['base']);
+  $pudl_response_data = $pulfa->query($query);
   $pudl_response = new PulfaResponse($pulfa_response_data, $query);
   $brief_response = $pudl_response->getBriefResponse();
   $brief_response['query'] = $app->escape($query);

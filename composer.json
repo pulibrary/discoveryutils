@@ -17,7 +17,8 @@
       "Primo": "classes/",
       "Summon" : "classes/",
       "Pulfa" : "classes/",
-      "Utilities": "classes/"
+      "Utilities": "classes/",
+      "Pudl" : "classes/"
     }
   },
   "minimum-stability": "dev"
