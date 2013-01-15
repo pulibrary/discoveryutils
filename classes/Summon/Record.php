@@ -40,14 +40,45 @@ Class Record
   }
   
   public function getFormattedDate() {
-      if(isset($this->record_fields['PublicationDate_xml'])) {
-        
+      $date = array();
+     
+      if(isset($this->record_fields['Volume'])) {
+        $date[] =  $this->record_fields['Volume'][0]; 
+      } 
+      if(isset($this->record_fields['Issue'])) {
+        $date[] = " (" . $this->record_fields['Issue'][0] . "), ";
       }
+      if(isset($this->record_fields['PublicationYear'])) {
+        $date[] = $this->record_fields['PublicationYear'][0];
+      }
+      if(isset($this->record_fields['StartPage'])) {
+        $date[] = " pp. " . $this->record_fields['StartPage'][0];
+      }
+      if(isset($this->record_fields['EndPage'])) {
+        // if first and last page are equal only show the first one. 
+        if($this->record_fields['StartPage'][0] != $this->record_fields['EndPage'][0]) { 
+          $date[] = "-" . $this->record_fields['EndPage'][0];
+        }
+      }
+      return implode("", $date);
+  }
+  
+  
+  
+  public function getISXN() {
+    if(isset($this->record_fields['ISSN'])) {
+      return $this->record_fields['ISSN'];  
+    } elseif(isset($this->record_fields['ISBN'])) {
+      return $this->record_fields['ISBN'];  
+    } else {
+      return NULL;
+    }
   }
   
   public function getFormattedAuthor() {
     if(isset($this->record_fields['Author_xml'])) {
-      
+      //print_r($this->record_fields['Author_xml']);
+      return $this->record_fields['Author_xml'][0]['fullname'];  
     }
   }
   

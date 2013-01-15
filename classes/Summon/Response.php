@@ -41,10 +41,12 @@ class Response
         'abstract' => $record->Abstract,
         'fulltextavail' => $record->hasFullText,
         'publication_date' => $record->PublicationDate[0],
-        'snippet' => $record->Snippet[0],
+        'snippet' => $record->Snippet,
         'publication_title' => $record->PublicationTitle[0],
         'publication_year' => $record->PublicationYear[0],
-        'author' => $record->Author[0],
+        'formatted_pub_date' => $record->getFormattedDate(),
+        'author' => $record->getFormattedAuthor(),
+        'isxn' => $record->getISXN(),
       );
       array_push($brief_result_set, $brief_result);
     }
