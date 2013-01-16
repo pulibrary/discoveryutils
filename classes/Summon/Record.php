@@ -49,10 +49,14 @@ Class Record
         $date[] = "No. " . $this->record_fields['Issue'][0] . ",";
       }
       if(isset($this->record_fields['PublicationYear'])) {
-        $date[] = $this->record_fields['PublicationYear'][0];
+        $padding = "";
+        if(isset($this->record_fields['StartPage'])) {
+          $padding = ",";
+        }
+        $date[] = $this->record_fields['PublicationYear'][0] . $padding;
       }
       if(isset($this->record_fields['StartPage'])) {
-        $date[] = ", pp." . $this->record_fields['StartPage'][0];
+        $date[] = "pp." . $this->record_fields['StartPage'][0];
       }
       if(isset($this->record_fields['EndPage'])) {
         // if first and last page are equal only show the first one. 
