@@ -611,8 +611,23 @@ Class Record
     }
   }
   
+  public function getPublisher() {
+    $publisher = $this->getElements('publisher');
+
+    if($publisher->length > 0) {
+      $publisher_string = $publisher->item(0);
+      return $publisher_string->nodeValue;
+    } else {
+      return NULL;
+    }
+  }
+  
   public function getISXN() {
     //ADDME returns standard numbers (ISSN/ISBN associated with the record)
+    //$isbn = $this->getElements('isbn');
+    //$issn = $this->getElements('issn');
+    
+    
   }
   
   /*

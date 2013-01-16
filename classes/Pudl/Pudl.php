@@ -30,8 +30,9 @@ class Pudl
     }
     else 
     {
-      $this->http_client = new \Guzzle\Http\Client($this->host . $this->base_url);
+      $this->http_client = new \Guzzle\Http\Client($this->host);
     }
+    
   }
   
   public function query($string) {
@@ -42,10 +43,22 @@ class Pudl
   }
   
   private function send($querystring) {
-    $response = $this->http_client->get("?" . $querystring)->send();
+    // Could not get Guzzle client to get a return value
+    // recieved this error 
+    //$response = $this->http_client->get($this->base_url . "?" . $querystring)->send();
+    //return file_get_contents($this->host . $this->base_url . "?" . $querystring)->send();
+    $request_url = $this->host . $this->base_url . "?" . $querystring;
+    $ch = curl_init();
+    $headers = array('Accept: application/xml');
+    curl_setopt($ch, CURLOPT_URL, $request_url);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER , 1);
+    $response = curl_exec($ch);
+    //return (string)$response->getBody();
+    curl_close($ch);
     
-    return (string)$response->getBody();
-     
+    return $response;
   }
   
 }

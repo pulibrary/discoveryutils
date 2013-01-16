@@ -65,6 +65,7 @@ class Response
         'toc' => $primo_record->getToc(),
         'description' => $primo_record->getDescription(),
         'notes' => $primo_record->getNotes(),
+        'publisher' => $primo_record->getPublisher(),
       );
       array_push($brief_result_set, $brief_result);
     }

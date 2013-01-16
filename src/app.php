@@ -21,7 +21,7 @@ use Summon\Summon,
 use Pulfa\Pulfa,
     Pulfa\Response as PulfaResponse;
 use Pudl\Pudl,
-    Puld\PudlResponse as PudlResponse;
+    Pudl\Response as PudlResponse;
 
 $app = new Silex\Application(); 
 
@@ -440,13 +440,15 @@ $app->get('/pudl/{index_type}', function($index_type) use($app) {
   
   $pudl = new \Pudl\Pudl($app['pudl']['host'], $app['pudl']['base']);
   $pudl_response_data = $pudl->query($query);
-  $pudl_response = new PulfaResponse($pulfa_response_data, $query);
-  $brief_response = $pudl_response->getBriefResponse();
+  $pudl_response = new PudlResponse($pulfa_response_data);
+  //$brief_response = $pudl_response->getBriefResponse();
   $brief_response['query'] = $app->escape($query);
   
   $app['monolog']->addInfo("Pudl Query:" . $query . "\tREFERER:" . $referer);
   return new Response(json_encode($brief_response), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
-})->assert('index_type', '(title|any|creator)'); 
+  //return new Response($pudl_response_data, 200, array('Content-Type' => 'application/xml'));
+  //return $pudl_response_data;
+})->assert('index_type', '(any)'); 
 
  
 /*
