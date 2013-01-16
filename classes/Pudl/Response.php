@@ -25,7 +25,13 @@ class Response
     $response = array();
     $response['number'] = $this->hits;
     $response['more'] = $this->more . $this->query;
-    $response['records'] = $this->records;
+    // get a slice of records 
+    if($this->hits > 3) {
+      $brief_record_list = array_slice($this->records, 0, 3); //FIXME should come from conf settings. Return only 3 for now
+    } else {
+      $brief_record_list = $this->records;
+    }
+    $response['records'] = $brief_record_list;
     return $response;
   }
   
