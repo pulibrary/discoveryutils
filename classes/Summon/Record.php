@@ -43,16 +43,16 @@ Class Record
       $date = array();
      
       if(isset($this->record_fields['Volume'])) {
-        $date[] =  $this->record_fields['Volume'][0]; 
+        $date[] =  "Vol. " . $this->record_fields['Volume'][0] . ","; 
       } 
       if(isset($this->record_fields['Issue'])) {
-        $date[] = " (" . $this->record_fields['Issue'][0] . "), ";
+        $date[] = "No. " . $this->record_fields['Issue'][0] . ",";
       }
       if(isset($this->record_fields['PublicationYear'])) {
         $date[] = $this->record_fields['PublicationYear'][0];
       }
       if(isset($this->record_fields['StartPage'])) {
-        $date[] = " pp. " . $this->record_fields['StartPage'][0];
+        $date[] = ", pp." . $this->record_fields['StartPage'][0];
       }
       if(isset($this->record_fields['EndPage'])) {
         // if first and last page are equal only show the first one. 
