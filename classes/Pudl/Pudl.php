@@ -39,7 +39,8 @@ class Pudl
     $query = array();
     $query['v1'] = $string;
     $querystring = http_build_query($query);
-    return $this->send($querystring);
+    $response = $this->send($querystring);
+    return $response;
   }
   
   private function send($querystring) {
@@ -57,7 +58,7 @@ class Pudl
     $response = curl_exec($ch);
     //return (string)$response->getBody();
     curl_close($ch);
-    
+
     return $response;
   }
   

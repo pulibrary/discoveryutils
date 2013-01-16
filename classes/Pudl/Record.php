@@ -1,6 +1,7 @@
 <?php
 
 namespace Pudl;
+use Pudl\Link as PudlLink;
 use Symfony\Component\DomCrawler\Crawler as DomCrawler;
 
 
@@ -35,6 +36,7 @@ class Record
       "type" => $this->pudl_type,
       "collection" => $this->pudl_collection,
       "origin" => $this->pudl_origin,
+      "url" => PudlLink::getLink($this->pudl_id),
      // "contributor" => $this->pudl_contributor
     );
   }

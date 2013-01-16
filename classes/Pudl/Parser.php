@@ -14,9 +14,8 @@ class Parser
   
   function __construct($xml) {
     $this->crawler = new DomCrawler($xml);
-    $root_element = $this->crawler->filter('Object')->first()->attr('total');//filter('Objects')->first()->attr('total');
-    $this->hits = $root_element;
     $this->records = $this->loadRecords();
+    $this->hits = count($this->records);
   }
  
   public function getHits() {
