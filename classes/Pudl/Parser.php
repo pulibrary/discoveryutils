@@ -14,7 +14,8 @@ class Parser
   
   function __construct($xml) {
     $this->crawler = new DomCrawler($xml);
-    //$this->hits = $this->crawler->filter('Objects')->first()->attr('total');
+    $root_element = $this->crawler->filter('Object')->first()->attr('total');//filter('Objects')->first()->attr('total');
+    $this->hits = $root_element;
     $this->records = $this->loadRecords();
   }
  
@@ -26,9 +27,9 @@ class Parser
   
   private function loadRecords() {
     /* closure returns an array of records */
-    $records = $this->crawler->filter('Object')->each(function ($node, $i) {
+    $records = $this->crawler->filter('Objects Object')->each(function ($node, $i) {
       $record = new PudlRecord($node);  
-      return $record->getRecords();
+      return $record->getRecordData();
     });
   
     return $records;

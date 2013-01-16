@@ -24,6 +24,10 @@ class PudlResponseTest extends \PHPUnit_Framework_TestCase {
     $this->assertArrayHasKey('hits', $brief_response);
     $this->assertEquals(7, $brief_response['hits']);
     $this->assertArrayHasKey('records', $brief_response);
+    $this->assertEquals(7, count($brief_response['records']));
+    $this->assertArrayHasKey('title', $brief_response['records'][0]);
+    $this->assertEquals('Biblia Latina', $brief_response['records'][0]['title']);
+    $this->assertEquals('7d278t10z', $brief_response['records'][0]['id']);
     //$this->assertArrayHasKey('more', $brief_response);
     //$this->assertEquals(10, count($brief_response['records']));
     //$this->assertEquals('James Kerney Collection on Woodrow Wilson', $brief_response['records'][8]['title']);
