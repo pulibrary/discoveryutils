@@ -60,7 +60,7 @@ Class Record
           $date[] = "-" . $this->record_fields['EndPage'][0];
         }
       }
-      return implode("", $date);
+      return implode(" ", $date);
   }
   
   
