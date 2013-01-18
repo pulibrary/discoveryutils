@@ -25,8 +25,12 @@ class Record
        $this->pudl_title = $this->crawler->filter('Object title')->text();
        $this->pudl_type = $this->crawler->filter('Object type')->text();
        $this->pudl_collection = $this->crawler->filter('Object collection')->text();
-       $this->pudl_origin = $this->crawler->filter('Object origin')->text();
-      // $this->pudl_contributor = $this->crawler->filter('Object contributor')->text();
+       try {
+          $this->pudl_origin = $this->crawler->filter('Object origin')->text();
+          $this->pudl_contributor = $this->crawler->filter('Object contributor')->text();
+        } catch (\InvalidArgumentException $e) {   
+          $this->pudl_origin = NULL;
+        }
   }
   
   public function getRecordData() {
