@@ -445,7 +445,12 @@ $app->get('/pudl/{index_type}', function($index_type) use($app) {
   //$brief_response = $pudl_response->getBriefResponse();
   
   $app['monolog']->addInfo("Pudl Query:" . $query . "\tREFERER:" . $referer);
-  return new Response(json_encode($pudl_response->getBriefResponse()), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
+  return new Response(json_encode($pudl_response->getBriefResponse()), 200, array(
+    'charset' => 'utf-8', 
+    'Content-Type' => 'application/json', 
+    'Cache-Control' => 's-maxage=3600, public'
+    )
+  );
   //return new Response($pudl_response_data, 200, array('Content-Type' => 'application/xml'));
   //return $pudl_response_data;
 })->assert('index_type', '(any)'); 
