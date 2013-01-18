@@ -38,7 +38,7 @@ class Response
         'is_full_text' => $record->isFullTextHit,
         'in_holdings' => $record->inHoldings,
         'format' => $record->ContentType[0],
-        'abstract' => $record->Abstract,
+        'abstract' => htmlspecialchars($record->Abstract[0]), //FIXME
         'fulltextavail' => $record->hasFullText,
         'publication_date' => $record->PublicationDate[0],
         'snippet' => $record->Snippet,
