@@ -524,13 +524,13 @@ Class Record
     //  $resource_link = $this->getFullTextLinktoSrc();
     //} else {
     $resource_link = "";
-    if($this->isDedup()) { //FIXME Should get First Source ID 
+    //if($this->isDedup()) { //FIXME Should get First Source ID 
       $deep_link = new PermaLink($this->getRecordID(), $this->primo_server_connection);
       $resource_link = $deep_link->getLink();
-    } else {
-      $deep_search = new SearchDeepLink($this->getRecordID(), "any", "contains", $this->primo_server_connection);
-      $resource_link = $deep_search->getLink();
-    }
+    //} else {
+    //  $deep_search = new SearchDeepLink($this->getRecordID(), "any", "contains", $this->primo_server_connection);
+    //  $resource_link = $deep_search->getLink();
+    //}
 
     return $resource_link;
     
