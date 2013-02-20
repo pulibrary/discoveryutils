@@ -166,8 +166,13 @@ Class Record
       }
       if(($full_text_link_value = $node->getAttribute('GetIt1'))) { //FIXME - is GetIt1 comprised of only full-text links?
         if(strstr($full_text_link_value, 'http' )) {
-          $node_link_properties['fulltext'] = $node->getAttribute('GetIt1');
+	  // HACK FOR MARCIT LINKS
+          if(strstr($full_text_link_value, 'sfx.princeton.edu')) {
+          	$node_link_properties['fulltext'] = $this->getFullTextLinktoSrc();
+	  } else {
+          	$node_link_properties['fulltext'] = $node->getAttribute('GetIt1');
           }
+        }
       }
       //if(($node->getAttribute('GetIt2'))) {
       //  $node_link_properties['openurl'] = $node->getAttribute('GetIt2');
@@ -189,11 +194,10 @@ Class Record
    * returns multiple source records if the PNX record in question is a 
    * dedupped title 
    */
-  public function getBriefInfo() {
+  public function getBriefInfo() { 
+
     $getit_links = $this->getGetItLinks();
-    //print_r($getit_links);
     $available_libraries = $this->getAvailableLibraries();
-    //print_r($available_libraries);
     $brief_info_data = array();
     foreach($getit_links as $voyager_key => $getit_data) {
       $voyager_key_available_libraries = array();
@@ -219,7 +223,7 @@ Class Record
       $brief_info_data[$voyager_key]['deep_search_id_link'] = $deep_search->getLink();
 
 
-    }
+    } 
     
     return $brief_info_data;
   }
