@@ -180,7 +180,14 @@ Class Record
       $getit_links[$source_ids[$record_counter]] = $node_link_properties;
       $record_counter = $record_counter + 1;
     }
-    
+    // hack for records without their own "getit" link
+    if($record_counter < $id_count) {
+       foreach($source_ids as $id) {
+         if(!array_key_exists($getit_links, $id)) {
+           $getit_links[$id] = array("deliveryCategory" => "Physical Item");
+         }
+      }      	
+    }  
     return $getit_links;
   }
   
