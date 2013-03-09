@@ -2,6 +2,7 @@
 namespace Primo;
 use Primo\Query;
 use Guzzle\Service\Client as HttpClient;
+use Guzzle\Http\QueryAggregator\DuplicateAggregator as DuplicateAggregator;
 
 class Client
 {
@@ -48,6 +49,8 @@ class Client
     //echo $query->getQueryString();
     $request = $this->client->get($this->xservice_brief_search . $query->getQueryString());
     
+    $query_facet_aggregator = new DuplicateAggregator(); // use this to allow duplicate key values 
+    $request->getQuery()->setAggregator($query_facet_aggregator);
     if($query->hasFacets()) {
       
       foreach($query->getFacets() as $facet) {
@@ -56,7 +59,7 @@ class Client
         
     }
 
-    $request->getQuery()->setAggregateFunction(array($request->getQuery(), 'aggregateUsingDuplicates'));
+    //$request->getQuery()->setAggregateFunction(array($request->getQuery(), 'aggregateUsingDuplicates'));
     $response = $request->send();
 
     if(strlen($response) != 0) { 
