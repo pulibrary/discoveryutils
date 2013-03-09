@@ -1,8 +1,8 @@
 <?php
 
-//require_once __DIR__.'/../vendor/silex.phar';
-
 use Silex\Application;
+use Silex\Provider;
+
 use Symfony\Component\HttpFoundation\Response,
     Symfony\Component\HttpFoundation\Request,
     Symfony\Component\HttpFoundation\JsonResponse,
@@ -28,6 +28,9 @@ $app = new Silex\Application();
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
   'twig.path'       => __DIR__.'/../views',
 ));
+
+$app->register(new Provider\ServiceControllerServiceProvider());
+$app->register(new Provider\UrlGeneratorServiceProvider());
 
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.logfile'       => __DIR__.'/../log/usage.log',
@@ -93,6 +96,10 @@ $app['environment'] = Yaml::parse(__DIR__.'/../conf/environment.yml');
 
 if ($app['environment']['env'] != "production") {
   $app['debug'] = true;
+  $app->register($p = new Provider\WebProfilerServiceProvider(), array(
+        'profiler.cache_dir' => __DIR__.'/../cache/profiler',
+  ));
+  $app->mount('/_profiler', $p);
 }
 
 /* basic error catching */
