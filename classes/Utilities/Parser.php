@@ -1,6 +1,6 @@
 <?php
 
-namespace Primo;
+namespace Utilities;
 
 /*
  * @Parser

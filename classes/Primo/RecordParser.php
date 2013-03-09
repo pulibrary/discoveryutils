@@ -1,7 +1,7 @@
 <?php
 namespace Primo;
 use Primo\Record as PrimoRecord,
-    Primo\Parser as XmlParser;
+    Utilities\Parser as XmlParser;
 
 class RecordParser {
   

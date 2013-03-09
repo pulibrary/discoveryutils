@@ -1,7 +1,7 @@
 <?php
 
 namespace Pulfa;
-use Primo\Parser as XmlParser;
+use Utilities\Parser as XmlParser;
 
 /*
  * @ \Pulfa\Record

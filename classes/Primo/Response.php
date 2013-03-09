@@ -2,7 +2,7 @@
 namespace Primo;
 use Primo\RecordParser as PrimoRecordParser,
     Primo\PrimoRecord as PrimoRecord,
-    Primo\Parser as XmlParser;
+    Utilities\Parser as XmlParser;
 
 class Response
 {
@@ -61,6 +61,11 @@ class Response
         'holdings' => $primo_record->getBriefHoldings(),
         'format' => $primo_record->getFormatType(),
         'creationdate' => $primo_record->getCreationDate(),
+        'creator' => $primo_record->getCreator(),
+        'toc' => $primo_record->getToc(),
+        'description' => $primo_record->getDescription(),
+        'notes' => $primo_record->getNotes(),
+        'publisher' => $primo_record->getPublisher(),
       );
       array_push($brief_result_set, $brief_result);
     }

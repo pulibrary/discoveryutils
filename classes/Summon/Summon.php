@@ -44,10 +44,10 @@ class Summon
 	
 	function __construct($app_id, $api_key, Client $client = null)
 	{
-		$this->host = 'http://api.summon.serialssolutions.com';
+		$this->host = 'http://api.summon.serialssolutions.com/';
 		$this->app_id = $app_id;
 		$this->api_key = $api_key;
-		
+		$this->role = "authenticated";
 		if ( $client != null )
 		{
 			$this->http_client = $client;
