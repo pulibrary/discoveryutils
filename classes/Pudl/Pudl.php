@@ -58,7 +58,6 @@ class Pudl
     $response = curl_exec($ch);
     //return (string)$response->getBody();
     curl_close($ch);
-
     return $response;
   }
   
