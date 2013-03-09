@@ -117,7 +117,7 @@ Class Record
     $available_links = $this->getAllLinks();
     //print_r($available_links);
     foreach($available_links as $linktype) {
-      if($linktype[0] == "linktorsrc") {
+      if($linktype[0] == "sear:linktorsrc") {
         $full_text_link = $linktype[1];
         $full_text_present = true;  
       }
@@ -134,7 +134,7 @@ Class Record
     $full_text_present = false;
     $available_links = $this->getAllLinks();
     foreach($available_links as $linktype) {
-      if($linktype[0] == "openurlfulltext") {
+      if($linktype[0] == "sear:openurlfulltext") {
         $full_text_link = $linktype[1];
         $full_text_present = true;  
       }
