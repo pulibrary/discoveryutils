@@ -462,13 +462,12 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
     $response_data['recommendations'] = $summon_data->getRecommendations();
     $response_data['number'] = count($response_data['recommendations']);
   } else {
-    //$summon_client->addCommandFilter("addFacetValueFilters(IsScholarly,true)"); //addFacetValueFilters(ContentType,Newspaper+Article:t)"); FIXME this shoudl default to exclude and retain filter to remove newspapers
+    $summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:t,Book+Review:t)"); //FIXME this shoudl default to exclude and retain filter to remove newspapers
     $summon_client->addFilter("IsScholarly,true");
     $summon_data = new SummonResponse($summon_client->query($query, 1, $result_size)); 
     //print_r($summon_data);
     $summon_full_search_link = new SummonQuery($query, array(
-      //"s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t),s.fvf[]=IsScholarly,true,f",      
-      //"s.cmd" => "addFacetValueFilters(IsScholarly,true)", //&s.fvf=ContentType,Newspaper+Article,t",
+      "s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t,Book+Review:t)",      
       "s.fvf" => "IsScholarly,true",
       "keep_r" => "true",
       "s.dym" => "t",
