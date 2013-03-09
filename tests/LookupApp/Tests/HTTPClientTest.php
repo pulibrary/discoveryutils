@@ -28,9 +28,16 @@ class HTTPClientTest extends  \PHPUnit_Framework_TestCase
     }
     
     function testPrimoFacetQuery() {
-      $request = $this->primo_xservice->get("?institution=PRN&onCampus=false&indx=1&dym=true&highlight=true&displayField=title&query=title,exact,journal+of+politics&bulkSize=3&loc=local,scope:(PRN)");
-      $request->getQuery()->add('query', 'facet_rtype,exact,journals');
-      $request->getQuery()->setAggregateFunction(array($request->getQuery(), 'aggregateUsingDuplicates'));
+      $request = $this->primo_xservice->get("?institution=PRN&onCampus=false&indx=1&dym=true&highlight=true&displayField=title&bulkSize=3&loc=local,scope:(PRN)");
+      $query_args = array('title,exact,journal+of+politics', 'facet_rtype,exact,journals');
+      //$request->getQuery()->setAggregateFunction(array($request->getQuery(), 'aggregateUsingDuplicates'));
+      //$query_facet_aggregator = new \Primo\QueryFieldAggregator();
+      $query_facet_aggregator = new \Guzzle\Http\QueryAggregator\DuplicateAggregator(); // use this to allow duplicate key values 
+      $request->getQuery()->setAggregator($query_facet_aggregator);
+      $duplication_args = $query_facet_aggregator->aggregate("query", $query_args,  $request->getQuery());
+      //print_r($duplication_args);
+      $request->getQuery()->add('query', $query_args);
+      //echo $request->getQuery();
       $response = $request->send();
     }
     
