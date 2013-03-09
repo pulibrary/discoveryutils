@@ -17,7 +17,7 @@ class SummonRecordTest extends \PHPUnit_Framework_TestCase
   
   public function testIsSummonRecords() {
     foreach($this->records as $record) {
-      $this->assertInstanceOf('\\Summon\\Record', $record);
+      $this->assertInternalType('array', $record);
     }
   }
   

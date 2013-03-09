@@ -21,7 +21,7 @@ class SummonClientTest extends \PHPUnit_Framework_TestCase {
   
   function testRecordIDLookup() {
     $id_document = $this->summon_client->getRecord($this->sample_id);
-    print_r($id_document);
+    //print_r($id_document);
     $this->assertEquals($id_document['documents'][0]['ID'][0], $this->sample_id);
     $this->assertEquals(count($id_document['documents']), 1);
   }

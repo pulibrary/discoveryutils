@@ -1,0 +1,89 @@
+<Objects start="0" total="7">
+    <Object id="7d278t10z">
+        <thumbnail>urn:pudl:images:deliverable:pudl0001/4609321/s42/00000001.jp2</thumbnail>
+        <title dir="ltr">Biblia Latina</title>
+        <contributor dir="ltr" href="http://127.0.0.1:8080/exist/pudl/Objects?v1=*&amp;f1=*&amp;contrib_f=Gutenberg, Johann, 1397?-1468">Gutenberg, Johann, 1397?-1468</contributor>
+        <type>Text</type>
+        <origin>Mainz: Printer of the 42-line Bible (Johann Gutenberg?), before August 1456</origin>
+        <collection href="http://arks.princeton.edu/ark:/88435/xp68kg247">Scheide Library : Fifteenth-Century Printing</collection>
+    </Object>
+    <Object id="xp68kg247">
+        <thumbnail>urn:pudl:images:deliverable:pudl0001/4609321/331/00000001.jp2</thumbnail>
+        <title dir="ltr">Gutenberg Bible [fragment]</title>
+        <type>Text</type>
+        <origin>Mainz: [Johann Gutenberg and Johann Fust], 1455 (not after August August 1456)</origin>
+        <collection href="http://127.0.0.1:8080/exist/pudl/Objects?v1=*&amp;f1=*&amp;collection_f=Scheide Library : Fifteenth-Century Printing">Scheide Library : Fifteenth-Century Printing</collection>
+    </Object>
+    <Object id="4m90dv587">
+        <thumbnail>urn:pudl:images:deliverable:pudl0001/4606192/00000001.jp2</thumbnail>
+        <title dir="ltr">Ars minor [fragment]</title>
+        <contributor dir="ltr" href="http://127.0.0.1:8080/exist/pudl/Objects?v1=*&amp;f1=*&amp;contrib_f=Donatus, Aelius">Donatus, Aelius</contributor>
+        <type>Text</type>
+        <origin>[Mainz: Johann Gutenberg and Johann Fust, ca. 1453-1454]</origin>
+        <collection href="http://arks.princeton.edu/ark:/88435/xp68kg247">Scheide Library : Fifteenth-Century Printing</collection>
+    </Object>
+    <Object id="0v8380652">
+        <thumbnail>urn:pudl:images:deliverable:pudl0001/4606051/00000001.jp2</thumbnail>
+        <title dir="ltr">Bulla thurcorum</title>
+        <contributor dir="ltr" href="http://127.0.0.1:8080/exist/pudl/Objects?v1=*&amp;f1=*&amp;contrib_f=Callistus III, Pope, 1378-1458">Callistus III, Pope, 1378-1458</contributor>
+        <type>Text (manuscript)</type>
+        <origin>Mainz: DK Press (Johann Gutenberg), [ca.&#160;1456]</origin>
+        <collection href="http://arks.princeton.edu/ark:/88435/xp68kg247">Scheide Library : Fifteenth-Century Printing</collection>
+    </Object>
+    <Object id="8c97kq49z">
+        <thumbnail>urn:pudl:images:deliverable:pudl0001/4606209/00000001.jp2</thumbnail>
+        <title dir="ltr">Ars minor [fragment]</title>
+        <contributor dir="ltr" href="http://127.0.0.1:8080/exist/pudl/Objects?v1=*&amp;f1=*&amp;contrib_f=Donatus, Aelius">Donatus, Aelius</contributor>
+        <type>Text</type>
+        <origin>[Mainz: DK Press (Johann Gutenberg), ca. 1454-1457]</origin>
+        <collection href="http://arks.princeton.edu/ark:/88435/xp68kg247">Scheide Library : Fifteenth-Century Printing</collection>
+    </Object>
+    <Object id="d217qp581">
+        <thumbnail>urn:pudl:images:deliverable:pudl0001/4606221/00000001.jp2</thumbnail>
+        <title dir="ltr">Indulgentia</title>
+        <contributor dir="ltr" href="http://127.0.0.1:8080/exist/pudl/Objects?v1=*&amp;f1=*&amp;contrib_f=Catholic Church. Pope (1447-1455 : Nicholas V)">Catholic Church. Pope (1447-1455 : Nicholas V)</contributor>
+        <type>Text</type>
+        <origin>[Mainz: DK Printer (Johann Gutenberg), not after 22 October 1454]</origin>
+        <collection href="http://arks.princeton.edu/ark:/88435/xp68kg247">Scheide Library : Fifteenth-Century Printing</collection>
+    </Object>
+    <Object id="mk61rh01s">
+        <thumbnail>urn:pudl:images:deliverable:pudl0001/4603408/00000001.jp2</thumbnail>
+        <title dir="ltr">Ars minor [fragment]</title>
+        <contributor dir="ltr" href="http://127.0.0.1:8080/exist/pudl/Objects?v1=*&amp;f1=*&amp;contrib_f=Donatus, Aelius">Donatus, Aelius</contributor>
+        <type>Text</type>
+        <origin>[Mainz : Johann Fust and Peter Schoeffer, ca. 1457-1466?] or [Mainz : Peter Schoeffer, ca. 1466-1475?], [ca.&#160;1457-1475]</origin>
+        <collection href="http://arks.princeton.edu/ark:/88435/xp68kg247">Scheide Library : Fifteenth-Century Printing</collection>
+    </Object>
+    <facets>
+        <facet label="Creator / Contributor">
+            <option count="3" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;contrib_f=Donatus, Aelius">Donatus, Aelius</option>
+            <option count="1" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;contrib_f=Bosanquet, Eustace F., b. 1871">Bosanquet, Eustace F., b. 1871</option>
+            <option count="1" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;contrib_f=Callistus III, Pope, 1378-1458">Callistus III, Pope, 1378-1458</option>
+            <option count="1" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;contrib_f=Catholic Church. Pope (1447-1455 : Nicholas V)">Catholic Church. Pope (1447-1455 : Nicholas V)</option>
+            <option count="1" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;contrib_f=Fogel, Johannes, Johannes, fl. 1455-1462">Fogel, Johannes, Johannes, fl. 1455-1462</option>
+            <option count="1" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;contrib_f=Gutenberg, Johann, 1397?-1468">Gutenberg, Johann, 1397?-1468</option>
+            <option count="1" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;contrib_f=Howard, Arthur, 1896-1971">Howard, Arthur, 1896-1971</option>
+            <option count="1" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;contrib_f=Master of the Playing Cards, 15th cent">Master of the Playing Cards, 15th cent</option>
+        </facet>
+        <facet label="Type">
+            <option count="6" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;type_f=Text">Text</option>
+            <option count="1" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;type_f=Text (manuscript)">Text (manuscript)</option>
+        </facet>
+        <facet label="Topic">
+            <option count="3" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;topic_f=Grammar">Grammar</option>
+            <option count="3" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;topic_f=Latin language">Latin language</option>
+            <option count="3" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;topic_f=Specimens">Specimens</option>
+            <option count="3" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;topic_f=Type and type-founding">Type and type-founding</option>
+            <option count="1" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;topic_f=Bulls, Papal">Bulls, Papal</option>
+            <option count="1" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;topic_f=Catholic Church">Catholic Church</option>
+            <option count="1" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;topic_f=Crusades">Crusades</option>
+            <option count="1" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;topic_f=Indulgences">Indulgences</option>
+            <option count="1" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;topic_f=Prayer">Prayer</option>
+        </facet>
+        <facet label="Genre">
+            <option count="3" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;genre_f=Early works to 1500">Early works to 1500</option>
+            <option count="2" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;genre_f=Early works to 1800">Early works to 1800</option>
+            <option count="1" uri="http://127.0.0.1:8080/exist/pudl/Objects?v1=gutenberg&amp;genre_f=Bulls">Bulls</option>
+        </facet>
+    </facets>
+</Objects>

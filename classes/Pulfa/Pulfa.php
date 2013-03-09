@@ -2,7 +2,6 @@
 
 namespace Pulfa;
 use Guzzle\Service\Client as Client;
-use Pulfa\Query;
 
 /*
  * Pulfa

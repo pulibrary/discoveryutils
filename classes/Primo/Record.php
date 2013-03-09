@@ -1,7 +1,7 @@
-<?php
+<?php 
 namespace Primo;
 use Primo\Document as PrimoDocument;
-use Primo\Parser as XmlParser;
+use Utilities\Parser as XmlParser;
 use Primo\PermaLink as Permalink;
 use Primo\SearchDeepLink as SearchDeepLink;
 use Primo\Holding as PrimoHolding;
@@ -115,8 +115,9 @@ Class Record
       
     $full_text_present = false;
     $available_links = $this->getAllLinks();
+    //print_r($available_links);
     foreach($available_links as $linktype) {
-      if($linktype[0] == "sear:linktorsrc") {
+      if($linktype[0] == "linktorsrc") {
         $full_text_link = $linktype[1];
         $full_text_present = true;  
       }
@@ -133,7 +134,7 @@ Class Record
     $full_text_present = false;
     $available_links = $this->getAllLinks();
     foreach($available_links as $linktype) {
-      if($linktype[0] == "sear:openurlfulltext") {
+      if($linktype[0] == "openurlfulltext") {
         $full_text_link = $linktype[1];
         $full_text_present = true;  
       }
@@ -165,8 +166,13 @@ Class Record
       }
       if(($full_text_link_value = $node->getAttribute('GetIt1'))) { //FIXME - is GetIt1 comprised of only full-text links?
         if(strstr($full_text_link_value, 'http' )) {
-          $node_link_properties['fulltext'] = $node->getAttribute('GetIt1');
+	  // HACK FOR MARCIT LINKS
+          if(strstr($full_text_link_value, 'sfx.princeton.edu')) {
+          	$node_link_properties['fulltext'] = $this->getFullTextLinktoSrc();
+	  } else {
+          	$node_link_properties['fulltext'] = $node->getAttribute('GetIt1');
           }
+        }
       }
       //if(($node->getAttribute('GetIt2'))) {
       //  $node_link_properties['openurl'] = $node->getAttribute('GetIt2');
@@ -174,7 +180,14 @@ Class Record
       $getit_links[$source_ids[$record_counter]] = $node_link_properties;
       $record_counter = $record_counter + 1;
     }
-    
+    // hack for records without their own "getit" link
+    if($record_counter < $id_count) {
+       foreach($source_ids as $id) {
+         if(!array_key_exists($getit_links, $id)) {
+           $getit_links[$id] = array("deliveryCategory" => "Physical Item");
+         }
+      }      	
+    }  
     return $getit_links;
   }
   
@@ -188,11 +201,10 @@ Class Record
    * returns multiple source records if the PNX record in question is a 
    * dedupped title 
    */
-  public function getBriefInfo() {
+  public function getBriefInfo() { 
+
     $getit_links = $this->getGetItLinks();
-    //print_r($getit_links);
     $available_libraries = $this->getAvailableLibraries();
-    //print_r($available_libraries);
     $brief_info_data = array();
     foreach($getit_links as $voyager_key => $getit_data) {
       $voyager_key_available_libraries = array();
@@ -218,7 +230,7 @@ Class Record
       $brief_info_data[$voyager_key]['deep_search_id_link'] = $deep_search->getLink();
 
 
-    }
+    } 
     
     return $brief_info_data;
   }
@@ -372,10 +384,6 @@ Class Record
     //FIXME return subject headings associated with the documents
   }
   
-  public function getNotes() {
-    //FIXME get notes attached to document 
-  }
-  
   public function getRisType() {
     return $this->getElements("ristype");
   }
@@ -526,16 +534,27 @@ Class Record
     //if($this->getFullTextLinktoSrc()) {
     //  $resource_link = $this->getFullTextLinktoSrc();
     //} else {
+    $resource_link = "";
+    //if($this->isDedup()) { //FIXME Should get First Source ID 
       $deep_link = new PermaLink($this->getRecordID(), $this->primo_server_connection);
       $resource_link = $deep_link->getLink();
+    //} else {
+    //  $deep_search = new SearchDeepLink($this->getRecordID(), "any", "contains", $this->primo_server_connection);
+    //  $resource_link = $deep_search->getLink();
     //}
-    
+
     return $resource_link;
     
   }
   
   
-  
+  public function isDedup() {
+    if(strstr('dedup', $this->getRecordID())) {
+      return TRUE;
+    } else {
+      return FALSE;
+    }
+  }
   
   public function hasFullText() {
     
@@ -555,13 +574,72 @@ Class Record
       $date = $creation_date->item(0);
       return $date->nodeValue;
     } else {
-      return FALSE;
+      return NULL;
     }
     
   }
   
-  public function getStdNums() {
+  public function getCreator() {
+    $creator = $this->getElements('creator');
+
+    if($creator->length > 0) {
+      $creator_string = $creator->item(0);
+      return $creator_string->nodeValue;
+    } else {
+      return NULL;
+    }
+  }
+  
+  public function getToc() {
+    $toc = $this->getElements('toc');
+    
+    if($toc->length > 0) {
+      $toc_string = $toc->item(0);
+      return $toc_string->nodeValue;
+    } else {
+      return NULL;
+    }
+  }
+  
+  public function getDescription() {
+    $description = $this->getElements('description');
+
+    if($description->length > 0) {
+      $desc_string = $description->item(0);
+      return $desc_string->nodeValue;
+    } else {
+      return NULL;
+    }
+  }
+  
+   public function getNotes() {
+    $notes = $this->getElements('notes');
+
+    if($notes->length > 0) {
+      $notes_string = $notes->item(0);
+      return $notes_string->nodeValue;
+    } else {
+      return NULL;
+    }
+  }
+  
+  public function getPublisher() {
+    $publisher = $this->getElements('publisher');
+
+    if($publisher->length > 0) {
+      $publisher_string = $publisher->item(0);
+      return $publisher_string->nodeValue;
+    } else {
+      return NULL;
+    }
+  }
+  
+  public function getISXN() {
     //ADDME returns standard numbers (ISSN/ISBN associated with the record)
+    //$isbn = $this->getElements('isbn');
+    //$issn = $this->getElements('issn');
+    
+    
   }
   
   /*

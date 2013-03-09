@@ -20,6 +20,8 @@ use Summon\Summon,
     Summon\Response as SummonResponse;
 use Pulfa\Pulfa,
     Pulfa\Response as PulfaResponse;
+use Pudl\Pudl,
+    Pudl\Response as PudlResponse;
 
 $app = new Silex\Application(); 
 
@@ -48,6 +50,7 @@ $library_scopes = Yaml::parse(__DIR__.'/../conf/scopes.yml');
 
 $app['primo_server_connection'] = array(
   'base_url' => 'http://searchit.princeton.edu',
+  //'base_url' => 'http://chiprist01v1.hosted.exlibrisgroup.com:1701/',
   'institution' => 'PRN',
   'default_view_id' => 'PRINCETON',
   'default_pnx_source_id' => 'PRN_VOYAGER',
@@ -65,6 +68,12 @@ $app['pulfa'] = array(
   'host' => "http://findingaids.princeton.edu",
   'base' => "/collections.xml?",
   'num.records.brief.display' => 2,
+);
+
+$app['pudl'] = array(
+  'host' => "http://pudl.princeton.edu",
+  'base' => "/pudl/Objects",
+  'num.records.brief.display' => 3,
 );
 
 $app['locator.base'] = "http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php";
@@ -410,6 +419,43 @@ $app->get('/pulfa/{index_type}', function($index_type) use($app) {
   $app['monolog']->addInfo("Pulfa Query:" . $query . "\tREFERER:" . $referer);
   return new Response(json_encode($brief_response), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
 })->assert('index_type', '(title|any|creator)'); 
+
+
+$app->get('/pudl/{index_type}', function($index_type) use($app) {
+  if($app['request']->get('query')) {
+    $query = $app['request']->get('query');
+  } else {
+    return "No Query Supplied";
+  }
+  
+  if($app['request']->get('number')) {
+    $result_size = $app['request']->get('number');
+  } else {
+    $result_size = $app['pudl']['num.records.brief.display'];
+  }
+  if($app['request']->server->get('HTTP_REFERER')) { //should not be repeated moved out to utilities class
+    $referer = $app['request']->server->get('HTTP_REFERER');
+  } else {
+    $referer = "Direct Query";
+  }
+  
+  $pudl = new \Pudl\Pudl($app['pudl']['host'], $app['pudl']['base']);
+  $pudl_response_data = $pudl->query($query);
+
+  $pudl_response = new PudlResponse($pudl_response_data, $app->escape($query));
+  //$brief_response = $pudl_response->getBriefResponse();
+  
+  $app['monolog']->addInfo("Pudl Query:" . $query . "\tREFERER:" . $referer);
+  return new Response(json_encode($pudl_response->getBriefResponse()), 200, array(
+    'charset' => 'utf-8', 
+    'Content-Type' => 'application/json', 
+    'Cache-Control' => 's-maxage=3600, public'
+    )
+  );
+  //return new Response($pudl_response_data, 200, array('Content-Type' => 'application/xml'));
+  //return $pudl_response_data;
+})->assert('index_type', '(any)'); 
+
  
 /*
  * Route to direct queries to Summon API
@@ -439,13 +485,19 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
   $summon_client = new Summon($app['summon.connection']['client.id'], $app['summon.connection']['authcode']);
   $summon_client->limitToHoldings(); // only bring back Princeton results
 
-  if($index_type == 'guide') { //FIXME Only Libguides 
+  if($index_type == 'guide') { 
     $summon_client->addFilter('ContentType, Research Guide');
     $summon_data = new SummonResponse($summon_client->query($query, 1, 3));
+    $summon_full_search_link = new SummonQuery($query, array(
+      "s.fvf" => 'ContentType,Research Guide',
+      "keep_r" => "true",
+      "s.dym" => "t",
+      "s.ho" => "t"
+    ));
     $response_data = array(
       'query' => $app->escape($query),
       'number' => $summon_data->hits,
-      'more' => $app['summon.connection']['base.url'] . $summon_data->deep_search_link,
+      'more' => $summon_full_search_link->getLink(),
       'records' => $summon_data->getBriefResults(),
     );
   } elseif ($index_type == "spelling") {
