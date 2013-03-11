@@ -70,7 +70,7 @@ $app['summon.connection'] = Yaml::parse(__DIR__.'/../conf/summon.yml');
 $app['pulfa'] = array(
   'host' => "http://findingaids.princeton.edu",
   'base' => "/collections.xml?",
-  'num.records.brief.display' => 2,
+  'num.records.brief.display' => 3,
 );
 
 $app['pudl'] = array(
@@ -435,6 +435,12 @@ $app->get('/pudl/{index_type}', function($index_type) use($app) {
     return "No Query Supplied";
   }
   
+  if($app['request']->get('format')) {
+    $format = $app['request']->get('format');
+  } else {
+    $format = "json";
+  }
+  
   if($app['request']->get('number')) {
     $result_size = $app['request']->get('number');
   } else {
@@ -450,18 +456,32 @@ $app->get('/pudl/{index_type}', function($index_type) use($app) {
   $pudl_response_data = $pudl->query($query);
 
   $pudl_response = new PudlResponse($pudl_response_data, $app->escape($query));
-  //$brief_response = $pudl_response->getBriefResponse();
+  $brief_response = $pudl_response->getBriefResponse();
   
   $app['monolog']->addInfo("Pudl Query:" . $query . "\tREFERER:" . $referer);
-  return new Response(json_encode($pudl_response->getBriefResponse()), 200, array(
-    'charset' => 'utf-8', 
-    'Content-Type' => 'application/json', 
-    'Cache-Control' => 's-maxage=3600, public'
-    )
-  );
+  if($format == "html") {
+    return $app['twig']->render('pudlbrief.html.twig', array(
+    'environment' => $app['environment']['env'], 
+    'title' => $app['environment']['title'],
+    'query' => $query,
+    'more' => $brief_response['more'],
+    'number' => $brief_response['number'],
+    'records' => $brief_response['records'],
+  ));
+  } else {
+    return new Response(json_encode($brief_response), 200, array(
+      'charset' => 'utf-8', 
+      'Content-Type' => 'application/json', 
+      'Cache-Control' => 's-maxage=3600, public'
+      )
+    );
+  }
   //return new Response($pudl_response_data, 200, array('Content-Type' => 'application/xml'));
   //return $pudl_response_data;
 })->assert('index_type', '(any)'); 
+
+
+
 
  
 /*
