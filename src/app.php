@@ -70,7 +70,7 @@ $app['summon.connection'] = Yaml::parse(__DIR__.'/../conf/summon.yml');
 $app['pulfa'] = array(
   'host' => "http://findingaids.princeton.edu",
   'base' => "/collections.xml?",
-  'num.records.brief.display' => 2,
+  'num.records.brief.display' => 3,
 );
 
 $app['pudl'] = array(
