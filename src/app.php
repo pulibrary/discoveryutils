@@ -96,10 +96,10 @@ $app['environment'] = Yaml::parse(__DIR__.'/../conf/environment.yml');
 
 if ($app['environment']['env'] != "production") {
   $app['debug'] = true;
-  $app->register($p = new Provider\WebProfilerServiceProvider(), array(
-        'profiler.cache_dir' => __DIR__.'/../cache/profiler',
-  ));
-  $app->mount('/_profiler', $p);
+//  $app->register($p = new Provider\WebProfilerServiceProvider(), array(
+//        'profiler.cache_dir' => __DIR__.'/../cache/profiler',
+//  ));
+//  $app->mount('/_profiler', $p);
 }
 
 /* basic error catching */
