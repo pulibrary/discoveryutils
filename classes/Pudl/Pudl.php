@@ -46,6 +46,8 @@ class Pudl
   private function send($querystring) {
     $request =  $this->http_client->get($this->base_url . "?" . $querystring);
     $request->addHeader("Accept", "application/xml");
+    //$request->addHeader("Accept-Charset", "UTF-8");
+    
     $response = $request->send();
   
     return (string)$response->getBody();
