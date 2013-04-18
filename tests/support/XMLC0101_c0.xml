@@ -1,0 +1,854 @@
+<SEGMENTS xmlns="http://www.exlibrisgroup.com/xsd/jaguar/search">
+  <JAGROOT>
+    <RESULT>
+      <DOCSET TOTALHITS="1">
+        <DOC LOCAL="true">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>C0101_c0</sourcerecordid>
+                <sourceid>XML</sourceid>
+                <recordid>XMLC0101_c0</recordid>
+                <ilsapiid>C0101_c0</ilsapiid>
+                <sourceformat>XML</sourceformat>
+                <sourcesystem>Other</sourcesystem>
+              </control>
+              <display>
+                <type>archives</type>
+                <title>Archives of Charles Scribner’s Sons</title>
+                <creator>Charles Scribner's Sons.</creator>
+                <creationdate>1786-2003, bulk 1880s-1970s</creationdate>
+                <subject>Fitzgerald, F. Scott (Francis Scott), 1896-1940 -- Archives.</subject>
+                <subject>Hemingway, Ernest, 1899-1961 -- Archives.</subject>
+                <subject>Baker &amp; Scribner -- Archives.</subject>
+                <subject>Charles Scribner and Company -- Archives.</subject>
+                <subject>Charles Scribner's Sons -- Archives.</subject>
+                <subject>Scribner &amp; Co. -- Archives.</subject>
+                <subject>Scribner, Armstrong &amp; Welford -- Archives.</subject>
+                <subject>Scribner, Armstrong and Company -- Archives.</subject>
+                <subject>Authors and publishers -- United States.</subject>
+                <subject>Authors, American -- 19th century.</subject>
+                <subject>Authors, American -- 20th century.</subject>
+                <subject>Copyright -- United States -- 20th century.</subject>
+                <subject>Editors -- New York (State) -- New York -- Correspondence.</subject>
+                <subject>Novelists, American.</subject>
+                <subject>Poets, American.</subject>
+                <subject>Poets, English.</subject>
+                <subject>Publishers and publishing -- New York (State) -- New York.</subject>
+                <subject>Women novelists, American.</subject>
+                <language>eng</language>
+                <source>XML</source>
+                <availlibrary>$$IPRN$$LRARE$$1Manuscripts Collection (MSS)$$2C0101$$2box 1$$2box 2$$2box 3$$2box 4$$2box 5$$2box 6$$2box 7$$2box 8$$2box 9$$2box 10$$2box 11$$2box 12$$2box 13$$2box 14$$2box 15$$2box 16$$2box 17-18$$2box 19$$2box 20$$2box 21$$2box 22$$2box 23$$2box 24$$2box 25$$2box 26$$2box 27$$2box 28$$2box 29$$2box 30$$2box 32$$2box 31$$2box 32-33$$2box 33$$2box 34$$2box 35$$2box 36$$2box 37$$2box 38$$2box 39$$2box 40$$2box 41$$2box 42$$2box 43$$2box 44$$2box 44-45$$2box 45$$2box 46$$2box 47$$2box 48$$2box 49$$2box 50$$2box 51$$2box 52$$2box 53$$2box 54$$2box 54-55$$2box 55$$2box 56$$2box 57$$2box 58-60$$2box 61$$2box 62$$2box 63$$2box 64$$2box 65$$2box 66$$2box 67$$2box 68$$2box 68-69$$2box 69$$2box 70$$2box 71$$2box 72$$2box 73$$2box 74$$2box 75$$2box 76$$2box 77$$2box 78$$2box 79$$2box 80$$2box 81$$2box 82$$2box 83$$2box 84$$2box 85$$2box 86$$2box 87$$2box 88$$2box 89$$2box 90$$2box 91$$2box 92$$2box 92-93$$2box 93$$2box 93-94$$2box 94$$2box 95$$2box 96$$2box 97$$2box 98$$2box 99$$2box 100$$2box 101$$2box 102$$2box 103$$2box 105$$2box 104$$2box 106$$2box 107$$2box 107-108$$2box 108$$2box 109$$2box 110$$2box 111$$2box 112$$2box 113$$2box 114$$2box 115$$2box 116$$2box 117$$2box 118$$2box 119$$2box 120$$2box 121$$2box 122$$2box 123$$2box 124$$2box 125$$2box 126$$2box 127$$2box 127-128$$2box 128$$2box 129$$2box 130$$2box 131$$2box 132$$2box 132-134$$2box 135$$2box 136$$2box 137$$2box 138$$2box 138-139$$2box 139$$2box 140$$2box 141$$2box 142$$2box 143$$2box 144$$2box 145$$2box 146$$2box 147$$2box 148$$2box 149$$2box 150$$2box 151$$2box 152$$2box 153$$2box 154$$2box 155$$2box 156$$2box 157$$2box 158$$2box 159$$2box 160$$2box 161$$2box 162$$2box 163$$2box 164$$2box 165$$2box 166$$2box 167$$2box 168$$2box 169$$2box 170$$2box 171$$2box 172$$2box 173$$2box 174$$2box 175$$2box 176$$2box 177$$2box 178$$2box 179$$2box 180$$2box 181$$2box 182$$2box 183$$2box 184$$2box 185$$2box 186$$2box 187$$2box 188$$2box 189$$2box 190$$2box 191$$2box 192$$2box 193$$2box 194$$2box 195$$2box 196$$2box 197$$2box 198$$2box 199$$2box 200$$2box 201$$2box 202$$2box 203$$2box 204$$2box 205$$2box 206$$2box 207$$2box 208$$2box 209$$2box 210$$2box 211$$2box 212$$2box 213$$2box 214$$2box 215$$2box 216$$2box 217$$2box 218$$2box 219$$2box 220$$2box 221$$2box 222$$2box 223$$2box 224$$2box 225$$2box 226$$2box 227$$2box 228$$2box 229$$2box 230$$2box 231$$2box 232$$2box 233$$2box 234$$2box 235$$2box 236$$2box 237$$2box 238$$2box 239$$2box 240$$2box 241$$2box 242$$2box 243$$2box 244$$2box 245$$2box 246$$2box 247$$2box 248$$2box 249$$2box 250$$2box 251$$2box 252$$2box 253$$2box 254$$2box 255$$2box 256$$2box 257$$2box 258$$2box 259$$2box 260$$2box 261$$2box 262$$2box 263$$2box 264$$2box 265$$2box 266$$2box 267$$2box 268$$2box 269$$2box 270$$2box 271$$2box 272$$2box 273$$2box 274$$2box 275$$2box 276$$2box 277$$2box 278$$2box 279$$2box 280$$2box 281$$2box 282$$2box 283$$2box 284$$2box 285$$2box 286$$2box 287$$2box 288$$2box 289$$2box 290$$2box 291$$2box 292$$2box 293$$2box 294$$2box 295$$2box 296$$2box 297$$2box 298$$2box 299$$2box 300$$2box 301$$2box 302$$2box 303$$2box 304$$2box 305$$2box 306$$2box 307$$2box 308$$2box 309$$2box 310$$2box 311$$2box 312$$2box 313$$2box 314$$2box 315$$2box 316$$2box 317$$2box 318$$2box 319$$2box 320$$2box 321$$2box 322$$2box 323$$2box 324$$2box 325$$2box 326$$2box 327$$2box 328$$2box 329$$2box 330$$2box 331$$2box 332$$2box 333$$2box 334$$2box 335$$2box 336$$2box 337$$2box 338$$2box 339$$2box 340$$2box 341$$2box 342$$2box 343$$2box 344$$2box 345$$2box 346$$2box 347$$2box 348$$2box 349$$2box 350$$2box 351$$2box 352$$2box 353$$2box 354$$2box 355$$2box 356$$2box 357$$2box 358$$2box 359$$2box 360$$2box 361$$2box 362$$2box 363$$2box 364$$2box 365$$2box 366$$2box 367$$2box 368$$2box 369$$2box 370$$2box 371$$2box 372$$2box 373$$2box 374$$2box 375$$2box 376$$2box 377$$2box 378$$2box 379$$2box 380$$2box 381$$2box 382$$2box 383$$2box 384$$2box 385$$2box 386$$2box 387$$2box 388$$2box 389$$2box 390$$2box 391$$2box 392$$2box 393$$2box 394$$2box 395$$2box 396$$2box 397$$2box 398$$2box 399$$2box 400$$2box 401$$2box 402$$2box 403$$2box 404$$2box 405$$2box 406$$2box 407$$2box 408$$2box 409$$2box 410$$2box 411$$2box 412$$2box 413$$2box 414$$2box 415$$2box 416$$2box 417$$2box 418$$2box 419$$2box 442$$2box 420$$2box 421$$2box 422$$2box 423$$2box 424$$2box 425$$2box 426$$2box 427$$2box 428$$2box 429$$2box 430$$2box 431$$2box 432$$2box 433$$2box 434$$2box 435$$2box 436$$2box 437$$2box 438$$2box 439$$2box 440$$2box 441$$2box 443$$2box 444$$2box 445$$2box 446$$2box 447$$2box 448$$2box 449$$2box 450$$2box 451$$2box 452$$2box 453$$2box 454$$2box 455$$2box 456$$2box 457$$2box 458$$2box 459$$2box 460$$2box 461$$2box 462$$2box 463$$2box 464$$2box 465$$2box 466$$2box 467$$2box 468$$2box 469$$2box 470$$2box 471$$2box 472$$2box 473$$2box 474$$2box 475$$2box 476$$2box 477$$2box 478$$2box 479$$2box 480$$2box 481$$2box 482$$2box 483$$2box 484$$2box 485$$2box 486$$2box 487$$2box 488$$2box 489$$2box 490$$2box 491$$2box 492$$2box 493$$2box 494$$2box 495$$2box 496$$2box 497$$2box 498$$2box 499$$2box 500$$2box 501$$2box 502$$2box 503$$2box 504$$2box 505$$2box 506$$2box 507$$2box 508$$2box 509$$2box 510$$2box 511$$2box 512$$2box 513$$2box 514$$2box 515$$2box 516$$2box 517$$2box 518$$2box 519$$2box 520$$2box 521$$2box 522$$2box 523$$2box 524$$2box 525$$2box 526$$2box 527$$2box 528$$2box 529$$2box 530$$2box 531$$2box 532$$2box 533$$2box 534$$2box 535$$2box 536$$2box 537$$2box 538$$2box 539$$2box 540$$2box 541$$2box 542$$2box 543$$2box 544$$2box 545$$2box 546$$2box 547$$2box 548$$2box 549$$2box 550$$2box 551$$2box 552$$2box 553$$2box 554$$2box 555$$2box 556$$2box 557$$2box 558$$2box 559$$2box 560$$2box 561$$2box 562$$2box 563$$2box 564$$2box 565$$2box 566$$2box 567$$2box 568$$2box 569$$2box 570$$2box 571$$2box 572$$2box 573$$2box 574$$2box 575$$2box 576$$2box 577$$2box 578$$2box 579$$2box 580$$2box 581$$2box 582$$2box 583$$2box 584$$2box 585$$2box 586$$2box 587$$2box 588$$2box 589$$2box 590$$2box 591$$2box 592$$2box 593$$2box 594$$2box 595$$2box 596$$2box 597$$2box 598$$2box 599$$2box 600$$2box 601$$2box 602$$2box 603$$2box 604$$2box 605$$2box 606$$2box 607$$2box 608$$2box 609$$2box 610$$2box 611$$2box 612$$2box 613$$2box 614$$2box 615$$2box 616$$2box 617$$2box 618$$2box 619$$2box 620$$2box 621$$2box 622$$2box 623$$2box 624$$2box 625$$2box 626$$2box 627$$2box 628$$2box 629$$2box 630$$2box 631$$2box 632$$2box 633$$2box 634$$2box 635$$2box 636$$2box 637$$2box 638$$2box 639$$2box 640$$2box 641$$2box 642$$2box 643$$2box 644$$2box 645$$2box 646$$2box 647$$2box 648$$2box 649$$2box 650$$2box 651$$2box 652$$2box 653$$2box 654$$2box 655$$2box 656$$2box 657$$2box 658$$2box 659$$2box 660$$2box 661$$2box 662$$2box 663$$2box 664$$2box 665$$2box 666$$2box 667$$2box 668$$2box 669$$2box 670$$2box 671$$2box 672$$2box 673$$2box 674$$2box 675$$2box 676$$2box 677$$2box 678$$2box 679$$2box 680$$2box 681$$2box 682$$2box 683$$2box 684$$2box 685$$2box 686$$2box 687$$2box 688$$2box 689$$2box 702$$2box 703$$2box 704$$2box 705$$2box 706$$2box 707$$2box 708$$2box 709$$2box 710$$2box 711$$2box 712$$Scheck_holdings</availlibrary>
+                <lds05>Series 1: Advertising Records, 1922-1964 (large gaps) -- Series 2: Art Department Files, 1907-1951 (large gaps) -- Series 3: Author Files -- Series 4: Additional “author files” -- Series 5: Book Catalogs and Lists, 1855-1996 (gaps) -- Series 6: Books Published Card Files -- Series 7: Dust Jackets</lds05>
+                <lds21>Articles of partnership -- 19th century.; Business records -- 19th century.; Business records -- 20th century.; Contracts.; Correspondence.; Dust jackets (Binding); Family papers.; Photographs.</lds21>
+                <lds23>Collection is open for research use. Researchers may be required to use surrogates of collection items stored in special vault facilities.</lds23>
+                <lds28>C0101</lds28>
+                <lds40>Approximately 750 linear feet</lds40>
+                <lds42>This collection is stored partially onsite (Series 1-12, 14-31) at Firestone Library and partially offsite (Series 13: Ledgers) at the ReCAP facility. Boxes 73-75; boxes 193-195; boxes 197-199; box 287, folder 9; boxes 768-771; box 772, folders 1-30; box 773, folder 41; boxes 774-779; and box 866, folders 1-3 are stored in special vault facilities.</lds42>
+                <lds48>$$Ymss$$2C0101$$Ebox 1$$CSeries 1: Advertising Records, 1922-1964 (large gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 2$$CSeries 1: Advertising Records, 1922-1964 (large gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 3$$CSeries 1: Advertising Records, 1922-1964 (large gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 4$$CSeries 1: Advertising Records, 1922-1964 (large gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 5$$CSeries 1: Advertising Records, 1922-1964 (large gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 6$$CSeries 1: Advertising Records, 1922-1964 (large gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 7$$CSeries 1: Advertising Records, 1922-1964 (large gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 8$$CSeries 1: Advertising Records, 1922-1964 (large gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 9$$CSeries 1: Advertising Records, 1922-1964 (large gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 10$$CSeries 2: Art Department Files, 1907-1951 (large gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 11$$CSeries 2: Art Department Files, 1907-1951 (large gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 12$$CSeries 2: Art Department Files, 1907-1951 (large gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 13$$CSeries 2: Art Department Files, 1907-1951 (large gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 14$$CSeries 2: Art Department Files, 1907-1951 (large gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 15$$CSeries 2: Art Department Files, 1907-1951 (large gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 16$$CSeries 2: Art Department Files, 1907-1951 (large gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 17-18$$CSeries 2: Art Department Files, 1907-1951 (large gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 19$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 20$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 21$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 22$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 23$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 24$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 25$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 26$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 27$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 28$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 29$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 30$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 32$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 31$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 32-33$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 33$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 34$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 35$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 36$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 37$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 38$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 39$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 40$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 41$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 42$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 43$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 44$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 44-45$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 45$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 46$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 47$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 48$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 49$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 50$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 51$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 52$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 53$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 54$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 54-55$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 55$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 56$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 57$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 58-60$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 61$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 62$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 63$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 64$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 65$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 66$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 67$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 68$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 68-69$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 69$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 70$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 71$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 72$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 73$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 74$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 75$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 76$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 77$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 78$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 79$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 80$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 81$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 82$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 83$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 84$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 85$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 86$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 87$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 88$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 89$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 90$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 91$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 92$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 92-93$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 93$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 93-94$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 94$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 95$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 96$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 97$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 98$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 99$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 100$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 101$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 102$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 103$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 105$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 104$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 106$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 107$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 107-108$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 108$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 109$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 110$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 111$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 112$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 113$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 114$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 115$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 116$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 117$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 118$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 119$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 120$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 121$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 122$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 123$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 124$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 125$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 126$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 127$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 127-128$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 128$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 129$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 130$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 131$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 132$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 132-134$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 135$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 136$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 137$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 138$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 138-139$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 139$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 140$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 141$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 142$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 143$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 144$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 145$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 146$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 147$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 148$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 149$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 150$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 151$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 152$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 153$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 154$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 155$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 156$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 157$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 158$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 159$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 160$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 161$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 162$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 163$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 164$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 165$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 166$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 167$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 168$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 169$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 170$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 171$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 172$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 173$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 174$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 175$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 176$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 177$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 178$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 179$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 180$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 181$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 182$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 183$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 184$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 185$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 186$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 187$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 188$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 189$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 190$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 191$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 192$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 193$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 194$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 195$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 196$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 197$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 198$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 199$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 200$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 201$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 202$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 203$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 204$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 205$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 206$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 207$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 208$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 209$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 210$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 211$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 212$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 213$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 214$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 215$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 216$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 217$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 218$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 219$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 220$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 221$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 222$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 223$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 224$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 225$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 226$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 227$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 228$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 229$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 230$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 231$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 232$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 233$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 234$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 235$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 236$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 237$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 238$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 239$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 240$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 241$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 242$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 243$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 244$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 245$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 246$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 247$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 248$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 249$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 250$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 251$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 252$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 253$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 254$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 255$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 256$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 257$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 258$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 259$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 260$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 261$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 262$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 263$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 264$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 265$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 266$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 267$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 268$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 269$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 270$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 271$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 272$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 273$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 274$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 275$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 276$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 277$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 278$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 279$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 280$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 281$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 282$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 283$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 284$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 285$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 286$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 287$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 288$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 289$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 290$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 291$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 292$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 293$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 294$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 295$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 296$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 297$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 298$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 299$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 300$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 301$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 302$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 303$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 304$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 305$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 306$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 307$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 308$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 309$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 310$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 311$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 312$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 313$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 314$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 315$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 316$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 317$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 318$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 319$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 320$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 321$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 322$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 323$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 324$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 325$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 326$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 327$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 328$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 329$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 330$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 331$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 332$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 333$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 334$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 335$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 336$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 337$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 338$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 339$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 340$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 341$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 342$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 343$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 344$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 345$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 346$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 347$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 348$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 349$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 350$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 351$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 352$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 353$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 354$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 355$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 356$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 357$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 358$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 359$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 360$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 361$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 362$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 363$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 364$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 365$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 366$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 367$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 368$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 369$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 370$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 371$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 372$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 373$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 374$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 375$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 376$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 377$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 378$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 379$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 380$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 381$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 382$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 383$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 384$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 385$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 386$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 387$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 388$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 389$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 390$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 391$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 392$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 393$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 394$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 395$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 396$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 397$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 398$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 399$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 400$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 401$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 402$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 403$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 404$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 405$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 406$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 407$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 408$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 409$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 410$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 411$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 412$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 413$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 414$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 415$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 416$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 417$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 418$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 419$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 442$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 420$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 421$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 422$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 423$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 424$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 425$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 426$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 427$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 428$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 429$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 430$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 431$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 432$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 433$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 434$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 435$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 436$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 437$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 438$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 439$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 440$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 441$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 443$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 444$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 445$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 446$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 447$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 448$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 449$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 450$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 451$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 452$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 453$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 454$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 455$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 456$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 457$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 458$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 459$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 460$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 461$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 462$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 463$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 464$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 465$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 466$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 467$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 468$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 469$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 470$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 471$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 472$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 473$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 474$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 475$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 476$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 477$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 478$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 479$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 480$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 481$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 482$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 483$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 484$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 485$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 486$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 487$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 488$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 489$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 490$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 491$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 492$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 493$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 494$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 495$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 496$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 497$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 498$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 499$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 500$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 501$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 502$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 503$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 504$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 505$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 506$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 507$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 508$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 509$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 510$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 511$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 512$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 513$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 514$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 515$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 516$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 517$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 518$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 519$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 520$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 521$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 522$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 523$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 524$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 525$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 526$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 527$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 528$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 529$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 530$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 531$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 532$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 533$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 534$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 535$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 536$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 537$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 538$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 539$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 540$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 541$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 542$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 543$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 544$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 545$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 546$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 547$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 548$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 549$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 550$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 551$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 552$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 553$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 554$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 555$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 556$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 557$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 558$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 559$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 560$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 561$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 562$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 563$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 564$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 565$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 566$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 567$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 568$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 569$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 570$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 571$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 572$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 573$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 574$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 575$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 576$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 577$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 578$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 579$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 580$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 581$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 582$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 583$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 584$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 585$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 586$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 587$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 588$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 589$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 590$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 591$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 592$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 593$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 594$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 595$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 596$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 597$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 598$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 599$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 600$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 601$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 602$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 603$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 604$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 605$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 606$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 607$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 608$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 609$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 610$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 611$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 612$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 613$$CSeries 3: Author Files</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 614$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 615$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 616$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 617$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 618$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 619$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 620$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 621$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 622$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 623$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 624$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 625$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 626$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 627$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 628$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 629$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 630$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 631$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 632$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 633$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 634$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 635$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 636$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 637$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 638$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 639$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 640$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 641$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 642$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 643$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 644$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 645$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 646$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 647$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 648$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 649$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 650$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 651$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 652$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 653$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 654$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 655$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 656$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 657$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 658$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 659$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 660$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 661$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 662$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 663$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 664$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 665$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 666$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 667$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 668$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 669$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 670$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 671$$CSeries 4: Additional “author files”</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 672$$CSeries 5: Book Catalogs and Lists, 1855-1996 (gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 673$$CSeries 5: Book Catalogs and Lists, 1855-1996 (gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 674$$CSeries 5: Book Catalogs and Lists, 1855-1996 (gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 675$$CSeries 5: Book Catalogs and Lists, 1855-1996 (gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 676$$CSeries 5: Book Catalogs and Lists, 1855-1996 (gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 677$$CSeries 5: Book Catalogs and Lists, 1855-1996 (gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 678$$CSeries 5: Book Catalogs and Lists, 1855-1996 (gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 679$$CSeries 5: Book Catalogs and Lists, 1855-1996 (gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 680$$CSeries 5: Book Catalogs and Lists, 1855-1996 (gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 681$$CSeries 5: Book Catalogs and Lists, 1855-1996 (gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 682$$CSeries 5: Book Catalogs and Lists, 1855-1996 (gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 683$$CSeries 5: Book Catalogs and Lists, 1855-1996 (gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 684$$CSeries 5: Book Catalogs and Lists, 1855-1996 (gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 685$$CSeries 5: Book Catalogs and Lists, 1855-1996 (gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 686$$CSeries 5: Book Catalogs and Lists, 1855-1996 (gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 687$$CSeries 5: Book Catalogs and Lists, 1855-1996 (gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 688$$CSeries 5: Book Catalogs and Lists, 1855-1996 (gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 689$$CSeries 5: Book Catalogs and Lists, 1855-1996 (gaps)</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 702$$CSeries 7: Dust Jackets</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 703$$CSeries 7: Dust Jackets</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 704$$CSeries 7: Dust Jackets</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 705$$CSeries 7: Dust Jackets</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 706$$CSeries 7: Dust Jackets</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 707$$CSeries 7: Dust Jackets</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 708$$CSeries 7: Dust Jackets</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 709$$CSeries 7: Dust Jackets</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 710$$CSeries 7: Dust Jackets</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 711$$CSeries 7: Dust Jackets</lds48>
+                <lds48>$$Ymss$$2C0101$$Ebox 712$$CSeries 7: Dust Jackets</lds48>
+                <availinstitution>$$IPRN$$Scheck_holdings</availinstitution>
+                <availpnx>available</availpnx>
+              </display>
+              <links>
+                <linktoholdings>$$Uhttp://arks.princeton.edu/ark:/88435/9c67wm86s$$Elinktofa</linktoholdings>
+                <linktofa>$$Uhttp://arks.princeton.edu/ark:/88435/9c67wm86s$$Elinktofa</linktofa>
+              </links>
+              <search>
+                <creatorcontrib>Charles Scribner's Sons.</creatorcontrib>
+                <title>Archives of Charles Scribner’s Sons</title>
+                <subject>Fitzgerald, F. Scott (Francis Scott), 1896-1940 -- Archives.; Hemingway, Ernest, 1899-1961 -- Archives.; Baker &amp; Scribner -- Archives.; Charles Scribner and Company -- Archives.; Charles Scribner's Sons -- Archives.; Scribner &amp; Co. -- Archives.; Scribner, Armstrong &amp; Welford -- Archives.; Scribner, Armstrong and Company -- Archives.; Authors and publishers -- United States.; Authors, American -- 19th century.; Authors, American -- 20th century.; Copyright -- United States -- 20th century.; Editors -- New York (State) -- New York -- Correspondence.; Novelists, American.; Poets, American.; Poets, English.; Publishers and publishing -- New York (State) -- New York.; Women novelists, American.; Articles of partnership -- 19th century.; Business records -- 19th century.; Business records -- 20th century.; Contracts.; Correspondence.; Dust jackets (Binding); Family papers.; Photographs.</subject>
+                <sourceid>XML</sourceid>
+                <recordid>XMLC0101_c0</recordid>
+                <toc>Series 1: Advertising Records, 1922-1964 (large gaps) -- Series 2: Art Department Files, 1907-1951 (large gaps) -- Series 3: Author Files -- Series 4: Additional “author files” -- Series 5: Book Catalogs and Lists, 1855-1996 (gaps) -- Series 6: Books Published Card Files -- Series 7: Dust Jackets</toc>
+                <rsrctype>archives</rsrctype>
+                <addtitle>Archives of Charles Scribner’s Sons</addtitle>
+                <searchscope>XML</searchscope>
+                <searchscope>EAD</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>XML</scope>
+                <scope>EAD</scope>
+                <scope>PRN</scope>
+                <lsr05>C0101</lsr05>
+                <lsr21>Articles of partnership -- 19th century.; Business records -- 19th century.; Business records -- 20th century.; Contracts.; Correspondence.; Dust jackets (Binding); Family papers.; Photographs.</lsr21>
+                <lsr31>Archives of Charles Scribner’s Sons</lsr31>
+              </search>
+              <sort>
+                <title>Archives of Charles Scribner’s Sons</title>
+                <author>Charles Scribner's Sons.</author>
+              </sort>
+              <facets>
+                <language>eng</language>
+                <creationdate>1290</creationdate>
+                <topic>Fitzgerald, F. Scott (Francis Scott), 1896-1940 -- Archives.</topic>
+                <topic>Hemingway, Ernest, 1899-1961 -- Archives.</topic>
+                <topic>Baker &amp; Scribner -- Archives.</topic>
+                <topic>Charles Scribner and Company -- Archives.</topic>
+                <topic>Charles Scribner's Sons -- Archives.</topic>
+                <topic>Scribner &amp; Co. -- Archives.</topic>
+                <topic>Scribner, Armstrong &amp; Welford -- Archives.</topic>
+                <topic>Scribner, Armstrong and Company -- Archives.</topic>
+                <topic>Authors and publishers -- United States.</topic>
+                <topic>Authors, American -- 19th century.</topic>
+                <topic>Authors, American -- 20th century.</topic>
+                <topic>Copyright -- United States -- 20th century.</topic>
+                <topic>Editors -- New York (State) -- New York -- Correspondence.</topic>
+                <topic>Novelists, American.</topic>
+                <topic>Poets, American.</topic>
+                <topic>Poets, English.</topic>
+                <topic>Publishers and publishing -- New York (State) -- New York.</topic>
+                <topic>Women novelists, American.</topic>
+                <prefilter>archives</prefilter>
+                <rsrctype>archives</rsrctype>
+                <creatorcontrib>Charles Scribner's Sons.</creatorcontrib>
+                <genre>Articles of partnership -- 19th century.</genre>
+                <genre>Business records -- 19th century.</genre>
+                <genre>Business records -- 20th century.</genre>
+                <genre>Contracts.</genre>
+                <genre>Correspondence.</genre>
+                <genre>Dust jackets (Binding)</genre>
+                <genre>Family papers.</genre>
+                <genre>Photographs.</genre>
+                <frbrgroupid>5625093</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>99</t>
+              </dedup>
+              <frbr>
+                <t>99</t>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <addata>
+                <aulast>Archives of Charles Scribner’s Sons</aulast>
+                <addtitle>Archives of Charles Scribner’s Sons</addtitle>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <GETIT deliveryCategory="Physical Item" GetIt1="OVP" GetIt2="http://sfx.princeton.edu:9003/sfx_pul?"/>
+          <LIBRARIES>
+            <LIBRARY>
+              <institution>PRN</institution>
+              <library>RARE</library>
+              <status>check_holdings</status>
+              <collection>Manuscripts Collection (MSS)</collection>
+              <callNumber>C0101</callNumber>
+              <url>OVP</url>
+            </LIBRARY>
+          </LIBRARIES>
+          <LINKS>
+            <thumbnail/>
+            <linktoholdings>OVP</linktoholdings>
+            <linktofa>http://arks.princeton.edu/ark:/88435/9c67wm86s</linktofa>
+          </LINKS>
+        </DOC>
+      </DOCSET>
+    </RESULT>
+  </JAGROOT>
+</SEGMENTS>
