@@ -43,8 +43,9 @@ class PrimoHoldingTest extends \PHPUnit_Framework_TestCase {
     $this->assertEquals("Other", $this->single_archival_holding_record->getSourceSystem());
   }
   
-  function testNumberOfArchivalHoldings() {
-    
+  function testNumberOfArchivalItems() {
+    $this->assertEquals(1, count($this->single_archival_holding_record->getArchivalItems()));
+    $this->assertEquals(705, count($this->many_archival_holding_record->getArchivalItems()));
   }
   
   function testArchivalHoldingHasLocationCode() {
