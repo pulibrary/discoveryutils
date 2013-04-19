@@ -49,7 +49,7 @@ class PrimoHoldingTest extends \PHPUnit_Framework_TestCase {
   
   function testGetPrimoLibraries() {
     $holdings = $this->dedup_source_record->getBriefHoldings();
-    $this->assertEquals('ONLINE', $holdings[0]);
+    $this->assertTrue(array_key_exists('ONLINE', $holdings[0]));
   }
 
   function testGetHoldingsWithRareBooksLocations() {
