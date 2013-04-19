@@ -1,10 +1,11 @@
 <?php 
 namespace Primo;
 use Primo\Document as PrimoDocument;
+use Primo\Items\Archives as Archives;
 use Utilities\Parser as XmlParser;
 use Primo\PermaLink as Permalink;
 use Primo\SearchDeepLink as SearchDeepLink;
-use Primo\Holding as PrimoHolding;
+use Primo\Holdings\Holding as PrimoHolding;
 
 Class Record 
 {
@@ -67,7 +68,7 @@ Class Record
     return $this->xpath->query($this->xpath_base.$path);
   }
   
-  // get the contents of one specific tag
+  // get the contents of one specific tag this should probably go
   private function getText($tag) {
     $textContent = '';
     $is_namespace = '/\w+:\w+/';
@@ -317,6 +318,27 @@ Class Record
     return $available_ids;
   }
 
+
+  public function getArchivalItems() {
+    $items = array();
+    $item_list = $this->getElements("lds48");
+    if($item_list->length > 0) {
+      foreach($item_list as $item) {
+        array_push($items, new \Primo\Items\Archives($item->textContent));
+      }
+    }
+
+    return $items;
+  }
+  
+  private function buildArchivalHolding() {
+    // call number, access statemnt, other location info 
+  }
+  
+  public function getArchivalHoldings() {
+    // return an archival holdings object 
+  }
+
   private function buildHoldings() {
     $available_path = "def:PrimoNMBib/def:record/def:display/def:availlibrary";
     // need to check for another test 
@@ -345,7 +367,7 @@ Class Record
       if(isset($this->primo_server_connection['available.scopes'][$current_holding->primo_library]['name'])) {
         $library_label = $this->primo_server_connection['available.scopes'][$current_holding->primo_library]['name'];
       } else {
-        $library_label = "unknown";
+        $library_label = "can't find unknown";
       }
       array_push( $holdings_locations, array($current_holding->primo_library => array(
         'location_code' => $current_holding->location_code,
@@ -404,6 +426,20 @@ Class Record
     $fields = $this->getSectionFields($display_data);
     
     return $fields['title'][0];
+  }
+  
+  public function getSourceType() {
+    $control_information = $this->getElements('control');
+    $fields = $this->getControlFields($control_information);
+    
+    return $fields['sourceformat'];
+  }
+  
+  public function getSourceSystem() {
+    $control_information = $this->getElements('control');
+    $fields = $this->getControlFields($control_information);
+    
+    return $fields['sourcesystem'];
   }
   
   /* strip punctuation of the end of titles
@@ -530,6 +566,27 @@ Class Record
     return $section_values;
   }
   
+  private function getControlFields(\DOMNodeList $nodeList) {
+    $control_fields = array(
+      "sourceid",
+      "recordid",
+      "sourcesystem",
+      "sourceformat"
+    );
+    $control_values = array();
+    if($nodeList->length == 1) {
+      $data_elements = $nodeList->item(0);
+      if($data_elements->hasChildNodes()) {
+        foreach($control_fields as $field) {
+          $pnx_conrol_elements = $data_elements->getElementsByTagName($field); 
+          $control_values[$field] = $pnx_conrol_elements->item(0)->textContent;
+        }
+      }
+    }
+    
+    return $control_values;
+  }
+  
   public function getResourceLink() {
     //if($this->getFullTextLinktoSrc()) {
     //  $resource_link = $this->getFullTextLinktoSrc();
@@ -642,6 +699,31 @@ Class Record
     
   }
   
+  
+  /*
+   * Accepts a string that represents a record format type
+   * and returns true or false based on the return value
+   */
+  public function isA($type) {
+    if($type == $this->getFormatType()) {
+      return TRUE;
+    } else {
+      return FALSE;
+    }
+  }
+  
+  /*
+   * Test if record source is XML
+   * 
+   */
+  public function isXmlSource() {
+    $source_type = $this->getSourceType();
+    if($source_type == "XML") {
+      return TRUE;
+    } else {
+      return FALSE;
+    }
+  }
   /*
    * Check out Magic Methods Implementation for access to important properties
    */  

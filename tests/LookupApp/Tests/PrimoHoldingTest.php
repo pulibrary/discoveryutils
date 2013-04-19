@@ -39,7 +39,7 @@ class PrimoHoldingTest extends \PHPUnit_Framework_TestCase {
     
     $this->assertEquals(3, count($holdings));
     foreach($holdings as $holding) {
-      $this->assertInstanceOf('\Primo\Holding', $holding);
+      $this->assertInstanceOf('\Primo\Holdings\Holding', $holding);
     }
     
     $this->assertEquals('elf1', $holdings[0]->location_code);

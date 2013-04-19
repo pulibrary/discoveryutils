@@ -12,7 +12,12 @@ namespace Primo\Items;
  */
 
 
-class Archive
+class Archives
 {
   
+  
+  
+  public function __init($holding_string) {
+    
+  }
 }
