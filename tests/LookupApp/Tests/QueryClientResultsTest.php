@@ -49,5 +49,6 @@ class QueryClientResultsTest extends WebTestCase
    $crawler = $client->request('GET', '/find/any');
    $this->assertTrue($client->getResponse()->isOk());
  } 
+ 
 }
 

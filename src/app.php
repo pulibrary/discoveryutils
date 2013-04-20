@@ -169,24 +169,36 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
 
 $app->get('/record/{rec_id}.json', function($rec_id) use($app) {
   $record_data = $app['primo_client']->getID($app->escape($rec_id));
-  //$record_data;
-  $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
-  $stub_data = $primo_record->getBriefInfo();
-  $app['monolog']->addInfo("PNXID_REQUEST: " . json_encode($stub_data));
-  return new Response(json_encode($stub_data), 200, array('Content-Type' => 'application/json'));
+  if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
+    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));  
+  } else {
+    $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
+    $stub_data = $primo_record->getBriefInfo();
+    $app['monolog']->addInfo("PNXID_REQUEST: " . json_encode($stub_data));
+    return new Response(json_encode($stub_data), 200, array('Content-Type' => 'application/json'));
+  }
 })->assert('rec_id', '\w+'); //test regular expression validation of route 
 
 $app->get('/record/{rec_id}.xml', function($rec_id) use($app) {
+  
   $record_data = $app['primo_client']->getID($app->escape($rec_id));
-  return new Response($record_data, 200, array('Content-Type' => 'application/xml'));
+  if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
+    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));  
+  } else {
+    return new Response($record_data, 200, array('Content-Type' => 'application/xml'));
+  }
 })->assert('rec_id', '\w+'); 
 
 $app->get('/record/{rec_id}.ris', function($rec_id) use($app) {
   $record_data = $app['primo_client']->getID($app->escape($rec_id));
-  $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
-  $ris_data = $primo_record->getCitation("RIS");
-  $app['monolog']->addInfo("RIS_REQUEST: " . $rec_id . "\n" . $ris_data);
-  return new Response($ris_data, 200, array('Content-Type' => 'application/x-research-info-systems'));
+  if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
+    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));  
+  } else {
+    $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
+    $ris_data = $primo_record->getCitation("RIS");
+    $app['monolog']->addInfo("RIS_REQUEST: " . $rec_id . "\n" . $ris_data);
+    return new Response($ris_data, 200, array('Content-Type' => 'application/x-research-info-systems'));
+  }
 })->assert('rec_id', '\w+');
 
 
@@ -654,7 +666,10 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
     $primo_query->addFacet($subject_facet); 
   }
   $search_results = $app['primo_client']->doSearch($primo_query);
-  if($search_results) {
+  if(preg_match('/MESSAGE=\"Unauthorized access\"/', $search_results)) {
+    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));  
+  } 
+  if ($search_results) {
     $response = new PrimoResponse($search_results, $app['primo_server_connection']);
     $deep_link = new SearchDeepLink($query, $app->escape($index_type), $operator, $app['primo_server_connection'], 'location', array("OTHERS", "FIRE"), $primo_query->getFacets());
     $response_data = array(
