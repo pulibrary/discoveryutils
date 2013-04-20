@@ -61,7 +61,7 @@ $app['primo_server_connection'] = array(
   'default.search' => "contains",
   'num.records.brief.display' => 5,
   'available.scopes' => $library_scopes,
-  'record.request.base' => "http://libwebprod.princeton.edu/requests",
+  'record.request.base' => "http://library.princeton.edu/searchit/requests",
 );
 
 
@@ -84,7 +84,7 @@ $app['locator.base'] = "http://library.princeton.edu/catalogs/locator/PRODUCTION
 $app['stackmap'] = Yaml::parse(__DIR__.'/../conf/stackmap.yml');
 
 $app['locations.base'] = "http://libserv5.princeton.edu/requests/locationservice.php";
-
+$app['locations.list'] = json_decode(__DIR__.'/../conf/locations.json');
 
 // set up a configured primo client to reuse throughout the project
 $app['primo_client'] = $app->share(function ($app) {
@@ -192,13 +192,17 @@ $app->get('/record/{rec_id}.ris', function($rec_id) use($app) {
 
 $app->get('/record/{rec_id}', function($rec_id) use($app) {
   $record_data = $app['primo_client']->getID($app->escape($rec_id));
-  $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
-  $stub_data = $primo_record->getBriefInfo();
-  $response_data = array();
-  $response_data['rec_id'] = $rec_id;
-  $response_data['pnx_response'] = $stub_data;
+  if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
+      return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));  
+  } else {
+    $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
+    $stub_data = $primo_record->getBriefInfo();
+    $response_data = array();
+    $response_data['rec_id'] = $rec_id;
+    $response_data['pnx_response'] = $stub_data;
 
-  return $app['twig']->render('record.twig', $response_data);
+    return $app['twig']->render('record.twig', $response_data);
+  }
 })->assert('rec_id', '\w+');
 
 /*
@@ -385,7 +389,7 @@ $app->post('/scopelist', function() use ($app) {
 
 $app->post('/locations', function() use ($app) {
     
-  $locations = json_decode(file_get_contents("http://libserv5.princeton.edu/requests/locationservice.php"), TRUE);
+  $locations = json_decode(file_get_contents($app['locations.base']), TRUE);
   ksort($locations);
   file_put_contents(__DIR__.'/../conf/locations.json', json_encode($locations));
   
@@ -393,6 +397,13 @@ $app->post('/locations', function() use ($app) {
   
 });
 
+$app->get('/locations', function() use ($app) {
+   return $app['twig']->render('locations.html.twig', array(
+    'locations' => $app['locations.list'], 
+    'environment' => $app['environment']['env'],
+    'title' => "Active Voyager Locations"
+  ));
+});
 
 /*
  * Route to direct queries to Pulfa
