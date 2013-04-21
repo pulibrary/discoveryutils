@@ -6,6 +6,7 @@ use Utilities\Parser as XmlParser;
 use Primo\PermaLink as Permalink;
 use Primo\SearchDeepLink as SearchDeepLink;
 use Primo\Holdings\Holding as PrimoHolding;
+use Primo\Holdings\Archives as PrimoArchivesHolding;
 
 Class Record 
 {
@@ -330,12 +331,30 @@ Class Record
     return $items;
   }
   
-  private function buildArchivalHolding() {
-    // call number, access statemnt, other location info 
+  private function buildArchivalHoldings() {
+    // access statemnt
+    $holding_params = array();
+    $holding_params['access'] = $this->getAccessStatement();
+    $holding_params['summary_statement'] = $this->getSummaryArchivesStatement();
+    return $holding_params;
+  }
+  
+  private function getAccessStatement() {
+    $access = $this->getElements("lds23");
+    return $access->item(0)->textContent;
+  }
+  
+  private function getSummaryArchivesStatement() {
+    $summary = $this->getElements("lds05");
+    return $summary->item(0)->textContent;
   }
   
   public function getArchivalHoldings() {
     // return an archival holdings object 
+    $holdings_info = $this->buildArchivalHoldings();
+    $archival_holdings = new PrimoArchivesHolding($hodlings_info);
+    
+    return $archival_holdings;
   }
 
   private function buildHoldings() {

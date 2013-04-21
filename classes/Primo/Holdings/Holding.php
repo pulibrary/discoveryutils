@@ -24,16 +24,7 @@ class Holding
     "5" => "five",
     "6" => "six",
   ); 
-  /*
-  private $avail_library_pieces;
-  private $callnum;
-  private $source_id;
-  private $location_code;
-  private $primo_library_code;
-  private $location_label;
-  private $raw_source;
-   * 
-   */
+
   private $subfields = array();
   
   public function __construct($holdings_statement) {
