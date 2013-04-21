@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "448baf491e5ff643267ac4871d720996",
+    "hash": "95c2a53ab24d3936b37b3d2d8a61d4de",
     "packages": [
         {
             "name": "guzzle/guzzle",
-            "version": "dev-master",
+            "version": "v3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "69832a03ed0c78b3c7ac7168d7253f52ce85c25d"
+                "reference": "v3.4.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/69832a03ed0c78b3c7ac7168d7253f52ce85c25d",
-                "reference": "69832a03ed0c78b3c7ac7168d7253f52ce85c25d",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/v3.4.1",
+                "reference": "v3.4.1",
                 "shasum": ""
             },
             "require": {
@@ -97,7 +97,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2013-04-18 00:05:38"
+            "time": "2013-04-16 20:56:26"
         },
         {
             "name": "monolog/monolog",
@@ -781,12 +781,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpKernel.git",
-                "reference": "ddd7c7ab2dc104aed56fe932fa2717fe00919d0c"
+                "reference": "dc32a97a3326e774ee52432ad936cfe5d9c3dfd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/ddd7c7ab2dc104aed56fe932fa2717fe00919d0c",
-                "reference": "ddd7c7ab2dc104aed56fe932fa2717fe00919d0c",
+                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/dc32a97a3326e774ee52432ad936cfe5d9c3dfd3",
+                "reference": "dc32a97a3326e774ee52432ad936cfe5d9c3dfd3",
                 "shasum": ""
             },
             "require": {
@@ -841,7 +841,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "http://symfony.com",
-            "time": "2013-04-17 05:27:14"
+            "time": "2013-04-20 13:53:43"
         },
         {
             "name": "symfony/routing",
@@ -1017,30 +1017,22 @@
         {
             "name": "symfony/web-profiler-bundle",
             "version": "dev-master",
-            "target-dir": "Symfony/Bundle/WebProfilerBundle",
+            "target-dir": "Symfony/Component/Yaml",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/WebProfilerBundle.git",
-                "reference": "ae9636f4fd5f1770078e12fff192f0f8ea0a56ce"
+                "reference": "9df18a254f3ce79ca2a096bed959ace4cbf75261"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/WebProfilerBundle/zipball/ae9636f4fd5f1770078e12fff192f0f8ea0a56ce",
-                "reference": "ae9636f4fd5f1770078e12fff192f0f8ea0a56ce",
+                "url": "https://api.github.com/repos/symfony/WebProfilerBundle/zipball/9df18a254f3ce79ca2a096bed959ace4cbf75261",
+                "reference": "9df18a254f3ce79ca2a096bed959ace4cbf75261",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3",
-                "symfony/http-kernel": ">=2.2,<2.4-dev",
-                "symfony/routing": ">=2.2,<2.4-dev",
-                "symfony/twig-bridge": "2.2.*"
+                "php": ">=5.3.3"
             },
-            "require-dev": {
-                "symfony/config": ">=2.2,<2.4-dev",
-                "symfony/dependency-injection": ">=2.0,<3.0",
-                "symfony/stopwatch": ">=2.2,<2.4-dev"
-            },
-            "type": "symfony-bundle",
+            "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "2.3-dev"
@@ -1048,7 +1040,7 @@
             },
             "autoload": {
                 "psr-0": {
-                    "Symfony\\Bundle\\WebProfilerBundle\\": ""
+                    "Symfony\\Component\\Yaml\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1065,9 +1057,9 @@
                     "homepage": "http://symfony.com/contributors"
                 }
             ],
-            "description": "Symfony WebProfilerBundle",
+            "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2013-04-17 05:42:22"
+            "time": "2013-04-21 12:26:17"
         },
         {
             "name": "symfony/yaml",

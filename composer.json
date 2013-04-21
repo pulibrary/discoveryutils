@@ -9,7 +9,7 @@
     "symfony/yaml" : "2.2.*",
     "twig/twig" : "1.12.*",
     "monolog/monolog" : "1.4.*",
-    "guzzle/guzzle": "*",
+    "guzzle/guzzle": "3.4.*",
     "swiftmailer/swiftmailer" : "4.3.*",
     "silex/web-profiler": "~1.0"
   },
