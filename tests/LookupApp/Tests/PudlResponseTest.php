@@ -9,16 +9,17 @@ class PudlResponseTest extends \PHPUnit_Framework_TestCase {
   
   protected function setUp() {
     $this->xml_response_data = file_get_contents(dirname(__FILE__).'../../../support/pudlsearchresponse.xml');
+    $this->sample_query = "woodrow+wilson";
   }
   
   function testParseResponse() {
-    $response = new \Pudl\Response($this->xml_response_data);
+    $response = new \Pudl\Response($this->xml_response_data, $this->sample_query);
     $this->assertInstanceOf('\\Pudl\\Response', $response);
   }
   
   
   function testGetBriefResponse() {
-    $response = new \Pudl\Response($this->xml_response_data);
+    $response = new \Pudl\Response($this->xml_response_data, $this->sample_query);
     $brief_response = $response->getBriefResponse();
     $this->assertInternalType('array', $brief_response);
     $this->assertArrayHasKey('hits', $brief_response);

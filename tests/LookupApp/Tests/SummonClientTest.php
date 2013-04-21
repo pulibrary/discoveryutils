@@ -11,7 +11,7 @@ class SummonClientTest extends \PHPUnit_Framework_TestCase {
      'authcode' => 'LOIYKyKZbRiV0OVu9+worZW4ah'
     );
     $this->summon_client = new \Summon\Summon($this->summon_connection['client.id'], $this->summon_connection['authcode']);
-    $this->sample_id = "FETCH-LOGICAL-c7701-c707b8b9148ce306134b08c9377abf7fe8220bc99f6d722b1e28cfda5ca82c450";
+    $this->sample_id = "FETCH-gale_vrl_13454000520"; // These go stale
   }
   
   function testClientSetup() 
@@ -21,7 +21,6 @@ class SummonClientTest extends \PHPUnit_Framework_TestCase {
   
   function testRecordIDLookup() {
     $id_document = $this->summon_client->getRecord($this->sample_id);
-    //print_r($id_document);
     $this->assertEquals($id_document['documents'][0]['ID'][0], $this->sample_id);
     $this->assertEquals(count($id_document['documents']), 1);
   }
@@ -54,7 +53,7 @@ class SummonClientTest extends \PHPUnit_Framework_TestCase {
   function testExcludeNewspaperFromResultSet() {
     $this->summon_client->limitToHoldings(true);
     $result_w_newspaper = $this->summon_client->query("Mark Twain");
-    $this->assertGreaterThan(250000, $result_w_newspaper['recordCount']);
+    $this->assertGreaterThan(240000, $result_w_newspaper['recordCount']);
     //$this->summon_client->addFilter("ContentType,Newspaper+Article,t");
     $this->summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:true)");
     $result_without_newspaper = $this->summon_client->query("Mark Twain");
