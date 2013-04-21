@@ -3,7 +3,6 @@
 
 namespace LookupApp\Tests;
 use Primo\Record;
-use Primo\FindingAidHolding;
 use Symfony\Component\Yaml\Yaml;
 
 /*
@@ -27,6 +26,7 @@ class PrimoFindingAidHoldingTest extends \PHPUnit_Framework_TestCase {
     $this->single_archival_holding_record = new \Primo\Record($single_archival_holding_response, $primo_server_connection);
     $many_archival_holding_response = file_get_contents(dirname(__FILE__).'../../../support/XMLC0101_c0.xml');
     $this->many_archival_holding_record = new \Primo\Record($many_archival_holding_response, $primo_server_connection);
+    $this->archival_holding = $this->many_archival_holding_record->getArchivalHoldings();
     
   }
 
@@ -48,12 +48,28 @@ class PrimoFindingAidHoldingTest extends \PHPUnit_Framework_TestCase {
     $this->assertEquals(705, count($this->many_archival_holding_record->getArchivalItems()));
   }
   
-  function testArchivalHoldingHasLocationCode() {
-    
+  function testArchivalHoldingHasLocationLabel() {
+    $holdings = $this->single_archival_holding_record->getHoldings();
+    $this->assertInternalType('string', $holdings[0]->location_label);
   }
   
   function testArchivalHoldingHasCallNumber() {
-    
+    $holdings = $this->single_archival_holding_record->getHoldings();
+    $this->assertInternalType('string', $holdings[0]->call_number);
+  }
+  
+  function testArchivalHoldingsExist() {
+    $this->assertEquals("archives", $this->many_archival_holding_record->getFormatType());
+    $this->assertTrue($this->many_archival_holding_record->isXMLSource());
+    $this->assertInstanceOf('\\Primo\\Holdings\\Archives', $this->archival_holding);
+  }
+  
+  function testArchivalHoldingHasAccessStatement() {
+    $this->assertInternalType('string', $this->archival_holding->access_statement);
+  }
+  
+  function testArchivalHoldingHasSummaryStatement() {
+    $this->assertInternalType('string', $this->archival_holding->summary_statement);
   }
 
 }
