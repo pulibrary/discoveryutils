@@ -53,6 +53,7 @@ class LookupPrimoRecordTest extends \PHPUnit_Framework_TestCase {
   }
   
   function testIsFullTextAvailable() {
+
     $full_text_flag = $this->electronic_record_response->hasFullText();
     $this->assertEquals("Y", $full_text_flag);
   }
