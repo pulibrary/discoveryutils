@@ -28,6 +28,7 @@ class PrimoFindingAidHoldingTest extends \PHPUnit_Framework_TestCase {
     $this->many_archival_holding_record = new \Primo\Record($many_archival_holding_response, $primo_server_connection);
     $this->archival_holding = $this->many_archival_holding_record->getArchivalHoldings();
     $this->access_statement_test = "Collection is open for research use. Researchers may be required to use surrogates of collection items stored in special vault facilities.";
+    $this->test_finding_aid_link = "http://arks.princeton.edu/ark:/88435/9c67wm86s";
     
   }
 
@@ -80,5 +81,21 @@ class PrimoFindingAidHoldingTest extends \PHPUnit_Framework_TestCase {
     $this->assertNull($this->archival_holding->property_does_not_exsit);
   }
 
+  function testArchivalAddedInformation() {
+    $this->assertTrue(isset($this->archival_holding->add_information));
+    $this->assertInternalType('string', $this->archival_holding->add_information);
+  }
+  
+  function testArchivalCallNumber() {
+    $this->assertTrue(isset($this->archival_holding->call_number));
+    $this->assertInternalType('string', $this->archival_holding->call_number);
+    $this->assertEquals('C0101', $this->archival_holding->call_number);
+  }
+  
+  function testGetLinkToFindingAid() {
+    $this->assertTrue(isset($this->archival_holding->link_to_finding_aid));
+    $this->assertInternalType('string', $this->archival_holding->link_to_finding_aid);
+    $this->assertEquals($this->test_finding_aid_link, $this->archival_holding->link_to_finding_aid);
+  }
 
 }

@@ -105,7 +105,7 @@ Class Record
     $nodeList = $this->query($source_path);
     foreach ($nodeList as $node) {
       //$node->tagName; 
-      array_push($links, array($node->tagName, $node->textContent));
+      array_push($links, array($node->tagName => $node->textContent));
     }
     
     return $links;
@@ -336,6 +336,9 @@ Class Record
     $holding_params = array();
     $holding_params['access'] = $this->getAccessStatement();
     $holding_params['summary_statement'] = $this->getSummaryArchivesStatement();
+    $holding_params['add_information'] = $this->getArchivalAddedDescriptions();
+    $holding_params['call_number'] = $this->getArchivalCallNumber();
+    $holding_params['link_to_finding_aid'] = $this->getArchivesLinks();
     return $holding_params;
   }
   
@@ -347,6 +350,35 @@ Class Record
   private function getSummaryArchivesStatement() {
     $summary = $this->getElements("lds05");
     return $summary->item(0)->textContent;
+  }
+  
+  
+  private function getArchivalAddedDescriptions() {
+    $added_info = $this->getElements("lds40");
+    return $added_info->item(0)->textContent;
+  }
+  
+  private function getArchivalCallNumber() {
+    $call_num = $this->getElements("lds28");
+    return $call_num->item(0)->textContent;
+  }
+  
+  /* gets link to finding aid 
+   * 
+   * Stored in LINKS/linktofa
+   * 
+   * */
+  
+  private function getArchivesLinks() {
+   
+    $links = $this->getAllLinks();
+    $link_to_finding_aid = NULL;
+    foreach ($links as $link) {
+      if(array_key_exists('linktofa', $link)) {
+        $link_to_finding_aid = $link['linktofa'];
+      }
+    }
+    return $link_to_finding_aid;
   }
   
   public function getArchivalHoldings() {
