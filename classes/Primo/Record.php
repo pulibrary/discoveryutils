@@ -104,7 +104,6 @@ Class Record
     $source_path = "sear:LINKS//*";
     $nodeList = $this->query($source_path);
     foreach ($nodeList as $node) {
-      //$node->tagName; 
       array_push($links, array($node->tagName => $node->textContent));
     }
     
@@ -118,8 +117,8 @@ Class Record
     $full_text_present = false;
     $available_links = $this->getAllLinks();
     foreach($available_links as $linktype) {
-      if($linktype[0] == "sear:linktorsrc") {
-        $full_text_link = $linktype[1];
+      if(array_key_exists("sear:linktorsrc", $linktype)) {
+        $full_text_link = $linktype["sear:linktorsrc"];
         $full_text_present = true;  
       }
     }
@@ -135,8 +134,8 @@ Class Record
     $full_text_present = false;
     $available_links = $this->getAllLinks();
     foreach($available_links as $linktype) {
-      if($linktype[0] == "sear:openurlfulltext") {
-        $full_text_link = $linktype[1];
+      if(array_key_exists("sear:openurlfulltext", $linktype)) {
+        $full_text_link = $linktype["sear:openurlfulltext"];
         $full_text_present = true;  
       }
     }
