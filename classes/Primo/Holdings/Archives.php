@@ -23,10 +23,13 @@ class Archives
 {
   
   private $holding_fields = array();
-  
-  public function __init($archival_params = array()) {
-    $this->archives = $archival_params;
+
+  public function __construct($archival_params = array()) {
+    foreach($archival_params as $key => $value) {
+      $this->holding_fields[$key] = $value;
+    }
   }
+  
   
   public function __get($name) {
     if (array_key_exists($name, $this->holding_fields)) {

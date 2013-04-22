@@ -6,7 +6,7 @@ use Utilities\Parser as XmlParser;
 use Primo\PermaLink as Permalink;
 use Primo\SearchDeepLink as SearchDeepLink;
 use Primo\Holdings\Holding as PrimoHolding;
-use Primo\Holdings\Archives as PrimoArchivesHolding;
+use Primo\Holdings\Archives as ArchivalHolding;
 
 Class Record 
 {
@@ -352,7 +352,7 @@ Class Record
   public function getArchivalHoldings() {
     // return an archival holdings object 
     $holdings_info = $this->buildArchivalHoldings();
-    $archival_holdings = new PrimoArchivesHolding($hodlings_info);
+    $archival_holdings = new ArchivalHolding($holdings_info);
     
     return $archival_holdings;
   }

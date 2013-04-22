@@ -25,7 +25,7 @@ class Archives
   private $subfields = array();
   private $item_source;
   
-  public function __init($item_string) {
+  public function __construct($item_string) {
     $this->item_source = strval($item_string);   
     $this->buildItem();
   }

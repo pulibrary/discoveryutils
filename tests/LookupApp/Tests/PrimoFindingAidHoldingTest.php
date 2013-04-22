@@ -27,6 +27,7 @@ class PrimoFindingAidHoldingTest extends \PHPUnit_Framework_TestCase {
     $many_archival_holding_response = file_get_contents(dirname(__FILE__).'../../../support/XMLC0101_c0.xml');
     $this->many_archival_holding_record = new \Primo\Record($many_archival_holding_response, $primo_server_connection);
     $this->archival_holding = $this->many_archival_holding_record->getArchivalHoldings();
+    $this->access_statement_test = "Collection is open for research use. Researchers may be required to use surrogates of collection items stored in special vault facilities.";
     
   }
 
@@ -65,11 +66,19 @@ class PrimoFindingAidHoldingTest extends \PHPUnit_Framework_TestCase {
   }
   
   function testArchivalHoldingHasAccessStatement() {
-    $this->assertInternalType('string', $this->archival_holding->access_statement);
+    $this->assertTrue(isset($this->archival_holding->access));
+    $this->assertInternalType('string', $this->archival_holding->access);
+    $this->assertEquals($this->access_statement_test, $this->archival_holding->access);
   }
   
   function testArchivalHoldingHasSummaryStatement() {
+    $this->assertTrue(isset($this->archival_holding->summary_statement));
     $this->assertInternalType('string', $this->archival_holding->summary_statement);
   }
+  
+  function testArchivalHoldingsPropertyDoesNotExist() {
+    $this->assertNull($this->archival_holding->property_does_not_exsit);
+  }
+
 
 }
