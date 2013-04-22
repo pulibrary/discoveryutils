@@ -38,17 +38,17 @@ class PrimoArchivalItemsTest extends \PHPUnit_Framework_TestCase {
 
   function testAllItemsHaveBoxNumbers() {
     foreach($this->many_item_list as $item) {
-      $this->assertInternalType('string', $item->box_numbers);
+      $this->assertInternalType('string', $item->box_number);
     }
   }
   
   function testAllItemsHaveCallNumbers() {
     foreach($this->many_item_list as $item) {
-      $this->assertInternalType('string', $item->call_numbers);
+      $this->assertInternalType('string', $item->call_number);
     }
   }
   
-  function testItemsWithSeriesDescriptions() {
+  function testItemsWihSeriesDescriptions() {
     foreach($this->many_item_list as $item) {
       $this->assertInternalType('string', $item->series_details);
     }
