@@ -331,13 +331,15 @@ Class Record
   }
   
   private function buildArchivalHoldings() {
-    // access statemnt
+    $this->buildHoldings();
+    $holdings= $this->getHoldings();
     $holding_params = array();
     $holding_params['access'] = $this->getAccessStatement();
     $holding_params['summary_statement'] = $this->getSummaryArchivesStatement();
     $holding_params['add_information'] = $this->getArchivalAddedDescriptions();
     $holding_params['call_number'] = $this->getArchivalCallNumber();
     $holding_params['link_to_finding_aid'] = $this->getArchivesLinks();
+    $holding_params['library'] = $holdings[0]->primo_library;
     return $holding_params;
   }
   

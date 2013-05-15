@@ -52,8 +52,8 @@ $app['search_tabs'] = array(
 $library_scopes = Yaml::parse(__DIR__.'/../conf/scopes.yml');
 
 $app['primo_server_connection'] = array(
-  'base_url' => 'http://searchit.princeton.edu',
-  //'base_url' => 'http://chiprist01v1.hosted.exlibrisgroup.com:1701/',
+  //'base_url' => 'http://searchit.princeton.edu',
+  'base_url' => 'http://chiprist01v1.hosted.exlibrisgroup.com:1701/',
   'institution' => 'PRN',
   'default_view_id' => 'PRINCETON',
   'default_pnx_source_id' => 'PRN_VOYAGER',
@@ -358,20 +358,23 @@ $app->get('/locations/{rec_id}.json', function($rec_id) use($app) {
 })->assert('rec_id', '\w+');
 
 $app->get('/availability/{rec_id}.json', function($rec_id) use($app) {
-  $availability_client = new RequestClient($app->escape($rec_id));
-  $availability_response = $availability_client->doLookup();
-  $app['monolog']->addInfo("Request Lookup: " . $availability_client);
+  $availability_response = $app['primo_client']->getID($app->escape($rec_id));
+  $app['monolog']->addInfo("Availability Lookup: " . $app->escape($rec_id));
   return new Response($availability_response, 200, array('Content-Type' => 'application/json'));
 })->assert('rec_id', '\w+');
 
-$app->get('/availability/{rec_id}', function($rec_id) use($app) {
-  $availability_client = new RequestClient($app->escape($rec_id));
-  $availability_response = $availability_client->doLookup();
-  $app['monolog']->addInfo("Request Lookup: " . $availability_client);
-  
-  return $app['twig']->render('availability.twig', array(
+$app->get('/archives/{rec_id}', function($rec_id) use($app) {
+  $record_response = $app['primo_client']->getID($app->escape($rec_id));
+  $app['monolog']->addInfo("Availability Lookup: " . $app->escape($rec_id));
+
+  $record = new \Primo\Record($record_response, $app['primo_server_connection']);
+  return $app['twig']->render('archives.html.twig', array(
     'record_id' => $rec_id, 
-    'ava_response' => $availability_response
+    'archival_holding' => $record->getArchivalHoldings(),
+    'items' => $record->getArchivalItems(),
+    'title' => "Archival Holdings for" . $record->getTitle(),
+    'doc_title' => $record->getTitle(),
+    'environment' => $app['environment']['env'],
   ));
 })->assert('rec_id', '\w+');
 

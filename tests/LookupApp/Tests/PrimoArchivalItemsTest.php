@@ -49,12 +49,14 @@ class PrimoArchivalItemsTest extends \PHPUnit_Framework_TestCase {
   }
   
   function testItemsWihSeriesDescriptions() {
+    print_r($this->many_item_list);
     foreach($this->many_item_list as $item) {
       $this->assertInternalType('string', $item->series_details);
     }
   }
 
   function testItemsWithoutSeriesDescriptions() {
+    print_r($this->single_item_list);
     foreach($this->single_item_list as $item) {
       $this->assertFalse(isset($item->series_details));
     }

@@ -81,6 +81,10 @@ class PrimoFindingAidHoldingTest extends \PHPUnit_Framework_TestCase {
     $this->assertNull($this->archival_holding->property_does_not_exsit);
   }
 
+  function testArchivalHoldingsHasALibrary() {
+    $this->assertTrue(isset($this->archival_holding->library));
+    $this->assertEquals("RARE",$this->archival_holding->library);
+  }
   function testArchivalAddedInformation() {
     $this->assertTrue(isset($this->archival_holding->add_information));
     $this->assertInternalType('string', $this->archival_holding->add_information);
