@@ -8,3 +8,4 @@ cache/*
 *.csv
 views/*.json
 *.swp
+.idea/*
