@@ -52,8 +52,8 @@ $app['search_tabs'] = array(
 $library_scopes = Yaml::parse(__DIR__.'/../conf/scopes.yml');
 
 $app['primo_server_connection'] = array(
-  //'base_url' => 'http://searchit.princeton.edu',
-  'base_url' => 'http://chiprist01v1.hosted.exlibrisgroup.com:1701/',
+  'base_url' => 'http://searchit.princeton.edu',
+   //'base_url' => 'http://chiprist01v1.hosted.exlibrisgroup.com:1701/',
   'institution' => 'PRN',
   'default_view_id' => 'PRINCETON',
   'default_pnx_source_id' => 'PRN_VOYAGER',
@@ -364,7 +364,10 @@ $app->get('/availability/{rec_id}.json', function($rec_id) use($app) {
 })->assert('rec_id', '\w+');
 
 $app->get('/archives/{rec_id}', function($rec_id) use($app) {
-  $record_response = $app['primo_client']->getID($app->escape($rec_id));
+  $connection = $app['primo_server_connection'];
+  $connection['base_url'] = 'http://chiprist01v1.hosted.exlibrisgroup.com:1701/';
+  $test_client = new \Primo\Client($connection);
+  $record_response = $test_client->getID($app->escape($rec_id));
   $app['monolog']->addInfo("Availability Lookup: " . $app->escape($rec_id));
 
   $record = new \Primo\Record($record_response, $app['primo_server_connection']);
