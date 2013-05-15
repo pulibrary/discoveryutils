@@ -4,16 +4,11 @@ namespace LookupApp\Tests;
 
 class LookupPrimoResponseTest extends \PHPUnit_Framework_TestCase {
     protected function setUp() {
-      $primo_server_connection = array(
-        'base_url' => 'http://searchit.princeton.edu',
-        'institution' => 'PRN',
-        'default_view_id' => 'PRINCETON',
-        'default_pnx_source_id' => 'PRN_VOYAGER',
-      );
+      $app = require dirname(__FILE__) . '/../../../src/app.php';
       $dedup_record_response = file_get_contents(dirname(__FILE__).'../../../support/PRN_VOYAGER4773991.xml');
-      $this->single_dedup_response = new \Primo\Response($dedup_record_response, $primo_server_connection);
+      $this->single_dedup_response = new \Primo\Response($dedup_record_response, $app['primo_server_connection']);
       $multiple_record_response = file_get_contents(dirname(__FILE__).'../../../support/multiple_results_set.xml');
-      $this->multiple_response = new \Primo\Response($multiple_record_response, $primo_server_connection);
+      $this->multiple_response = new \Primo\Response($multiple_record_response, $app['primo_server_connection']);
     }
     
     public function testGetHitCount() {

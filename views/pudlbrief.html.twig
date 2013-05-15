@@ -1,0 +1,17 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+	<div class="home-content">
+		
+		<div class="main-body">
+			<p>Running in: {{ environment }} mode.</p>
+			<p>Query: {{ query }} </p>
+			<p>Matches: {{ number }}</p>
+			<ul>
+    		{% for record in records %}
+        	<li>{{ record.title|e }}</li>
+    		{% endfor %}
+			</ul>			
+		</div>
+	</div>
+{% endblock %}

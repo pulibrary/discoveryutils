@@ -17,7 +17,6 @@ class Pudl
   protected $host;
   protected $base_url;
   protected $params = array(
-  //v1=woodrow+wilson&     //&v2=&
     'f1' => 'kw',
   );
   
@@ -41,24 +40,18 @@ class Pudl
     $querystring = http_build_query($query);
     $response = $this->send($querystring);
     return $response;
+    
   }
   
   private function send($querystring) {
-    // Could not get Guzzle client to get a return value
-    // recieved this error 
-    //$response = $this->http_client->get($this->base_url . "?" . $querystring)->send();
-    //return file_get_contents($this->host . $this->base_url . "?" . $querystring)->send();
-    $request_url = $this->host . $this->base_url . "?" . $querystring;
-    $ch = curl_init();
-    $headers = array('Accept: application/xml');
-    curl_setopt($ch, CURLOPT_URL, $request_url);
-    curl_setopt($ch, CURLOPT_HEADER, 0);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER , 1);
-    $response = curl_exec($ch);
-    //return (string)$response->getBody();
-    curl_close($ch);
-    return $response;
+    $request =  $this->http_client->get($this->base_url . "?" . $querystring);
+    $request->addHeader("Accept", "application/xml");
+    //$request->addHeader("Accept-Charset", "UTF-8");
+    
+    $response = $request->send();
+  
+    return (string)$response->getBody();
+  
   }
   
 }

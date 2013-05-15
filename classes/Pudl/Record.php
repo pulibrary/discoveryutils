@@ -30,6 +30,7 @@ class Record
           $this->pudl_contributor = $this->crawler->filter('Object contributor')->text();
         } catch (\InvalidArgumentException $e) {   
           $this->pudl_origin = NULL;
+          $this->pudl_contributor = NULL;
         }
   }
   
@@ -41,7 +42,7 @@ class Record
       "collection" => $this->pudl_collection,
       "origin" => $this->pudl_origin,
       "url" => PudlLink::getLink($this->pudl_id),
-     // "contributor" => $this->pudl_contributor
+      "contributor" => $this->pudl_contributor
     );
   }
   

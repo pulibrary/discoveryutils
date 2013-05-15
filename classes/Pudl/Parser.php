@@ -19,8 +19,16 @@ class Parser
   }
  
   public function getHits() {
-    //how to get attributes?
-    
+    /*   
+    $root_element = $this->crawler->filterXPath("/");//->extract(array('total', 'start', 'next')); //->attr('total');
+    foreach ($root_element as $domElement) {
+      foreach($domElement->attributes as $value) {
+        print_r($value); 
+      }
+    }
+    //var_dump($root_element);
+    return $root_element;
+     */
     return $this->hits;
   }
   

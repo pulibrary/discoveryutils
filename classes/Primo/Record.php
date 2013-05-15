@@ -1,10 +1,12 @@
 <?php 
 namespace Primo;
 use Primo\Document as PrimoDocument;
+use Primo\Items\Archives as Archives;
 use Utilities\Parser as XmlParser;
 use Primo\PermaLink as Permalink;
 use Primo\SearchDeepLink as SearchDeepLink;
-use Primo\Holding as PrimoHolding;
+use Primo\Holdings\Holding as PrimoHolding;
+use Primo\Holdings\Archives as ArchivalHolding;
 
 Class Record 
 {
@@ -67,7 +69,7 @@ Class Record
     return $this->xpath->query($this->xpath_base.$path);
   }
   
-  // get the contents of one specific tag
+  // get the contents of one specific tag this should probably go
   private function getText($tag) {
     $textContent = '';
     $is_namespace = '/\w+:\w+/';
@@ -102,8 +104,7 @@ Class Record
     $source_path = "sear:LINKS//*";
     $nodeList = $this->query($source_path);
     foreach ($nodeList as $node) {
-      //$node->tagName; 
-      array_push($links, array($node->tagName, $node->textContent));
+      array_push($links, array($node->tagName => $node->textContent));
     }
     
     return $links;
@@ -115,11 +116,10 @@ Class Record
       
     $full_text_present = false;
     $available_links = $this->getAllLinks();
-    //print_r($available_links);
     foreach($available_links as $linktype) {
-      if($linktype[0] == "sear:linktorsrc") {
-        $full_text_link = $linktype[1];
-        $full_text_present = true;  
+      if(array_key_exists("sear:linktorsrc", $linktype)) {
+        $full_text_link = $linktype["sear:linktorsrc"];
+        $full_text_present = true;
       }
     }
     if($full_text_present) {
@@ -134,9 +134,9 @@ Class Record
     $full_text_present = false;
     $available_links = $this->getAllLinks();
     foreach($available_links as $linktype) {
-      if($linktype[0] == "sear:openurlfulltext") {
-        $full_text_link = $linktype[1];
-        $full_text_present = true;  
+      if(array_key_exists("sear:openurlfulltext", $linktype)) {
+        $full_text_link = $linktype["sear:openurlfulltext"];
+        $full_text_present = true;
       }
     }
     if($full_text_present) {
@@ -317,6 +317,79 @@ Class Record
     return $available_ids;
   }
 
+
+  public function getArchivalItems() {
+    $items = array();
+    $item_list = $this->getElements("lds48");
+    if($item_list->length > 0) {
+      foreach($item_list as $item) {
+        array_push($items, new \Primo\Items\Archives($item->textContent));
+      }
+    }
+
+    return $items;
+  }
+  
+  private function buildArchivalHoldings() {
+    $this->buildHoldings();
+    $holdings= $this->getHoldings();
+    $holding_params = array();
+    $holding_params['access'] = $this->getAccessStatement();
+    $holding_params['summary_statement'] = $this->getSummaryArchivesStatement();
+    $holding_params['add_information'] = $this->getArchivalAddedDescriptions();
+    $holding_params['call_number'] = $this->getArchivalCallNumber();
+    $holding_params['link_to_finding_aid'] = $this->getArchivesLinks();
+    $holding_params['library'] = $holdings[0]->primo_library;
+    return $holding_params;
+  }
+  
+  private function getAccessStatement() {
+    $access = $this->getElements("lds23");
+    return $access->item(0)->textContent;
+  }
+  
+  private function getSummaryArchivesStatement() {
+    $summary = $this->getElements("lds05");
+    return $summary->item(0)->textContent;
+  }
+  
+  
+  private function getArchivalAddedDescriptions() {
+    $added_info = $this->getElements("lds40");
+    return $added_info->item(0)->textContent;
+  }
+  
+  private function getArchivalCallNumber() {
+    $call_num = $this->getElements("lds28");
+    return $call_num->item(0)->textContent;
+  }
+  
+  /* gets link to finding aid 
+   * 
+   * Stored in LINKS/linktofa
+   * 
+   * */
+  
+  private function getArchivesLinks() {
+   
+    $links = $this->getAllLinks();
+    $link_to_finding_aid = NULL;
+    foreach ($links as $link) {
+      if(array_key_exists('linktofa', $link)) {
+        $link_to_finding_aid = $link['linktofa'];
+      }
+    }
+    return $link_to_finding_aid;
+  }
+  
+  public function getArchivalHoldings() {
+    // return an archival holdings object 
+    $holdings_info = $this->buildArchivalHoldings();
+    $archival_holdings = new ArchivalHolding($holdings_info);
+    
+    return $archival_holdings;
+  }
+
   private function buildHoldings() {
     $available_path = "def:PrimoNMBib/def:record/def:display/def:availlibrary";
     // need to check for another test 
@@ -345,7 +418,7 @@ Class Record
       if(isset($this->primo_server_connection['available.scopes'][$current_holding->primo_library]['name'])) {
         $library_label = $this->primo_server_connection['available.scopes'][$current_holding->primo_library]['name'];
       } else {
-        $library_label = "unknown";
+        $library_label = "can't find unknown";
       }
       array_push( $holdings_locations, array($current_holding->primo_library => array(
         'location_code' => $current_holding->location_code,
@@ -404,6 +477,20 @@ Class Record
     $fields = $this->getSectionFields($display_data);
     
     return $fields['title'][0];
+  }
+  
+  public function getSourceType() {
+    $control_information = $this->getElements('control');
+    $fields = $this->getControlFields($control_information);
+    
+    return $fields['sourceformat'];
+  }
+  
+  public function getSourceSystem() {
+    $control_information = $this->getElements('control');
+    $fields = $this->getControlFields($control_information);
+    
+    return $fields['sourcesystem'];
   }
   
   /* strip punctuation of the end of titles
@@ -530,6 +617,27 @@ Class Record
     return $section_values;
   }
   
+  private function getControlFields(\DOMNodeList $nodeList) {
+    $control_fields = array(
+      "sourceid",
+      "recordid",
+      "sourcesystem",
+      "sourceformat"
+    );
+    $control_values = array();
+    if($nodeList->length == 1) {
+      $data_elements = $nodeList->item(0);
+      if($data_elements->hasChildNodes()) {
+        foreach($control_fields as $field) {
+          $pnx_conrol_elements = $data_elements->getElementsByTagName($field); 
+          $control_values[$field] = $pnx_conrol_elements->item(0)->textContent;
+        }
+      }
+    }
+    
+    return $control_values;
+  }
+  
   public function getResourceLink() {
     //if($this->getFullTextLinktoSrc()) {
     //  $resource_link = $this->getFullTextLinktoSrc();
@@ -642,6 +750,31 @@ Class Record
     
   }
   
+  
+  /*
+   * Accepts a string that represents a record format type
+   * and returns true or false based on the return value
+   */
+  public function isA($type) {
+    if($type == $this->getFormatType()) {
+      return TRUE;
+    } else {
+      return FALSE;
+    }
+  }
+  
+  /*
+   * Test if record source is XML
+   * 
+   */
+  public function isXmlSource() {
+    $source_type = $this->getSourceType();
+    if($source_type == "XML") {
+      return TRUE;
+    } else {
+      return FALSE;
+    }
+  }
   /*
    * Check out Magic Methods Implementation for access to important properties
    */  

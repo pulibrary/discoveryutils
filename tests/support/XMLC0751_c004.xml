@@ -1,0 +1,106 @@
+<SEGMENTS xmlns="http://www.exlibrisgroup.com/xsd/jaguar/search">
+  <JAGROOT>
+    <RESULT>
+      <DOCSET TOTALHITS="1">
+        <DOC LOCAL="true">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>C0751_c004</sourcerecordid>
+                <sourceid>XML</sourceid>
+                <recordid>XMLC0751_c004</recordid>
+                <ilsapiid>C0751_c004</ilsapiid>
+                <sourceformat>XML</sourceformat>
+                <sourcesystem>Other</sourcesystem>
+              </control>
+              <display>
+                <type>archives</type>
+                <title>F. Scott Fitzgerald Subject File (correspondence)</title>
+                <creationdate>1927-1973</creationdate>
+                <language>eng</language>
+                <source>XML</source>
+                <availlibrary>$$IPRN$$LRECAP$$1Manuscripts Off-Site Storage (RCPXM)$$2C0751$$2box 1$$Scheck_holdings</availlibrary>
+                <lds05>Book Dealers -- Bruccoli, Matthew -- Bush, George F -- Crawford, Robert L -- Graham, Sheilah -- Harkness, Bruce -- House of Books, Ltd -- Isachenks, Georgi -- J.B. Lippincott Co -- Kalpofoulous?, Nina -- Kent State Univ. Press -- Kienbusch, Bill -- Kuehl, John -- LaTour, Dolly -- Lanahan, Scottie Fitzgerald -- Mackie, Elizabeth Beckwith -- Manning, Don -- Mintel, Marcia -- Nason, Thelma -- O'Shea, Paul C -- Piper, Dan -- Princeton Club of New York -- Princeton University, Class of 1917, Books by and about class members -- Princeton University, Class of 1917, Reunions -- Princeton University Library -- Reilly, Howard S -- Secondi, Joyce -- Stanton, Carey -- Turnbull, Andrew -- Yates, Donald A -- Miscellaneous Papers</lds05>
+                <lds23>Collection is open for research use.</lds23>
+                <lds28>C0751</lds28>
+                <lds30>Landon T. Raymond Papers on the Class of 1917</lds30>
+                <lds40>21 folders</lds40>
+                <lds43>Landon T. Raymond Papers on the Class of 1917</lds43>
+                <lds44>Consists of typescripts of letters by Landon T. Raymond (Princeton Class of 1917) to his parents and other family members while at Princeton University and overseas during World War I; a diary for 1918; a file of correspondence related to his collection of books by and about members of the Class of 1917, especially F. Scott Fitzgerald.</lds44>
+                <lds45>Raymond, Landon Thomas, 1897-1988.</lds45>
+                <lds48>$$Yrcpxm$$2C0751$$Ebox 1</lds48>
+                <availinstitution>$$IPRN$$Scheck_holdings</availinstitution>
+                <availpnx>available</availpnx>
+              </display>
+              <links>
+                <linktoholdings>$$Uhttp://arks.princeton.edu/ark:/88435/pz50gw123$$Elinktofa</linktoholdings>
+                <linktofa>$$Uhttp://arks.princeton.edu/ark:/88435/pz50gw123$$Elinktofa</linktofa>
+              </links>
+              <search>
+                <title>F. Scott Fitzgerald Subject File (correspondence)</title>
+                <sourceid>XML</sourceid>
+                <recordid>XMLC0751_c004</recordid>
+                <toc>Book Dealers -- Bruccoli, Matthew -- Bush, George F -- Crawford, Robert L -- Graham, Sheilah -- Harkness, Bruce -- House of Books, Ltd -- Isachenks, Georgi -- J.B. Lippincott Co -- Kalpofoulous?, Nina -- Kent State Univ. Press -- Kienbusch, Bill -- Kuehl, John -- LaTour, Dolly -- Lanahan, Scottie Fitzgerald -- Mackie, Elizabeth Beckwith -- Manning, Don -- Mintel, Marcia -- Nason, Thelma -- O'Shea, Paul C -- Piper, Dan -- Princeton Club of New York -- Princeton University, Class of 1917, Books by and about class members -- Princeton University, Class of 1917, Reunions -- Princeton University Library -- Reilly, Howard S -- Secondi, Joyce -- Stanton, Carey -- Turnbull, Andrew -- Yates, Donald A -- Miscellaneous Papers</toc>
+                <rsrctype>archives</rsrctype>
+                <addtitle>Landon T. Raymond Papers on the Class of 1917 -- F. Scott Fitzgerald Subject File (correspondence)</addtitle>
+                <searchscope>XML</searchscope>
+                <searchscope>EAD</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>XML</scope>
+                <scope>EAD</scope>
+                <scope>PRN</scope>
+                <lsr05>C0751</lsr05>
+                <lsr30>Landon T. Raymond Papers on the Class of 1917</lsr30>
+                <lsr31>Landon T. Raymond Papers on the Class of 1917 -- F. Scott Fitzgerald Subject File (correspondence)</lsr31>
+              </search>
+              <sort>
+                <title>F. Scott Fitzgerald Subject File (correspondence)</title>
+              </sort>
+              <facets>
+                <language>eng</language>
+                <creationdate>1927</creationdate>
+                <prefilter>archives</prefilter>
+                <rsrctype>archives</rsrctype>
+                <frbrgroupid>5623237</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>99</t>
+              </dedup>
+              <frbr>
+                <t>99</t>
+              </frbr>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <addata>
+                <aulast>Landon T. Raymond Papers on the Class of 1917 -- F. Scott Fitzgerald Subject File (correspondence)</aulast>
+                <addtitle>Landon T. Raymond Papers on the Class of 1917 -- F. Scott Fitzgerald Subject File (correspondence)</addtitle>
+                <lad21>box 1</lad21>
+                <lad24>box 1</lad24>
+                <lad25>folder 6 folder 7 folder 8 folder 9 folder 10 folder 11 folder 12 folder 13 folder 14 folder 15 folder 16 folder 17 folder 18 folder 19 folder 20 folder 21 folder 22 folder 23 folder 24 folder 25 folder 26</lad25>
+              </addata>
+            </record>
+          </PrimoNMBib>
+          <GETIT deliveryCategory="Physical Item" GetIt1="OVP" GetIt2="http://sfx.princeton.edu:9003/sfx_pul?"/>
+          <LIBRARIES>
+            <LIBRARY>
+              <institution>PRN</institution>
+              <library>RECAP</library>
+              <status>check_holdings</status>
+              <collection>Manuscripts Off-Site Storage (RCPXM)</collection>
+              <callNumber>C0751</callNumber>
+              <url>OVP</url>
+            </LIBRARY>
+          </LIBRARIES>
+          <LINKS>
+            <thumbnail/>
+            <linktoholdings>OVP</linktoholdings>
+            <linktofa>http://arks.princeton.edu/ark:/88435/pz50gw123</linktofa>
+          </LINKS>
+        </DOC>
+      </DOCSET>
+    </RESULT>
+  </JAGROOT>
+</SEGMENTS>

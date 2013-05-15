@@ -1,0 +1,42 @@
+
+
+{% block content %}
+<div id="holdings{{ record_id }}">
+    <p>Access: {{ archival_holding.access }}</p>
+    <p>Included: {{ archival_holding.summary_statement }}</p>
+    <p>Description: {{ archival_holding.add_information }}</p>
+    <p>
+        <a href="{{ archival_holding.link_to_finding_aid }}" title="View Finding Aid for {{ doc_title }}">
+            Review Finding Aid for additional Details
+        </a>
+    </p>
+    <div class="archival-items">
+        <table class="archival-item-list EXLLocationTable">
+            <thead>
+            <tr>
+                <th>Code</th>
+                <th>Box</th>
+                <th>Description</th>
+                <th>Request Options</th>
+            </tr>
+            </thead>
+            <tbody>
+            {%  for item in items %}
+                <tr>
+                    <td class="EXLLocationTableMargin">{{ item.location_code }}, {{ item.call_number }}</td>
+                    <td class="EXLLocationTableColumn1">{{ item.box_number }}</td>
+                    <td class="EXLLocationTableColumn2">
+                    {% if item.series_details is defined %}
+                        {{ item.series_details }}
+                    {% endif %}
+                    </td>
+                    <td class="EXLLocationTableColumn3">
+                        <a href='https://libweb10.princeton.edu/aeon/aeon.dll?'>Request</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

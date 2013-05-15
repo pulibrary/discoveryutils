@@ -1,10 +1,11 @@
 <?php
-namespace Primo;
+namespace Primo\Holdings;
 
 /* 
  * 
  * $$IPRN$$LRARE$$1Cotsen Children's Library (CTSN)$$288378$$Scheck_holdings$$30$$41$$5N$$60$$Xprincetondb$$Yctsn
  * $$IPRN$$LRECAP$$1(RCPPA)$$27500.503$$Savailable$$384$$40$$5Y$$636$$Xprincetondb$$Yrcppa$$OPRN_VOYAGER490930
+ * $$IPRN$$L$$1$$2DVD 4719$$Savailable$$31$$40$$5N$$610$$Xprincetondb$$Yvidlcirc - bad statment, no subfield "L"
  */
 
 class Holding

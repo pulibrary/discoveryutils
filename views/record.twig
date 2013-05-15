@@ -7,6 +7,11 @@
     <h1>Record: {{ rec_id }}</h1>
     
     <div id="record-data">
+      {% if pnx_response|length == 0 %}
+      <div id="no-results">
+      	<p>No Source Records Available</p>
+      </div>
+      {% endif %}
     	{% for record in pnx_response %}
     	<h2>{{ record.voyager_id }}</h2>
     	  <ul>

@@ -18,16 +18,21 @@ class AuthClientTest extends WebTestCase
     return $app;
   }
   
-    
-  public function testFailsFromUnauthorizedServer() {
+  public function testEmptyRecordResponse() {
     $client = $this->createClient();
     $crawler = $client->request('GET', '/record/PRN_VOYAGER5399326');
+    $response = $client->getResponse();
+    $response_code = $response->getStatusCode();
+    $this->assertEquals(200, $response_code);
+    $this->assertContains("No Source Record", $crawler->filter('body div p')->text());
   }
   
   public function testSucceedsFromAuthorizedServer() {
     $client = $this->createClient();
     $crawler = $client->request('GET', '/record/PRN_VOYAGER5399326');
-    
+    $response = $client->getResponse();
+    $response_code = $response->getStatusCode();
+    $this->assertEquals(200, $response_code);
   }
   
 }
