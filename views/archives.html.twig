@@ -5,8 +5,10 @@
     <dl>
         <dt>Access Statement</dt>
         <dd>{{ archival_holding.access }}</dd>
-        <dt>Summary</dt>
-        <dd>{{ archival_holding.summary_statement }}</dd>
+        {% if archival_holding.summary_statement is defined %}
+            <dt>Summary</dt>
+            <dd>{{ archival_holding.summary_statement }}</dd>
+        {% endif %}
         <dt>Description</dt>
         <dd>{{ archival_holding.add_information }}</dd>
         <dt>More Information</dt>
@@ -24,14 +26,12 @@
             </a>
 
         </dd>
-    </p>
     </dl>
     <div class="archival-items">
         <table class="archival-item-list EXLLocationTable">
             <thead>
             <tr>
-                <th>Code</th>
-                <th>Box</th>
+                <th>Box Number</th>
                 <th>Description</th>
                 <th>Request Options</th>
             </tr>
@@ -39,10 +39,11 @@
             <tbody>
             {%  for item in items %}
                 <tr>
-                    <td class="EXLLocationTableMargin">
-                        {{ archival_holding.library }},
-                        {{ item.location_code }},
-                        {{ item.call_number }}</td>
+                    <span style="display: none;">
+                    {{ archival_holding.library }},
+                    {{ item.location_code }},
+                    {{ item.call_number }}
+                    </span>
                     <td class="EXLLocationTableColumn1">{{ item.box_number }}</td>
                     <td class="EXLLocationTableColumn2">
                     {% if item.series_details is defined %}
