@@ -22,6 +22,7 @@ use Pulfa\Pulfa,
     Pulfa\Response as PulfaResponse;
 use Pudl\Pudl,
     Pudl\Response as PudlResponse;
+use Voyager\Voyager;
 
 $app = new Silex\Application(); 
 
@@ -64,7 +65,13 @@ $app['primo_server_connection'] = array(
   'record.request.base' => "http://library.princeton.edu/searchit/requests",
 );
 
+$app['voyager.connection'] = array(
+  'base.url' => "http://catalog.princeton.edu",
+  'html.base' => "/cgi-bin/Pwebrecon.cgi",
+  'vxws.port' => "7014"
+);
 
+# summon api key located in summon.yml
 
 $app['summon.connection'] = Yaml::parse(__DIR__.'/../conf/summon.yml');
 $app['pulfa'] = array(
@@ -380,6 +387,32 @@ $app->get('/archives/{rec_id}', function($rec_id) use($app) {
     'environment' => $app['environment']['env'],
   ));
 })->assert('rec_id', '\w+');
+
+
+/*
+ * Route to return voyager holdings via html screen scraping
+ */
+
+$app->get('/voyager/holdings/{rec_id}', function ($rec_id) use ($app) {
+    $voyager_client = new \Voyager\Voyager($app['voyager.connection']);
+    $doc_body = $voyager_client->getHoldings($app->escape($rec_id));
+    return new Response($doc_body, 200, array('Content-Type' => 'text/html'));
+})->assert('rec_id', '\d+');
+
+/*
+ * Return On order status & assocaited messages via JSON
+ */
+
+$app->get('/voyager/order/{rec_id}.json', function ($rec_id) use ($app) {
+    $voyager_client = new \Voyager\Voyager($app['voyager.connection']);
+    $doc_body = $voyager_client->getHoldings($app->escape($rec_id));
+    $voyager_record = new \Voyager\Record($doc_body);
+    $on_order_response = array();
+    $on_order_response['on_order'] = $voyager_record->isOnOrder();
+    $on_order_response['order_messages'] = $voyager_record->getOnOrderMessage();
+    return new JsonResponse($on_order_response);
+})->assert('rec_id', '\d+');
+
 
 /*
  * Generic "services" route to all for querying of specific primo services
