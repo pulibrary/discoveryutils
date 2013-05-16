@@ -15,7 +15,13 @@ class VoyagerHoldingsTest extends \PHPUnit_Framework_TestCase {
         $this->serial_with_current_issues = new \Voyager\Record($serial_with_current_print_holdings);
     }
 
-    function testGetVoyagerHoldings() {
+
+    function testHasCurrentSerialHoldings() {
+        $this->assertTrue($this->serial_with_current_issues->hasCurrentSerials());
+    }
+
+    function testGetCurrentSerialHoldings() {
+        $this->assertInternalType('array', $this->serial_with_current_issues->getCurrentSerialHoldings());
 
     }
 

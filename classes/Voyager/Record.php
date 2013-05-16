@@ -17,6 +17,14 @@ class Record
         }
     }
 
+    public function hasCurrentSerials() {
+        if($this->crawler->filter('TR TH:contains("Location has (current):")')->count() > 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public function isOnOrder() {
 
         if($this->crawler->filter('TR TH:contains("Order information:")')->count() == 1) {
@@ -38,6 +46,25 @@ class Record
         }
 
         return $order_messages;
+
+    }
+
+    public function getCurrentSerialHoldings() {
+        $serial_holdings = array();
+        if($this->hasCurrentSerials()) {
+            #$current_listings = $this->crawler->filter('TH:contains("Location has (current):")');
+            #print_r($current_listings->count());
+            #$serial_holdings['values'] = $current_listings->each(function ($node, $i) {
+            #        return $node;
+            #
+            #    }
+            #);
+            #$holdings = $this->crawler->filterXPath('//TR/TH[contains("Location has (current):")/following-sibling::TD');
+        }
+        $num_holdings = $this->crawler->filter('TR TH:contains("Location has (current):")')->count();
+        #print_r($this->crawler->filter('TR TH:contains("Location has (current):")')->eq(0)->text());
+        $serial_holdings['number'] = $num_holdings;
+        return $serial_holdings;
 
     }
 }
