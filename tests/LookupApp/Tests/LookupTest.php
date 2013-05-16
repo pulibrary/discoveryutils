@@ -24,13 +24,10 @@ class LookupTest extends WebTestCase
     $json_data = $client->getResponse()->getContent();
     $this->assertContains("PRN_VOYAGER6109368", $json_data); // not a good test html_data is sent back not json data does contain the string though 
   }
-  
-  public function testSinglePrimoRecordResponse() {
-    
+
+  public function testVoyagerConnection() {
+      $client = $this->createClient();
+      $crawler = $client->request('GET', '/voyager/holdings/7446612');
+      $this->assertTrue($crawler->filter('html:contains("WebVoyage Record Brief View")')->count() == 1);
   }
-  
-  public function testCompositePrimoRecordResponse() {
-    
-  }
-  
 }

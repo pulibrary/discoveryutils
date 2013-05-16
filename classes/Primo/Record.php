@@ -363,12 +363,20 @@ Class Record
 
   private function getArchivalCollectionDescription() {
     $added_info = $this->getElements("lds44");
-    return $added_info->item(0)->textContent;
+     if($added_info->length > 0) {
+        return $added_info->item(0)->textContent;
+     } else {
+        return null;
+     }
   }
 
   private function getArchivalCollectionTitle() {
     $added_info = $this->getElements("lds43");
-    return $added_info->item(0)->textContent;
+    if($added_info->length > 0) {
+        return $added_info->item(0)->textContent;
+    } else {
+        return null;
+    }
   }
 
   private function getArchivalCallNumber() {
