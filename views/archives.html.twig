@@ -1,19 +1,19 @@
 
 
 {% block content %}
-<div id="holdings{{ record_id }}">
-    <ul>
+<div class="archival-holdings" id="holdings{{ record_id }}">
+    <ul class="archival-holdings-summary">
         <li>
-            <span>Access Statement: </span>
+            <span>Restrictions on Access: </span>
             {{ archival_holding.access }}
          </li>
          <li>
-            <span>Physical Description: </span>
+            <span>Quantity of Material: </span>
             {{ archival_holding.add_information }}
         </li>
         {% if archival_holding.summary_statement is defined %}
             <li>
-                <span>Contents Summary: </span>
+                <span>Summary: </span>
                 {{ archival_holding.summary_statement }}
             </li>
         {% endif %}
@@ -68,7 +68,7 @@
                     {% endif %}
                     </td>
                     <td class="EXLLocationTableColumn3">
-                        <a class="btn small info" href='https://libweb10.princeton.edu/aeon/aeon.dll?'>Request</a>
+                        <a class="btn small info" href='https://libweb10.princeton.edu/aeon/aeon.dll?'>Request this Box</a>
                     </td>
                 </tr>
             {% endfor %}
