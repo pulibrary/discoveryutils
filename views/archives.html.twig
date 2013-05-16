@@ -48,8 +48,8 @@
         <table class="archival-item-list EXLLocationTable">
             <thead>
             <tr>
-                <th>Box Number</th>
                 <th>Description</th>
+                <th>Box Number</th>
                 <th>Request Options</th>
             </tr>
             </thead>
@@ -61,12 +61,12 @@
                     {{ item.location_code }},
                     {{ item.call_number }}
                     </span>
-                    <td class="EXLLocationTableColumn1">{{ item.box_number }}</td>
                     <td class="EXLLocationTableColumn2">
-                    {% if item.series_details is defined %}
-                        {{ item.series_details }}
-                    {% endif %}
+                        {% if item.series_details is defined %}
+                            {{ item.series_details }}
+                        {% endif %}
                     </td>
+                    <td class="EXLLocationTableColumn1">{{ item.box_number }}</td>
                     <td class="EXLLocationTableColumn3">
                         <a class="btn small info" href='https://libweb10.princeton.edu/aeon/aeon.dll?'>Request this Box</a>
                     </td>
