@@ -55,7 +55,7 @@
             </thead>
             <tbody>
             {%  for item in items %}
-                <tr class="archiva-item-{{ item.call_number }}-{{ loop.index }}">
+                <tr class="archival-item-{{ item.call_number }} list-item-{{ loop.index }}">
                     <span style="display: none;">
                     {{ archival_holding.library }},
                     {{ item.location_code }},
