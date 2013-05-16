@@ -5,12 +5,20 @@
     <dl>
         <dt>Access Statement</dt>
         <dd>{{ archival_holding.access }}</dd>
+        <dt>Description</dt>
+        <dd>{{ archival_holding.add_information }}</dd>
         {% if archival_holding.summary_statement is defined %}
             <dt>Summary</dt>
             <dd>{{ archival_holding.summary_statement }}</dd>
         {% endif %}
-        <dt>Description</dt>
-        <dd>{{ archival_holding.add_information }}</dd>
+        {% if archival_holding.collection_title is defined %}
+            <dt>Summary</dt>
+            <dd>{{ archival_holding.collection_title }}</dd>
+        {% endif %}
+        {% if archival_holding.collection_description is defined %}
+            <dt>Summary</dt>
+            <dd>{{ archival_holding.collection_description }}</dd>
+        {% endif %}
         <dt>More Information</dt>
         <dd>
             <a href="{{ archival_holding.link_to_finding_aid }}" title="View Finding Aid for {{ doc_title }}">

@@ -339,6 +339,8 @@ Class Record
     $holding_params['add_information'] = $this->getArchivalAddedDescriptions();
     $holding_params['call_number'] = $this->getArchivalCallNumber();
     $holding_params['link_to_finding_aid'] = $this->getArchivesLinks();
+    $holding_params['collection_title'] = $this->getArchivalCollectionTitle();
+    $holding_params['collection_description'] = $this->getArchivalCollectionDescription();
     $holding_params['library'] = $holdings[0]->primo_library;
     return $holding_params;
   }
@@ -358,7 +360,17 @@ Class Record
     $added_info = $this->getElements("lds40");
     return $added_info->item(0)->textContent;
   }
-  
+
+  private function getArchivalCollectionDescription() {
+    $added_info = $this->getElements("lds44");
+    return $added_info->item(0)->textContent;
+  }
+
+  private function getArchivalCollectionTitle() {
+    $added_info = $this->getElements("lds43");
+    return $added_info->item(0)->textContent;
+  }
+
   private function getArchivalCallNumber() {
     $call_num = $this->getElements("lds28");
     return $call_num->item(0)->textContent;
