@@ -775,8 +775,6 @@ Class Record
       return FALSE;
     }
   }
-  /*
-   * Check out Magic Methods Implementation for access to important properties
-   */  
+
 }
 ?>
