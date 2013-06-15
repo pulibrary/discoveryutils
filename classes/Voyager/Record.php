@@ -39,7 +39,8 @@ class Record
         $order_messages = array();
         if($this->isOnOrder()) {
             $order_messages = $this->crawler->filter('TR TH:contains("Order information:")')->siblings()->each(function ($node, $i) {
-                    return trim($node->nodeValue);
+
+                    return trim($node->eq(0)->text());
                 }
 
             );
@@ -52,19 +53,49 @@ class Record
     public function getCurrentSerialHoldings() {
         $serial_holdings = array();
         if($this->hasCurrentSerials()) {
-            #$current_listings = $this->crawler->filter('TH:contains("Location has (current):")');
-            #print_r($current_listings->count());
-            #$serial_holdings['values'] = $current_listings->each(function ($node, $i) {
-            #        return $node;
-            #
-            #    }
-            #);
+            $current_listings = $this->crawler->filter('TH:contains("Location has (current):")');
+
+            $serial_holdings['values'] = $current_listings->each(function ($node, $i) {
+                    #$current_holdings_string = $node->siblings()->eq(0)->text();
+                    return $node->siblings()->eq(0)->text();
+
+
+                }
+            );
             #$holdings = $this->crawler->filterXPath('//TR/TH[contains("Location has (current):")/following-sibling::TD');
         }
         $num_holdings = $this->crawler->filter('TR TH:contains("Location has (current):")')->count();
         #print_r($this->crawler->filter('TR TH:contains("Location has (current):")')->eq(0)->text());
         $serial_holdings['number'] = $num_holdings;
+
         return $serial_holdings;
 
+    }
+
+    public function getLocations() {
+        $serial_holdings = array();
+        if($this->hasCurrentSerials()) {
+            $current_listings = $this->crawler->filter('TH:contains("Location:")');
+
+            #$next_current = $current_listings->parents()->siblings()->filter('TR TH:contains("Location has (current):")');
+            #echo $next_current->siblings()->eq(0)->text();
+            #$current_listings->siblings()->each(function ($node, $i) {
+            #    echo $node->eq(0)->text();
+            #});
+            $serial_holdings['values'] = $current_listings->each(function ($node, $i) {
+                    $next_current = $node->parents()->siblings()->filter('TR TH:contains("Location has (current):")');
+                    $current_issues = $next_current->siblings()->eq($i)->text();
+                    #$current_issues = $node->siblings()->eq(0)->text();
+                    return array($node->siblings()->eq(0)->text(), $current_issues);
+
+                }
+            );
+            #$holdings = $this->crawler->filterXPath('//TR/TH[contains("Location has (current):")/following-sibling::TD');
+        }
+        $num_holdings = $this->crawler->filter('TR TH:contains("Location:")')->count();
+        #print_r($this->crawler->filter('TR TH:contains("Location has (current):")')->eq(0)->text());
+        $serial_holdings['number'] = $num_holdings;
+
+        return $serial_holdings;
     }
 }

@@ -12,7 +12,6 @@ use Primo\Record as PrimoRecord,
     Primo\Query as PrimoQuery,
     Primo\Client as PrimoClient,
     Primo\SearchDeepLink as SearchDeepLink,
-    Primo\RequestClient as RequestClient,
     Primo\Response as PrimoResponse,
     Primo\ScopeList as PrimoScopeList;
 use Summon\Summon,
@@ -23,6 +22,7 @@ use Pulfa\Pulfa,
 use Pudl\Pudl,
     Pudl\Response as PudlResponse;
 use Voyager\Voyager;
+use Utilities\CoreSearchLink;
 
 $app = new Silex\Application(); 
 
@@ -80,6 +80,12 @@ $app['pulfa'] = array(
   'num.records.brief.display' => 3,
 );
 
+$app['library.core'] = array(
+  'host' => "http://librarybeta.princeton.edu",
+  'all.search.path' => "find/all",
+  'db.search.path' => "research/databases/search"
+);
+
 $app['pudl'] = array(
   'host' => "http://pudl.princeton.edu",
   'base' => "/pudl/Objects",
@@ -135,6 +141,17 @@ $app->get('/', function() use($app) {
 });
 
 /*
+ * Forms to route data to library core search securely
+ */
+$app->get('/libraryforms', function() use($app) {
+   return $app['twig']->render('forms.html.twig', array(
+        'environment' => $app['environment']['env'],
+        'title' => "Sample Forms for Library Core System"
+       )
+    );
+});
+
+/*
  * Redirect Route to Primo Deep Link for IDs
  */
 $app->match('/show/{rec_id}', function($rec_id) use($app) {
@@ -166,6 +183,10 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, array("COURSE"));
   } elseif($tab == "blended") {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, array("PRN", "SummonThirdNode"));
+  } elseif($tab == "coreall") {
+    $deep_search_link = new CoreSearchLink($app['library.core']['host'], $app['library.core']['all.search.path'] , $app->escape($query));
+  } elseif($tab == 'dball') {
+    $deep_search_link = new CoreSearchLink($app['library.core']['host'] , $app['library.core']['db.search.path'] , $app->escape($query));
   } else {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, array("OTHERS", "FIRE")); //WATCHOUT - Order Matters 
   }
