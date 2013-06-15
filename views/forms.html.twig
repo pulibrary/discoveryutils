@@ -1,0 +1,23 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <div class="content">
+
+        <div class="main-body">
+            <div id="all-search">
+                <h2>Main Site Search All</h2>
+                <form method="GET" target="_blank" action="search/coreall">
+                    <input type="text" name="query" size="60" />
+                    <input type="submit" value="Submit All Search" />
+                </form>
+            </div>
+            <div id="database-search">
+                <h2>Main Site Database Search</h2>
+                <form method="GET" target="_blank" action="search/dball">
+                    <input type="text" name="query" size="60" />
+                    <input type="submit" value="Submit DB Search" />
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
