@@ -2,49 +2,56 @@
 
 namespace Pudl;
 
-use Symfony\Component\DomCrawler\Crawler as DomCrawler;
 use Pudl\Record as PudlRecord;
+use Utilities\Parser as XmlParser;
 
 
 
 class Parser
 {
   private $records = array();
-  private $hits;
-  
+  //private $namespaces = array(
+  //  "pulfa" => "http://library.princeton.edu/pudl",
+//);
+
   function __construct($xml) {
-    $this->crawler = new DomCrawler($xml);
-    $this->records = $this->loadRecords();
-    $this->hits = count($this->records);
+      $dom = XmlParser::convertToDOMDocument($xml);
+      $this->root_element = $dom->documentElement;
+      $this->xpath = $this->loadXPath($dom);
+      //foreach($this->namespaces as $prefix => $namespace) {
+      //    $this->xpath->registerNamespace($prefix, $namespace);
+      //}
+      $this->loadRecords();
   }
- 
-  public function getHits() {
-    /*   
-    $root_element = $this->crawler->filterXPath("/");//->extract(array('total', 'start', 'next')); //->attr('total');
-    foreach ($root_element as $domElement) {
-      foreach($domElement->attributes as $value) {
-        print_r($value); 
-      }
+
+
+  private function loadXPath($dom) {
+    try {
+        return new \DOMXPath($dom);
+    } catch (Exception $e) {
+        return "Error Parsing Pudl Search Results: " . $e->getMessage();
     }
-    //var_dump($root_element);
-    return $root_element;
-     */
-    return $this->hits;
-  }
-  
+    }
+
+  private function query($path) {
+    return $this->xpath->query($path);
+    }
+
   private function loadRecords() {
-    /* closure returns an array of records */
-    $records = $this->crawler->filter('Objects Object')->each(function ($node, $i) {
-      $record = new PudlRecord($node);  
-      return $record->getRecordData();
-    });
-  
-    return $records;
-    
-  }
-  
+    $records = $this->xpath->query("//Object");
+    foreach($records as $record) {
+        $record = new \Pudl\Record($record);
+        array_push($this->records, $record->getRecordData());
+    }
+    }
+
   public function getRecords() {
     return $this->records;
-  }
-  
+    }
+
+  public function getHits() {
+
+    return $this->root_element->getAttribute("total");
+    }
+
 }
