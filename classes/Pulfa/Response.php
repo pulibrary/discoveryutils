@@ -24,6 +24,7 @@ class Response
     $response['number'] = $this->hits;
     $response['more'] = $this->more_link->getLink();
     foreach($this->records as $record) {
+      //$rec_data = $record->getRecordData();
       $response['records'][] = array(
         'title' => $record->title,
         'url' => $record->uri,

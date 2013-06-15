@@ -6,7 +6,6 @@ use Pudl\Parser as PudlParser;
 class Response
 {
   private $records;
-  private $response_uri;
   private $hits;
   private $more = "http://pudl.princeton.edu/results.php?f1=kw&v1=";
   private $query;

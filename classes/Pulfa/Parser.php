@@ -42,10 +42,6 @@ class Parser
     } 
   }
   
-  private function loadParams() {
-    
-  }
-  
   public function getRecords() {
     return $this->records;
   }
