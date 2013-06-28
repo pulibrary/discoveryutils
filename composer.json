@@ -15,6 +15,7 @@
   },
   "autoload": {
     "psr-0": {
+      "Console": "classes/",
       "Primo": "classes/",
       "Summon" : "classes/",
       "Pulfa" : "classes/",
