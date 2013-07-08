@@ -37,11 +37,11 @@ $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.logfile'       => __DIR__.'/../log/usage.log',
     'monolog.level'         => 'Logger::DEBUG'
 ));
-
+/*
 $app->register(new Silex\Provider\HttpCacheServiceProvider(), array(
     'http_cache.cache_dir' => __DIR__.'/../cache/',
 ));
-
+*/
 /* Define possible search tabs */
 $app['search_tabs'] = array(
   array("index" => "location", "label" => "Catalog+ (Primo/Searchit)"),

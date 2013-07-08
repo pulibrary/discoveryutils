@@ -7,5 +7,6 @@ $app = require dirname(__FILE__).'/src/app.php';
 if($app['debug']) {
   $app->run();
 } else {
-  $app['http_cache']->run(); 
+  //$app['http_cache']->run(); 
+  $app->run();
 }
