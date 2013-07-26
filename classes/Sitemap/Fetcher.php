@@ -2,13 +2,10 @@
 
 namespace Sitemap;
 use Guzzle\Http\Client as HttpClient;
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 /**
- * Description of SitemapCrawler
+ * Description of SitemapFetcher
  *
  * @author KevinReiss
  */

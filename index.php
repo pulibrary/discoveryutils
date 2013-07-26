@@ -7,6 +7,7 @@ $app = require dirname(__FILE__).'/src/app.php';
 if($app['debug']) {
   $app->run();
 } else {
+  //if deployed behind varnish no need for Silex file system cache
   //$app['http_cache']->run(); 
   $app->run();
 }

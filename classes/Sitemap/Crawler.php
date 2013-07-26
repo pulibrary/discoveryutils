@@ -14,6 +14,28 @@ namespace Sitemap;
  */
 class Crawler {
     
+    /*
+     * Purges and Reloads Item into Cache
+     */
+    public function refresh_url($url, $http_client) {
+        
+        
+        return;
+    }
+    
+    /*
+     * Removes item from cache
+     */
+    
+    public function purge() {
+        
+    }
+    
+    /* 
+     * Adds an Item to the Cache
+     */
+    
+    public function 
     
 }
 

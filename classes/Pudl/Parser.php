@@ -42,7 +42,7 @@ class Parser
     foreach($records as $record) {
         $record = new \Pudl\Record($record);
         array_push($this->records, $record->getRecordData());
-    }
+        }
     }
 
   public function getRecords() {
