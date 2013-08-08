@@ -1,9 +1,11 @@
 <html>
 	<head>
 		<title>{{ title }} - Mode: {{ environment }}</title>
+                
+                <link rel="stylesheet" href="../css/bootstrap.min.css">
 	</head>
 	<body>
-		<div id="header">
+		<div class="container" id="header">
 			{% block header %}
 				{% include 'header.html.twig' %}
 			{% endblock %}
@@ -12,10 +14,13 @@
 		{%block content %}
 		{% endblock %}
 		
-		<div id="footer">
+		<div class="container" id="footer">
 			{%block footer %}
 				{% include 'footer.html.twig' %}
 			{%endblock %}
 		</div>
+                <script src="http://code.jquery.com/jquery.js"></script>
+                <script src="../js/bootstrap.min.js"></script>
+
 	</body>
 </html>
