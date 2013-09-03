@@ -82,7 +82,7 @@ $app['pulfa'] = array(
 );
 
 $app['library.core'] = array(
-  'host' => "http://librarybeta.princeton.edu",
+  'host' => "http://library.princeton.edu",
   'all.search.path' => "find/all",
   'db.search.path' => "research/databases/search"
 );
@@ -147,7 +147,10 @@ $app->get('/', function() use($app) {
 $app->get('/libraryforms', function() use($app) {
    return $app['twig']->render('forms.html.twig', array(
         'environment' => $app['environment']['env'],
-        'title' => "Sample Forms for Library Core System"
+        'title' => "Sample Forms for Library Core System",
+        'host' => $app['library.core']['host'],
+        'allsearch' => $app['library.core']['all.search.path'],
+        'dbsearch'=> $app['library.core']['db.search.path'],
        )
     );
 });
