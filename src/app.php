@@ -60,7 +60,7 @@ $app['primo_server_connection'] = array(
   'default_view_id' => 'PRINCETON',
   'default_pnx_source_id' => 'PRN_VOYAGER',
   //'default.scope' => array("ALL+PRINCETON+LIBRARIES"),
-  'default.scope' => array("OTHERS","FIRE","RECAP"),
+  'default.scope' => array("OTHERS","FIRE","RECAP","EAD"),
   'default.search' => "contains",
   'num.records.brief.display' => 5,
   'available.scopes' => $library_scopes,
@@ -398,7 +398,7 @@ $app->get('/availability/{rec_id}.json', function($rec_id) use($app) {
 
 $app->get('/archives/{rec_id}', function($rec_id) use($app) {
   $connection = $app['primo_server_connection'];
-  $connection['base_url'] = 'http://chiprist01v1.hosted.exlibrisgroup.com:1701/';
+  //$connection['base_url'] = 'http://chiprist01v1.hosted.exlibrisgroup.com:1701/';
   $test_client = new \Primo\Client($connection);
   $record_response = $test_client->getID($app->escape($rec_id));
   $app['monolog']->addInfo("Availability Lookup: " . $app->escape($rec_id));
