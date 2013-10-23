@@ -64,7 +64,7 @@ $app['primo_server_connection'] = array(
   'default.search' => "contains",
   'num.records.brief.display' => 5,
   'available.scopes' => $library_scopes,
-  'record.request.base' => "http://library.princeton.edu/requests",
+  'record.request.base' => "http://library.princeton.edu/requests/",
 );
 
 $app['voyager.connection'] = array(
