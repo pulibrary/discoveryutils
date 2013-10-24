@@ -62,7 +62,7 @@ $app['primo_server_connection'] = array(
   'default.search' => "contains",
   'num.records.brief.display' => 5,
   'available.scopes' => $library_scopes,
-  'record.request.base' => "http://library.princeton.edu/searchit/requests",
+  'record.request.base' => "http://library.princeton.edu/requests",
 );
 
 $app['voyager.connection'] = array(
@@ -96,7 +96,7 @@ $app['locator.base'] = "http://library.princeton.edu/catalogs/locator/PRODUCTION
 // get primo scopes via webservices http://searchit.princeton.edu/PrimoWebServices/xservice/getscopesofview?viewId=PRINCETON
 $app['stackmap'] = Yaml::parse(__DIR__.'/../conf/stackmap.yml');
 
-$app['locations.base'] = "http://libserv5.princeton.edu/requests/locationservice.php";
+$app['locations.base'] = "http://library.princeton.edu/requests/locationservice.php";
 $app['locations.list'] = json_decode(__DIR__.'/../conf/locations.json');
 
 // set up a configured primo client to reuse throughout the project
@@ -465,9 +465,15 @@ $app->post('/locations', function() use ($app) {
     
   $locations = json_decode(file_get_contents($app['locations.base']), TRUE);
   ksort($locations);
-  file_put_contents(__DIR__.'/../conf/locations.json', json_encode($locations));
+  $location_codes = array();
+  foreach($locations as $loc_key => $loc_value) {
+    $loc_value['voyagerLocationCode'] = $loc_key;
+    array_push($location_codes, $loc_value);
+  }
+
+  file_put_contents(__DIR__.'/../log/locations.json', json_encode($location_codes));
   
-  return new JsonResponse($locations);
+  return new JsonResponse($location_codes);
   
 });
 
