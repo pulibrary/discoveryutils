@@ -53,16 +53,18 @@ $app['search_tabs'] = array(
 $library_scopes = Yaml::parse(__DIR__.'/../conf/scopes.yml');
 
 $app['primo_server_connection'] = array(
+  //'base_url' => 'http://princeton-dc04.hosted.exlibrisgroup.com/',
+  //'base_url' => 'http://chiprist01v1.hosted.exlibrisgroup.com:1701/',
   'base_url' => 'http://searchit.princeton.edu',
-   //'base_url' => 'http://chiprist01v1.hosted.exlibrisgroup.com:1701/',
   'institution' => 'PRN',
   'default_view_id' => 'PRINCETON',
   'default_pnx_source_id' => 'PRN_VOYAGER',
-  'default.scope' => array("OTHERS","FIRE"),
+  //'default.scope' => array("ALL+PRINCETON+LIBRARIES"),
+  'default.scope' => array("OTHERS","FIRE","RECAP","EAD"),
   'default.search' => "contains",
   'num.records.brief.display' => 5,
   'available.scopes' => $library_scopes,
-  'record.request.base' => "http://library.princeton.edu/requests",
+  'record.request.base' => "http://library.princeton.edu/requests/",
 );
 
 $app['voyager.connection'] = array(
@@ -81,7 +83,7 @@ $app['pulfa'] = array(
 );
 
 $app['library.core'] = array(
-  'host' => "http://librarybeta.princeton.edu",
+  'host' => "http://library.princeton.edu",
   'all.search.path' => "find/all",
   'db.search.path' => "research/databases/search"
 );
@@ -146,7 +148,10 @@ $app->get('/', function() use($app) {
 $app->get('/libraryforms', function() use($app) {
    return $app['twig']->render('forms.html.twig', array(
         'environment' => $app['environment']['env'],
-        'title' => "Sample Forms for Library Core System"
+        'title' => "Sample Forms for Library Core System",
+        'host' => $app['library.core']['host'],
+        'allsearch' => $app['library.core']['all.search.path'],
+        'dbsearch'=> $app['library.core']['db.search.path'],
        )
     );
 });
@@ -188,7 +193,7 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
   } elseif($tab == 'dball') {
     $deep_search_link = new CoreSearchLink($app['library.core']['host'] , $app['library.core']['db.search.path'] , $app->escape($query));
   } else {
-    $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, array("OTHERS", "FIRE")); //WATCHOUT - Order Matters 
+    $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, $app['primo_server_connection']['default.scope']); //WATCHOUT - Order Matters 
   }
   $app['monolog']->addInfo("TAB:" . $tab . "\tQUERY:" . $query . "\tREDIRECT:" . $deep_search_link->getLink() . "\tREFERER:" . $referer);
   return $app->redirect($deep_search_link->getLink());
@@ -393,7 +398,7 @@ $app->get('/availability/{rec_id}.json', function($rec_id) use($app) {
 
 $app->get('/archives/{rec_id}', function($rec_id) use($app) {
   $connection = $app['primo_server_connection'];
-  $connection['base_url'] = 'http://chiprist01v1.hosted.exlibrisgroup.com:1701/';
+  //$connection['base_url'] = 'http://chiprist01v1.hosted.exlibrisgroup.com:1701/';
   $test_client = new \Primo\Client($connection);
   //$record_response = $test_client->getID($app->escape($rec_id));
   $record_response = file_get_contents(dirname(__FILE__).'../../tests/support/XMLC0101_c0.xml');
@@ -472,9 +477,8 @@ $app->post('/locations', function() use ($app) {
   }
 
   file_put_contents(__DIR__.'/../log/locations.json', json_encode($location_codes));
-  
+
   return new JsonResponse($location_codes);
-  
 });
 
 $app->get('/locations', function() use ($app) {
@@ -739,7 +743,7 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
   } 
   if ($search_results) {
     $response = new PrimoResponse($search_results, $app['primo_server_connection']);
-    $deep_link = new SearchDeepLink($query, $app->escape($index_type), $operator, $app['primo_server_connection'], 'location', array("OTHERS", "FIRE"), $primo_query->getFacets());
+    $deep_link = new SearchDeepLink($query, $app->escape($index_type), $operator, $app['primo_server_connection'], 'location', $app['primo_server_connection']['default.scope'], $primo_query->getFacets());
     $response_data = array(
       'query' => $app->escape($query),
       'number' => $response->getHits(),
