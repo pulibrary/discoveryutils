@@ -37,11 +37,11 @@ $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.logfile'       => __DIR__.'/../log/usage.log',
     'monolog.level'         => 'Logger::DEBUG'
 ));
-
+/*
 $app->register(new Silex\Provider\HttpCacheServiceProvider(), array(
     'http_cache.cache_dir' => __DIR__.'/../cache/',
 ));
-
+*/
 /* Define possible search tabs */
 $app['search_tabs'] = array(
   array("index" => "location", "label" => "Catalog+ (Primo/Searchit)"),
@@ -400,15 +400,17 @@ $app->get('/archives/{rec_id}', function($rec_id) use($app) {
   $connection = $app['primo_server_connection'];
   //$connection['base_url'] = 'http://chiprist01v1.hosted.exlibrisgroup.com:1701/';
   $test_client = new \Primo\Client($connection);
-  $record_response = $test_client->getID($app->escape($rec_id));
+  //$record_response = $test_client->getID($app->escape($rec_id));
+  $record_response = file_get_contents(dirname(__FILE__).'../../tests/support/XMLC0101_c0.xml');
   $app['monolog']->addInfo("Availability Lookup: " . $app->escape($rec_id));
 
   $record = new \Primo\Record($record_response, $app['primo_server_connection']);
+  //print_r($record->getArchivalHoldings());
   return $app['twig']->render('archives.html.twig', array(
     'record_id' => $rec_id, 
     'archival_holding' => $record->getArchivalHoldings(),
     'items' => $record->getArchivalItems(),
-    'title' => "Archival Holdings for" . $record->getTitle(),
+    'title' => "Finding Aids: " . $record->getTitle(),
     'doc_title' => $record->getTitle(),
     'environment' => $app['environment']['env'],
   ));
@@ -473,10 +475,10 @@ $app->post('/locations', function() use ($app) {
     $loc_value['voyagerLocationCode'] = $loc_key;
     array_push($location_codes, $loc_value);
   }
-  file_put_contents(__DIR__.'/../conf/locations.json', json_encode($location_codes));
-  
+
+  file_put_contents(__DIR__.'/../log/locations.json', json_encode($location_codes));
+
   return new JsonResponse($location_codes);
-  
 });
 
 $app->get('/locations', function() use ($app) {

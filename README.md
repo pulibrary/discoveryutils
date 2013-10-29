@@ -15,4 +15,4 @@ To Install
 
 
 To Configure
-1. File out /conf/summon.yml with summon connection panels 
+1. File out /conf/summon.yml with summon client key and host name 
