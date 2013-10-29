@@ -15,9 +15,9 @@ class SiteMapTest extends \PHPUnit_Framework_TestCase {
   }
   
   function testGetAllUrls() {
-      $this->sitemap->printUrls();
+      //$this->sitemap->printUrls();
       $this->assertInternalType('array', $this->sitemap->getAllUrls());
-      $this->assertEquals(2463, $this->sitemap->getNumUrls());
+      $this->assertEquals(2503, $this->sitemap->getNumUrls());
       
   }
   

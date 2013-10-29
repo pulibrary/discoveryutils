@@ -13,7 +13,7 @@ class Fetcher {
     //put your code here
     
     public static function loadSiteMap($host) {
-        $request =  $this->http_client->get($this->host . "/sitemap.xml");
+        $request =  $this->http_client->get($host . "/sitemap.xml");
         $request->addHeader("Accept", "application/xml");
        
     

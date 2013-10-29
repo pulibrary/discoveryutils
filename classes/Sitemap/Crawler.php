@@ -35,7 +35,9 @@ class Crawler {
      * Adds an Item to the Cache
      */
     
-    public function 
+    public function add() {
+        
+    }
     
 }
 
