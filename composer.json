@@ -9,18 +9,20 @@
     "symfony/yaml" : "2.3.*",
     "twig/twig" : "1.13.*",
     "monolog/monolog" : "1.4.*",
-    "guzzle/guzzle": "3.4.*",
+    "guzzle/guzzle": "3.7.*",
     "swiftmailer/swiftmailer" : "4.3.*",
     "silex/web-profiler": "~1.0"
   },
   "autoload": {
     "psr-0": {
+      "Console": "classes/",
       "Primo": "classes/",
       "Summon" : "classes/",
       "Pulfa" : "classes/",
       "Utilities": "classes/",
       "Pudl" : "classes/",
-      "Voyager" : "classes"
+      "Voyager" : "classes/",
+      "Sitemap" : "classes/"
     }
   },
   "minimum-stability": "dev"

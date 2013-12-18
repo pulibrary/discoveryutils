@@ -1,35 +1,31 @@
-
+{% extends "layout.html.twig" %}
 
 {% block content %}
-<div class="archival-holdings" id="holdings{{ record_id }}">
-    <ul class="archival-holdings-summary">
-         <li>
-            <span>Quantity of Material: </span>
-            {{ archival_holding.add_information }}
-        </li>
+<div class="container archival-holdings" id="holdings{{ record_id }}">
+    <dl class="dl-horizontal archival-holdings-summary">
+        <dt>Quantity of Material</dt>
+        <dd>{{ archival_holding.add_information }}</dd>
         {% if archival_holding.summary_statement is defined %}
-            <li>
-                <span>Summary: </span>
-                {{ archival_holding.summary_statement }}
-            </li>
+            <dt>Summary</dt>
+            <dd>{{ archival_holding.summary_statement }}</dd>
         {% endif %}
-        <li>
-        <span>More Information: </span>
+        <!--
+        <dt>More Information</dt>
+        <dd>
             <a href="{{ archival_holding.link_to_finding_aid }}" title="View Finding Aid for {{ doc_title }}">
                 Source Finding Aid
-            </a>
-            &nbsp;|&nbsp;
-            <a href="http://librarybeta.princeton.edu/searchit/archives/{{ record_id }}">
-                Full Archival Holdings Page
             </a>
             &nbsp;|&nbsp;
             <a href="http://libwebdev.princeton.edu/searchit/record/{{ record_id }}.xml">
                 Source PNX
             </a>
-        </li>
-    </ul>
+        </dd>
+        -->
+        <dt>Restrictions on Access</dt>
+        <dd>{{ archival_holding.access }}</dd>
+    </dl>
     <div class="archival-items">
-        <table class="archival-item-list EXLLocationTable">
+        <table class="table .table-striped archival-item-list EXLLocationTable">
             <thead>
             <tr>
                 <th>Description</th>
@@ -52,7 +48,7 @@
                     </td>
                     <td class="EXLLocationTableColumn1">{{ item.box_number }}</td>
                     <td class="EXLLocationTableColumn3">
-                        <a class="btn small info" href='https://libweb10.princeton.edu/aeon/aeon.dll?'>Request this Box</a>
+                        <a class="btn btn-info" href='https://libweb10.princeton.edu/aeon/aeon.dll?'>Request this Box</a>
                     </td>
                 </tr>
             {% endfor %}
