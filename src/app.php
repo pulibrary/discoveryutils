@@ -94,7 +94,7 @@ $app['pudl'] = array(
   'num.records.brief.display' => 3,
 );
 
-$app['locator.base'] = "http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php";
+$app['locator.base'] = "http://library.princeton.edu/locator/index.php";
 // get primo scopes via webservices http://searchit.princeton.edu/PrimoWebServices/xservice/getscopesofview?viewId=PRINCETON
 $app['stackmap'] = Yaml::parse(__DIR__.'/../conf/stackmap.yml');
 
