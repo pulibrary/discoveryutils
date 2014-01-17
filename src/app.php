@@ -84,7 +84,7 @@ $app['pulfa'] = array(
 );
 
 $app['library.core'] = array(
-  'host' => "http://liblocal.princeton.edu",
+  'host' => "http://library.princeton.edu",
   'all.search.path' => "find/all",
   'db.search.path' => "research/databases/search"
 );
