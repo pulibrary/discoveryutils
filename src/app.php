@@ -48,6 +48,7 @@ $app['search_tabs'] = array(
   array("index" => "summon", "label" => "Articles + (Summon)"),
   array("index" => "course", "label" => "Course Reserves"),
   array("index" => "blended", "label" => "Catalog and Summon"),
+  array("index" => "mendel", "label" => "Mendel Library Audio"),
 );
 
 $library_scopes = Yaml::parse(__DIR__.'/../conf/scopes.yml');
@@ -83,7 +84,7 @@ $app['pulfa'] = array(
 );
 
 $app['library.core'] = array(
-  'host' => "http://library.princeton.edu",
+  'host' => "http://liblocal.princeton.edu",
   'all.search.path' => "find/all",
   'db.search.path' => "research/databases/search"
 );
@@ -184,7 +185,10 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
       "s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t)",      
       "keep_r" => "true" )
     );
-  } elseif($tab == "course") {
+  } elseif($tab == "mendel") {
+    $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], "location", array("MUSIC"), array('facet_rtype,exact,audio'));
+  }
+    elseif($tab == "course") {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, array("COURSE"));
   } elseif($tab == "blended") {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, array("PRN", "SummonThirdNode"));
