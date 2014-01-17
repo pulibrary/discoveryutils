@@ -107,9 +107,9 @@ Class Query
     $facet_string = "";  
     if(count($this->facet_filters) > 0) {
       $encoded_facets = array_map('urlencode', $this->facet_filters);
-      $facet_string = implode("&query=", $encoded_facets);
+      $facet_string = implode("&query_inc=", $encoded_facets);
       
-      $facet_string = "&query=" . $facet_string;
+      $facet_string = "&query_inc=" . $facet_string;
     }
     
     return $facet_string; 
