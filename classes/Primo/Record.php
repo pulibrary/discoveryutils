@@ -326,10 +326,17 @@ Class Record
         array_push($items, new \Primo\Items\Archives($item->textContent));
       }
     }
-
     return $items;
   }
-  
+ 
+  private function getFindingAidPath() {
+    $finding_aid_base = "http://findingaids.princeton.edu/collections/";
+    $ead_id = str_replace('EAD', '', $this->getRecordID());
+    //$ead_id = $this->getRecordID();
+    $ead_path = str_replace('_', '/', $ead_id);
+    return $finding_aid_base . $ead_path;
+  }
+
   private function buildArchivalHoldings() {
     $this->buildHoldings();
     $holdings= $this->getHoldings();
@@ -342,6 +349,29 @@ Class Record
     $holding_params['collection_title'] = $this->getArchivalCollectionTitle();
     $holding_params['collection_description'] = $this->getArchivalCollectionDescription();
     $holding_params['library'] = $holdings[0]->primo_library;
+    $source = $this->getSourceID();
+ 
+    if ($source == 'EAD') {
+      $holding_params['request_url'] = $this->getFindingAidPath();
+      $holding_params['request_label'] = "Request Via Finding Aid";
+    } elseif ($source == 'Visuals') {
+      $aeon_params = array(
+        'ReferenceNumber' => $this->getRecordID(),
+        'Site' => 'RARE',
+        'CallNumber' => $this->getOtherCallNum(),
+        'Location' => 'ga',
+        'Action' => '10',
+        'Form' => '21',
+	'ItemTitle' => $this->getTitle(),
+        'ItemVolume' => $this->getOtherSubTitle(),
+        'SubLocation' => $this->getOtherItemInfoFour(),
+        'ItemInfo1' => 'Reading Room Access Only',
+       
+      );
+      $holding_params['request_url'] = "https://libweb10.princeton.edu/aeon/aeon.dll?" . http_build_query($aeon_params);
+      $holding_params['request_label'] = "Reading Room Request";
+    }
+    
     return $holding_params;
   }
   
@@ -349,7 +379,22 @@ Class Record
     $access = $this->getElements("lds23");
     return $access->item(0)->textContent;
   }
-  
+ 
+   public function getOtherCallNum() {
+    $element_data = $this->getElements("lds29");
+    return $element_data->item(0)->textContent;
+  }
+
+  public function getOtherItemInfoFour() {
+    $element_data = $this->getElements("lds42");
+    return $element_data->item(0)->textContent;
+  }
+
+  public function getOtherSubTitle() {
+    $element_data = $this->getElements("lds43");
+    return $element_data->item(0)->textContent;
+  }
+ 
   private function getSummaryArchivesStatement() {
     $summary = $this->getElements("lds05");
     return $summary->item(0)->textContent;
@@ -512,7 +557,14 @@ Class Record
     
     return $fields['sourcesystem'];
   }
-  
+ 
+  public function getSourceID() {
+    $control_information = $this->getElements('control');
+    $fields = $this->getControlFields($control_information);
+    
+    return $fields['sourceid'];
+  }
+ 
   /* strip punctuation of the end of titles
    * 
    */

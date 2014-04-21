@@ -20,6 +20,8 @@ class Archives
     "E" => "box_number",
     "C" => "series_details",
     "2" => "call_number",
+    "B" => "item_number",
+    "I" => "shelf_location",
   ); 
   
   private $subfields = array();

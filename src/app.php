@@ -402,19 +402,19 @@ $app->get('/availability/{rec_id}.json', function($rec_id) use($app) {
 
 $app->get('/archives/{rec_id}', function($rec_id) use($app) {
   $connection = $app['primo_server_connection'];
-  //$connection['base_url'] = 'http://chiprist01v1.hosted.exlibrisgroup.com:1701/';
   $test_client = new \Primo\Client($connection);
-  //$record_response = $test_client->getID($app->escape($rec_id));
-  $record_response = file_get_contents(dirname(__FILE__).'../../tests/support/XMLC0101_c0.xml');
+  $record_response = $test_client->getID($app->escape($rec_id));
+  //$record_response = file_get_contents(dirname(__FILE__).'../../tests/support/XMLC0101_c0.xml');
   $app['monolog']->addInfo("Availability Lookup: " . $app->escape($rec_id));
 
   $record = new \Primo\Record($record_response, $app['primo_server_connection']);
   //print_r($record->getArchivalHoldings());
   return $app['twig']->render('archives.html.twig', array(
+    'source' => $record->getSourceID(),
     'record_id' => $rec_id, 
     'archival_holding' => $record->getArchivalHoldings(),
     'items' => $record->getArchivalItems(),
-    'title' => "Finding Aids: " . $record->getTitle(),
+    'title' => "Reading Room Request: " . $record->getTitle(),
     'doc_title' => $record->getTitle(),
     'environment' => $app['environment']['env'],
   ));
