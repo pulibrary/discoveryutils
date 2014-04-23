@@ -224,7 +224,7 @@ $app->get('/record/{rec_id}.xml', function($rec_id) use($app) {
   } else {
     return new Response($record_data, 200, array('Content-Type' => 'application/xml'));
   }
-})->assert('rec_id', '\w+'); 
+})->assert('rec_id', '(\w+|EADMC\d+\.?\w+)');
 
 $app->get('/record/{rec_id}.ris', function($rec_id) use($app) {
   $record_data = $app['primo_client']->getID($app->escape($rec_id));
@@ -418,7 +418,7 @@ $app->get('/archives/{rec_id}', function($rec_id) use($app) {
     'doc_title' => $record->getTitle(),
     'environment' => $app['environment']['env'],
   ));
-})->assert('rec_id', '\w+');
+})->assert('rec_id', '(\w+|EADMC\d+\.?\w+)');
 
 
 /*
