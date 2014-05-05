@@ -17,6 +17,10 @@
             </a>
         </dd>
         {% endif %}
+        {% if items|length > 1 %}
+            <dt>Request</dt>
+            <dd><a class="btn small info" target="_blank" href='{{ archival_holding.request_url }}'>{{ archival_holding.request_label }}</a></dd>
+        {% endif %}
     </dl>
     <div class="archival-items">
         <table class="table .table-striped archival-item-list EXLLocationTable">
@@ -24,7 +28,9 @@
             <tr class="EXLLocationTitlesRow">
                 <th>Description</th>
                 <th>Number</th>
-                <th>Request Options</th>
+                {% if items|length == 1 %}
+                    <th>Request Options</th>
+                {% endif %}
             </tr>
             {%  for item in items %}
                 <tr class="archival-item-{{ item.call_number }} list-item-{{ loop.index }}">
@@ -43,9 +49,11 @@
                             {{ item.box_number }}
 		        {% endif %}
 		    </td>
-                    <td class="EXLLocationTableColumn3">
-                        <a class="btn small info" target="_blank" href='{{ archival_holding.request_url }}'>{{ archival_holding.request_label }}</a>
-                    </td>
+                    {% if items|length == 1 %}
+                       <td class="EXLLocationTableColumn3">
+                            <a class="btn small info" target="_blank" href='{{ archival_holding.request_url }}'>{{ archival_holding.request_label }}</a>
+                       </td>
+                    {% endif %}
                 </tr>
             {% endfor %}
             </tbody>
