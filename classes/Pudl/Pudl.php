@@ -49,9 +49,13 @@ class Pudl
     //$request->addHeader("Accept-Charset", "UTF-8");
     
     $response = $request->send();
-  
-    return (string)$response->getBody();
-  
+    $body = (string)$response->getBody();
+    if(strlen($body) == 0) {
+      $empty_doc = "<Objects start='0' total='0'><facets/></Objects>";
+      return $empty_doc;
+    } else { 
+      return (string)$response->getBody();
+    }
   }
   
 }
