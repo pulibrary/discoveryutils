@@ -35,7 +35,7 @@ $app->register(new Provider\UrlGeneratorServiceProvider());
 
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.logfile'       => __DIR__.'/../log/usage.log',
-    'monolog.level'         => 'Logger::DEBUG'
+    'monolog.level'         => 'INFO'
 ));
 /*
 $app->register(new Silex\Provider\HttpCacheServiceProvider(), array(
