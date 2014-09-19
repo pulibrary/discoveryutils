@@ -9,7 +9,7 @@
             <dt>Summary</dt>
             <dd>{{ archival_holding.summary_statement }}</dd>
         {% endif %}
-        {% if archival_holding.link_to_finding_aid %}
+        {% if archival_holding.link_to_finding_aid is defined %}
         <dt>More Information</dt>
         <dd>
             <a href="{{ archival_holding.link_to_finding_aid }}" title="View Finding Aid for {{ doc_title }}">
@@ -22,6 +22,34 @@
             <dd><a class="btn small info" target="_blank" href='{{ archival_holding.request_url }}'>{{ archival_holding.request_label }}</a></dd>
         {% endif %}
     </dl>
+    {% if items|length == 0 %}
+     <div class="archival-items">
+        <table class="table table-striped archival-item-list EXLLocationTable">
+            <tbody>
+            <tr class="EXLLocationTitlesRow">
+                <th>Description</th>
+                <th>Number</th>
+                <th>Request Options</th>
+            </tr>
+            <tr>
+                <td class="EXLLocationTableColumn1">
+                    {{ archival_holding.library }}
+
+                </td>
+                <td class="EXLLocationTableColumn2">
+                    {{ archival_holding.call_number }}
+                </td>
+                <td class="EXLLocationTableColumn3>
+                    <a class="btn small info" target="_blank" 
+                    href='{{ archival_holding.request_url }}'>
+                    {{ archival_holding.request_label }}</a>
+                </td>
+            </tr>
+           </tbody>
+        </table>
+     </div>
+    {% endif %}
+    {% if items|length != 0 %}
     <div class="archival-items">
         <table class="table .table-striped archival-item-list EXLLocationTable">
             <tbody>
@@ -59,5 +87,6 @@
             </tbody>
         </table>
     </div>
+    {% endif %}
 </div>
 {% endblock %}
