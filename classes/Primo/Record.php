@@ -106,7 +106,6 @@ Class Record
     foreach ($nodeList as $node) {
       array_push($links, array($node->tagName => $node->textContent));
     }
-    
     return $links;
   }
   
@@ -341,20 +340,38 @@ Class Record
     $this->buildHoldings();
     $holdings= $this->getHoldings();
     $holding_params = array();
-    $holding_params['access'] = $this->getAccessStatement();
-    $holding_params['summary_statement'] = $this->getSummaryArchivesStatement();
-    $holding_params['add_information'] = $this->getArchivalAddedDescriptions();
-    $holding_params['call_number'] = $this->getArchivalCallNumber();
-    $holding_params['link_to_finding_aid'] = $this->getArchivesLinks();
-    $holding_params['collection_title'] = $this->getArchivalCollectionTitle();
-    $holding_params['collection_description'] = $this->getArchivalCollectionDescription();
     $holding_params['library'] = $holdings[0]->primo_library;
+    $holding_params['add_information'] = $this->getArchivalAddedDescriptions();
     $source = $this->getSourceID();
- 
+    $aeon_params = array();
     if ($source == 'EAD') {
+      $holding_params['add_information'] = $this->getArchivalAddedDescriptions();
+      $holding_params['call_number'] = $this->getArchivalCallNumber();
+      $holding_params['summary_statement'] = $this->getSummaryArchivesStatement();
+      $holding_params['access'] = $this->getAccessStatement();
       $holding_params['request_url'] = $this->getFindingAidPath();
       $holding_params['request_label'] = "Request Via Finding Aid";
+      $holding_params['link_to_finding_aid'] = $this->getArchivesLinks();
+      $holding_params['collection_title'] = $this->getArchivalCollectionTitle();
+      $holding_params['collection_description'] = $this->getArchivalCollectionDescription();
+    } elseif ($source == 'Theses') {
+      $holding_params['call_number'] = $this->getOtherCallNum();
+      $aeon_params = array(
+        'ReferenceNumber' => $this->getRecordID(),
+        'Site' => 'MUDD',
+        'CallNumber' => $this->getOtherCallNum(),
+        'Location' => 'mudd',
+        'Action' => '10',
+        'Form' => '21',
+        'ItemTitle' => $this->getTitle(),
+        'ItemAuthor' => $this->getCreator(),
+        'ItemDate' => $this->getCreationDate(),
+        'ItemInfo1' => 'Reading Room Access Only',
+       
+      );
+
     } elseif ($source == 'Visuals') {
+      $holding_params['call_number'] = $this->getOtherCallNum();
       $aeon_params = array(
         'ReferenceNumber' => $this->getRecordID(),
         'Site' => 'RARE',
@@ -362,16 +379,16 @@ Class Record
         'Location' => 'ga',
         'Action' => '10',
         'Form' => '21',
-	'ItemTitle' => $this->getTitle(),
+	      'ItemTitle' => $this->getTitle(),
         'ItemVolume' => $this->getOtherSubTitle(),
         'SubLocation' => $this->getOtherItemInfoFour(),
         'ItemInfo1' => 'Reading Room Access Only',
        
       );
-      $holding_params['request_url'] = "https://libweb10.princeton.edu/aeon/aeon.dll?" . http_build_query($aeon_params);
-      $holding_params['request_label'] = "Reading Room Request";
     }
-    
+    $holding_params['request_url'] = "https://libweb10.princeton.edu/aeon/aeon.dll?" . http_build_query($aeon_params);
+    $holding_params['request_label'] = "Reading Room Request";
+
     return $holding_params;
   }
   
@@ -440,8 +457,8 @@ Class Record
     $links = $this->getAllLinks();
     $link_to_finding_aid = NULL;
     foreach ($links as $link) {
-      if(array_key_exists('linktofa', $link)) {
-        $link_to_finding_aid = $link['linktofa'];
+      if(array_key_exists('sear:linktofa', $link)) {
+        $link_to_finding_aid = $link['sear:linktofa'];
       }
     }
     return $link_to_finding_aid;
