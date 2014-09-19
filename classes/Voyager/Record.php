@@ -74,6 +74,7 @@ class Record
 
     public function getLocations() {
         $serial_holdings = array();
+        /* FIXME - Can't scrap holding details properly
         if($this->hasCurrentSerials()) {
             $current_listings = $this->crawler->filter('TH:contains("Location:")');
 
@@ -83,7 +84,7 @@ class Record
             #    echo $node->eq(0)->text();
             #});
             $serial_holdings['values'] = $current_listings->each(function ($node, $i) {
-                    $next_current = $node->parents()->siblings()->filter('TR TH:contains("Location has (current):")');
+                    $next_current = $node->parents()->siblings()->filter('TH:contains("Location has (current):")');
                     $current_issues = $next_current->siblings()->eq($i)->text();
                     #$current_issues = $node->siblings()->eq(0)->text();
                     return array($node->siblings()->eq(0)->text(), $current_issues);
@@ -92,7 +93,8 @@ class Record
             );
             #$holdings = $this->crawler->filterXPath('//TR/TH[contains("Location has (current):")/following-sibling::TD');
         }
-        $num_holdings = $this->crawler->filter('TR TH:contains("Location:")')->count();
+        */
+        $num_holdings = $this->crawler->filter('TH:contains("Location:")')->count();
         #print_r($this->crawler->filter('TR TH:contains("Location has (current):")')->eq(0)->text());
         $serial_holdings['number'] = $num_holdings;
 

@@ -1,0 +1,69 @@
+<sear:SEGMENTS xmlns:sear="http://www.exlibrisgroup.com/xsd/jaguar/search"><sear:JAGROOT><sear:RESULT><sear:DOCSET TOTALHITS="1"><sear:DOC LOCAL="true"><PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+<record>
+<control>
+<sourcerecordid>151781</sourcerecordid> 
+<sourceid>Theses</sourceid> 
+<recordid>Theses151781</recordid> 
+<ilsapiid>151781</ilsapiid> 
+<sourceformat>XML</sourceformat> 
+<sourcesystem>Other</sourcesystem> 
+</control>
+<display>
+<type>seniorthesis</type> 
+<title>Lost in Translation: How Emerson and Thoreau Helped Gandhi to Reinvent the Bhagavad Gita</title> 
+<creator>Praveen G. Murthy</creator> 
+<contributor>Princeton University. Department of Religion</contributor> 
+<creationdate>2010</creationdate> 
+<language>eng</language> 
+<source>Theses</source> 
+<availlibrary>$$IPRN$$LMUDD$$2AC102 24717$$Ymudd$$Scheck_holdings</availlibrary> 
+<lds06>Advisor(s): Gold, Jonathan C.</lds06> 
+<lds29>AC102 24717</lds29> 
+<lds39>2010</lds39> 
+<lds40>104 pages</lds40> 
+<availinstitution>$$IPRN$$Scheck_holdings</availinstitution><availpnx>unavailable</availpnx></display>
+<search>
+<creatorcontrib>Princeton University. Department of Religion</creatorcontrib> 
+<creatorcontrib>Murthy, Praveen G.</creatorcontrib> 
+<title>Lost in Translation: How Emerson and Thoreau Helped Gandhi to Reinvent the Bhagavad Gita</title> 
+<sourceid>Theses</sourceid> 
+<recordid>Theses151781</recordid> 
+<rsrctype>seniorthesis</rsrctype> 
+<searchscope>Theses</searchscope> 
+<searchscope>EAD</searchscope> 
+<searchscope>OTHERS</searchscope> 
+<searchscope>PRN</searchscope> 
+<scope>Theses</scope> 
+<scope>EAD</scope> 
+<scope>OTHERS</scope> 
+<scope>PRN</scope> 
+<lsr05>AC102 24717</lsr05> 
+<lsr39>2010</lsr39> 
+</search>
+<sort>
+<title>Lost in Translation: How Emerson and Thoreau Helped Gandhi to Reinvent the Bhagavad Gita</title> 
+<creationdate>2010</creationdate> 
+<author>Praveen G. Murthy</author> 
+</sort>
+<facets>
+<language>eng</language> 
+<creationdate>2010</creationdate> 
+<prefilter>seniorthesis</prefilter> 
+<rsrctype>seniorthesis</rsrctype> 
+<creatorcontrib>Princeton University. Department of Religion</creatorcontrib> 
+<creatorcontrib>Murthy, P</creatorcontrib> 
+<frbrgroupid>379448349</frbrgroupid><frbrtype>6</frbrtype></facets>
+<dedup>
+<t>99</t> 
+</dedup>
+<delivery>
+<institution>PRN</institution> 
+<delcategory>Physical Item</delcategory> 
+</delivery>
+<browse>
+<author>Princeton University. Department of Religion</author> 
+<author>Murthy, Praveen G.</author> 
+<title>Lost in Translation: How Emerson and Thoreau Helped Gandhi to Reinvent the Bhagavad Gita</title> 
+<callnumber>AC102 24717</callnumber> 
+</browse>
+</record></PrimoNMBib><sear:GETIT deliveryCategory="Physical Item" GetIt1="OVP" GetIt2=""/><sear:LIBRARIES><sear:LIBRARY><sear:institution>PRN</sear:institution><sear:library>MUDD</sear:library><sear:status>check_holdings</sear:status><sear:collection/><sear:callNumber>AC102 24717</sear:callNumber><sear:url>OVP</sear:url></sear:LIBRARY></sear:LIBRARIES><sear:LINKS><sear:thumbnail/></sear:LINKS></sear:DOC></sear:DOCSET></sear:RESULT></sear:JAGROOT></sear:SEGMENTS>

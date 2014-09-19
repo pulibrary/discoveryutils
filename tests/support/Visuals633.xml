@@ -1,0 +1,135 @@
+<SEGMENTS xmlns="http://www.exlibrisgroup.com/xsd/jaguar/search">
+  <JAGROOT>
+    <RESULT>
+      <DOCSET TOTALHITS="1">
+        <DOC LOCAL="true">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>633</sourcerecordid>
+                <sourceid>Visuals</sourceid>
+                <recordid>Visuals633</recordid>
+                <ilsapiid>633</ilsapiid>
+                <sourceformat>XML</sourceformat>
+                <sourcesystem>Other</sourcesystem>
+              </control>
+              <display>
+                <type>image</type>
+                <title>A discovery concerning ghosts: [11 illustrations]</title>
+                <creator>Cruikshank, George, 1792-1878</creator>
+                <creationdate>1863</creationdate>
+                <format>Size of sheet: 11.5 x 15.3 cm. 12 x 10.2 cm. 8 x 12.6 cm [average]</format>
+                <subject>Cruikshank, George, 1792-1878. Discovery concerning ghosts--Illustrations</subject>
+                <subject>English literature--19th century--Illustrations</subject>
+                <subject>Ghosts in art</subject>
+                <subject>Illustration of books--Great Britain--19th century--Design</subject>
+                <subject>Satire, English--19th century--Illustrations</subject>
+                <language>zxx</language>
+                <source>Visuals</source>
+                <availlibrary>$$IPRN$$LRARE$$2GC022$$3British Prints/19th c./Cruikshank, George/A B-A L$$Yga$$Scheck_holdings</availlibrary>
+                <lds06>Item description: Eleven woodcuts by George Cruikshank, for illustrations in "A discovery concerning ghosts": p. 1, "Enter ghost", signed, "G. CK"; p. 7, "Portrait of Napoleon", signed "G. CK"; p. 9, "haunted cellar,", signed, "G. CK"; p. 11, ...</lds06>
+                <lds06>Reference: Cohn 209</lds06>
+                <lds06>Donor: Gift of Richard W. Meirs, Princeton University class of 1888.</lds06>
+                <lds21>Woodcuts--19th century</lds21>
+                <lds21>Prints--19th century</lds21>
+                <lds29>GC022</lds29>
+                <lds36>British Prints/19th c./Cruikshank, George/A B-A L</lds36>
+                <lds38>Size of sheet: 11.5 x 15.3 cm. 12 x 10.2 cm. 8 x 12.6 cm [average]</lds38>
+                <lds39>1863</lds39>
+                <lds42>Graphic Arts, 1st Floor, GC022</lds42>
+                <lds43>GC022 Cruikshank Collection</lds43>
+                <lds48>$$Yga$$2GC022$$EBritish Prints/19th c./Cruikshank, George/A B-A L$$IGraphic Arts, 1st Floor, GC022</lds48>
+                <availinstitution>$$IPRN$$Scheck_holdings</availinstitution>
+                <availpnx>unavailable</availpnx>
+              </display>
+              <search>
+                <creatorcontrib>Cruikshank, George, 1792-1878</creatorcontrib>
+                <title>A discovery concerning ghosts: [11 illustrations]</title>
+                <title>GC022 Cruikshank Collection</title>
+                <subject>Cruikshank, George, 1792-1878. Discovery concerning ghosts--Illustrations</subject>
+                <subject>English literature--19th century--Illustrations</subject>
+                <subject>Ghosts in art</subject>
+                <subject>Illustration of books--Great Britain--19th century--Design</subject>
+                <subject>Satire, English--19th century--Illustrations</subject>
+                <subject>Woodcuts--19th century</subject>
+                <subject>Prints--19th century</subject>
+                <sourceid>Visuals</sourceid>
+                <recordid>Visuals633</recordid>
+                <rsrctype>image</rsrctype>
+                <creationdate>1863</creationdate>
+                <searchscope>Visuals</searchscope>
+                <searchscope>EAD</searchscope>
+                <searchscope>OTHERS</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>Visuals</scope>
+                <scope>EAD</scope>
+                <scope>OTHERS</scope>
+                <scope>PRN</scope>
+                <lsr05>GC022</lsr05>
+              </search>
+              <sort>
+                <title>A discovery concerning ghosts: [11 illustrations]</title>
+                <creationdate>1863</creationdate>
+                <author>Cruikshank, George, 1792-1878</author>
+              </sort>
+              <facets>
+                <language>und</language>
+                <creationdate>1863</creationdate>
+                <topic>Cruikshank, George, 1792-1878. Discovery concerning ghosts--Illustrations</topic>
+                <topic>English literature--19th century--Illustrations</topic>
+                <topic>Ghosts in art</topic>
+                <topic>Illustration of books--Great Britain--19th century--Design</topic>
+                <topic>Satire, English--19th century--Illustrations</topic>
+                <topic>Woodcuts--19th century</topic>
+                <topic>Prints--19th century</topic>
+                <prefilter>image</prefilter>
+                <rsrctype>images</rsrctype>
+                <creatorcontrib>Cruikshank, G</creatorcontrib>
+                <genre>Woodcuts--19th century</genre>
+                <genre>Prints--19th century</genre>
+                <frbrgroupid>267885171</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>99</t>
+              </dedup>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <addata>
+                <lad21>British Prints/19th c./Cruikshank, George/A B-A L</lad21>
+              </addata>
+              <browse>
+                <author>Cruikshank, George, 1792-1878</author>
+                <title>A discovery concerning ghosts: [11 illustrations]</title>
+                <subject>Cruikshank, George, 1792-1878. Discovery concerning ghosts--Illustrations</subject>
+                <subject>English literature--19th century--Illustrations</subject>
+                <subject>Ghosts in art</subject>
+                <subject>Illustration of books--Great Britain--19th century--Design</subject>
+                <subject>Satire, English--19th century--Illustrations</subject>
+                <subject>Woodcuts--19th century</subject>
+                <subject>Prints--19th century</subject>
+                <callnumber>GC022</callnumber>
+              </browse>
+            </record>
+          </PrimoNMBib>
+          <GETIT deliveryCategory="Physical Item" GetIt1="OVP" GetIt2=""/>
+          <LIBRARIES>
+            <LIBRARY>
+              <institution>PRN</institution>
+              <library>RARE</library>
+              <status>check_holdings</status>
+              <collection/>
+              <callNumber>GC022</callNumber>
+              <url>OVP</url>
+            </LIBRARY>
+          </LIBRARIES>
+          <LINKS>
+            <thumbnail/>
+          </LINKS>
+        </DOC>
+      </DOCSET>
+    </RESULT>
+  </JAGROOT>
+</SEGMENTS>

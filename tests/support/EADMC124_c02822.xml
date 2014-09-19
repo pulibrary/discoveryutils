@@ -1,0 +1,103 @@
+<SEGMENTS xmlns="http://www.exlibrisgroup.com/xsd/jaguar/search">
+  <JAGROOT>
+    <RESULT>
+      <DOCSET TOTALHITS="1">
+        <DOC LOCAL="true">
+          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+            <record>
+              <control>
+                <sourcerecordid>MC124_c02822</sourcerecordid>
+                <sourceid>EAD</sourceid>
+                <recordid>EADMC124_c02822</recordid>
+                <ilsapiid>MC124_c02822</ilsapiid>
+                <sourceformat>XML</sourceformat>
+                <sourcesystem>Other</sourcesystem>
+              </control>
+              <display>
+                <type>archives</type>
+                <title>“Meet the Press”</title>
+                <creationdate>1952 March 30</creationdate>
+                <language>eng</language>
+                <source>EAD</source>
+                <availlibrary>$$IPRN$$LMUDD$$2MC124$$3box 578$$Ymudd$$Scheck_holdings</availlibrary>
+                <lds23>The collection is open to research.</lds23>
+                <lds29>MC124</lds29>
+                <lds30>Adlai E. Stevenson Papers -- Series 11: Audiovisual Materials -- Subseries 11B: Films</lds30>
+                <lds39>1952 March 30</lds39>
+                <lds40>1 box</lds40>
+                <lds43>Adlai E. Stevenson Papers</lds43>
+                <lds44>The Adlai E. Stevenson Papers document the public life of Adlai Stevenson (1900-1965), governor of Illinois, Democratic presidential candidate, and United Nations ambassador. The collection contains correspondence, speeches, writings, campaign materials, subject files, United Nations materials, personal files, photographs, and audiovisual materials, illuminating Stevenson's career in law, politics, and diplomacy, primarily from his first presidential campaign until his death in 1965.</lds44>
+                <lds45>Stevenson, Adlai E. (Adlai Ewing), 1900-1965.</lds45>
+                <lds47>(Also available on Beta tape [Item 6].)</lds47>
+                <lds48>$$Ymudd$$2MC124$$Ebox 578</lds48>
+                <availinstitution>$$IPRN$$Scheck_holdings</availinstitution>
+                <availpnx>unavailable</availpnx>
+              </display>
+              <links>
+                <linktoholdings>$$Uhttp://arks.princeton.edu/ark:/88435/sn009x77d$$Elinktofa</linktoholdings>
+                <linktofa>$$Uhttp://arks.princeton.edu/ark:/88435/sn009x77d$$Elinktofa</linktofa>
+              </links>
+              <search>
+                <title>“Meet the Press”</title>
+                <sourceid>EAD</sourceid>
+                <recordid>EADMC124_c02822</recordid>
+                <rsrctype>archives</rsrctype>
+                <creationdate>1952 March 30</creationdate>
+                <searchscope>EAD</searchscope>
+                <searchscope>OTHERS</searchscope>
+                <searchscope>PRN</searchscope>
+                <scope>EAD</scope>
+                <scope>OTHERS</scope>
+                <scope>PRN</scope>
+                <lsr05>MC124</lsr05>
+                <lsr43>Adlai E. Stevenson Papers</lsr43>
+                <lsr45>Stevenson, Adlai E. (Adlai Ewing), 1900-1965.</lsr45>
+              </search>
+              <sort>
+                <title>“Meet the Press”</title>
+              </sort>
+              <facets>
+                <language>eng</language>
+                <creationdate>1952</creationdate>
+                <prefilter>archives</prefilter>
+                <rsrctype>archives</rsrctype>
+                <frbrgroupid>267178315</frbrgroupid>
+                <frbrtype>6</frbrtype>
+              </facets>
+              <dedup>
+                <t>99</t>
+              </dedup>
+              <delivery>
+                <institution>PRN</institution>
+                <delcategory>Physical Item</delcategory>
+              </delivery>
+              <addata>
+                <lad21>box 578</lad21>
+              </addata>
+              <browse>
+                <title>“Meet the Press”</title>
+                <callnumber>MC124</callnumber>
+              </browse>
+            </record>
+          </PrimoNMBib>
+          <GETIT deliveryCategory="Physical Item" GetIt1="OVP" GetIt2=""/>
+          <LIBRARIES>
+            <LIBRARY>
+              <institution>PRN</institution>
+              <library>MUDD</library>
+              <status>check_holdings</status>
+              <collection/>
+              <callNumber>MC124</callNumber>
+              <url>OVP</url>
+            </LIBRARY>
+          </LIBRARIES>
+          <LINKS>
+            <thumbnail/>
+            <linktoholdings>OVP</linktoholdings>
+            <linktofa>http://arks.princeton.edu/ark:/88435/sn009x77d</linktofa>
+          </LINKS>
+        </DOC>
+      </DOCSET>
+    </RESULT>
+  </JAGROOT>
+</SEGMENTS>
