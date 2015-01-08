@@ -341,7 +341,7 @@ Class Record
     $holdings= $this->getHoldings();
     $holding_params = array();
     $holding_params['library'] = $holdings[0]->primo_library;
-    $holding_params['add_information'] = $this->getArchivalAddedDescriptions();
+    
     $source = $this->getSourceID();
     $aeon_params = array();
     if ($source == 'EAD') {
@@ -374,7 +374,7 @@ Class Record
       $holding_params['call_number'] = $this->getOtherCallNum();
       $aeon_params = array(
         'ReferenceNumber' => $this->getRecordID(),
-        'Site' => 'RARE',
+        'Site' => 'RBSC',
         'CallNumber' => $this->getOtherCallNum(),
         'Location' => 'ga',
         'Action' => '10',
@@ -383,7 +383,7 @@ Class Record
         'ItemVolume' => $this->getOtherSubTitle(),
         'SubLocation' => $this->getOtherItemInfoFour(),
         'ItemInfo1' => 'Reading Room Access Only',
-       
+        'ItemAuthor' => $this->getCreator()
       );
     }
     $holding_params['request_url'] = "https://libweb10.princeton.edu/aeon/aeon.dll?" . http_build_query($aeon_params);
@@ -409,7 +409,11 @@ Class Record
 
   public function getOtherSubTitle() {
     $element_data = $this->getElements("lds43");
-    return $element_data->item(0)->textContent;
+    if($element_data->length > 0) {
+        return $element_data->item(0)->textContent;
+     } else {
+        return null;
+     }
   }
  
   private function getSummaryArchivesStatement() {
