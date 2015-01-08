@@ -404,11 +404,9 @@ $app->get('/archives/{rec_id}', function($rec_id) use($app) {
   $connection = $app['primo_server_connection'];
   $test_client = new \Primo\Client($connection);
   $record_response = $test_client->getID($app->escape($rec_id));
-  //$record_response = file_get_contents(dirname(__FILE__).'../../tests/support/Theses151781.xml');
   $app['monolog']->addInfo("Availability Lookup: " . $app->escape($rec_id));
 
   $record = new \Primo\Record($record_response, $app['primo_server_connection']);
-  //print_r($record->getArchivalHoldings());
   return $app['twig']->render('archives.html.twig', array(
     'source' => $record->getSourceID(),
     'record_id' => $rec_id, 
