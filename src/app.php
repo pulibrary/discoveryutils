@@ -222,7 +222,8 @@ $app->get('/record/{rec_id}.xml', function($rec_id) use($app) {
   if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
     return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));  
   } else {
-    return new Response($record_data, 200, array('Content-Type' => 'application/xml'));
+    return new Response($record_data, 200, array('Content-Type' => 'application/xml',
+                                                 'Access-Control-Allow-Origin' => "*"));
   }
 })->assert('rec_id', '(\w+|EAD\w+\.?\w+)');
 
@@ -407,7 +408,7 @@ $app->get('/archives/{rec_id}', function($rec_id) use($app) {
   $app['monolog']->addInfo("Availability Lookup: " . $app->escape($rec_id));
 
   $record = new \Primo\Record($record_response, $app['primo_server_connection']);
-  return $app['twig']->render('archives.html.twig', array(
+  $response = New Response($app['twig']->render('archives.html.twig', array(
     'source' => $record->getSourceID(),
     'record_id' => $rec_id, 
     'archival_holding' => $record->getArchivalHoldings(),
@@ -415,7 +416,9 @@ $app->get('/archives/{rec_id}', function($rec_id) use($app) {
     'title' => "Reading Room Request: " . $record->getTitle(),
     'doc_title' => $record->getTitle(),
     'environment' => $app['environment']['env'],
-  ));
+  )), 200);
+  $response->headers->set('Access-Control-Allow-Origin', "*");
+  return $response;
 })->assert('rec_id', '(\w+|EAD\w+\.?\w+)');
 
 
