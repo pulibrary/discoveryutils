@@ -11,7 +11,7 @@ $(document).ready(function() {
     // 1. Need to know the hit number clicked on 
     // 2. Fetch ID from the following attribute 
     // 
-    var summary_container = $(this).closet('.EXLSummary');
+    var summary_container = $(this).parents('.EXLSummary');
     var thumbnail_container = $(summary_container).siblings(".EXLThumbnail");
     var pnx_id = $(thumbnail_container).find('a.EXLResultRecordId').attr('.name');
 		//var pnx_id = $(this).attr('data-record-id');
