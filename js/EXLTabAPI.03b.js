@@ -145,7 +145,7 @@ function EXLTA_getPNX(recordId){
         var r = $('#'+recordId).get(0);
         if (!r.pnx){
                 //r.pnx = $.ajax({url: 'display.do',data:{fn: 'display', doc: recordId, showPnx: true},async: false,error:function(){log('pnx retrieval error')}}).responseXML;
-                r.pnx = $.ajax({url: 'searchit/record/' + recordId + '.xml',
+                r.pnx = $.ajax({url: 'http://library.princeton.edu/searchit/record/' + recordId + '.xml',
 				dataType: "xml",
 				async: false,
 				error:function(){log('pnx retrieval error')}}).responseXML;
