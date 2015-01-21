@@ -712,7 +712,7 @@ function pulRewriteOnlineLinks() {
 	});
 }
 
-function pulConvertOnlineLink(raw_link) {
+function pulConvertOnlineLink(raw_link, pnxid) {
 	var resolvePrefix = "http://libwebprod.princeton.edu/resolve/lookup";
 	// exclude expand.do local links
 	// exclude catalog/sfx based links
@@ -763,7 +763,7 @@ function pulBuildSpecialCollectionHoldings(pnx_id, current_result_number) {
 
 function pulBuildArchivalHoldings(id,holding_listing) {
 	$.ajax({
-        url: "/primo_library/libweb/ADDONS/get_ead_contents.jsp?pnxId="+id,
+        url: "/searchit/archives/"+id,
         async: true,
         type: 'GET',
         dataType: 'html',
