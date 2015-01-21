@@ -763,7 +763,8 @@ function pulBuildSpecialCollectionHoldings(pnx_id, current_result_number) {
 
 function pulBuildArchivalHoldings(id,holding_listing) {
 	$.ajax({
-        url: "http://library.princeton.edu/searchit/archives/"+id,
+        //url: "http://library.princeton.edu/searchit/archives/"+id,
+        url: '/PrimoWebServices/xservice/getit?institution=PRN&docId=' + id,
         async: true,
         type: 'GET',
         dataType: 'html',
