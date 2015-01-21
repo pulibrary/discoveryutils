@@ -2,9 +2,7 @@ $(document).ready(function() {
 	// for view online link rewrite
 	$('.EXLViewOnlineTab a').each(function(index){
 		var viewOnlineLink = $(this).attr('href');
-		//console.log(viewOnlineLink);
-		var pnx_id = $(this).attr('data-record-id');
-		$(this).attr('href', pulConvertOnlineLink(viewOnlineLink, pnx_id));
+		$(this).attr('href', pulConvertOnlineLink(viewOnlineLink));
 	});
 	
 });

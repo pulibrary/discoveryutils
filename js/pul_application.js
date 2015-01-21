@@ -712,11 +712,7 @@ function pulRewriteOnlineLinks() {
 	});
 }
 
-function pulRewriteMarcItLink(link) {
-	
-}
-
-function pulConvertOnlineLink(raw_link, pnxid) {
+function pulConvertOnlineLink(raw_link) {
 	var resolvePrefix = "http://libwebprod.princeton.edu/resolve/lookup";
 	// exclude expand.do local links
 	// exclude catalog/sfx based links
