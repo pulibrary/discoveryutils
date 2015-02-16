@@ -216,7 +216,7 @@ $app->get('/record/{rec_id}.json', function($rec_id) use($app) {
   }
 })->assert('rec_id', '\w+'); //test regular expression validation of route 
 
-$app->get('/record/{rec_id}.xml', function($rec_id) use($app) {
+$app->match('/record/{rec_id}.xml', function($rec_id) use($app) {
   
   $record_data = $app['primo_client']->getID($app->escape($rec_id));
   if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
@@ -225,7 +225,7 @@ $app->get('/record/{rec_id}.xml', function($rec_id) use($app) {
     return new Response($record_data, 200, array('Content-Type' => 'application/xml',
                                                  'Access-Control-Allow-Origin' => "*"));
   }
-})->assert('rec_id', '(\w+|EAD\w+\.?\w+)');
+})->assert('rec_id', '(\w+|EAD\w+\.?\w+)')->method('GET|OPTIONS');
 
 $app->get('/record/{rec_id}.ris', function($rec_id) use($app) {
   $record_data = $app['primo_client']->getID($app->escape($rec_id));
@@ -401,7 +401,7 @@ $app->get('/availability/{rec_id}.json', function($rec_id) use($app) {
   return new Response($availability_response, 200, array('Content-Type' => 'application/json'));
 })->assert('rec_id', '\w+');
 
-$app->get('/archives/{rec_id}', function($rec_id) use($app) {
+$app->match('/archives/{rec_id}', function($rec_id) use($app) {
   $connection = $app['primo_server_connection'];
   $test_client = new \Primo\Client($connection);
   $record_response = $test_client->getID($app->escape($rec_id));
@@ -419,7 +419,7 @@ $app->get('/archives/{rec_id}', function($rec_id) use($app) {
   )), 200);
   $response->headers->set('Access-Control-Allow-Origin', "*");
   return $response;
-})->assert('rec_id', '(\w+|EAD\w+\.?\w+)');
+})->assert('rec_id', '(\w+|EAD\w+\.?\w+)')->method('GET|OPTIONS');
 
 
 /*

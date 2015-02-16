@@ -379,7 +379,7 @@ Class Record
         'Location' => 'ga',
         'Action' => '10',
         'Form' => '21',
-	      'ItemTitle' => $this->getTitle(),
+	      'ItemTitle' => $this->getTitle() . " [" . $this->getGenre() . "]",
         'ItemVolume' => $this->getOtherSubTitle(),
         'SubLocation' => $this->getOtherItemInfoFour(),
         'ItemInfo1' => 'Reading Room Access Only',
@@ -416,6 +416,12 @@ Class Record
      }
   }
  
+  public function getGenre() {
+    $summary = $this->getElements("genre");
+    return $summary->item(0)->textContent;
+  }
+  
+
   private function getSummaryArchivesStatement() {
     $summary = $this->getElements("lds05");
     return $summary->item(0)->textContent;
