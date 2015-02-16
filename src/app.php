@@ -223,7 +223,8 @@ $app->match('/record/{rec_id}.xml', function($rec_id) use($app) {
     return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));  
   } else {
     return new Response($record_data, 200, array('Content-Type' => 'application/xml',
-                                                 'Access-Control-Allow-Origin' => "*"));
+                                                 'Access-Control-Allow-Origin' => "*",
+                                                 'Access-Control-Allow-Headers' => "EXLRequestType"));
   }
 })->assert('rec_id', '(\w+|EAD\w+\.?\w+)')->method('GET|OPTIONS');
 
@@ -418,6 +419,7 @@ $app->match('/archives/{rec_id}', function($rec_id) use($app) {
     'environment' => $app['environment']['env'],
   )), 200);
   $response->headers->set('Access-Control-Allow-Origin', "*");
+  $response->headers->set('Access-Control-Allow-Headers', "EXLRequestType");
   return $response;
 })->assert('rec_id', '(\w+|EAD\w+\.?\w+)')->method('GET|OPTIONS');
 
