@@ -182,30 +182,33 @@ $(document).ajaxComplete(function(event, request, settings) {
 
 // Ajax events ford requests tabs 
 $(document).ajaxComplete(function(event, request, settings) {
-	   if((RegExp("expand\\.do.*tabs=requestTab").test(settings.url))) {
-		   var match = settings.url.match(/&doc=((EAD|Theses|PRN_VOYAGER|dedupmrg)\d{1,9})/);
-		   if (match) {
-			   var pnx_id = match[1];
-			   var current_result_number = EXLTA_getResultNumberOnPage(pnx_id);
-			   //$('#exlidResult'+current_result_number+'-TabContainer-requestTab .EXLRequestTabContent div:first').hide();
-		if(EXLTA_isLoggedIn()) {
+	if((RegExp("expand\\.do.*tabs=requestTab").test(settings.url))) {
+		var match = settings.url.match(/&doc=((EAD|Theses|PRN_VOYAGER|dedupmrg)\d{1,9})/);
+		if (match) {
+			var pnx_id = match[1];
+			var current_result_number = EXLTA_getResultNumberOnPage(pnx_id);
 			//$('#exlidResult'+current_result_number+'-TabContainer-requestTab .EXLRequestTabContent div:first').hide();
-			$('#exlidResult'+current_result_number+'-TabHeader .EXLTabHeaderContent').hide();
-			
-		}
-		var voyager_id = pnx_id.replace("PRN_VOYAGER", "");
-		$('.recall-message').addClass('btn info');
-		$('.recall-message').text('Sign in to Recall');
-                $('.item').attr('href', 'http://library.princeton.edu/requests/?bib='+voyager_id);
-			   // Swap in a borrow direct form 
+		
+      if(EXLTA_isLoggedIn()) {
+			//$('#exlidResult'+current_result_number+'-TabContainer-requestTab .EXLRequestTabContent div:first').hide();
+			  $('#exlidResult'+current_result_number+'-TabHeader .EXLTabHeaderContent').hide();
+		  }
+		
+      var voyager_id = pnx_id.replace("PRN_VOYAGER", "");
+		  $('.EXLRequestSystemFeedback a').addClass('btn info');
+      $('.EXLRequestSystemFeedback a').text('Sign in to Recall');
+      var local_request = ("< a href='http://library.princeton.edu/requests/?bib="+voyager_id+"'>Check other Options</a>");
+      //$('.item').attr('href', 'http://library.princeton.edu/requests/?bib='+voyager_id);
+			$(local_request).prependTo('.EXLRequestSystemFeedback a');
+      
+         // Swap in a borrow direct form 
 			   //$('#exlidResult'+current_result_number+'-TabContainer-requestTab .pul-bd-check').parent().append(pulBuildBorrowDirectForm(pnx_id)); //try 
 		   //pulSetButtonStyles();
-		   }
+		}
 		   //pulRequestTabPopovers(); //popover effect
 		   //pulLocationSignIn(); 
-		   // insert borrow direct form
-		   
-	   }
+		   // insert borrow direct form   
+	}
 });
 
 
