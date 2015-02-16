@@ -197,7 +197,7 @@ $(document).ajaxComplete(function(event, request, settings) {
       var voyager_id = pnx_id.replace("PRN_VOYAGER", "");
 		  $('.EXLRequestSystemFeedback a').addClass('btn info');
       $('.EXLRequestSystemFeedback a').text('Sign in to Recall');
-      var local_request = ("<a href='http://library.princeton.edu/requests/?bib="+voyager_id+"'>Check other Options</a>");
+      var local_request = ("<a class='btn info' href='http://library.princeton.edu/requests/?bib="+voyager_id+"'>Check other Options</a>");
       //$('.item').attr('href', 'http://library.princeton.edu/requests/?bib='+voyager_id);
 			$('.EXLRequestSystemFeedback span').prepend(local_request);
 
