@@ -199,8 +199,8 @@ $(document).ajaxComplete(function(event, request, settings) {
       $('.EXLRequestSystemFeedback a').text('Sign in to Recall');
       var local_request = ("< a href='http://library.princeton.edu/requests/?bib="+voyager_id+"'>Check other Options</a>");
       //$('.item').attr('href', 'http://library.princeton.edu/requests/?bib='+voyager_id);
-			$(local_request).prependTo('.EXLRequestSystemFeedback a');
-      
+			$('.EXLRequestSystemFeedback span').prepend(local_request);
+
          // Swap in a borrow direct form 
 			   //$('#exlidResult'+current_result_number+'-TabContainer-requestTab .pul-bd-check').parent().append(pulBuildBorrowDirectForm(pnx_id)); //try 
 		   //pulSetButtonStyles();
