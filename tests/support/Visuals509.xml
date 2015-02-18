@@ -1,132 +1,92 @@
-<SEGMENTS xmlns="http://www.exlibrisgroup.com/xsd/jaguar/search">
-  <JAGROOT>
-    <RESULT>
-      <DOCSET TOTALHITS="1">
-        <DOC LOCAL="true">
-          <PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
-            <record>
-              <control>
-                <sourcerecordid>509</sourcerecordid>
-                <sourceid>Visuals</sourceid>
-                <recordid>Visuals509</recordid>
-                <ilsapiid>509</ilsapiid>
-                <sourceformat>XML</sourceformat>
-                <sourcesystem>Other</sourcesystem>
-              </control>
-              <display>
-                <type>image</type>
-                <title>Original sign from the shop Shakespeare and Company, with head of Shakespeare on one side and on the other, the wording: Shakespeare and Company, Sylvia Beach</title>
-                <creator>Monnier-Becat, Marie</creator>
-                <creationdate>20th century</creationdate>
-                <format>Size of sheet: 15 x 20</format>
-                <subject>Beach, Sylvia--Homes and haunts--France--Paris</subject>
-                <subject>Bookstores--France</subject>
-                <subject>Signs and signboards--Specimens</subject>
-                <language>zxx</language>
-                <source>Visuals</source>
-                <availlibrary>$$IPRN$$LRARE$$2C0108$$Ymss$$Scheck_holdings</availlibrary>
-                <lds06>Artist information: The artist was the sister of Adrienne Monnier, the longtime friend of Sylvia Beach. Initialed, lower right: "MM".</lds06>
-                <lds21>Paint on metal--20th century</lds21>
-                <lds21>Painting--20th century</lds21>
-                <lds29>C0108</lds29>
-                <lds38>Size of sheet: 15 x 20</lds38>
-                <lds39>20th century</lds39>
-                <lds42>HSVG, 7 B</lds42>
-                <lds43>C0108 Sylvia Beach Papers</lds43>
-                <lds48>$$Ymss$$2C0108 Sylvia Beach Papers$$IHSVG, 7 B</lds48>
-                <availinstitution>$$IPRN$$Scheck_holdings</availinstitution>
-                <availpnx>unavailable</availpnx>
-              </display>
-              <links>
-                <linktorsrc>$$Uhttp://libweb5.princeton.edu/visual_materials/ga/ShakespeareCom.jpg$$Elinktorsrc</linktorsrc>
-                <linktorsrc>$$Uhttp://libweb5.princeton.edu/visual_materials/ga/ShakespeareCom2.jpg$$Elinktorsrc</linktorsrc>
-                <linktoholdings>$$Uhttp://libweb5.princeton.edu/visual_materials/ga/ShakespeareCom.jpg$$Elinktorsrc</linktoholdings>
-              </links>
-              <search>
-                <creatorcontrib>Monnier-Becat, Marie</creatorcontrib>
-                <title>Original sign from the shop Shakespeare and Company, with head of Shakespeare on one side and on the other, the wording: Shakespeare and Company, Sylvia Beach</title>
-                <title>C0108 Sylvia Beach Papers</title>
-                <subject>Beach, Sylvia--Homes and haunts--France--Paris</subject>
-                <subject>Bookstores--France</subject>
-                <subject>Signs and signboards--Specimens</subject>
-                <subject>Paint on metal--20th century</subject>
-                <subject>Painting--20th century</subject>
-                <sourceid>Visuals</sourceid>
-                <recordid>Visuals509</recordid>
-                <rsrctype>image</rsrctype>
-                <creationdate>20th century</creationdate>
-                <searchscope>Visuals</searchscope>
-                <searchscope>EAD</searchscope>
-                <searchscope>OTHERS</searchscope>
-                <searchscope>PRN</searchscope>
-                <scope>Visuals</scope>
-                <scope>EAD</scope>
-                <scope>OTHERS</scope>
-                <scope>PRN</scope>
-                <lsr05>C0108</lsr05>
-              </search>
-              <sort>
-                <title>Original sign from the shop Shakespeare and Company, with head of Shakespeare on one side and on the other, the wording: Shakespeare and Company, Sylvia Beach</title>
-                <creationdate>20th century</creationdate>
-                <author>Monnier-Becat, Marie</author>
-              </sort>
-              <facets>
-                <language>und</language>
-                <creationdate>1900</creationdate>
-                <topic>Beach, Sylvia--Homes and haunts--France--Paris</topic>
-                <topic>Bookstores--France</topic>
-                <topic>Signs and signboards--Specimens</topic>
-                <topic>Paint on metal--20th century</topic>
-                <topic>Painting--20th century</topic>
-                <prefilter>image</prefilter>
-                <rsrctype>images</rsrctype>
-                <creatorcontrib>Monnier-Becat, M</creatorcontrib>
-                <genre>Paint on metal--20th century</genre>
-                <genre>Painting--20th century</genre>
-                <frbrgroupid>267885161</frbrgroupid>
-                <frbrtype>6</frbrtype>
-              </facets>
-              <dedup>
-                <t>99</t>
-              </dedup>
-              <delivery>
-                <institution>PRN</institution>
-                <delcategory>Physical Item</delcategory>
-              </delivery>
-              <addata>
-                <lad21>C0108 Sylvia Beach Papers. HSVG, 7 B</lad21>
-              </addata>
-              <browse>
-                <author>Monnier-Becat, Marie</author>
-                <title>Original sign from the shop Shakespeare and Company, with head of Shakespeare on one side and on the other, the wording: Shakespeare and Company, Sylvia Beach</title>
-                <subject>Beach, Sylvia--Homes and haunts--France--Paris</subject>
-                <subject>Bookstores--France</subject>
-                <subject>Signs and signboards--Specimens</subject>
-                <subject>Paint on metal--20th century</subject>
-                <subject>Painting--20th century</subject>
-                <callnumber>C0108</callnumber>
-              </browse>
-            </record>
-          </PrimoNMBib>
-          <GETIT deliveryCategory="Physical Item" GetIt1="OVP" GetIt2=""/>
-          <LIBRARIES>
-            <LIBRARY>
-              <institution>PRN</institution>
-              <library>RARE</library>
-              <status>check_holdings</status>
-              <collection/>
-              <callNumber>C0108</callNumber>
-              <url>OVP</url>
-            </LIBRARY>
-          </LIBRARIES>
-          <LINKS>
-            <linktorsrc>http://libweb5.princeton.edu/visual_materials/ga/ShakespeareCom.jpg</linktorsrc>
-            <linktorsrc>http://libweb5.princeton.edu/visual_materials/ga/ShakespeareCom2.jpg</linktorsrc>
-            <thumbnail/>
-            <linktoholdings>OVP</linktoholdings>
-          </LINKS>
-        </DOC>
-      </DOCSET>
-    </RESULT>
-  </JAGROOT>
-</SEGMENTS>
+<sear:SEGMENTS xmlns:sear="http://www.exlibrisgroup.com/xsd/jaguar/search"><sear:JAGROOT><sear:RESULT><sear:DOCSET TOTALHITS="1"><sear:DOC LOCAL="true"><PrimoNMBib xmlns="http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib">
+<record>
+<control>
+<sourcerecordid>509</sourcerecordid> 
+<sourceid>Visuals</sourceid> 
+<recordid>Visuals509</recordid> 
+<ilsapiid>509</ilsapiid> 
+<sourceformat>XML</sourceformat> 
+<sourcesystem>Other</sourcesystem> 
+</control>
+<display>
+<type>image</type> 
+<title>Original sign from the shop Shakespeare and Company, with head of Shakespeare on one side and on the other, the wording: Shakespeare and Company, Sylvia Beach</title> 
+<creator>Monnier-Becat, Marie</creator> 
+<format>Size of sheet: 15 x 20</format> 
+<subject>Beach, Sylvia--Homes and haunts--France--Paris</subject> 
+<subject>Bookstores--France</subject> 
+<subject>Signs and signboards--Specimens</subject> 
+<language>zxx</language> 
+<source>Visuals</source> 
+<availlibrary>$$IPRN$$LRARE$$2C0108$$Ymss$$Scheck_holdings</availlibrary> 
+<lds06>Monnier-Becat, Marie [painter]</lds06> 
+<lds06>Medium: Paint on metal</lds06> 
+<lds06>Artist information: The artist was the sister of Adrienne Monnier, the longtime friend of Sylvia Beach. Initialed, lower right: "MM".</lds06> 
+<lds21>Painting</lds21> 
+<lds29>C0108</lds29> 
+<lds38>Size of sheet: 15 x 20</lds38> 
+<lds42>HSV : Graphic Arts ; 7 B</lds42> 
+<lds48>$$Ymss$$2C0108$$IHSV : Graphic Arts ; 7 B</lds48> 
+<availinstitution>$$IPRN$$Scheck_holdings</availinstitution><availpnx>unavailable</availpnx></display>
+<links>
+<linktorsrc>$$Uhttp://libweb5.princeton.edu/visual_materials/ga/ShakespeareCom.jpg$$Elinktorsrc</linktorsrc> 
+<linktorsrc>$$Uhttp://libweb5.princeton.edu/visual_materials/ga/ShakespeareCom2.jpg$$Elinktorsrc</linktorsrc> 
+<linktoholdings>$$Uhttp://libweb5.princeton.edu/visual_materials/ga/ShakespeareCom.jpg$$Elinktorsrc</linktoholdings> 
+</links>
+<search>
+<creatorcontrib>Monnier-Becat, Marie</creatorcontrib> 
+<creatorcontrib>Marie Monnier-Becat</creatorcontrib> 
+<title>Original sign from the shop Shakespeare and Company, with head of Shakespeare on one side and on the other, the wording: Shakespeare and Company, Sylvia Beach</title> 
+<subject>Beach, Sylvia--Homes and haunts--France--Paris</subject> 
+<subject>Bookstores--France</subject> 
+<subject>Signs and signboards--Specimens</subject> 
+<subject>Painting</subject> 
+<sourceid>Visuals</sourceid> 
+<recordid>Visuals509</recordid> 
+<rsrctype>image</rsrctype> 
+<searchscope>Visuals</searchscope> 
+<searchscope>EAD</searchscope> 
+<searchscope>OTHERS</searchscope> 
+<searchscope>PRN</searchscope> 
+<scope>Visuals</scope> 
+<scope>EAD</scope> 
+<scope>OTHERS</scope> 
+<scope>PRN</scope> 
+<lsr05>C0108</lsr05> 
+<lsr06>Monnier-Becat, Marie [painter]</lsr06> 
+<lsr06>Medium: Paint on metal</lsr06> 
+<lsr06>Artist information: The artist was the sister of Adrienne Monnier, the longtime friend of Sylvia Beach. Initialed, lower right: "MM".</lsr06> 
+</search>
+<sort>
+<title>Original sign from the shop Shakespeare and Company, with head of Shakespeare on one side and on the other, the wording: Shakespeare and Company, Sylvia Beach</title> 
+<author>Monnier-Becat, Marie</author> 
+</sort>
+<facets>
+<language>und</language> 
+<creationdate>uuuu</creationdate> 
+<topic>Beach, Sylvia--Homes and haunts--France--Paris</topic> 
+<topic>Bookstores--France</topic> 
+<topic>Signs and signboards--Specimens</topic> 
+<topic>Painting</topic> 
+<prefilter>image</prefilter> 
+<rsrctype>images</rsrctype> 
+<creatorcontrib>Monnier-Becat, M</creatorcontrib> 
+<genre>Painting</genre> 
+<frbrgroupid>422842640</frbrgroupid><frbrtype>6</frbrtype></facets>
+<dedup>
+<t>99</t> 
+</dedup>
+<delivery>
+<institution>PRN</institution> 
+<delcategory>Physical Item</delcategory> 
+</delivery>
+<browse>
+<author>Monnier-Becat, Marie</author> 
+<title>Original sign from the shop Shakespeare and Company, with head of Shakespeare on one side and on the other, the wording: Shakespeare and Company, Sylvia Beach</title> 
+<subject>Beach, Sylvia--Homes and haunts--France--Paris</subject> 
+<subject>Bookstores--France</subject> 
+<subject>Signs and signboards--Specimens</subject> 
+<subject>Painting</subject> 
+<callnumber>C0108</callnumber> 
+</browse>
+</record></PrimoNMBib><sear:GETIT deliveryCategory="Physical Item" GetIt1="OVP" GetIt2="http://sfx.princeton.edu:9003/sfx_pul?&amp;req.language="/><sear:LIBRARIES><sear:LIBRARY><sear:institution>PRN</sear:institution><sear:library>RARE</sear:library><sear:status>check_holdings</sear:status><sear:collection/><sear:callNumber>C0108</sear:callNumber><sear:url>OVP</sear:url></sear:LIBRARY></sear:LIBRARIES><sear:LINKS><sear:linktorsrc>http://libweb5.princeton.edu/visual_materials/ga/ShakespeareCom.jpg</sear:linktorsrc><sear:linktorsrc>http://libweb5.princeton.edu/visual_materials/ga/ShakespeareCom2.jpg</sear:linktorsrc><sear:thumbnail/><sear:linktoholdings>OVP</sear:linktoholdings></sear:LINKS></sear:DOC></sear:DOCSET></sear:RESULT></sear:JAGROOT></sear:SEGMENTS>

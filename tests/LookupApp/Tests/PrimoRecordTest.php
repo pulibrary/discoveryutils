@@ -22,6 +22,8 @@ class LookupPrimoRecordTest extends \PHPUnit_Framework_TestCase {
     $this->electronic_record_response = new \Primo\Record($electronic_record_response,$primo_server_connection);
     $electronic_record_via_sfx_response = file_get_contents(dirname(__FILE__).'../../../support/PRN_VOYAGER857469.xml');
     $this->electronic_record_via_sfx_response = new \Primo\Record($electronic_record_via_sfx_response,$primo_server_connection);
+    $visuals_record = file_get_contents(dirname(__FILE__).'../../../support/Visuals509.xml');
+    $this->visuals_record = new \Primo\Record($visuals_record,$primo_server_connection);
   }
   
   function testGetSinglePrintRecordLocations() {
@@ -115,5 +117,10 @@ class LookupPrimoRecordTest extends \PHPUnit_Framework_TestCase {
   function testGetNormalizedTitle() {
     $this->assertEquals('Journal of politics (Online)', $this->dedup_source_record->getNormalizedTitle());
     $this->assertEquals('Himalayan animal tales / by Dorothy Mierow', $this->single_source_record->getNormalizedTitle());
+  }
+
+  function testGetVisualsGenre() {
+    $this->assertInternalType('string', $this->visuals_record->getGenre());
+    $this->assertEquals('Painting', $this->visuals_record->getGenre());
   }
 }
