@@ -28,6 +28,9 @@ class PrimoArchivalItemsTest extends \PHPUnit_Framework_TestCase {
     $many_archival_holding_response = file_get_contents(dirname(__FILE__).'../../../support/XMLC0101_c0.xml');
     $this->many_archival_holding_record = new \Primo\Record($many_archival_holding_response, $primo_server_connection);
     $this->many_item_list = $this->many_archival_holding_record->getArchivalItems();
+    $visuals_record = file_get_contents(dirname(__FILE__).'../../../support/Visuals509.xml');
+    $this->visuals_record = new \Primo\Record($visuals_record,$primo_server_connection);
+    $this->visuals_item_list = $this->visuals_record->getArchivalItems();
   }
 
   function testAllItemsHaveLocationCodes() {
@@ -58,5 +61,13 @@ class PrimoArchivalItemsTest extends \PHPUnit_Framework_TestCase {
     foreach($this->single_item_list as $item) {
       $this->assertFalse(isset($item->series_details));
     }
+  }
+
+  function testItemWithoutEnhancedTitle() {
+    $this->assertNotContains('F. Scott Fitzgerald Subject File (correspondence)', $this->single_item_list[0]->request_url);
+  }
+
+  function testItemWithEnhancedTitle() {
+    $this->assertContains('Painting', $this->visuals_item_list[0]->request_url);
   }
 }

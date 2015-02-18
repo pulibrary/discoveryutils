@@ -72,7 +72,7 @@ class Archives
         'Location' => $this->location_code,
         'Action' => '10',
         'Form' => '21',
-        'ItemTitle' => $this->record->getTitle(),
+        'ItemTitle' => $this->enhanceItemTitle(),
         'ItemAuthor' => $this->record->getCreator(),
         'ItemDate' => $this->record->getCreationDate(),
         'ItemVolume' => $this->box_number,
@@ -82,6 +82,15 @@ class Archives
     return "https://libweb10.princeton.edu/aeon/aeon.dll?" . http_build_query($aeon_params);
   }
   
+  private function enhanceItemTitle() {
+
+    if (!is_null($this->record->getGenre())) {
+      return $this->record->getTitle() . " [" . $this->record->getGenre() . "]";
+    } else {
+      return $this->record->getTitle();
+    }
+  }
+
   public function __toString() {
     return $this->item_source;
   }

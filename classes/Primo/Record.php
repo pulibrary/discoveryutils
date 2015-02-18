@@ -431,7 +431,11 @@ Class Record
  
   public function getGenre() {
     $summary = $this->getElements("genre");
-    return $summary->item(0)->textContent;
+    if($summary->length > 0) {
+        return $summary->item(0)->textContent;
+     } else {
+        return null;
+     }
   }
   
 
