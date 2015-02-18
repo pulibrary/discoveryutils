@@ -320,9 +320,10 @@ Class Record
   public function getArchivalItems() {
     $items = array();
     $item_list = $this->getElements("lds48");
+    $holding = $this->getArchivalHoldings();
     if($item_list->length > 0) {
       foreach($item_list as $item) {
-        array_push($items, new \Primo\Items\Archives($item->textContent));
+        array_push($items, new \Primo\Items\Archives($item->textContent, $holding, $this));
       }
     }
     return $items;
@@ -354,6 +355,19 @@ Class Record
       $holding_params['link_to_finding_aid'] = $this->getArchivesLinks();
       $holding_params['collection_title'] = $this->getArchivalCollectionTitle();
       $holding_params['collection_description'] = $this->getArchivalCollectionDescription();
+      $aeon_params = array(
+        'ReferenceNumber' => $this->getRecordID(),
+        'Site' => $holding_params['library'],
+        'CallNumber' => $this->getArchivalCallNumber(),
+        'Location' => $this->getArchivalCollectionTitle(),
+        'Action' => '10',
+        'Form' => '21',
+        'ItemTitle' => $this->getTitle(),
+        'ItemAuthor' => $this->getCreator(),
+        'ItemDate' => $this->getCreationDate(),
+        'ItemInfo1' => 'Reading Room Access Only',
+      );
+
     } elseif ($source == 'Theses') {
       $holding_params['call_number'] = $this->getOtherCallNum();
       $aeon_params = array(
@@ -367,7 +381,6 @@ Class Record
         'ItemAuthor' => $this->getCreator(),
         'ItemDate' => $this->getCreationDate(),
         'ItemInfo1' => 'Reading Room Access Only',
-       
       );
 
     } elseif ($source == 'Visuals') {
@@ -424,7 +437,11 @@ Class Record
 
   private function getSummaryArchivesStatement() {
     $summary = $this->getElements("lds05");
-    return $summary->item(0)->textContent;
+    if($summary->length > 0) {
+        return $summary->item(0)->textContent;
+     } else {
+        return null;
+     }
   }
   
   
@@ -445,15 +462,19 @@ Class Record
   private function getArchivalCollectionTitle() {
     $added_info = $this->getElements("lds43");
     if($added_info->length > 0) {
-        return $added_info->item(0)->textContent;
+      return $added_info->item(0)->textContent;
     } else {
-        return null;
+      return null;
     }
   }
 
   private function getArchivalCallNumber() {
     $call_num = $this->getElements("lds28");
-    return $call_num->item(0)->textContent;
+    if($call_num->length > 0) {
+      return $call_num->item(0)->textContent;
+    } else {
+      return null;
+    }
   }
   
   /* gets link to finding aid 
