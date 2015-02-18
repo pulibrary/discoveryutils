@@ -408,6 +408,8 @@ $app->match('/archives/{rec_id}', function($rec_id) use($app) {
   $record_response = $test_client->getID($app->escape($rec_id));
   $app['monolog']->addInfo("Availability Lookup: " . $app->escape($rec_id));
 
+
+  //$record_response = file_get_contents(dirname(__FILE__).'/../tests/support/EADMC124_c02822.xml');
   $record = new \Primo\Record($record_response, $app['primo_server_connection']);
   $response = New Response($app['twig']->render('archives.html.twig', array(
     'source' => $record->getSourceID(),

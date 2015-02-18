@@ -1,7 +1,8 @@
 <?php
 
 namespace Primo\Items;
-
+use Primo\Holdings\Archives as ArchivalHolding;
+use Primo\Record as Record;
 /*
  * Parse OUT Examples 
  * 
@@ -27,14 +28,18 @@ class Archives
   private $subfields = array();
   private $item_source;
 
-  public function __construct($item_string) {
+  public function __construct($item_string, ArchivalHolding $holding, Record $record) {
+    $this->holding = $holding;
+    $this->record = $record;
     $this->item_source = strval($item_string);   
     $this->buildItem();
+    $this->subfields['request_url'] = $this->buildRequestUrl();
   }
   
   private function buildItem() {
     
     $subfield_data_list = explode("$$", $this->item_source);
+    //print_r($subfield_data_list);
     array_shift($subfield_data_list); // remove empty first value from explode since all strings start with $$
     $this->extractSubfields($subfield_data_list);
   }
@@ -59,10 +64,22 @@ class Archives
    * This array contains a mashup of data from the Record, Archival Holdings, and Archival Item Levels
    * 
    */
-  public function getRequestParams() {
-    $request_params = array();
+  private function buildRequestUrl() {
+    $aeon_params = array(    
+        'ReferenceNumber' => $this->record->getRecordID(),
+        'Site' => $this->holding->library,
+        'CallNumber' => $this->call_number,
+        'Location' => $this->location_code,
+        'Action' => '10',
+        'Form' => '21',
+        'ItemTitle' => $this->record->getTitle(),
+        'ItemAuthor' => $this->record->getCreator(),
+        'ItemDate' => $this->record->getCreationDate(),
+        'ItemVolume' => $this->box_number,
+        'ItemInfo1' => 'Reading Room Access Only',
+      );
     
-    return $request_params;
+    return "https://libweb10.princeton.edu/aeon/aeon.dll?" . http_build_query($aeon_params);
   }
   
   public function __toString() {
