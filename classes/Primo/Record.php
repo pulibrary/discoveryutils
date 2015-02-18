@@ -392,7 +392,7 @@ Class Record
         'Location' => 'ga',
         'Action' => '10',
         'Form' => '21',
-	      'ItemTitle' => $this->getTitle() . " [" . $this->getGenre() . "]",
+        'ItemTitle' => $this->getTitle() . " [" . $this->getGenre() . "]",
         'ItemVolume' => $this->getOtherSubTitle(),
         'SubLocation' => $this->getOtherItemInfoFour(),
         'ItemInfo1' => 'Reading Room Access Only',
