@@ -56,9 +56,7 @@
             <tr class="EXLLocationTitlesRow">
                 <th>Description</th>
                 <th>Number</th>
-                {% if items|length == 1 %}
-                    <th>Request Options</th>
-                {% endif %}
+                <th>Request Options</th>
             </tr>
             {%  for item in items %}
                 <tr class="archival-item-{{ item.call_number }} list-item-{{ loop.index }}">
