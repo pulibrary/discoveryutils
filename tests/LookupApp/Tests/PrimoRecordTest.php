@@ -122,5 +122,7 @@ class LookupPrimoRecordTest extends \PHPUnit_Framework_TestCase {
   function testGetVisualsGenre() {
     $this->assertInternalType('string', $this->visuals_record->getGenre());
     $this->assertEquals('Painting', $this->visuals_record->getGenre());
+    $archival_holdings = $this->visuals_record->getArchivalHoldings();
+    $this->assertContains("%5B".$this->visuals_record->getGenre()."%5D", $archival_holdings->request_url);
   }
 }
