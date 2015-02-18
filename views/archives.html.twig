@@ -77,11 +77,10 @@
                             {{ item.box_number }}
 		        {% endif %}
 		    </td>
-                    {% if items|length == 1 %}
+                    
                        <td class="EXLLocationTableColumn3">
                             <a class="btn small info" target="_blank" href='{{ archival_holding.request_url }}'>{{ archival_holding.request_label }}</a>
                        </td>
-                    {% endif %}
                 </tr>
             {% endfor %}
             </tbody>
