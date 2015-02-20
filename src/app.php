@@ -348,7 +348,7 @@ $app->get('/map', function() use ($app) {
       if(in_array($holding_to_map->location_code, $app['stackmap']['by.title.locations'])) {
         $call_number = $primo_record->getNormalizedTitle();
       } else {
-        $call_number = $holding_to_map->call_number;
+        $call_number = $primo_record->getCallNumber(); //$holding_to_map->call_number;
       }
       $map_params = array(
         'callno' => $call_number,

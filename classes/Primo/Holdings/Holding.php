@@ -70,7 +70,6 @@ class Holding
     return $this->holdings_source;
   }
   
-  
   public function __get($name) {
     if (array_key_exists($name, $this->subfields)) {
       return $this->subfields[$name];
