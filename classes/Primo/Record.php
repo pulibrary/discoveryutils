@@ -579,7 +579,8 @@ Class Record
   }
   
   public function getCallNumber() {
-    return $this->getText("lsr05");
+    $call_number = $this->getText("lsr05");
+    return trim($call_number);
   }
   
   public function getFormatType() {

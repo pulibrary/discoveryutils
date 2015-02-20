@@ -67,7 +67,7 @@ class Archives
   private function buildRequestUrl() {
     $aeon_params = array(    
         'ReferenceNumber' => $this->record->getRecordID(),
-        'Site' => $this->holding->library,
+        'Site' => $this->mapAeonSiteCode($this->holding->library),
         'CallNumber' => $this->call_number,
         'Location' => $this->location_code,
         'Action' => '10',
@@ -80,6 +80,14 @@ class Archives
       );
     
     return "https://libweb10.princeton.edu/aeon/aeon.dll?" . http_build_query($aeon_params);
+  }
+
+  private function mapAeonSiteCode($library_code) {
+    if ($library_code == 'RARE') {
+      return "RBSC";
+    } else {
+      return $library_code;
+    }
   }
   
   private function enhanceItemTitle() {
