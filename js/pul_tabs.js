@@ -1,27 +1,27 @@
-$(document).ready(function() {
+//$(document).ready(function() {
 	// for view online link rewrite
-	$('.EXLViewOnlineTab a').each(function(index){
-		var viewOnlineLink = $(this).attr('href');
-		//console.log(viewOnlineLink);
-    // This no longer works
-    // Different paths depending on whether you are on a
-    // results or full record page
-    //
-    // ON results page you 
-    // 1. Need to know the hit number clicked on 
-    // 2. Fetch ID from the following attribute 
-    // 
-    var summary_container = $(this).parents('.EXLSummary');
-    var thumbnail_container = $(summary_container).siblings(".EXLThumbnail");
-    var pnx_id = $(thumbnail_container).find('a.EXLResultRecordId').attr('.name');
-		//var pnx_id = $(this).attr('data-record-id');
+	// $('.EXLViewOnlineTab a').each(function(index){
+	// 	var viewOnlineLink = $(this).attr('href');
+	// 	//console.log(viewOnlineLink);
+ //    // This no longer works
+ //    // Different paths depending on whether you are on a
+ //    // results or full record page
+ //    //
+ //    // ON results page you 
+ //    // 1. Need to know the hit number clicked on 
+ //    // 2. Fetch ID from the following attribute 
+ //    // 
+ //    var summary_container = $(this).parents('.EXLSummary');
+ //    var thumbnail_container = $(summary_container).siblings(".EXLThumbnail");
+ //    var pnx_id = $(thumbnail_container).find('a.EXLResultRecordId').attr('.name');
+	// 	//var pnx_id = $(this).attr('data-record-id');
 		
-    // different for full record page 
+ //    // different for full record page 
 
-    $(this).attr('href', pulConvertOnlineLink(viewOnlineLink));
-	});
+ //    $(this).attr('href', pulConvertOnlineLink(viewOnlineLink));
+	// });
 	
-});
+//});
 
 
 // Ajax loads for tabs 
