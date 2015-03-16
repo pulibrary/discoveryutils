@@ -313,6 +313,15 @@ function EXLTA_availlibraries(recordId){
 	return availlibraries;
 }
 
+function EXLTA_get_OpenURL(recordId){
+    var pnx = EXLTA_getPNX(recordId);
+    var openurls = new Array();
+    $(pnx).find('sear:openurl').each(function() {
+        openurls.push($.trim($(this).text())); 
+    });
+    
+    return openurls;
+}
 
 function EXLTA_isLoggedIn() {
 	var userName = $.trim($('span.EXLUserNameDisplay').text());
