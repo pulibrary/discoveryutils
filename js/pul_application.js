@@ -362,7 +362,7 @@ function pulBuildRequestButton(request_item, location_label, location_details, t
 		var request_tooltip = "Check request options availabile for this copy";
 	}	
 	
-	var request_base = "http://library-stage.princeton.edu/requests/?";
+	var request_base = "http://library.princeton.edu/requests/?";
 	var aeon_request_base = "http://libweb5.princeton.edu/AeonBibRequest/Default.aspx?";
 	// Handle Aeon Requests
 	if(location_details.aeon == "Y") {
@@ -696,7 +696,7 @@ function buildRISLink(pnx_id) {
 }
 
 function buildCatalogReportLink(pnx_id) {
-	var base = "http://library-stage.princeton.edu/requests/catalog_report.php?bib=";
+	var base = "http://library.princeton.edu/requests/catalog_report.php?bib=";
 	//var icon = "<span class='EXLButtonSendToIcon EXLButtonSendToIconCatalogReport'></span>";
 	var label = "Cataloging problem report";
 	var link = "<li class='EXLButtonSendToCatalogReport'><a href='"+base+pnx_id+"' title='"+label+"' target='blank'><span class='EXLButtonSendToLabel'>"+label+"</span></a></li>";
