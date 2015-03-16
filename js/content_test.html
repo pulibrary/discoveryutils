@@ -1,0 +1,89 @@
+<html>
+
+<head>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    jQuery.noConflict();
+  </script>
+
+  <!-- load the Umlaut.HtmlUpdater object-->
+  <script type="text/javascript" src="http://getit.princeton.edu/assets/umlaut/update_html.js"></script>
+
+<script type="text/javascript">
+
+jQuery(function($) {
+  var loader = new Umlaut.Loader();
+  loader.load();
+
+  /* pull openurl link out of the DOM, take umlaut base and context object
+     out of it */ 
+  var openurl_link = $("a.openurl_link").attr("href");
+  var ctx_object_kev = openurl_link.substring( openurl_link.indexOf("?") + 1);
+  var umlaut_base = openurl_link.substring(0, openurl_link.indexOf("/resolve"));
+  var updater = new Umlaut.HtmlUpdater( umlaut_base  ,  ctx_object_kev );
+
+  updater.add_section_target({ 
+    umlaut_section_id: "fulltext", 
+    selector:".my_full_text" ,
+    // only show ourself if we have umlaut hits, false return from
+    // before_update stops update.  
+    before_update: function(html, count) { return (count != 0); }
+  });   
+
+
+  updater.add_section_target({ 
+    umlaut_section_id: "holding", 
+    selector:".my_holding" ,
+    // only show ourself if we have umlaut hits, false return from
+    // before_update stops update.  
+    before_update: function(html, count) { return (count != 0); }
+  });  
+
+  // updater.add_section_target({ 
+  //   umlaut_section_id: "holding", 
+  //   selector:".stuff", 
+  //   position: "append",
+  //   before_update: function(container_element) {
+  //     //insert some content into the umlaut-delivered html
+  //     //before it is placed on the page
+  //     container_element.find("h3").after("<h4>We love these holdings.</h4>");
+  //   }
+  // });   
+
+    updater.complete = function() { alert("Umlaut fully loaded") };
+
+    updater.update();   
+
+  });
+</script>
+
+
+</head>
+
+<body>
+
+<a class="openurl_link" href="http://getit.princeton.edu/resolve?ctx_ver=Z39.88-2004&ctx_enc=info:ofi/enc:UTF-8&ctx_tim=2015-03-16T15%3A54%3A40IST&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx&rfr_id=info:sid/primo.exlibrisgroup.com:primo3-Journal-PRN_VOYAGER&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=journal&rft.atitle=&rft.jtitle=%E6%96%B0%E7%96%86%E7%B5%B1%E8%A8%88%E5%B9%B4%E9%91%91+%3D+Xinjiang+statistical+yearbook+%2F+%E6%96%B0%E7%96%86%E7%BB%B4%E5%90%BE%E5%B0%94%E8%87%AA%E6%B2%BB%E5%8C%BA%E7%BB%9F%E8%AE%A1%E5%B1%80%E7%BC%96.&rft.btitle=&rft.aulast=&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=%28OCoLC%2924080963&rft_dat=<PRN_VOYAGER>3108861</PRN_VOYAGER><grp_id>289607188</grp_id><oa></oa>&rft.eisbn=&svc.abstract=yes&svc.any=yes&svc.citation=yes&svc.holdings=yes&svc.ill=yes&svc.selectedfulltext=yes&rft_id=info:oai/&req.language=">Find It @ JH</a>
+
+<h2>Full Text</h2>
+<div class="my_full_text">
+Replace me.
+</div>
+
+<h2>Holding</h2>
+<div class="my_holding">
+Replace me.
+</div>
+
+<h2>More Stuff</h2>
+<div class="stuff">
+</div>
+
+<div class="only_if_content" style="display:none">
+This will be shown only if it actually contains content. 
+</div>
+
+
+</body>
+
+</html>

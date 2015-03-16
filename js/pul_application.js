@@ -607,6 +607,7 @@ function pulBuildFullLocationOptions(pnx_id, current_result_number) {
 	var holdings = $('.EXLLocationList');
 	var holdings_count = holdings.length;
 	var locations = pulGetLocationCodes(pnx_id);
+  var openurls = EXLTA_get_OpenURL(pnx_id);
 	// hack for borrow direct checking 
 	var any_available_items = false;
 	$('.EXLLocationTableColumn3').each(function(index) {
@@ -674,6 +675,13 @@ function pulBuildFullLocationOptions(pnx_id, current_result_number) {
                 }
                 else {
                         if(!online_resource) {
+                                if(console) {
+                                  console.log('more than a signle holding');
+                                  if(openurls.length > 0) {
+                                    console.log(openurls);
+                                  }
+                                }
+                                
                                 var item_request_details = { bib: bib_id, loc: location_code, call_no: location_call_number };
                                 $(holding_status).replaceWith("<span>"+pulBuildRequestButton(item_request_details, holding_location, location_details,true)+"</span>");
                         }
@@ -682,7 +690,6 @@ function pulBuildFullLocationOptions(pnx_id, current_result_number) {
         });
 	
     	return;
-	
 }
 
 
