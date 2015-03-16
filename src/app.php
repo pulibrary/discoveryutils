@@ -51,23 +51,7 @@ $app['search_tabs'] = array(
   array("index" => "mendel", "label" => "Mendel Library Audio"),
 );
 
-
-
 $app['primo_server_connection'] = Yaml::parse(__DIR__.'/../conf/primo.yml');
-// = array(
-//   //'base_url' => 'http://princeton-dc04.hosted.exlibrisgroup.com/',
-//   //'base_url' => 'http://chiprist01v1.hosted.exlibrisgroup.com:1701/',
-//   'base_url' => 'http://searchit.princeton.edu',
-//   'institution' => 'PRN',
-//   'default_view_id' => 'PRINCETON',
-//   'default_pnx_source_id' => 'PRN_VOYAGER',
-//   //'default.scope' => array("ALL+PRINCETON+LIBRARIES"),
-//   'default.scope' => array("OTHERS","FIRE","RECAP","EAD"),
-//   'default.search' => "contains",
-//   'num.records.brief.display' => 5,
-//   'available.scopes' => $library_scopes,
-//   'record.request.base' => "http://library.princeton.edu/requests/",
-// );
 
 $app['voyager.connection'] = array(
   'base.url' => "http://catalog.princeton.edu",
