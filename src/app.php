@@ -213,7 +213,7 @@ $app->match('/record/{rec_id}.xml', function($rec_id) use($app) {
   }
 })->assert('rec_id', '(\w+|EAD\w+\.?\w+)')->method('GET|OPTIONS');
 
-$app->match('/record/{rec_id}.json', function($rec_id) use($app) {
+$app->match('/pnx/{rec_id}.json', function($rec_id) use($app) {
   
   $record_data = $app['primo_client']->getID($app->escape($rec_id), true);
   if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
