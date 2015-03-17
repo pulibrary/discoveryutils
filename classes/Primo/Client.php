@@ -21,8 +21,12 @@ class Client
     $this->client = new HttpClient($primo_server_connection['base_url'].$this->xservice_base);
   }
   
-  public function getID($pnx_id) {
-    $response = $this->client->get($this->xservice_getit . "institution=" . $this->institution ."&docId=".$pnx_id)->send();
+  public function getID($pnx_id, $json = null) {
+    if (!is_null($json)) {
+      $response = $this->client->get($this->xservice_getit . "institution=" . $this->institution ."&docId=".$pnx_id."&json=true")->send();
+    } else {
+      $response = $this->client->get($this->xservice_getit . "institution=" . $this->institution ."&docId=".$pnx_id)->send();
+    }
     if(strlen($response) != 0) { 
       return (string)$response->getBody(); //also can do $response->getBody(TRUE)
     } else {

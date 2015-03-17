@@ -213,6 +213,18 @@ $app->match('/record/{rec_id}.xml', function($rec_id) use($app) {
   }
 })->assert('rec_id', '(\w+|EAD\w+\.?\w+)')->method('GET|OPTIONS');
 
+$app->match('/record/{rec_id}.json', function($rec_id) use($app) {
+  
+  $record_data = $app['primo_client']->getID($app->escape($rec_id), true);
+  if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
+    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));  
+  } else {
+    return new Response($record_data, 200, array('Content-Type' => 'application/json',
+                                                 'Access-Control-Allow-Origin' => "*",
+                                                 'Access-Control-Allow-Headers' => "EXLRequestType"));
+  }
+})->assert('rec_id', '(\w+|EAD\w+\.?\w+)')->method('GET|OPTIONS');
+
 $app->get('/record/{rec_id}.ris', function($rec_id) use($app) {
   $record_data = $app['primo_client']->getID($app->escape($rec_id));
   if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
