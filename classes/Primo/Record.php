@@ -182,7 +182,7 @@ Class Record
     // hack for records without their own "getit" link
     if($record_counter < $id_count) {
        foreach($source_ids as $id) {
-         if(!array_key_exists($getit_links, $id)) {
+         if(!array_key_exists($id, $getit_links)) {
            $getit_links[$id] = array("deliveryCategory" => "Physical Item");
          }
       }      	
