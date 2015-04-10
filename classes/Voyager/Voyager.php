@@ -1,7 +1,7 @@
 <?php
 
 namespace Voyager;
-use Guzzle\Service\Client as Client;
+use GuzzleHttp\Client as Client;
 
 /*
  * Voyager connectivity class
@@ -25,7 +25,7 @@ class Voyager
         }
         else
         {
-            $this->http_client = new \Guzzle\Http\Client($this->host);
+            $this->http_client = new Client(['base_url' => $this->host]);
         }
     }
 
@@ -40,8 +40,9 @@ class Voyager
         if($source == "html") {
             $holdings_base = $this->html_base . "?holdingsinfo?&BBID=" ;
         }
-        $response = $this->http_client->get($holdings_base . $bibliographic_id)->send();
+        $response = $this->http_client->get($holdings_base . $bibliographic_id);
 
+        //print_r((string)$response->getBody());
         return (string)$response->getBody();
 
     }

@@ -1,13 +1,13 @@
 <?php
 namespace Primo;
 use Primo\Query;
-use Guzzle\Service\Client as HttpClient;
-use Guzzle\Http\QueryAggregator\DuplicateAggregator as DuplicateAggregator;
+use GuzzleHttp\Client as HttpClient;
+use GuzzleHttp\QueryAggregator\DuplicateAggregator as DuplicateAggregator;
 
-class Client
+class Primo
 {
   
-  private $xservice_base = "/PrimoWebServices";
+  private $xservice_base = "PrimoWebServices/";
   private $xservice_brief_search = "xservice/search/brief?"; //run a primo search
   private $xservice_getit = "xservice/getit?"; // for straight ID lookups 
   private $scopelist = "xservice/getscopesofview?";
@@ -18,17 +18,24 @@ class Client
   function __construct($primo_server_connection) {
     $this->institution = $primo_server_connection['institution'];
     $this->default_scope = $primo_server_connection['default_view_id'];
-    $this->client = new HttpClient($primo_server_connection['base_url'].$this->xservice_base);
+    $this->client = new HttpClient(['base_url' => $primo_server_connection['base_url']]);
   }
   
   public function getID($pnx_id, $json = null) {
+    $query = array(
+      "institution" => $this->institution,
+      "docId" => $pnx_id
+      );
     if (!is_null($json)) {
-      $response = $this->client->get($this->xservice_getit . "institution=" . $this->institution ."&docId=".$pnx_id."&json=true")->send();
+      $query['json'] = 'true';
+      $response = $this->client->get($this->xservice_base . $this->xservice_getit, ['query' => $query]);
     } else {
-      $response = $this->client->get($this->xservice_getit . "institution=" . $this->institution ."&docId=".$pnx_id)->send();
+      $response = $this->client->get($this->xservice_base . $this->xservice_getit, ['query' => $query]);
     }
-    if(strlen($response) != 0) { 
-      return (string)$response->getBody(); //also can do $response->getBody(TRUE)
+
+    $status = $response->getStatusCode();
+    if($status == 200) { 
+      return $response->getBody();
     } else {
       return false;
     }
@@ -49,24 +56,25 @@ class Client
    * should I have a primo results objects 
    */
   public function doSearch(\Primo\Query $query) {
-    //echo $this->xservice_brief_search . 
-    //echo $query->getQueryString();
-    $request = $this->client->get($this->xservice_brief_search . $query->getQueryString());
     
-    $query_facet_aggregator = new DuplicateAggregator(); // use this to allow duplicate key values 
-    $request->getQuery()->setAggregator($query_facet_aggregator);
+    $request = $this->client->createRequest('GET', $this->xservice_base . $this->xservice_brief_search . $query->getQueryString());
+    
+    //$query_facet_aggregator = new DuplicateAggregator(); // use this to allow duplicate key values 
+    $search_query =  $request->getQuery();
+    $search_query->setAggregator($search_query::duplicateAggregator());
     if($query->hasFacets()) {
       
       foreach($query->getFacets() as $facet) {
-        $request->getQuery()->add('query', $facet);
+        $search_query['query'][] = $facet;
       }
         
     }
-
+    //echo $request->getURL();
     //$request->getQuery()->setAggregateFunction(array($request->getQuery(), 'aggregateUsingDuplicates'));
-    $response = $request->send();
-
-    if(strlen($response) != 0) { 
+    $response = $this->client->send($request);
+    //echo $response->getBody();
+    $status = $response->getStatusCode();
+    if($status == 200) { 
       return (string)$response->getBody(); 
     } else {
       return false;

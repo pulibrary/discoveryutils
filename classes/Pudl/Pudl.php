@@ -1,7 +1,7 @@
 <?php
 
 namespace Pudl;
-use Guzzle\Service\Client as Client;
+use GuzzleHttp\Client as Client;
 
 /*
  * Pudl
@@ -29,7 +29,7 @@ class Pudl
     }
     else 
     {
-      $this->http_client = new \Guzzle\Http\Client($this->host);
+      $this->http_client = new Client(['base_url' => $this->host]);
     }
     
   }
@@ -37,19 +37,24 @@ class Pudl
   public function query($string) {
     $query = array();
     $query['v1'] = $string;
-    $querystring = http_build_query($query);
-    $response = $this->send($querystring);
+    //$querystring = http_build_query($query);
+    $response = $this->send($query);
     return $response;
     
   }
   
-  private function send($querystring) {
-    $request =  $this->http_client->get($this->base_url . "?" . $querystring);
-    $request->addHeader("Accept", "application/xml");
+  private function send($query) {
+    $headers = array(
+      "Accept" => "application/xml"
+      );
+    $response = $this->http_client->get($this->base_url, [
+      'headers' => $headers,
+      'query' => $query]);
+    //$request->addHeader("Accept", "application/xml");
     //$request->addHeader("Accept-Charset", "UTF-8");
     
-    $response = $request->send();
-    $body = (string)$response->getBody();
+    //$response = $request->send();
+    $body = $response->xml();
     if(strlen($body) == 0) {
       $empty_doc = "<Objects start='0' total='0'><facets/></Objects>";
       return $empty_doc;

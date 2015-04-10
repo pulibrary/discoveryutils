@@ -1,7 +1,7 @@
 <?php
 
 namespace Pulfa;
-use Guzzle\Service\Client as Client;
+use GuzzleHttp\Client as Client;
 
 /*
  * Pulfa
@@ -42,7 +42,7 @@ class Pulfa
     }
     else 
     {
-      $this->http_client = new \Guzzle\Http\Client($this->host . $this->base_url);
+      $this->http_client = new Client(['base_url' => $this->host]);
     }
   }
   
@@ -51,15 +51,8 @@ class Pulfa
     $query['v1'] = $string;
     $query['rpp'] = $record_number;
     $query['start'] = $start;
-    $querystring = http_build_query($query);
-    return $this->send($querystring);
-  }
-  
-  private function send($querystring) {
-    $response = $this->http_client->get("?" . $querystring)->send();
-    
-    return (string)$response->getBody();
-     
+    $response = $this->http_client->get($this->base_url, ['query' => $query]);
+    return $response->xml();
   }
   
   public function setSize($size) {
@@ -70,7 +63,4 @@ class Pulfa
     $this->starting_point = $start;
   }
   
-  public function setQuery() {
-    
-  }
 }

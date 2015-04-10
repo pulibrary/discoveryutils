@@ -2,14 +2,15 @@
 
 namespace Summon;
 
-use Guzzle\HTTP\Client as Client;
+use GuzzleHttp\Client as Client;
+use GuzzleHttp\Message\Request as Request;
 
 /**
  * Summon Client
  * 
  * Based on the work of Andrew Nagy
  *
- * @author David Walker - Modified by Kevin Reiss to swap in Guzzle Async PHP Client 
+ * @author David Walker - Modified by Kevin Reiss to swap in GuzzleHttp Async PHP Client 
  * @copyright 2012 California State University
  * @link http://xerxes.calstate.edu
  * @license
@@ -54,7 +55,7 @@ class Summon
 		}
 		else 
 		{
-			$this->http_client = new \Guzzle\Http\Client($this->host);
+			$this->http_client = new Client(['base_url' => $this->host]);
 		}
 	}
 	
@@ -259,10 +260,6 @@ class Summon
 
 		$queryString = implode('&', $query);
     //echo $queryString . "\n";
-		// set the url
-
-				
-		
 		// main headers
 		
 		$headers = array(
@@ -278,24 +275,18 @@ class Summon
 		
 		$headers["Authorization"] = "Summon " . $this->app_id . ";" . $hmacHash;
 		
-		// set them all
-		
-    //foreach($headers as $key => $value) {
-    //  $this->http_client->setHeader($key, $value);
-    //}
-		
-		// keep the same session id
-		
 		if ( $this->session_id )
 		{
 			$headers['x-summon-session-id'] = $this->session_id;
 		}
-		
 		// send the request
-		 $response = $this->http_client->get("$service?" . $queryString, $headers)->send();
+		//$request = $this->http_client->createRequest('GET');
+		$response = $this->http_client->get("$service?$queryString", ['headers' => $headers]);
 		
+
 		// decode the response into array - have to cast to string
-		return json_decode((string)$response->getBody(), true);
+		return $response->json(); 
+		//json_decode((string)$response->getBody(), true);
     
 	}
 	

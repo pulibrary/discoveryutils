@@ -9,7 +9,7 @@
     "symfony/yaml" : "2.3.*",
     "twig/twig" : "1.13.*",
     "monolog/monolog" : "1.13.*",
-    "guzzle/guzzle": "~3.8",
+    "guzzlehttp/guzzle": "~5.0",
     "silex/web-profiler": "~1.0"
   },
   "autoload": {
@@ -21,7 +21,9 @@
       "Utilities": "classes/",
       "Pudl" : "classes/",
       "Voyager" : "classes/",
-      "Sitemap" : "classes/"
+      "Sitemap" : "classes/",
+      "Springshare": "classes/",
+      "Hours": "classes/"
     }
   },
   "minimum-stability": "dev"
