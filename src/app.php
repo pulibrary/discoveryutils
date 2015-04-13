@@ -26,6 +26,7 @@ use Utilities\CoreSearchLink;
 
 $app = new Silex\Application(); 
 
+$app['environment'] = Yaml::parse(__DIR__.'/../conf/environment.yml');
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
   'twig.path'       => __DIR__.'/../views',
 ));
@@ -33,9 +34,17 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 $app->register(new Provider\ServiceControllerServiceProvider());
 $app->register(new Provider\UrlGeneratorServiceProvider());
 
+if ($app['environment'] == 'development') {
+  $log_level = 'DEBUG';
+  $core_base_path = "http://library.princeton.edu";
+} else {
+  $log_level = 'INFO';
+  $core_base_path = "http://liblocal.princeton.edu";
+}
+
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.logfile'       => __DIR__.'/../log/usage.log',
-    'monolog.level'         => 'INFO'
+    'monolog.level'         => $log_level
 ));
 /*
 $app->register(new Silex\Provider\HttpCacheServiceProvider(), array(
@@ -49,6 +58,8 @@ $app['search_tabs'] = array(
   array("index" => "course", "label" => "Course Reserves"),
   array("index" => "blended", "label" => "Catalog and Summon"),
   array("index" => "mendel", "label" => "Mendel Library Audio"),
+  array("index" => "mscores", "label" => "Mendal Library Scores"),
+  array("index" => "mvideo", "label" => "Mendel Library Video")
 );
 
 $app['primo_server_connection'] = Yaml::parse(__DIR__.'/../conf/primo.yml');
@@ -69,7 +80,7 @@ $app['pulfa'] = array(
 );
 
 $app['library.core'] = array(
-  'host' => "http://library.princeton.edu",
+  'host' => $core_base_path,
   'all.search.path' => "find/all",
   'db.search.path' => "research/databases/search"
 );
@@ -94,9 +105,6 @@ $app['hours.locations'] = 'libraries.json';
 $app['primo_client'] = $app->share(function ($app) {
     return new Primo($app['primo_server_connection']);
 });
-
-
-$app['environment'] = Yaml::parse(__DIR__.'/../conf/environment.yml');
 
 if ($app['environment']['env'] != "production") {
   $app['debug'] = true;
@@ -174,9 +182,22 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
       "keep_r" => "true" )
     );
   } elseif($tab == "mendel") {
-    $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], "location", array("MUSIC"), array('facet_rtype,exact,audio'));
-  }
-    elseif($tab == "course") {
+    $deep_search_link = new SearchDeepLink($query, "any", "contains", 
+                                           $app['primo_server_connection'], 
+                                           "location", array("MUSIC"), 
+                                           array('facet_rtype,exact,audio'));
+  } elseif($tab == "mscores") {
+    $deep_search_link = new SearchDeepLink($query, "any", "contains", 
+                                           $app['primo_server_connection'], 
+                                           "location", array("MUSIC"), 
+                                           array('facet_rtype,exact,scores'));
+    
+  } elseif($tab == "mvideo") {
+    $deep_search_link = new SearchDeepLink($query, "any", "contains", 
+                                           $app['primo_server_connection'], 
+                                           "location", array("MUSIC"), 
+                                           array('facet_rtype,exact,video'));
+  } elseif($tab == "course") {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, array("COURSE"));
   } elseif($tab == "blended") {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, array("PRN", "SummonThirdNode"));
@@ -188,8 +209,8 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, $app['primo_server_connection']['default.scope']); //WATCHOUT - Order Matters 
   }
   $app['monolog']->addInfo("TAB:" . $tab . "\tQUERY:" . $query . "\tREDIRECT:" . $deep_search_link->getLink() . "\tREFERER:" . $referer);
+  
   return $app->redirect($deep_search_link->getLink());
-
 });
 
 $app->get('/briefpnx/{rec_id}.json', function($rec_id) use($app) {
@@ -290,7 +311,7 @@ $app->get('/map', function() use ($app) {
   }
   $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
    
-  foreach($primo_record->getHoldings() as $holding) { //iterate through holdings objects 
+  foreach($primo_record->getHoldings() as $holding) {
     if($holding->location_code == $location_code) {
       if($holding->source_id == $requested_id) {
       	$holding_to_map = $holding;
@@ -408,8 +429,6 @@ $app->match('/archives/{rec_id}', function($rec_id) use($app) {
   $record_response = $test_client->getID($app->escape($rec_id));
   $app['monolog']->addInfo("Availability Lookup: " . $app->escape($rec_id));
 
-
-  //$record_response = file_get_contents(dirname(__FILE__).'/../tests/support/EADMC124_c02822.xml');
   $record = new \Primo\Record($record_response, $app['primo_server_connection']);
   $response = New Response($app['twig']->render('archives.html.twig', array(
     'source' => $record->getSourceID(),
@@ -437,7 +456,7 @@ $app->get('/voyager/holdings/{rec_id}', function ($rec_id) use ($app) {
 })->assert('rec_id', '\d+');
 
 /*
- * Return On order status & assocaited messages via JSON
+ * Return On order status & associated messages via JSON
  */
 
 $app->get('/voyager/order/{rec_id}.json', function ($rec_id) use ($app) {
@@ -610,8 +629,6 @@ $app->get('/pudl/{index_type}', function($index_type) use($app) {
       )
     );
   }
-  //return new Response($pudl_response_data, 200, array('Content-Type' => 'application/xml'));
-  //return $pudl_response_data;
 })->assert('index_type', '(any)'); 
 
 /*
@@ -625,7 +642,7 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
   } else {
     return "No Query Supplied";
   }
-  //return "Articles Query " . $app->escape($query);
+
   if($app['request']->server->get('HTTP_REFERER')) { //should not be repeated moved out to utilities class
     $referer = $app['request']->server->get('HTTP_REFERER');
   } else {
