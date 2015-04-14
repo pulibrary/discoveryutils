@@ -22,6 +22,7 @@ use Pulfa\Pulfa,
 use Pudl\Pudl,
     Pudl\Response as PudlResponse;
 use Voyager\Voyager;
+use Hours\Hours as Hours;
 use Utilities\CoreSearchLink;
 
 $app = new Silex\Application(); 
@@ -34,7 +35,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 $app->register(new Provider\ServiceControllerServiceProvider());
 $app->register(new Provider\UrlGeneratorServiceProvider());
 
-if ($app['environment'] == 'development') {
+if ($app['environment']['env'] == 'development') {
   $log_level = 'DEBUG';
   $core_base_path = "http://library.princeton.edu";
 } else {
@@ -98,20 +99,15 @@ $app['stackmap'] = Yaml::parse(__DIR__.'/../conf/stackmap.yml');
 $app['locations.base'] = "http://library.princeton.edu/requests/locationservice.php";
 $app['locations.list'] = json_decode(__DIR__.'/../conf/locations.json');
 
-$app['hours.base'] = "http://library.princeton.edu/services/voyager";
-$app['hours.locations'] = 'libraries.json';
+$app['hours.base'] = "http://library.princeton.edu/services";
+$app['hours.locations'] = 'services/voyager/libraries.json';
 
-// set up a configured primo client to reuse throughout the project
 $app['primo_client'] = $app->share(function ($app) {
     return new Primo($app['primo_server_connection']);
 });
 
 if ($app['environment']['env'] != "production") {
   $app['debug'] = true;
-//  $app->register($p = new Provider\WebProfilerServiceProvider(), array(
-//        'profiler.cache_dir' => __DIR__.'/../cache/profiler',
-//  ));
-//  $app->mount('/_profiler', $p);
 }
 
 /* basic error catching */
@@ -139,6 +135,16 @@ $app->get('/', function() use($app) {
   ));
 });
 
+$app->get('/hours', function() use($app) {
+  $hours_client = new Hours($app['hours.base'], $app['hours.locations']);
+  $xml = $app['twig']->render('locations.xml.twig', array(
+      'libraries' => $hours_client->getCurrentHoursByLocation(),
+      'base_url' => $app['environment']['app_base_url'],
+      'cur_month' => $hours_client->getCurrentMonth(),
+  ));
+  return new Response($xml, 200, array('Content-Type'=> 'application/xml'));
+});
+
 /*
  * Forms to route data to library core search securely
  */
@@ -147,6 +153,7 @@ $app->get('/libraryforms', function() use($app) {
         'environment' => $app['environment']['env'],
         'title' => "Sample Forms for Library Core System",
         'host' => $app['library.core']['host'],
+        'path' => $app['environment']['app_path'],
         'allsearch' => $app['library.core']['all.search.path'],
         'dbsearch'=> $app['library.core']['db.search.path'],
        )
