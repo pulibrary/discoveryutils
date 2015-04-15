@@ -608,6 +608,10 @@ function pulBuildFullLocationOptions(pnx_id, current_result_number) {
 	var holdings_count = holdings.length;
 	var locations = pulGetLocationCodes(pnx_id);
   var openurls = EXLTA_get_OpenURL(pnx_id);
+	if (console) {
+		console.log('openurls');
+		console.log(openurls);
+	}
 	// hack for borrow direct checking 
 	var any_available_items = false;
 	$('.EXLLocationTableColumn3').each(function(index) {
@@ -677,6 +681,7 @@ function pulBuildFullLocationOptions(pnx_id, current_result_number) {
                         if(!online_resource) {
                                 if(console) {
                                   console.log('more than a signle holding');
+				  console.log(openurls);
                                   if(openurls.length > 0) {
                                     console.log(openurls);
                                   }
