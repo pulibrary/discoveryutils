@@ -152,7 +152,7 @@ function EXLTA_getPNX(recordId){
 				dataType: "xml",
 				async: false,
 				error:function(){log('pnx retrieval error')}}).responseXML;
-		//console.log(r.pnx);
+		console.log(r.pnx);
         }
         return r.pnx;
 }
@@ -316,7 +316,7 @@ function EXLTA_availlibraries(recordId){
 function EXLTA_get_OpenURL(recordId){
     var pnx = EXLTA_getPNX(recordId);
     var openurls = new Array();
-    $(pnx).find('sear:openurl').each(function() {
+    $(pnx).find("sear\\:openurl", "openurl").each(function() {
         openurls.push($.trim($(this).text())); 
     });
     
