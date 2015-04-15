@@ -99,7 +99,7 @@ $app['stackmap'] = Yaml::parse(__DIR__.'/../conf/stackmap.yml');
 $app['locations.base'] = "http://library.princeton.edu/requests/locationservice.php";
 $app['locations.list'] = json_decode(__DIR__.'/../conf/locations.json');
 
-$app['hours.base'] = $app['environment']['app_base_url'] . "/services";
+$app['hours.base'] = $app['environment']['app_base_url'];
 $app['hours.locations'] = 'services/voyager/libraries.json';
 $app['hours.weekly'] = 'services/voyager/hours.json';
 
