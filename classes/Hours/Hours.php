@@ -11,15 +11,17 @@ use Hours\Location as Location;
 
 class Hours
 {
-  protected $http_client;
-  protected $host;
-  protected $locations_base;
-  protected $location_data;
-  public $locations = array();
+  private $http_client;
+  private $host;
+  private $locations_base;
+  private $daily_hours;
+  private $location_data;
+  private $locations = array();
   
-  function __construct($host, $base, Client $client = null) {
+  function __construct($host, $base, $weekly_base, Client $client = null) {
     $this->host = $host;
     $this->locations_base = $base;
+    $this->daily_hours = $weekly_base;
     if ( $client != null )
     {
       $this->http_client = $client;
@@ -38,10 +40,15 @@ class Hours
     } else {
       return array('message' => 'No Locations Found');
     }
-    //} else {
-    //  return array();
-    //}
+  }
 
+  public function getDowHours() {
+    $dow_hours = $this->setDowHours();
+    for ($i = 0; $i < count($this->locations); ++$i) {
+      if(!empty($this->locations[$i]->calendar)) {
+        $this->locations[$i]->setLocHours($dow_hours[$this->locations[$i]->calendar]);
+      }
+    }
   }
 
   private function setLocations() {
@@ -53,6 +60,16 @@ class Hours
         $this->locations[] = $library_location;
       }
     }
+  }
+
+  private function setDowHours() {
+     $hours_by_cal_id = array();
+     $response = $this->http_client->get($this->daily_hours);
+     $weekly_hours = $response->json();
+     foreach($weekly_hours as $hours) {
+       $hours_by_cal_id[$hours['calendar']][] = $hours;
+     }
+     return $hours_by_cal_id;
   }
 
   public function getCurrentMonth() {

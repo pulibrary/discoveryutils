@@ -99,8 +99,9 @@ $app['stackmap'] = Yaml::parse(__DIR__.'/../conf/stackmap.yml');
 $app['locations.base'] = "http://library.princeton.edu/requests/locationservice.php";
 $app['locations.list'] = json_decode(__DIR__.'/../conf/locations.json');
 
-$app['hours.base'] = "http://library.princeton.edu/services";
+$app['hours.base'] = $app['environment']['app_base_url'] . "/services";
 $app['hours.locations'] = 'services/voyager/libraries.json';
+$app['hours.weekly'] = 'services/voyager/hours.json';
 
 $app['primo_client'] = $app->share(function ($app) {
     return new Primo($app['primo_server_connection']);
@@ -136,11 +137,21 @@ $app->get('/', function() use($app) {
 });
 
 $app->get('/hours', function() use($app) {
-  $hours_client = new Hours($app['hours.base'], $app['hours.locations']);
+  $hours_client = new Hours($app['hours.base'], $app['hours.locations'], $app['hours.weekly']);
   $xml = $app['twig']->render('locations.xml.twig', array(
       'libraries' => $hours_client->getCurrentHoursByLocation(),
       'base_url' => $app['environment']['app_base_url'],
       'cur_month' => $hours_client->getCurrentMonth(),
+  ));
+  return new Response($xml, 200, array('Content-Type'=> 'application/xml'));
+});
+
+$app->get('/hours/dow', function() use($app) {
+  $hours_client = new Hours($app['hours.base'], $app['hours.locations'], $app['hours.weekly']);
+  $hours_client->getDowHours();
+  $xml = $app['twig']->render('dow.xml.twig', array(
+      'libraries' => $hours_client->getCurrentHoursByLocation(),
+      'base_url' => $app['environment']['app_base_url'],
   ));
   return new Response($xml, 200, array('Content-Type'=> 'application/xml'));
 });
