@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Response,
 use Primo\Record as PrimoRecord,
     Primo\PermaLink as Permalink,
     Primo\Query as PrimoQuery,
-    Primo\Client as PrimoClient,
+    Primo\Primo as Primo,
     Primo\SearchDeepLink as SearchDeepLink,
     Primo\Response as PrimoResponse,
     Primo\ScopeList as PrimoScopeList;
@@ -22,10 +22,12 @@ use Pulfa\Pulfa,
 use Pudl\Pudl,
     Pudl\Response as PudlResponse;
 use Voyager\Voyager;
+use Hours\Hours as Hours;
 use Utilities\CoreSearchLink;
 
 $app = new Silex\Application(); 
 
+$app['environment'] = Yaml::parse(__DIR__.'/../conf/environment.yml');
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
   'twig.path'       => __DIR__.'/../views',
 ));
@@ -33,9 +35,17 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 $app->register(new Provider\ServiceControllerServiceProvider());
 $app->register(new Provider\UrlGeneratorServiceProvider());
 
+if ($app['environment']['env'] == 'development') {
+  $log_level = 'DEBUG';
+  $core_base_path = "http://library.princeton.edu";
+} else {
+  $log_level = 'INFO';
+  $core_base_path = "http://liblocal.princeton.edu";
+}
+
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.logfile'       => __DIR__.'/../log/usage.log',
-    'monolog.level'         => 'INFO'
+    'monolog.level'         => $log_level
 ));
 /*
 $app->register(new Silex\Provider\HttpCacheServiceProvider(), array(
@@ -49,6 +59,8 @@ $app['search_tabs'] = array(
   array("index" => "course", "label" => "Course Reserves"),
   array("index" => "blended", "label" => "Catalog and Summon"),
   array("index" => "mendel", "label" => "Mendel Library Audio"),
+  array("index" => "mscores", "label" => "Mendal Library Scores"),
+  array("index" => "mvideo", "label" => "Mendel Library Video")
 );
 
 $app['primo_server_connection'] = Yaml::parse(__DIR__.'/../conf/primo.yml');
@@ -64,12 +76,12 @@ $app['voyager.connection'] = array(
 $app['summon.connection'] = Yaml::parse(__DIR__.'/../conf/summon.yml');
 $app['pulfa'] = array(
   'host' => "http://findingaids.princeton.edu",
-  'base' => "/collections.xml?",
+  'base' => "/collections.xml",
   'num.records.brief.display' => 3,
 );
 
 $app['library.core'] = array(
-  'host' => "http://library.princeton.edu",
+  'host' => $core_base_path,
   'all.search.path' => "find/all",
   'db.search.path' => "research/databases/search"
 );
@@ -87,20 +99,16 @@ $app['stackmap'] = Yaml::parse(__DIR__.'/../conf/stackmap.yml');
 $app['locations.base'] = "http://library.princeton.edu/requests/locationservice.php";
 $app['locations.list'] = json_decode(__DIR__.'/../conf/locations.json');
 
-// set up a configured primo client to reuse throughout the project
+$app['hours.base'] = $app['environment']['app_base_url'] . "/services";
+$app['hours.locations'] = 'services/voyager/libraries.json';
+$app['hours.weekly'] = 'services/voyager/hours.json';
+
 $app['primo_client'] = $app->share(function ($app) {
-    return new PrimoClient($app['primo_server_connection']);
+    return new Primo($app['primo_server_connection']);
 });
-
-
-$app['environment'] = Yaml::parse(__DIR__.'/../conf/environment.yml');
 
 if ($app['environment']['env'] != "production") {
   $app['debug'] = true;
-//  $app->register($p = new Provider\WebProfilerServiceProvider(), array(
-//        'profiler.cache_dir' => __DIR__.'/../cache/profiler',
-//  ));
-//  $app->mount('/_profiler', $p);
 }
 
 /* basic error catching */
@@ -128,6 +136,26 @@ $app->get('/', function() use($app) {
   ));
 });
 
+$app->get('/hours', function() use($app) {
+  $hours_client = new Hours($app['hours.base'], $app['hours.locations'], $app['hours.weekly']);
+  $xml = $app['twig']->render('locations.xml.twig', array(
+      'libraries' => $hours_client->getCurrentHoursByLocation(),
+      'base_url' => $app['environment']['app_base_url'],
+      'cur_month' => $hours_client->getCurrentMonth(),
+  ));
+  return new Response($xml, 200, array('Content-Type'=> 'application/xml'));
+});
+
+$app->get('/hours/dow', function() use($app) {
+  $hours_client = new Hours($app['hours.base'], $app['hours.locations'], $app['hours.weekly']);
+  $hours_client->getDowHours();
+  $xml = $app['twig']->render('dow.xml.twig', array(
+      'libraries' => $hours_client->getCurrentHoursByLocation(),
+      'base_url' => $app['environment']['app_base_url'],
+  ));
+  return new Response($xml, 200, array('Content-Type'=> 'application/xml'));
+});
+
 /*
  * Forms to route data to library core search securely
  */
@@ -136,6 +164,7 @@ $app->get('/libraryforms', function() use($app) {
         'environment' => $app['environment']['env'],
         'title' => "Sample Forms for Library Core System",
         'host' => $app['library.core']['host'],
+        'path' => $app['environment']['app_path'],
         'allsearch' => $app['library.core']['all.search.path'],
         'dbsearch'=> $app['library.core']['db.search.path'],
        )
@@ -171,9 +200,22 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
       "keep_r" => "true" )
     );
   } elseif($tab == "mendel") {
-    $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], "location", array("MUSIC"), array('facet_rtype,exact,audio'));
-  }
-    elseif($tab == "course") {
+    $deep_search_link = new SearchDeepLink($query, "any", "contains", 
+                                           $app['primo_server_connection'], 
+                                           "location", array("MUSIC"), 
+                                           array('facet_rtype,exact,audio'));
+  } elseif($tab == "mscores") {
+    $deep_search_link = new SearchDeepLink($query, "any", "contains", 
+                                           $app['primo_server_connection'], 
+                                           "location", array("MUSIC"), 
+                                           array('facet_rtype,exact,scores'));
+    
+  } elseif($tab == "mvideo") {
+    $deep_search_link = new SearchDeepLink($query, "any", "contains", 
+                                           $app['primo_server_connection'], 
+                                           "location", array("MUSIC"), 
+                                           array('facet_rtype,exact,video'));
+  } elseif($tab == "course") {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, array("COURSE"));
   } elseif($tab == "blended") {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, array("PRN", "SummonThirdNode"));
@@ -185,18 +227,18 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, $app['primo_server_connection']['default.scope']); //WATCHOUT - Order Matters 
   }
   $app['monolog']->addInfo("TAB:" . $tab . "\tQUERY:" . $query . "\tREDIRECT:" . $deep_search_link->getLink() . "\tREFERER:" . $referer);
+  
   return $app->redirect($deep_search_link->getLink());
-
 });
 
-$app->get('/record/{rec_id}.json', function($rec_id) use($app) {
+$app->get('/briefpnx/{rec_id}.json', function($rec_id) use($app) {
   $record_data = $app['primo_client']->getID($app->escape($rec_id));
   if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
     return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));  
   } else {
     $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
     $stub_data = $primo_record->getBriefInfo();
-    $app['monolog']->addInfo("PNXID_REQUEST: " . json_encode($stub_data));
+    $app['monolog']->addInfo("PNXID_REQUEST: " . $rec_id);
     return new Response(json_encode($stub_data), 200, array('Content-Type' => 'application/json'));
   }
 })->assert('rec_id', '\w+'); //test regular expression validation of route 
@@ -208,6 +250,18 @@ $app->match('/record/{rec_id}.xml', function($rec_id) use($app) {
     return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));  
   } else {
     return new Response($record_data, 200, array('Content-Type' => 'application/xml',
+                                                 'Access-Control-Allow-Origin' => "*",
+                                                 'Access-Control-Allow-Headers' => "EXLRequestType"));
+  }
+})->assert('rec_id', '(\w+|EAD\w+\.?\w+)')->method('GET|OPTIONS');
+
+$app->match('/record/{rec_id}.json', function($rec_id) use($app) {
+  
+  $record_data = $app['primo_client']->getID($app->escape($rec_id), "true");
+  if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
+    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));  
+  } else {
+    return new Response($record_data, 200, array('Content-Type' => 'application/json',
                                                  'Access-Control-Allow-Origin' => "*",
                                                  'Access-Control-Allow-Headers' => "EXLRequestType"));
   }
@@ -275,7 +329,7 @@ $app->get('/map', function() use ($app) {
   }
   $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
    
-  foreach($primo_record->getHoldings() as $holding) { //iterate through holdings objects 
+  foreach($primo_record->getHoldings() as $holding) {
     if($holding->location_code == $location_code) {
       if($holding->source_id == $requested_id) {
       	$holding_to_map = $holding;
@@ -389,12 +443,10 @@ $app->get('/availability/{rec_id}.json', function($rec_id) use($app) {
 
 $app->match('/archives/{rec_id}', function($rec_id) use($app) {
   $connection = $app['primo_server_connection'];
-  $test_client = new \Primo\Client($connection);
+  $test_client = new \Primo\Primo($connection);
   $record_response = $test_client->getID($app->escape($rec_id));
   $app['monolog']->addInfo("Availability Lookup: " . $app->escape($rec_id));
 
-
-  //$record_response = file_get_contents(dirname(__FILE__).'/../tests/support/EADMC124_c02822.xml');
   $record = new \Primo\Record($record_response, $app['primo_server_connection']);
   $response = New Response($app['twig']->render('archives.html.twig', array(
     'source' => $record->getSourceID(),
@@ -422,7 +474,7 @@ $app->get('/voyager/holdings/{rec_id}', function ($rec_id) use ($app) {
 })->assert('rec_id', '\d+');
 
 /*
- * Return On order status & assocaited messages via JSON
+ * Return On order status & associated messages via JSON
  */
 
 $app->get('/voyager/order/{rec_id}.json', function ($rec_id) use ($app) {
@@ -432,9 +484,9 @@ $app->get('/voyager/order/{rec_id}.json', function ($rec_id) use ($app) {
     $on_order_response = array();
     $on_order_response['on_order'] = $voyager_record->isOnOrder();
     $on_order_response['order_messages'] = $voyager_record->getOnOrderMessage();
+    
     return new JsonResponse($on_order_response);
 })->assert('rec_id', '\d+');
-
 
 /*
  * Generic "services" route to all for querying of specific primo services
@@ -445,6 +497,7 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
   $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
   // decide which service type to use
   $location_links_data = $primo_record->getAllLinks();
+  
   if ($format == "json") {
     return new Response(json_encode($location_links_data), 200, array('Content-Type' => 'application/json'));
   }
@@ -517,6 +570,35 @@ $app->get('/pulfa/{index_type}', function($index_type) use($app) {
 })->assert('index_type', '(title|any|creator)'); 
 
 
+$app->get('/guides/{index_type}', function($index_type) use($app) {
+  if($app['request']->get('query')) {
+    $query = $app['request']->get('query');
+  } else {
+    return "No Query Supplied";
+  }
+  
+  if($app['request']->get('number')) {
+    $result_size = $app['request']->get('number');
+  } else {
+    $result_size = $app['guides']['num.records.brief.display'];
+  }
+  if($app['request']->server->get('HTTP_REFERER')) { //should not be repeated moved out to utilities class
+    $referer = $app['request']->server->get('HTTP_REFERER');
+  } else {
+    $referer = "Direct Query";
+  }
+  
+  $pulfa = new \Pulfa\Pulfa($app['pulfa']['host'], $app['pulfa']['base']);
+  $pulfa_response_data = $pulfa->query($query, 0, $result_size);
+  $pulfa_response = new PulfaResponse($pulfa_response_data, $query);
+  $brief_response = $pulfa_response->getBriefResponse();
+  $brief_response['query'] = $app->escape($query);
+  
+  $app['monolog']->addInfo("Guide Query:" . $query . "\tREFERER:" . $referer);
+  return new Response(json_encode($brief_response), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
+})->assert('index_type', '(any|title)'); 
+
+
 $app->get('/pudl/{index_type}', function($index_type) use($app) {
   if($app['request']->get('query')) {
     $query = $app['request']->get('query');
@@ -565,14 +647,8 @@ $app->get('/pudl/{index_type}', function($index_type) use($app) {
       )
     );
   }
-  //return new Response($pudl_response_data, 200, array('Content-Type' => 'application/xml'));
-  //return $pudl_response_data;
 })->assert('index_type', '(any)'); 
 
-
-
-
- 
 /*
  * Route to direct queries to Summon API
  * 
@@ -584,7 +660,7 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
   } else {
     return "No Query Supplied";
   }
-  //return "Articles Query " . $app->escape($query);
+
   if($app['request']->server->get('HTTP_REFERER')) { //should not be repeated moved out to utilities class
     $referer = $app['request']->server->get('HTTP_REFERER');
   } else {
@@ -648,16 +724,11 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
       'more' => $summon_full_search_link->getLink(),
       'records' => $summon_data->getBriefResults(),
     );
-    //print_r($summon_data->deep_search_link);
   }
-  
-  
   
   $app['monolog']->addInfo("Summon $index_type Query:" . $query . "\tREFERER:" . $referer);
   return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
 })->assert('index_type', '(any|title|guide|creator|issn|isbn|spelling|recommendations)');
-
-
 
 /* Wrapper for Primo Brief Search API Call
  * 
@@ -685,7 +756,6 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
  * 
  */
 
- 
  $app->get('/find/{index_type}', function($index_type) use($app) {
 
   if($app['request']->get('query')) {

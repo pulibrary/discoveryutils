@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locations>
+{% for location in libraries %}
+	<location>
+		<name>{{ location.name }}</name>
+		<description>{{ location.description }}</description>
+		<url>{{ location.url }}</url>
+		<phone>{{ location.phone }}</phone>
+		<email>{{ location.email }}</email>
+		<geoloc>
+			<lat>{{ location.lat }}</lat>
+			<long>{{ location.long }}</long>
+		</geoloc>
+		{% if location.hours is defined %}	
+		<hours>
+			{% for dow,day in location.hours %}	
+				<day>
+				<dow>{{ dow }}</dow>
+				{% for theday in day %}	
+						{% for day in theday %}
+							<start>{{ day.open }}</start>
+							<end>{{ day.close }}</end>
+						{% endfor %}
+				{% endfor %}
+				</day>
+			{% endfor %}	
+		</hours>
+		{% endif %}
+	</location>
+{% endfor %}
+</locations>

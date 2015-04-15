@@ -1,7 +1,7 @@
 <?php
 namespace LookupApp\Tests;
 
-use Guzzle\Service\Client;
+use GuzzleHttp\Client;
 //use Guzzle\Http\Client;
 
 /*
@@ -13,7 +13,7 @@ use Guzzle\Service\Client;
 class HTTPClientTest extends  \PHPUnit_Framework_TestCase
 {
     protected function setUp() {
-       $this->primo_xservice = new \Guzzle\Service\Client("http://searchit.princeton.edu/PrimoWebServices/xservice/search/brief");
+       $this->primo_xservice = new \GuzzleHttp\Client("http://searchit.princeton.edu/PrimoWebServices/xservice/search/brief");
     }
     
     
@@ -23,7 +23,7 @@ class HTTPClientTest extends  \PHPUnit_Framework_TestCase
     }
     
     function testPrimoFacetQuery() {
-      $request = $this->primo_xservice->get("?institution=PRN&onCampus=false&indx=1&dym=true&highlight=true&displayField=title&bulkSize=3&loc=local,scope:(PRN)");
+      $request = $this->primo_xservice->get('GET', "?institution=PRN&onCampus=false&indx=1&dym=true&highlight=true&displayField=title&bulkSize=3&loc=local,scope:(PRN)");
       $query_args = array('title,exact,journal+of+politics', 'facet_rtype,exact,journals');
       $query_facet_aggregator = new \Guzzle\Http\QueryAggregator\DuplicateAggregator(); // use this to allow duplicate key values 
       $request->getQuery()->setAggregator($query_facet_aggregator);

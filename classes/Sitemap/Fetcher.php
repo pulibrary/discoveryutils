@@ -1,7 +1,7 @@
 <?php
 
 namespace Sitemap;
-use Guzzle\Http\Client as HttpClient;
+use GuzzleHttp\Client; as HttpClient;
 
 
 /**

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locations>
+{% for location in libraries %}
+  <location>
+    <name>{{ location.name }}</name>
+    <summary>{{ location.name }}</summary>
+    <description>{{ location.description }}</description>
+    <mapName>{{ location.name }}</mapName>
+    <eventsFeedConfig>
+      <baseURL>{{ base_url }}/calendar/{{ cur_month }}/{{ location.calendar }}/calendar.ics</baseURL>
+    </eventsFeedConfig>
+  </location>
+{% endfor %}
+</locations>

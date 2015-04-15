@@ -1,10 +1,8 @@
 <?php
 /**
- * Created by JetBrains PhpStorm.
- * User: KevinReiss
+ * User: Kevin Reiss
  * Date: 5/16/13
  * Time: 9:25 AM
- * To change this template use File | Settings | File Templates.
  */
 namespace Voyager;
 use Symfony\Component\DomCrawler\Crawler as DomCrawler;

@@ -21,11 +21,11 @@ class LookupPrimoClientTest extends \PHPUnit_Framework_TestCase {
       'default_view_id' => 'PRINCETON',
       'default_pnx_source_id' => 'PRN_VOYAGER',  
     );
-    $this->client = new \Primo\Client($primo_server_connection);
+    $this->client = new \Primo\Primo($primo_server_connection);
   }
   
   function testServiceBaseURLSetting() {
-    $this->assertInstanceOf("\Guzzle\Service\Client", $this->client->getHttpClient());
+    $this->assertInstanceOf("\GuzzleHttp\Client", $this->client->getHttpClient());
     $client = $this->client->getHttpClient();
     $this->assertEquals("PRN", $this->client->getInstitution());
   }
