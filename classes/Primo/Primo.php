@@ -34,8 +34,8 @@ class Primo
     }
 
     $status = $response->getStatusCode();
-    if($status == 200) { 
-      return $response->getBody();
+    if($status == 200) {
+      return (string)$response->getBody();
     } else {
       return false;
     }
