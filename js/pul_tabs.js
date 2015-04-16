@@ -45,16 +45,18 @@ $(document).ajaxComplete(function(event, request, settings) {
 	    	var id = match[1];
 			var current_result_number = EXLTA_getResultNumberOnPage(id);
 			// add RIS option
-			var ris_link = buildRISLink(id);
+			//var ris_link = buildRISLink(id);
 			var link = buildCatalogReportLink(id);
 			if(!EXLTA_isFullDisplay()) {
-				$('.EXLButtonSendToRis').hide();
-				$('#exlidResult'+current_result_number+'-TabHeader #exlidTabHeaderButtons'+current_result_number+' .EXLTabHeaderButtonSendToList').append(ris_link);
+				//$('.EXLButtonSendToRis').hide();
+				//$('#exlidResult'+current_result_number+'-TabHeader #exlidTabHeaderButtons'+current_result_number+' .EXLTabHeaderButtonSendToList').append(ris_link);
+				$('.EXLButtonSendToDelicious').hide();
 				$('.EXLButtonSendToCatalogReport').hide();
 				$('#exlidResult'+current_result_number+'-TabHeader #exlidTabHeaderButtons'+current_result_number+' .EXLTabHeaderButtonSendToList').append(link);
 			} else {
-				$('.EXLButtonSendToRis').hide();
-				$('.EXLTabHeaderButtonSendToList').append(ris_link);
+				//$('.EXLButtonSendToRis').hide();
+				//$('.EXLTabHeaderButtonSendToList').append(ris_link);
+				$('.EXLButtonSendToDelicious').hide();
 				$('.EXLButtonSendToCatalogReport').hide();
 				$('.EXLTabHeaderButtonSendToList').append(link);
 			}
@@ -76,7 +78,7 @@ $(document).ajaxComplete(function(event, request, settings) {
 	    	//var current_result_number = $('a.EXLResultRecordId').index(current_result);
 			var current_result_number = EXLTA_getResultNumberOnPage(id); // Try new function to get proper Index Number 
 	    	//alert('current index ' + current_result_number + id);
-	        $('#exlidResult'+current_result_number+'-TabContainer-detailsTab form .EXLDetailsTabContent .EXLDetailsLinks ul').append(pulGetRecordDeepLink(id));
+	        //$('#exlidResult'+current_result_number+'-TabContainer-detailsTab form .EXLDetailsTabContent .EXLDetailsLinks ul').append(pulGetRecordDeepLink(id));
 		     
 	    }
 	    
@@ -105,9 +107,10 @@ $(document).ready(function() {
 			//var display_data = EXLTA_getDisplayData(id);
 			//console.log(display_data);
 			// Add the RIS Link
-			var ris_link = buildRISLink(id);
-			$('.EXLTabHeaderButtonSendToList').append(ris_link);
+			//var ris_link = buildRISLink(id);
+			//$('.EXLTabHeaderButtonSendToList').append(ris_link);
 			var link = buildCatalogReportLink(id);
+			$('.EXLButtonSendToDelicious').hide();
 			$('.EXLTabHeaderButtonSendToList').append(link);
 		}
 		$('.EXLDetailsLinks .EXLDetailsLinksTitle a').each(function(index){
