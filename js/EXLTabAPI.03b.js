@@ -147,7 +147,7 @@ function EXLTA_getPNX(recordId){
                 //r.pnx = $.ajax({url: 'display.do',data:{fn: 'display', doc: recordId, showPnx: true},async: false,error:function(){log('pnx retrieval error')}}).responseXML;
                 
                 // WS URL /PrimoWebServices/xservice/getit?institution=PRN&docId=
-                r.pnx = $.ajax({url: 'http://library-stage.princeton.edu/searchit/record/' + recordId + '.xml',
+                r.pnx = $.ajax({url: 'http://library.princeton.edu/searchit/record/' + recordId + '.xml',
                 //r.pnx = $.ajax({url: '/PrimoWebServices/xservice/getit?institution=PRN&docId=' + recordId,    
 				dataType: "xml",
 				async: false,
