@@ -28,10 +28,11 @@ class Primo
       );
     if (!is_null($json)) {
       $query['json'] = 'true';
-      $response = $this->client->get($this->xservice_base . $this->xservice_getit, ['query' => $query]);
-    } else {
-      $response = $this->client->get($this->xservice_base . $this->xservice_getit, ['query' => $query]);
     }
+    $response = $this->client->get($this->xservice_base . $this->xservice_getit, [
+      'query' => $query,
+      'timeout' => 5 ]
+    );
 
     $status = $response->getStatusCode();
     if($status == 200) {
@@ -57,7 +58,10 @@ class Primo
    */
   public function doSearch(\Primo\Query $query) {
     
-    $request = $this->client->createRequest('GET', $this->xservice_base . $this->xservice_brief_search . $query->getQueryString());
+    $request = $this->client->createRequest('GET', 
+      $this->xservice_base . $this->xservice_brief_search . $query->getQueryString(),
+      [ 'timeout' => 5 ]
+      );
     
     //$query_facet_aggregator = new DuplicateAggregator(); // use this to allow duplicate key values 
     $search_query =  $request->getQuery();

@@ -51,7 +51,10 @@ class Pulfa
     $query['v1'] = $string;
     $query['rpp'] = $record_number;
     $query['start'] = $start;
-    $response = $this->http_client->get($this->base_url, ['query' => $query]);
+    $response = $this->http_client->get($this->base_url, [
+        'query' => $query,
+        'timeout' => 5 ]
+      );
     return $response->xml();
   }
   
