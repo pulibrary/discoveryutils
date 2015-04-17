@@ -281,7 +281,10 @@ class Summon
 		}
 		// send the request
 		//$request = $this->http_client->createRequest('GET');
-		$response = $this->http_client->get("$service?$queryString", ['headers' => $headers]);
+		$response = $this->http_client->get("$service?$queryString", [
+				'headers' => $headers,
+			  'timeout' => 5 ]
+				);
 		
 
 		// decode the response into array - have to cast to string

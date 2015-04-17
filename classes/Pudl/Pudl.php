@@ -49,7 +49,9 @@ class Pudl
       );
     $response = $this->http_client->get($this->base_url, [
       'headers' => $headers,
-      'query' => $query]);
+      'query' => $query,
+      'timeout' => 5 ]
+      );
     //$request->addHeader("Accept", "application/xml");
     //$request->addHeader("Accept-Charset", "UTF-8");
     
