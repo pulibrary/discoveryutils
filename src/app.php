@@ -37,11 +37,11 @@ $app->register(new Provider\UrlGeneratorServiceProvider());
 
 if ($app['environment']['env'] == 'development') {
   $log_level = 'DEBUG';
-  $core_base_path = "http://library.princeton.edu";
 } else {
   $log_level = 'INFO';
-  $core_base_path = "http://liblocal.princeton.edu";
 }
+
+$core_base_path = $app['environment']['app_base_url'];
 
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.logfile'       => __DIR__.'/../log/usage.log',
