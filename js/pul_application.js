@@ -725,7 +725,7 @@ function pulRewriteOnlineLinks() {
 }
 
 function pulConvertOnlineLink(raw_link, pnxid) {
-	var resolvePrefix = "http://library.princeton.edu/resolve/lookup";
+	//var resolvePrefix = "http://library.princeton.edu/resolve/lookup";
 	// exclude expand.do local links
 	// exclude catalog/sfx based links
 	//console.log(raw_link);
@@ -745,7 +745,7 @@ function pulConvertOnlineLink(raw_link, pnxid) {
 		return link_wsfx_cleanup;
 	} else {
 		//"?recordid=" + pnxid + 
-		return resolvePrefix + "?url=" + link_wsfx_cleanup;
+		return link_wsfx_cleanup;
 		//return link_wsfx_cleanup;
 	}
 }
