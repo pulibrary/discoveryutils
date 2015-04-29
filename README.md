@@ -1,7 +1,5 @@
-discoveryutils
-==============
-
 # Discovery Service Utilities
+==============
 
 Utilities to interact with Summon, Primo, and the in-house request form system. Written using Silex, Symfony Components, and GuzzleHTTP. See http://silex.sensiolabs.org/documentation for more context and information about Silex applications. 
 
