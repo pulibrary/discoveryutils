@@ -666,8 +666,8 @@ $app->get('/guides/{index_type}', function($index_type) use($app) {
      $app['monolog']->addInfo("FAQ Query:" . $query . "\tREFERER:" . $referer);
 
      return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
-   });
- // })->assert('search_terms', '\s\S');
+     //   });
+  })->assert('search_terms', '[\s\w+-]+');
 
  /*
   * Route to direct queries to Digital Library (PUDL)
