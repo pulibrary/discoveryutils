@@ -24,8 +24,10 @@ use Pudl\Pudl,
 use Voyager\Voyager;
 use Hours\Hours as Hours;
 use Utilities\CoreSearchLink;
+use FAQ\FAQ,
+    FAQ\Response as FAQResponse;
 
-$app = new Silex\Application(); 
+$app = new Silex\Application();
 
 $app['environment'] = Yaml::parse(__DIR__.'/../conf/environment.yml');
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
@@ -80,6 +82,12 @@ $app['pulfa'] = array(
   'num.records.brief.display' => 3,
 );
 
+$app['faq'] = array(
+  'host' => "https://api2.libanswers.com",
+  'base' => "/1.0/search",
+  'num.records.brief.display' => 3,
+);
+
 $app['library.core'] = array(
   'host' => $core_base_path,
   'all.search.path' => "find/all",
@@ -129,9 +137,9 @@ $app->error(function (\Exception $e, $code) use ($app) {
 
 
 $app->get('/', function() use($app) {
-  
+
    return $app['twig']->render('home.html.twig', array(
-    'environment' => $app['environment']['env'], 
+    'environment' => $app['environment']['env'],
     'title' => $app['environment']['title']
   ));
 });
@@ -175,19 +183,19 @@ $app->get('/libraryforms', function() use($app) {
  * Redirect Route to Primo Deep Link for IDs
  */
 $app->match('/show/{rec_id}', function($rec_id) use($app) {
-    
+
   $primo_record_link = new PermaLink($rec_id, $app['primo_server_connection']);
   $app['monolog']->addInfo("REDIRECT: " . $primo_record_link->getLink());
   return $app->redirect($primo_record_link->getLink());
 })->assert('rec_id', '^(PRN_VOYAGER|dedupmrg)\d+');
 
-/* 
- * redirect route for primo basic searches 
+/*
+ * redirect route for primo basic searches
  * tab should match an available primo search tab
  */
 $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
 
-  $query = $app['request']->get('query'); //FIXME escaping this causes primo search to fail 
+  $query = $app['request']->get('query'); //FIXME escaping this causes primo search to fail
   if($app['request']->server->get('HTTP_REFERER')) {
     $referer = $app['request']->server->get('HTTP_REFERER');
   } else {
@@ -196,24 +204,24 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
 
   if ($tab == "summon") {
     $deep_search_link = new SummonQuery($query, array(
-      "s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t)",      
+      "s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t)",
       "keep_r" => "true" )
     );
   } elseif($tab == "mendel") {
-    $deep_search_link = new SearchDeepLink($query, "any", "contains", 
-                                           $app['primo_server_connection'], 
-                                           "location", array("MUSIC"), 
+    $deep_search_link = new SearchDeepLink($query, "any", "contains",
+                                           $app['primo_server_connection'],
+                                           "location", array("MUSIC"),
                                            array('facet_rtype,exact,audio'));
   } elseif($tab == "mscores") {
-    $deep_search_link = new SearchDeepLink($query, "any", "contains", 
-                                           $app['primo_server_connection'], 
-                                           "location", array("MUSIC"), 
+    $deep_search_link = new SearchDeepLink($query, "any", "contains",
+                                           $app['primo_server_connection'],
+                                           "location", array("MUSIC"),
                                            array('facet_rtype,exact,scores'));
-    
+
   } elseif($tab == "mvideo") {
-    $deep_search_link = new SearchDeepLink($query, "any", "contains", 
-                                           $app['primo_server_connection'], 
-                                           "location", array("MUSIC"), 
+    $deep_search_link = new SearchDeepLink($query, "any", "contains",
+                                           $app['primo_server_connection'],
+                                           "location", array("MUSIC"),
                                            array('facet_rtype,exact,video'));
   } elseif($tab == "course") {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, array("COURSE"));
@@ -224,30 +232,30 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
   } elseif($tab == 'dball') {
     $deep_search_link = new CoreSearchLink($app['library.core']['host'] , $app['library.core']['db.search.path'] , $app->escape($query));
   } else {
-    $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, $app['primo_server_connection']['default.scope']); //WATCHOUT - Order Matters 
+    $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, $app['primo_server_connection']['default.scope']); //WATCHOUT - Order Matters
   }
   $app['monolog']->addInfo("TAB:" . $tab . "\tQUERY:" . $query . "\tREDIRECT:" . $deep_search_link->getLink() . "\tREFERER:" . $referer);
-  
+
   return $app->redirect($deep_search_link->getLink());
 });
 
 $app->get('/briefpnx/{rec_id}.json', function($rec_id) use($app) {
   $record_data = $app['primo_client']->getID($app->escape($rec_id));
   if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
-    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));  
+    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));
   } else {
     $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
     $stub_data = $primo_record->getBriefInfo();
     $app['monolog']->addInfo("PNXID_REQUEST: " . $rec_id);
     return new Response(json_encode($stub_data), 200, array('Content-Type' => 'application/json'));
   }
-})->assert('rec_id', '\w+'); //test regular expression validation of route 
+})->assert('rec_id', '\w+'); //test regular expression validation of route
 
 $app->match('/record/{rec_id}.xml', function($rec_id) use($app) {
-  
+
   $record_data = $app['primo_client']->getID($app->escape($rec_id));
   if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
-    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));  
+    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));
   } else {
     return new Response($record_data, 200, array('Content-Type' => 'application/xml',
                                                  'Access-Control-Allow-Origin' => "*",
@@ -256,10 +264,10 @@ $app->match('/record/{rec_id}.xml', function($rec_id) use($app) {
 })->assert('rec_id', '(\w+|EAD\w+\.?\w+)')->method('GET|OPTIONS');
 
 $app->match('/record/{rec_id}.json', function($rec_id) use($app) {
-  
+
   $record_data = $app['primo_client']->getID($app->escape($rec_id), "true");
   if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
-    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));  
+    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));
   } else {
     return new Response($record_data, 200, array('Content-Type' => 'application/json',
                                                  'Access-Control-Allow-Origin' => "*",
@@ -270,7 +278,7 @@ $app->match('/record/{rec_id}.json', function($rec_id) use($app) {
 $app->get('/record/{rec_id}.ris', function($rec_id) use($app) {
   $record_data = $app['primo_client']->getID($app->escape($rec_id));
   if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
-    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));  
+    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));
   } else {
     $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
     $ris_data = $primo_record->getCitation("RIS");
@@ -283,7 +291,7 @@ $app->get('/record/{rec_id}.ris', function($rec_id) use($app) {
 $app->get('/record/{rec_id}', function($rec_id) use($app) {
   $record_data = $app['primo_client']->getID($app->escape($rec_id));
   if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
-      return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));  
+      return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));
   } else {
     $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
     $stub_data = $primo_record->getBriefInfo();
@@ -299,14 +307,14 @@ $app->get('/record/{rec_id}', function($rec_id) use($app) {
  * build a map for a given location code and id
  */
 
-/* do not send dedup ids to this controller 
- * 
+/* do not send dedup ids to this controller
+ *
  * @params
  * id = Voyager Style Numeric ID (Maybe should accept either one)
- * loc = Voyager Location Code 
- * 
+ * loc = Voyager Location Code
+ *
  * Example http://mydiscservice.edu/map?id=123456&loc=stax
- * 
+ *
  * */
 $app->get('/map', function() use ($app) {
   $referer = "DIRECT";
@@ -324,48 +332,48 @@ $app->get('/map', function() use ($app) {
       $requested_id = $rec_id;
     }
     $query = new PrimoQuery($requested_id, "any", "exact", $app['primo_server_connection']['default.scope']);
-    $record_data = $app['primo_client']->doSearch($query);    
+    $record_data = $app['primo_client']->doSearch($query);
 
   }
   $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
-   
+
   foreach($primo_record->getHoldings() as $holding) {
     if($holding->location_code == $location_code) {
       if($holding->source_id == $requested_id) {
       	$holding_to_map = $holding;
-        break; //why break from loop here? 
+        break; //why break from loop here?
       } else {
         $holding_to_map = $holding;
-      } 
+      }
     }
   }
-  
+
   /*
    * ***Note on Empty Holdings*******
-   * 
+   *
    * If there is no holding in Primo Web Services should treat the item differently depending on whether or not it came
-   * from Voyager or Searchit. There can be discrepancies for temp holdings. 
-   * 
-   * For Searchit - generate an error. 
+   * from Voyager or Searchit. There can be discrepancies for temp holdings.
+   *
+   * For Searchit - generate an error.
    * For Voyager - Just pass through to the PUL Locator for an item not a stackmap eligible library
-   * 
+   *
    */
-  
+
   if(!(isset($holding_to_map))) {
     // most likely for temp/perm location mismatches
-    // send these over to the locator  
+    // send these over to the locator
     $app['monolog']->err("TYPE:No Holdings Available for Requested Record ID\tREC_ID:$rec_id\tLOCATION:$location_code\tREFERER:$referer"); //log the error
-    
+
     $map_params = array(
         'loc' => $location_code,
         'id' => $rec_id,
       );
     $map_url = $app['locator.base'] . "?" . http_build_query($map_params);
-    
-    $app['monolog']->addInfo("MAP:$map_url\tLOCATION:$location_code\tRECORD:$rec_id"); 
-   
+
+    $app['monolog']->addInfo("MAP:$map_url\tLOCATION:$location_code\tRECORD:$rec_id");
+
     return $app->redirect($map_url);
-    
+
   } elseif(in_array($holding_to_map->location_code, $app['stackmap']['reserve.locations'])) {
     $location_info = json_decode(file_get_contents($app['locations.base'] . "?" . http_build_query(array('loc' => $holding_to_map->location_code))), TRUE); //FIXME
     return $app['twig']->render('reserve.twig', array(
@@ -376,12 +384,12 @@ $app->get('/map', function() use ($app) {
        'location_label' => $location_info[$holding_to_map->location_code]['collectionDisplay']
        ));
   } else {
-      
+
     if(in_array($holding_to_map->primo_library, $app['stackmap']['eligible.libraries'])) { //FIXE
        /*
        * get the location display Name from locations service because stack map wants it that way
-       * should be obtained via a database call in future when apps mere 
-       */ 
+       * should be obtained via a database call in future when apps mere
+       */
       $location_info = json_decode(file_get_contents($app['locations.base'] . "?" . http_build_query(array('loc' => $holding_to_map->location_code))), TRUE); //FIXME
       //print_r($location_info);
       if(in_array($holding_to_map->location_code, $app['stackmap']['by.title.locations'])) {
@@ -396,18 +404,18 @@ $app->get('/map', function() use ($app) {
       );
       $map_url = $app['stackmap']['base.url'] . "?" . http_build_query($map_params);
     } else {
-      
+
       $map_params = array(
         'loc' => $holding_to_map->location_code,
         'id' => $rec_id,
       );
       $map_url = $app['locator.base'] . "?" . http_build_query($map_params);
     }
-    $app['monolog']->addInfo("MAP:$map_url\tLOCATION:$location_code\tRECORD:$rec_id"); 
+    $app['monolog']->addInfo("MAP:$map_url\tLOCATION:$location_code\tRECORD:$rec_id");
 
     return $app->redirect($map_url);
 
-  } 
+  }
 });
 
 
@@ -430,7 +438,7 @@ $app->get('/locations/{rec_id}.json', function($rec_id) use($app) {
   $primo_record = new PrimoRecord($record_data, $app['primo_server_connection']);
   $all_links_data = $primo_record->getAvailableLibraries();
   if ($view_type = $app['request']->get('view')) { // this method may be slow per symfony request class docs
-    $all_links_data['view'] =  $view_type; 
+    $all_links_data['view'] =  $view_type;
   }
   return new Response(json_encode($all_links_data), 200, array('Content-Type' => 'application/json'));
 })->assert('rec_id', '\w+');
@@ -448,7 +456,7 @@ $app->match('/archives/{rec_id}', function($rec_id) use($app) {
   $record = new PrimoRecord($record_response, $app['primo_server_connection']);
   $response = New Response($app['twig']->render('archives.html.twig', array(
     'source' => $record->getSourceID(),
-    'record_id' => $rec_id, 
+    'record_id' => $rec_id,
     'archival_holding' => $record->getArchivalHoldings(),
     'items' => $record->getArchivalItems(),
     'title' => "Reading Room Request: " . $record->getTitle(),
@@ -482,7 +490,7 @@ $app->get('/voyager/order/{rec_id}.json', function ($rec_id) use ($app) {
     $on_order_response = array();
     $on_order_response['on_order'] = $voyager_record->isOnOrder();
     $on_order_response['order_messages'] = $voyager_record->getOnOrderMessage();
-    
+
     return new JsonResponse($on_order_response);
 })->assert('rec_id', '\d+');
 
@@ -495,7 +503,7 @@ $app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, 
   $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
   // decide which service type to use
   $location_links_data = $primo_record->getAllLinks();
-  
+
   if ($format == "json") {
     return new Response(json_encode($location_links_data), 200, array('Content-Type' => 'application/json'));
   }
@@ -507,12 +515,12 @@ $app->post('/scopelist', function() use ($app) {
   $yaml = $scope_list->asYaml();
   //updat yaml file
   file_put_contents(__DIR__.'/../conf/scopes.yml', $yaml);
-  
+
   return new JsonResponse($scope_list->getScopes());
 });
 
 $app->post('/locations', function() use ($app) {
-    
+
   $locations = json_decode(file_get_contents($app['locations.base']), TRUE);
   ksort($locations);
   $location_codes = array();
@@ -528,7 +536,7 @@ $app->post('/locations', function() use ($app) {
 
 $app->get('/locations', function() use ($app) {
    return $app['twig']->render('locations.html.twig', array(
-    'locations' => $app['locations.list'], 
+    'locations' => $app['locations.list'],
     'environment' => $app['environment']['env'],
     'title' => "Active Voyager Locations"
   ));
@@ -536,7 +544,7 @@ $app->get('/locations', function() use ($app) {
 
 /*
  * Route to direct queries to Pulfa
- * 
+ *
  */
 
 $app->get('/pulfa/{index_type}', function($index_type) use($app) {
@@ -545,7 +553,7 @@ $app->get('/pulfa/{index_type}', function($index_type) use($app) {
   } else {
     return "No Query Supplied";
   }
-  
+
   if($app['request']->get('number')) {
     $result_size = $app['request']->get('number');
   } else {
@@ -556,16 +564,16 @@ $app->get('/pulfa/{index_type}', function($index_type) use($app) {
   } else {
     $referer = "Direct Query";
   }
-  
+
   $pulfa = new \Pulfa\Pulfa($app['pulfa']['host'], $app['pulfa']['base']);
   $pulfa_response_data = $pulfa->query($query, 0, $result_size);
   $pulfa_response = new PulfaResponse($pulfa_response_data, $query);
   $brief_response = $pulfa_response->getBriefResponse();
   $brief_response['query'] = $app->escape($query);
-  
+
   $app['monolog']->addInfo("Pulfa Query:" . $query . "\tREFERER:" . $referer);
   return new Response(json_encode($brief_response), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
-})->assert('index_type', '(title|any|creator)'); 
+})->assert('index_type', '(title|any|creator)');
 
 
 $app->get('/guides/{index_type}', function($index_type) use($app) {
@@ -574,7 +582,7 @@ $app->get('/guides/{index_type}', function($index_type) use($app) {
   } else {
     return "No Query Supplied";
   }
-  
+
   if($app['request']->get('number')) {
     $result_size = $app['request']->get('number');
   } else {
@@ -585,17 +593,86 @@ $app->get('/guides/{index_type}', function($index_type) use($app) {
   } else {
     $referer = "Direct Query";
   }
-  
+
   $pulfa = new \Pulfa\Pulfa($app['pulfa']['host'], $app['pulfa']['base']);
   $pulfa_response_data = $pulfa->query($query, 0, $result_size);
   $pulfa_response = new PulfaResponse($pulfa_response_data, $query);
   $brief_response = $pulfa_response->getBriefResponse();
   $brief_response['query'] = $app->escape($query);
-  
+
   $app['monolog']->addInfo("Guide Query:" . $query . "\tREFERER:" . $referer);
   return new Response(json_encode($brief_response), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
-})->assert('index_type', '(any|title)'); 
+})->assert('index_type', '(any|title)');
 
+
+/*
+ * Route to direct queries to LibAnswers
+ *
+ */
+
+ $app->get('/faq/{search_terms}', function ($search_terms) use ($app) {
+
+     $query = $app->escape($search_terms);
+     $qString = array();
+
+     if($app['request']->get('group_id')) {
+       $qString['group_id'] = $app->escape($app['request']->get('group_id'));
+     }
+
+     if($app['request']->get('topics')) {
+       $qString['topics'] = $app->escape($app['request']->get('topics'));
+     }
+
+     if($app['request']->get('sort')) {
+       $qString['sort'] = $app->escape($app['request']->get('sort'));
+     }
+
+     if($app['request']->get('sort_dir')) {
+       $qString['sort_dir'] = $app->escape($app['request']->get('sort_dir'));
+     }
+
+     if($app['request']->get('page')) {
+       $qString['page'] = $app->escape($app['request']->get('page'));
+     }
+
+     if($app['request']->get('callback')) {
+       $qString['callback'] = $app->escape($app['request']->get('callback'));
+     }
+
+     if($app['request']->get('limit')) {
+       $qString['limit'] = $app['request']->get('limit');
+     } else {
+       $qString['limit'] = $app['faq']['num.records.brief.display'];
+     }
+
+     if($app['request']->server->get('HTTP_REFERER')) { //should not be repeated moved out to utilities class
+       $referer = $app['request']->server->get('HTTP_REFERER');
+     } else {
+       $referer = "Direct Query";
+     }
+
+     $faq = new \FAQ\FAQ($app['faq']['host'], $app['faq']['base']);
+     $faq_response_data = $faq->query($query, 0, $qString);
+
+     $faq_response = new FAQResponse($faq_response_data, $query);
+
+     $response_data = array(
+       'query' => $app->escape($query),
+       'number' => $faq_response->hits,
+       'more' => $faq_response->more_link->getLink($qString, $query),
+       'records' => $faq_response->getBriefResponse(),
+     );
+
+     $app['monolog']->addInfo("FAQ Query:" . $query . "\tREFERER:" . $referer);
+
+     return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
+   });
+ // })->assert('search_terms', '\s\S');
+
+ /*
+  * Route to direct queries to Digital Library (PUDL)
+  *
+  */
 
 $app->get('/pudl/{index_type}', function($index_type) use($app) {
   if($app['request']->get('query')) {
@@ -603,13 +680,13 @@ $app->get('/pudl/{index_type}', function($index_type) use($app) {
   } else {
     return "No Query Supplied";
   }
-  
+
   if($app['request']->get('format')) {
     $format = $app['request']->get('format');
   } else {
     $format = "json";
   }
-  
+
   if($app['request']->get('number')) {
     $result_size = $app['request']->get('number');
   } else {
@@ -620,17 +697,17 @@ $app->get('/pudl/{index_type}', function($index_type) use($app) {
   } else {
     $referer = "Direct Query";
   }
-  
+
   $pudl = new \Pudl\Pudl($app['pudl']['host'], $app['pudl']['base']);
   $pudl_response_data = $pudl->query($query);
 
   $pudl_response = new PudlResponse($pudl_response_data, $app->escape($query));
   $brief_response = $pudl_response->getBriefResponse();
-  
+
   $app['monolog']->addInfo("Pudl Query:" . $query . "\tREFERER:" . $referer);
   if($format == "html") {
     return $app['twig']->render('pudlbrief.html.twig', array(
-    'environment' => $app['environment']['env'], 
+    'environment' => $app['environment']['env'],
     'title' => $app['environment']['title'],
     'query' => $query,
     'more' => $brief_response['more'],
@@ -639,18 +716,18 @@ $app->get('/pudl/{index_type}', function($index_type) use($app) {
   ));
   } else {
     return new Response(json_encode($brief_response), 200, array(
-      'charset' => 'utf-8', 
-      'Content-Type' => 'application/json', 
+      'charset' => 'utf-8',
+      'Content-Type' => 'application/json',
       'Cache-Control' => 's-maxage=3600, public'
       )
     );
   }
-})->assert('index_type', '(any)'); 
+})->assert('index_type', '(any)');
 
 /*
  * Route to direct queries to Summon API
- * 
- */ 
+ *
+ */
 
 $app->get('/articles/{index_type}', function($index_type) use($app) {
   if($app['request']->get('query')) {
@@ -664,18 +741,18 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
   } else {
     $referer = "Direct Query";
   }
-  
+
   if($app['request']->get('number')) {
     $result_size = $app['request']->get('number');
   } else {
     $result_size = $app['summon.connection']['num.records.brief.display'];
   }
-  
-  
+
+
   $summon_client = new Summon($app['summon.connection']['client.id'], $app['summon.connection']['authcode']);
   $summon_client->limitToHoldings(); // only bring back Princeton results
 
-  if($index_type == 'guide') { 
+  if($index_type == 'guide') {
     $summon_client->addFilter('ContentType, Research Guide');
     $summon_data = new SummonResponse($summon_client->query($query, 1, 3));
     $summon_full_search_link = new SummonQuery($query, array(
@@ -706,10 +783,10 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
   } else {
     $summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:t,Book+Review:t)"); //FIXME this shoudl default to exclude and retain filter to remove newspapers
     $summon_client->addFilter("IsScholarly,true");
-    $summon_data = new SummonResponse($summon_client->query($query, 1, $result_size)); 
+    $summon_data = new SummonResponse($summon_client->query($query, 1, $result_size));
     //print_r($summon_data);
     $summon_full_search_link = new SummonQuery($query, array(
-      "s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t,Book+Review:t)",      
+      "s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t,Book+Review:t)",
       "s.fvf" => "IsScholarly,true",
       "keep_r" => "true",
       "s.dym" => "t",
@@ -723,35 +800,35 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
       'records' => $summon_data->getBriefResults(),
     );
   }
-  
+
   $app['monolog']->addInfo("Summon $index_type Query:" . $query . "\tREFERER:" . $referer);
   return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
 })->assert('index_type', '(any|title|guide|creator|issn|isbn|spelling|recommendations)');
 
 /* Wrapper for Primo Brief Search API Call
- * 
+ *
  * EL Commons http://www.exlibrisgroup.org/display/PrimoOI/Brief+Search
- * 
- * Route Variable 
- * 
+ *
+ * Route Variable
+ *
  * {index_type} scope the search to a particular field
  * choices issn|isbn|lccn|oclc|title|any|lsr05|creator
- * 
+ *
  * lsr05 is call number
- * 
+ *
  * Possible Query Parameters
- * 
+ *
  * @query - string to search for
- * 
+ *
  * @limit - can be contains, exact, or begins_with see $app['primo_server_connection']['default.search'] for default
  * NOTE "begins_with" can only be used with the title parameter otherwise an error can be thrown
  *
  * @scopes - see $app['primo_server_connection']['default.scope'] for default value
  * Example: .....?scopes=ENG,MUSIC - search only english and music libraries
- * 
+ *
  * @format - see $app['primo_server_connection']['default.search'] for default value
  * Example: /find/title/journal+of+politics?format=journals - get only items with the journals facet back
- * 
+ *
  */
 
  $app->get('/find/{index_type}', function($index_type) use($app) {
@@ -761,21 +838,21 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
   } else {
     return "No Query Supplied";
   }
-  
+
   if($app['request']->server->get('HTTP_REFERER')) {
     $referer = $app['request']->server->get('HTTP_REFERER');
   } else {
     $referer = "Direct Query";
   }
-  
+
   if($app['request']->get('number')) {
     $result_size = $app['request']->get('number');
   } else {
     $result_size = $app['primo_server_connection']['num.records.brief.display'];
   }
-  
+
   if($app['request']->get('scopes')) {
-    $scopes = explode(",", $app['request']->get('scopes'));  
+    $scopes = explode(",", $app['request']->get('scopes'));
   } else {
     $scopes = $app['primo_server_connection']['default.scope'];
   }
@@ -797,12 +874,12 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
     $primo_query->addFacet($format_facet);
   }
   if(isset($subject_facet)) {
-    $primo_query->addFacet($subject_facet); 
+    $primo_query->addFacet($subject_facet);
   }
   $search_results = $app['primo_client']->doSearch($primo_query);
   if(preg_match('/MESSAGE=\"Unauthorized access\"/', $search_results)) {
-    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));  
-  } 
+    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));
+  }
   if ($search_results) {
     $response = new PrimoResponse($search_results, $app['primo_server_connection']);
     $deep_link = new SearchDeepLink($query, $app->escape($index_type), $operator, $app['primo_server_connection'], 'location', $app['primo_server_connection']['default.scope'], $primo_query->getFacets());
@@ -817,6 +894,6 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
     $response_data = array("no results available at this time");
   }
   return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public',));
-})->assert('index_type', '(issn|isbn|lccn|oclc|title|any|lsr05|creator)'); // should this be a list of possible options from the 
+})->assert('index_type', '(issn|isbn|lccn|oclc|title|any|lsr05|creator)'); // should this be a list of possible options from the
 
 return $app;
