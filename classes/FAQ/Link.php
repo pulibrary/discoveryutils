@@ -13,7 +13,9 @@ class Link
 
   public function getLink($qString, $search_terms) {
     $qString['q'] = $search_terms;
-    $qString['g'] = $qString['group_id']; // LibAnswers API is not consistent with their search page
+    if(isset($qString['group_id'])){
+      $qString['g'] = $qString['group_id']; // LibAnswers API is not consistent with their search page
+    }
     unset($qString['group_id']);
 
     return $this->faq_base . urldecode(http_build_query($qString));
