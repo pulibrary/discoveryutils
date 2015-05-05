@@ -44,3 +44,44 @@ Alias /searchit /var/www/apps/discoveryutils
 1. File out /conf/summon.yml with summon client key and host name 
 2. Set the environment and base URL you want to use for the app in /conf/enviornment.yml
 3. /conf/primo.yml contains details about the primo application
+
+## Unit Tests (Currently a Few Failing Ones, also test coverage is not complete for all classes/features in the Project)
+
+Tests use phpunit https://phpunit.de/manual/current/en/index.html
+
+### To Run 
+
+1. Install PHP Unit (On OSX ```brew install phpunit```)
+2. Go to the Project Root directory
+3. For all tests run ```phpunit```
+4. For all single test run something like 
+```
+phpunit tests/LookupApp/Tests/PrimoQueryTest.php
+```
+
+### Testing Web Services Calls
+Still looking for a good methodology for doing this in PHP. For now I'm using fixture files in ```tests/support```. Too stub one out for a test you can use the the following methodology:
+
+```
+### Sets Up the Test
+protected function setUp() {
+  $primo_server_connection = array(
+    'base_url' => 'http://searchit.princeton.edu',
+    'institution' => 'PRN',
+    'default_view_id' => 'PRINCETON',
+    'default_pnx_source_id' => 'PRN_VOYAGER',
+  );
+  $single_record_response = file_get_contents(dirname(__FILE__).'../../../support/PRN_VOYAGER4773991.xml');
+  $this->single_source_record = new \Primo\Record($single_record_response, $primo_server_connection);
+}
+
+function testGetSinglePrintRecordLocations() {
+  $this->assertInternalType('array', $this->single_source_record->getAvailableLibraries());
+  //print_r($this->single_source_record->getAvailableLibraries());
+  $this->assertEquals(1, count($this->single_source_record->getAvailableLibraries()));
+  $this->assertArrayHasKey('PRN_VOYAGER4773991', $this->single_source_record->getAvailableLibraries());
+}
+```
+
+See https://github.com/pulibrary/discoveryutils/blob/master/tests/LookupApp/Tests/PrimoRecordTest.php for more details. 
+
