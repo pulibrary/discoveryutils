@@ -1,6 +1,6 @@
 <?php
 
-namespace LookupApp\Tests;
+namespace DiscoveryUtils\Tests;
 use Primo\PermaLink as PermaLink;
 
 /**

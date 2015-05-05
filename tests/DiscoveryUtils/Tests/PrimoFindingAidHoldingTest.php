@@ -1,7 +1,6 @@
 <?php
 
-
-namespace LookupApp\Tests;
+namespace DiscoveryUtils\Tests;
 use Primo\Record;
 use Symfony\Component\Yaml\Yaml;
 

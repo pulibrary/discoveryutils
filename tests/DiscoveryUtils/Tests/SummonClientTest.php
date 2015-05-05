@@ -1,6 +1,6 @@
 <?php 
 
-namespace LookupApp\Tests;
+namespace DiscoveryUtils\Tests;
 
 
 class SummonClientTest extends \PHPUnit_Framework_TestCase {

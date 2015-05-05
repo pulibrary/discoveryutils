@@ -45,7 +45,11 @@ Alias /searchit /var/www/apps/discoveryutils
 2. Set the environment and base URL you want to use for the app in /conf/enviornment.yml
 3. /conf/primo.yml contains details about the primo application
 
-## Unit Tests (Currently a Few Failing Ones, also test coverage is not complete for all classes/features in the Project)
+## Unit Tests 
+
+### Caveats
+1. Currently a Few Failing Ones, also test coverage is not complete for all classes/features in the Project
+2. To run some of the tests related to Primo Web Services you must be at IP that has been explicitly allowed to query them. 
 
 Tests use phpunit https://phpunit.de/manual/current/en/index.html
 

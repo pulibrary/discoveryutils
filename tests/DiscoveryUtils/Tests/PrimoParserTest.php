@@ -1,6 +1,6 @@
 <?php
 
-namespace LookupApp\Tests;
+namespace DiscoveryUtils\Tests;
 
 class LookupPrimoParserTest extends \PHPUnit_Framework_TestCase {
   

@@ -3,7 +3,7 @@
  * Test Voyager Holdings via HTML extracted data
  */
 
-namespace LookupApp\Tests;
+namespace DiscoveryUtils\Tests;
 use Voyager\Record;
 
 class VoyagerHoldingsTest extends \PHPUnit_Framework_TestCase {

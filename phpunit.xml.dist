@@ -10,7 +10,7 @@
          syntaxCheck="false"
          bootstrap="tests/test_helper.php">
     <testsuites>
-        <testsuite name="LookupApp Test Suite">
+        <testsuite name="DiscoveryUtils Test Suite">
             <directory>./tests/</directory>
         </testsuite>
     </testsuites>

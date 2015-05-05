@@ -1,5 +1,5 @@
 <?php
-namespace LookupApp\Tests;
+namespace DiscoveryUtils\Tests;
 use Silex\WebTestCase;
 
 /*

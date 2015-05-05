@@ -1,6 +1,6 @@
 <?php
 
-namespace LookupApp\Tests;
+namespace DiscoveryUtils\Tests;
 use Symfony\Component\Yaml\Yaml;
 
 class PrimoRequestAeonTest extends \PHPUnit_Framework_TestCase 
