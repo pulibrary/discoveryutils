@@ -26,6 +26,8 @@ use Hours\Hours as Hours;
 use Utilities\CoreSearchLink;
 use FAQ\FAQ,
     FAQ\Response as FAQResponse;
+use Guides\Guides,
+    Guides\Response as GuidesResponse;
 
 $app = new Silex\Application();
 
@@ -76,9 +78,16 @@ $app['voyager.connection'] = array(
 # summon api key located in summon.yml
 
 $app['summon.connection'] = Yaml::parse(__DIR__.'/../conf/summon.yml');
+
 $app['pulfa'] = array(
   'host' => "http://findingaids.princeton.edu",
   'base' => "/collections.xml",
+  'num.records.brief.display' => 3,
+);
+
+$app['guides'] = array(
+  'host' => "https://lgapi.libapps.com",
+  'base' => "/1.1/guides",
   'num.records.brief.display' => 3,
 );
 
@@ -575,8 +584,16 @@ $app->get('/pulfa/{index_type}', function($index_type) use($app) {
   return new Response(json_encode($brief_response), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
 })->assert('index_type', '(title|any|creator)');
 
+/*
+ * Route to direct queries to LibGuides
+ *
+ */
 
 $app->get('/guides/{index_type}', function($index_type) use($app) {
+  
+  $query = $app->escape($query);
+  $qString = array();
+
   if($app['request']->get('query')) {
     $query = $app['request']->get('query');
   } else {
@@ -594,14 +611,20 @@ $app->get('/guides/{index_type}', function($index_type) use($app) {
     $referer = "Direct Query";
   }
 
-  $pulfa = new \Pulfa\Pulfa($app['pulfa']['host'], $app['pulfa']['base']);
-  $pulfa_response_data = $pulfa->query($query, 0, $result_size);
-  $pulfa_response = new PulfaResponse($pulfa_response_data, $query);
-  $brief_response = $pulfa_response->getBriefResponse();
-  $brief_response['query'] = $app->escape($query);
+  $guides = new \Guides\Guides($app['guides']['host'], $app['guides']['base']);
+  $guides_response_data = $guides->query($query, 0, $qString);
+  $guides_response = new GuidesResponse($guides_response_data, $query);
 
-  $app['monolog']->addInfo("Guide Query:" . $query . "\tREFERER:" . $referer);
-  return new Response(json_encode($brief_response), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
+  $response_data = array(
+       'query' => $app->escape($query),
+       'number' => count($guides_response->getBriefResponse()),
+       'more' => $guides_response->more_link->getLink($qString, $query),
+       'records' => $guides_response->getBriefResponse(),
+     );
+
+  $app['monolog']->addInfo("Guides Query:" . $query . "\tREFERER:" . $referer);
+
+  return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
 })->assert('index_type', '(any|title)');
 
 
