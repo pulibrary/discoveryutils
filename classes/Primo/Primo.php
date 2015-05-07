@@ -15,10 +15,17 @@ class Primo
   public $client;
   
   
-  function __construct($primo_server_connection) {
+  function __construct($primo_server_connection, HttpClient $client = null) {
     $this->institution = $primo_server_connection['institution'];
     $this->default_scope = $primo_server_connection['default_view_id'];
-    $this->client = new HttpClient(['base_url' => $primo_server_connection['base_url']]);
+    if ( $client != null )
+    {
+      $this->http_client = $client;
+    }
+    else 
+    {
+      $this->client = new HttpClient(['base_url' => $primo_server_connection['base_url']]);
+    }
   }
   
   public function getID($pnx_id, $json = null) {

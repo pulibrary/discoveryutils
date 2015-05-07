@@ -89,6 +89,10 @@ $app['guides'] = array(
   'host' => "https://lgapi.libapps.com",
   'base' => "/1.1/guides",
   'num.records.brief.display' => 3,
+  'site_id' => '77',
+  'key' => '79eb11fd3c26374e9785bb06bc3f3961',
+  'status' => '1'
+  'external_link_base' => 'http://libguides.princeton.edu/srch.php?',
 );
 
 $app['faq'] = array(
@@ -591,11 +595,11 @@ $app->get('/pulfa/{index_type}', function($index_type) use($app) {
 
 $app->get('/guides/{index_type}', function($index_type) use($app) {
   
-  $query = $app->escape($query);
   $qString = array();
 
   if($app['request']->get('query')) {
-    $query = $app['request']->get('query');
+    $raw_query = $app['request']->get('query');
+    $query = $app->escape($raw_query);
   } else {
     return "No Query Supplied";
   }
@@ -611,14 +615,14 @@ $app->get('/guides/{index_type}', function($index_type) use($app) {
     $referer = "Direct Query";
   }
 
-  $guides = new \Guides\Guides($app['guides']['host'], $app['guides']['base']);
+  $guides = new \Guides\Guides($app['guides']);
   $guides_response_data = $guides->query($query, 0, $qString);
   $guides_response = new GuidesResponse($guides_response_data, $query);
 
   $response_data = array(
-       'query' => $app->escape($query),
+       'query' => $guides_response->query,
        'number' => count($guides_response->getBriefResponse()),
-       'more' => $guides_response->more_link->getLink($qString, $query),
+       'more' => $guides_response->more_link,
        'records' => $guides_response->getBriefResponse(),
      );
 

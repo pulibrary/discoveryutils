@@ -5,16 +5,10 @@ namespace Guides;
 class Link
 {
   
-  private $guides_base = "http://libguides.princeton.edu/srch.php?";
-  
-  function __construct() {
-
-  }
-  
-  public function getLink($qString, $query) {
+  public static function getLink($query, $qString = array()) {
     $qString['q'] = $query;
-
-    return $this->guides_base . urldecode(http_build_query($qString)); 
+    $guides_link_base = "http://libguides.princeton.edu/srch.php?";
+    return $guides_link_base . urldecode(http_build_query($qString)); 
   }
   
 }

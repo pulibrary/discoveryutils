@@ -9,10 +9,13 @@ class Response
   protected $records = array();
   public $hits;
   public $qString;
+  public $more_link;
+  public $query;
 
-  function __construct($guides_api_response = array([]) ) {
+  function __construct($guides_api_response, $query) {
     $this->records = Parser::convertToGuidesRecords($guides_api_response);
-    $this->more_link = new Link($guides_api_response['query']);
+    $this->query = $query;
+    $this->more_link = Link::getLink($query);
   }
   
   public function getBriefResponse() {
@@ -28,6 +31,10 @@ class Response
     }  
     
     return $brief_result_set;
+  }
+
+  public function getRecords() {
+    return $this->records;
   }
   
 }

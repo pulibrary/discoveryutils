@@ -1,8 +1,7 @@
 <?php
-namespace LookupApp\Tests;
+namespace DisocoveryUtils\Tests;
 
 use GuzzleHttp\Client;
-//use Guzzle\Http\Client;
 
 /*
  * Test should pass if you are running code from machine

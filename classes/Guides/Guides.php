@@ -17,18 +17,22 @@ class Guides
   protected $base_url;
   protected $response_size;
   protected $starting_point;
-  protected $params = array(
-  //search_terms=biology
-    'site_id' => '77',
-    'key' => '79eb11fd3c26374e9785bb06bc3f3961',
-    'status' => '1',
-  );
+  protected $params = array();
+  // //search_terms=biology
+  //   'site_id' => '77',
+  //   'key' => '79eb11fd3c26374e9785bb06bc3f3961',
+  //   'status' => '1',
+  // );
   
   protected $queries = array();
   
-  function __construct($guides_host, $guides_base, Client $client = null) {
-    $this->host = $guides_host;
-    $this->base_url = $guides_base;
+  function __construct($guide_connection, Client $client = null) {
+    $this->host = $guide_connection['host'];
+    $this->base_url = $guide_connection['base'];
+    $this->params['site_id'] = $guide_connection['site_id'];
+    $this->params['key'] = $guide_connection['key'];
+    $this->params['status'] = $guide_connection['status'];
+
     if ( $client != null )
     {
       $this->http_client = $client;
