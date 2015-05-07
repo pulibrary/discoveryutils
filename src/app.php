@@ -91,7 +91,7 @@ $app['guides'] = array(
   'num.records.brief.display' => 3,
   'site_id' => '77',
   'key' => '79eb11fd3c26374e9785bb06bc3f3961',
-  'status' => '1'
+  'status' => '1',
   'external_link_base' => 'http://libguides.princeton.edu/srch.php?',
 );
 
