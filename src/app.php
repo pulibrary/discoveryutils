@@ -51,6 +51,24 @@ $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.logfile'       => __DIR__.'/../log/usage.log',
     'monolog.level'         => $log_level
 ));
+
+//allow for cross-site GET requests
+$app->before(function (Request $request) {
+   if ($request->getMethod() === "OPTIONS") {
+       $response = new Response();
+       $response->headers->set("Access-Control-Allow-Origin","*");
+       $response->headers->set("Access-Control-Allow-Methods","GET");
+       $response->headers->set("Access-Control-Allow-Headers","Content-Type");
+       $response->setStatusCode(200);
+       return $response->send();
+   }
+}, Application::EARLY_EVENT);
+
+$app->after(function (Request $request, Response $response) {
+   $response->headers->set("Access-Control-Allow-Origin","*");
+   $response->headers->set("Access-Control-Allow-Methods","GET");
+});
+
 /*
 $app->register(new Silex\Provider\HttpCacheServiceProvider(), array(
     'http_cache.cache_dir' => __DIR__.'/../cache/',
@@ -594,7 +612,7 @@ $app->get('/pulfa/{index_type}', function($index_type) use($app) {
  */
 
 $app->get('/guides/{index_type}', function($index_type) use($app) {
-  
+
   $qString = array();
 
   if($app['request']->get('query')) {
