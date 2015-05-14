@@ -52,23 +52,6 @@ $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.level'         => $log_level
 ));
 
-//allow for cross-site GET requests
-$app->before(function (Request $request) {
-   if ($request->getMethod() === "OPTIONS") {
-       $response = new Response();
-       $response->headers->set("Access-Control-Allow-Origin","*");
-       $response->headers->set("Access-Control-Allow-Methods","GET");
-       $response->headers->set("Access-Control-Allow-Headers","Content-Type");
-       $response->setStatusCode(200);
-       return $response->send();
-   }
-}, Application::EARLY_EVENT);
-
-$app->after(function (Request $request, Response $response) {
-   $response->headers->set("Access-Control-Allow-Origin","*");
-   $response->headers->set("Access-Control-Allow-Methods","GET");
-});
-
 /*
 $app->register(new Silex\Provider\HttpCacheServiceProvider(), array(
     'http_cache.cache_dir' => __DIR__.'/../cache/',
@@ -710,9 +693,13 @@ $app->get('/guides/{index_type}', function($index_type) use($app) {
 
      $app['monolog']->addInfo("FAQ Query:" . $query . "\tREFERER:" . $referer);
 
-     return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
-     //   });
-  })->assert('search_terms', '[\s\w+-]+');
+     $response = new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
+     $response->headers->set('Access-Control-Allow-Origin', "*");
+     $response->headers->set("Access-Control-Allow-Headers","Content-Type");
+
+     return $response;
+
+  })->assert('search_terms', '[\s\w+-]+')->method('GET|OPTIONS');
 
  /*
   * Route to direct queries to Digital Library (PUDL)
