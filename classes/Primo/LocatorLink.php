@@ -6,14 +6,14 @@ namespace Primo;
  * Uses Primo "deep" linking services to return a bookmarkable URL
  * sample http://searchit.princeton.edu/primo_library/libweb/action/dlDisplay.do?institution=PRN&vid=PRINCETON&docId={primo_id}
  * 
- * Sample locatoer link http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=nec&id=dedupmrg39805310
+ * Sample locater link http://library.princeton.edu/catalogs/locator/PRODUCTION/index.php?loc=nec&id=dedupmrg39805310
  * 
  */
 
 class LocatorLink {
   private $source_id;
   private $location_code;
-  private $locator_link_base = "/searchit/map";
+  private $locator_link_base = "/utils/map";
   private $link;
   
   public function __construct($id,$location_code) {
