@@ -926,6 +926,6 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
     $response_data = array("no results available at this time");
   }
   return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public',));
-})->assert('index_type', '(issn|isbn|lccn|oclc|title|any|lsr05|creator)'); // should this be a list of possible options from the
+})->assert('index_type', '(issn|isbn|lccn|oclc|title|any|lsr05|lsr07|creator)'); // should this be a list of possible options from the
 
 return $app;
