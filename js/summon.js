@@ -14,7 +14,7 @@ $(document).ready(function() {
         var currentSearchValue = $("#search_field").val();
         //var summonBaseUrl = "http://princeton.summon.serialssolutions.com/";
         //var summonQueryString = "search?s.q=";
-        var summonBaseUrl = "http://library.princeton.edu/searchit/search/summon";
+        var summonBaseUrl = "http://library.princeton.edu/utils/search/summon";
         var summonQueryString = "?query=";
         var currentSummonUrl = "";
         var current_search_value;
@@ -63,7 +63,7 @@ $(document).ready(function() {
           var searchField = $('#search_field');
           $('#exlidSearchRibbon input[type="hidden').remove();
           
-          $(summonForm).addClass('SummonForm').attr('target', '_none').attr('action', 'http://library.princeton.edu/searchit/search/summon').attr('method', 'get').attr('onsubmit', ''); 
+          $(summonForm).addClass('SummonForm').attr('target', '_none').attr('action', 'http://library.princeton.edu/utils/search/summon').attr('method', 'get').attr('onsubmit', ''); 
           $(searchField).attr('name', "query");
           //$(searchField).attr('name', "s.q");
           if (currentSearchValue != "" && currentSearchValue != undefined && currentSearchValue != null) {

@@ -18,7 +18,7 @@ function pulArticleCheck() {
 }
 
 function pulBuildLocatorLink(loc_code, pnx_id) {
-	var location_base = "http://library.princeton.edu/searchit/map?";
+	var location_base = "http://library.princeton.edu/utils/map?";
 	var locator_message = "Find this item on Campus";
 	var locator_text = "Where to find it";
 	var voyager_id = pnx_id.replace("PRN_VOYAGER", "");
@@ -26,7 +26,7 @@ function pulBuildLocatorLink(loc_code, pnx_id) {
 }
 
 function pulBuildStackMapLink(loc_code, pnx_id) {
-	var location_base = "http://library.princeton.edu/searchit/map?";
+	var location_base = "http://library.princeton.edu/utils/map?";
 	var locator_message = "Stackmap It";
 	var locator_text = "Stackmap It";
 	return "<span class='pulLocator'><a target='_blank' class='btn small' href='" + location_base+ "loc=" + loc_code + "&id=" + pnx_id + "' title='" + locator_message + "'>" + locator_text + "</a></span>";
@@ -173,7 +173,7 @@ function pulBuildBorrowDirectForm(pnxId, bd_class_value) {
 }
 
 function pulGetSummonLink(query) {
-    var summonBaseUrl = "http://library.princeton.edu/searchit/search/summon";
+    var summonBaseUrl = "http://library.princeton.edu/utils/search/summon";
     var summonQueryString = "?query=";
     
     return summonBaseUrl+summonQueryString+query;
@@ -199,7 +199,7 @@ function pulGetCoin(pnxId) {
 	var coin_version = "ctx_ver=Z39.88-2004";
 	var rft_id = "rft_id="+ encodeURIComponent(pulGetRecordDeepLinkUrl(pnxId));
 	var rft_val_fmt = "rft_val_fmt=info:ofi/fmt:kev:mtx:"+rfr_format;
-	var rfr_id="info:sid/searchit.princeton.edu";
+	var rfr_id="info:sid/utils.princeton.edu";
 	for (var key in addData) {
 		query_string += "&rft."+key+"="+encodeURIComponent(addData[key]);
 	}
@@ -700,7 +700,7 @@ function pulBuildFullLocationOptions(pnx_id, current_result_number) {
 
 //Add RIS Export to full details/results screens
 function buildRISLink(pnx_id) {
-	var ris_base = "http://library.princeton.edu/searchit/record/";
+	var ris_base = "http://library.princeton.edu/utils/record/";
 	var ris_icon = "<span class='EXLButtonSendToIcon EXLButtonSendToIconRis'></span>";
 	var ris_label = "Download as RIS";
 	var ris_link = "<li class='EXLButtonSendToRis'><a href='"+ris_base+pnx_id+".ris' title='Export to RIS' target='blank'><span class='EXLButtonSendToLabel'>"+ris_label+"</span>"+ris_icon+"</a></li>";
@@ -775,7 +775,7 @@ function pulBuildSpecialCollectionHoldings(pnx_id, current_result_number) {
 
 function pulBuildArchivalHoldings(id,holding_listing) {
 	$.ajax({
-        url: "http://library.princeton.edu/searchit/archives/"+id,
+        url: "http://library.princeton.edu/utils/archives/"+id,
         //url: '/PrimoWebServices/xservice/getit?institution=PRN&docId=' + id,
         async: true,
         type: 'GET',
