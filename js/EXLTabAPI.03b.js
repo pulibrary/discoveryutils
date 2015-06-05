@@ -150,7 +150,7 @@ function EXLTA_getPNX(recordId){
                 r.pnx = $.ajax({url: 'http://library.princeton.edu/utils/record/' + recordId + '.xml',
                 //r.pnx = $.ajax({url: '/PrimoWebServices/xservice/getit?institution=PRN&docId=' + recordId,    
 				dataType: "xml",
-				async: true,
+				async: false,
 				error:function(){log('pnx retrieval error')}}).responseXML;
 		console.log(r.pnx);
         }
