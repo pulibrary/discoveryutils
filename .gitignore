@@ -10,3 +10,4 @@ views/*.json
 *.swp
 .idea/*
 nbproject/*
+js/SAX_RCPPZ.json
