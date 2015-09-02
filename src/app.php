@@ -229,7 +229,7 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
   } elseif($tab == "mscores") {
     $deep_search_link = new SearchDeepLink($query, "any", "contains",
                                            $app['primo_server_connection'],
-                                           "location", array("MUSIC"),
+                                           "location", array($app['primo_server_connection']['default.scope']),
                                            array('facet_rtype,exact,scores'));
 
   } elseif($tab == "mvideo") {
@@ -818,7 +818,7 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
     $summon_data = new SummonResponse($summon_client->query($query, 1, $result_size));
     //print_r($summon_data);
     $summon_full_search_link = new SummonQuery($query, array(
-      "s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t,Book+Review:t)",
+      //"s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t,Book+Review:t)",
       "s.fvf" => "IsScholarly,true",
       "keep_r" => "true",
       "s.dym" => "t",
