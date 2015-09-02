@@ -229,7 +229,7 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
   } elseif($tab == "mscores") {
     $deep_search_link = new SearchDeepLink($query, "any", "contains",
                                            $app['primo_server_connection'],
-                                           "location", array($app['primo_server_connection']['default.scope']),
+                                           "location", $app['primo_server_connection']['default.scope'],
                                            array('facet_rtype,exact,scores'));
 
   } elseif($tab == "mvideo") {
