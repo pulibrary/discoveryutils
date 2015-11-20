@@ -235,7 +235,7 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
   } elseif($tab == "mvideo") {
     $deep_search_link = new SearchDeepLink($query, "any", "contains",
                                            $app['primo_server_connection'],
-                                           "location", array("MUSIC"),
+                                           "location", $app['primo_server_connection']['default.scope'],
                                            array('facet_rtype,exact,video'));
   } elseif($tab == "course") {
     $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, array("COURSE"));
