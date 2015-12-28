@@ -23,6 +23,7 @@ use Pudl\Pudl,
     Pudl\Response as PudlResponse;
 use Voyager\Voyager;
 use Hours\Hours as Hours;
+use Hours\Day as Day;
 use Utilities\CoreSearchLink;
 use FAQ\FAQ,
     FAQ\Response as FAQResponse;
@@ -124,6 +125,7 @@ $app['locations.list'] = json_decode(__DIR__.'/../conf/locations.json');
 $app['hours.base'] = $app['environment']['app_base_url'];
 $app['hours.locations'] = 'services/voyager/libraries.json';
 $app['hours.weekly'] = 'services/voyager/hours.json';
+$app['hours.daily'] = 'hours';
 
 $app['primo_client'] = $app->share(function ($app) {
     return new Primo($app['primo_server_connection']);
@@ -176,6 +178,12 @@ $app->get('/hours/dow', function() use($app) {
       'base_url' => $app['environment']['app_base_url'],
   ));
   return new Response($xml, 200, array('Content-Type'=> 'application/xml'));
+});
+
+$app->get('/hours/rbsc', function() use($app) {
+  $day_client = new Day($app['hours.base'], $app['hours.daily'] );
+  $daily_hours = $day_client->getDailyHoursByLocation();
+  return new Response(json_encode($daily_hours), 200, array('Content-Type' => 'application/json'));
 });
 
 /*
