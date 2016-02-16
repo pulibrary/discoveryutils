@@ -329,7 +329,7 @@ function pulGetDesupLocations(locations) {
 // ADD functions to do linking-in-context for requests
 //FIXME Should this be renamed? pulItemUnAvailableTest it actually actually returns true for unavailable PUL voyager item status codes 
 function pulItemAvailableTest(status) {
-	var item_unavailable_test = $.trim(status).match(/(^Charged|^Overdue|.+Renewed|^Renewed|^Recall Request|^Hold Request|^On Hold$|^In Transit On Hold$|^Missing|^Lost|^Claims Returned|^Withdrawn|^At Bindery|^Remote Storage Request)/);
+	var item_unavailable_test = $.trim(status).match(/(^Charged|^vol.+Due|^Overdue|.+Renewed|^Renewed|^Recall Request|^Hold Request|^On Hold$|^In Transit On Hold$|^Missing|^Lost|^Claims Returned|^Withdrawn|^At Bindery|^Remote Storage Request)/);
 	//console.log(status_message + "test is " + item_unavailable_test);
 	if(item_unavailable_test) {
 		return true;
@@ -443,12 +443,20 @@ function pulBuildLocationOptions(pnx_id, current_result_number) {
 	$(holdings).each(function(index) {
 		var location_message = $.trim($(this).find('.EXLLocationsTitle .EXLLocationsTitleContainer').text());
 		var online_resource = location_message.match(/^Online/); // test for online resource	
-		// must match EXLResultStatusNotAvailable EXLResultStatusAvailable and EXLResultStatusMaybeAvailable
-	    var holding_status = $(this).find('em.EXLResultStatusAvailable,em.EXLResultStatusNotAvailable,em.EXLResultStatusMaybeAvailable');	
+		var holding_status = $(this).find('em.EXLResultStatusAvailable,em.EXLResultStatusNotAvailable,em.EXLResultStatusMaybeAvailable');
+		var collection_finder = $(this).find('.EXLLocationInfo strong').text();
+		var collection_string = collection_finder.match(/\((\w+)\)/);
+                if (collection_string) {
+                        raw_code = collection_string[0].toLowerCase();
+                        location_code = raw_code.substr(1, raw_code.length - 2);
+                        console.log("Shelf loc is" + location_code );
+                } else {
+	    		var location_code = locations[index].loc;
+		}
+		status = $(this).find('em.EXLResultStatusAvailable,em.EXLResultStatusNotAvailable,em.EXLResultStatusMaybeAvailable');	
  		var holding_location = $.trim($(this).find('.EXLLocationsTitleContainer').text());
 		var item_count = $(this).find('.EXLShowInfo').length;
 		var bib_id = locations[index].bib;
-		var location_code = locations[index].loc;
 		//console.log("item count is" +item_count);
 		if(console) {
 			console.log(loc_objects);
@@ -607,7 +615,7 @@ function pulBuildFullLocationOptions(pnx_id, current_result_number) {
 	var holdings = $('.EXLLocationList');
 	var holdings_count = holdings.length;
 	var locations = pulGetLocationCodes(pnx_id);
-  var openurls = EXLTA_get_OpenURL(pnx_id);
+  	var openurls = EXLTA_get_OpenURL(pnx_id);
 	if (console) {
 		console.log('openurls');
 		console.log(openurls);
@@ -618,32 +626,40 @@ function pulBuildFullLocationOptions(pnx_id, current_result_number) {
     	var status_message = $(this).text(); //Get current status message, i.e. Charged/Not Charged
 		if(pulItemOnShelfTest(status_message)) {
 			any_available_items = true;
-         }
-         if(any_available_items) {
-        	 return false
-         }
-    });
+         	}
+         	if(any_available_items) {
+        		return false
+         	}
+        });
 	$(holdings).each(function(index) {
                 var location_message = $.trim($(this).find('.EXLLocationsTitle .EXLLocationsTitleContainer').text());
                 var online_resource = location_message.match(/^Online/); // test for online resource    
                 // must match EXLResultStatusNotAvailable EXLResultStatusAvailable and EXLResultStatusMaybeAvailable
                 var holding_status = $(this).find('em.EXLResultStatusAvailable,em.EXLResultStatusNotAvailable,em.EXLResultStatusMaybeAvailable');
                 var holding_location = $.trim($(this).find('.EXLLocationsTitleContainer').text());
-                var item_count = $(this).find('.EXLShowInfo').length;
+                var collection_finder = $.trim($(this).find('.EXLLocationInfo strong').text());
+		var collection_string = collection_finder.match(/\((\w+)\)/);
+		if (collection_string) {
+			raw_code = collection_string[0].toLowerCase();
+			location_code = raw_code.substr(1, raw_code.length - 2);
+                } else {
+			var location_code = locations[index].loc;
+		}
+
+		var item_count = $(this).find('.EXLShowInfo').length;
                 var bib_id = locations[index].bib;
-                var location_code = locations[index].loc;
-        		var location_details = _.find(loc_objects, function(loc, key) {
-        				return loc.voyagerLocationCode == location_code; 
-        			});
-        		var location_is_requestable = false; //flag to make sure that the location isn't requestable
-        		if ((location_details.requestable == "Y" && location_details.accessible == "N") || location_details.aeon == "Y") {
-        			var location_is_requestable = true;
-        		}
+        	var location_details = _.find(loc_objects, function(loc, key) {
+        		return loc.voyagerLocationCode == location_code; 
+        	});
+        	var location_is_requestable = false; //flag to make sure that the location isn't requestable
+        	if ((location_details.requestable == "Y" && location_details.accessible == "N") || location_details.aeon == "Y") {
+        		var location_is_requestable = true;
+        	}
                 //console.log("holding: "+holding_status.text()+"location: "+holding_location+"items attached: " + item_count +"requestable"+location_is_requestable);
                 var request_buttons = new Array();
                 var has_barcode = false; // hack to test for barcode 
-        		var call_no = $(this).find('.EXLLocationInfo cite');
-        		location_call_number = call_no.text();
+        	var call_no = $(this).find('.EXLLocationInfo cite');
+        	location_call_number = call_no.text();
                 if(item_count > 1) {
                         $(this).find(".EXLHideInfo ul li:contains('Barcode')").each( function(index) {
                         		has_barcode = true;
