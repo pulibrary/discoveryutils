@@ -29,7 +29,10 @@ use FAQ\FAQ,
     FAQ\Response as FAQResponse;
 use Guides\Guides,
     Guides\Response as GuidesResponse;
-
+use Blacklight\Blacklight as Blacklight,
+    Blacklight\Response as BLResponse,
+    Blacklight\Record as MarcRecord;
+ 
 $app = new Silex\Application();
 
 $app['environment'] = Yaml::parse(__DIR__.'/../conf/environment.yml');
@@ -126,6 +129,8 @@ $app['hours.base'] = $app['environment']['app_base_url'];
 $app['hours.locations'] = 'services/voyager/libraries.json';
 $app['hours.weekly'] = 'services/voyager/hours.json';
 $app['hours.daily'] = 'hours';
+$app['blacklight.host'] = "https://pulsearch.princeton.edu";
+$app['bibdata.host'] = "https://bibdata.princeton.edu";
 
 $app['primo_client'] = $app->share(function ($app) {
     return new Primo($app['primo_server_connection']);
@@ -345,6 +350,7 @@ $app->get('/map', function() use ($app) {
   }
   $rec_id = $app->escape($app['request']->get("id")); //FIXME Should through an error if neither parameter is present
   $location_code = $app->escape($app['request']->get("loc"));
+
   if(preg_match('/^dedup/', $rec_id)) {
     $record_data = $app['primo_client']->getID($rec_id);
   } else {
@@ -415,7 +421,9 @@ $app->get('/map', function() use ($app) {
       $location_info = json_decode(file_get_contents($app['locations.base'] . "?" . http_build_query(array('loc' => $holding_to_map->location_code))), TRUE); //FIXME
       //print_r($location_info);
       if(in_array($holding_to_map->location_code, $app['stackmap']['by.title.locations'])) {
-        $call_number = $primo_record->getNormalizedTitle();
+
+        $shelf_loc_title = MarcRecord::getTitle($app['bibdata.host'] . "/bibliographic/" . $rec_id);
+        $call_number = $shelf_loc_title; //$primo_record->getNormalizedTitle();
       } else {
         $call_number = $primo_record->getCallNumber(); //$holding_to_map->call_number;
       }
@@ -870,6 +878,20 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
  * Example: /find/title/journal+of+politics?format=journals - get only items with the journals facet back
  *
  */
+
+ $app->get('/pulsearch/{index_type}', function() use ($app) {
+  if($app['request']->get('query')) {
+    $query = $app['request']->get('query');
+  } else {
+    return "No Query Supplied";
+  }
+  $client = new Blacklight($app['blacklight.host'], 'catalog');
+  $response = $client->query($query);
+  $blacklight_response = BLResponse::getResponse($response);
+  $blacklight_response["more"] = $app['blacklight.host'] . "/catalog?" . "search_field=all_fields&q=" . $query;
+  return new JSONResponse($blacklight_response, 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
+ })->assert('index_type', '(any)');
+
 
  $app->get('/find/{index_type}', function($index_type) use($app) {
 
