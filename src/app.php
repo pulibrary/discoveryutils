@@ -375,7 +375,6 @@ $app->get('/map', function() use ($app) {
       }
     }
   }
-
   /*
    * ***Note on Empty Holdings*******
    *
@@ -404,6 +403,7 @@ $app->get('/map', function() use ($app) {
 
   } elseif(in_array($holding_to_map->location_code, $app['stackmap']['reserve.locations'])) {
     $location_info = json_decode(file_get_contents($app['locations.base'] . "?" . http_build_query(array('loc' => $holding_to_map->location_code))), TRUE); //FIXME
+    $app['monolog']->addInfo("StackMap reserve MAP:$map_url\tLOCATION:$location_code\tRECORD:$rec_id");
     return $app['twig']->render('reserve.twig', array(
        'record_id' => $rec_id,
        'title' => $primo_record->getNormalizedTitle(),
@@ -419,13 +419,24 @@ $app->get('/map', function() use ($app) {
        * should be obtained via a database call in future when apps mere
        */
       $location_info = json_decode(file_get_contents($app['locations.base'] . "?" . http_build_query(array('loc' => $holding_to_map->location_code))), TRUE); //FIXME
-      //print_r($location_info);
       if(in_array($holding_to_map->location_code, $app['stackmap']['by.title.locations'])) {
 
         $shelf_loc_title = MarcRecord::getTitle($app['bibdata.host'] . "/bibliographic/" . $rec_id);
         $call_number = $shelf_loc_title; //$primo_record->getNormalizedTitle();
+        $app['monolog']->addInfo("Stackmap by Title MAP:$map_url\tLOCATION:$location_code\tRECORD:$rec_id");
       } else {
-        $call_number = $primo_record->getCallNumber(); //$holding_to_map->call_number;
+	$holdings_list = $primo_record->getHoldings();
+        //$call_number = $primo_record->getCallNumber(); //$holding_to_map->call_number;
+	$call_number = "";
+	foreach($holdings_list as $holding) {
+	  if($location_code == $holding->location_code) {
+	    $call_number = trim($holding->call_number);
+	    $call_number = ltrim($call_number, "(");
+	    $call_number = rtrim($call_number, ")");
+	    $call_number = trim($call_number);
+	  }
+	}
+	$app['monolog']->addInfo("Stackmap Standard Location:$map_url:$call_number:LOCATION:$location_code\tRECORD:$rec_id");
       }
       $map_params = array(
         'callno' => $call_number,
@@ -444,7 +455,6 @@ $app->get('/map', function() use ($app) {
     $app['monolog']->addInfo("MAP:$map_url\tLOCATION:$location_code\tRECORD:$rec_id");
 
     return $app->redirect($map_url);
-
   }
 });
 
