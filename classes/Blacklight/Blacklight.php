@@ -11,7 +11,7 @@ use GuzzleHttp\Client as Client;
  * 
  */
  
-class Pudl
+class Blacklight
 {
   protected $http_client;
   protected $host;
@@ -20,9 +20,9 @@ class Pudl
     'f1' => 'kw',
   );
   
-  function __construct($pudl_host, $pudl_base, Client $client = null) {
-    $this->host = $pudl_host;
-    $this->base_url = $pudl_base;
+  function __construct($host, $base, Client $client = null) {
+    $this->host = $host;
+    $this->base_url = $base;
     if ( $client != null )
     {
       $this->http_client = $client;
@@ -36,8 +36,11 @@ class Pudl
   
   public function query($string) {
     $query = array();
-    $query['v1'] = $string;
-    //$querystring = http_build_query($query);
+    $query['q'] = $string;
+    $query['search_field'] = 'all_fields';
+    $query['format'] = 'json';
+    $query['per_page'] = '10';
+    $querystring = http_build_query($query);
     $response = $this->send($query);
     return $response;
     
@@ -53,13 +56,7 @@ class Pudl
       'timeout' => 5 ]
       );
     
-    $body = $response->xml();
-    if(strlen($body) == 0) {
-      $empty_doc = "<Objects start='0' total='0'><facets/></Objects>";
-      return $empty_doc;
-    } else { 
-      return (string)$response->getBody();
-    }
+    return (string)$response->getBody();
   }
   
 }
