@@ -157,6 +157,18 @@ function EXLTA_getPNX(recordId){
         return r.pnx;
 }
 
+function EXLTA_getPaging(pnx_id) {
+	var voyager_id = pnx_id.replace("PRN_VOYAGER", "");
+	data = $.ajax({
+    		type: "GET",
+    		async: false,
+		url: "https://fulfill.princeton.edu/requests/pageable.json?system_id=" + voyager_id,
+		dataType: "json"}).responseText;
+	var obj = jQuery.parseJSON(data)
+        return obj		
+}	
+	
+
 function EXLTA_getSfxLink(element){
 	try{
 	var href = $(element).parents('.EXLResult').find('.EXLMoreTab a').attr('href');

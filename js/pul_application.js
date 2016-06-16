@@ -348,21 +348,48 @@ function pulItemInProcessOnOrderTest(status) {
 	}
 }
 
+
 // function takes a javacsript object
 // build key=value url params
 function pulBuildRequestButton(request_item, location_label, location_details, top_level) {
 	var location_label = typeof(location_label) != 'undefined' ? location_label : 'Check Options';
 	var top_level = typeof(top_level) != 'undefined' ? top_level : false;
 	var location_details = location_details;
+	var paging_locs = ["nec", "f", "fnc", "necnc", "xl", "xlns"]
+	var paging_loc = paging_locs.indexOf(location_details.voyagerLocationCode);
+	var request_base = "http://library.princeton.edu/requests/?"
+	var request_params = [];
+        $.each(request_item, function(key, value) {
+        	var param = encodeURIComponent(key)+"="+encodeURIComponent(value);
+        	if(location_details.aeon == "Y" && key == "bib") {
+        		param = encodeURIComponent("bibid")+"="+encodeURIComponent(value);
+        	}
+                if(location_details.aeon == "Y" && key == "loc") {
+                        param = encodeURIComponent("location")+"="+encodeURIComponent(value);
+                }
+                if(location_details.aeon == "Y" && key == "barcode") {
+                        param = encodeURIComponent("itembarcode")+"="+encodeURIComponent(value);
+                }
+                if(location_details.aeon == "Y" && key == "call_no") {
+                        param = encodeURIComponent("call_no")+"="+encodeURIComponent(value);
+                }
+                request_params.push(param);
+	});         
+        var query_string = request_params.join("&");
 	if (top_level) {
 		var request_message = "Check Availability";
 		var request_tooltip = "Check availability for this resource at "+location_label;
-	} else {
+	} else if (location_details.pageable == "Y" && paging_loc >= 0) {
+		var request_message = "Paging Request";
+		var request_tooltip = "Item INACCESSIBLE owing to construction; submit a paging request.";
+		request_base = "https://fulfill.princeton.edu/requests/";
+		query_string = request_item.bib;
+	} 
+	else {
 		var request_message = "Check Options";
 		var request_tooltip = "Check request options availabile for this copy";
 	}	
 	
-	var request_base = "http://library.princeton.edu/requests/?";
 	var aeon_request_base = "http://libweb5.princeton.edu/AeonBibRequest/Default.aspx?";
 	// Handle Aeon Requests
 	if(location_details.aeon == "Y") {
@@ -372,27 +399,6 @@ function pulBuildRequestButton(request_item, location_label, location_details, t
 	}
 	var request_target = "_blank";
 	var request_button_class = "btn small info";
-	var request_params = [];
-	// deal with any params present
-	$.each(request_item, function(key, value) {
-		// hacks to pass items over to aeon request
-		var param = encodeURIComponent(key)+"="+encodeURIComponent(value);
-		if(location_details.aeon == "Y" && key == "bib") {
-			param = encodeURIComponent("bibid")+"="+encodeURIComponent(value);
-		}
-		if(location_details.aeon == "Y" && key == "loc") {
-			param = encodeURIComponent("location")+"="+encodeURIComponent(value);
-		}
-		if(location_details.aeon == "Y" && key == "barcode") {
-			param = encodeURIComponent("itembarcode")+"="+encodeURIComponent(value);
-		}
-		if(location_details.aeon == "Y" && key == "call_no") {
-			param = encodeURIComponent("call_no")+"="+encodeURIComponent(value);
-		}
-		// end aeon hacks
-		request_params.push(param);
-	});
-	var query_string = request_params.join("&");
 	var request_url = request_base+query_string;
 	return '<a class="'+request_button_class+'" target="'+request_target+'" title="'+request_tooltip+'" href="'+request_url+'">'+request_message+'</a>';
 }
@@ -472,7 +478,17 @@ function pulBuildLocationOptions(pnx_id, current_result_number) {
 		if ((location_details.requestable == "Y" && location_details.accessible == "N") || location_details.aeon == "Y" ) {
 			var location_is_requestable = true;
 		}
-	
+		
+		var paging_locs = ["nec", "f", "fnc", "necnc", "xl", "xlns"]
+        	var paging_loc = paging_locs.indexOf(location_details.voyagerLocationCode);
+		if(paging_loc >= 0) {
+			var paging = EXLTA_getPaging(bib_id);
+			if(paging.pageable == true) {
+				location_details.pageable = "Y"
+				location_is_requestable = true;
+			}
+		}
+
 		var request_buttons = new Array();
 		var has_barcode = false;
 
@@ -648,6 +664,7 @@ function pulBuildFullLocationOptions(pnx_id, current_result_number) {
 
 		var item_count = $(this).find('.EXLShowInfo').length;
                 var bib_id = locations[index].bib;
+		
         	var location_details = _.find(loc_objects, function(loc, key) {
         		return loc.voyagerLocationCode == location_code; 
         	});
@@ -655,6 +672,18 @@ function pulBuildFullLocationOptions(pnx_id, current_result_number) {
         	if ((location_details.requestable == "Y" && location_details.accessible == "N") || location_details.aeon == "Y") {
         		var location_is_requestable = true;
         	}
+
+		var paging_locs = ["nec", "f", "fnc", "necnc", "xl", "xlns"]
+        	var paging_loc = paging_locs.indexOf(location_details.voyagerLocationCode);
+		console.log(paging_loc);
+		if(paging_loc >= 0) {
+			var paging = EXLTA_getPaging(bib_id);
+                	if(paging.pageable == true) {
+                	        location_details.pageable = "Y"
+                        	location_is_requestable = true;
+                	}
+		}	
+		console.log(location_details);
                 //console.log("holding: "+holding_status.text()+"location: "+holding_location+"items attached: " + item_count +"requestable"+location_is_requestable);
                 var request_buttons = new Array();
                 var has_barcode = false; // hack to test for barcode 
