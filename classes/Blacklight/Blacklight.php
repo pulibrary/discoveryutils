@@ -39,7 +39,7 @@ class Blacklight
     $query['q'] = $string;
     $query['search_field'] = 'all_fields';
     $query['format'] = 'json';
-    $query['per_page'] = '10';
+    $query['per_page'] = '5';
     $querystring = http_build_query($query);
     $response = $this->send($query);
     return $response;

@@ -24,6 +24,18 @@ class Response
     foreach($record_list as $record) {
       $parsed_record = array();
       $parsed_record["title"] = $record["title_display"];
+      if (isset($record["marc_relator_display"])) {
+        $parsed_record["relator"] = $record["marc_relator_display"];
+      }
+      if (isset($record["author_display"])) {
+        $parsed_record["author"] = $record["author_display"];
+      }
+      if (isset($record["pub_created_display"])) {
+       $parsed_record["publisher"] = $record["pub_created_display"];
+      }
+      if (isset($record["holdings_1display"]) ){
+        $parsed_record["holdings"] = $record["holdings_1display"];
+      }
       $parsed_record["id"] = $record["id"];
       $parsed_record["type"] = $record["format"];
       $parsed_record["url"] = $base_url .  $record["id"];
