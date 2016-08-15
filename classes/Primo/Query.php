@@ -133,14 +133,16 @@ Class Query
        }
      } else {
        if (count($scopes) == 0) {
-        array_push($scopes, "local,scope:(" . $scope . ")"); //FIXME Check for valid scope
+        //array_push($scopes, "local,scope:(" . $scope . ")"); //FIXME Check for valid scope
+        array_push($scopes, $scope);
        } else {
-         array_push($scopes, "scope:(" . $scope . ")");
+         //array_push($scopes, "scope:(" . $scope . ")");
+        array_push($scopes, $scope);
        }
      }
    }
    //print_r($scopes);
-   $scope_string = "&loc=" .implode(",", $scopes); //HACK b/c ex libris can't deal params consistently
+   $scope_string = "&search_scope=" .implode(",", $scopes); //HACK b/c ex libris can't deal params consistently
    return $scope_string;
   }
 
