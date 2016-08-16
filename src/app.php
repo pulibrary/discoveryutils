@@ -31,7 +31,8 @@ use Guides\Guides,
     Guides\Response as GuidesResponse;
 use Blacklight\Blacklight as Blacklight,
     Blacklight\Response as BLResponse,
-    Blacklight\Record as MarcRecord;
+    Blacklight\Record as MarcRecord,
+    Blacklight\SearchLink as BlacklightSearchLink;
  
 $app = new Silex\Application();
 
@@ -235,31 +236,21 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
       "keep_r" => "true" )
     );
   } elseif($tab == "mendel") {
-    $deep_search_link = new SearchDeepLink($query, "any", "contains",
-                                           $app['primo_server_connection'],
-                                           "location", array("MUSIC"),
-                                           array('facet_rtype,exact,audio'));
+    $deep_search_link = new BlackLightSearchLink($app['blacklight.host'], $app->escape($query),
+                                           array('format' => 'Audio', 'location' => 'Mendel Music Library'));
   } elseif($tab == "mscores") {
-    $deep_search_link = new SearchDeepLink($query, "any", "contains",
-                                           $app['primo_server_connection'],
-                                           "location", $app['primo_server_connection']['default.scope'],
-                                           array('facet_rtype,exact,scores'));
+    $deep_search_link = new BlacklightSearchLink($app['blacklight.host'], $app->escape($query),
+                                           array('format' => 'Musical+Score'));
 
   } elseif($tab == "mvideo") {
-    $deep_search_link = new SearchDeepLink($query, "any", "contains",
-                                           $app['primo_server_connection'],
-                                           "location", $app['primo_server_connection']['default.scope'],
-                                           array('facet_rtype,exact,video'));
-  } elseif($tab == "course") {
-    $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, array("COURSE"));
-  } elseif($tab == "blended") {
-    $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, array("PRN", "SummonThirdNode"));
+    $deep_search_link = new BlacklightSearchLink($app['blacklight.host'], $app->escape($query),
+                                           array('format' => 'Video%2FProjected+Medium'));
   } elseif($tab == "coreall") {
     $deep_search_link = new CoreSearchLink($app['library.core']['host'], $app['library.core']['all.search.path'] , $app->escape($query));
   } elseif($tab == 'dball') {
     $deep_search_link = new CoreSearchLink($app['library.core']['host'] , $app['library.core']['db.search.path'] , $app->escape($query));
   } else {
-    $deep_search_link = new SearchDeepLink($query, "any", "contains", $app['primo_server_connection'], $tab, $app['primo_server_connection']['default.scope']); //WATCHOUT - Order Matters
+    $deep_search_link = new BlacklightSearchLink($app['blacklight.host'], $app->escape($query));
   }
   $app['monolog']->addInfo("TAB:" . $tab . "\tQUERY:" . $query . "\tREDIRECT:" . $deep_search_link->getLink() . "\tREFERER:" . $referer);
 
