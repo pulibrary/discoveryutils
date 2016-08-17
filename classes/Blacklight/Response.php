@@ -36,6 +36,9 @@ class Response
       if (isset($record["holdings_1display"]) ){
         $parsed_record["holdings"] = $record["holdings_1display"];
       }
+      if(isset($record["electronic_access_1display"])) {
+        $parsed_record["online"] = $record["electronic_access_1display"];
+      }
       $parsed_record["id"] = $record["id"];
       $parsed_record["type"] = $record["format"];
       $parsed_record["url"] = $base_url .  $record["id"];
