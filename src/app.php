@@ -240,11 +240,11 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
                                            array('format' => 'Audio', 'location' => 'Mendel Music Library'));
   } elseif($tab == "mscores") {
     $deep_search_link = new BlacklightSearchLink($app['blacklight.host'], $app->escape($query),
-                                           array('format' => 'Musical+Score'));
+                                           array('format' => 'Musical+score'));
 
   } elseif($tab == "mvideo") {
     $deep_search_link = new BlacklightSearchLink($app['blacklight.host'], $app->escape($query),
-                                           array('format' => 'Video%2FProjected+Medium'));
+                                           array('format' => 'Video%2FProjected+medium'));
   } elseif($tab == "coreall") {
     $deep_search_link = new CoreSearchLink($app['library.core']['host'], $app['library.core']['all.search.path'] , $app->escape($query));
   } elseif($tab == 'dball') {
