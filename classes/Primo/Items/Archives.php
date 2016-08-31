@@ -79,7 +79,7 @@ class Archives
         'ItemInfo1' => 'Reading Room Access Only',
       );
     
-    return "https://libweb10.princeton.edu/aeon/aeon.dll?" . http_build_query($aeon_params);
+    return "https://library.princeton.edu/aeon/aeon.dll?" . http_build_query($aeon_params);
   }
 
   private function mapAeonSiteCode($library_code) {
