@@ -898,7 +898,7 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
   $client = new Blacklight($app['blacklight.host'], 'catalog');
   $response = $client->query($query);
   $blacklight_response = BLResponse::getResponse($response);
-  $blacklight_response["more"] = $app['blacklight.host'] . "/catalog?" . "search_field=" . $index_type . "&q=" . $query;
+  $blacklight_response["more"] = $app['blacklight.host'] . "/catalog?" . "search_field=" . $index_type . "&q=" . $query . "&utf8=%E2%9C%93";
   return new JSONResponse($blacklight_response, 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
  })->assert('index_type', '(any|issn|isbn|title)');
 

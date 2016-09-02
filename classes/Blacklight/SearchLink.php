@@ -6,7 +6,7 @@ class SearchLink
 
   private $query;
   private $host;
-  private $path = '/catalog?search_field=all_fields&q=';
+  private $path = '/catalog?utf8=%E2%9C%93search_field=all_fields&q=';
   private $deep_link;
   private $solr_params;
 
