@@ -880,18 +880,27 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
  *
  */
 
- $app->get('/pulsearch/{index_type}', function() use ($app) {
+ $app->get('/pulsearch/{index}', function($index) use ($app) {
   if($app['request']->get('query')) {
     $query = $app['request']->get('query');
   } else {
     return "No Query Supplied";
   }
+  if ($index == 'isbn') {
+    $index_type = 'isbn_s';
+  } elseif ($index == 'issn') {
+    $index_type = 'issn_s';
+  } elseif ($index == 'title') {
+    $index_type= 'left_anchor';
+  } else {
+    $index_type = 'all_fields';
+  }
   $client = new Blacklight($app['blacklight.host'], 'catalog');
   $response = $client->query($query);
   $blacklight_response = BLResponse::getResponse($response);
-  $blacklight_response["more"] = $app['blacklight.host'] . "/catalog?" . "search_field=all_fields&q=" . $query;
+  $blacklight_response["more"] = $app['blacklight.host'] . "/catalog?" . "search_field=" . $index_type . "&q=" . $query . "&utf8=✓";
   return new JSONResponse($blacklight_response, 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
- })->assert('index_type', '(any)');
+ })->assert('index_type', '(any|issn|isbn|title)');
 
 
  $app->get('/find/{index_type}', function($index_type) use($app) {
