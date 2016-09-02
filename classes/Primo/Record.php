@@ -399,7 +399,7 @@ Class Record
         'ItemAuthor' => $this->getCreator()
       );
     }
-    $holding_params['request_url'] = "https://libweb10.princeton.edu/aeon/aeon.dll?" . http_build_query($aeon_params);
+    $holding_params['request_url'] = "https://library.princeton.edu/aeon/aeon.dll?" . http_build_query($aeon_params);
     $holding_params['request_label'] = "Reading Room Request";
 
     return $holding_params;
