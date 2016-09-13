@@ -34,10 +34,10 @@ class Blacklight
     
   }
   
-  public function query($string) {
+  public function query($string, $index_type) {
     $query = array();
     $query['q'] = $string;
-    $query['search_field'] = 'all_fields';
+    $query['search_field'] = $index_type;
     $query['format'] = 'json';
     $query['per_page'] = '5';
     $querystring = http_build_query($query);
