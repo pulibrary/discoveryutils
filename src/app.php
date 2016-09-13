@@ -887,9 +887,9 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
     return "No Query Supplied";
   }
   if ($index == 'isbn') {
-    $index_type = 'isbn_s';
+    $index_type = 'isbn';
   } elseif ($index == 'issn') {
-    $index_type = 'issn_s';
+    $index_type = 'issn';
   } elseif ($index == 'title') {
     $index_type= 'left_anchor';
   } else {
