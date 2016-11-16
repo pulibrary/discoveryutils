@@ -250,7 +250,7 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
   } elseif($tab == 'dball') {
     $deep_search_link = new CoreSearchLink($app['library.core']['host'] , $app['library.core']['db.search.path'] , $app->escape($query));
   } else {
-    $deep_search_link = new BlacklightSearchLink($app['blacklight.host'], $app->urlencode($query));
+    $deep_search_link = new BlacklightSearchLink($app['blacklight.host'], urlencode($query));
   }
   $app['monolog']->addInfo("TAB:" . $tab . "\tQUERY:" . $query . "\tREDIRECT:" . $deep_search_link->getLink() . "\tREFERER:" . $referer);
 
