@@ -76,7 +76,7 @@ $app['search_tabs'] = array(
 $app['primo_server_connection'] = Yaml::parse(__DIR__.'/../conf/primo.yml');
 
 $app['voyager.connection'] = array(
-  'base.url' => "http://catalog.princeton.edu",
+  'base.url' => "https://catalog.princeton.edu",
   'html.base' => "/cgi-bin/Pwebrecon.cgi",
   'vxws.port' => "7014"
 );
