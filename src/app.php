@@ -130,7 +130,7 @@ $app['hours.base'] = $app['environment']['app_base_url'];
 $app['hours.locations'] = 'services/voyager/libraries.json';
 $app['hours.weekly'] = 'services/voyager/hours.json';
 $app['hours.daily'] = 'hours';
-$app['blacklight.host'] = "https://pulsearch.princeton.edu";
+$app['blacklight.host'] = "https://catalog.princeton.edu";
 $app['bibdata.host'] = "https://bibdata.princeton.edu";
 
 $app['primo_client'] = $app->share(function ($app) {
