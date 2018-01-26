@@ -19,7 +19,7 @@ class Response
   }
 
   public static function getRecords($record_list) {
-    $base_url = "https://pulsearch.princeton.edu/catalog/";
+    $base_url = "https://catalog.princeton.edu/catalog/";
     $records = array();
     foreach($record_list as $record) {
       $parsed_record = array();
