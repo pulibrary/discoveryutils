@@ -5,11 +5,11 @@ use GuzzleHttp\Client as Client;
 
 /*
  * Guides
- * 
+ *
  * Class to manage transactions with Princeton Finding Aids Site
- * 
+ *
  */
- 
+
 class Guides
 {
   protected $http_client;
@@ -23,9 +23,9 @@ class Guides
   //   'key' => '79eb11fd3c26374e9785bb06bc3f3961',
   //   'status' => '1',
   // );
-  
+
   protected $queries = array();
-  
+
   function __construct($guide_connection, Client $client = null) {
     $this->host = $guide_connection['host'];
     $this->base_url = $guide_connection['base'];
@@ -37,30 +37,30 @@ class Guides
     {
       $this->http_client = $client;
     }
-    else 
+    else
     {
       $this->http_client = new Client(['base_url' => $this->host]);
     }
   }
-  
+
   public function query($string, $start, $qString) {
     $query = array_merge($this->params, $qString);
     $query['search_terms'] = $string;
 
     $url = $this->base_url;
-    $response = $this->http_client->get($url, [
+    $response = $this->http_client->get($this->host.$url, [
         'query' => $query,
         'timeout' => 5 ]
       );
-    return $response->json();
+    return json_decode((string)$response->getBody()->getContents(), true);
   }
-  
+
   public function setSize($size) {
     $this->response_size = $size;
-  } 
-  
+  }
+
   public function setStart($start) {
     $this->starting_point = $start;
   }
-  
+
 }
