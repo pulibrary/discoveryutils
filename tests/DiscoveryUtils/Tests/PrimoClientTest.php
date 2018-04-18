@@ -12,7 +12,7 @@ namespace DiscoveryUtils\Tests;
  * &indx=1&bulkSize=1&dym=true&highlight=true&lang=eng&firsthit=1&lasthit=1
  * 
  */
-class LookupPrimoClientTest extends \PHPUnit_Framework_TestCase {
+class LookupPrimoClientTest extends \PHPUnit\Framework\TestCase {
   
   protected function setUp() {
     $primo_server_connection = array(

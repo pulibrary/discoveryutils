@@ -2,7 +2,7 @@
 
 namespace DiscoveryUtils\Tests;
 
-class LookupPrimoResponseTest extends \PHPUnit_Framework_TestCase {
+class LookupPrimoResponseTest extends \PHPUnit\Framework\TestCase {
     protected function setUp() {
       $app = require dirname(__FILE__) . '/../../../src/app.php';
       $dedup_record_response = file_get_contents(dirname(__FILE__).'../../../support/PRN_VOYAGER4773991.xml');

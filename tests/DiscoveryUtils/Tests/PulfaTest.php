@@ -5,7 +5,7 @@ namespace DiscoveryUtils\Tests;
 /**
  * 
  */
-class PulfaTest extends \PHPUnit_Framework_TestCase {
+class PulfaTest extends \PHPUnit\Framework\TestCase {
   
   protected function setUp() {
     $pulfa_conf = array(

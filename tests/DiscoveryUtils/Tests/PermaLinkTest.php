@@ -6,7 +6,7 @@ use Primo\PermaLink as PermaLink;
 /**
  * 
  */
-class PermaLinkTest extends \PHPUnit_Framework_TestCase {
+class PermaLinkTest extends \PHPUnit\Framework\TestCase {
   
   protected function setUp() {
     $this->primo_server_connection = array(

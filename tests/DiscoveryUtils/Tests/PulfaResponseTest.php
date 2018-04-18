@@ -5,7 +5,7 @@ namespace DiscoveryUtils\Tests;
 /**
  * 
  */
-class PulfaResponseTest extends \PHPUnit_Framework_TestCase {
+class PulfaResponseTest extends \PHPUnit\Framework\TestCase {
   
   protected function setUp() {
     $this->xml_response_data = file_get_contents(dirname(__FILE__).'../../../support/findingaidsresult.xml');

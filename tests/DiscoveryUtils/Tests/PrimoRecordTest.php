@@ -5,7 +5,7 @@ namespace DiscoveryUtils\Tests;
 /**
  * 
  */
-class LookupPrimoRecordTest extends \PHPUnit_Framework_TestCase {
+class LookupPrimoRecordTest extends \PHPUnit\Framework\TestCase {
   
   protected function setUp() {
     $primo_server_connection = array(

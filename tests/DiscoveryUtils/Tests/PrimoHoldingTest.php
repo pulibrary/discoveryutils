@@ -8,7 +8,7 @@ use Symfony\Component\Yaml\Yaml;
  * Primo Holdings Test
  */
  
-class PrimoHoldingTest extends \PHPUnit_Framework_TestCase {
+class PrimoHoldingTest extends \PHPUnit\Framework\TestCase {
   
   protected function setUp() {
     $library_scopes = Yaml::parse(file_get_contents(dirname(__FILE__).'../../../support/scopes.yml'));

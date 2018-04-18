@@ -9,7 +9,7 @@ use GuzzleHttp\Client;
  * authorize a new machine. Must have fixed IP unfortunately. 
  */
 
-class HTTPClientTest extends  \PHPUnit_Framework_TestCase
+class HTTPClientTest extends  \PHPUnit\Framework\TestCase
 {
     protected function setUp() {
        $this->primo_xservice = new \GuzzleHttp\Client(['base_url' => "http://princeton-primo.hosted.exlibrisgroup.com/PrimoWebServices/xservice/search/brief"]);
