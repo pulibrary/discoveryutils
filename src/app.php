@@ -173,16 +173,6 @@ $app->get('/hours', function() use($app) {
   return new Response($xml, 200, array('Content-Type'=> 'application/xml'));
 });
 
-$app->get('/hours/dow', function() use($app) {
-  $hours_client = new Hours($app['hours.base'], $app['hours.locations'], $app['hours.weekly']);
-  $hours_client->getDowHours();
-  $xml = $app['twig']->render('dow.xml.twig', array(
-      'libraries' => $hours_client->getCurrentHoursByLocation(),
-      'base_url' => $app['environment']['app_base_url'],
-  ));
-  return new Response($xml, 200, array('Content-Type'=> 'application/xml'));
-});
-
 $app->get('/hours/rbsc', function() use($app) {
   $day_client = new Day($app['hours.base'], $app['hours.daily'] );
   $daily_hours = $day_client->getDailyHoursByLocation();
