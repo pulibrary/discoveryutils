@@ -1,6 +1,6 @@
 <?php
 
-class GuidesReponseTest extends \PHPUnit_Framework_TestCase {
+class GuidesReponseTest extends \PHPUnit\Framework\TestCase {
 
   protected function setUp() {
     $this->guide_response_json = file_get_contents(dirname(__FILE__).'../../../support/guide_search_response.json');

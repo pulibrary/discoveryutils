@@ -3,7 +3,7 @@
 namespace DiscoveryUtils\Tests;
 
 
-class SummonClientTest extends \PHPUnit_Framework_TestCase {
+class SummonClientTest extends \PHPUnit\Framework\TestCase {
   
   protected function setUp() {
     $this->summon_connection = array(

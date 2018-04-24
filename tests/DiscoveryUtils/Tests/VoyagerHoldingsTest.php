@@ -6,7 +6,7 @@
 namespace DiscoveryUtils\Tests;
 use Voyager\Record;
 
-class VoyagerHoldingsTest extends \PHPUnit_Framework_TestCase {
+class VoyagerHoldingsTest extends \PHPUnit\Framework\TestCase {
 
     protected function setUp() {
         $brief_holdings_html_on_order_response = file_get_contents(dirname(__FILE__).'../../../support/on_order_voyager.html');

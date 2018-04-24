@@ -3,7 +3,7 @@
 namespace DiscoveryUtils\Tests;
 use Symfony\Component\Yaml\Yaml;
 
-class PrimoRequestAeonTest extends \PHPUnit_Framework_TestCase 
+class PrimoRequestAeonTest extends \PHPUnit\Framework\TestCase 
 {
   protected function setUp() {
     $library_scopes = Yaml::parse(file_get_contents(dirname(__FILE__).'../../../support/scopes.yml'));

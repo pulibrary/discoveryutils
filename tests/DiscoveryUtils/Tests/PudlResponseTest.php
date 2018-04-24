@@ -5,7 +5,7 @@ namespace DiscoveryUtils\Tests;
 /**
  * 
  */
-class PudlResponseTest extends \PHPUnit_Framework_TestCase {
+class PudlResponseTest extends \PHPUnit\Framework\TestCase {
   
   protected function setUp() {
     $this->xml_response_data = file_get_contents(dirname(__FILE__).'../../../support/pudlsearchresponse.xml');

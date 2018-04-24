@@ -7,7 +7,7 @@ namespace DiscoveryUtils\Tests;
  */
 
  
-class SummonRecordTest extends \PHPUnit_Framework_TestCase  
+class SummonRecordTest extends \PHPUnit\Framework\TestCase  
 {
   protected function setUp() {
     $this->summon_response_data = json_decode(file_get_contents(dirname(__FILE__).'../../../support/summon_response.json'), TRUE);

@@ -7,10 +7,10 @@ use GuzzleHttp\Message\Request as Request;
 
 /**
  * Summon Client
- * 
+ *
  * Based on the work of Andrew Nagy
  *
- * @author David Walker - Modified by Kevin Reiss to swap in GuzzleHttp Async PHP Client 
+ * @author David Walker - Modified by Kevin Reiss to swap in GuzzleHttp Async PHP Client
  * @copyright 2012 California State University
  * @link http://xerxes.calstate.edu
  * @license
@@ -34,15 +34,15 @@ class Summon
 	protected $command_filters = array(); // s.cmd filters like addFacetValueFilters(ContentType,Newspaper+Article:t)
 	protected $role; // user's role: authenticated or not
 	protected $holdings_only = false;
-	
+
 	/**
 	 * Create a Summon Client
-	 * 
+	 *
 	 * @param string $app_id		summon application id
 	 * @param string $api_key		summon application key
 	 * @param Client $client		[optional] HTTP client to use
 	 */
-	
+
 	function __construct($app_id, $api_key, Client $client = null)
 	{
 		$this->host = 'http://api.summon.serialssolutions.com/';
@@ -53,75 +53,75 @@ class Summon
 		{
 			$this->http_client = $client;
 		}
-		else 
+		else
 		{
 			$this->http_client = new Client(['base_url' => $this->host]);
 		}
 	}
-	
+
 	/**
 	 * Retrieves a document specified by the ID.
 	 *
 	 * @param string  $id         The document to retrieve from the Summon API
-	 * 
+	 *
 	 * @return array
 	 */
-	
+
 	public function getRecord($id)
 	{
 		$options = array('s.q' => "id:$id");
 		return $this->send($options);
 	}
-	
+
 	/**
 	 * Execute a search
-	 * 
+	 *
 	 * @param string $query		search query in summon syntax
 	 * @param array $this->facet_filter		[optional] filters to apply
 	 * @param int $page			[optional] page number to start with
 	 * @param int $limit		[optional] total records per page
 	 * @param string $sortBy	[optional] sort restlts on this index
-	 * 
+	 *
 	 * @return array
 	 */
-	
+
 	public function query( $query, $page = 1, $limit = 20, $sortBy = null )
 	{
 		// convert this to summon query string
-		
+
 		$options = array();
-		
+
 		// search query
-		
+
 		if ( $query != '' )
 		{
 			$options['s.q'] = urlencode($query); //TESTME try url encoding just the Query
 		}
-		
+
 		// user role
-		
+
 		if ( $this->role != "")
 		{
 			$options['s.role'] = $this->role;
 		}
-		
+
 		// holdings only
-		
+
 		if ( $this->holdings_only == true)
 		{
 			$options['s.ho'] = 'true';
-		}		
-		
+		}
+
 		// filters to be applied
-		
+
 		if ( count($this->facet_filters) > 0 )
 		{
 		  //print_r($this->facet_filters);
 			$options['s.fvf'] = $this->facet_filters;
 		}
-		
+
 		// complex filters to be applied
-		
+
 		if ( count($this->complex_filters) > 0 )
 		{
 			$options['s.fvgf'] = $this->complex_filters;
@@ -129,49 +129,49 @@ class Summon
 
     if ( count($this->command_filters) > 0 )
     {
-          
+
       $options['s.cmd'] = $this->command_filters;
     }
-    
+
 		// date range filters to be applied
-		
+
 		if ( $this->start_date != '*' || $this->end_date != '*' )
 		{
 			$options['s.rf'] = 'PublicationDate,' . $this->start_date . ":" . $this->end_date;
-		}		
-		
+		}
+
 		// sort
-		
+
 		if ( $sortBy != "" )
 		{
 			$options['s.sort'] = $sortBy;
 		}
-		
+
 		// paging
-		
+
 		$options['s.ps'] = $limit;
 		$options['s.pn'] = $page;
-		
+
 		// facets to return in response
-		
+
 		$options['s.ff'] = $this->getFacetsToInclude();
-		
+
 		// date groupings to return in response
-		
+
 		if ( $this->date_ranges_to_include != '' )
 		{
 			$options['s.rff'] = 'PublicationDate,' . $this->date_ranges_to_include;
-		}		
-		
+		}
+
 		return $this->send($options);
 	}
-	
+
 	/**
 	 * Limit response to library holdings
-	 * 
+	 *
 	 * @param bool $bool
 	 */
-	
+
 	public function limitToHoldings($bool = true)
 	{
 		if ( $bool === true )
@@ -183,32 +183,32 @@ class Summon
 			$this->holdings_only = false;
 		}
 	}
-	
+
 	/**
 	 * Spell check
-	 * 
+	 *
 	 * @param string $query
 	 */
-	
+
 	public function checkSpelling($query)
 	{
 		$options = array();
-		
+
 		// spell check
-		
+
 		$options['s.dym'] = 'true';
 		$options['s.ps'] = 0;
 		$options['s.pn'] = 1;
-		
+
 		if ( $query != '' )
 		{
 			$options['s.q'] = $query;
 		}
-		
+
 		$results = $this->send($options);
-		
+
 		// if we got one, return it
-		
+
 		if ( array_key_exists('didYouMeanSuggestions', $results) )
 		{
 			if ( array_key_exists(0, $results['didYouMeanSuggestions']) )
@@ -222,25 +222,25 @@ class Summon
 			return null;
 		}
 	}
-	
+
 	/**
 	 * Submit search
 	 *
 	 * @param array $params			An array of parameters for the request
 	 * @param string $service    	The api service to call
-	 * 
+	 *
 	 * @return array
 	 */
-	
+
 	private function send( array $params, $service = '2.0.0/search' )
 	{
 		// build querystring
-		
+
 		$query = array();
 
 		foreach ( $params as $function => $value )
 		{
-		  //FIXME encoding URLs causes bad things when using s.cmd parameters 
+		  //FIXME encoding URLs causes bad things when using s.cmd parameters
 			if ( is_array($value) )
 			{
 				foreach ( $value as $additional )
@@ -261,45 +261,44 @@ class Summon
 		$queryString = implode('&', $query);
     //echo $queryString . "\n";
 		// main headers
-		
+
 		$headers = array(
-			'Accept' => 'application/json' , 
-			'x-summon-date' => date('D, d M Y H:i:s T') , 
+			'Accept' => 'application/json' ,
+			'x-summon-date' => date('D, d M Y H:i:s T') ,
 			'Host' => 'api.summon.serialssolutions.com'
 		);
-		
+
 		// set auth header based on hash
-		
+
 		$data = implode($headers, "\n") . "\n/$service\n" . urldecode($queryString) . "\n";
 		$hmacHash = $this->hmacsha1($this->api_key, $data);
-		
+
 		$headers["Authorization"] = "Summon " . $this->app_id . ";" . $hmacHash;
-		
+
 		if ( $this->session_id )
 		{
 			$headers['x-summon-session-id'] = $this->session_id;
 		}
 		// send the request
 		//$request = $this->http_client->createRequest('GET');
-		$response = $this->http_client->get("$service?$queryString", [
+		$response = $this->http_client->get("$this->host$service?$queryString", [
 				'headers' => $headers,
 			  'timeout' => 5 ]
 				);
-		
+
 
 		// decode the response into array - have to cast to string
-		return $response->json(); 
-		//json_decode((string)$response->getBody(), true);
-    
+		return json_decode((string)$response->getBody()->getContents(), true);
+
 	}
-	
+
 	/**
 	 * Create the auth hash
-	 * 
+	 *
 	 * @param string $key		summon application key
 	 * @param string $data		header data
 	 */
-	
+
 	private function hmacsha1($key, $data)
 	{
 		$blocksize = 64;
@@ -314,73 +313,73 @@ class Summon
 		$hmac = pack('H*', $hashfunc(($key ^ $opad) . pack('H*', $hashfunc(($key ^ $ipad) . $data))));
 		return base64_encode($hmac);
 	}
-	
+
 	/**
 	 * Add a facet to those that should be returned in the response
-	 * 
+	 *
 	 * @param string $facet
 	 */
-	
+
 	public function includeFacet($facet)
 	{
 		$this->facets_to_include[] = $facet;
 	}
-	
+
 	/**
 	 * Get the facets to be included in the response
-	 * 
+	 *
 	 * @return array
 	 */
-	
+
 	public function getFacetsToInclude()
 	{
 		return $this->facets_to_include;
 	}
-	
+
 	/**
 	 * set the date ranges to include in facet response
 	 *
 	 * @param string $ranges
 	 */
-	
+
 	public function setDateRangesToInclude($ranges)
 	{
 		$this->date_ranges_to_include = $ranges;
-	}	
-	
+	}
+
 	/**
 	 * Facet to filter on
 	 *
 	 * @param string $filter
 	 */
-	
+
 	public function addFilter($filter)
 	{
 		$this->facet_filters[] = $filter;
 	}
-	
+
 	/**
 	 * Complex facet to filter on
 	 *
 	 * @param string $filter
 	 */
-	
+
 	public function addComplexFilter($filter)
 	{
 		$this->complex_filters[] = $filter;
 	}
-	
+
 	/**
 	 * Start date to filter on
 	 *
 	 * @param string $filter
-	 */	
-	
-	
+	 */
+
+
 	public function addCommandFilter($filter) {
 	  $this->command_filters[] = $filter;
 	}
-	
+
 	public function setStartDate($date)
 	{
 		$this->start_date = $date;
@@ -391,16 +390,16 @@ class Summon
 	 *
 	 * @param string $filter
 	 */
-	
+
 	public function setEndDate($date)
 	{
 		$this->end_date = $date;
-	}	
-	
+	}
+
 	/**
 	 * Tell Summon user is authenticated
 	 */
-	
+
 	public function setToAuthenticated()
 	{
 		$this->role = 'authenticated';

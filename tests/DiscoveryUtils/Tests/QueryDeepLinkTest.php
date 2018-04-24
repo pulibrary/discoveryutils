@@ -7,7 +7,7 @@ namespace DiscoveryUtils\Tests;
  */
 
  
-class QueryDeepLinkTest extends \PHPUnit_Framework_TestCase {
+class QueryDeepLinkTest extends \PHPUnit\Framework\TestCase {
   
   function setUp() {
       

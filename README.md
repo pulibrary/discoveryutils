@@ -1,10 +1,10 @@
 # Discovery Service Utilities
 ==============
 
-Utilities to interact with Summon, Primo, and the in-house request form system. Written using Silex, Symfony Components, and GuzzleHTTP. See http://silex.sensiolabs.org/documentation for more context and information about Silex applications. 
+Utilities to interact with Summon, the PUL Blacklight Catalog, Springshare products, PUL Pulfa, PUL Pudl. Written using Silex, Symfony Components, and GuzzleHTTP. See http://silex.sensiolabs.org/documentation for more context and information about Silex applications.
 
 ## Dependecies
-1. PHP 5.4 or higher
+1. PHP 7.0 or higher
 2. PHP compiled with curl
 
 ## To Install
@@ -14,7 +14,7 @@ Utilities to interact with Summon, Primo, and the in-house request form system. 
 3. run ```php composer.phar install``` to pull down dependency packages to /vendor
 4. Make sure /cache and /log are writable by web server
 5. Copy all *.yml files from /conf to your local environment
-6. Make sure workstation IP is registered with Primo Web Services as a trusted client. 
+6. Make sure workstation IP is registered with Primo Web Services as a trusted client.
 7. The .htaccess file currently expects this to be dropped somewhere where it is acccessible at "/searchit" on http://mywebserveriamusing.princeton.edu/searchit.
 
 ## Apache Configuration
@@ -41,24 +41,24 @@ Alias /searchit /var/www/apps/discoveryutils
 
 ## Application Configuration
 
-1. File out /conf/summon.yml with summon client key and host name 
+1. File out /conf/summon.yml with summon client key and host name
 2. Set the environment and base URL you want to use for the app in /conf/enviornment.yml
 3. /conf/primo.yml contains details about the primo application
 
-## Unit Tests 
+## Unit Tests
 
 ### Caveats
 1. Currently a Few Failing Ones, also test coverage is not complete for all classes/features in the Project
-2. To run some of the tests related to Primo Web Services you must be at IP that has been explicitly allowed to query them. 
+2. To run some of the tests related to Primo Web Services you must be at IP that has been explicitly allowed to query them.
 
 Tests use phpunit https://phpunit.de/manual/current/en/index.html
 
-### To Run 
+### To Run
 
 1. Install PHP Unit (On OSX ```brew install phpunit```)
 2. Go to the Project Root directory
 3. For all tests run ```phpunit```
-4. For all single test run something like 
+4. For all single test run something like
 ```
 phpunit tests/LookupApp/Tests/PrimoQueryTest.php
 ```
@@ -87,5 +87,4 @@ function testGetSinglePrintRecordLocations() {
 }
 ```
 
-See https://github.com/pulibrary/discoveryutils/blob/master/tests/LookupApp/Tests/PrimoRecordTest.php for more details. 
-
+See https://github.com/pulibrary/discoveryutils/blob/master/tests/LookupApp/Tests/PrimoRecordTest.php for more details.

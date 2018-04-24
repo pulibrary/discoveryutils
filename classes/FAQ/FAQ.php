@@ -49,14 +49,14 @@ class FAQ
 
     $search_terms = $string;
 
-    $url = $this->base_url . "/" . $search_terms;
+    $url = $this->host . $this->base_url . "/" . $search_terms;
     $response = $this->http_client->get($url, [
         'query' => $query,
         'timeout' => 5 ]
       );
 
     // decode the response into array - have to cast to string
-		return $response->json();
+		return json_decode((string)$response->getBody()->getContents(), true);
   }
 
   public function setSize($size) {

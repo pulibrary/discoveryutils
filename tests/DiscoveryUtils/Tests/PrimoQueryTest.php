@@ -6,7 +6,7 @@ namespace DiscoveryUtils\Tests;
 /**
  * 
  */
-class PrimoQueryTest extends \PHPUnit_Framework_TestCase {
+class PrimoQueryTest extends \PHPUnit\Framework\TestCase {
   
   protected function setUp() {
     $this->app['primo'] = array(
