@@ -7,13 +7,6 @@ use Symfony\Component\HttpFoundation\Response,
     Symfony\Component\HttpFoundation\Request,
     Symfony\Component\HttpFoundation\JsonResponse,
     Symfony\Component\Yaml\Yaml;
-use Primo\Record as PrimoRecord,
-    Primo\PermaLink as Permalink,
-    Primo\Query as PrimoQuery,
-    Primo\Primo as Primo,
-    Primo\SearchDeepLink as SearchDeepLink,
-    Primo\Response as PrimoResponse,
-    Primo\ScopeList as PrimoScopeList;
 use Summon\Summon,
     Summon\Query as SummonQuery,
     Summon\Response as SummonResponse;
