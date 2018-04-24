@@ -301,29 +301,6 @@ $app->get('/voyager/order/{rec_id}.json', function ($rec_id) use ($app) {
     return new JsonResponse($on_order_response);
 })->assert('rec_id', '\d+');
 
-$app->post('/locations', function() use ($app) {
-
-  $locations = json_decode(file_get_contents($app['locations.base']), TRUE);
-  ksort($locations);
-  $location_codes = array();
-  foreach($locations as $loc_key => $loc_value) {
-    $loc_value['voyagerLocationCode'] = $loc_key;
-    array_push($location_codes, $loc_value);
-  }
-
-  file_put_contents(__DIR__.'/../log/locations.json', json_encode($location_codes));
-
-  return new JsonResponse($location_codes);
-});
-
-$app->get('/locations', function() use ($app) {
-   return $app['twig']->render('locations.html.twig', array(
-    'locations' => $app['locations.list'],
-    'environment' => $app['environment']['env'],
-    'title' => "Active Voyager Locations"
-  ));
-});
-
 /*
  * Route to direct queries to Pulfa
  *
