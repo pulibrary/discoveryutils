@@ -36,7 +36,13 @@ use Blacklight\Blacklight as Blacklight,
 
 $app = new Silex\Application();
 
-$app['environment'] = Yaml::parse(__DIR__.'/../conf/environment.yml');
+$app['environment'] = array(
+  'env' => 'development',
+  'title' => 'Princeton Library Discovery Service',
+  'app_base_url' => getenv('DISCOVERYUTILS_BASE_URL'),
+  'app_path' => 'utils'
+);
+
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
   'twig.path'       => __DIR__.'/../views',
 ));
@@ -74,8 +80,6 @@ $app['search_tabs'] = array(
   array("index" => "mvideo", "label" => "Mendel Library Video")
 );
 
-$app['primo_server_connection'] = Yaml::parse(__DIR__.'/../conf/primo.yml');
-
 $app['voyager.connection'] = array(
   'base.url' => "https://catalog.princeton.edu",
   'html.base' => "/cgi-bin/Pwebrecon.cgi",
@@ -84,7 +88,12 @@ $app['voyager.connection'] = array(
 
 # summon api key located in summon.yml
 
-$app['summon.connection'] = Yaml::parse(__DIR__.'/../conf/summon.yml');
+$app['summon.connection'] = array(
+  'client.id' => 'princeton',
+  'base.url' => 'https://princeton.summon.serialssolutions.com/search?',
+  'num.records.brief.display' => 5,
+  'authcode' => getenv('SUMMON_AUTHCODE'),
+);
 
 $app['pulfa'] = array(
   'host' => "https://findingaids.princeton.edu",
@@ -120,13 +129,6 @@ $app['pudl'] = array(
   'num.records.brief.display' => 3,
 );
 
-$app['locator.base'] = "http://library.princeton.edu/locator/index.php";
-// get primo scopes via webservices http://searchit.princeton.edu/PrimoWebServices/xservice/getscopesofview?viewId=PRINCETON
-$app['stackmap'] = Yaml::parse(__DIR__.'/../conf/stackmap.yml');
-
-$app['locations.base'] = "http://library.princeton.edu/requests/locationservice.php";
-$app['locations.list'] = json_decode(__DIR__.'/../conf/locations.json');
-
 $app['hours.base'] = $app['environment']['app_base_url'];
 $app['hours.locations'] = 'services/voyager/libraries.json';
 $app['hours.weekly'] = 'services/voyager/hours.json';
@@ -135,7 +137,8 @@ $app['blacklight.host'] = "https://catalog.princeton.edu";
 $app['bibdata.host'] = "https://bibdata.princeton.edu";
 
 $app['primo_client'] = function ($app) {
-    return new Primo($app['primo_server_connection']);
+    return new Primo(
+    );
 };
 
 if ($app['environment']['env'] != "production") {
@@ -249,18 +252,6 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
   return $app->redirect($deep_search_link->getLink());
 });
 
-$app->get('/briefpnx/{rec_id}.json', function($rec_id) use($app) {
-  $record_data = $app['primo_client']->getID($app->escape($rec_id));
-  if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
-    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));
-  } else {
-    $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
-    $stub_data = $primo_record->getBriefInfo();
-    $app['monolog']->addInfo("PNXID_REQUEST: " . $rec_id);
-    return new Response(json_encode($stub_data), 200, array('Content-Type' => 'application/json'));
-  }
-})->assert('rec_id', '\w+'); //test regular expression validation of route
-
 $app->match('/record/{rec_id}.xml', function($rec_id) use($app) {
 
   $record_data = $app['primo_client']->getID($app->escape($rec_id));
@@ -284,34 +275,6 @@ $app->match('/record/{rec_id}.json', function($rec_id) use($app) {
                                                  'Access-Control-Allow-Headers' => "EXLRequestType"));
   }
 })->assert('rec_id', '(\w+|EAD\w+\.?\w+)')->method('GET|OPTIONS');
-
-$app->get('/record/{rec_id}.ris', function($rec_id) use($app) {
-  $record_data = $app['primo_client']->getID($app->escape($rec_id));
-  if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
-    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));
-  } else {
-    $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
-    $ris_data = $primo_record->getCitation("RIS");
-    $app['monolog']->addInfo("RIS_REQUEST: " . $rec_id . "\n" . $ris_data);
-    return new Response($ris_data, 200, array('Content-Type' => 'application/x-research-info-systems'));
-  }
-})->assert('rec_id', '\w+');
-
-
-$app->get('/record/{rec_id}', function($rec_id) use($app) {
-  $record_data = $app['primo_client']->getID($app->escape($rec_id));
-  if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
-      return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));
-  } else {
-    $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
-    $stub_data = $primo_record->getBriefInfo();
-    $response_data = array();
-    $response_data['rec_id'] = $rec_id;
-    $response_data['pnx_response'] = $stub_data;
-
-    return $app['twig']->render('record.twig', $response_data);
-  }
-})->assert('rec_id', '\w+');
 
 /*
  * Route to return voyager holdings via html screen scraping
@@ -337,31 +300,6 @@ $app->get('/voyager/order/{rec_id}.json', function ($rec_id) use ($app) {
 
     return new JsonResponse($on_order_response);
 })->assert('rec_id', '\d+');
-
-/*
- * Generic "services" route to all for querying of specific primo services
- * Returns values for {locations, openurl, fulltext, delivery, borrowdirect }
- */
-$app->get('/{rec_id}/{service_type}.{format}', function($rec_id, $service_type, $format="html") use ($app) {
-  $record_data = $app['primo_client']->getID($app->escape($rec_id)); //FIXME perhaps try and use the symfony validator utility to filter all rec_ids and service_types
-  $primo_record = new PrimoRecord($record_data,$app['primo_server_connection']);
-  // decide which service type to use
-  $location_links_data = $primo_record->getAllLinks();
-
-  if ($format == "json") {
-    return new Response(json_encode($location_links_data), 200, array('Content-Type' => 'application/json'));
-  }
-})->assert('rec_id', '\w+');
-
-$app->post('/scopelist', function() use ($app) {
-  $scope_list_response = $app['primo_client']->getScopes();
-  $scope_list = new PrimoScopeList($scope_list_response);
-  $yaml = $scope_list->asYaml();
-  //updat yaml file
-  file_put_contents(__DIR__.'/../conf/scopes.yml', $yaml);
-
-  return new JsonResponse($scope_list->getScopes());
-});
 
 $app->post('/locations', function() use ($app) {
 
@@ -698,71 +636,5 @@ $app->get('/articles/{index_type}', function($index_type) use($app) {
   $blacklight_response["more"] = $app['blacklight.host'] . "/catalog?" . "search_field=" . $index_type . "&q=" . urlencode($query) . "&utf8=%E2%9C%93";
   return new JSONResponse($blacklight_response, 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
  })->assert('index_type', '(any|issn|isbn|title)');
-
-
- $app->get('/find/{index_type}', function($index_type) use($app) {
-
-  if($app['request']->get('query')) {
-    $query = $app['request']->get('query');
-  } else {
-    return "No Query Supplied";
-  }
-
-  if($app['request']->server->get('HTTP_REFERER')) {
-    $referer = $app['request']->server->get('HTTP_REFERER');
-  } else {
-    $referer = "Direct Query";
-  }
-
-  if($app['request']->get('number')) {
-    $result_size = $app['request']->get('number');
-  } else {
-    $result_size = $app['primo_server_connection']['num.records.brief.display'];
-  }
-
-  if($app['request']->get('scopes')) {
-    $scopes = explode(",", $app['request']->get('scopes'));
-  } else {
-    $scopes = $app['primo_server_connection']['default.scope'];
-  }
-  if($app['request']->get('limit')) {
-    $operator = $app->escape($app['request']->get('limit'));
-  } else {
-    $operator = $app['primo_server_connection']['default.search'];
-  }
-  if($app['request']->get('format')) {
-    $format_facet = "facet_rtype,exact," . $app['request']->get('format');
-  }
-
-  if($app['request']->get('subject')) {
-    $subject_facet = "facet_topic,exact," . $app['request']->get('subject');
-  }
-
-  $primo_query = new PrimoQuery($query, $app->escape($index_type), $operator, $scopes, $result_size);
-  if(isset($format_facet)) {
-    $primo_query->addFacet($format_facet);
-  }
-  if(isset($subject_facet)) {
-    $primo_query->addFacet($subject_facet);
-  }
-  $search_results = $app['primo_client']->doSearch($primo_query);
-  if(preg_match('/MESSAGE=\"Unauthorized access\"/', $search_results)) {
-    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));
-  }
-  if ($search_results) {
-    $response = new PrimoResponse($search_results, $app['primo_server_connection']);
-    $deep_link = new SearchDeepLink($query, $app->escape($index_type), $operator, $app['primo_server_connection'], 'location', $app['primo_server_connection']['default.scope'], $primo_query->getFacets());
-    $response_data = array(
-      'query' => $app->escape($query),
-      'number' => $response->getHits(),
-      'more' => $deep_link->getLink(),
-      'records' => $response->getBriefResults(),
-      );
-    $app['monolog']->addInfo("Index Query:" . $query . "\tREFERER:" . $referer);
-  } else {
-    $response_data = array("no results available at this time");
-  }
-  return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public',));
-})->assert('index_type', '(issn|isbn|lccn|oclc|title|any|creator)'); // should this be a list of possible options from the
 
 return $app;
