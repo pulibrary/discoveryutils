@@ -10,16 +10,16 @@ namespace Blacklight;
 class Response
 {
 
-  public static function getResponse($json_data) {
+  public static function getResponse($json_data, $host) {
     $response = array();
     $blacklight_data = json_decode($json_data, true);
     $response["number"] = $blacklight_data["response"]["pages"]["total_count"];
-    $response["records"] = self::getRecords($blacklight_data["response"]["docs"]);
+    $response["records"] = self::getRecords($blacklight_data["response"]["docs"], $host);
     return $response;
   }
 
-  public static function getRecords($record_list) {
-    $base_url = "https://catalog.princeton.edu/catalog/";
+  public static function getRecords(array $record_list, string $host) {
+    $base_url = $host . "/catalog/";
     $records = array();
     foreach($record_list as $record) {
       $parsed_record = array();
