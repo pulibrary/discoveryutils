@@ -24,6 +24,8 @@ use Guides\Guides,
     Guides\Response as GuidesResponse;
 use Blacklight\Blacklight as Blacklight,
     Blacklight\Response as BLResponse,
+    Blacklight\DpulResponse as DpulResponse,
+    Blacklight\PulmapResponse as PulmapResponse,
     Blacklight\Record as MarcRecord,
     Blacklight\SearchLink as BlacklightSearchLink;
 
@@ -617,7 +619,7 @@ $app->get('/dpulsearch/{index}', function($index) use ($app) {
   $host_url = 'https://dpul.princeton.edu';
   $client = new Blacklight('https://dpul.princeton.edu', 'dpul.princeton.edu/catalog');
   $response = $client->query($query, $index_type);
-  $blacklight_response = BLResponse::getResponse($response, $host_url);
+  $blacklight_response = DpulResponse::getResponse($response, $host_url);
   $blacklight_response["more"] = host_url . "/catalog?" . "search_field=" . $index_type . "&q=" . urlencode($query) . "&utf8=%E2%9C%93";
   return new JSONResponse($blacklight_response, 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
  })->assert('index_type', '(any|issn|isbn|title)');
@@ -641,7 +643,7 @@ $app->get('/mapsearch/{index}', function($index) use ($app) {
   $host_url = 'https://maps.princeton.edu';
   $client = new Blacklight($host_url, 'maps.princeton.edu');
   $response = $client->query($query, $index_type);
-  $blacklight_response = BLResponse::getResponse($response, $host_url);
+  $blacklight_response = PulmapResponse::getResponse($response, $host_url);
   $blacklight_response["more"] = $host_url . "/catalog?" . "search_field=" . $index_type . "&q=" . urlencode($query) . "&utf8=%E2%9C%93";
   return new JSONResponse($blacklight_response, 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
  })->assert('index_type', '(any|issn|isbn|title)');
