@@ -1,0 +1,10 @@
+name: my-lando-app
+recipe: lamp
+config:
+  webroot: .
+  php: '7.2'
+services:
+  appserver:
+    run_as_root:
+      - "apt-get update -y"
+      
