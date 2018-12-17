@@ -7,7 +7,7 @@ namespace Blacklight;
  * Model a Response from a Query to the Black API 
  */
 
-class Response
+class DpulResponse
 {
 
   public static function getResponse($json_data, $host) {
@@ -23,24 +23,18 @@ class Response
     $records = array();
     foreach($record_list as $record) {
       $parsed_record = array();
-      $parsed_record["title"] = $record["title_display"];
-      if (isset($record["marc_relator_display"])) {
-        $parsed_record["relator"] = $record["marc_relator_display"];
+      $parsed_record["title"] = $record["readonly_title_tesim"];
+      if (isset($record["readonly_creator_tesim"])) {
+        $parsed_record["contributor"] = $record["readonly_creator_tesim"];
       }
-      if (isset($record["author_display"])) {
-        $parsed_record["author"] = $record["author_display"];
+      if (isset($record["readonly_publisher_tesim"])) {
+       $parsed_record["origin"] = $record["readonly_publisher_tesim"];
       }
-      if (isset($record["pub_created_display"])) {
-       $parsed_record["publisher"] = $record["pub_created_display"];
-      }
-      if (isset($record["holdings_1display"]) ){
-        $parsed_record["holdings"] = $record["holdings_1display"];
-      }
-      if(isset($record["electronic_access_1display"])) {
-        $parsed_record["online"] = $record["electronic_access_1display"];
+      if (isset($record["readonly_collections_tesim"])) {
+       $parsed_record["collection"] = $record["readonly_collections_tesim"];
       }
       $parsed_record["id"] = $record["id"];
-      $parsed_record["type"] = $record["format"];
+      $parsed_record["type"] = $record["readonly_format_tesim"];
       $parsed_record["url"] = $base_url .  $record["id"];
       array_push($records, $parsed_record);
     }

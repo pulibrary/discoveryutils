@@ -7,7 +7,7 @@ namespace Blacklight;
  * Model a Response from a Query to the Black API 
  */
 
-class Response
+class PulmapResponse
 {
 
   public static function getResponse($json_data, $host) {
@@ -23,25 +23,16 @@ class Response
     $records = array();
     foreach($record_list as $record) {
       $parsed_record = array();
-      $parsed_record["title"] = $record["title_display"];
-      if (isset($record["marc_relator_display"])) {
-        $parsed_record["relator"] = $record["marc_relator_display"];
-      }
+      $parsed_record["title"] = $record["dc_title_s"];
       if (isset($record["author_display"])) {
-        $parsed_record["author"] = $record["author_display"];
+        $parsed_record["author"] = $record["dc_creator_sm"];
       }
       if (isset($record["pub_created_display"])) {
-       $parsed_record["publisher"] = $record["pub_created_display"];
+       $parsed_record["publisher"] = $record["dc_publisher_s"];
       }
-      if (isset($record["holdings_1display"]) ){
-        $parsed_record["holdings"] = $record["holdings_1display"];
-      }
-      if(isset($record["electronic_access_1display"])) {
-        $parsed_record["online"] = $record["electronic_access_1display"];
-      }
-      $parsed_record["id"] = $record["id"];
-      $parsed_record["type"] = $record["format"];
-      $parsed_record["url"] = $base_url .  $record["id"];
+      $parsed_record["id"] = $record["layer_slug_s"];
+      $parsed_record["type"] = $record["dc_format_s"];
+      $parsed_record["url"] = $base_url .  $record["layer_slug_s"];
       array_push($records, $parsed_record);
     }
 
