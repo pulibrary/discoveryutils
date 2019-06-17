@@ -1,5 +1,7 @@
 name: discovery-utils
 recipe: lamp
+env_file:
+  - defaults.env
 config:
   webroot: .
   php: '7.2'
@@ -12,3 +14,7 @@ tooling:
     description: Manually invokes all our build steps
     cmd:
       - appserver: composer install
+  test:
+    description: run all our tests 
+    cmd:
+      - appserver: phpunit

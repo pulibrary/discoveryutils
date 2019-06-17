@@ -11,3 +11,4 @@ views/*.json
 .idea/*
 nbproject/*
 js/SAX_RCPPZ.json
+defaults.env
