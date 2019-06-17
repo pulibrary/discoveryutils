@@ -1,4 +1,4 @@
-name: my-lando-app
+name: discovery-utils
 recipe: lamp
 config:
   webroot: .
@@ -6,5 +6,9 @@ config:
 services:
   appserver:
     run_as_root:
-      - "apt-get update -y"
-      
+      - apt-get update -y
+tooling:
+  build:
+    description: Manually invokes all our build steps
+    cmd:
+      - appserver: composer install
