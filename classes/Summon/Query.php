@@ -18,7 +18,7 @@ class Query {
   
   private function buildLink() {
     $query_string = array("{$this->query_key}={$this->query}");   
-    if(count($this->limiters > 0)) {
+    if(sizeof($this->limiters) > 0) {
       foreach($this->limiters as $limiter => $limit_value) {
         array_push($query_string, "{$limiter}={$limit_value}");
       }
