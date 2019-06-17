@@ -4,11 +4,19 @@
 Utilities to interact with Summon, the PUL Blacklight Catalog, Springshare products, PUL Pulfa, PUL Pudl. Written using Silex, Symfony Components, and GuzzleHTTP. See http://silex.sensiolabs.org/documentation for more context and information about Silex applications.
 
 ## Dependecies
-1. PHP 7.0 or higher
-2. PHP compiled with curl
+1. docker
+1. lando
+    ```
+    download dmg from https://github.com/lando/lando/releases
+    ```
 
 ## To Install
 
+1. Initialize lando with `lando init`
+1. Start lando with `lando start`
+1. Run `lando info` to see what is being run
+
+### Old install notes
 1. clone repo
 2. cd repo-name
 3. run ```php composer.phar install``` to pull down dependency packages to /vendor
@@ -43,7 +51,6 @@ Alias /searchit /var/www/apps/discoveryutils
 
 1. File out /conf/summon.yml with summon client key and host name
 2. Set the environment and base URL you want to use for the app in /conf/enviornment.yml
-3. /conf/primo.yml contains details about the primo application
 
 ## Unit Tests
 
