@@ -22,11 +22,15 @@ class SummonRecordTest extends \PHPUnit\Framework\TestCase
   }
   
   public function testGetFormatType() {
-    
+    $this->markTestIncomplete(
+      'This test has not been implemented yet.'
+    );  
   }
   
   public function testGetOpenURL() {
-    
+    $this->markTestIncomplete(
+      'This test has not been implemented yet.'
+    );
   }
   
   
