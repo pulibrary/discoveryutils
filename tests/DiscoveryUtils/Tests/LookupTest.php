@@ -17,17 +17,4 @@ class LookupTest extends WebTestCase
     $crawler = $client->request('GET', '/');
     $this->assertTrue($crawler->filter('html:contains("Discovery")')->count() > 0);
   }
-   
-  public function testResultsJson() {
-    $client = $this->createClient();
-    $client->request('GET', '/record/PRN_VOYAGER6109368');
-    $json_data = $client->getResponse()->getContent();
-    $this->assertContains("PRN_VOYAGER6109368", $json_data); // not a good test html_data is sent back not json data does contain the string though 
-  }
-
-  public function testVoyagerConnection() {
-      $client = $this->createClient();
-      $crawler = $client->request('GET', '/voyager/holdings/7446612');
-      $this->assertTrue($crawler->filter('html:contains("WebVoyage Record Brief View")')->count() == 1);
-  }
-}
+ }
