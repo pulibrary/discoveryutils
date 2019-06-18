@@ -8,10 +8,10 @@ class SummonClientTest extends \PHPUnit\Framework\TestCase {
   protected function setUp() {
     $this->summon_connection = array(
       'client.id' => "princeton",
-     'authcode' => 'LOIYKyKZbRiV0OVu9+worZW4ah'
+     'authcode' => getenv('SUMMON_AUTHCODE')
     );
     $this->summon_client = new \Summon\Summon($this->summon_connection['client.id'], $this->summon_connection['authcode']);
-    $this->sample_id = "FETCH-gale_vrl_13454000520"; // These go stale
+    $this->sample_id = "FETCH-LOGICAL-13475-8de99c957ff820463c5cb388d9f8570011b3e196b76a2625b61a762ad3ee38d43"; // These go stale
   }
   
   function testClientSetup() 
@@ -57,7 +57,7 @@ class SummonClientTest extends \PHPUnit\Framework\TestCase {
     //$this->summon_client->addFilter("ContentType,Newspaper+Article,t");
     $this->summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:true)");
     $result_without_newspaper = $this->summon_client->query("Mark Twain");
-    $this->assertLessThan(200000, $result_without_newspaper['recordCount']);
+    $this->assertLessThan(1000000, $result_without_newspaper['recordCount']);
   }
 
   

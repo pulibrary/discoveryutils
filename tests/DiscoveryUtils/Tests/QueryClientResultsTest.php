@@ -34,19 +34,19 @@ class QueryClientResultsTest extends WebTestCase
  
  public function testBasicPrimoSearch() {
     $client = $this->createClient();
-    $crawler = $client->request('GET', '/find/any?query=music');
+    $crawler = $client->request('GET', '/pulsearch/any?query=music');
     $this->assertTrue($client->getResponse()->isOk());
  }
   
  public function testEmptyQuery() {
    $client = $this->createClient();
-   $crawler = $client->request('GET', '/find/any?query=');
+   $crawler = $client->request('GET', '/pulsearch/any?query=');
    $this->assertTrue($client->getResponse()->isOk());
  } 
  
  public function testNoQueryParam() {
    $client = $this->createClient();
-   $crawler = $client->request('GET', '/find/any');
+   $crawler = $client->request('GET', '/pulsearch/any');
    $this->assertTrue($client->getResponse()->isOk());
  } 
  

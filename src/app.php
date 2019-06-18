@@ -237,40 +237,6 @@ $app->match('/search/{tab}', function(Request $request, $tab) use($app) {
   return $app->redirect($deep_search_link->getLink());
 });
 
-$app->match('/record/{rec_id}.xml', function($rec_id) use($app) {
-
-  $record_data = $app['primo_client']->getID($app->escape($rec_id));
-  if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
-    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));
-  } else {
-    return new Response($record_data, 200, array('Content-Type' => 'application/xml',
-                                                 'Access-Control-Allow-Origin' => "*",
-                                                 'Access-Control-Allow-Headers' => "EXLRequestType"));
-  }
-})->assert('rec_id', '(\w+|EAD\w+\.?\w+)')->method('GET|OPTIONS');
-
-$app->match('/record/{rec_id}.json', function($rec_id) use($app) {
-
-  $record_data = $app['primo_client']->getID($app->escape($rec_id), "true");
-  if(preg_match('/MESSAGE=\"Unauthorized access\"/', $record_data)) {
-    return new Response("Unauthorized Access", 403, array('Content-Type' => 'text/plain'));
-  } else {
-    return new Response($record_data, 200, array('Content-Type' => 'application/json',
-                                                 'Access-Control-Allow-Origin' => "*",
-                                                 'Access-Control-Allow-Headers' => "EXLRequestType"));
-  }
-})->assert('rec_id', '(\w+|EAD\w+\.?\w+)')->method('GET|OPTIONS');
-
-/*
- * Route to return voyager holdings via html screen scraping
- */
-
-$app->get('/voyager/holdings/{rec_id}', function ($rec_id) use ($app) {
-    $voyager_client = new \Voyager\Voyager($app['voyager.connection']);
-    $doc_body = $voyager_client->getHoldings($app->escape($rec_id));
-    return new Response($doc_body, 200, array('Content-Type' => 'text/html'));
-})->assert('rec_id', '\d+');
-
 /*
  * Return On order status & associated messages via JSON
  */

@@ -2,7 +2,7 @@
     Options MultiViews FollowSymLinks
 
     RewriteEngine On
-    RewriteBase /utils
+    RewriteBase /
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
