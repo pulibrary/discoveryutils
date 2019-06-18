@@ -29,7 +29,7 @@ class Blacklight
     }
     else 
     {
-      $this->http_client = new Client(['base_url' => $this->host]);
+      $this->http_client = new Client(['base_uri' => $this->host]);
     }
     
   }
