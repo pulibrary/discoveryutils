@@ -28,7 +28,7 @@ class Hours
     }
     else 
     {
-      $this->http_client = new Client(['base_url' => $this->host]);
+      $this->http_client = new Client(['base_uri' => $this->host]);
     }
     $this->setLocations();
     
@@ -53,7 +53,7 @@ class Hours
 
   private function setLocations() {
     $response = $this->http_client->get($this->locations_base);
-    $location_data = $response->json();
+    $location_data = json_decode($response->getBody());
     foreach($location_data as $location) {
       $library_location = new Location($location);
       if(!empty($library_location->calendar)) {

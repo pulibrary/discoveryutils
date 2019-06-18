@@ -1,6 +1,8 @@
 <?php
 namespace DiscoveryUtils\Tests;
 use Silex\WebTestCase;
+use PHPUnit\Xpath\Assert as XpathAssertions;
+use GuzzleHttp\Client as HttpClient;
 
 class LookupTest extends WebTestCase
 {
@@ -17,4 +19,16 @@ class LookupTest extends WebTestCase
     $crawler = $client->request('GET', '/');
     $this->assertTrue($crawler->filter('html:contains("Discovery")')->count() > 0);
   }
- }
+
+  public function testHours() {
+    $client = $this->createClient();
+    $crawler = $client->request('GET', '/hours');
+    $this->assertTrue($crawler->filterXPath('//locations/location/eventsFeedConfig')->count() > 0);
+  }
+
+  public function testDays() {
+    $data = file_get_contents('http://localhost/hours/rbsc');
+    $json = json_decode($data);
+    $this->assertContains("Open", $json->{"mudd-hours"} );
+  }
+}

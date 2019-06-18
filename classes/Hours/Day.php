@@ -22,7 +22,7 @@ class Day {
     }
     else 
     {
-      $this->http_client = new Client(['base_url' => $this->host]);
+      $this->http_client = new Client(['base_uri' => $this->host]);
     }
     
   }
@@ -45,19 +45,19 @@ class Day {
   //    MUDD = 3709
     $hours_data = array();
     $dom = new Crawler($html_body);
-    $mudd_status = $dom->filter('.data-status-3700')->each(function (Crawler $node, $i) {
+    $mudd_status = $dom->filter('.data-hours-3709 > .is-Open')->each(function (Crawler $node, $i) {
       return trim($node->text());
     });
     $hours_data["mudd"] = $mudd_status[0];
-    $rbsc_status = $dom->filter('.data-status-3709')->each(function (Crawler $node, $i) {
+    $rbsc_status = $dom->filter('.data-hours-3700  > .is-Open')->each(function (Crawler $node, $i) {
       return trim($node->text());
     });
     $hours_data["rbsc"] = $rbsc_status[0];
-    $mudd_hours = $dom->filter('.data-hours-3700')->each(function (Crawler $node, $i) {
+    $mudd_hours = $dom->filter('.data-hours-3709')->each(function (Crawler $node, $i) {
       return trim($node->text());
     });
     $hours_data["mudd-hours"] = $mudd_hours[0];
-    $rbsc_hours = $dom->filter('.data-hours-3709')->each(function (Crawler $node, $i) {
+    $rbsc_hours = $dom->filter('.data-hours-3700')->each(function (Crawler $node, $i) {
       return trim($node->text());
     });
     $hours_data["rbsc-hours"] = $rbsc_hours[0];
