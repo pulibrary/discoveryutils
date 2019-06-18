@@ -14,7 +14,6 @@ use Pulfa\Pulfa,
     Pulfa\Response as PulfaResponse;
 use Pudl\Pudl,
     Pudl\Response as PudlResponse;
-use Voyager\Voyager;
 use Hours\Hours as Hours;
 use Hours\Day as Day;
 use Utilities\CoreSearchLink;
@@ -58,30 +57,6 @@ $app->register(new Silex\Provider\MonologServiceProvider(), array(
     'monolog.logfile'       => __DIR__.'/../log/usage.log',
     'monolog.level'         => $log_level
 ));
-
-/*
-$app->register(new Silex\Provider\HttpCacheServiceProvider(), array(
-    'http_cache.cache_dir' => __DIR__.'/../cache/',
-));
-*/
-/* Define possible search tabs */
-$app['search_tabs'] = array(
-  array("index" => "location", "label" => "Catalog+ (Primo/Searchit)"),
-  array("index" => "summon", "label" => "Articles + (Summon)"),
-  array("index" => "course", "label" => "Course Reserves"),
-  array("index" => "blended", "label" => "Catalog and Summon"),
-  array("index" => "mendel", "label" => "Mendel Library Audio"),
-  array("index" => "mscores", "label" => "Mendal Library Scores"),
-  array("index" => "mvideo", "label" => "Mendel Library Video")
-);
-
-$app['voyager.connection'] = array(
-  'base.url' => "https://catalog.princeton.edu",
-  'html.base' => "/cgi-bin/Pwebrecon.cgi",
-  'vxws.port' => "7014"
-);
-
-# summon api key located in summon.yml
 
 $app['summon.connection'] = array(
   'client.id' => 'princeton',
@@ -130,11 +105,6 @@ $app['hours.weekly'] = 'services/voyager/hours.json';
 $app['hours.daily'] = 'hours';
 $app['blacklight.host'] = "https://catalog.princeton.edu";
 $app['bibdata.host'] = "https://bibdata.princeton.edu";
-
-$app['primo_client'] = function ($app) {
-    return new Primo(
-    );
-};
 
 if ($app['environment']['env'] != "production") {
   $app['debug'] = true;
@@ -195,62 +165,6 @@ $app->get('/libraryforms', function() use($app) {
        )
     );
 });
-
-
-/*
- * redirect route for primo basic searches
- * tab should match an available primo search tab
- */
-$app->match('/search/{tab}', function(Request $request, $tab) use($app) {
-  $app['request'] = $app['request_stack']->getCurrentRequest();
-  $query = $app['request']->get('query'); //FIXME escaping this causes primo search to fail
-  if($app['request']->server->get('HTTP_REFERER')) {
-    $referer = $app['request']->server->get('HTTP_REFERER');
-  } else {
-    $referer = "Direct Query";
-  }
-
-  if ($tab == "summon") {
-    $deep_search_link = new SummonQuery($query, array(
-      "s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t)",
-      "keep_r" => "true" )
-    );
-  } elseif($tab == "mendel") {
-    $deep_search_link = new BlackLightSearchLink($app['blacklight.host'], $app->escape($query),
-                                           array('format' => 'Audio', 'location' => 'Mendel Music Library'));
-  } elseif($tab == "mscores") {
-    $deep_search_link = new BlacklightSearchLink($app['blacklight.host'], $app->escape($query),
-                                           array('format' => 'Musical+score'));
-
-  } elseif($tab == "mvideo") {
-    $deep_search_link = new BlacklightSearchLink($app['blacklight.host'], $app->escape($query),
-                                           array('format' => 'Video%2FProjected+medium'));
-  } elseif($tab == "coreall") {
-    $deep_search_link = new CoreSearchLink($app['library.core']['host'], $app['library.core']['all.search.path'] , $app->escape($query));
-  } elseif($tab == 'dball') {
-    $deep_search_link = new CoreSearchLink($app['library.core']['host'] , $app['library.core']['db.search.path'] , $app->escape($query));
-  } else {
-    $deep_search_link = new BlacklightSearchLink($app['blacklight.host'], urlencode($query));
-  }
-  $app['monolog']->addInfo("TAB:" . $tab . "\tQUERY:" . $query . "\tREDIRECT:" . $deep_search_link->getLink() . "\tREFERER:" . $referer);
-
-  return $app->redirect($deep_search_link->getLink());
-});
-
-/*
- * Return On order status & associated messages via JSON
- */
-
-$app->get('/voyager/order/{rec_id}.json', function ($rec_id) use ($app) {
-    $voyager_client = new \Voyager\Voyager($app['voyager.connection']);
-    $doc_body = $voyager_client->getHoldings($app->escape($rec_id));
-    $voyager_record = new \Voyager\Record($doc_body);
-    $on_order_response = array();
-    $on_order_response['on_order'] = $voyager_record->isOnOrder();
-    $on_order_response['order_messages'] = $voyager_record->getOnOrderMessage();
-
-    return new JsonResponse($on_order_response);
-})->assert('rec_id', '\d+');
 
 /*
  * Route to direct queries to Pulfa
