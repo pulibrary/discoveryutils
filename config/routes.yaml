@@ -1,0 +1,62 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+index:
+    path: /
+    defaults: { _controller: 'App\Controller\IndexController::homepage' }
+
+hours:
+    path: /hours
+    defaults: { _controller: 'App\Controller\HoursController::page' }
+
+hours_rbsc:
+    path: /hours/rbsc
+    defaults: { _controller: 'App\Controller\HoursRbscController::page' }
+
+articles:
+    path: /articles/{index_type}
+    defaults: { _controller: 'App\Controller\ArticlesController::page' }
+    requirements:
+       index_type: any|title|guide|creator|issn|isbn|spelling|recommendations
+
+pulfa:
+    path: /pulfa/{index_type}
+    defaults: { _controller: 'App\Controller\PulfaController::page' }
+    requirements:
+       index_type: title|any|creator
+
+guides:
+    path: /guides/{index_type}
+    defaults: { _controller: 'App\Controller\GuidesController::page' }
+    requirements:
+       index_type: any|title
+
+faq:
+    path: /faq/{index_type}
+    defaults: { _controller: 'App\Controller\FaqController::page' }
+    requirements:
+       index_type: get|options
+
+pudl:
+    path: /pudl/{index_type}
+    defaults: { _controller: 'App\Controller\PudlController::page' }
+    requirements:
+       index_type: any
+
+pulsearch:
+    path: /pulsearch/{index_type}
+    defaults: { _controller: 'App\Controller\PulSearchController::page' }
+    requirements:
+       index_type: any|issn|isbn|title
+
+dpulsearch:
+    path: /dpulsearch/{index_type}
+    defaults: { _controller: 'App\Controller\DpulSearchController::page' }
+    requirements:
+       index_type: any|issn|isbn|title
+
+mapsearch:
+    path: /mapsearch/{index_type}
+    defaults: { _controller: 'App\Controller\MapSearchController::page' }
+    requirements:
+       index_type: any|issn|isbn|title

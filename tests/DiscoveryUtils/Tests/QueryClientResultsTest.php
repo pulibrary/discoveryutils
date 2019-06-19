@@ -2,7 +2,7 @@
 
 namespace DiscoveryUtils\Tests;
 
-use Silex\WebTestCase;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 /**
  * Tests "Summon Query API"

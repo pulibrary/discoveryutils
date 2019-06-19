@@ -14,8 +14,14 @@ Utilities to interact with Summon, the PUL Blacklight Catalog, Springshare produ
 
 1. clone repo
 1. cd repo-name
-1. create `default.env` in the root directory.  It should contain one line that has the summon authentication code
-    1. `SUMMON_AUTHCODE=xxxxx`
+1. Secret keys are to be put in both `.env.local` and `.env.text.local`  These files are not put in git.
+    ```
+    # .env.local & .env.test.local
+    APP_SECRET=XXXXX
+    LIB_GUIDES_KEY=YYYYY
+    SUMMON_AUTHCODE=ZZZZZ
+    ```
+
 1. Initialize lando with `lando init`
 1. Start lando with `lando start`
 1. `lando build` to install composer dependencies
@@ -41,7 +47,7 @@ Alias /searchit /var/www/apps/discoveryutils
     RewriteEngine On
     RewriteBase /utils
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.php [L]
+    RewriteRule ^ public/index.php [L]
 </IfModule>
 ```
 
