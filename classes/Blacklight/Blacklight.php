@@ -29,7 +29,7 @@ class Blacklight
     }
     else 
     {
-      $this->http_client = new Client(['base_url' => $this->host]);
+      $this->http_client = new Client(['base_uri' => $this->host]);
     }
     
   }
@@ -53,7 +53,7 @@ class Blacklight
     $response = $this->http_client->get($this->base_url, [
       'headers' => $headers,
       'query' => $query,
-      'timeout' => 5 ]
+      'timeout' => 10 ]
       );
     
     return (string)$response->getBody();

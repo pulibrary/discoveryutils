@@ -1,6 +1,6 @@
 <?php
 namespace DiscoveryUtils\Tests;
-use Silex\WebTestCase;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use PHPUnit\Xpath\Assert as XpathAssertions;
 use GuzzleHttp\Client as HttpClient;
 
@@ -15,7 +15,8 @@ class LookupTest extends WebTestCase
   }
 
   public function testIndex() {
-    $client = $this->createClient();
+    $client = static::createClient();
+    // $client = $this->createClient();
     $crawler = $client->request('GET', '/');
     $this->assertTrue($crawler->filter('html:contains("Discovery")')->count() > 0);
   }

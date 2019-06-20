@@ -20,7 +20,7 @@ class Guides
   protected $params = array();
   // //search_terms=biology
   //   'site_id' => '77',
-  //   'key' => '79eb11fd3c26374e9785bb06bc3f3961',
+  //   'key' => 'xxxx',
   //   'status' => '1',
   // );
 

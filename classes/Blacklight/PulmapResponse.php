@@ -31,7 +31,9 @@ class PulmapResponse
        $parsed_record["publisher"] = $record["dc_publisher_s"];
       }
       $parsed_record["id"] = $record["layer_slug_s"];
-      $parsed_record["type"] = $record["dc_format_s"];
+      if (isset($record["dc_format_s"])) {
+        $parsed_record["type"] = $record["dc_format_s"];
+      }
       $parsed_record["url"] = $base_url .  $record["layer_slug_s"];
       array_push($records, $parsed_record);
     }

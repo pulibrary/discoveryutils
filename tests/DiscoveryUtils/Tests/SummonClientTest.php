@@ -8,7 +8,7 @@ class SummonClientTest extends \PHPUnit\Framework\TestCase {
   protected function setUp() {
     $this->summon_connection = array(
       'client.id' => "princeton",
-     'authcode' => getenv('SUMMON_AUTHCODE')
+     'authcode' => $_ENV['SUMMON_AUTHCODE']
     );
     $this->summon_client = new \Summon\Summon($this->summon_connection['client.id'], $this->summon_connection['authcode']);
     $this->sample_id = "FETCH-LOGICAL-13475-8de99c957ff820463c5cb388d9f8570011b3e196b76a2625b61a762ad3ee38d43"; // These go stale

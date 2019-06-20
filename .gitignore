@@ -12,3 +12,15 @@ views/*.json
 nbproject/*
 js/SAX_RCPPZ.json
 defaults.env
+
+###> symfony/framework-bundle ###
+.env.local
+.env.local.php
+.env.*.local
+public/bundles/
+var/
+
+###> symfony/phpunit-bridge ###
+.phpunit
+/phpunit.xml
+###< symfony/phpunit-bridge ###

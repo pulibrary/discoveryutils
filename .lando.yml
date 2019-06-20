@@ -17,4 +17,4 @@ tooling:
   test:
     description: run all our tests 
     cmd:
-      - appserver: phpunit
+      - appserver: php bin/phpunit
