@@ -45,7 +45,8 @@
             "Sitemap" : "classes/",
             "Springshare": "classes/",
             "Hours": "classes/",
-            "Blacklight": "classes/"
+            "Blacklight": "classes/",
+            "Arts": "classes/"
           }
     },
     "autoload-dev": {

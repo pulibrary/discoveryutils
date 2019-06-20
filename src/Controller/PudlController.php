@@ -3,31 +3,17 @@ namespace App\Controller;
 
 use Pudl\Pudl,
     Pudl\Response as PudlResponse;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
-use Psr\Log\LoggerInterface;
 
-class PudlController extends AbstractController
+class PudlController extends BaseController
 {
-    public function page(LoggerInterface $logger, Request $request, $index_type)
+    protected function gather_data( Request $request, $index_type, $query)
     {
         $host = "http://pudl.princeton.edu";
         $base = "/pudl/Objects";
         $num_records_brief_display = 3;
- 
-
-        if (empty($request->query->get('query'))) {
-            return "No Query Supplied";
-        }
-        $query = htmlspecialchars($request->query->get('query'));
-
-        if($request->server->get('HTTP_REFERER')) { //should not be repeated moved out to utilities class
-          $referer = $request->server->get('HTTP_REFERER');
-        } else {
-          $referer = "Direct Query";
-        }
-      
+       
         if($request->query->get('number')) {
           $result_size = $request->query->get('number');
         } else {
@@ -47,7 +33,6 @@ class PudlController extends AbstractController
         $pudl_response = new PudlResponse($pudl_response_data, $query);
         $brief_response = $pudl_response->getBriefResponse();
       
-        $logger->info("Pudl Query:" . $query . "\tREFERER:" . $referer);
         if($format == "html") {
           return $this->render('pudlbrief.html.twig', array(
                                 'environment' => $this->getParameter('kernel.environment'),

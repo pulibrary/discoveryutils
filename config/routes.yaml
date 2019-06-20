@@ -60,3 +60,9 @@ mapsearch:
     defaults: { _controller: 'App\Controller\MapSearchController::page' }
     requirements:
        index_type: any|issn|isbn|title
+
+arts:
+    path: /arts/{index_type}
+    defaults: { _controller: 'App\Controller\ArtsController::page' }
+    requirements:
+       index_type: all|artobjects|makers|packages
