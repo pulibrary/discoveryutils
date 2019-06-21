@@ -17,30 +17,30 @@ class FaqController extends AbstractController
         $num_records_brief_display = 3;
     
 
-        $query = $index_type;
+        $query = htmlspecialchars($index_type);
         $qString = array();
         if($request->query->get('group_id')) {
-          $qString['group_id'] = $request->query->get('group_id');
+          $qString['group_id'] = htmlspecialchars($request->query->get('group_id'));
         }
     
         if($request->query->get('topics')) {
-          $qString['topics'] = $request->query->get('topics');
+          $qString['topics'] = htmlspecialchars($request->query->get('topics'));
         }
     
         if($request->query->get('sort')) {
-          $qString['sort'] = $request->query->get('sort');
+          $qString['sort'] = htmlspecialchars($request->query->get('sort'));
         }
     
         if($request->query->get('sort_dir')) {
-          $qString['sort_dir'] = $request->query->get('sort_dir');
+          $qString['sort_dir'] = htmlspecialchars($request->query->get('sort_dir'));
         }
     
         if($request->query->get('page')) {
-          $qString['page'] = $request->query->get('page');
+          $qString['page'] = htmlspecialchars($request->query->get('page'));
         }
     
         if($request->query->get('callback')) {
-          $qString['callback'] = $request->query->get('callback');
+          $qString['callback'] = htmlspecialchars($request->query->get('callback'));
         }
     
         if($request->query->get('limit')) {

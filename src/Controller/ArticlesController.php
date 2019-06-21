@@ -50,8 +50,7 @@ class ArticlesController extends AbstractController
             "s.ho" => "t"
           ));
           $response_data = array(
-//            'query' => $this->escape($query),
-            'query' => $query,
+            'query' => htmlspecialchars($query),
             'number' => $summon_data->hits,
             'more' => $summon_full_search_link->getLink(),
             'records' => $summon_data->getBriefResults(),
@@ -83,7 +82,7 @@ class ArticlesController extends AbstractController
             )
           );
           $response_data = array(
-            'query' => $query,
+            'query' => htmlspecialchars($query),
             'number' => $summon_data->hits,
             'more' => $summon_full_search_link->getLink(),
             'records' => $summon_data->getBriefResults(),
