@@ -30,7 +30,7 @@ class GuidesController extends AbstractController
         if (empty($request->query->get('query'))) {
             return "No Query Supplied";
         }
-        $query = $request->query->get('query');
+        $query = htmlspecialchars($request->query->get('query'));
 
         if($request->server->get('HTTP_REFERER')) { //should not be repeated moved out to utilities class
           $referer = $request->server->get('HTTP_REFERER');
