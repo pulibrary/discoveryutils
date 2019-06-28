@@ -3,21 +3,18 @@ namespace App\Controller;
 
 use FAQ\FAQ,
     FAQ\Response as FAQResponse;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
-use Psr\Log\LoggerInterface;
 
-class FaqController extends AbstractController
+class FaqController extends BaseController
 {
-    public function page(LoggerInterface $logger, Request $request, $index_type)
+    protected function gather_data( Request $request, $index_type, $query)
     {
         $host = "https://api2.libanswers.com";
         $base = "/1.0/search";
         $num_records_brief_display = 3;
     
 
-        $query = htmlspecialchars($index_type);
         $qString = array();
         if($request->query->get('group_id')) {
           $qString['group_id'] = htmlspecialchars($request->query->get('group_id'));
@@ -49,12 +46,6 @@ class FaqController extends AbstractController
           $qString['limit'] = $num_records_brief_display;
         }
  
-        if($request->server->get('HTTP_REFERER')) { //should not be repeated moved out to utilities class
-          $referer = $request->server->get('HTTP_REFERER');
-        } else {
-          $referer = "Direct Query";
-        }
-
         $faq = new \FAQ\FAQ($host, $base);
         $faq_response_data = $faq->query($query, 0, $qString);
     
@@ -67,11 +58,7 @@ class FaqController extends AbstractController
           'records' => $faq_response->getBriefResponse(),
         );
     
-        $logger->info("FAQ Query:" . $query . "\tREFERER:" . $referer);
-    
         $response = new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
-        $response->headers->set('Access-Control-Allow-Origin', "*");
-        $response->headers->set("Access-Control-Allow-Headers","Content-Type");
     
         return $response;
     }
