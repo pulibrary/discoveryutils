@@ -3,21 +3,14 @@ namespace App\Controller;
 
 use Blacklight\Blacklight as Blacklight,
     Blacklight\Response as BLResponse;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 
-class PulSearchController extends AbstractController
+class PulSearchController extends BaseController
 {
-    public function page(Request $request, $index_type)
+    protected function gather_data( Request $request, $index_type, $query)
     {
         $blacklight_host = "https://catalog.princeton.edu";
-
-        if (empty($request->query->get('query'))) {
-            return new Response("No Query Supplied");
-        }
-        $query = $request->query->get('query');
 
         if ($index_type == 'isbn') {
           $index_type = 'isbn';

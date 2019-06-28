@@ -175,5 +175,39 @@ public function testDpulsearchTitleSearch() {
     $crawler = $client->request('GET', '/mapsearch/title?query=music');
     $this->assertTrue($client->getResponse()->isOk());
  }
+ public function testArtSearch() {
+   $client = $this->createClient();
+   $client->request('GET', '/arts/all?query=music');
+   $this->assertTrue($client->getResponse()->isOk());
+   $response = $client->getResponse();
+   $responseData = json_decode($response->getContent(), true);
+   $this->assertGreaterThanOrEqual($responseData["number"], 0);
+ }
+ public function testArtArtobjectsSearch() {
+   $client = $this->createClient();
+   $client->request('GET', '/arts/artobjects?query=gogh');
+   $this->assertTrue($client->getResponse()->isOk());
+   $response = $client->getResponse();
+   $responseData = json_decode($response->getContent(), true);
+   $this->assertGreaterThanOrEqual($responseData["number"], 68);
+ }
+//  TODO: Do we really want makers?  there is no data beyond an id
+ public function testArtMakersSearch() {
+   $client = $this->createClient();
+   $client->request('GET', '/arts/makers?query=gogh');
+   $this->assertTrue($client->getResponse()->isOk());
+   $response = $client->getResponse();
+   $responseData = json_decode($response->getContent(), true);
+   $this->assertGreaterThanOrEqual($responseData["number"], 6);
+ }
+ public function testArtPackagesSearch() {
+   $client = $this->createClient();
+   $client->request('GET', '/arts/packages?query=gogh');
+   $this->assertTrue($client->getResponse()->isOk());
+   $response = $client->getResponse();
+   $responseData = json_decode($response->getContent(), true);
+   $this->assertGreaterThanOrEqual($responseData["number"], 0);
+ }
+
 }
 

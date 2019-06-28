@@ -3,21 +3,14 @@ namespace App\Controller;
 
 use Blacklight\Blacklight as Blacklight,
     Blacklight\PulmapResponse as PulmapResponse;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 
-class MapSearchController extends AbstractController
+class MapSearchController extends BaseController
 {
-    public function page(Request $request, $index_type)
+    protected function gather_data( Request $request, $index_type, $query)
     {
         $map_host = 'https://maps.princeton.edu';
-
-        if (empty($request->query->get('query'))) {
-            return new Response("No Query Supplied");
-        }
-        $query = $request->query->get('query');
 
         if ($index_type == 'isbn') {
           $index_type = 'isbn';

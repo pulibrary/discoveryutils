@@ -4,31 +4,22 @@ namespace App\Controller;
 use Summon\Summon,
     Summon\Query as SummonQuery,
     Summon\Response as SummonResponse;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
-use Psr\Log\LoggerInterface;
 
-class ArticlesController extends AbstractController
+class ArticlesController extends BaseController
 {
-    public function page(LoggerInterface $logger, Request $request, $index_type)
-    {
+    protected function config_data()
+    {}
+
+      protected function gather_data( Request $request, $index_type, $query)
+      //public function page(LoggerInterface $logger, Request $request, $index_type)
+      {
         $client_id = 'princeton';
         $base_url = 'https://princeton.summon.serialssolutions.com/search?';
         $num_records_brief_display = 5;
         $authcode = $_ENV['SUMMON_AUTHCODE'];
             
-
-        if (empty($request->query->get('query'))) {
-            return "No Query Supplied";
-        }
-        $query = $request->query->get('query');
-
-        if($request->server->get('HTTP_REFERER')) { //should not be repeated moved out to utilities class
-          $referer = $request->server->get('HTTP_REFERER');
-        } else {
-          $referer = "Direct Query";
-        }
       
         if($request->query->get('number')) {
           $result_size = $request->query->get('number');
@@ -89,7 +80,6 @@ class ArticlesController extends AbstractController
           );
         }
       
-        $logger->info("Summon $index_type Query:" . $query . "\tREFERER:" . $referer);
         return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
   }
 }
