@@ -102,6 +102,9 @@ class QueryClientResultsTest extends WebTestCase
     $client = $this->createClient();
     $crawler = $client->request('GET', '/faq/get?query=music');
     $this->assertTrue($client->getResponse()->isOk());
+    $response = $client->getResponse();
+    $responseData = json_decode($response->getContent(), true);
+    $this->assertGreaterThanOrEqual($responseData["number"], 2);   
  }
 
  public function testFaqOptionsSearch() {

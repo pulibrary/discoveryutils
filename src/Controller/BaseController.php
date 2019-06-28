@@ -29,6 +29,8 @@ abstract class BaseController extends AbstractController
         
         $logger->info( get_class($this) . ':' . $query . "\tREFERER:" . $referer);
 
+        $response_data->headers->set('Access-Control-Allow-Origin', "*");
+        $response_data->headers->set("Access-Control-Allow-Headers","Content-Type");
         return $response_data;
     }
 }
