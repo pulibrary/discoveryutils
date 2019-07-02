@@ -9,6 +9,7 @@ parameters:
     application.title: 'Princeton Library Discovery Service'
     hours.daily: 'hours'
     library.base.url: http://library.princeton.edu
+    router.request_context.base_url: 'utils'
 
 services:
 
