@@ -3,7 +3,7 @@ recipe: lamp
 env_file:
   - defaults.env
 config:
-  webroot: .
+  webroot: ./public
   php: '7.2'
 services:
   appserver:
