@@ -20,12 +20,12 @@ class ArtsController extends BaseController
     protected function gather_data( Request $request, $index_type, $query)
     {   
         $num_records_brief_display = 3;
-        $external_link_base = 'https://artmuseum.princeton.edu/collections/objects/';
+        $external_link_base = 'https://artmuseum.princeton.edu';
 
         $query_runner = new Query($this->config_data());
         $arts_json_data = $query_runner->query($query, $index_type);
         $arts_response  = ArtsResponse::getResponse($arts_json_data, $external_link_base);
-        $more_link = Link::getLink($external_link_base, $query);
+        $more_link = 'https://artmuseum.princeton.edu/search/collections?keys='.$query;
       
         $response_data = array(
              'query' => $query,
