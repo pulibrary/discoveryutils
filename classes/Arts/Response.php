@@ -27,7 +27,7 @@ class Response
       $parsed_record["url"] = $base_url .  $record["_id"];
       if ($record["_type"] != "makers"){
         $parsed_record["title"] = $record["_source"]["displaytitle"];
-        $parsed_record["date"] = $record["_source"]["medium"];
+        $parsed_record["date"] = $record["_source"]["displaydate"];
         $parsed_record["creator"]= $record["_source"]["displaymaker"];
         $parsed_record["object_number"] = $record["_source"]["objectnumber"];
       }
