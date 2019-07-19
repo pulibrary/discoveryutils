@@ -62,3 +62,9 @@ Tests use phpunit https://phpunit.de/manual/current/en/index.html
 
 1. Run the tests on the lando server by running `lando test`
 
+## Deploy to server
+
+1. We have capistrano set up to deploy our servers
+
+    1. `cap staging deploy` will deploy the master branch to staging
+    1. `BRANCH=other cap staging deploy` will deploy the other branch to staging
