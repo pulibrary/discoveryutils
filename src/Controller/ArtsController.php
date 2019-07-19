@@ -25,7 +25,7 @@ class ArtsController extends BaseController
         $query_runner = new Query($this->config_data());
         $arts_json_data = $query_runner->query($query, $index_type);
         $arts_response  = ArtsResponse::getResponse($arts_json_data, $external_link_base);
-        $more_link = 'https://artmuseum.princeton.edu/search/collections?keys='.$query;
+        $more_link = 'https://artmuseum.princeton.edu/search/collections/beta?query='.$query;
       
         $response_data = array(
              'query' => $query,
