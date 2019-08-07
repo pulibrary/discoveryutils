@@ -43,7 +43,7 @@ set :tmp_dir, '/home/deploy/tmp'
 desc "Report Uptimes"
 task :link_env do
   on roles(:app) do |host|
-    execute "cd #{deploy_to} && ln -sf /home/deploy/.env.local .env.local"
+    execute "cd #{release_path} && ln -sf /home/deploy/.env.local .env.local"
     info "linked .env.local"
   end
 end
