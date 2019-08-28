@@ -10,7 +10,7 @@ class PulSearchController extends BaseController
 {
     protected function gather_data( Request $request, $index_type, $query)
     {
-        $blacklight_host = "https://catalog.princeton.edu";
+        $blacklight_host = "https://catalog-staging.princeton.edu";
 
         if ($index_type == 'isbn') {
           $index_type = 'isbn';
