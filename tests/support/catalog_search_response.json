@@ -1,0 +1,2248 @@
+{
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json",
+"next": "https://catalog-staging.princeton.edu/catalog.json?page=2",
+"last": "https://catalog-staging.princeton.edu/catalog.json?page=727979"
+},
+"meta": {
+"pages": {
+"current_page": 1,
+"next_page": 2,
+"prev_page": null,
+"total_pages": 727979,
+"limit_value": 20,
+"offset_value": 0,
+"total_count": 14559567,
+"first_page?": true,
+"last_page?": false
+}
+},
+"data": [
+{
+"id": "11407761",
+"type": [
+"Book"
+],
+"attributes": {
+"author_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11407761#author_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Peker, Nurettin"
+],
+"label": "Author/Artist"
+}
+},
+"format": {
+"id": "https://catalog-staging.princeton.edu/catalog/11407761#format",
+"type": "document_value",
+"attributes": {
+"value": [
+"Book"
+],
+"label": "Format"
+}
+},
+"holdings_1display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11407761#holdings_1display",
+"type": "document_value",
+"attributes": {
+"value": {
+"11099941": {
+"location": "ReCAP",
+"library": "ReCAP",
+"location_code": "rcppa"
+}
+},
+"label": "Holdings 1display"
+}
+},
+"score": {
+"id": "https://catalog-staging.princeton.edu/catalog/11407761#score",
+"type": "document_value",
+"attributes": {
+"value": 51,
+"label": "Score"
+}
+},
+"marc_relator_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11407761#marc_relator_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Author"
+],
+"label": "Marc Relator Display"
+}
+},
+"title_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11407761#title_display",
+"type": "document_value",
+"attributes": {
+"value": "1918 - 1923 istiklâl savaşının vesika ve resimleri. İnönü, Sakarya, Dumlupınar zaferlerini sağlayan İnebolu ve Kastamonu havalisi. Deniz ve kara harekâtı ve hatıralar /",
+"label": "Title Display"
+}
+}
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/11407761"
+}
+},
+{
+"id": "11497656",
+"type": [
+"Book"
+],
+"attributes": {
+"author_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11497656#author_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Modiano, Patrick"
+],
+"label": "Author/Artist"
+}
+},
+"pub_created_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11497656#pub_created_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"David Zwirner Books, New York. Distributed by Artbook/D.A.P., New York. Ekphrasis. 2019"
+],
+"label": "Published/Created"
+}
+},
+"format": {
+"id": "https://catalog-staging.princeton.edu/catalog/11497656#format",
+"type": "document_value",
+"attributes": {
+"value": [
+"Book"
+],
+"label": "Format"
+}
+},
+"holdings_1display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11497656#holdings_1display",
+"type": "document_value",
+"attributes": {
+"value": {
+"11185940": {
+"location": "ReCAP - Marquand Library use only",
+"library": "ReCAP",
+"location_code": "rcppj"
+}
+},
+"label": "Holdings 1display"
+}
+},
+"score": {
+"id": "https://catalog-staging.princeton.edu/catalog/11497656#score",
+"type": "document_value",
+"attributes": {
+"value": 51,
+"label": "Score"
+}
+},
+"marc_relator_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11497656#marc_relator_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Author"
+],
+"label": "Marc Relator Display"
+}
+},
+"title_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11497656#title_display",
+"type": "document_value",
+"attributes": {
+"value": "28 Paradises. Patrick Modiano and Dominique Zehrfuss.",
+"label": "Title Display"
+}
+},
+"isbn_s": {
+"id": "https://catalog-staging.princeton.edu/catalog/11497656#isbn_s",
+"type": "document_value",
+"attributes": {
+"value": [
+"9781644230022"
+],
+"label": "Isbn S"
+}
+},
+"lccn_s": {
+"id": "https://catalog-staging.princeton.edu/catalog/11497656#lccn_s",
+"type": "document_value",
+"attributes": {
+"value": [
+"2019932881"
+],
+"label": "Lccn S"
+}
+}
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/11497656"
+}
+},
+{
+"id": "11521582",
+"type": [
+"Book"
+],
+"attributes": {
+"pub_created_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11521582#pub_created_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Dinar: Dinar Belediyesi,"
+],
+"label": "Published/Created"
+}
+},
+"format": {
+"id": "https://catalog-staging.princeton.edu/catalog/11521582#format",
+"type": "document_value",
+"attributes": {
+"value": [
+"Book"
+],
+"label": "Format"
+}
+},
+"holdings_1display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11521582#holdings_1display",
+"type": "document_value",
+"attributes": {
+"value": {
+"11206837": {
+"location": "ReCAP",
+"library": "ReCAP",
+"location_code": "rcppa"
+}
+},
+"label": "Holdings 1display"
+}
+},
+"score": {
+"id": "https://catalog-staging.princeton.edu/catalog/11521582#score",
+"type": "document_value",
+"attributes": {
+"value": 51,
+"label": "Score"
+}
+},
+"title_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11521582#title_display",
+"type": "document_value",
+"attributes": {
+"value": "7. uluslararası Marsyas kültür sanat ve müzik festivali. Renkten sese VII - Seramiğin sesi III - Dans ve renk - Resim / Seramik / Fotoğraf. 1 - 5 Haziran 2016, Dinar - Afyonkarahisar / 7th international Marsyas culture art and music festival. Colour to so /",
+"label": "Title Display"
+}
+}
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/11521582"
+}
+},
+{
+"id": "11521583",
+"type": [
+"Book"
+],
+"attributes": {
+"pub_created_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11521583#pub_created_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Dinar: Dinar Belediyesi,"
+],
+"label": "Published/Created"
+}
+},
+"format": {
+"id": "https://catalog-staging.princeton.edu/catalog/11521583#format",
+"type": "document_value",
+"attributes": {
+"value": [
+"Book"
+],
+"label": "Format"
+}
+},
+"holdings_1display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11521583#holdings_1display",
+"type": "document_value",
+"attributes": {
+"value": {
+"11206838": {
+"location": "ReCAP",
+"library": "ReCAP",
+"location_code": "rcppa"
+}
+},
+"label": "Holdings 1display"
+}
+},
+"score": {
+"id": "https://catalog-staging.princeton.edu/catalog/11521583#score",
+"type": "document_value",
+"attributes": {
+"value": 51,
+"label": "Score"
+}
+},
+"title_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11521583#title_display",
+"type": "document_value",
+"attributes": {
+"value": "8. uluslararası Marsyas kültür sanat ve müzik festivali. Renkten sese VIII - Seramiğin sesi IV - Fotoğraf sergisi - Dinar'da zaman ve mekan - Mekanın ritmi. 18 - 21 Mayıs 2017, Dinar - Afyonkarahisar / 8th international Marsyas culture art and music fest /",
+"label": "Title Display"
+}
+}
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/11521583"
+}
+},
+{
+"id": "10628493",
+"type": [
+"Book"
+],
+"attributes": {
+"author_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628493#author_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Warari, 'Abd al-Latif"
+],
+"label": "Author/Artist"
+}
+},
+"pub_created_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628493#pub_created_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Tanjah: Siliki Akhawayn, 2016"
+],
+"label": "Published/Created"
+}
+},
+"format": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628493#format",
+"type": "document_value",
+"attributes": {
+"value": [
+"Book"
+],
+"label": "Format"
+}
+},
+"holdings_1display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628493#holdings_1display",
+"type": "document_value",
+"attributes": {
+"value": {
+"10368286": {
+"location": "ReCAP",
+"library": "ReCAP",
+"location_code": "rcppa"
+}
+},
+"label": "Holdings 1display"
+}
+},
+"score": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628493#score",
+"type": "document_value",
+"attributes": {
+"value": 51,
+"label": "Score"
+}
+},
+"marc_relator_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628493#marc_relator_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Author"
+],
+"label": "Marc Relator Display"
+}
+},
+"title_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628493#title_display",
+"type": "document_value",
+"attributes": {
+"value": "Abd al-Karim al-Tabbal: nasik al-jabal: hiwar fi al-hayat wa al-shi'r",
+"label": "Title Display"
+}
+},
+"isbn_s": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628493#isbn_s",
+"type": "document_value",
+"attributes": {
+"value": [
+"9789954661628"
+],
+"label": "Isbn S"
+}
+},
+"cataloged_tdt": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628493#cataloged_tdt",
+"type": "document_value",
+"attributes": {
+"value": "2018-02-01T19:15:36Z",
+"label": "Cataloged Tdt"
+}
+}
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/10628493"
+}
+},
+{
+"id": "10628492",
+"type": [
+"Book"
+],
+"attributes": {
+"author_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628492#author_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Sulami, Ja'far bin al-Hajj"
+],
+"label": "Author/Artist"
+}
+},
+"pub_created_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628492#pub_created_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Tituwan: Asmir , 2016"
+],
+"label": "Published/Created"
+}
+},
+"format": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628492#format",
+"type": "document_value",
+"attributes": {
+"value": [
+"Book"
+],
+"label": "Format"
+}
+},
+"holdings_1display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628492#holdings_1display",
+"type": "document_value",
+"attributes": {
+"value": {
+"10368285": {
+"location": "ReCAP",
+"library": "ReCAP",
+"location_code": "rcppa"
+}
+},
+"label": "Holdings 1display"
+}
+},
+"score": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628492#score",
+"type": "document_value",
+"attributes": {
+"value": 51,
+"label": "Score"
+}
+},
+"marc_relator_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628492#marc_relator_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Author"
+],
+"label": "Marc Relator Display"
+}
+},
+"title_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628492#title_display",
+"type": "document_value",
+"attributes": {
+"value": "Abd al-Salam ibn Mashshish wa al-tariqah al-Shadhiliyah min al-qarn al-sabi' ila al-qarn..",
+"label": "Title Display"
+}
+},
+"isbn_s": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628492#isbn_s",
+"type": "document_value",
+"attributes": {
+"value": [
+"9789981127449"
+],
+"label": "Isbn S"
+}
+},
+"cataloged_tdt": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628492#cataloged_tdt",
+"type": "document_value",
+"attributes": {
+"value": "2018-02-01T18:58:54Z",
+"label": "Cataloged Tdt"
+}
+}
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/10628492"
+}
+},
+{
+"id": "11506915",
+"type": [
+"Book"
+],
+"attributes": {
+"author_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11506915#author_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Garcia, Maria Amalia"
+],
+"label": "Author/Artist"
+}
+},
+"pub_created_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11506915#pub_created_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"University of California Press, Berkeley. Studies on Latin American Art, 1. 2019"
+],
+"label": "Published/Created"
+}
+},
+"format": {
+"id": "https://catalog-staging.princeton.edu/catalog/11506915#format",
+"type": "document_value",
+"attributes": {
+"value": [
+"Book"
+],
+"label": "Format"
+}
+},
+"holdings_1display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11506915#holdings_1display",
+"type": "document_value",
+"attributes": {
+"value": {
+"11193659": {
+"location": "ReCAP - Marquand Library use only",
+"library": "ReCAP",
+"location_code": "rcppj"
+}
+},
+"label": "Holdings 1display"
+}
+},
+"score": {
+"id": "https://catalog-staging.princeton.edu/catalog/11506915#score",
+"type": "document_value",
+"attributes": {
+"value": 51,
+"label": "Score"
+}
+},
+"marc_relator_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11506915#marc_relator_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Author"
+],
+"label": "Marc Relator Display"
+}
+},
+"title_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11506915#title_display",
+"type": "document_value",
+"attributes": {
+"value": "Abstract Crossings: Cultural Exchange between Argentina and Brazil. Maria Amalia Garcia.",
+"label": "Title Display"
+}
+},
+"isbn_s": {
+"id": "https://catalog-staging.princeton.edu/catalog/11506915#isbn_s",
+"type": "document_value",
+"attributes": {
+"value": [
+"9780520302198"
+],
+"label": "Isbn S"
+}
+},
+"lccn_s": {
+"id": "https://catalog-staging.princeton.edu/catalog/11506915#lccn_s",
+"type": "document_value",
+"attributes": {
+"value": [
+"2018038930"
+],
+"label": "Lccn S"
+}
+}
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/11506915"
+}
+},
+{
+"id": "11527423",
+"type": [
+"Book"
+],
+"attributes": {
+"author_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11527423#author_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Levy, Matthew L."
+],
+"label": "Author/Artist"
+}
+},
+"pub_created_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11527423#pub_created_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Routledge, Taylor & Francis Group, New York. Routledge Advances in Art and Visual Studies. 2019"
+],
+"label": "Published/Created"
+}
+},
+"format": {
+"id": "https://catalog-staging.princeton.edu/catalog/11527423#format",
+"type": "document_value",
+"attributes": {
+"value": [
+"Book"
+],
+"label": "Format"
+}
+},
+"holdings_1display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11527423#holdings_1display",
+"type": "document_value",
+"attributes": {
+"value": {
+"11212199": {
+"location": "ReCAP - Marquand Library use only",
+"library": "ReCAP",
+"location_code": "rcppj"
+}
+},
+"label": "Holdings 1display"
+}
+},
+"score": {
+"id": "https://catalog-staging.princeton.edu/catalog/11527423#score",
+"type": "document_value",
+"attributes": {
+"value": 51,
+"label": "Score"
+}
+},
+"marc_relator_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11527423#marc_relator_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Author"
+],
+"label": "Marc Relator Display"
+}
+},
+"title_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11527423#title_display",
+"type": "document_value",
+"attributes": {
+"value": "Abstract Painting and the Minimalist Critiques: Robert Mangold, David Novros and Jo Baer in the 1960s. Matthew L. Levy.",
+"label": "Title Display"
+}
+},
+"isbn_s": {
+"id": "https://catalog-staging.princeton.edu/catalog/11527423#isbn_s",
+"type": "document_value",
+"attributes": {
+"value": [
+"9781138314580"
+],
+"label": "Isbn S"
+}
+}
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/11527423"
+}
+},
+{
+"id": "11052682",
+"type": [
+"Book"
+],
+"attributes": {
+"author_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052682#author_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Sharīʻatmadārī, Ḥamīd Riz̤ā, 1967-"
+],
+"label": "Author/Artist"
+}
+},
+"pub_created_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052682#pub_created_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Qum: Dānishgāh-i Adyān va Maẕāhib, 2010"
+],
+"label": "Published/Created"
+}
+},
+"format": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052682#format",
+"type": "document_value",
+"attributes": {
+"value": [
+"Book"
+],
+"label": "Format"
+}
+},
+"holdings_1display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052682#holdings_1display",
+"type": "document_value",
+"attributes": {
+"value": {
+"10759613": {
+"location": "ReCAP",
+"library": "ReCAP",
+"location_code": "rcppa",
+"call_number": "B748.A28S42 2010",
+"call_number_browse": "B748.A28S42 2010"
+}
+},
+"label": "Holdings 1display"
+}
+},
+"score": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052682#score",
+"type": "document_value",
+"attributes": {
+"value": 51,
+"label": "Score"
+}
+},
+"marc_relator_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052682#marc_relator_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Author"
+],
+"label": "Marc Relator Display"
+}
+},
+"title_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052682#title_display",
+"type": "document_value",
+"attributes": {
+"value": "Abū Ḥayyān Tawḥīdī va tafakkur-i ʻaqlānī va insānī dar qarn-i chahārum-i hijrī",
+"label": "Title Display"
+}
+},
+"isbn_s": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052682#isbn_s",
+"type": "document_value",
+"attributes": {
+"value": [
+"9789648090727"
+],
+"label": "Isbn S"
+}
+}
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/11052682"
+}
+},
+{
+"id": "10628403",
+"type": [
+"Book"
+],
+"attributes": {
+"author_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628403#author_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Dhahabi, Nafisah"
+],
+"label": "Author/Artist"
+}
+},
+"pub_created_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628403#pub_created_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Rabat: Mu'allif, 2016"
+],
+"label": "Published/Created"
+}
+},
+"format": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628403#format",
+"type": "document_value",
+"attributes": {
+"value": [
+"Book"
+],
+"label": "Format"
+}
+},
+"holdings_1display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628403#holdings_1display",
+"type": "document_value",
+"attributes": {
+"value": {
+"10368196": {
+"location": "ReCAP",
+"library": "ReCAP",
+"location_code": "rcppa"
+}
+},
+"label": "Holdings 1display"
+}
+},
+"score": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628403#score",
+"type": "document_value",
+"attributes": {
+"value": 51,
+"label": "Score"
+}
+},
+"marc_relator_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628403#marc_relator_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Author"
+],
+"label": "Marc Relator Display"
+}
+},
+"title_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628403#title_display",
+"type": "document_value",
+"attributes": {
+"value": "Abu Muhammad Salih al-Majiri: al-Shaykh wa al-tajrubah",
+"label": "Title Display"
+}
+},
+"isbn_s": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628403#isbn_s",
+"type": "document_value",
+"attributes": {
+"value": [
+"9789954567500"
+],
+"label": "Isbn S"
+}
+},
+"cataloged_tdt": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628403#cataloged_tdt",
+"type": "document_value",
+"attributes": {
+"value": "2018-01-26T17:28:41Z",
+"label": "Cataloged Tdt"
+}
+}
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/10628403"
+}
+},
+{
+"id": "11102841",
+"type": [
+"Book"
+],
+"attributes": {
+"author_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11102841#author_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Erkaçmaz, Kamran"
+],
+"label": "Author/Artist"
+}
+},
+"pub_created_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11102841#pub_created_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Istanbul: İletişim Yayınları, 2018."
+],
+"label": "Published/Created"
+}
+},
+"format": {
+"id": "https://catalog-staging.princeton.edu/catalog/11102841#format",
+"type": "document_value",
+"attributes": {
+"value": [
+"Book"
+],
+"label": "Format"
+}
+},
+"holdings_1display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11102841#holdings_1display",
+"type": "document_value",
+"attributes": {
+"value": {
+"10806418": {
+"location": "ReCAP",
+"library": "ReCAP",
+"location_code": "rcppa"
+}
+},
+"label": "Holdings 1display"
+}
+},
+"score": {
+"id": "https://catalog-staging.princeton.edu/catalog/11102841#score",
+"type": "document_value",
+"attributes": {
+"value": 51,
+"label": "Score"
+}
+},
+"marc_relator_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11102841#marc_relator_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Author"
+],
+"label": "Marc Relator Display"
+}
+},
+"title_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11102841#title_display",
+"type": "document_value",
+"attributes": {
+"value": "Acının iki yüzü / Kamran Erkaçmaz.",
+"label": "Title Display"
+}
+},
+"isbn_s": {
+"id": "https://catalog-staging.princeton.edu/catalog/11102841#isbn_s",
+"type": "document_value",
+"attributes": {
+"value": [
+"9789750525155"
+],
+"label": "Isbn S"
+}
+},
+"cataloged_tdt": {
+"id": "https://catalog-staging.princeton.edu/catalog/11102841#cataloged_tdt",
+"type": "document_value",
+"attributes": {
+"value": "2019-01-03T19:52:38Z",
+"label": "Cataloged Tdt"
+}
+}
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/11102841"
+}
+},
+{
+"id": "11052772",
+"type": [
+"Book"
+],
+"attributes": {
+"author_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052772#author_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Saʻīdī, Suhrāb, 1979-"
+],
+"label": "Author/Artist"
+}
+},
+"pub_created_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052772#pub_created_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Qum: Dār al-Tafsīr, 2010"
+],
+"label": "Published/Created"
+}
+},
+"format": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052772#format",
+"type": "document_value",
+"attributes": {
+"value": [
+"Book"
+],
+"label": "Format"
+}
+},
+"holdings_1display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052772#holdings_1display",
+"type": "document_value",
+"attributes": {
+"value": {
+"10759703": {
+"location": "ReCAP",
+"library": "ReCAP",
+"location_code": "rcppa",
+"call_number": "GR291.H87S34 2010",
+"call_number_browse": "GR291.H87S34 2010"
+}
+},
+"label": "Holdings 1display"
+}
+},
+"score": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052772#score",
+"type": "document_value",
+"attributes": {
+"value": 51,
+"label": "Score"
+}
+},
+"marc_relator_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052772#marc_relator_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Author"
+],
+"label": "Marc Relator Display"
+}
+},
+"title_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052772#title_display",
+"type": "document_value",
+"attributes": {
+"value": "Adabīyāt-i shafāhī-i kūdakān-i Hurmuzgān",
+"label": "Title Display"
+}
+},
+"isbn_s": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052772#isbn_s",
+"type": "document_value",
+"attributes": {
+"value": [
+"9789645352507"
+],
+"label": "Isbn S"
+}
+}
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/11052772"
+}
+},
+{
+"id": "10813544",
+"type": [
+"Book"
+],
+"attributes": {
+"pub_created_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10813544#pub_created_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Kemper Museum of Contemporary Art, Kansas City. 2015"
+],
+"label": "Published/Created"
+}
+},
+"format": {
+"id": "https://catalog-staging.princeton.edu/catalog/10813544#format",
+"type": "document_value",
+"attributes": {
+"value": [
+"Book"
+],
+"label": "Format"
+}
+},
+"holdings_1display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10813544#holdings_1display",
+"type": "document_value",
+"attributes": {
+"value": {
+"10535072": {
+"location": "ReCAP - Marquand Library use only",
+"library": "ReCAP",
+"location_code": "rcppj"
+}
+},
+"label": "Holdings 1display"
+}
+},
+"score": {
+"id": "https://catalog-staging.princeton.edu/catalog/10813544#score",
+"type": "document_value",
+"attributes": {
+"value": 51,
+"label": "Score"
+}
+},
+"title_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10813544#title_display",
+"type": "document_value",
+"attributes": {
+"value": "Adam Cvijanovic : American montage.",
+"label": "Title Display"
+}
+},
+"isbn_s": {
+"id": "https://catalog-staging.princeton.edu/catalog/10813544#isbn_s",
+"type": "document_value",
+"attributes": {
+"value": [
+"9780996272803"
+],
+"label": "Isbn S"
+}
+},
+"cataloged_tdt": {
+"id": "https://catalog-staging.princeton.edu/catalog/10813544#cataloged_tdt",
+"type": "document_value",
+"attributes": {
+"value": "2018-06-04T15:11:39Z",
+"label": "Cataloged Tdt"
+}
+}
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/10813544"
+}
+},
+{
+"id": "11506923",
+"type": [
+"Book"
+],
+"attributes": {
+"author_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11506923#author_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Plevoets, Bie"
+],
+"label": "Author/Artist"
+}
+},
+"pub_created_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11506923#pub_created_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Routledge, Taylor & Francis Group, New York. 2019"
+],
+"label": "Published/Created"
+}
+},
+"format": {
+"id": "https://catalog-staging.princeton.edu/catalog/11506923#format",
+"type": "document_value",
+"attributes": {
+"value": [
+"Book"
+],
+"label": "Format"
+}
+},
+"holdings_1display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11506923#holdings_1display",
+"type": "document_value",
+"attributes": {
+"value": {
+"11193667": {
+"location": "ReCAP - Marquand Library use only",
+"library": "ReCAP",
+"location_code": "rcppj"
+}
+},
+"label": "Holdings 1display"
+}
+},
+"score": {
+"id": "https://catalog-staging.princeton.edu/catalog/11506923#score",
+"type": "document_value",
+"attributes": {
+"value": 51,
+"label": "Score"
+}
+},
+"marc_relator_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11506923#marc_relator_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Author"
+],
+"label": "Marc Relator Display"
+}
+},
+"title_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11506923#title_display",
+"type": "document_value",
+"attributes": {
+"value": "Adaptive Resuse of the Built Heritage: Concepts and Cases of an Emerging Discipline. Bie Plevoets and Koenraad Van Cleempoel.",
+"label": "Title Display"
+}
+},
+"isbn_s": {
+"id": "https://catalog-staging.princeton.edu/catalog/11506923#isbn_s",
+"type": "document_value",
+"attributes": {
+"value": [
+"9781138062764"
+],
+"label": "Isbn S"
+}
+},
+"lccn_s": {
+"id": "https://catalog-staging.princeton.edu/catalog/11506923#lccn_s",
+"type": "document_value",
+"attributes": {
+"value": [
+"2018058371"
+],
+"label": "Lccn S"
+}
+}
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/11506923"
+}
+},
+{
+"id": "11102851",
+"type": [
+"Book"
+],
+"attributes": {
+"author_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11102851#author_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Kırıkkanat, Mine G."
+],
+"label": "Author/Artist"
+}
+},
+"pub_created_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11102851#pub_created_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Istanbul: Kırmızı Kedi Yayınevi, 2018."
+],
+"label": "Published/Created"
+}
+},
+"format": {
+"id": "https://catalog-staging.princeton.edu/catalog/11102851#format",
+"type": "document_value",
+"attributes": {
+"value": [
+"Book"
+],
+"label": "Format"
+}
+},
+"holdings_1display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11102851#holdings_1display",
+"type": "document_value",
+"attributes": {
+"value": {
+"10806428": {
+"location": "ReCAP",
+"library": "ReCAP",
+"location_code": "rcppa"
+}
+},
+"label": "Holdings 1display"
+}
+},
+"score": {
+"id": "https://catalog-staging.princeton.edu/catalog/11102851#score",
+"type": "document_value",
+"attributes": {
+"value": 51,
+"label": "Score"
+}
+},
+"marc_relator_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11102851#marc_relator_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Author"
+],
+"label": "Marc Relator Display"
+}
+},
+"title_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11102851#title_display",
+"type": "document_value",
+"attributes": {
+"value": "Adnan'ın tek taşı / Mine G. Kırıkkanat.",
+"label": "Title Display"
+}
+},
+"isbn_s": {
+"id": "https://catalog-staging.princeton.edu/catalog/11102851#isbn_s",
+"type": "document_value",
+"attributes": {
+"value": [
+"9786052984000"
+],
+"label": "Isbn S"
+}
+},
+"cataloged_tdt": {
+"id": "https://catalog-staging.princeton.edu/catalog/11102851#cataloged_tdt",
+"type": "document_value",
+"attributes": {
+"value": "2019-01-03T20:05:17Z",
+"label": "Cataloged Tdt"
+}
+}
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/11102851"
+}
+},
+{
+"id": "10628409",
+"type": [
+"Book"
+],
+"attributes": {
+"author_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628409#author_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Buzakrawi, Maryam"
+],
+"label": "Author/Artist"
+}
+},
+"pub_created_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628409#pub_created_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Rabat: Mu'allif, 2016"
+],
+"label": "Published/Created"
+}
+},
+"format": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628409#format",
+"type": "document_value",
+"attributes": {
+"value": [
+"Book"
+],
+"label": "Format"
+}
+},
+"holdings_1display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628409#holdings_1display",
+"type": "document_value",
+"attributes": {
+"value": {
+"10368202": {
+"location": "ReCAP",
+"library": "ReCAP",
+"location_code": "rcppa"
+}
+},
+"label": "Holdings 1display"
+}
+},
+"score": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628409#score",
+"type": "document_value",
+"attributes": {
+"value": 51,
+"label": "Score"
+}
+},
+"marc_relator_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628409#marc_relator_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Author"
+],
+"label": "Marc Relator Display"
+}
+},
+"title_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628409#title_display",
+"type": "document_value",
+"attributes": {
+"value": "Adwar al-tarikhiyah wa al-muqawwimat al-turathiyah lil-qasabat al-'askariyah: al-qasabah",
+"label": "Title Display"
+}
+},
+"isbn_s": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628409#isbn_s",
+"type": "document_value",
+"attributes": {
+"value": [
+"9789954380802"
+],
+"label": "Isbn S"
+}
+},
+"cataloged_tdt": {
+"id": "https://catalog-staging.princeton.edu/catalog/10628409#cataloged_tdt",
+"type": "document_value",
+"attributes": {
+"value": "2018-01-26T17:40:23Z",
+"label": "Cataloged Tdt"
+}
+}
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/10628409"
+}
+},
+{
+"id": "11052858",
+"type": [
+"Book"
+],
+"attributes": {
+"author_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052858#author_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Kahzād, Aḥmad ʻAlī"
+],
+"label": "Author/Artist"
+}
+},
+"pub_created_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052858#pub_created_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Tihrān: Dunyā-yi Kitāb, 2010"
+],
+"label": "Published/Created"
+}
+},
+"format": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052858#format",
+"type": "document_value",
+"attributes": {
+"value": [
+"Book"
+],
+"label": "Format"
+}
+},
+"holdings_1display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052858#holdings_1display",
+"type": "document_value",
+"attributes": {
+"value": {
+"10759788": {
+"location": "ReCAP",
+"library": "ReCAP",
+"location_code": "rcppa",
+"call_number": "DS356.K34 2010",
+"call_number_browse": "DS356.K34 2010"
+}
+},
+"label": "Holdings 1display"
+}
+},
+"score": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052858#score",
+"type": "document_value",
+"attributes": {
+"value": 51,
+"label": "Score"
+}
+},
+"marc_relator_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052858#marc_relator_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Author"
+],
+"label": "Marc Relator Display"
+}
+},
+"title_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052858#title_display",
+"type": "document_value",
+"attributes": {
+"value": "Afghānistān dar partū-i tārīkh: mushtamil bar 114 guftār-i tārīkhī",
+"label": "Title Display"
+}
+},
+"isbn_s": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052858#isbn_s",
+"type": "document_value",
+"attributes": {
+"value": [
+"9789643462161"
+],
+"label": "Isbn S"
+}
+}
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/11052858"
+}
+},
+{
+"id": "11053494",
+"type": [
+"Book"
+],
+"attributes": {
+"author_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11053494#author_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Ẓuhūrī, Taqī, 1918-1981"
+],
+"label": "Author/Artist"
+}
+},
+"pub_created_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11053494#pub_created_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Tihrān: Ārshām, 2011"
+],
+"label": "Published/Created"
+}
+},
+"format": {
+"id": "https://catalog-staging.princeton.edu/catalog/11053494#format",
+"type": "document_value",
+"attributes": {
+"value": [
+"Book"
+],
+"label": "Format"
+}
+},
+"holdings_1display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11053494#holdings_1display",
+"type": "document_value",
+"attributes": {
+"value": {
+"10760423": {
+"location": "ReCAP",
+"library": "ReCAP",
+"location_code": "rcppa",
+"call_number": "PN1998.3.Z83Z83 2011",
+"call_number_browse": "PN1998.3.Z83Z83 2011"
+}
+},
+"label": "Holdings 1display"
+}
+},
+"score": {
+"id": "https://catalog-staging.princeton.edu/catalog/11053494#score",
+"type": "document_value",
+"attributes": {
+"value": 51,
+"label": "Score"
+}
+},
+"marc_relator_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11053494#marc_relator_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Author"
+],
+"label": "Marc Relator Display"
+}
+},
+"title_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11053494#title_display",
+"type": "document_value",
+"attributes": {
+"value": "Afsānah va afsūn: khāṭirāt-i Taqī Ẓuhūrī",
+"label": "Title Display"
+}
+},
+"isbn_s": {
+"id": "https://catalog-staging.princeton.edu/catalog/11053494#isbn_s",
+"type": "document_value",
+"attributes": {
+"value": [
+"9786009177424"
+],
+"label": "Isbn S"
+}
+}
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/11053494"
+}
+},
+{
+"id": "11052687",
+"type": [
+"Book"
+],
+"attributes": {
+"author_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052687#author_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Qurbānʹpūr Ārānī, Ḥusayn"
+],
+"label": "Author/Artist"
+}
+},
+"pub_created_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052687#pub_created_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Iṣfahān: Nahuft, 2010"
+],
+"label": "Published/Created"
+}
+},
+"format": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052687#format",
+"type": "document_value",
+"attributes": {
+"value": [
+"Book"
+],
+"label": "Format"
+}
+},
+"holdings_1display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052687#holdings_1display",
+"type": "document_value",
+"attributes": {
+"value": {
+"10759618": {
+"location": "ReCAP",
+"library": "ReCAP",
+"location_code": "rcppa",
+"call_number": "B153.B3Q87 2010",
+"call_number_browse": "B153.B3Q87 2010"
+}
+},
+"label": "Holdings 1display"
+}
+},
+"score": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052687#score",
+"type": "document_value",
+"attributes": {
+"value": 51,
+"label": "Score"
+}
+},
+"marc_relator_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052687#marc_relator_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Author"
+],
+"label": "Marc Relator Display"
+}
+},
+"title_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052687#title_display",
+"type": "document_value",
+"attributes": {
+"value": "Afz̤alʹnāmah: barguzīdah-i ās̱ār-i muḥaqqiqān-i muʻāṣir darbārah-i ḥakīm Afz̤al al-Dīn Kāshānī",
+"label": "Title Display"
+}
+},
+"isbn_s": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052687#isbn_s",
+"type": "document_value",
+"attributes": {
+"value": [
+"9786005944068"
+],
+"label": "Isbn S"
+}
+}
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/11052687"
+}
+},
+{
+"id": "11052685",
+"type": [
+"Book"
+],
+"attributes": {
+"author_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052685#author_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Qurbānʹpūr Ārānī, Ḥusayn"
+],
+"label": "Author/Artist"
+}
+},
+"pub_created_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052685#pub_created_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Iṣfahān: Nahuft, 2010"
+],
+"label": "Published/Created"
+}
+},
+"format": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052685#format",
+"type": "document_value",
+"attributes": {
+"value": [
+"Book"
+],
+"label": "Format"
+}
+},
+"holdings_1display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052685#holdings_1display",
+"type": "document_value",
+"attributes": {
+"value": {
+"10759616": {
+"location": "ReCAP",
+"library": "ReCAP",
+"location_code": "rcppa",
+"call_number": "B153.B3Q87 2010",
+"call_number_browse": "B153.B3Q87 2010"
+}
+},
+"label": "Holdings 1display"
+}
+},
+"score": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052685#score",
+"type": "document_value",
+"attributes": {
+"value": 51,
+"label": "Score"
+}
+},
+"marc_relator_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052685#marc_relator_display",
+"type": "document_value",
+"attributes": {
+"value": [
+"Author"
+],
+"label": "Marc Relator Display"
+}
+},
+"title_display": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052685#title_display",
+"type": "document_value",
+"attributes": {
+"value": "Afz̤alʹnāmah: barguzīdah-i ās̱ār-i muḥaqqiqān-i muʻāṣir darbārah-i ḥakīm Afz̤al al-Dīn Kāshānī",
+"label": "Title Display"
+}
+},
+"isbn_s": {
+"id": "https://catalog-staging.princeton.edu/catalog/11052685#isbn_s",
+"type": "document_value",
+"attributes": {
+"value": [
+"9786005944068"
+],
+"label": "Isbn S"
+}
+}
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/11052685"
+}
+}
+],
+"included": [
+{
+"type": "facet",
+"id": "access_facet",
+"attributes": {
+"label": "Access",
+"items": [
+{
+"attributes": {
+"label": "In the Library",
+"value": "In the Library",
+"hits": 11589269
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Baccess_facet%5D%5B%5D=In+the+Library"
+}
+},
+{
+"attributes": {
+"label": "Online",
+"value": "Online",
+"hits": 3141255
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Baccess_facet%5D%5B%5D=Online"
+}
+}
+]
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/facet/access_facet.json"
+}
+},
+{
+"type": "facet",
+"id": "location",
+"attributes": {
+"label": "Library",
+"items": [
+{
+"attributes": {
+"label": "ReCAP",
+"value": "ReCAP",
+"hits": 8227157
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Blocation%5D%5B%5D=ReCAP"
+}
+},
+{
+"attributes": {
+"label": "Firestone Library",
+"value": "Firestone Library",
+"hits": 1785423
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Blocation%5D%5B%5D=Firestone+Library"
+}
+},
+{
+"attributes": {
+"label": "Rare Books and Special Collections",
+"value": "Rare Books and Special Collections",
+"hits": 407540
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Blocation%5D%5B%5D=Rare+Books+and+Special+Collections"
+}
+},
+{
+"attributes": {
+"label": "Marquand Library",
+"value": "Marquand Library",
+"hits": 397211
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Blocation%5D%5B%5D=Marquand+Library"
+}
+},
+{
+"attributes": {
+"label": "Forrestal Annex",
+"value": "Forrestal Annex",
+"hits": 387390
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Blocation%5D%5B%5D=Forrestal+Annex"
+}
+},
+{
+"attributes": {
+"label": "East Asian Library",
+"value": "East Asian Library",
+"hits": 202276
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Blocation%5D%5B%5D=East+Asian+Library"
+}
+},
+{
+"attributes": {
+"label": "Lewis Library",
+"value": "Lewis Library",
+"hits": 182376
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Blocation%5D%5B%5D=Lewis+Library"
+}
+},
+{
+"attributes": {
+"label": "Mendel Music Library",
+"value": "Mendel Music Library",
+"hits": 164723
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Blocation%5D%5B%5D=Mendel+Music+Library"
+}
+},
+{
+"attributes": {
+"label": "Mudd Manuscript Library",
+"value": "Mudd Manuscript Library",
+"hits": 70774
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Blocation%5D%5B%5D=Mudd+Manuscript+Library"
+}
+},
+{
+"attributes": {
+"label": "Stokes Library",
+"value": "Stokes Library",
+"hits": 28777
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Blocation%5D%5B%5D=Stokes+Library"
+}
+}
+]
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/facet/location.json"
+}
+},
+{
+"type": "facet",
+"id": "format",
+"attributes": {
+"label": "Format",
+"items": [
+{
+"attributes": {
+"label": "Audio",
+"value": "Audio",
+"hits": 292217
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Bformat%5D%5B%5D=Audio"
+}
+},
+{
+"attributes": {
+"label": "Book",
+"value": "Book",
+"hits": 13062229
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Bformat%5D%5B%5D=Book"
+}
+},
+{
+"attributes": {
+"label": "Data file",
+"value": "Data file",
+"hits": 12214
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Bformat%5D%5B%5D=Data+file"
+}
+},
+{
+"attributes": {
+"label": "Journal",
+"value": "Journal",
+"hits": 740924
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Bformat%5D%5B%5D=Journal"
+}
+},
+{
+"attributes": {
+"label": "Manuscript",
+"value": "Manuscript",
+"hits": 82755
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Bformat%5D%5B%5D=Manuscript"
+}
+},
+{
+"attributes": {
+"label": "Map",
+"value": "Map",
+"hits": 81130
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Bformat%5D%5B%5D=Map"
+}
+},
+{
+"attributes": {
+"label": "Musical score",
+"value": "Musical score",
+"hits": 173717
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Bformat%5D%5B%5D=Musical+score"
+}
+},
+{
+"attributes": {
+"label": "Senior thesis",
+"value": "Senior thesis",
+"hits": 74597
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Bformat%5D%5B%5D=Senior+thesis"
+}
+},
+{
+"attributes": {
+"label": "Video/Projected medium",
+"value": "Video/Projected medium",
+"hits": 87439
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Bformat%5D%5B%5D=Video%2FProjected+medium"
+}
+},
+{
+"attributes": {
+"label": "Visual material",
+"value": "Visual material",
+"hits": 35649
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?f%5Bformat%5D%5B%5D=Visual+material"
+}
+}
+]
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog/facet/format.json"
+}
+},
+{
+"type": "search_field",
+"id": "all_fields",
+"attributes": {
+"label": "Keyword"
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?search_field=all_fields"
+}
+},
+{
+"type": "search_field",
+"id": "title",
+"attributes": {
+"label": "Title"
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?search_field=title"
+}
+},
+{
+"type": "search_field",
+"id": "author",
+"attributes": {
+"label": "Author/Creator"
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?search_field=author"
+}
+},
+{
+"type": "search_field",
+"id": "subject",
+"attributes": {
+"label": "Subject"
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?search_field=subject"
+}
+},
+{
+"type": "search_field",
+"id": "left_anchor",
+"attributes": {
+"label": "Title starts with"
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?search_field=left_anchor"
+}
+},
+{
+"type": "search_field",
+"id": "browse_subject",
+"attributes": {
+"label": "Subject (browse)"
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?search_field=browse_subject"
+}
+},
+{
+"type": "search_field",
+"id": "browse_name",
+"attributes": {
+"label": "Author (browse)"
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?search_field=browse_name"
+}
+},
+{
+"type": "search_field",
+"id": "name_title",
+"attributes": {
+"label": "Author (sorted by title)"
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?search_field=name_title"
+}
+},
+{
+"type": "search_field",
+"id": "browse_cn",
+"attributes": {
+"label": "Call number (browse)"
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?search_field=browse_cn"
+}
+},
+{
+"type": "sort",
+"id": "score desc, pub_date_start_sort desc, title_sort asc",
+"attributes": {
+"label": "relevance"
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?sort=score+desc%2C+pub_date_start_sort+desc%2C+title_sort+asc"
+}
+},
+{
+"type": "sort",
+"id": "pub_date_start_sort desc, title_sort asc, score desc",
+"attributes": {
+"label": "year (newest first)"
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?sort=pub_date_start_sort+desc%2C+title_sort+asc%2C+score+desc"
+}
+},
+{
+"type": "sort",
+"id": "pub_date_start_sort asc, title_sort asc, score desc",
+"attributes": {
+"label": "year (oldest first)"
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?sort=pub_date_start_sort+asc%2C+title_sort+asc%2C+score+desc"
+}
+},
+{
+"type": "sort",
+"id": "author_sort asc, title_sort asc, score desc",
+"attributes": {
+"label": "author"
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?sort=author_sort+asc%2C+title_sort+asc%2C+score+desc"
+}
+},
+{
+"type": "sort",
+"id": "title_sort asc, pub_date_start_sort desc, score desc",
+"attributes": {
+"label": "title"
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?sort=title_sort+asc%2C+pub_date_start_sort+desc%2C+score+desc"
+}
+},
+{
+"type": "sort",
+"id": "cataloged_tdt desc, title_sort asc, score desc",
+"attributes": {
+"label": "date cataloged"
+},
+"links": {
+"self": "https://catalog-staging.princeton.edu/catalog.json?sort=cataloged_tdt+desc%2C+title_sort+asc%2C+score+desc"
+}
+}
+]
+}
