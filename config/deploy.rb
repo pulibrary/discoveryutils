@@ -40,7 +40,7 @@ set :tmp_dir, '/home/deploy/tmp'
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 
-desc "Report Uptimes"
+desc "Link in local environment"
 task :link_env do
   on roles(:app) do |host|
     execute "cd #{release_path} && ln -sf /home/deploy/.env.local .env.local"
