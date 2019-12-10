@@ -14,7 +14,7 @@ Utilities to interact with Summon, the PUL Blacklight Catalog, Springshare produ
 
 1. clone repo
 1. cd repo-name
-1. Secret keys are to be put in both `.env.local` and `.env.text.local`  These files are not put in git.
+1. Secret keys are to be put in both `.env.local` and `.env.test.local`  These files are not put in git.
     ```
     # .env.local & .env.test.local
     APP_SECRET=XXXXX
