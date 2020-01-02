@@ -15,6 +15,6 @@ tooling:
     cmd:
       - appserver: composer install
   test:
-    description: run all our tests 
+    description: run all our tests
     cmd:
       - appserver: php bin/phpunit

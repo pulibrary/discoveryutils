@@ -66,3 +66,9 @@ arts:
     defaults: { _controller: 'App\Controller\ArtsController::page' }
     requirements:
        index_type: all|artobjects|makers|packages
+
+musicarchive:
+  path: /musicarchive/{course_id}
+  defaults: { _controller: 'App\Controller\MusicArchiveController::page' }
+  requirements:
+    course_id: \d+

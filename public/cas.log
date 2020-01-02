@@ -1,0 +1,90 @@
+B351 .START (2020-01-02 22:21:17) phpCAS-1.3.8+ ****************** [CAS.php:475]
+B351 .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas', false) [MusicArchiveController.php:18]
+B351 .|    => CAS_Client::__construct('2.0', false, 'fed.princeton.edu', 443, 'cas', false) [CAS.php:366]
+B351 .|    |    Starting a new session 4de0f7fc1314a0c50dfe65e08e9e0d94 [Client.php:932]
+B351 .|    |    Session is not authenticated [Client.php:938]
+B351 .|    <= ''
+B351 .<= ''
+B351 .=> phpCAS::setNoCasServerValidation() [MusicArchiveController.php:22]
+B351 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1664]
+B351 .<= ''
+B351 .=> phpCAS::setFixedServiceURL('https://library-staging.princeton.edu/utils/musicarchive/155') [MusicArchiveController.php:29]
+B351 .<= ''
+B351 .=> phpCAS::forceAuthentication() [MusicArchiveController.php:32]
+B351 .|    => CAS_Client::forceAuthentication() [CAS.php:1120]
+B351 .|    |    => CAS_Client::isAuthenticated() [Client.php:1286]
+B351 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1398]
+B351 .|    |    |    |    no user found [Client.php:1640]
+B351 .|    |    |    <= false
+B351 .|    |    |    no ticket found [Client.php:1499]
+B351 .|    |    <= false
+B351 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1295]
+B351 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1661]
+B351 .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+B351 .|    |    |    |    <= 'https://library-staging.princeton.edu/utils/musicarchive/155'
+B351 .|    |    |    <= 'https://fed.princeton.edu/cas/login?service=https%3A%2F%2Flibrary-staging.princeton.edu%2Futils%2Fmusicarchive%2F155'
+B351 .|    |    |    Redirect to : https://fed.princeton.edu/cas/login?service=https%3A%2F%2Flibrary-staging.princeton.edu%2Futils%2Fmusicarchive%2F155 [Client.php:1668]
+B351 .|    |    |    exit()
+B351 .|    |    |    -
+B351 .|    |    -
+B351 .|    -
+CB2E .START (2020-01-02 22:21:39) phpCAS-1.3.8+ ****************** [CAS.php:475]
+CB2E .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas', false) [MusicArchiveController.php:18]
+CB2E .|    => CAS_Client::__construct('2.0', false, 'fed.princeton.edu', 443, 'cas', false) [CAS.php:366]
+CB2E .|    |    Starting a new session 4de0f7fc1314a0c50dfe65e08e9e0d94 [Client.php:932]
+CB2E .|    |    Session is not authenticated [Client.php:938]
+CB2E .|    <= ''
+CB2E .<= ''
+CB2E .=> phpCAS::setNoCasServerValidation() [MusicArchiveController.php:22]
+CB2E .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1664]
+CB2E .<= ''
+CB2E .=> phpCAS::setFixedServiceURL('https://library-staging.princeton.edu/utils/musicarchive/155') [MusicArchiveController.php:29]
+CB2E .<= ''
+CB2E .=> phpCAS::forceAuthentication() [MusicArchiveController.php:32]
+CB2E .|    => CAS_Client::forceAuthentication() [CAS.php:1120]
+CB2E .|    |    => CAS_Client::isAuthenticated() [Client.php:1286]
+CB2E .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1398]
+CB2E .|    |    |    |    no user found [Client.php:1640]
+CB2E .|    |    |    <= false
+CB2E .|    |    |    no ticket found [Client.php:1499]
+CB2E .|    |    <= false
+CB2E .|    |    => CAS_Client::redirectToCas(false) [Client.php:1295]
+CB2E .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1661]
+CB2E .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+CB2E .|    |    |    |    <= 'https://library-staging.princeton.edu/utils/musicarchive/155'
+CB2E .|    |    |    <= 'https://fed.princeton.edu/cas/login?service=https%3A%2F%2Flibrary-staging.princeton.edu%2Futils%2Fmusicarchive%2F155'
+CB2E .|    |    |    Redirect to : https://fed.princeton.edu/cas/login?service=https%3A%2F%2Flibrary-staging.princeton.edu%2Futils%2Fmusicarchive%2F155 [Client.php:1668]
+CB2E .|    |    |    exit()
+CB2E .|    |    |    -
+CB2E .|    |    -
+CB2E .|    -
+217A .START (2020-01-02 22:21:42) phpCAS-1.3.8+ ****************** [CAS.php:475]
+217A .=> phpCAS::client('2.0', 'fed.princeton.edu', 443, 'cas', false) [MusicArchiveController.php:18]
+217A .|    => CAS_Client::__construct('2.0', false, 'fed.princeton.edu', 443, 'cas', false) [CAS.php:366]
+217A .|    |    Starting a new session 4de0f7fc1314a0c50dfe65e08e9e0d94 [Client.php:932]
+217A .|    |    Session is not authenticated [Client.php:938]
+217A .|    <= ''
+217A .<= ''
+217A .=> phpCAS::setNoCasServerValidation() [MusicArchiveController.php:22]
+217A .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1664]
+217A .<= ''
+217A .=> phpCAS::setFixedServiceURL('https://library-staging.princeton.edu/utils/musicarchive/155') [MusicArchiveController.php:29]
+217A .<= ''
+217A .=> phpCAS::forceAuthentication() [MusicArchiveController.php:32]
+217A .|    => CAS_Client::forceAuthentication() [CAS.php:1120]
+217A .|    |    => CAS_Client::isAuthenticated() [Client.php:1286]
+217A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1398]
+217A .|    |    |    |    no user found [Client.php:1640]
+217A .|    |    |    <= false
+217A .|    |    |    no ticket found [Client.php:1499]
+217A .|    |    <= false
+217A .|    |    => CAS_Client::redirectToCas(false) [Client.php:1295]
+217A .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1661]
+217A .|    |    |    |    => CAS_Client::getURL() [Client.php:342]
+217A .|    |    |    |    <= 'https://library-staging.princeton.edu/utils/musicarchive/155'
+217A .|    |    |    <= 'https://fed.princeton.edu/cas/login?service=https%3A%2F%2Flibrary-staging.princeton.edu%2Futils%2Fmusicarchive%2F155'
+217A .|    |    |    Redirect to : https://fed.princeton.edu/cas/login?service=https%3A%2F%2Flibrary-staging.princeton.edu%2Futils%2Fmusicarchive%2F155 [Client.php:1668]
+217A .|    |    |    exit()
+217A .|    |    |    -
+217A .|    |    -
+217A .|    -

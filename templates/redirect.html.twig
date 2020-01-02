@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Access Performance Archive</title>
+  </head>
+  <body>
+    <h1>{{ title }} - Access Music Performance Archive</h1>
+    <p>User is {{ user }} from {{ service_url }}</p>
+    <form name="form1" method="post" action="https://lib-dbserver.princeton.edu/MusicReserves/MusicReserves.aspx" id="form1">
+      <div>
+        <input type="hidden" name="id" id="id" value="{{ course_id }}" />
+        <input type="hidden" name="xsl" id="xsl" value="legacy.xsl" />
+        <input type="hidden" name="ecr" id="ecr" value="1" />
+        <input type="submit" value="View Collection"/>
+      </div>
+    </form>
+  </body>
+</html>
