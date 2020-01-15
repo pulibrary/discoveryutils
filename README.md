@@ -1,7 +1,7 @@
 # Discovery Service Utilities
 ==============
 
-Utilities to interact with Summon, the PUL Blacklight Catalog, Springshare products, PUL Pulfa, PUL Pudl. Written using the Symfony and GuzzleHTTP. See https://symfony.com/doc/current/index.html for more context and information about Silex applications.
+Utilities to interact with Summon, the PUL Blacklight Catalog, Springshare products, PUL Pulfa, DPUL and Princeton University Art Museum. Written using the Symfony and GuzzleHTTP. See https://symfony.com/doc/current/index.html for more context and information about Silex applications.
 
 ## Development Environment Dependecies
 1. docker
