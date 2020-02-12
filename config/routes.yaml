@@ -66,3 +66,9 @@ arts:
     defaults: { _controller: 'App\Controller\ArtsController::page' }
     requirements:
        index_type: all|artobjects|makers|packages
+
+search:
+    path: /search/{index_type}
+    defaults: { _controller: 'App\Controller\AllSearchController::page' }
+    requirements:
+       index_type: coreall       
