@@ -12,8 +12,6 @@ $(document).ready(function() {
         var summonTabLabel = "Articles+";
         var pulSummonTab = $('.EXLSearchTabTitle').filter('.EXLSearchTabLABELArticles');
         var currentSearchValue = $("#search_field").val();
-        //var summonBaseUrl = "http://princeton.summon.serialssolutions.com/";
-        //var summonQueryString = "search?s.q=";
         var summonBaseUrl = "http://library.princeton.edu/utils/search/summon";
         var summonQueryString = "?query=";
         var currentSummonUrl = "";
