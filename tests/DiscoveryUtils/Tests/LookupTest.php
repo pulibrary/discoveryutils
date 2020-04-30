@@ -28,8 +28,10 @@ class LookupTest extends WebTestCase
   }
 
   public function testDays() {
-    $data = file_get_contents('http://localhost/hours/rbsc');
-    $json = json_decode($data);
-    $this->assertContains("Open", $json->{"mudd-hours"} );
+    $client = $this->createClient();
+    $crawler = $client->request('GET', '/hours/rbsc');
+    $response = $client->getResponse();
+    $responseData = json_decode($response->getContent(), true);
+    $this->assertContains("Open", $responseData["mudd-hours"] );
   }
 }

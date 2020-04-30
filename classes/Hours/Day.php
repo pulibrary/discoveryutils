@@ -48,17 +48,25 @@ class Day {
     $mudd_status = $dom->filter('.data-hours-3709 > .is-Open')->each(function (Crawler $node, $i) {
       return trim($node->text());
     });
-    $hours_data["mudd"] = $mudd_status[0];
+    if (count($mudd_status) > 0) {
+      $hours_data["mudd"] = $mudd_status[0];
+    } else {
+      $hours_data["mudd"] = 'closed';
+    }
     $rbsc_status = $dom->filter('.data-hours-3700  > .is-Open')->each(function (Crawler $node, $i) {
       return trim($node->text());
     });
-    $hours_data["rbsc"] = $rbsc_status[0];
+    if (count($rbsc_status) > 0) {
+      $hours_data["rbsc"] = $rbsc_status[0];
+    } else {
+      $hours_data["rbsc"] = 'closed';
+    }
     $mudd_hours = $dom->filter('.data-hours-3709')->each(function (Crawler $node, $i) {
-      return trim($node->text());
-    });
+       return trim($node->text());
+     });
     $hours_data["mudd-hours"] = $mudd_hours[0];
     $rbsc_hours = $dom->filter('.data-hours-3700')->each(function (Crawler $node, $i) {
-      return trim($node->text());
+       return trim($node->text());
     });
     $hours_data["rbsc-hours"] = $rbsc_hours[0];
     //print_r($hours_data);
