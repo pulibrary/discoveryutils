@@ -25,7 +25,7 @@ abstract class BaseController extends AbstractController
           $referer = "Direct Query";
         }
 
-        $response_data =  $this->gather_data($request, $index_type, $query);
+        $response_data =  $this->gather_data($request, $index_type, htmlspecialchars_decode($query));
         
         $logger->info( get_class($this) . ':' . $query . "\tREFERER:" . $referer);
 
