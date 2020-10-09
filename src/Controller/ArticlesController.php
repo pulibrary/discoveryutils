@@ -67,7 +67,7 @@ class ArticlesController extends BaseController
           $summon_full_search_link = new SummonQuery($query, array(
             //"s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article,t,Book+Review:t)",
             //"s.fvf" => "IsScholarly,true",
-            "fvf" => "ContentType,Newspaper+Article,t",
+            "s.fvf" => "ContentType,Newspaper+Article,t",
             "keep_r" => "true",
             "s.dym" => "t",
             "s.ho" => "t"
