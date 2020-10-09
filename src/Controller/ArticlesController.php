@@ -60,13 +60,13 @@ class ArticlesController extends BaseController
           $response_data['recommendations'] = $summon_data->getRecommendations();
           $response_data['number'] = count($response_data['recommendations']);
         } else {
-          $summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:t,Book+Review:t)"); //FIXME this shoudl default to exclude and retain filter to remove newspapers
-          $summon_client->addFilter("IsScholarly,true");
+          $summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:t,Book+Review:t)");
+          //$summon_client->addFilter("IsScholarly,true");
           $summon_data = new SummonResponse($summon_client->query($query, 1, $result_size));
-          //print_r($summon_data);
+          //print_r($summon_data->query_details);
           $summon_full_search_link = new SummonQuery($query, array(
-            //"s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t,Book+Review:t)",
-            "s.fvf" => "IsScholarly,true",
+            "s.cmd" => "addFacetValueFilters(ContentType,Newspaper+Article:t,Book+Review:t)",
+            //"s.fvf" => "IsScholarly,true",
             "keep_r" => "true",
             "s.dym" => "t",
             "s.ho" => "t"

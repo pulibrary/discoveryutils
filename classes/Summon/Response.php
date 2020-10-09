@@ -21,6 +21,7 @@ class Response
   function __construct($summon_api_response = array() ) {
     $this->hits = $summon_api_response['recordCount'];
     $this->queryString = $summon_api_response['query']['queryString'];
+    $this->query_details = $summon_api_response['query'];
     $this->records = Parser::convertToSummonRecords($summon_api_response);
     $this->db_recommendations = Parser::getDatabaseRecommendations($summon_api_response);
     $this->buildDeepSearchLink();
