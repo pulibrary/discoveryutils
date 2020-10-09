@@ -60,7 +60,7 @@ class ArticlesController extends BaseController
           $response_data['recommendations'] = $summon_data->getRecommendations();
           $response_data['number'] = count($response_data['recommendations']);
         } else {
-          $summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:t,Book+Review:t)");
+          $summon_client->addCommandFilter("addFacetValueFilters(ContentType,Newspaper+Article:t)");
           //$summon_client->addFilter("IsScholarly,true");
           $summon_data = new SummonResponse($summon_client->query($query, 1, $result_size));
           //print_r($summon_data->query_details);
