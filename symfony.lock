@@ -11,6 +11,9 @@
     "monolog/monolog": {
         "version": "1.x-dev"
     },
+    "php": {
+        "version": "7.4"
+    },
     "phpunit/php-invoker": {
         "version": "1.1.x-dev"
     },
@@ -174,6 +177,9 @@
     },
     "symfony/polyfill-intl-idn": {
         "version": "v1.11.0"
+    },
+    "symfony/polyfill-intl-normalizer": {
+        "version": "1.18-dev"
     },
     "symfony/polyfill-mbstring": {
         "version": "1.11-dev"

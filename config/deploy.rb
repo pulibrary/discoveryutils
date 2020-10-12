@@ -48,3 +48,11 @@ task :link_env do
   end
 end
 after :deploy, :link_env
+
+desc "Update composer"
+task :update_composer do
+  on roles(:app) do |host|
+    execute "cd #{release_path} && composer update"
+  end
+end
+before 'composer:run', :update_composer
