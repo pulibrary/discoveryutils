@@ -4,7 +4,7 @@ env_file:
   - defaults.env
 config:
   webroot: ./public
-  php: '7.2'
+  php: '7.4'
 services:
   appserver:
     run_as_root:
