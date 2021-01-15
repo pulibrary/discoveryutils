@@ -4,6 +4,8 @@ lock "~> 3.11.0"
 set :application, "discoveryutils"
 set :repo_url, "git@github.com:pulibrary/discoveryutils.git"
 
+set :branch, ENV["BRANCH"] || "main"
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
