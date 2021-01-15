@@ -6,7 +6,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "guzzlehttp/guzzle": "^6.3@dev",
-        "symfony/apache-pack": "dev-master",
+        "symfony/apache-pack": "*",
         "symfony/asset": "4.3.*",
         "symfony/browser-kit": "4.3.*",
         "symfony/console": "4.3.*",

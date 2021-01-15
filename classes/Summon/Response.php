@@ -32,6 +32,14 @@ class Response
     $brief_result_set = array();
           //print_r($this->records);
     foreach($this->records as $record) {
+      $publication_title = "";
+      if(isset($record->PublicationTitle)) { 
+         $publication_title = $record->PublicationTitle[0];
+      }
+      $abstract = "";
+      if(isset($record->Abstract)) {
+         $abstract = $record->Abstract[0];
+      }
       $brief_result = array(
         'url' => $record->link,
         'title' => trim($record->Title[0]),
@@ -39,11 +47,11 @@ class Response
         'is_full_text' => $record->isFullTextHit,
         'in_holdings' => $record->inHoldings,
         'format' => $record->ContentType[0],
-        'abstract' => htmlspecialchars($record->Abstract[0]), //FIXME should probably do this 
+        'abstract' => htmlspecialchars($abstract), //FIXME should probably do this 
         'fulltextavail' => $record->hasFullText,
         'publication_date' => $record->PublicationDate[0],
         'snippet' => $record->Snippet,
-        'publication_title' => $record->PublicationTitle[0],
+        'publication_title' => $publication_title,
         'publication_year' => $record->PublicationYear[0],
         'formatted_pub_date' => $record->getFormattedDate(),
         'author' => $record->getFormattedAuthor(),
