@@ -45,7 +45,6 @@ class Pulfa
     {
       $this->http_client = new Client(['base_url' => $this->host]);
     }
-    echo $this->host;
   }
 
   public function query($string, $start, $record_number) {
