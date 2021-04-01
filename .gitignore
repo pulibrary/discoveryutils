@@ -12,6 +12,7 @@ views/*.json
 nbproject/*
 js/SAX_RCPPZ.json
 defaults.env
+.DS_Store
 
 ###> symfony/framework-bundle ###
 .env.local
