@@ -55,6 +55,12 @@ dpulsearch:
     requirements:
        index_type: any|issn|isbn|title
 
+pulfalightsearch:
+    path: /pulfalightsearch/{index_type}
+    defaults: { _controller: 'App\Controller\PulfalightSearchController::page' }
+    requirements:
+       index_type: any|issn|isbn|title
+
 mapsearch:
     path: /mapsearch/{index_type}
     defaults: { _controller: 'App\Controller\MapSearchController::page' }
@@ -71,4 +77,4 @@ search:
     path: /search/{index_type}
     defaults: { _controller: 'App\Controller\AllSearchController::page' }
     requirements:
-       index_type: coreall       
+       index_type: coreall
