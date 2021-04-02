@@ -49,13 +49,13 @@ pulsearch:
     requirements:
        index_type: any|issn|isbn|title
 
-pulfalightsearch:
+dpulsearch:
     path: /dpulsearch/{index_type}
     defaults: { _controller: 'App\Controller\DpulSearchController::page' }
     requirements:
        index_type: any|issn|isbn|title
 
-dpulsearch:
+pulfalightsearch:
     path: /pulfalightsearch/{index_type}
     defaults: { _controller: 'App\Controller\PulfalightSearchController::page' }
     requirements:
