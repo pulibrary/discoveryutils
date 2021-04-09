@@ -28,6 +28,9 @@ class PulfalightResponse
       foreach($record_list as $record) {
         $parsed_record = array();
         // $parsed_record["title"] = $record["readonly_title_tesim"];
+        if (isset($record["attributes"]["scopecontent_ssm"]["attributes"]["value"])) {
+          $parsed_record["description"] = $record["attributes"]["scopecontent_ssm"]["attributes"]["value"];
+        }
         if (isset($record["attributes"]["normalized_date_ssm"]["attributes"]["value"])) {
           $parsed_record["dates"] = $record["attributes"]["normalized_date_ssm"]["attributes"]["value"];
         }
