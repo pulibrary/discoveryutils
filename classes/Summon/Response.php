@@ -42,7 +42,7 @@ class Response
 
       $brief_result = array(
         'url' => $record->link,
-        'title' => trim($this->handleNull($record->Title[0])),
+        'title' => trim($this->handleNull($record->Title)),
         'holdings' => $record->hasFullText,
         'is_full_text' => $record->isFullTextHit,
         'in_holdings' => $record->inHoldings,
