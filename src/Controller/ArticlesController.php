@@ -12,6 +12,18 @@ class ArticlesController extends BaseController
     protected function config_data()
     {}
 
+      protected function utf8ize($data) {
+        if (is_array($data)) {
+            foreach ($data as $k => $v) {
+                $data[$k] = $this->utf8ize($v);
+            }
+        } else if (is_string ($data)) {
+            return utf8_encode($data);
+        }
+        return $data;
+      }
+
+
       protected function gather_data( Request $request, $index_type, $query)
       //public function page(LoggerInterface $logger, Request $request, $index_type)
       {
@@ -19,18 +31,18 @@ class ArticlesController extends BaseController
         $base_url = 'https://princeton.summon.serialssolutions.com/search?';
         $num_records_brief_display = 5;
         $authcode = $_ENV['SUMMON_AUTHCODE'];
-            
-      
+
+
         if($request->query->get('number')) {
           $result_size = $request->query->get('number');
         } else {
           $result_size = $num_records_brief_display;
         }
-      
-      
+
+
         $summon_client = new Summon($client_id, $authcode);
         $summon_client->limitToHoldings(); // only bring back Princeton results
-      
+
         if($index_type == 'guide') {
           $summon_client->addFilter('ContentType, Research Guide');
           $summon_data = new SummonResponse($summon_client->query($query, 1, 3));
@@ -80,7 +92,8 @@ class ArticlesController extends BaseController
             'records' => $summon_data->getBriefResults(),
           );
         }
-      
-        return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
+
+        return new Response(json_encode($this->utf8ize($response_data)), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
+        
   }
 }
