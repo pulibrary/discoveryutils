@@ -50,13 +50,26 @@ class FAQ
     $search_terms = $string;
 
     $url = $this->host . $this->base_url . "/" . $search_terms;
-    $response = $this->http_client->get($url, [
-        'query' => $query,
-        'timeout' => 5 ]
-      );
+
+    $array = @get_headers($url);
+
+    $string = $array[0];
+    $response = [];
+
+    if(strpos($string, "200")) {
+      $response = $this->http_client->get($url, [
+          'query' => $query,
+          'timeout' => 5 ]
+        );
+    }
 
     // decode the response into array - have to cast to string
-		return json_decode((string)$response->getBody()->getContents(), true);
+    if(is_array($response)) {
+      return '';
+    } else {
+      return json_decode((string)$response->getBody()->getContents(), true);
+    }
+
   }
 
   public function setSize($size) {

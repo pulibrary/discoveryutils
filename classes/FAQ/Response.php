@@ -19,9 +19,15 @@ use \FAQ\Parser as FAQParser,
 
 
       function __construct($faq_api_response = array() ) {
-        $this->hits = $faq_api_response['search']['numFound'];
+        $this->hits = 0;
+        $this->more_link = new Link('https://faq.library.princeton.edu/');
+        if(isset($faq_api_response['search']['numFound'])){
+          $this->hits = $faq_api_response['search']['numFound'];
+        }
         $this->records = Parser::convertToFaqRecords($faq_api_response);
-        $this->more_link = new Link($faq_api_response['search']['query']);
+        if(isset($faq_api_response['search']['query'])){
+          $this->more_link = new Link($faq_api_response['search']['query']);
+        }
       }
 
 
