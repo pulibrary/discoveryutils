@@ -3,8 +3,8 @@ namespace Blacklight;
 
 /*
  * Response
- * 
- * Model a Response from a Query to the Black API 
+ *
+ * Model a Response from a Query to the Black API
  */
 
 class DpulResponse
@@ -23,7 +23,9 @@ class DpulResponse
     $records = array();
     foreach($record_list as $record) {
       $parsed_record = array();
-      $parsed_record["title"] = $record["readonly_title_tesim"];
+      if (isset($record["readonly_title_tesim"])) {
+        $parsed_record["title"] = $record["readonly_title_tesim"];
+      }
       if (isset($record["readonly_creator_tesim"])) {
         $parsed_record["contributor"] = $record["readonly_creator_tesim"];
       }
@@ -33,8 +35,10 @@ class DpulResponse
       if (isset($record["readonly_collections_tesim"])) {
        $parsed_record["collection"] = $record["readonly_collections_tesim"];
       }
+      if (isset($record["readonly_format_tesim"])) {
+        $parsed_record["type"] = $record["readonly_format_tesim"];
+      }
       $parsed_record["id"] = $record["id"];
-      $parsed_record["type"] = $record["readonly_format_tesim"];
       $parsed_record["url"] = $base_url .  $record["id"];
       array_push($records, $parsed_record);
     }
