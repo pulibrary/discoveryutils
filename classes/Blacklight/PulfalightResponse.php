@@ -17,8 +17,12 @@ class PulfalightResponse
     public static function getResponse($json_data, $host) {
       $response = array();
       $blacklight_data = json_decode($json_data, true);
-      $response["number"] = $blacklight_data["meta"]["pages"]["total_count"];
-      $response["records"] = self::getRecords($blacklight_data["data"], $host);
+      if (isset($blacklight_data["meta"]["pages"]["total_count"])) {
+        $response["number"] = $blacklight_data["meta"]["pages"]["total_count"];
+      }
+      if (isset($blacklight_data["data"])) {
+        $response["records"] = self::getRecords($blacklight_data["data"], $host);
+      }
       return $response;
     }
 
@@ -41,7 +45,9 @@ class PulfalightResponse
          $parsed_record["collection"] = $record["attributes"]["collection_ssm"]["attributes"]["value"];
         }
         $parsed_record["id"] = $record["id"];
-        $parsed_record["type"] = $record["type"];
+        if (isset($record["type"])) {
+          $parsed_record["type"] = $record["type"];
+        }
         $parsed_record["url"] = $record["links"]["self"];
         array_push($records, $parsed_record);
       }
