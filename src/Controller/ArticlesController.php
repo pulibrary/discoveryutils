@@ -92,8 +92,8 @@ class ArticlesController extends BaseController
             'records' => $summon_data->getBriefResults(),
           );
         }
-
-        return new Response(json_encode($this->utf8ize($response_data)), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
         
+        return new Response(json_encode($this->utf8ize($response_data)), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
+
   }
 }
