@@ -264,6 +264,7 @@ class Summon
 
 		$headers = array(
 			'Accept' => 'application/json' ,
+			// 'Content-Type' => 'application/json; charset=utf-8' ,
 			'x-summon-date' => date('D, d M Y H:i:s T') ,
 			'Host' => 'api.summon.serialssolutions.com'
 		);
@@ -286,10 +287,8 @@ class Summon
 			  'timeout' => 5 ]
 				);
 
-
 		// decode the response into array - have to cast to string
-		return json_decode((string)$response->getBody()->getContents(), true);
-
+		return json_decode((string)$response->getBody()->getContents(), true, JSON_INVALID_UTF8_SUBSTITUTE);
 	}
 
 	/**
