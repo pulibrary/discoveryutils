@@ -12,18 +12,6 @@ class ArticlesController extends BaseController
     protected function config_data()
     {}
 
-      protected function utf8ize($data) {
-        if (is_array($data)) {
-            foreach ($data as $k => $v) {
-                $data[$k] = $this->utf8ize($v);
-            }
-        } else if (is_string ($data)) {
-            return utf8_encode($data);
-        }
-        return $data;
-      }
-
-
       protected function gather_data( Request $request, $index_type, $query)
       //public function page(LoggerInterface $logger, Request $request, $index_type)
       {
@@ -86,14 +74,15 @@ class ArticlesController extends BaseController
             )
           );
           $response_data = array(
-            'query' => htmlspecialchars($query),
+            // 'query' => htmlspecialchars($query),
+            'query' => $query,
             'number' => $summon_data->hits,
             'more' => $summon_full_search_link->getLink(),
             'records' => $summon_data->getBriefResults(),
           );
         }
-        
-        return new Response(json_encode($this->utf8ize($response_data)), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
+
+        return new Response(json_encode($response_data), 200, array('Content-Type' => 'application/json', 'Cache-Control' => 's-maxage=3600, public'));
 
   }
 }
