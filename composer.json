@@ -12,7 +12,6 @@
         "symfony/console": "4.3.*",
         "symfony/css-selector": "4.3.*",
         "symfony/dotenv": "4.3.*",
-        "symfony/flex": "^1.1",
         "symfony/framework-bundle": "4.3.*",
         "symfony/monolog-bundle": "^3.3",
         "symfony/twig-bundle": "4.3.*",
@@ -65,8 +64,6 @@
     },
     "scripts": {
         "auto-scripts": {
-            "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
         "post-install-cmd": [
             "@auto-scripts"
