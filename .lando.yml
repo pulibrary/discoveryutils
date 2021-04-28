@@ -5,6 +5,7 @@ env_file:
 config:
   webroot: ./public
   php: '7.4'
+  composer_version: '1.10.21'
 services:
   appserver:
     run_as_root:
@@ -15,6 +16,6 @@ tooling:
     cmd:
       - appserver: composer install
   test:
-    description: run all our tests 
+    description: run all our tests
     cmd:
       - appserver: php bin/phpunit
