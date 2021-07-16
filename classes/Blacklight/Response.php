@@ -36,8 +36,12 @@ class Response
       if (isset($record["attributes"]["holdings_1display"]) ){
         $parsed_record["holdings"] = $record["attributes"]["holdings_1display"]["attributes"]["value"];
       }
-      if(isset($record["attributes"]["electronic_access_1display"])) {
+      if(isset($record["attributes"]["electronic_portfolio_s"])) {
+        $parsed_record["online"] = $record["attributes"]["electronic_portfolio_s"]["attributes"]["value"];
+      } elseif(isset($record["attributes"]["electronic_access_1display"])) {
         $parsed_record["online"] = $record["attributes"]["electronic_access_1display"]["attributes"]["value"];
+      } else {
+        // no online links present
       }
       $parsed_record["id"] = $record["id"];
       $parsed_record["type"] = $record["type"];
