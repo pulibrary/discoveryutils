@@ -27,7 +27,26 @@ Utilities to interact with Summon, the PUL Blacklight Catalog, Springshare produ
 1. check in your browser (at the port lando configured)
    1. You should see the Princeton University Libraries Shield
 
-## Apache Configuration
+
+## Running Unit Tests Locally
+
+### Caveats
+1. Currently a Few Failing Ones, also test coverage is not complete for all classes/features in the Project
+
+Tests use phpunit https://phpunit.de/manual/current/en/index.html
+
+### To Run
+
+1. Run the tests on the lando server by running `lando test`
+
+## Deploy to server
+
+1. We have capistrano set up to deploy our servers
+
+   1. `cap staging deploy` will deploy the master branch to staging
+   1. `BRANCH=other cap staging deploy` will deploy the other branch to staging
+
+## Apache Configuration (for Production and Staging Environments)
 
 1. In the Virtual host block where the app will live mark:
 ```
@@ -48,21 +67,3 @@ Alias /utils /var/www/apps/discoveryutils
     RewriteRule ^ public/index.php [L]
 </IfModule>
 ```
-
-## Unit Tests
-
-### Caveats
-1. Currently a Few Failing Ones, also test coverage is not complete for all classes/features in the Project
-
-Tests use phpunit https://phpunit.de/manual/current/en/index.html
-
-### To Run
-
-1. Run the tests on the lando server by running `lando test`
-
-## Deploy to server
-
-1. We have capistrano set up to deploy our servers
-
-    1. `cap staging deploy` will deploy the master branch to staging
-    1. `BRANCH=other cap staging deploy` will deploy the other branch to staging
