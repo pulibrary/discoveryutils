@@ -22,9 +22,7 @@ Utilities to interact with Summon, the PUL Blacklight Catalog, Springshare produ
     SUMMON_AUTHCODE=ZZZZZ
     ```
 
-1. Initialize lando with `lando init`
 1. Start lando with `lando start`
-1. `lando build` to install composer dependencies
 1. Run `lando info` to see what is being run
 1. check in your browser (at the port lando configured)
    1. You should see the Princeton University Libraries Shield
@@ -33,7 +31,7 @@ Utilities to interact with Summon, the PUL Blacklight Catalog, Springshare produ
 
 1. In the Virtual host block where the app will live mark:
 ```
-Alias /searchit /var/www/apps/discoveryutils
+Alias /utils /var/www/apps/discoveryutils
 <Directory "/var/www/apps/discoveryutils">
   Options +Indexes
   AllowOverride All
