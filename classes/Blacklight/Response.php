@@ -56,7 +56,11 @@ class Response
     $data = json_decode($data, true);
     $online = array();
     $label = array();
-    array_push($label, $data['title']);
+    if (isset($data['title'])) {
+      array_push($label, $data['title']);
+    } else {
+      array_push($label, "View Online");
+    }
     $online[$data['url']] = $label;
     return $online;
   }
