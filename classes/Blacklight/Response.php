@@ -37,7 +37,7 @@ class Response
         $parsed_record["holdings"] = $record["attributes"]["holdings_1display"]["attributes"]["value"];
       }
       if(isset($record["attributes"]["electronic_portfolio_s"])) {
-        $parsed_record["online"] = $record["attributes"]["electronic_portfolio_s"]["attributes"]["value"];
+        $parsed_record["online"] = self::parsePortfolios($record["attributes"]["electronic_portfolio_s"]["attributes"]["value"][0]);
       } elseif(isset($record["attributes"]["electronic_access_1display"])) {
         $parsed_record["online"] = $record["attributes"]["electronic_access_1display"]["attributes"]["value"];
       } else {
@@ -51,4 +51,14 @@ class Response
 
     return $records;
   }
+
+  private function parsePortfolios($data) {
+    $data = json_decode($data, true);
+    $online = array();
+    $label = array();
+    array_push($label, $data['title']);
+    $online[$data['url']] = $label;
+    return $online;
+  }
+   
 }
