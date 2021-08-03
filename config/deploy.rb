@@ -1,8 +1,8 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.11.0"
+lock "~> 3.11"
 
 set :application, "discoveryutils"
-set :repo_url, "git@github.com:pulibrary/discoveryutils.git"
+set :repo_url, "https://github.com/pulibrary/discoveryutils.git"
 
 set :branch, ENV["BRANCH"] || "main"
 
