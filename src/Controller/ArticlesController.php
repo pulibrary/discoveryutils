@@ -15,7 +15,10 @@ class ArticlesController extends BaseController
       protected function gather_data( Request $request, $index_type, $query)
       //public function page(LoggerInterface $logger, Request $request, $index_type)
       {
-        $client_id = 'soaprinceton';
+        // use after new summon is live and updated api key deployed
+        // $client_id = 'soaprinceton';
+        // comment out "princeton" client_id after new summon is live
+        $client_id = "princeton";
         $base_url = 'https://princeton.summon.serialssolutions.com/search?';
         $num_records_brief_display = 5;
         $authcode = $_ENV['SUMMON_AUTHCODE'];
