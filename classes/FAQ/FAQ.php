@@ -51,23 +51,16 @@ class FAQ
 
     $url = $this->host . $this->base_url . "/" . $search_terms;
 
-    $array = @get_headers($url);
-
-    $string = $array[0];
-    $response = [];
-
-    if(strpos($string, "200")) {
-      $response = $this->http_client->get($url, [
-          'query' => $query,
-          'timeout' => 5 ]
-        );
-    }
+    $response = $this->http_client->get($url, [
+        'query' => $query,
+        'timeout' => 5 ]
+    );
 
     // decode the response into array - have to cast to string
-    if(is_array($response)) {
-      return '';
-    } else {
+    if(http_response_code($response->getStatusCode()) ) {
       return json_decode((string)$response->getBody()->getContents(), true);
+    } else {
+      return '';
     }
 
   }
