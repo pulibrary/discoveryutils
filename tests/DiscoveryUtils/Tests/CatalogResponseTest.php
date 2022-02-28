@@ -11,15 +11,15 @@ class CatalogReponseTest extends \PHPUnit\Framework\TestCase {
   }
 
   function testCatalogResponseProvidesNumber() {
-    $this->assertEquals($this->response["number"], 14559567);
+    $this->assertEquals($this->response["number"], 688);
   }
 
   function testCatalogReturnsRecords() {
     $this->assertTrue(isset($this->response["records"]));
-    $this->assertEquals($this->records[0]["id"], "11407761");
-    $this->assertEquals($this->records[0]["type"], ["Book"]);
-    $this->assertEquals($this->records[3]["publisher"], ["Dinar: Dinar Belediyesi,"]);
-    $this->assertEquals($this->records[0]["author"], ["Peker, Nurettin"]);
+    $this->assertEquals($this->records[0]["id"], "9974234393506421");
+    $this->assertEquals($this->records[0]["type"], "Book");
+    $this->assertEquals($this->records[3]["publisher"], ["La Jolla : Museum of Contemporary Art San Diego, 2006."]);
+    $this->assertEquals($this->records[0]["author"], ["Kastner, Ruth E., 1955-"]);
   }
 
 }
