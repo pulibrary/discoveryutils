@@ -184,7 +184,7 @@ public function testDpulsearchTitleSearch() {
    $this->assertTrue($client->getResponse()->isOk());
    $response = $client->getResponse();
    $responseData = json_decode($response->getContent(), true);
-   $this->assertGreaterThanOrEqual($responseData["number"], 0);
+   $this->assertGreaterThanOrEqual(0, $responseData["number"]);
  }
  public function testArtArtobjectsSearch() {
    $client = $this->createClient();
@@ -192,7 +192,7 @@ public function testDpulsearchTitleSearch() {
    $this->assertTrue($client->getResponse()->isOk());
    $response = $client->getResponse();
    $responseData = json_decode($response->getContent(), true);
-   $this->assertGreaterThanOrEqual($responseData["number"], 68);
+   $this->assertGreaterThanOrEqual(12, $responseData["number"]);
  }
 //  TODO: Do we really want makers?  there is no data beyond an id
  public function testArtMakersSearch() {
@@ -201,7 +201,7 @@ public function testDpulsearchTitleSearch() {
    $this->assertTrue($client->getResponse()->isOk());
    $response = $client->getResponse();
    $responseData = json_decode($response->getContent(), true);
-   $this->assertGreaterThanOrEqual($responseData["number"], 6);
+   $this->assertGreaterThanOrEqual(6, $responseData["number"]);
  }
  public function testArtPackagesSearch() {
    $client = $this->createClient();
@@ -209,7 +209,7 @@ public function testDpulsearchTitleSearch() {
    $this->assertTrue($client->getResponse()->isOk());
    $response = $client->getResponse();
    $responseData = json_decode($response->getContent(), true);
-   $this->assertGreaterThanOrEqual($responseData["number"], 0);
+   $this->assertGreaterThanOrEqual(0, $responseData["number"]);
  }
 
 }

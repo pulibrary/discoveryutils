@@ -36,7 +36,8 @@ class Response
       if (isset($record["attributes"]["holdings_1display"])) {
         $parsed_record["holdings"] = $record["attributes"]["holdings_1display"]["attributes"]["value"];
       }
-      if ((isset($record["attributes"]["electronic_access_1display"]) && (in_array('Senior thesis', $record["type"])))) {
+      if (isset($record["attributes"]["electronic_access_1display"]) && 
+          (( is_array($record["type"]) && in_array('Senior thesis', $record["type"]))|| ($record["type"]=='Senior thesis'))) {
         $parsed_record["online"] = $record["attributes"]["electronic_access_1display"]["attributes"]["value"];
       } elseif(isset($record["attributes"]["electronic_portfolio_s"])) {
         $parsed_record["online"] = self::parsePortfolios($record["attributes"]["electronic_portfolio_s"]["attributes"]["value"][0]);
