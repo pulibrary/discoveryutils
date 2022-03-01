@@ -4,7 +4,7 @@ namespace Blacklight;
 use GuzzleHttp\Client as Client;
 
 /*
- * Pudl
+ * Blacklight
  * 
  * Basic client to connect to Blacklight
  * 

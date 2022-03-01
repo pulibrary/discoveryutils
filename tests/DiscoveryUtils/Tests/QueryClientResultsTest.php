@@ -113,12 +113,6 @@ class QueryClientResultsTest extends WebTestCase
     $this->assertTrue($client->getResponse()->isOk());
  }
 
- public function testPudlSearch() {
-    $client = $this->createClient();
-    $crawler = $client->request('GET', '/pudl/any?query=music');
-    $this->assertTrue($client->getResponse()->isOk());
- }
-
  public function testBasicPrimoSearch() {
     $client = $this->createClient();
     $crawler = $client->request('GET', '/pulsearch/any?query=music');
