@@ -4,7 +4,7 @@ class PulfalightReponseTest extends \PHPUnit\Framework\TestCase {
 
 
   protected function setUp() {
-    $this->pulfalight_search_response_json = file_get_contents(dirname(__FILE__).'/../../support/catalog_search_response.json');
+    $this->pulfalight_search_response_json = file_get_contents(dirname(__FILE__).'/../../support/pulfalight_search_response.json');
     $this->response = \Blacklight\Response::getResponse($this->pulfalight_search_response_json, 'https://findingaids.princeton.edu');
     $this->records = $this->response["records"];
   }
