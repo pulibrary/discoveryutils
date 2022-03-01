@@ -37,6 +37,8 @@ class DpulResponse
       }
       if (isset($record["attributes"]["readonly_format_ssim"])) {
         $parsed_record["type"] = array($record["attributes"]["readonly_format_ssim"]["attributes"]["value"]);
+      } else {
+        $parsed_record["type"] = array("Other");
       }
       $parsed_record["id"] = $record["id"];
       $parsed_record["url"] = $base_url .  $record["id"];
