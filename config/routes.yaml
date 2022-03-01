@@ -37,12 +37,6 @@ faq:
     requirements:
        index_type: get|options
 
-pudl:
-    path: /pudl/{index_type}
-    defaults: { _controller: 'App\Controller\PudlController::page' }
-    requirements:
-       index_type: any
-
 pulsearch:
     path: /pulsearch/{index_type}
     defaults: { _controller: 'App\Controller\PulSearchController::page' }
