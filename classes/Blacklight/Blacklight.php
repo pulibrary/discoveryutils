@@ -53,7 +53,7 @@ class Blacklight
     $response = $this->http_client->get($this->base_url, [
       'headers' => $headers,
       'query' => $query,
-      'timeout' => 10 ]
+      'timeout' => 20 ]
       );
     
     return (string)$response->getBody();
