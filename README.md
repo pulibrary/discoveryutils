@@ -1,7 +1,7 @@
 # Discovery Service Utilities
 ==============
 
-Utilities to interact with Summon, the PUL Blacklight Catalog, Springshare products, PUL Pulfa, DPUL and Princeton University Art Museum. Written using the Symfony and GuzzleHTTP. See https://symfony.com/doc/current/index.html for more context and information about Silex applications.
+Utilities to interact with Summon, the PUL Blacklight Catalog, Springshare products, PUL Pulfa, DPUL and Princeton University Art Museum. Written using Symfony and GuzzleHTTP. See https://symfony.com/doc/current/index.html for more context and information about Silex applications.
 
 ## Development Environment Dependecies
 1. docker
@@ -14,7 +14,7 @@ Utilities to interact with Summon, the PUL Blacklight Catalog, Springshare produ
 
 1. clone repo
 1. cd repo-name
-1. Secret keys are to be put in both `.env.local` and `.env.text.local`  These files are not put in git.
+1. Secret keys are to be put in both `.env.local` and `.env.test.local`  These files are not put in git.
     ```
     # .env.local & .env.test.local
     APP_SECRET=XXXXX
@@ -22,7 +22,6 @@ Utilities to interact with Summon, the PUL Blacklight Catalog, Springshare produ
     SUMMON_AUTHCODE=ZZZZZ
     ```
 
-1. Initialize lando with `lando init`
 1. Start lando with `lando start`
 1. `lando build` to install composer dependencies
 1. Run `lando info` to see what is being run
