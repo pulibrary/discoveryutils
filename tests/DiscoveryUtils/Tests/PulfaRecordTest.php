@@ -6,7 +6,7 @@ namespace DiscoveryUtils\Tests;
  * 
  */
 class PulfaRecordTest extends \PHPUnit\Framework\TestCase {
-  protected function setUp() {
+  protected function setUp(): void {
      $this->record_elements = array(
       "uri",
       "title",

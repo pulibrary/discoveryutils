@@ -3,7 +3,7 @@
 class DPulReponseTest extends \PHPUnit\Framework\TestCase {
 
 
-  protected function setUp() {
+  protected function setUp(): void {
     $this->dpul_response_json = file_get_contents(dirname(__FILE__).'/../../support/dpul_search_response.json');
     $query = "music";
     $this->response = \Blacklight\DpulResponse::getResponse($this->dpul_response_json, 'https://dpul.princeton.edu');

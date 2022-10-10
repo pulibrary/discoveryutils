@@ -2,7 +2,7 @@
 
 class ArtsQueryTest extends \PHPUnit\Framework\TestCase {
 
-  protected function setUp() {
+  protected function setUp(): void {
     $this->arts_response_json = file_get_contents(dirname(__FILE__).'/../../support/arts_search_response.json');
     $query = "cats";
     $art_query = new \Arts\Query(array('host' => 'https://data.artmuseum.princeton.edu', 'base' =>'/search'));

@@ -3,7 +3,7 @@
 class CatalogReponseTest extends \PHPUnit\Framework\TestCase {
 
 
-  protected function setUp() {
+  protected function setUp(): void {
     $this->catalog_response_json = file_get_contents(dirname(__FILE__).'/../../support/catalog_search_response.json');
     $query = "cats";
     $this->response = \Blacklight\Response::getResponse($this->catalog_response_json, 'https://catalog.princeton.edu');

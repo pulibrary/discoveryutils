@@ -7,7 +7,7 @@ namespace DiscoveryUtils\Tests;
  */
 class PulfaResponseTest extends \PHPUnit\Framework\TestCase {
   
-  protected function setUp() {
+  protected function setUp(): void {
     $this->xml_response_data = file_get_contents(dirname(__FILE__).'../../../support/findingaidsresult.xml');
     $this->sample_query = "woodrow+wilson";
   }
@@ -21,7 +21,7 @@ class PulfaResponseTest extends \PHPUnit\Framework\TestCase {
   function testGetBriefResponse() {
     $response = new \Pulfa\Response($this->xml_response_data, $this->sample_query);
     $brief_response = $response->getBriefResponse();
-    $this->assertInternalType('array', $brief_response);
+    $this->assertIsArray($brief_response);
     $this->assertArrayHasKey('records', $brief_response);
     $this->assertArrayHasKey('more', $brief_response);
     $this->assertEquals(10, count($brief_response['records']));

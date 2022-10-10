@@ -7,7 +7,7 @@ namespace DiscoveryUtils\Tests;
  */
 class PulfaParserTest extends \PHPUnit\Framework\TestCase {
     
-  protected function setUp() {
+  protected function setUp(): void {
     $this->pulfa_response = file_get_contents(dirname(__FILE__).'../../../support/findingaidsresult.xml');
     $this->pulfa_parser = new \Pulfa\Parser($this->pulfa_response);
   }
@@ -15,7 +15,7 @@ class PulfaParserTest extends \PHPUnit\Framework\TestCase {
   function testPulfaBasicParse() {
 
     $records = $this->pulfa_parser->getRecords();
-    $this->assertInternalType('array', $records);
+    $this->assertIsArray($records);
     foreach($records as $record) {
       $this->assertInstanceOf('\\Pulfa\\Record', $record);
     }
