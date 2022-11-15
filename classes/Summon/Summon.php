@@ -271,7 +271,7 @@ class Summon
 
 		// set auth header based on hash
 
-		$data = implode($headers, "\n") . "\n/$service\n" . urldecode($queryString) . "\n";
+		$data = implode("\n", $headers) . "\n/$service\n" . urldecode($queryString) . "\n";
 		$hmacHash = $this->hmacsha1($this->api_key, $data);
 
 		$headers["Authorization"] = "Summon " . $this->app_id . ";" . $hmacHash;
