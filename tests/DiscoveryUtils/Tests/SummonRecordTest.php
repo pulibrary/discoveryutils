@@ -9,7 +9,7 @@ namespace DiscoveryUtils\Tests;
  
 class SummonRecordTest extends \PHPUnit\Framework\TestCase  
 {
-  protected function setUp() {
+  protected function setUp(): void {
     $this->summon_response_data = json_decode(file_get_contents(dirname(__FILE__).'../../../support/summon_response.json'), TRUE);
     $this->summon_response = new \Summon\Response($this->summon_response_data);
     $this->records = $this->summon_response->getBriefResults();
@@ -17,7 +17,7 @@ class SummonRecordTest extends \PHPUnit\Framework\TestCase
   
   public function testIsSummonRecords() {
     foreach($this->records as $record) {
-      $this->assertInternalType('array', $record);
+      $this->assertIsArray($record);
     }
   }
   

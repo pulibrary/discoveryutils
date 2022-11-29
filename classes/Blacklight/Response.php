@@ -55,7 +55,7 @@ class Response
     return $records;
   }
 
-  private function parsePortfolios($data) {
+  private static function parsePortfolios($data) {
     $data = json_decode($data, true);
     $online = array();
     $label = array();

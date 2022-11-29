@@ -13,6 +13,7 @@ nbproject/*
 js/SAX_RCPPZ.json
 defaults.env
 .DS_Store
+bin/.phpunit
 
 ###> symfony/framework-bundle ###
 .env.local
@@ -22,6 +23,6 @@ public/bundles/
 var/
 
 ###> symfony/phpunit-bridge ###
-.phpunit
+.phpunit.result.cache
 /phpunit.xml
 ###< symfony/phpunit-bridge ###

@@ -5,7 +5,7 @@ namespace DiscoveryUtils\Tests;
 
 class SummonClientTest extends \PHPUnit\Framework\TestCase {
   
-  protected function setUp() {
+  protected function setUp(): void {
     $this->summon_connection = array(
       'client.id' => "princeton",
       'authcode' => $_ENV['SUMMON_AUTHCODE']

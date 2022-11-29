@@ -4,8 +4,8 @@ env_file:
   - defaults.env
 config:
   webroot: ./public
-  php: '7.4'
-  composer_version: '1.10.21'
+  php: '8.0'
+  composer_version: '2.4.1'
 services:
   appserver:
     run_as_root:

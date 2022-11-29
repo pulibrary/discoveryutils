@@ -7,7 +7,7 @@ namespace DiscoveryUtils\Tests;
  */
 class PulfaTest extends \PHPUnit\Framework\TestCase {
 
-  protected function setUp() {
+  protected function setUp(): void {
     $pulfa_conf = array(
       'host' => "http://pulfa.princeton.edu",
       'base' => "/collections.xml?"
@@ -17,7 +17,7 @@ class PulfaTest extends \PHPUnit\Framework\TestCase {
 
   function testPulfaQuery() {
     $pulfa_response_data = $this->pulfa->query("woodrow wilson", 0, 10);
-    $this->assertInternalType('string', $pulfa_response_data);
+    $this->assertIsString($pulfa_response_data);
 
   }
 

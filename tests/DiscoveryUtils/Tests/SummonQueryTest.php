@@ -8,7 +8,7 @@ namespace DiscoveryUtils\Tests;
 
  
 class SummonQueryTest extends \PHPUnit\Framework\TestCase {
-  protected function setUp() {
+  protected function setUp(): void {
     $this->summon_base_url = "https://princeton.summon.serialssolutions.com/search?";
     $this->summon_query_param = "s.q=";
     
