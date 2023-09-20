@@ -286,6 +286,11 @@ class Summon
 				'headers' => $headers,
 			  'timeout' => 5 ]
 				);
+		return [
+			"URL IS:" . "$this->host$service?$queryString",
+			"HEADERS IS:" . $headers,
+			"$response IS:" . $response
+		];
 
 		// decode the response into array - have to cast to string
 		return json_decode((string)$response->getBody()->getContents(), true, JSON_INVALID_UTF8_SUBSTITUTE);
