@@ -45,8 +45,8 @@ set :tmp_dir, '/home/deploy/tmp'
 desc "Link in local environment"
 task :link_env do
   on roles(:app) do |host|
-    execute "cd #{release_path} && ln -sf /home/deploy/.env.local .env.local"
-    info "linked .env.local"
+    execute "cd #{release_path} && cp /home/deploy/.env.local .env.local"
+    info "copied .env.local"
   end
 end
 after :deploy, :link_env
