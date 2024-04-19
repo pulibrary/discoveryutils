@@ -58,7 +58,7 @@ Class Record
       if(isset($this->record_fields['StartPage'])) {
         $date[] = "pp." . $this->record_fields['StartPage'][0];
       }
-      if(isset($this->record_fields['EndPage'])) {
+      if(isset($this->record_fields['EndPage']) && isset($this->record_fields['StartPage'])) {
         // if first and last page are equal only show the first one.
         if($this->record_fields['StartPage'][0] != $this->record_fields['EndPage'][0]) {
           $date[] = "-" . $this->record_fields['EndPage'][0];
